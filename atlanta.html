@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Интерактивная карта</title>
+	<meta name="description" content="">
+	<meta name="keywords" content=" ">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="Интерактивная карта/css/media.css">
+	<link rel="stylesheet" href="Интерактивная карта/css/fonts.css">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+	<div class="map">
+		<svg viewBox="0 0 725 750">
+<a href="#" class="area">
+<path onclick="document.getElementById('Knoxville').style.display='block'; return false;" class="Knoxville" d="M 501.94975,94.568019 C 494.84536,80.778679 493.7042,66.98934 494,53.2 c -2.90792,-9.812705 -9.74643,-16.660118 -16.8,-24.4 -10.9552,-1.289596 -23.71165,-0.576705 -36.8,2.4 -10.24152,5.365029 -16.2457,11.577527 -21.2,18 -2.49949,16.628752 -3.70643,21.624554 -5.2,29.2 l 6.4,8.8 16,4.8 -1.2,15.2 20.4,0.8 4,4 -1.6,3.6 4.42678,5.15 11.32322,-0.5 13.83579,-8.04289 0.92893,-10.56802 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Maryville').style.display='block'; return false;" class="Maryville" d="m 414,78.4 6.4,8.8 16,4.8 -1.2,15.2 20.4,0.8 4,4 -1.6,3.6 4.42678,5.15 c -12.61242,6.76983 -23.45024,14.46653 -31.25,23.75 L 420,147.29289 395.53554,134.76777 394.67678,104 C 406.20011,98.854841 412.06958,89.940437 414,78.4 Z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Pigeon_Forge').style.display='block'; return false;" class="Pigeon_Forge" d="m 524.67323,107.59349 -8.48528,-11.31371 c -4.62822,2.430476 -9.60998,1.509919 -14.2382,-1.711761 l -13.43503,7.071071 -0.92893,10.56802 11.27804,7.76075 9.54595,-6.71752 h 8.83883 z" fill="red" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Gatlinburg').style.display='block'; return false;" class="Gatlinburg" d="m 431.17678,144.5 c 7.39727,-8.92313 18.20141,-16.71064 31.25,-23.75 l 11.32322,-0.5 13.83579,-8.04289 36.02678,27.20618 8.13173,1.06066 8.48528,7.77818 c 0.0682,4.24264 -0.37267,8.48528 -4.94975,12.72792 -12.1118,4.5507 -19.74406,11.34117 -28.28427,17.67767 l -18.38477,-12.02081 -43.84062,-4.5962 -3.88909,-6.36396 -8.13173,-3.53553 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Hartford').style.display='block'; return false;" class="Hartford" d="m 555.43238,92.03714 -3.88909,5.303301 c -9.5119,6.193769 -18.29395,8.738249 -26.87006,10.253049 l -7.42462,5.65685 h -8.83883 l -9.54595,6.71752 24.74874,19.44543 8.13173,1.06066 8.48528,7.77818 c 0.47232,4.66709 -0.71749,9.00175 -4.94975,12.72792 l 16.61701,1.41421 15.55635,-10.96015 8.83884,2.12132 5.65685,-2.47487 4.94975,-26.51651 -7.42462,-5.3033 1.76776,-10.25305 -6.71751,-1.06066 -11.66726,-12.020813 -4.5962,1.414214 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Hot_Springs').style.display='block'; return false;" class="Hot_Springs" d="m 571.5,70 -16.06762,22.03714 2.82842,5.303301 4.5962,-1.414214 11.66726,12.020813 6.71751,1.06066 -1.76776,10.25305 7.42462,5.3033 -1.76777,12.72792 L 627.5,90.5 l -5,-12 -11,4.5 C 602,77.644924 592.5,73.008993 583,76 Z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('White_Rock').style.display='block'; return false;" class="White_Rock" d="M 571.5,70 584,60 c 19.50418,-7.870371 48.10424,-14.959437 65,-10.5 10.50843,10.063672 12.00849,25.215209 8,30 -7.93639,11.634864 -11.02517,19.845919 -7,28.5 l -22.5,-17.5 -5,-12 -11,4.5 C 599.71322,76.473002 592.12484,74.541199 583,76 Z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+				
+<a href="#">
+<path onclick="document.getElementById('Asheville').style.display='block'; return false;" class="Asheville" d="M 585.13086,137.29197 627.5,90.5 650,108 c 3.8524,5.80618 7.71745,11.60603 9.73063,18.33182 0.44339,10.21393 0.72601,17.21358 -0.7071,20.85964 -2.33061,3.21719 -5.38363,6.9122 -9.54595,9.1924 l -6.71751,-11.31371 -25.1023,3.88909 -7.77817,-4.5962 -10.96016,3.88909 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Waynesville').style.display='block'; return false;" class="Waynesville" d="m 585.13086,137.29197 -3.18198,13.78859 5.3033,1.06066 -0.70711,6.0104 c 6.50531,4.5962 11.1568,-1.06065 26.87006,7.77818 l -0.7071,15.55635 4.94974,-0.35356 0.35356,10.96016 5.3033,6.01041 4.59619,-1.41422 5.65686,3.88909 c 1.79208,-3.44886 3.2606,-7.00558 7.77817,-9.54594 l 6.36396,-21.92031 -4.94975,-10.96016 6.71752,-1.76776 -6.71751,-11.31371 -25.1023,3.88909 -7.77817,-4.5962 -10.96016,3.88909 -13.78858,-10.96016 -3.18198,13.78859" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Sylva').style.display='block'; return false;" class="Sylva" d="m 586.54507,158.15162 -3.18198,4.24264 -14.84924,7.42463 -2.82842,6.36396 -10.60661,-0.70711 -10.25304,4.24264 -9.54595,-7.42462 -14.84924,-3.53553 c 5.95392,-3.5969 10.77923,-6.06519 14.84924,-7.77818 l 16.61701,1.41421 15.55635,-10.96015 8.83884,2.12132 5.65685,-2.47487 5.3033,1.06066 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Wolf_Ford').style.display='block'; return false;" class="Wolf_Ford" d="m 544.82578,179.71838 1.06066,13.08148 -14.49569,13.78858 v 11.31371 l 14.14213,10.96015 -1.41421,4.94975 10.25305,6.01041 1.76776,-6.36396 7.42462,0.35355 -0.35355,-4.59619 12.72792,-4.94975 4.5962,4.59619 12.72792,0.70711 c 3.99326,-4.1795 8.87145,-4.81926 13.78858,-5.3033 l 5.65686,-5.3033 0.35355,10.96015 c 4.33775,-2.0531 10.83407,-10.58191 16.97056,-18.03122 l 3.53554,-11.31371 -5.65686,-3.88909 -4.59619,1.41422 -5.3033,-6.01041 -0.35356,-10.96016 -4.94974,0.35356 0.7071,-15.55635 c -2.04343,-4.6667 -17.08626,-2.92336 -26.87006,-7.77818 l -3.18198,4.24264 -14.84924,7.42463 -2.82842,6.36396 -10.60661,-0.70711 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Nantahala').style.display='block'; return false;" class="Nantahala" d="m 444.77017,162.04071 -3.18199,4.24264 c 12.13687,7.22062 18.28966,19.80004 26.87006,31.46625 l 12.72792,2.82843 -16.97056,12.37437 -6.01041,-3.18198 -13.78858,7.07107 -12.37437,10.6066 -4.24264,7.77817 12.02082,4.5962 9.54594,-0.70711 4.59619,4.94975 8.13173,-1.41422 20.15254,2.47488 10.25305,-3.53554 1.06066,-7.77817 4.94975,-2.47487 1.76777,-3.88909 7.07107,-1.41421 9.89949,-7.42463 9.19239,0.70711 4.94975,-1.41421 v -11.31371 l 14.49569,-13.78858 -1.06066,-13.08148 -9.54595,-7.42462 -14.84924,-3.53553 -13.43503,9.89949 -18.38477,-12.02081 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Highlands').style.display='block'; return false;" class="Highlands" d="m 613.06158,229.92296 -0.35355,-10.96015 -5.65686,5.3033 c -5.26486,0.76476 -10.37777,1.75746 -13.78858,5.3033 l -12.72792,-0.70711 -4.5962,-4.59619 -12.72792,4.94975 0.35355,4.59619 -7.42462,-0.35355 -1.76776,6.36396 -10.25305,-6.01041 1.41421,-4.94975 -14.14213,-10.96015 -4.94975,1.41421 c 0.69888,21.19676 0.35722,40.31243 -1.76777,55.86144 l 17.67767,10.25304 c 6.79024,-6.39156 13.69959,-13.02134 25.10229,-28.63782 7.94038,-7.48735 12.76071,-12.63466 16.97057,-17.32412 11.1267,-4.23582 20.33076,-7.18988 28.63782,-9.54594 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Clayton').style.display='block'; return false;" class="Clayton" d="m 526.441,219.31636 c 0.88458,27.95477 0.17502,45.81333 -1.76777,55.86144 1.00222,-4.37687 -9.84385,-1.21393 -18.73833,0.7071 l -9.19239,-2.82842 -7.77817,-9.8995 -15.55635,2.47487 c -2.25327,-5.97175 -5.06409,-9.63358 -8.13173,-15.55634 l 7.42462,-6.36397 9.54594,1.41422 10.25305,-3.53554 1.06066,-7.77817 4.94975,-2.47487 1.76777,-3.88909 7.07107,-1.41421 9.89949,-7.42463 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Robbinsville').style.display='block'; return false;" class="Robbinsville" d="M 374.26618,154.29001 395.53554,134.76777 420,147.29289 431.17678,144.5 l 1.57257,7.64122 8.13173,3.53553 3.88909,6.36396 -3.18199,4.24264 10.48539,8.80983 8.22415,10.35845 L 454.4,192 l -6,-8 -18.8,7.6 -3.2,-6.8 -14.4,-2.8 -10.8,2.8 c -4.53861,0.11221 -9.20905,-0.30285 -14.8,-4.4 -6.91391,-4.46837 -13.36911,-11.5267 -11.80982,-25.50446 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Philadelphia').style.display='block'; return false;" class="Philadelphia" d="m 394.67678,104 0.85876,30.76777 -37.0324,33.99046 -14.84924,1.06066 -11.31371,-9.8995 h -11.66726 l -10.60661,-7.07107 -5.3033,1.41422 -13.78858,-4.94975 4.59619,-13.78858 c 4.8319,-4.31921 10.3709,-11.38431 15.2028,-16.61701 0.69415,-4.14114 0.20875,-8.42972 8.13173,-11.66726 4.82182,-4.67024 7.98409,-11.829795 16.26345,-11.313713 l 13.78859,-2.12132 C 364.19706,100.51277 379.43692,106.55466 394.67678,104 Z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Charleston').style.display='block'; return false;" class="Charleston" d="m 323.85491,225.32677 -22.98097,-1.41422 -4.94975,-21.2132 -11.66726,-11.31371 -4.5962,-12.72792 11.31371,-29.34493 13.78858,4.94975 5.3033,-1.41422 10.60661,7.07107 h 11.66726 l 11.31371,9.8995 14.84924,-1.06066 -13.43503,37.83021 -19.79899,12.02081 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path  onclick="document.getElementById('Cleveland').style.display='block'; return false;" class="Cleveland" d="m 323.85491,225.32677 -4.24264,32.52691 -6.71752,32.17336 -20.85965,1.41421 c -1.04078,-2.52078 -6.42387,-3.59413 -13.08147,-4.24264 l -3.18199,-11.31371 -16.26345,-9.54594 -13.78858,-16.97056 6.36396,-5.65686 -10.6066,-19.79899 c 5.38231,-4.28254 11.51145,-9.61064 26.16295,-26.87005 l 12.02081,-18.38478 4.5962,12.72792 11.66726,11.31371 4.94975,21.2132 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Murphy').style.display='block'; return false;" class="Murphy" d="M 387.0387,180.85494 383.6,184.4 l 6.4,12.4 -10,16.8 5.2,2 -1.2,11.2 -6.4,0.4 -5.82546,17.15775 19.96262,2.88933 6.71751,-2.82843 4.5962,2.12132 6.71751,-3.53553 7.42462,0.7071 10.6066,-8.48528 4.24264,-7.77817 12.37437,-10.6066 13.78858,-7.07107 6.01041,3.18198 16.97056,-12.37437 -12.72792,-2.82843 -8.16052,-12.29797 L 454.4,192 l -6,-8 -18.8,7.6 -3.2,-6.8 L 412,182 c -8.01876,0.92515 -15.04846,6.13488 -24.9613,-1.14506 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Etowah').style.display='block'; return false;" class="Etowah" d="m 374.59018,154.89554 c -0.21552,10.62401 1.52845,20.36328 12.44852,25.9594 L 383.6,184.4 l 6.4,12.4 -10,16.8 5.2,2 -1.2,11.2 -6.4,0.4 -5.82546,17.15775 -6.90744,-0.99976 -8.13173,-9.19239 h -4.94975 l -2.47487,-3.53553 -7.07107,-1.41421 -3.53553,2.47487 -8.13173,-0.35355 -6.71751,-6.01041 1.41421,-6.71752 19.79899,-12.02081 13.43503,-37.83021 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('McCaysville').style.display='block'; return false;" class="McCaysville" d="M 312.89475,290.02704 320,307.2 l 4.4,4.8 3.6,-2.8 4.4,4 15.2,-10 12.4,5.6 23.6,-35.6 -9.6,-12.8 0.8,-8.8 -3.02546,-7.24225 -6.90744,-0.99976 -8.13173,-9.19239 h -4.94975 l -2.47487,-3.53553 -7.07107,-1.41421 -3.53553,2.47487 -8.13173,-0.35355 -6.71751,-6.01041 c -1.96999,20.03292 -5.01358,41.04405 -10.96016,64.70027 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Hiawassee').style.display='block'; return false;" class="Hiawassee" d="M 371.77454,244.35775 374.8,251.6 l -0.8,8.8 9.6,12.8 4,-2.4 8,-0.4 c 17.68437,3.9973 29.23383,5.65921 43.6,2.4 l 19.2,-17.6 10.03938,0.54434 -3.16312,-5.66883 7.42462,-6.36397 -10.6066,-1.06066 -8.13173,1.41422 -4.59619,-4.94975 -9.54594,0.70711 -12.02082,-4.5962 -10.6066,8.48528 -7.42462,-0.7071 -6.71751,3.53553 -4.5962,-2.12132 -6.71751,2.82843 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Toccoa').style.display='block'; return false;" class="Toccoa" d="M 524.67323,275.1778 519.6,286 l 5.6,5.2 -0.8,3.6 2.4,4.8 -9.6,14.8 v 12 l -5.2,5.2 h -6 l -4,7.6 13.2,31.6 0.4,-13.2 6.4,-7.6 17.2,-2.4 c 4.8344,-5.14839 6.45493,-11.31761 9.2,-19.6 l -12,-30.8 5.9509,-11.76916 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Chattahoochee').style.display='block'; return false;" class="Chattahoochee" d="m 439.2,272.8 10.4,16 -6,8 4.8,16.8 -8.4,6 -4.8,19.2 2.8,10.4 -11.6,18.8 -12.4,-10.8 -15.6,-1.6 -10.4,3.6 -8.8,-4.4 -5.2,4.8 -8,-11.6 h -4.4 l -2.8,-3.6 -5.6,-3.6 -0.4,-20.8 30.8,-46.8 4,-2.4 8,-0.4 c 14.94819,2.16938 30.64293,6.80298 43.6,2.4 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Helen').style.display='block'; return false;" class="Helen" d="m 448.4,313.6 5.6,-2.8 8.4,8.8 8.8,-17.2 27.2,18.8 6,0.4 2.8,2.4 4.4,-2.4 5.6,4.8 v -12 l 9.6,-14.8 -2.4,-4.8 0.8,-3.6 -5.6,-5.2 5.7031,-14.66751 c -4.46976,2.01719 -12.65834,3.09879 -19.3682,4.55241 l -9.19239,-2.82842 -7.77817,-9.8995 -15.55635,2.47487 -4.96861,-9.88751 L 458.4,255.2 l -19.2,17.6 10.4,16 -6,8 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Clermont').style.display='block'; return false;" class="Clermont" d="m 426.4,368 11.6,-18.8 -2.8,-10.4 4.8,-19.2 14,-8.8 8.4,8.8 8.8,-17.2 27.2,18.8 6,0.4 2.8,2.4 4.4,-2.4 5.6,4.8 -5.2,5.2 h -6 l -4,7.6 c -13.18559,15.22675 -26.37663,29.53447 -39.6,38.4 l -4,-7.6 -7.2,4.8 -3.6,-0.8 -12.8,5.2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Cornelia').style.display='block'; return false;" class="Cornelia" d="m 502,339.2 c -13.07576,15.36969 -28.65173,31.54025 -39.6,38.4 l -0.4,6 11.2,10 2,6 10,9.6 40.4,-30 -4,-5.6 h -2.8 l -3.6,-2.8 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Athens').style.display='block'; return false;" class="Athens" d="m 525.6,379.2 -40.4,30 -16.4,5.2 7.6,12 0.8,9.2 -3.2,2.4 1.6,9.2 14,-4.8 28,9.2 17.6,-4.8 12,6.8 c 10.48894,-51.90249 -2.51063,-37.77525 -21.6,-74.4 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Madison').style.display='block'; return false;" class="Madison" d="m 475.6,447.2 -1.6,24 5.2,7.2 v 9.6 l -8,20 c 21.42459,-2.2321 37.10112,12.05608 57.6,8.8 L 544,524 c 25.1825,-37.52278 -4.85204,-50.65692 3.2,-70.4 l -12,-6.8 -17.6,4.8 -28,-9.2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path  onclick="document.getElementById('Monticello').style.display='block'; return false;" class="Monticello" d="m 544,524 c -24.21884,21.25036 -7.77715,24.65666 -31.2,70 -8.48517,2.27528 -15.80043,2.54202 -27.6,10.4 -24.71918,-5.19306 -34.15198,-49.64731 -31.6,-50.8 7.52477,-14.70271 6.01594,-27.10225 -0.4,-46 5.5079,2.10172 11.42672,2.55977 18,0.4 24.59046,-0.68523 38.75584,11.96415 57.6,8.8 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Covington').style.display='block'; return false;" class="Covington" d="M 453.2,507.6 C 448.58735,497.27426 431.72813,490.79376 420,490 v -12.4 l 4,-0.4 6,-14.8 13.6,-1.6 4.8,6 25.6,4.4 5.2,7.2 v 9.6 l -8,20 c -6.69608,2.60193 -12.36128,1.153 -18,-0.4 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Conyers').style.display='block'; return false;" class="Conyers" d="m 430,462.4 4.8,-25.6 -3.2,-10.8 37.2,-11.6 7.6,12 0.8,9.2 -3.2,2.4 1.6,9.2 -1.6,24 -25.6,-4.4 -4.8,-6 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Alpharetta').style.display='block'; return false;" class="Alpharetta" d="m 431.6,426 v -8.4 l -14.8,-7.2 -4.4,-11.6 8,-13.2 6,-17.6 8.4,11.2 12.8,-5.2 3.6,0.8 7.2,-4.8 4,7.6 -0.4,6 11.2,10 2,6 10,9.6 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Roswell').style.display='block'; return false;" class="Roswell" d="m 412.4,398.8 -10,-8 -12.4,2.4 -9.2,-5.6 -20.8,5.6 1.6,-8 10.8,-10.8 1.6,-14.8 5.2,-4.8 8.8,4.4 10.4,-3.6 15.6,1.6 12.4,10.8 -6,17.6 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('College_Park').style.display='block'; return false;" class="College_Park" d="m 360,393.2 -9.6,31.2 -6,3.6 2,10 15.6,15.6 -7.2,16.8 4,34.8 27.2,10.8 c 21.73316,-10.32991 20.26031,-15.36079 34,-26 v -12.4 l 4,-0.4 6,-14.8 4.8,-25.6 -3.2,-10.8 v -8.4 l -14.8,-7.2 -4.4,-11.6 -10,-8 -12.4,2.4 -9.2,-5.6 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Palmetto').style.display='block'; return false;" class="Palmetto" d="M 386,516 358.8,505.2 355.8489,479.52541 337.2,476.8 310.8,486 274,485.6 l -19.6,3.2 13.2,20.8 c 43.05421,33.57508 25.83455,27.49868 48,43.6 12.44889,-1.95581 19.4411,-4.17897 56.4,-20 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path  onclick="document.getElementById('Bremen').style.display='block'; return false;" class="Bremen" d="m 245.6,432.4 -6,10.4 8.4,25.2 3.2,2 3.2,18.8 19.6,-3.2 36.8,0.4 26.4,-9.2 -10,-15.2 -12.4,-8 -25.2,-3.2 -14,-16.8 -22.4,0.8 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Carrollton').style.display='block'; return false;" class="Carrollton" d="m 314.8,453.6 -25.2,-3.2 -14,-16.8 -22.4,0.8 -7.6,-2 -2,-7.6 4,-24.4 7.2,-6.8 19.2,4 27.2,-4.4 8.4,5.2 2,6.8 5.2,2 1.2,8.4 5.2,10.4 14.8,6 8.4,6 15.6,15.6 -7.2,16.8 1.0489,9.12541 L 337.2,476.8 l -3.2,-5.2 -6.8,-10 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Flat_Rock').style.display='block'; return false;" class="Flat_Rock" d="m 188.8,243.2 c -24.0108,12.591 -38.07241,33.47299 -56.4,50.8 l -4,11.6 -5.6,6 9.6,5.6 32.8,1.6 19.6,-18.8 10,-25.2 h 4.4 L 206,265.2 200.74188,253.29081 200.4,248.8 Z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Guntersville').style.display='block'; return false;" class="Guntersville" d="m 122.8,311.6 -10,9.2 -8.4,0.8 c -3.28291,17.37962 -20.871746,30.35741 -37.6,43.6 -1.55954,9.72383 0.360665,14.808 5.2,16 6.96555,-6.85949 14.511459,-7.98593 23.6,3.2 l 9.6,-6.4 h 7.2 l 38,-34.4 14.8,-24.8 -32.8,-1.6 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Trenton').style.display='block'; return false;" class="Trenton" d="m 165.2,318.8 4.8,4 9.2,-0.4 7.2,9.2 3.6,-3.2 16.8,17.2 7.6,-0.8 5.2,3.6 6.8,-1.2 9.6,-19.6 0.4,-21.6 -6.4,-1.6 -1.6,-5.6 -25.6,-16 -3.6,-8 h -4.4 l -10,25.2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Cedartown').style.display='block'; return false;" class="Cedartown" d="m 226.4,347.2 -21.2,30.8 -17.6,10.4 v 6.4 l -10.8,12.8 10.4,7.2 V 448 l 12,-8.8 27.6,3.6 10.8,-8.4 4.87009,2.21826 L 245.6,432.4 l -2,-7.6 4,-24.4 7.2,-6.8 -0.4,-4.4 -2.8,-0.8 v -24 l -6.4,-3.6 -10.8,-14 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Gadsden').style.display='block'; return false;" class="Gadsden" d="m 150.4,343.6 14.8,58.8 11.6,5.2 10.4,7.2 V 448 L 118,433.2 c -10.3806,-0.1277 -18.017735,-19.37599 -14.8,-32.4 0.60065,-12.65146 -4.221325,-12.70202 -7.6,-16.4 l 9.6,-6.4 h 7.2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path  onclick="document.getElementById('Fort_Payne').style.display='block'; return false;" class="Fort_Payne" d="m 150.4,343.6 14.8,-24.8 4.8,4 9.2,-0.4 7.2,9.2 3.6,-3.2 16.8,17.2 7.6,-0.8 5.2,3.6 6.8,-1.2 -21.2,30.8 -17.6,10.4 v 6.4 l -10.8,12.8 -11.6,-5.2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Marietta').style.display='block'; return false;" class="Marietta" d="m 301.2,393.2 -2,-18 -8.4,-11.2 13.2,-0.4 18.8,9.2 17.2,-2 11.6,7.2 10,7.2 -11.2,39.2 -6,3.6 2,10 -8.4,-6 -14.8,-6 -5.2,-10.4 -1.2,-8.4 -5.2,-2 -2,-6.8 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Jasper').style.display='block'; return false;" class="Jasper" d="m 322.8,372.8 2,-24.8 -2.4,-6 2,-18.8 -4.4,-16 4.4,4.8 3.6,-2.8 4.4,4 15.2,-10 12.4,5.6 -7.2,11.2 0.4,20.8 5.6,3.6 2.8,3.6 h 4.4 l 8,11.6 -1.6,14.8 -10.8,10.8 -21.6,-14.4 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Chatsworth').style.display='block'; return false;" class="Chatsworth" d="M 278.95363,287.19861 279.2,308.8 l 9.6,26 2,29.2 13.2,-0.4 18.8,9.2 2,-24.8 -2.4,-6 2,-18.8 c -2.02888,-10.23631 -5.83799,-21.28215 -11.50525,-33.17296 l -20.85965,1.41421 c -0.43552,-2.84262 -7.69947,-3.20018 -13.08147,-4.24264 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path  onclick="document.getElementById('Rome').style.display='block'; return false;" class="Rome" d="M 278.95363,287.19861 236.4,306 l -0.4,21.6 -9.6,19.6 8,-0.4 10.8,14 6.4,3.6 v 24 l 2.8,0.8 0.4,4.4 19.2,4 27.2,-4.4 -2,-18 -8.4,-11.2 -2,-29.2 -9.6,-26 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Chattanooga').style.display='block'; return false;" class="Chattanooga" d="m 236.4,306 -6.4,-1.6 -1.6,-5.6 -25.6,-16 -3.6,-8 6.8,-9.6 v 0 c -7.12316,-14.05373 -1.85142,-3.58669 -5.25812,-11.90919 L 200.4,248.8 l -11.6,-5.6 15.2,-6.8 6.4,4 8.8,-4 9.2,-0.8 13.07697,-11.68745 10.6066,19.79899 -6.36396,5.65686 13.78858,16.97056 16.26345,9.54594 3.18199,11.31371 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Heflin').style.display='block'; return false;" class="Heflin" d="m 254.4,488.8 c -26.57507,-1.93371 -39.95504,-0.99892 -42,2.4 -5.02467,14.87629 -19.62845,19.10912 -34,23.6 l -7.2,-7.2 -12.4,-0.8 6.4,-13.6 c 3.55808,-5.47265 1.00275,-9.4758 -2.8,-16 -5.85577,-3.75513 -12.38791,-6.15752 -15.2,-16 1.35599,-14.60315 -17.86847,-19.12046 -29.2,-28 l 69.2,14.8 12,-8.8 27.6,3.6 10.8,-8.4 4.87009,2.21826 L 239.6,442.8 248,468 l 3.2,2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+
+<a href="#">
+<path onclick="document.getElementById('Talladega').style.display='block'; return false;" class="Talladega" d="m 178.4,514.8 -7.2,-7.2 -12.4,-0.8 c -5.1803,5.85154 -11.75334,8.54663 -18,8 l -11.2,8.4 -29.6,29.2 c -13.68804,10.39982 -11.994622,17.50361 -11.2,24.8 1.406653,10.76801 7.929938,16.96272 20,19.2 14.20216,-2.50212 22.62676,-11.20861 31.6,-20 L 164,546 c 1.47572,-10.66667 6.52631,-20.53333 14.4,-31.2 z" fill="#9999CC" stroke="purple" stroke-width="2" stroke-dasharray="5">
+</a>
+				
+			</svg>
+				
+<div id="Knoxville">
+<h2>Ноксвилл</h2>
+<img src="https://i.imgur.com/6OAbeuk.jpg" alt="">
+<p>Оживлённый район, где можно найти услуги почти на любой вкус как туристу, так и местному жителю. Также здесь находится вокзал, откуда можно отправиться в другие города Объединённой Америки.</p>
+<button onclick="document.getElementById('Knoxville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Maryville">
+<h2>Мэривилл</h2>
+<p>Район, расположенный по соседству с главным вокзалом города, а потому заселённый в основном мигрантами, путешествениками и людьми, часто ездящими в командировки по долгу службы.</p>
+<button onclick="document.getElementById('Maryville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Pigeon_Forge">
+<h2>Форпост "Пиджен Фордж"</h2>
+<p>Один из нескольких защитных кордонов Атланты.</p>
+<button onclick="document.getElementById('Pigeon_Forge').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Gatlinburg">
+<h2>Гатлинберг</h2>
+<p>Этот район пользуется популярностью у представителей среднего класса благодаря тому, что расположен вблизи вокзала, но при этом не граничит с городской стеной.</p>
+<button onclick="document.getElementById('Gatlinburg').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Hartford">
+<h2>Хартфорд</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Hartford').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Hot_Springs">
+<h2>Хот Спрингс</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Hot_Springs').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="White_Rock">
+<h2>Уайт Рок</h2>
+<p>описание</p>
+<button onclick="document.getElementById('White_Rock').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Asheville">
+<h2>Эшвилл</h2>
+<p>Здесь будет описание района Эшвилл.</p>
+<button onclick="document.getElementById('Asheville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Waynesville">
+<h2>Уэйнсвилл</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Waynesville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Sylva">
+<h2>Сильва</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Sylva').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Wolf_Ford">
+<h2>Вулф Форд</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Wolf_Ford').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Nantahala">
+<h2>Нантахала</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Nantahala').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Highlands">
+<h2>Хайлендс</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Highlands').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Clayton">
+<h2>Клейтон</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Clayton').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Robbinsville">
+<h2>Роббинсвилл</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Robbinsville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Philadelphia">
+<h2>Филадельфия</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Philadelphia').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Charleston">
+<h2>Чарльстон</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Charleston').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Cleveland">
+<h2>Кливленд</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Cleveland').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Murphy">
+<h2>Мёрфи</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Murphy').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Etowah">
+<h2>Этова</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Etowah').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="McCaysville">
+<h2>МакКейсвилл</h2>
+<p>описание</p>
+<button onclick="document.getElementById('McCaysville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Hiawassee">
+<h2>Хайавасси</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Hiawassee').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Toccoa">
+<h2>Токкоа</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Toccoa').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Chattahoochee">
+<h2>Чаттахоочи</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Chattahoochee').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Helen">
+<h2>Хелен</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Helen').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Clermont">
+<h2>Клермонт</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Clermont').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Cornelia">
+<h2>Корнелия</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Cornelia').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Athens">
+<h2>Атенс</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Athens').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Madison">
+<h2>Мэдисон</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Madison').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Monticello">
+<h2>Монтиселло</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Monticello').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Covington">
+<h2>Ковингтон</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Covington').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Conyers">
+<h2>Коньерс</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Conyers').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Alpharetta">
+<h2>Альфаретта</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Alpharetta').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Roswell">
+<h2>Розуэлл</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Roswell').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="College_Park">
+<h2>Колледж Парк</h2>
+<p>Деловой центр, своего рода Даунтаун Атланты. Здесь заключаются многомиллионные сделки и проходят важные конференции, а в большинстве зданий расположены офисы дочерних компаний мегакорпораций.</p>
+<button onclick="document.getElementById('College_Park').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Palmetto">
+<h2>Палметто</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Palmetto').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Bremen">
+<h2>Бремен</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Bremen').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Carrollton">
+<h2>Кэрролтон</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Carrollton').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Flat_Rock">
+<h2>Флэт Рок</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Flat_Rock').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Guntersville">
+<h2>Гантерсвилл</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Guntersville').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Trenton">
+<h2>Трентон</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Trenton').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Cedartown">
+<h2>Седартаун</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Cedartown').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Gadsden">
+<h2>Гадсден</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Gadsden').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Fort_Payne">
+<h2>Форт Пейн</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Fort_Payne').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Marietta">
+<h2>Мариэтта</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Marietta').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Jasper">
+<h2>Джаспер</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Jasper').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Chatsworth">
+<h2>Четворт</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Chatsworth').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Rome">
+<h2>Ром</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Rome').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Chattanooga">
+<h2>Чаттануга</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Chattanooga').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Heflin">
+<h2>Хэфлин</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Heflin').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Talladega">
+<h2>Талладега</h2>
+<p>описание</p>
+<button onclick="document.getElementById('Talladega').style.display='none'; return false;"> Закрыть</button>
+</div>
+			
+<img src="https://i.imgur.com/0GRd0f9.png" alt="">
+</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://swarchive.clan.su/Atlanta/main.js"></script>
+</body>
+</html>

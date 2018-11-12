@@ -1,0 +1,53 @@
+﻿﻿body {margin: 0; padding: 0;}
+
+.map {
+	position: relative;
+	text-align: center;
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.Knoxville, .Maryville, .Pigeon_Forge, .Hot_Springs, .White_Rock, .Gatlinburg, .Hartford, .Waynesville, .Robbinsville, .Madisonville, .Philadelphia, .Charleston, .Etowah, .Cleveland, .Chattanooga, .Nantahala, .Sylva, .Murphy, .Hiawassee, .McCaysville, .Chattahoochee, .Highlands, .Clayton, .Toccoa, .Helen, .Clermont, .Cornelia, .Athens, .Alpharetta, .Roswell, .Marietta, .Cartersville, .Rome, .Jasper, .Chatsworth, .Monticello, .Madison, .Covington, .Conyers, .Heflin, .Bremen, .Palmetto, .College_Park, .Carrollton, .Flat_Rock, .Gadsden, .Trenton, .Pine_Ridge, .Fort_Payne, .Asheville, .Wolf_Ford, .Cedartown, .Guntersville, .Talladega {
+	opacity: .2;
+}
+
+.Knoxville:hover, .Maryville:hover, .Pigeon_Forge:hover, .Hot_Springs:hover, .White_Rock:hover, .Gatlinburg:hover, .Hartford:hover, .Waynesville:hover, .Robbinsville:hover, .Madisonville:hover, .Philadelphia:hover, .Charleston:hover, .Etowah:hover, .Cleveland:hover, .Chattanooga:hover, .Nantahala:hover, .Sylva:hover, .Murphy:hover, .Hiawassee:hover, .McCaysville:hover, .Chattahoochee:hover, .Highlands:hover, .Clayton:hover, .Toccoa:hover, .Helen:hover, .Clermont:hover, .Cornelia:hover, .Athens:hover, .Alpharetta:hover, .Roswell:hover, .Marietta:hover, .Cartersville:hover, .Rome:hover, .Jasper:hover, .Chatsworth:hover, .Monticello:hover, .Madison:hover, .Covington:hover, .Conyers:hover, .Heflin:hover, .Bremen:hover, .Palmetto:hover, .College_Park:hover, .Carrollton:hover, .Flat_Rock:hover, .Gadsden:hover, .Trenton:hover, .Pine_Ridge:hover, .Fort_Payne:hover, .Asheville:hover, .Wolf_Ford:hover, .Cedartown:hover, .Guntersville:hover, .Talladega:hover {
+	transition: opacity .2s ease;
+	opacity: .7;
+	cursor: pointer;
+}
+
+#Knoxville, #Maryville, #Pigeon_Forge, #Hot_Springs, #White_Rock, #Gatlinburg, #Hartford, #Waynesville, #Robbinsville, #Madisonville, #Philadelphia, #Charleston, #Etowah, #Cleveland, #Chattanooga, #Nantahala, #Sylva, #Murphy, #Hiawassee, #McCaysville, #Chattahoochee, #Highlands, #Clayton, #Toccoa, #Helen, #Clermont, #Cornelia, #Athens, #Alpharetta, #Roswell, #Marietta, #Cartersville, #Rome, #Jasper, #Chatsworth, #Dahlonega, #Monticello, #Madison, #Covington, #Conyers, #Heflin, #Bremen, #Palmetto, #College_Park, #Carrollton, #Flat_Rock, #Gadsden, #Trenton, #Pine_Ridge, #Fort_Payne, #Asheville, #Wolf_Ford, #Cedartown, #Guntersville, #Talladega {
+position: absolute;
+width:260px;
+height: auto;
+left: 30%;
+top: 20%;
+border: groove #CCCCFF 3px;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+border-radius: 8px;
+display: none;
+z-index: 10;
+overflow:auto;
+background-color:rgba(176, 196, 222, 0.7);
+color:#000000;
+padding: 0px 5px 3px;
+}
+
+h2 {
+font-size: medium;
+}
+
+p {
+text-align: justify;
+text-align-last: left;
+}
