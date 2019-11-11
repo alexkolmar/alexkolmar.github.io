@@ -1,22 +1,12 @@
-﻿
 /* Airport */
 
 @font-face {
-
 font-family: 'airportregular';
-
 src: url('https://alexkolmar.github.io/fonts/airport.eot');
-
 src: url('https://alexkolmar.github.io/fonts/airport.eot?#iefix') format('embedded-opentype'),
-
 url('https://alexkolmar.github.io/fonts/airport.woff') format('woff'),
-
 url('https://alexkolmar.github.io/fonts/airport.ttf') format('truetype'),
-
 url('https://alexkolmar.github.io/fonts/airport.svg#airportregular') format('svg');
-
 font-weight: normal;
-
 font-style: normal;
-
 }
