@@ -87,6 +87,7 @@ position: relative;
 text-align: center;
 width: 725px;
 height: 760px;
+margin: 0 auto;
 }
 
 svg {
