@@ -508,14 +508,15 @@ transform: translateX(0px);
 }
 
 /* Fonts */
+
 /* Airport */
 @font-face {
 font-family: 'airportregular';
-src: url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/airport.eot');
-src: url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/airport.eot?#iefix') format('embedded-opentype'),
-url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/airport.woff') format('woff'),
-url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/airport.ttf') format('truetype'),
-url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/airport.svg#airportregular') format('svg');
+src: url('../fonts/airport.eot');
+src: url('../fonts/airport.eot?#iefix') format('embedded-opentype'),
+url('../fonts/airport.woff') format('woff'),
+url('../fonts/airport.ttf') format('truetype'),
+url('../fonts/airport.svg#airportregular') format('svg');
 font-weight: normal;
 font-style: normal;
 }
@@ -523,11 +524,11 @@ font-style: normal;
 /* Zekton */
 @font-face {
 font-family: 'zektonregular';
-src: url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/zekton_rg.eot');
-src: url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/zekton_rg.eot?#iefix') format('embedded-opentype'),
-url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/zekton_rg.woff') format('woff'),
-url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/zekton_rg.ttf') format('truetype'),
-url('https://github.com/alexkolmar/alexkolmar.github.io/blob/master/fonts/zekton_rg.svg#zektonregular') format('svg');
+src: url('../fonts/zekton_rg.eot');
+src: url('../fonts/zekton_rg.eot?#iefix') format('embedded-opentype'),
+url('../fonts/zekton_rg.woff') format('woff'),
+url('../fonts/zekton_rg.ttf') format('truetype'),
+url('../fonts/zekton_rg.svg#zektonregular') format('svg');
 font-weight: normal;
 font-style: normal;
 }
