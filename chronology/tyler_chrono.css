@@ -1,0 +1,220 @@
+﻿#chrono {
+max-width: 700px;
+margin: 0 auto;
+padding: 10px;
+background: #e1ffff;
+background: -moz-linear-gradient(top, #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #fdffff 12%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%);
+background: -webkit-linear-gradient(top, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=0 );
+border: 3px solid #b1d8f5;
+border-radius: 8px;
+}
+
+#chrono h1 {
+font-size: 20px!important;
+font-family: zektonregular;
+text-transform: uppercase;
+text-align: center;
+margin: 5px auto;
+}
+
+#chrono p {
+line-height: 150%;
+font-family: 'Verdana', sans-serif;
+font-size: 12px;
+}
+
+#chrono a, #chrono details a {
+font-weight: bold;
+text-decoration: none;
+color: #336699;
+}
+
+#chrono a:hover, #chrono details a:hover {
+color: #CCFFFF;
+text-shadow: 0 0 2px #00CCCC;
+}
+
+details summary {
+  display: block;
+  width: 10em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: underline dotted;
+  outline-style: none;
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Zekton */
+@font-face {
+font-family: 'zektonregular';
+src: url('../fonts/zekton_rg.eot');
+src: url('../fonts/zekton_rg.eot?#iefix') format('embedded-opentype'),
+url('../fonts/zekton_rg.woff') format('woff'),
+url('../fonts/zekton_rg.ttf') format('truetype'),
+url('../fonts/zekton_rg.svg#zektonregular') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+        /* Базовый контейнер табов */
+        
+        .tabs {
+            padding: 0px;
+            margin: 0 auto;
+        }
+
+        /* Стили секций с содержанием */
+        
+        .tabs > section {
+            display: none;
+            padding: 0;
+            background: transparent;
+            border: none;
+            height: 400px;
+            overflow: auto;
+        }
+        
+        .tabs > section > p, p {
+            margin: 0 0 5px;
+            line-height: 1.5;
+            color: #383838;
+            /* прикрутим анимацию */
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+        /* Описываем анимацию свойства opacity */
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Прячем чекбоксы */
+        
+        .tabs > input {
+            display: none;
+            position: absolute;
+        }
+        /* Стили переключателей вкладок (табов) */
+        
+        .tabs > label {
+            display: inline-block;
+            margin: 0 0 -1px;
+            padding: 15px 25px;
+            font-weight: normal;
+            font-size: 14px;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            color: #aaa;
+            border: none;
+            background: transparent;
+            border-radius: 3px 3px 0 0;
+            width: 110px;
+            box-shadow: none;
+        }
+        /* Шрифт-иконки от Font Awesome в формате Unicode */
+        
+        .tabs > label::before {
+            font-family: fontawesome;
+            font-weight: normal;
+            margin-right: 10px;
+            width: 50px;
+        }
+
+        .tabs > label::after {
+            width: 100px;
+        }
+
+.tabs>input:checked+label:after {
+            width: 140px;
+            background: #dfdfdf;
+}
+        
+        .tabs > label[for*="1"]:before {
+            content: "\f049";
+        }
+        
+        .tabs > label[for*="2"]:before {
+            content: "\f04b";
+        }
+        
+        .tabs > label[for*="3"]:before {
+            content: "\f04c";
+        }
+
+        .tabs > label[for*="4"]:before {
+            content: "\f052";
+        }
+        /* Изменения стиля переключателей вкладок при наведении */
+        
+        .tabs > label:hover {
+            color: #888;
+            cursor: pointer;
+        }
+        /* Стили для активной вкладки */
+        
+        .tabs > input:checked + label {
+            color: #555;
+            border: 1px solid #99FFFF;
+            border-bottom: none;
+            background: #fff;
+        }
+        /* Активация секций с помощью псевдокласса :checked */
+        
+        #tab1:checked ~ #content-tab1,
+        #tab2:checked ~ #content-tab2,
+        #tab3:checked ~ #content-tab3,
+        #tab4:checked ~ #content-tab4 {
+            display: block;
+            border: 1px solid #99FFFF;
+            margin: 0;
+            padding: 5px 10px;
+        }
+.tabs>label:hover, .tabs>label:after, .tabs>label:hover:after, .tabs>input:checked+label:after {
+transition: none;
+transform: none;
+background: none;
+}
+        
+        @media screen and (max-width: 680px) {
+            .tabs > label {
+                font-size: 0;
+            }
+            .tabs > label:before {
+                margin: 0;
+                font-size: 18px;
+            }
+        }
+        /* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+        
+        @media screen and (max-width: 400px) {
+            .tabs > label {
+                padding: 15px;
+            }
+        }
