@@ -210,6 +210,7 @@ padding: 5px;
     position: relative;
     background: #182837;
     padding: 5px 0 0 5px;
+    border-radius: 3px 3px 0 0;
    }
 
    .tab, .tab-title {
@@ -250,6 +251,7 @@ padding: 5px;
     height: auto;
     display: none;
     text-align: justify;
+    border-radius: 0 0 3px 3px;
    }
 
    .tab :checked + .tab-title {
