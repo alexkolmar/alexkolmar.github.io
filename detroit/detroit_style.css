@@ -1,0 +1,534 @@
+﻿/* Main */
+
+﻿*{
+    margin:0;
+    padding:0;
+}
+
+body {
+margin: 0;
+padding: 0;
+overflow: auto;
+}
+
+h2 {
+font-family: zektonregular, Zekton;
+font-weight: normal;
+font-size: 18px;
+margin: 2px;
+color: #006400;
+}
+
+dl {
+font-family: zektonregular, Zekton;
+font-weight: normal;
+font-size: 16px;
+margin: 2px;
+color: #006400;
+text-align: center;
+}
+
+p, dd {
+text-align: justify;
+text-align-last: left;
+font: normal 11px verdana; 
+margin: 2px;
+padding: 0 5px;
+color: black;
+}
+
+p a, dd a {
+color: #006400;
+text-decoration: none;
+}
+
+p a:hover {
+color: #556B2F;
+font-weight: bold;
+}
+
+button {
+background: #d8e0de;
+background: -moz-linear-gradient(top, #d8e0de 0%, #aebfbc 22%, #99afab 33%, #8ea6a2 50%, #829d98 67%, #4e5c5a 82%, #0e0e0e 100%);
+background: -webkit-linear-gradient(top, #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
+background: linear-gradient(to bottom, #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=0 );
+border: ridge 2px #929b9d;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+box-shadow: 0px 1px 1px #626268;
+padding: 3px 10px;
+margin-top: 5px;
+color: black;
+font-family: zektonregular, Zekton;
+text-shadow: 0px 0px 3px white;
+}
+
+button:hover {
+background: #0e0e0e;
+background: -moz-linear-gradient(top, #0e0e0e 0%, #4e5c5a 18%, #829d98 33%, #8ea6a2 50%, #99afab 67%, #aebfbc 78%, #d8e0de 100%);
+background: -webkit-linear-gradient(top, #0e0e0e 0%,#4e5c5a 18%,#829d98 33%,#8ea6a2 50%,#99afab 67%,#aebfbc 78%,#d8e0de 100%);
+background: linear-gradient(to bottom, #0e0e0e 0%,#4e5c5a 18%,#829d98 33%,#8ea6a2 50%,#99afab 67%,#aebfbc 78%,#d8e0de 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#d8e0de',GradientType=0 );
+border: groove 2px #626268;
+text-shadow: 0px 0px 5px #CAE1FF;
+color: #6E7B8B;
+font-weight: bold;
+cursor: pointer;
+}
+
+/* Map */
+
+.map {
+position: relative;
+text-align: center;
+width: 725px;
+height: 760px;
+}
+
+svg {
+position: absolute;
+top: 0;
+left: 0;
+height: 760px;
+width: 100%;
+background-image: url(http://nextus.do.am/detroit_new.png);
+}
+
+path {
+fill: #9BCD9B;
+stroke: #556B2F;
+stroke-width: 2;
+stroke-dasharray: 5;
+stroke-linejoin: round;
+opacity: .2;
+}
+
+path:hover, path.active {
+transition: opacity .2s ease;
+stroke: #811515;
+opacity: .6;
+cursor: pointer;
+}
+
+circle {
+fill: transparent;
+stroke: #556B2F;
+stroke-width: 4;
+opacity: .6;
+}
+
+circle:hover, circle.active {
+stroke: red;
+opacity: .8;
+cursor: pointer;
+}
+
+/* Locations */
+
+.mplace {
+fill: white;
+opacity: .8;
+}
+
+path.bad:hover, path.bad.active {
+fill: #CD5C5C;
+}
+
+path.good:hover, path.good.active {
+fill: #6495ED;
+}
+
+path.outpost:hover, path.outpost.active {
+fill: #FFEC8B;
+}
+
+.description, .description1 {
+position: absolute;
+width:260px;
+height: auto;
+border: none;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+display: none;
+z-index: 10;
+background: linear-gradient(to bottom, rgba(228,239,192,.8) 0%,rgba(171,189,115,.8) 100%);
+color:#000000;
+padding: 0px 5px 4px;
+}
+
+.description {
+box-shadow: -3px -5px 10px #555555;
+}
+
+.description1 {
+box-shadow: -3px 5px 10px #555555;
+}
+
+.description img, .description1 img {
+opacity: .8;
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.description1::before, .description::after {
+position: absolute;
+content: attr(tooltip);
+z-index: 11;
+border: 10px solid transparent;
+left: calc(50% - 10px);
+}
+
+.description1::before {
+border-bottom: 12px solid rgba(228,239,192,.8);
+top: -22px;
+}
+
+.description::after {
+border-top: 12px solid rgba(171,189,115,.8);
+bottom: -22px;
+}
+
+/* Special pointers */
+#Dresden::after {left: 130px;}
+#Chicago::after {left: 40px;}
+#Painesville::after {left: 165px;}
+#Allenford::after {left: 200px;}
+#Listowel::after {left: 175px;}
+#Road_to_Toronto::after {left: 243px;}
+#London::after {left: 188px;}
+#Mildfield::after {left: 215px;}
+#Cornell::after {left: 76px;}
+#Green_Bay::after {left: 28px;}
+#Brillion::after {left: 21px;}
+#Elkhart_Lake::after {left: 10px;}
+#Milwaukee::after {left: 36px;}
+#Greenfield::after {left: 5px;}
+#Racine::after {left: 29px;}
+#Hammond::after {left: 57px;}
+#Lowell::after {left: 75px;}
+#Manteno::after {left: 18px;}
+#Parr::after {left: 108px;}
+
+/* Districts */
+#St_Maria {left:235px;top:60px;}
+#Mackinac_Island {left:180px;top:120px;}
+#Allenville {left:250px;top:125px;}
+#Bellaire {left:175px;top:260px;}
+#Atlanta_State {left:250px;top:245px;}
+#High_Banks {left:295px;top:290px;}
+#Lewiston {left:230px;top:105px;}
+#Grayling {left:170px;top:135px;}
+#Traverse_City {left:115px;top:105px;}
+#Harrietta {left:110px;top:120px;}
+#Forest_Area {left:260px;top:170px;}
+#Rose_City {left:290px;top:185px;}
+#Beaverton {left:230px;top:185px;}
+#Clare {left:165px;top:225px;}
+#Huron-Manistee {left:90px;top:215px;}
+#Mount_Pleasant {left:165px;top:240px;}
+#Midland {left:230px;top:235px;}
+#Caro {left:295px;top:300px;}
+#Port_Austin {left:360px;top:225px;}
+#Marlette {left:360px;top:285px;}
+#Greenville {left:170px;top:295px;}
+#Grand_Rapids {left:100px;top:335px;}
+#Holland {left:55px;top:310px;}
+#Sarnia {left:440px;top:330px;}
+#Richmond {left:365px;top:400px;}
+#Flint {left:295px;top:355px;}
+#Lansing {left:235px;top:285px;}
+#Wyoming {left:170px;top:385px;}
+#Kalamazoo {left:100px;top:415px;}
+#Chatham-Kent {left:440px;top:405px;}
+#Dearborn {left:370px;top:385px;}
+#Ann_Arbor {left:300px;top:450px;}
+#Battle_Creek {left:170px;top:455px;}
+#Elkhart {left:90px;top:460px;}
+#Adrian {left:235px;top:500px;}
+#Toledo {left:310px;top:520px;}
+#Coldwater {left:145px;top:515px;}
+#Cleveland {right:0px;top:500px;}
+#Fort_Wayne {left:210px;top:605px;}
+#Chicago {left:0px;top:530px;}
+
+/* Places */
+#Scepter_base {left:145px;top:25px;}
+#Drummond {left:295px;top:130px;}
+#Elliot {left:230px;top:55px;}
+#Spring_Arbor {left:174px;top:100px;}
+#Stonehearst {left:288px;top:115px;}
+#Scepter_port {left:62px;top:242px;}
+#Murayama {left:208px;top:232px;}
+#Exineris {left:193px;top:25px;}
+#Iron {left:333px;top:245px;}
+#Ketterdam {left:377px;top:292px;}
+#Fawley {left:198px;top:380px;}
+#Pineview-Drive {left:247px;top:404px;}
+#Briarcliff {left:103px;top:319px;}
+#Linden {left:285px;top:404px;}
+#Dresden {right:1px;top:392px;}
+#Fisher_Theatre {left:354px;top:265px;}
+#Whitechapel {left:139px;top:518px;}
+#Lenawee_County {left:226px;top:573px;}
+#Huntertown {left:120px;top:582px;}
+#Elyria {right:36px;bottom:57px;}
+#Painesville {right:0px;bottom:83px;}
+#Helmer {left:105px;top:94px;}
+#Manitoulin {right:8px;top:65px;}
+#Rocky_Island {left:330px;top:50px;}
+#Elliot_Lake {left:390px;top:85px;}
+#Allenford {right:0px;top:218px;}
+#Listowel {right:0px;top:327px;}
+#Road_to_Toronto {right:0px;top:404px;}
+#London {right:0px;top:406px;}
+#Mildfield {right:0px;bottom:100px;}
+#Hiawatha {left:31px;top:5px;}
+#Cornell {left:0px;top:28px;}
+#Green_Bay {left:0px;top:5px;}
+#Brillion {left:0px;top:257px;}
+#Elkhart_Lake {left:0px;top:340px;}
+#Milwaukee {left:0px;top:398px;}
+#Greenfield {left:0px;bottom:226px;}
+#Racine {left:0px;bottom:186px;}
+#Hammond {left:0px;bottom:91px;}
+#Lowell {left:0px;bottom:68px;}
+#Manteno, #Parr {left:0px;bottom:37px;}
+#Argos {left:41px;bottom:55px;}
+#Knox {left:5px;bottom:78px;}
+#Erie_Islands {right:80px;bottom:18px;}
+
+/*F.A.Q.*/
+
+a#faq_link, a#copy_link {
+position: absolute;
+font-size: 16px;
+color: white;
+font-family: zektonregular, Zekton;
+font-weight: bold;
+border: 1px solid white;
+padding: 2px 5px;
+opacity: .5;
+}
+
+a#faq_link:hover, a#copy_link:hover {
+opacity: .8;
+}
+
+a#faq_link {
+left: 10px;
+top: 10px;
+}
+
+a#copy_link {
+right: 5px;
+bottom: 5px;
+background: rgba(186, 205, 201,1);
+}
+
+dd#district > strong {
+border: 2px dashed rgba(155,205,155,1);
+padding: 2px;
+cursor: pointer;
+}
+
+dd#district {
+padding-bottom: 5px;
+}
+
+dd#district > strong:hover {
+border-color: rgba(129,21,21,.6);
+}
+
+dd#good  > strong {
+background: rgba(100,149,237,.6);
+padding: 2px 5px;
+}
+dd#neutral  > strong {
+background: rgba(155,205,155,.6);
+padding: 2px 5px;
+}
+
+dd#bad  > strong {
+background: rgba(205,92,92,.6);
+padding: 2px 5px;
+}
+
+dd#outpost  > strong {
+background: rgba(255,236,139,.6);
+padding: 2px 5px;
+}
+
+.circle{
+width: 8px;
+height: 8px;
+display: inline-block;
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+-khtml-border-radius: 50px;
+text-align: center;
+background: transparent;
+border: 4px solid #556B2F;
+opacity: .6;
+cursor: pointer;
+}
+
+.circle:hover, .circle1:hover {
+border-color: red;
+opacity: .8;
+}
+
+.circle1{
+width: 11px;
+height: 11px;
+display: inline-block;
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+-khtml-border-radius: 50px;
+text-align: center;
+background: white;
+border: 4px solid #556B2F;
+opacity: .6;
+cursor: pointer;
+}
+
+#faq {
+position: absolute;
+width:500px;
+height: auto;
+border: none;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+display: none;
+z-index: 11;
+background: -moz-linear-gradient(top, rgba(242,245,246,.8) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,.8) 100%);
+background: -webkit-linear-gradient(top, rgba(242,245,246,.8) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,.8) 100%);
+background: linear-gradient(to bottom, rgba(242,245,246,.8) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,.8) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf2f5f6', endColorstr='#ccc8d7dc',GradientType=0 );
+color:#000000;
+padding: 0px 5px 4px;
+box-shadow: 3px 5px 10px #555555;
+left: 5px;
+top: 5px;
+text-align: center;
+}
+
+/*Copyright*/
+
+#copyright {
+position: absolute;
+right: 0px;
+bottom: 30px;
+width:260px;
+height: auto;
+border: none;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+display: none;
+z-index: 10;
+background: -moz-linear-gradient(top, rgba(242,245,246,.8) 0%, rgba(227,234,237,.8) 37%, rgba(200,215,220,.8) 100%);
+background: -webkit-linear-gradient(top, rgba(242,245,246,.8) 0%,rgba(227,234,237,.8) 37%,rgba(200,215,220,.8) 100%);
+background: linear-gradient(to bottom, rgba(242,245,246,.8) 0%,rgba(227,234,237,.8) 37%,rgba(200,215,220,.8) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf2f5f6', endColorstr='#ccc8d7dc',GradientType=0 );
+box-shadow: -3px -5px 10px #555555;
+color:#000000;
+padding: 0px 5px 4px;
+}
+
+#copyright::after {
+position: absolute;
+content: attr(tooltip);
+z-index: 11;
+border: 10px solid transparent;
+left: 232px;
+border-top: 12px solid rgba(200,215,220,.8);
+bottom: -22px;
+}
+
+/* Animation $ effects */
+
+.effect-8 {
+color: #006400;
+text-decoration: none;
+-webkit-transition: all .3s linear;
+-moz-transition: all .3s linear;
+transition: all .3s linear;
+}
+
+.effect-8:hover {
+color: #556B2F;
+font-weight: bold;
+cursor: pointer;
+}
+
+.effect-8::before {
+margin-right: 5px;
+content: '[';
+-webkit-transform: translateX(20px);
+-moz-transform: translateX(20px);
+transform: translateX(20px);
+}
+
+.effect-8::after {
+margin-left: 5px;
+content: ']';
+-webkit-transform: translateX(-20px);
+-moz-transform: translateX(-20px);
+transform: translateX(-20px);
+}
+
+.effect-8::before, .effect-8::after {
+display: inline-block;
+opacity: 0;
+-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+transition: transform 0.3s, opacity 0.2s;
+}
+
+.effect-8:hover::before, .effect-8:hover::after, .effect-8:focus::before, .effect-8:focus::after {
+opacity: 1;
+-webkit-transform: translateX(0px);
+-moz-transform: translateX(0px);
+transform: translateX(0px);
+}
+
+/* Fonts */
+
+/* Airport */
+@font-face {
+font-family: 'airportregular';
+src: url('fonts/airport.eot');
+src: url('fonts/airport.eot?#iefix') format('embedded-opentype'),
+url('fonts/airport.woff') format('woff'),
+url('fonts/airport.ttf') format('truetype'),
+url('fonts/airport.svg#airportregular') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Zekton */
+@font-face {
+font-family: 'zektonregular';
+src: url('fonts/zekton_rg.eot');
+src: url('fonts/zekton_rg.eot?#iefix') format('embedded-opentype'),
+url('fonts/zekton_rg.woff') format('woff'),
+url('fonts/zekton_rg.ttf') format('truetype'),
+url('fonts/zekton_rg.svg#zektonregular') format('svg');
+font-weight: normal;
+font-style: normal;
+}

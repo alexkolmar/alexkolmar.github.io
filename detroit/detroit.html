@@ -1,0 +1,804 @@
+﻿﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Интерактивная карта Детройта</title>
+	<meta name="area" content="">
+	<meta name="keywords" content=" ">
+        <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="detroit_style.css">
+	<link rel="icon" type="image/x-icon" href="detroit_favicon.png">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+	<div class="map">
+
+<!--Районы-->
+<div id="St_Maria" class="description1">
+<h2>Форпост Сент-Мария</h2>
+<p>Форпост Сент-Мария, сдерживающий опасности, идущие со сторон Эллиот-Лейк и заповедника Хайавата. </p>
+<button onclick="document.getElementById('St_Maria').style.display='none'; return false;">Закрыть</button>
+</div>				
+<div id="Allenville" class="description1">
+<h2>Алленвилл</h2>
+<p>Район Алленвилл окружен водой и прикрыт форпостом Сент-Мария, что обеспечивает ему относительную безопасность. В последние годы хорошо снабжается благодаря огромной стройке, раздвигающий Детройт под воду.</p>
+<button onclick="document.getElementById('Allenville').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Mackinac_Island" class="description1">
+<h2>Макино Айленд</h2>
+<p>Район Макино-Айленд одним из первых обеднел из-за близости к границе и вскоре перешел в руки Сцептера, обещающего ему защиту, но, вместе с тем, использующими район для наблюдения за жизнью за стеной.</p>
+<button onclick="document.getElementById('Mackinac_Island').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Atlanta_State" class="description1">
+<h2>Атланта Стейт</h2>
+<p>Район Атланта-Стейт один из красивейших в Детройте. Один из тех, что умудрились сохранить даже некоторую зелень. Полон музеев, хранилищ и изысканных центров, посвященных довоенной истории.</p>
+<button onclick="document.getElementById('Atlanta_State').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Lewiston" class="description">
+<h2>Льюистон</h2>
+<p>Район Льюистон - место с повышенной активностью революционеров, и потому вечно пестрит граффити, листовками и лозунгами. На территории этого района располагается редакция Миллениума.</p>
+<button onclick="document.getElementById('Lewiston').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="High_Banks" class="description1">
+<h2>Хай Бэнкс</h2>
+<p>Район Хай Бэнкс хотя и выглядит не очень бедным, на самом деле в данный момент стремительно разоряется, что вынуждает многих предпринимателей и частных лиц идти на сделки с совестью и принимать весьма спорные с точки зрения морали сделки с богатыми организациями.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=244" target="_blank" class="effect-8">Звук из-под воды</a></dd>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=377" target="_blank" class="effect-8">В стиле Стэтхема</a></dd>
+</dl>
+<button onclick="document.getElementById('High_Banks').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Rose_City" class="description">
+<h2>Роуз Сити</h2>
+<p>Район Роуз-сити - несмотря на такое приятное название место далеко не безопасное. Поделенный между преступными группировками, этот район часто становится местом убийств и побоищ.</p>
+<button onclick="document.getElementById('Rose_City').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Forest_Area" class="description">
+<h2>Форест Ареа</h2>
+<p>Район Форест-Арея - район с несколькими небольшими портами. Благодаря большому потоку народа удобен чтобы в нем затеряться.</p>
+<button onclick="document.getElementById('Forest_Area').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Bellaire" class="description1">
+<h2>Беллер</h2>
+<p>Район Беллер один из самых обычных и, на удивление, спокойных в Детройте. Принадлежит преступной группировке "Отель", которая следит за порядком на его улицах.</p>
+<button onclick="document.getElementById('Bellaire').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Traverse_City" class="description">
+<h2>Траверс Сити</h2>
+<p>Район Траверс-Сити обеднел из-за того, сколько ресурсов от него оттягивалось в более богатые районы вокруг. На данный момент  это спальный район бедняков, в основном трущобы и разгул преступности.</p>
+<button onclick="document.getElementById('Traverse_City').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Harrietta" class="description">
+<h2>Харриетта</h2>
+<p>Район Генриетта удобно огорожен, если даже не спрятан от посторонних глаз, что позволяет ему иметь свой полигон для представительства Сцептера.</p>
+<p>Личный порт Сцептера, окруженный полигонами. Скрыт от посторонних глаз.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=503" target="_blank" class="effect-8">Вера в человечество</a></dd>
+</dl>
+<button onclick="document.getElementById('Harrietta').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Grayling" class="description">
+<h2>Грейлинг</h2>
+<p>Район Грейлинг - обычный многоуровневый рабочий район Детройта, называемый также "Муравейник". </p>
+<button onclick="document.getElementById('Grayling').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Clare" class="description">
+<h2>Клэр</h2>
+<p>Район Клэр - деловой и культурный центр Детройта. Здесь располагается высотка корпорации "Олимп".</p>
+<button onclick="document.getElementById('Clare').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Beaverton" class="description">
+<h2>Бивертон</h2>
+<p>Район Бивертон представляет собой обычный рабочий район в самом центре Детройта, и потому перенаселенный и переполненный. Здесь располагается основное полицейское управление Детройта.</p>
+<button onclick="document.getElementById('Beaverton').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Mount_Pleasant" class="description">
+<h2>Маунт Плезант</h2>
+<p>Район Маунт-Плезант состоит из трех уровней: наиболее богатого высшего с филиалом Еватек, среднего и низшего - центрального для бедняков.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=110" target="_blank" class="effect-8">Безумцы</a></dd>
+</dl>
+<button onclick="document.getElementById('Mount_Pleasant').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Port_Austin" class="description">
+<h2>Порт Остин</h2>
+<p>Район-порт Остин имеет мало богатых частей, но, тем не менее, благодаря влиянию Клубу Теней - преступной фракции во главе с торговцем информации <a href="http://nextus.f-rpg.ru/profile.php?id=5" target="_blank">Демитрием</a>, сильно обогатился, а по его улицам можно относительно безопасно передвигаться.</p>
+<button onclick="document.getElementById('Port_Austin').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Caro" class="description">
+<h2>Каро</h2>
+<p>Район Каро - элитный спальный район, большая часть которого принадлежит не столько политическим шишкам, сколько представителям теневого бизнеса.</p>
+<button onclick="document.getElementById('Caro').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Marlette" class="description">
+<h2>Марлетт</h2>
+<p>Район Марлетт - среднестатический район, разделенный на несколько уровней - от наиболее богатого к трущобам и подземным тоннелям.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=58" target="_blank" class="effect-8">По воле случая</a></dd>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=255" target="_blank" class="effect-8">Пока тебя не было</a></dd>
+</dl>
+<button onclick="document.getElementById('Marlette').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Sarnia" class="description">
+<h2>Сарния</h2>
+<p>Район-порт Сарния славится повышенным уровнем преступности. Большая часть Сарнии уходит вглубь под землю и сообщается с тоннелями Чатем-Кента и Остина, что делает активной связь между ними, так как такие глубины используются революционерами как укрытие.</p>
+<button onclick="document.getElementById('Sarnia').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Chatham-Kent" class="description">
+<h2>Чатем-Кент</h2>
+<p>Район Чатем-Кент, один из самых опасных и бедных в городе, из-за дороги, ведущей к руинам Лондона. Постоянно подвергается проверкам государства из-за повышенного риска революционных настроений.</p>
+<button onclick="document.getElementById('Chatham-Kent').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Richmond" class="description">
+<h2>Ричмонд</h2>
+<p>Район Ричмонд - еще один элитный район, преимущественно развлекательный.</p>
+<button onclick="document.getElementById('Richmond').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Dearborn" class="description">
+<h2>Дирборн</h2>
+<p>Район Дирборн - элитный жилой и развлекательный район. Имеет несколько портов, которые оборудованы в новейшие развлекательные центры.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=391" target="_blank" class="effect-8">Несвоевременная поломка</a></dd>
+</dl>
+<button onclick="document.getElementById('Dearborn').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Toledo" class="description">
+<h2>Толедо</h2>
+<p>Район Толедо отличается высоким уровнем преступности, а  ниже уровня его земли простираются самые глубокие тоннели. Находится во владении преступной группы <a href="http://nextus.f-rpg.ru/profile.php?id=66" target="_blank">Сезара Торрегросы</a>.</p>
+<button onclick="document.getElementById('Toledo').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Cleveland" class="description">
+<h2>Кливленд</h2>
+<p>Район Кливленд, располагающийся на некотором отшибе, не самое безопасное место из-за близости к границе. Отличается глубокими трущобами, напряженными отношениями среди горожан, а также проблемами логистики, из-за чего нередко возникают нарушения в доставке ресурсов, прибытия медиков, полиции и т.д.</p>
+<button onclick="document.getElementById('Cleveland').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Midland" class="description">
+<h2>Мидленд</h2>
+<p>Район Мидленд делится на все четыре уровня: верхний - самый богатый благодаря представительству корпорации Дэппл, средний уровень - деловой район представителей среднего класса, низший - обедневший рабочий район, и, наконец, подземные катакомбы, о которых давно было забыто всеми, кроме революционеров.</p>
+<button onclick="document.getElementById('Midland').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Lansing" class="description">
+<h2>Ленсинг</h2>
+<p>Центральный район Ленсинг - сердце Детройта. Преимущественно разросшийся в высоту, он представляет собой финансовый и экономический город из высоток. Также в Ленсинге находится здание Правительства с представительствами различных министерств, в числе которых и Министерство обороны.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=204" target="_blank" class="effect-8">Январская ностальгия</a></dd>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=423" target="_blank" class="effect-8">Герои дня</a></dd>
+</dl>
+<button onclick="document.getElementById('Lansing').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Huron-Manistee" class="description">
+<h2>Гурон-Манисти</h2>
+<p>Район Гурон-Манисти - большие территории, большая часть которых отдана филиалам ЦЕРНа и Исследовательского института, а также их научным городкам и полевым лабораториям.</p>
+<button onclick="document.getElementById('Huron-Manistee').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Greenville" class="description">
+<h2>Гринвилл</h2>
+<p>Расположившийся вдали от крупных дорог Детройта, Гринвилл является превосходным местом для сильных мира сего, так что в нем кипит активная политическая жизнь, а также там располагается представительство Металайфа.</p>
+<button onclick="document.getElementById('Greenville').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Grand_Rapids" class="description">
+<h2>Гранд Рапидс</h2>
+<p>Район Гранд Рапидс соединяет между собой как бедные, так и богатые части Детройта, что делает это место районом контрастов между образом жизни. </p>
+<button onclick="document.getElementById('Grand_Rapids').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Holland" class="description">
+<h2>Холланд</h2>
+<p>Район-порт Холланд, преимущественно бедный, но активно выкарабкивающийся за счет рыбацких деревень, учитывая, что разведение дефицитной рыбы - дело прибыльное, хотя и подсудное.</p>
+<button onclick="document.getElementById('Holland').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Kalamazoo" class="description">
+<h2>Каламазу</h2>
+<p>Район Каламазу можно было бы назвать обычным, если бы на его территории не располагался тренировочный полигон и штаб Министерства внутренней безопасности ОА.</p>
+<button onclick="document.getElementById('Kalamazoo').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Wyoming" class="description">
+<h2>Вайоминг</h2>
+<p>Район Вайоминг - царство дочерней фирмы Металайфа - "ЭКО", которая отвечает за гидропонику. Вливание средств в район позволило ему стать одним из наиболее богатых в городе.</p>
+<button onclick="document.getElementById('Wyoming').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Elkhart" class="description">
+<h2>Элкхарт</h2>
+<p>Элкхарт - пограничный город, настолько погрязший в интригах, связанных с торговлей за стеной, что его разделило на десяток различных сторон. Здесь часты проверки ЦРУ настолько же, насколько появления революционеров.</p>
+<button onclick="document.getElementById('Elkhart').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Adrian" class="description">
+<h2>Эдриан</h2>
+<p>Район Эдриан не относится к богатым частям Детройта, но внутри расположено здание ЦРУ и Тайной полиции, а также их тайные тюрьмы.</p>
+<button onclick="document.getElementById('Adrian').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Battle_Creek" class="description">
+<h2>Баттл Крик</h2>
+<p>Район Баттл Крик - забитая под завязку, перенаселенная часть города настолько, что во время "час пик" нередки жертвы из-за толкучки.</p>
+<button onclick="document.getElementById('Battle_Creek').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Coldwater" class="description">
+<h2>Колдуотер</h2>
+<p>Район Колдуотер - бедный район, преимущественно представляющий собой трущобы, но в последний год является объектом повышенного интереса для революционеров и незаконных группировок.</p>
+<button onclick="document.getElementById('Coldwater').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Fort_Wayne" class="description">
+<h2>Форт Уэйн</h2>
+<p>Форпост Уэйн - главный защитный кордон Детройта.</p>
+<button onclick="document.getElementById('Fort_Wayne').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Flint" class="description">
+<h2>Флинт</h2>
+<p>Район Флинт - одна из самых крупных развязок городских дорог, а потому в него стекаются люди и деньги. Здесь располагается одно из представительств Нерокорпа.</p>
+<button onclick="document.getElementById('Flint').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Ann_Arbor" class="description">
+<h2>Энн Арбор</h2>
+<p>Район Энн-Арбор - элитный спальный район, полный особняков влиятельных персон, располагающихся как можно выше, и изящных квартирных башен.</p>
+<button onclick="document.getElementById('Ann_Arbor').style.display='none'; return false;">Закрыть</button>
+</div>
+
+<!--Места и руины-->
+<div id="Scepter_base" class="description">
+<h2>База Сцептера</h2>
+<p></p>
+<button onclick="document.getElementById('Scepter_base').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Drummond" class="description1">
+<h2>Драммонд</h2>
+<p>Детройтская тюрьма, расположенная на отдельном острове без единой возможности выбраться без помощи извне.</p>
+<button onclick="document.getElementById('Drummond').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Elliot" class="description">
+<h2>Эллиот</h2>
+<p>Строящийся район.</p>
+<button onclick="document.getElementById('Elliot').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Spring_Arbor" class="description">
+<h2>Порт "Спринг Арбор"</h2>
+<p>Cтанция, откуда ведут шаттлы и самолеты в другие города ОА.</p>
+<button onclick="document.getElementById('Spring_Arbor').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Stonehearst" class="description">
+<h2>Стоунхёрст</h2>
+<p>Психиатрическая лечебница, ликвидированная после событий мая 2155 года.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=122" target="_blank" class="effect-8">Каменные стены</a></dd>
+</dl>
+<button onclick="document.getElementById('Stonehearst').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Scepter_port" class="description">
+<p>Личный порт Сцептера, окруженный полигонами. Скрыт от посторонних глаз.</p>
+<button onclick="document.getElementById('Scepter_port').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Murayama" class="description">
+<p>Бывший торговый центр "МУРАЯМА" на улице Хейвен-Сильван. Объект теракта в 2154 году.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=101" target="_blank" class="effect-8">Поворот не туда</a></dd>
+</dl>
+<button onclick="document.getElementById('Murayama').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Exineris" class="description">
+<h2>Энергостанция "Эксинерис"</h2>
+<img src="https://i.imgur.com/Z9hDZTi.png" alt="">
+<p>Главная станция Детройта, на которую приходится 90% всего производства и распределения энергии по городу. Является ключевой точкой Детройта и охраняется не хуже здания Правительства. Представляет собой многоуровневое строение, покрытое многоугольным куполом.</p>
+<p>Подверглась захвату в октябре 2155г.</p> 
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=599" target="_blank" class="effect-8">Эксинерис</a></dd>
+</dl>
+<button onclick="document.getElementById('Exineris').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Iron" class="description">
+<h2>Железка</h2>
+<p>"Район" или, вернее, часть Остина, являющаяся одной из главных точек черного рынка в Детройте. За десять последних лет была налажена Клубом Теней, а теперь является местом заключения трети всех нелегальных сделок Детройта.</p>
+<button onclick="document.getElementById('Iron').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Ketterdam" class="description">
+<h2>Кеттердам</h2>
+<p>Один из открытых портов Остина, а также одна из основных его частей, где располагается бордель "Кошачий дом" и огромное казино "Византия".</p>
+<button onclick="document.getElementById('Ketterdam').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Fawley" class="description">
+<h2>Пустырь Фоули</h2>
+<p>Место, по большей части пустое из-за произошедшей лет 30 назад утечки нефти.</p>
+<button onclick="document.getElementById('Fawley').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Pineview-Drive" class="description">
+<h2>Пайнвью-драйв</h2>
+<p>Станция, ставшая местом захвата заложников террористами в апреле 2155 года.</p>
+<button onclick="document.getElementById('Pineview-Drive').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Briarcliff" class="description">
+<h2>Брайарклифф</h2>
+<p>Главная психиатрическая лечебница Детройта, которая сотрудничает с государственными и военными структурами. Является местом очень замкнутым: встречи с больными запрещены, внутрь вход запрещен, любые съемки и интервью пресекаются. Лишь немногие знают о том, что в Брайарклиффе проводят опыты на людях как сотрудники Неолюции, так и интересующиеся Нексусом.</p>
+<button onclick="document.getElementById('Briarcliff').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Linden" class="description">
+<h2>Улица Линден</h2>
+<p>Подверглась атаке в мае 2155 года.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=171" target="_blank" class="effect-8">Слон в посудной лавке</a></dd>
+</dl>
+<button onclick="document.getElementById('Linden').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Dresden" class="description">
+<h2>Стоянка "Дрезден"</h2>
+<p>Третья нелегальная и самая маленькая стоянка в городе, а также небольшой кордон, через который можно проникнуть в город.</p>
+<button onclick="document.getElementById('Dresden').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Fisher_Theatre" class="description">
+<h2>Театр Фишер</h2>
+<img src="https://i.imgur.com/cT2FtU2.png" alt="">
+<p>Разрушен во время теракта 23 ноября 2155.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=123" target="_blank" class="effect-8">Акт всесожжения</a></dd>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=668" target="_blank" class="effect-8">Инквизиция</a></dd>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=669" target="_blank" class="effect-8">Инквизиция: северное крыло</a></dd></dl>
+<button onclick="document.getElementById('Fisher_Theatre').style.display='none'; return false;"> Закрыть</button>
+</div>
+<div id="Whitechapel" class="description">
+<h2>Станция "Уайтчепел"</h2>
+<p>Отсюда ведут железные дороги в другие города ОА.</p>
+<button onclick="document.getElementById('Whitechapel').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Lenawee_County" class="description">
+<h2>Ленауи Каунти</h2>
+<p>Аэропорт Ленауи Каунти - официальная городская стоянка шаттлов.</p>
+<button onclick="document.getElementById('Lenawee_County').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Huntertown" class="description">
+<h2>Бухта Хантертаун</h2>
+<p>Основное место в городе, где можно незаметно припарковать шаттлы, добравшиеся в Детройт из-за стены, при условии, что они оборудованы системой маскировки.</p>
+<button onclick="document.getElementById('Huntertown').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Elyria" class="description">
+<h2>Элирия</h2>
+<p>Главная площадь Кливленда.</p>
+<button onclick="document.getElementById('Elyria').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Painesville" class="description">
+<h2>Стоянка "Пейнсвилл"</h2>
+<p>Место, где можно незаметно проникнуть в город и припарковать шаттлы. С октября 2155 года разрушена.</p>
+<button onclick="document.getElementById('Painesville').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Helmer" class="description1">
+<h2>Хелмер</h2>
+<p>Сцептеровский тайник.</p>
+<button onclick="document.getElementById('Helmer').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Manitoulin" class="description">
+<h2>Манитулин</h2>
+<p>Чумной остров.</p>
+<button onclick="document.getElementById('Manitoulin').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Rocky_Island" class="description1">
+<h2>Роки Айленд</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Rocky_Island').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Elliot_Lake" class="description1">
+<h2>Эллиот-Лейк</h2>
+<p>Руины на пути к Садсбери.</p>
+<button onclick="document.getElementById('Elliot_Lake').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Allenford" class="description">
+<h2>Алленфорд</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Allenford').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Listowel" class="description">
+<h2>Листауэлл</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Listowel').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Road_to_Toronto" class="description">
+<h2>Дорога на Торонто</h2>
+<button onclick="document.getElementById('Road_to_Toronto').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="London" class="description">
+<h2>Лондон</h2>
+<p>Наиболее крупные руины вокруг Детройта.</p>
+<button onclick="document.getElementById('London').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Mildfield" class="description">
+<h2>Милдфилд</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Mildfield').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Hiawatha" class="description">
+<h2>Хайавата</h2>
+<p>Заповедник, полностью пораженный мутировавшей флорой и фауной.</p>
+<button onclick="document.getElementById('Hiawatha').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Cornell" class="description">
+<h2>Корнелл</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Cornell').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Green_Bay" class="description">
+<h2>Грин Бэй</h2>
+<p>Старый довоенный порт. База, располагающаяся за чертой города, до которой можно добраться либо по воде, либо по воздуху; представляет собой хорошо укрепленную военную базу с научным городом в центре. Учитывая отдаленность Грин Бэя от Детройта и отсутствие граждан города вокруг, именно эта база является главным полигоном для изучения и испытания нового вооружения, здесь находится штаб проекта "Спектр", а также первая платформа "Вероники", которая защищает от мутантов как саму базу, так и наиболее близкую к ней часть стены Детройта. Весь периметр базы дополнительно охраняются 12-ю вышками с турелями.  </p>
+<button onclick="document.getElementById('Green_Bay').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Brillion" class="description">
+<h2>Бриллион</h2>
+<p>Руины.</p>
+<dl>
+<dt>Связанные квесты:</dt>
+<dd><a href="http://nextus.f-rpg.ru/viewtopic.php?id=539" target="_blank" class="effect-8">Во имя наших людей</a></dd>
+</dl>
+<button onclick="document.getElementById('Brillion').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Elkhart_Lake" class="description">
+<h2>Элкхарт</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Elkhart_Lake').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Milwaukee" class="description">
+<h2>Милуоки</h2>
+<p>Руины Милуоки - километры обломков, среди которых плодятся мутанты.</p>
+<button onclick="document.getElementById('Milwaukee').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Greenfield" class="description">
+<h2>Гринфилд</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Greenfield').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Racine" class="description">
+<h2>Расин</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Racine').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Chicago" class="description">
+<h2>Чикаго</h2>
+<p>Обитаемый город за стеной, принадлежащий диким племенам.</p>
+<button onclick="document.getElementById('Chicago').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Hammond" class="description">
+<h2>Хаммонд</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Hammond').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Lowell" class="description">
+<h2>Лоуэлл</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Lowell').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Manteno" class="description">
+<h2>Мантено</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Manteno').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Parr" class="description">
+<h2>Парр</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Parr').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Argos" class="description">
+<h2>Аргос</h2>
+<p>Руины.</p>
+<button onclick="document.getElementById('Argos').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Knox" class="description">
+<h2>Нокс</h2>
+<p>Общий лагерь Кочевников и Сцептера, организованный после того, как две стороны помогли друг другу. Нынче люди обмениваются своими знаниями, торгуют, сражаются вместе и изучают активность мутантов, которая угрожает всем. Располагается чуть дальше руин Аргоса. Официально до лагеря можно добраться от выхода в Элкхарте, контролируемом Сцептером, а неофициально — от Хантертауна.</p>
+<button onclick="document.getElementById('Knox').style.display='none'; return false;">Закрыть</button>
+</div>
+<div id="Erie_Islands" class="description">
+<h2>Эри Айлендс</h2>
+<p>Водохранилище.</p>
+<button onclick="document.getElementById('Erie_Islands').style.display='none'; return false;">Закрыть</button>
+</div>
+		<svg viewBox="0 0 725 760">
+<!--Районы-->
+<a href="#">
+<path id="St_Maria" onclick="document.getElementById('St_Maria').style.display='block'; return false;" class="outpost" d="m 345.5,50 8.5,10 5.5,-0.5 17.5,-11 3.5,2 4.5,-4.5 17.5,8.5 -6,-14 C 379.2315,25.925998 366.11122,27.944897 355.5,40 Z">
+</a>
+<a href="#">
+<path id="Allenville" onclick="document.getElementById('Allenville').style.display='block'; return false;" class="neutral" d="M 369.37127,53.295202 362.5,79.5 l -10.5,9 0.5,12 -9,4.5 -7.5,13 13.5278,11.62002 C 356.1317,120.73684 388.26891,125.39626 409,121.5 399.20369,109.45227 402.90269,102.50518 421,101 421.47883,90.739859 416.26779,81.84405 402.5,75 V 54.5 L 385,46 l -4.5,4.5 -3.5,-2 z">
+</a>
+<a href="#">
+<path id="Mackinac_Island" onclick="document.getElementById('Mackinac_Island').style.display='block'; return false;" class="bad" d="M 345.5,50 308,52 c -6.05478,4.361306 -5.43862,10.390344 -6.5,16 -0.66667,4 -4,6 -10,6 L 287,71 c -22.72387,23.50385 -14.67609,27.006127 -12,34 34.19858,3.12006 52.79293,17.386 59,40.5 l 13,0.5 2.5278,-16.37998 L 336,118 l 7.5,-13 9,-4.5 -0.5,-12 10.5,-9 6.87127,-26.204798 L 359.5,59.5 354,60 Z">
+</a>
+<a href="#">
+<path id="Atlanta_State" onclick="document.getElementById('Atlanta_State').style.display='block'; return false;" class="good" d="m 347,146 -0.87123,19.67675 4.24264,51.26524 -8.48528,11.31371 -1.76777,10.6066 60.02637,-0.69735 L 421,238 420.37498,190.42549 391.5,178.5 l -5,-10 C 374.91767,164.8488 362.54775,160.13816 347,146 Z">
+</a>
+<a href="#">
+<path id="Lewiston" onclick="document.getElementById('Lewiston').style.display='block'; return false;" class="neutral" d="m 398.10112,284.11714 -59.04342,8.13172 v -32.52691 l 3.53554,-3.18198 -2.47488,-17.67767 60.02637,-0.69735 0.43126,33.22426 -2.82843,1.41422 z">
+</a>
+<a href="#">
+<path id="High_Banks" onclick="document.getElementById('High_Banks').style.display='block'; return false;" class="neutral" d="m 421,238 -20.85527,0.16495 0.43126,33.22426 -2.82843,1.41422 0.35356,11.31371 66.82159,-1.41422 -1.41421,-13.08147 c -5.44751,-10.17586 -9.9846,-20.75636 -7.07107,-34.64824 2.44646,-12.45923 2.10267,-22.64141 -11.37437,-36.03732 -12.56679,-2.79709 -13.36266,-3.49273 -24.68808,-8.5104 z">
+</a>
+<a href="#">
+<path id="Rose_City" onclick="document.getElementById('Rose_City').style.display='block'; return false;" class="bad" d="m 463.15494,323.71512 -62.57924,1.04299 0.35384,69.66769 14.4957,0.35355 8.48528,-19.09189 c 14.47553,-1.25186 23.58622,-9.47801 28.63782,-22.98097 l -0.35355,-12.02081 c 7.83689,-1.47335 9.60205,-9.01843 10.96015,-16.97056 z">
+</a>
+<a href="#">
+<path id="Forest_Area" onclick="document.getElementById('Forest_Area').style.display='block'; return false;" class="neutral" d="m 464.92271,282.70292 -1.76777,41.0122 -62.57924,1.04299 -61.518,0.0177 v -32.52692 l 59.04342,-8.13172 z">
+</a>
+<a href="#">
+<path id="Bellaire" onclick="document.getElementById('Bellaire').style.display='block'; return false;" class="neutral" d="m 339.82607,253.5744 0.29229,-14.7121 1.76777,-10.6066 8.48528,-11.31371 -4.24264,-51.26524 L 347,146 334,145.5 303,166 c -10.79123,12.0693 -5.30081,18.71138 3.5,24.25 -12.11766,10.81084 -32.04725,12.76816 -31.43547,38.0057 l -1.59129,25.34651 66.35283,-0.0278">
+</a>
+<a href="#">
+<path id="Traverse_City" onclick="document.getElementById('Traverse_City').style.display='block'; return false;" class="bad" d="m 275.06453,228.2557 -4.47653,71.30337 -69.76967,-0.59269 C 201.37918,288.7694 207.20833,281.20657 215.75,275 l 4.75,-20 21.75,-11.25 8.5,-16 10.75,-1.75 c -5.04463,20.69016 5.64678,29.29321 13.56453,2.2557 z">
+</a>
+<a href="#">
+<path id="Harrietta" onclick="document.getElementById('Harrietta').style.display='block'; return false;" class="good" d="m 269.05413,358.36335 1.53387,-58.80428 -69.76967,-0.59269 -16.26346,45.60839 -0.35355,13.78858 z">
+</a>
+<a href="#">
+<path id="Grayling" onclick="document.getElementById('Grayling').style.display='block'; return false;" class="neutral" d="m 269.92985,324.7906 0.65815,-25.23153 2.88524,-45.95686 66.35283,-0.0278 -0.76837,71.2014 z">
+</a>
+<a href="#">
+<path id="Clare" onclick="document.getElementById('Clare').style.display='block'; return false;" class="good" d="m 269.92985,324.7906 -0.87572,33.57275 -0.70711,13.43503 L 263,390.5 l 16,1.5 7,-2.5 15.5,-2 10.5,7 20,-4.5 1.04729,-20.6765 -2.47487,-2.82842 -0.70711,-41.7193 z">
+</a>
+<a href="#">
+<path id="Beaverton" onclick="document.getElementById('Beaverton').style.display='block'; return false;" class="neutral" d="m 329.86531,324.77578 0.70711,41.7193 2.47487,2.82842 L 332,390 l 3.66414,2.84988 -1.44976,19.24164 66.65449,-0.0868 -0.29317,-87.24661 z">
+</a>
+<a href="#">
+<path id="Mount_Pleasant" onclick="document.getElementById('Mount_Pleasant').style.display='block'; return false;" class="neutral" d="m 263,390.5 v 22 l 5,9.5 -0.5,25.5 31.60617,0.66591 5.3033,2.47487 37.12311,-0.35355 0.16605,-15.28306 -5.36396,-4.20343 0.24816,-4.90869 -3.17199,-3.13575 2.2533,-29.90642 L 332,390 l -20,4.5 -10.5,-7 -15.5,2 -7,2.5 z">
+</a>
+<a href="#">
+<path id="Port_Austin" onclick="document.getElementById('Port_Austin').style.display='block'; return false;" class="bad" d="m 534.5,447.5 c -42.20999,1.47648 -48.95756,2.35206 -70.36186,2.86296 C 461.72112,432.73413 460.18377,412.47399 458,395.25 l 5,-7.25 c 1.96781,-0.55749 29.44025,-30.6 51.5,-7.5 12.40924,22.33333 16.80168,44.66667 20,67 z">
+</a>
+<a href="#">
+<path id="Caro" onclick="document.getElementById('Caro').style.display='block'; return false;" class="good" d="m 415.42524,394.77935 -14.4957,-0.35355 -0.29608,85.7898 64.44042,-0.76623 -0.93574,-29.08641 L 458,395.25 c -3.30707,26.47486 -44.37724,37.58217 -42.57476,-0.47065 z">
+</a>
+<a href="#">
+<path id="Marlette" onclick="document.getElementById('Marlette').style.display='block'; return false;" class="neutral" d="m 464.13814,450.36296 0.93574,29.08641 0.64709,20.11389 L 493.5,501 l 20,4 23.45575,-0.58439 L 534.5,447.5 Z">
+</a>
+<a href="#">
+<path id="Sarnia" onclick="document.getElementById('Sarnia').style.display='block'; return false;" class="bad" d="m 534.5,447.5 4.31535,100.01442 78.1353,-1.76777 C 627.83357,495.58635 575.04832,503.46875 561,497.5 c -18.78358,-7.49042 -18.97158,-23.76189 -26.5,-50 z">
+</a>
+<a href="#">
+<path id="Chatham-Kent" onclick="document.getElementById('Chatham-Kent').style.display='block'; return false;" class="bad" d="m 616.95065,545.74665 -78.1353,1.76777 1.06066,70.71067 C 552.02685,611.28681 563.77984,604.80321 585,587.5 c 15.53828,-10.98495 29.55717,-22.88152 31.95065,-41.75335 z">
+</a>
+<a href="#">
+<path id="Richmond" onclick="document.getElementById('Richmond').style.display='block'; return false;" class="good" d="M 538.81535,547.51442 472.7121,548.63343 471.75,525.5 465.25,514.25 465.72097,499.56326 493.5,501 l 20,4 23.45575,-0.58439 z">
+</a>
+<a href="#">
+<path id="Dearborn" onclick="document.getElementById('Dearborn').style.display='block'; return false;" class="good" d="m 472.7121,548.63343 66.10325,-1.11901 1.06066,70.71067 C 523.75739,626.7586 506.3802,630.57242 486.5,625 L 476,606.5 Z">
+</a>
+<a href="#">
+<path id="Toledo" onclick="document.getElementById('Toledo').style.display='block'; return false;" class="bad" d="m 400,641.5 -0.5,34 3.5,3.5 -0.5,22.5 26,-12.5 c 9.52424,-5.31945 30.75097,20.85629 102,31 L 532,709 521.5,689.5 C 504.31941,681.24774 487.35197,672.60473 478,650 H 425.5 L 410,643 Z">
+</a>
+<a href="#">
+<path id="Cleveland" onclick="document.getElementById('Cleveland').style.display='block'; return false;" class="bad" d="m 530.5,720 12.5,11.5 27.5,-0.5 70.5,-39.5 1,-17.5 -9.5,-1 -36.5,7.5 c -20.94313,8.51111 -38.35855,22.01984 -74.5,9 L 532,709 Z">
+</a>
+<a href="#">
+<path id="Midland" onclick="document.getElementById('Midland').style.display='block'; return false;" class="neutral" d="m 400.86887,412.00472 -66.65449,0.0868 -0.80354,10.66481 3.17199,3.13575 -0.24816,4.90869 5.36396,4.20343 -0.16605,15.28306 0.42618,52.31014 L 400,503 l 0.63346,-22.7844 z">
+</a>
+<a href="#">
+<path id="Lansing" onclick="document.getElementById('Lansing').style.display='block'; return false;" class="good" d="m 399.86889,564.48498 0.0811,47.63411 L 341.5,611.5 341.6725,570.55066 341.95876,502.59737 400,503 Z">
+</a>
+<a href="#">
+<path id="Huron-Manistee" onclick="document.getElementById('Huron-Manistee').style.display='block'; return false;" class="good" d="M 267.5,447.5 204.022,449.28309 178.5,450 c -12.94988,-12.04284 -14.11141,-22.90742 -3.49107,-36.83588 8.14744,-8.83883 2.10147,-19.79899 -2.47488,-28.63782 2.29021,-9.8432 6.55678,-17.25985 11.66727,-26.16295 l 84.85281,0 -0.70711,13.43503 L 263,390.5 v 22 l 5,9.5 z">
+</a>
+<a href="#">
+<path id="Greenville" onclick="document.getElementById('Greenville').style.display='block'; return false;" class="good" d="m 341.53258,450.28723 0.42618,52.31014 L 315,517 h -46 l -1.5,-69.5 31.60617,0.66591 5.3033,2.47487 z">
+</a>
+<a href="#">
+<path id="Grand_Rapids" onclick="document.getElementById('Grand_Rapids').style.display='block'; return false;" class="neutral" d="m 267.5,447.5 2,95 h -50 l -15.478,-93.21691 z">
+</a>
+<a href="#">
+<path id="Holland" onclick="document.getElementById('Holland').style.display='block'; return false;" class="bad" d="m 219.5,542.5 -20,0.5 c 3.50583,-23.42532 2.724,-45.20154 -11,-62 -6.83622,-10.33333 -12.38154,-20.66667 -10,-31 l 25.522,-0.71691 z">
+</a>
+<a href="#">
+<path id="Kalamazoo" onclick="document.getElementById('Kalamazoo').style.display='block'; return false;" class="neutral" d="m 269.5,542.5 0.5,51.5 -16,3 -54.5,6 c -10.73863,-8.45603 -0.16801,-30.37684 0,-60 l 20,-0.5 z">
+</a>
+<a href="#">
+<path id="Wyoming" onclick="document.getElementById('Wyoming').style.display='block'; return false;" class="good" d="M 341.95876,502.59737 315,517 h -46 l 0.77182,53.49736 71.90068,0.0533 z">
+</a>
+<a href="#">
+<path id="Elkhart" onclick="document.getElementById('Elkhart').style.display='block'; return false;" class="outpost" d="m 254,597 v 35.5 l -3.5,9.5 1.5,6.5 -3,18.5 -21.5,3.5 c -8.41238,-6.87334 -21.29948,-2.4826 -23.5,-37 9.80282,-6.51614 7.00439,-19.98876 -4.5,-30.5 z">
+</a>
+<a href="#">
+<path id="Adrian" onclick="document.getElementById('Adrian').style.display='block'; return false;" class="neutral" d="M 399.94998,612.11909 341.5,611.5 313,658 l -6,13 -0.45996,22.53823 16.72513,1.43144 8.67677,-2.61612 L 385.5,694.5 l 17,7 0.5,-22.5 -3.5,-3.5 z">
+</a>
+<a href="#">
+<path id="Battle_Creek" onclick="document.getElementById('Battle_Creek').style.display='block'; return false;" class="neutral" d="M 269.77182,570.49736 270,594 l -16,3 v 35.5 l -3.5,9.5 1.5,6.5 -1.13381,6.99181 L 288.5,655 l 24.5,3 28.5,-46.5 0.1725,-40.94934 z">
+</a>
+<a href="#">
+<path id="Coldwater" onclick="document.getElementById('Coldwater').style.display='block'; return false;" class="bad" d="m 313,658 -6,13 -0.5,24.5 -17,42.5 -34,-2 L 245,718 254,697 227.5,670.5 249,667 250.86619,655.49181 288.5,655 Z">
+</a>
+<a href="#">
+<path id="Fort_Wayne" onclick="document.getElementById('Fort_Wayne').style.display='block'; return false;" class="outpost" d="M 402.5,701.5 317.13739,740.20101 289.5,738 l 17.04004,-44.46177 16.72513,1.43144 8.67677,-2.61612 L 385.5,694.5 Z">
+</a>
+<a href="#">
+<path id="Flint" onclick="document.getElementById('Flint').style.display='block'; return false;" class="neutral" d="M 465.07388,479.44937 402.72432,480.14595 400,503 l -0.13111,61.48498 73.48722,-0.3664 L 471.75,525.5 l -6.5,-11.25 0.47097,-14.68674 z">
+</a>
+<a href="#">
+<path id="Ann_Arbor" onclick="document.getElementById('Ann_Arbor').style.display='block'; return false;" class="good" d="m 478,650 c -1.16416,-14.99583 4.29045,-18.96037 8.5,-25 L 476,606.5 473.35611,564.11858 399.86889,564.48498 400,641.5 l 10,1.5 15.5,7 z">
+</a>
+
+<!--Места и руины-->
+<a href="#">
+<circle id="Scepter_base" onclick="document.getElementById('Scepter_base').style.display='block'; return false;" class="place" r="6" cx="280" cy="98">
+</a>
+<a href="#">
+<circle id="Drummond" onclick="document.getElementById('Drummond').style.display='block'; return false;" class="place" r="6" cx="430.5" cy="118.5">
+</a>
+<a href="#">
+<circle id="Elliot" onclick="document.getElementById('Elliot').style.display='block'; return false;" class="place" r="6" cx="365" cy="140">
+</a>
+<a href="#">
+<circle id="Spring_Arbor" onclick="document.getElementById('Spring_Arbor').style.display='block'; return false;" class="place" r="6" cx="309" cy="201">
+</a>
+<a href="#">
+<circle id="Stonehearst" onclick="document.getElementById('Stonehearst').style.display='block'; return false;" class="place" r="6" cx="423" cy="263">
+</a>
+<a href="#">
+<circle id="Scepter_port" onclick="document.getElementById('Scepter_port').style.display='block'; return false;" class="place" r="6" cx="196" cy="318">
+</a>
+<a href="#">
+<circle id="Murayama" onclick="document.getElementById('Murayama').style.display='block'; return false;" class="place" r="6" cx="343" cy="357">
+</a>
+<a href="#">
+<circle id="Exineris" onclick="document.getElementById('Exineris').style.display='block'; return false;" class="place" r="6" cx="328" cy="399">
+</a>
+<a href="#">
+<circle id="Iron" onclick="document.getElementById('Iron').style.display='block'; return false;" class="place" r="6" cx="468" cy="408">
+</a>
+<a href="#">
+<circle id="Ketterdam" onclick="document.getElementById('Ketterdam').style.display='block'; return false;" class="place" r="6" cx="512" cy="417">
+</a>
+<a href="#">
+<circle id="Fawley" onclick="document.getElementById('Fawley').style.display='block'; return false;" class="place" r="6" cx="333" cy="492">
+</a>
+<a href="#">
+<circle id="Pineview-Drive" onclick="document.getElementById('Pineview-Drive').style.display='block'; return false;" class="place" r="6" cx="382" cy="517">
+</a>
+<a href="#">
+<circle id="Briarcliff" onclick="document.getElementById('Briarcliff').style.display='block'; return false;" class="place" r="6" cx="238" cy="535">
+</a>
+<a href="#">
+<circle id="Linden" onclick="document.getElementById('Linden').style.display='block'; return false;" class="place" r="6" cx="420" cy="527">
+</a>
+<a href="#">
+<circle id="Dresden" onclick="document.getElementById('Dresden').style.display='block'; return false;" class="place" r="6" cx="594" cy="518">
+</a>
+<a href="#">
+<circle id="Fisher_Theatre" onclick="document.getElementById('Fisher_Theatre').style.display='block'; return false;" class="place" r="6" cx="489" cy="574">
+</a>
+<a href="#">
+<circle id="Whitechapel" onclick="document.getElementById('Whitechapel').style.display='block'; return false;" class="place" r="6" cx="274" cy="617">
+</a>
+<a href="#">
+<circle id="Lenawee_County" onclick="document.getElementById('Lenawee_County').style.display='block'; return false;" class="place" r="6" cx="361" cy="672">
+</a>
+<a href="#">
+<circle id="Huntertown" onclick="document.getElementById('Huntertown').style.display='block'; return false;" class="place" r="6" cx="255" cy="720">
+</a>
+<a href="#">
+<circle id="Elyria" onclick="document.getElementById('Elyria').style.display='block'; return false;" class="place" r="6" cx="554" cy="713">
+</a>
+<a href="#">
+<circle id="Painesville" onclick="document.getElementById('Painesville').style.display='block'; return false;" class="place" r="6" cx="630" cy="687">
+</a>
+<a href="#">
+<circle id="Helmer" onclick="document.getElementById('Helmer').style.display='block'; return false;" class="place" r="6" cx="240" cy="82">
+</a>
+<a href="#">
+<circle id="Manitoulin" onclick="document.getElementById('Manitoulin').style.display='block'; return false;" class="place" r="6" cx="582" cy="152">
+</a>
+<a href="#">
+<circle id="Rocky_Island" onclick="document.getElementById('Rocky_Island').style.display='block'; return false;" class="place" r="6" cx="464" cy="37">
+</a>
+<a href="#">
+<circle id="Elliot_Lake" onclick="document.getElementById('Elliot_Lake').style.display='block'; return false;" class="mplace" r="8" cx="525" cy="74">
+</a>
+<a href="#">
+<circle id="Allenford" onclick="document.getElementById('Allenford').style.display='block'; return false;" class="place" r="6" cx="665" cy="305">
+</a>
+<a href="#">
+<circle id="Listowel" onclick="document.getElementById('Listowel').style.display='block'; return false;" class="place" r="6" cx="640" cy="415">
+</a>
+<a href="#">
+<circle id="Road_to_Toronto" onclick="document.getElementById('Road_to_Toronto').style.display='block'; return false;" class="mplace" r="8" cx="708" cy="475">
+</a>
+<a href="#">
+<circle id="London" onclick="document.getElementById('London').style.display='block'; return false;" class="mplace" r="8" cx="653" cy="507">
+</a>
+<a href="#">
+<circle id="Mildfield" onclick="document.getElementById('Mildfield').style.display='block'; return false;" class="place" r="6" cx="680" cy="672">
+</a>
+<a href="#">
+<circle id="Hiawatha" onclick="document.getElementById('Hiawatha').style.display='block'; return false;" class="mplace" r="8" cx="166" cy="105">
+</a>
+<a href="#">
+<circle id="Cornell" onclick="document.getElementById('Cornell').style.display='block'; return false;" class="place" r="6" cx="86" cy="116">
+</a>
+<a href="#">
+<circle id="Green_Bay" onclick="document.getElementById('Green_Bay').style.display='block'; return false;" class="mplace" r="8" cx="38" cy="312">
+</a>
+<a href="#">
+<circle id="Brillion" onclick="document.getElementById('Brillion').style.display='block'; return false;" class="place" r="6" cx="31" cy="380">
+</a>
+<a href="#">
+<circle id="Elkhart_Lake" onclick="document.getElementById('Elkhart_Lake').style.display='block'; return false;" class="place" r="6" cx="20" cy="428">
+</a>
+<a href="#">
+<circle id="Milwaukee" onclick="document.getElementById('Milwaukee').style.display='block'; return false;" class="mplace" r="8" cx="46" cy="498">
+</a>
+<a href="#">
+<circle id="Greenfield" onclick="document.getElementById('Greenfield').style.display='block'; return false;" class="place" r="6" cx="15" cy="544">
+</a>
+<a href="#">
+<circle id="Racine" onclick="document.getElementById('Racine').style.display='block'; return false;" class="place" r="6" cx="39" cy="587">
+</a>
+<a href="#">
+<path id="Chicago" onclick="document.getElementById('Chicago').style.display='block'; return false;" class="area" d="m 68.235802,617.51799 -31.819804,0.35355 1.06066,51.6188 c 18.031223,0 36.062445,0 54.093668,-10e-6 -7.398848,-7.84096 -15.000075,-20.74137 -23.334524,-51.97234 z">
+</a>
+<a href="#">
+<circle id="Hammond" onclick="document.getElementById('Hammond').style.display='block'; return false;" class="place" r="6" cx="67" cy="680">
+</a>
+<a href="#">
+<circle id="Lowell" onclick="document.getElementById('Lowell').style.display='block'; return false;" class="place" r="6" cx="85" cy="704">
+</a>
+<a href="#">
+<circle id="Manteno" onclick="document.getElementById('Manteno').style.display='block'; return false;" class="place" r="6" cx="28" cy="734">
+</a>
+<a href="#">
+<circle id="Argos" onclick="document.getElementById('Argos').style.display='block'; return false;" class="place" r="6" cx="118" cy="735">
+</a>
+<a href="#">
+<circle id="Argos" onclick="document.getElementById('Argos').style.display='block'; return false;" class="place" r="6" cx="176" cy="715">
+</a>
+<a href="#">
+<circle id="Knox" onclick="document.getElementById('Knox').style.display='block'; return false;" class="mplace" r="8" cx="140" cy="692">
+</a>
+<a href="#">
+<circle id="Erie_Islands" onclick="document.getElementById('Erie_Islands').style.display='block'; return false;" class="place" r="6" cx="510" cy="654">
+</a>
+<img src="detroit_new.png" alt="">
+</svg>
+
+<a id="faq_link" onclick="document.getElementById('faq').style.display='block'; return false;" class="effect-8" title="нажмите для справки">F.A.Q.</a>
+<div id="faq">
+<h2>F.A.Q.</h2>
+<p>Перед вами интерактивная карта Детройта. Она представлена для лучшего понимания текущего положения дел в городе и для удобства навигации по важным <a href="http://nextus.f-rpg.ru/viewtopic.php?id=5" target="_blank">событиям</a>, произошедшим в то или иное время.<p>
+<p>Город разделён на районы, также на карте отмечены важные места и некоторые руины. Чтобы узнать больше о каком-либо районе или месте, нажмите на интересующую область.</p>
+<dl><dt>Условные обозначения:</dt>
+<dd id="district"><strong>Пунктир</strong> - граница района.</dd>
+<dd id="good"><strong>Благополучный район</strong> - район с минимальным уровнем преступности и опасных ситуаций. Им может быть спальный район, где проживают обеспеченные граждане, вотчина богатой компании или корпорации, обеспечивающей приток финансов, стратегически важный район, либо район, имеющий развлекательное назначение.</dd>
+<dd id="neutral"><strong>Обычный район</strong> - в таком районе относительно безопасно находиться и жить, уровень преступности невысок, риск природных катаклизмов и опасностей вроде внезапной атаки мутантов минимален.</dd>
+<dd id="bad"><strong>Опасный район</strong> - район с высоким уровнем преступности и незаконной деятельности, либо контролируемый преступным синдикатом, не обеспечивающим безопасность жителей. Обычно это бедный район, находящийся вблизи городской стены, на некотором отшибе и вдали от важных дорожных развязок, что затрудняет возможность быстрого реагирования спесцлужб и увеличивает риск атаки со стороны диких земель.</dd>
+<dd id="outpost"><strong>Форпост, защитный район</strong> - район выполняет роль форпоста, перекрывающего городские ворота и предназначенного отслеживать и предотвращать подозрительную активность извне, а также контролировать въезд и выезд из города. Находиться в таком месте без специальной подготовки небезопасно.</dd>
+<dd><div class="circle"></div> - важная точка в городе, с которой могут быть связаны какие-либо сюжетные события, а также руины за городской чертой.</dd>
+<dd><div class="circle1"></div> - руины и локации за городской чертой, имеющие стратегически важное значение.</dd></dl>
+<button onclick="document.getElementById('faq').style.display='none'; return false;">Закрыть</button>
+</div>
+<a id="copy_link" onclick="document.getElementById('copyright').style.display='block'; return false;" class="effect-8" title="о карте">&copy;</a>
+<div id="copyright">
+<h2>Copyright</h2>
+<p>Вёрстку и дизайн выполнил Alex Kolmar специально для ФПРГ <a href="http://nextus.f-rpg.ru" target="_blank">NEX|T|US</a>. Идея и описание локаций принадлежат администрации проекта. Карта - <a href="https://www.openstreetmap.org/copyright" target="_blank">Участники OpenStreetMap</a>.</p>
+<p>Полное или частичное копирование элементов карты и кода запрещено.</p>
+<button onclick="document.getElementById('copyright').style.display='none'; return false;">Закрыть</button>
+</div>
+</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<!-- подключение jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- скрыть предыдущее описание -->
+<script>$('a').click(function(){$('.description, .description1').eq($(this).index()).show().siblings('.description, .description1').hide()})</script>
+<!-- выделить активную локацию -->
+<script>$(function() {
+  $('path, circle, .description button, .description1 button').click(function() {
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+});</script>
+<!-- let it snow, блеать 
+<script src="scripts/snow-fall.js" type="text/javascript"></script>-->
+</body>
+</html>
