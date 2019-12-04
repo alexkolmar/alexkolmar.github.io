@@ -1,4 +1,4 @@
-﻿   * {
+   * {
    border: none;
    margin: 0;
    scrollbar-width: thin;
@@ -55,7 +55,7 @@
     border-top: 1px dotted #5c8ba9;
     margin: 10px;
   }
-
+  
   ul {
     padding-left: 15px;
     font-family: verdana;
@@ -104,6 +104,7 @@
   outline-style: none;
   cursor: pointer;
   margin: 5px 0 5px 15px;
+  text-align: justify;
   }
 
   details summary::-webkit-details-marker {
@@ -165,10 +166,28 @@ overflow: auto;
   scrollbar-color: #336633 #99cc99; /* 1 - бегунок, 2 - полоса */
 }
 
+.yes a {
+  color: #336633;
+  font-weight: normal;
+  text-decoration: underline dashed #336633;
+}
+
 .no {
   background: #cc9999;
   scrollbar-width: thin;
   scrollbar-color: #663333 #cc9999; /* 1 - бегунок, 2 - полоса */
+}
+
+.no a {
+  color: #663333;
+  font-weight: normal;
+  text-decoration: underline dashed #663333;
+}
+
+.yes a:hover, .no a:hover {
+  letter-spacing: 1px;
+  text-shadow: none;
+  font-weight: bold;
 }
 
 .avatar:hover .info {
