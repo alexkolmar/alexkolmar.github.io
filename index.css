@@ -1,1 +1,50 @@
 
+* {
+margin: 0;
+padding: 0;
+border: none;
+scrollbar-width: thin;
+scrollbar-color: #1f4f75 transparent ; /* 1 - бегунок, 2 - полоса */
+}
+
+/* полоса прокрутки (кроме мозиллы) */
+::-webkit-scrollbar {width: 7px; height: 8px;}
+::-webkit-scrollbar-track {background-color:transparent;}
+::-webkit-scrollbar-thumb {background-color:#1f4f75;}
+::-webkit-scrollbar-thumb:active {background:#218fc4;}
+
+#announcement {
+margin: 0 auto;
+width: 600px;
+}
+
+#announcement img {
+margin: 0 auto;
+max-width: 300px;
+display: block;
+}
+
+::selection {
+background: #1f4f75;
+color: #cbe3f2;
+}
+
+p {
+text-indent: 15px;
+font-family: verdana;
+font-size: 12px;
+text-align: justify;
+text-align-last: left;
+font-weight: normal;
+}
+
+a {
+font-weight: bold;
+text-decoration: none;
+color: #5c8ba9;
+transition: all 0.3s ease-in-out 0.1s;
+}
+
+a:hover, details a:hover {
+text-shadow: 1px 1px 0 #fff;
+}
