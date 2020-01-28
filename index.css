@@ -51,10 +51,20 @@ text-shadow: 1px 1px 0 #fff;
 
 /* большая кнопка */
 
+#button {
+width: 600px;
+text-align: center;
+margin: 0 auto;
+}
+
 a.button1 {
   position: relative;
   color: white;
   font-weight: bold;
+  font-family: play;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
   text-decoration: none;
   text-shadow: -1px -1px #000;
   user-select: none;
@@ -66,7 +76,9 @@ a.button1 {
   background-size: 200% 100%, auto;
   background-position: 200% 0, 0 0;
   box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+  top: 30px;
 } 
+
 a.button1:active {
   top: 1px;
   box-shadow: none;
