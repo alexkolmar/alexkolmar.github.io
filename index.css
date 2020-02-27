@@ -1,0 +1,287 @@
+html {
+background: #BBB89F;
+height: 100%;
+overflow-x: hidden;
+}
+
+body {
+position: relative;
+margin: 0 auto;
+}
+
+#hellobox {
+width: 1280px;
+height: 800px;
+position: relative;
+margin: 0 auto;
+}
+
+#wall {
+height: 520px;
+background: #f9f4c7;
+width: 100%;
+position: absolute;
+}
+
+#hello {
+position: absolute;
+width: 650px;
+height: 180px;
+left: 100px;
+top: 70px;
+}
+
+h1 {
+font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 1.3;
+display: flex;
+align-items: center;
+color: #472D6E;
+}
+
+#about {
+display: flex;
+flex-direction: column;
+padding: 0px;
+position: absolute;
+width: 650px;
+height: 180px;
+left: 100px;
+top: 250px;
+}
+
+p {
+left: 0px;
+top: 0px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 1.5;
+display: flex;
+align-items: center;
+color: #000000;
+}
+
+#glass img {
+position: absolute;
+width: auto;
+height: 550px;
+right: 100px;
+top: 60px;
+}
+
+#social {
+width: 650px;
+display: flex;
+position: absolute;
+top: 430px;
+left: 100px;
+}
+
+#social a {
+position: absolute;
+width: 180px;
+height: 50px;
+top: 0;
+border-radius: 4px;
+text-decoration: none;
+font-family: PT sans;
+font-weight: bold;
+font-size: 20px;
+letter-spacing: 1px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+transition: .2s;
+box-shadow:
+   0 4px rgb(71, 45, 110),
+   0 3px 5px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+}
+
+#social a:hover, #social a:focus, details summary:hover, details[open] summary {
+  box-shadow:
+   0 2px rgb(71, 45, 110),
+   0 1px 3px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  -webkit-transform: translate(0, 2px);
+  transform: translate(0, 2px);
+}
+
+#vk {
+left: 0;
+background: #4a76a8;
+}
+
+#tg {
+left: 200px;
+background: #139bd0;
+}
+
+#in {
+left: 400px;
+background: #ffd77a;
+background: -moz-linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, #ffd77a), color-stop(50%, #e05a5f), color-stop(100%, #a14ba0));
+background: -webkit-linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
+background: -o-linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
+background: -ms-linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
+background: linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', endColorstr='#a14ba0', GradientType=1 );
+}
+
+#works {
+position: absolute;
+top: 650px;
+width: 980px;
+left: 150px;
+}
+
+details summary {
+  display: flex;  /* у summary по умолчанию свойство display в значении list-item, потому поддерживается свойство list-style */
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 180px;
+  height: 50px;
+  outline-style: none;  /* удалить обводку при фокусе */
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: PT sans;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: .2s;
+  box-shadow: 0 4px rgb(71, 45, 110), 0 3px 5px rgba(0,0,0,.4), inset 0 1px rgba(255,255,255,.3), inset 0 0 3px rgba(255,255,255,.5);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2f3270+0,8f91ad+100 */
+  background: #2f3270; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #2f3270 0%, #8f91ad 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #2f3270 0%,#8f91ad 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #2f3270 0%,#8f91ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f3270', endColorstr='#8f91ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  animation: pulsate 2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 3px #ffd, 0 0 5px #fff;}
+}
+@keyframes pulsate {
+  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 3px #ffd, 0 0 5px #fff;}
+}
+
+details summary::-webkit-details-marker {  /* нестандартный псевдоэлемент Google Chrome */
+  display: none;
+}
+
+details summary:hover, details[open] summary {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+table {
+width: 960px;
+position: relative;
+margin: 10px 0 50px;
+}
+
+tr {
+display: flex;
+}
+
+td {
+width: 300px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+padding: 10px;
+}
+
+td img {
+max-height: 500px;
+box-shadow: 0 3px 8px rgba(0,0,0,.5);
+}
+
+/* Адаптивные дизайны для устройств */
+
+@media screen and (max-width: 1024px) {
+
+   #wall {
+   height: 440px;
+   }
+
+   #hellobox {
+   width: 1024px;
+   height: 600px;
+   }
+
+   #hello {
+   width: 450px;
+   left: 100px;
+   top: 40px;
+   left: 70px;
+   }
+
+   h1 {
+   font-size: 50px;
+   }
+
+   #about {
+   top: 190px;
+   width: 500px;
+   left: 70px;
+   }
+
+   p {
+   font-size: 18px;
+   }
+
+   #glass img {
+   max-height: 450px;
+   right: 70px;
+   top: 60px;
+   }
+
+   #social {
+   width: 500px;
+   display: flex;
+   position: absolute;
+   top: 370px;
+   left: 70px;
+   }
+
+   #social a {
+   width: 130px;
+   height: 45px;
+   font-size: 18px;
+   }
+
+   #tg {
+   	left: 160px;
+   }
+
+   #in {
+   left: 320px;
+   }
+
+   #works {
+   top: 550px;
+   left: 22px;
+   }
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
