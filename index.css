@@ -2,8 +2,16 @@
 margin: 0;
 padding: 0;
 border: none;
+scrollbar-width: thin;
+scrollbar-color: #79687A transparent ; /* 1 - бегунок, 2 - полоса */
 }
 
+   /* полоса прокрутки (кроме мозиллы) */
+   ::-webkit-scrollbar {width: 7px; height: 8px;}
+   ::-webkit-scrollbar-track {background-color:transparent;}
+   ::-webkit-scrollbar-thumb {background-color:#79687A;}
+   ::-webkit-scrollbar-thumb:active {background:#662A6A;}
+   
 ::selection {
 color: #F9F4C7;
 background: #662A6A;
@@ -12,12 +20,13 @@ background: #662A6A;
 html {
 background: #BBB89F;
 height: 100%;
-overflow-x: hidden;
 }
 
 body {
 position: relative;
 margin: 0 auto;
+overflow-x: hidden;
+overflow-y: auto;
 }
 
 #hellobox {
@@ -148,15 +157,11 @@ background: linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', endColorstr='#a14ba0', GradientType=1 );
 }
 
-#works {
-position: relative;
-top: 650px;
-width: 1100px;
-margin: 0 auto;
-}
-
 details {
- padding-bottom: 30px;
+ position: relative;
+ top: 650px;
+ margin: 0 auto;
+ width: 1100px;
 }
 
 details summary {
@@ -246,7 +251,7 @@ details summary:hover:after, details[open] summary:after, details summary:hover:
 table {
 width: 990px;
 position: relative;
-margin: 10px auto 50px;
+margin: 10px auto;
 }
 
 tr {
@@ -264,6 +269,12 @@ padding: 15px;
 td img {
 max-height: 500px;
 box-shadow: 0 3px 8px rgba(0,0,0,.5);
+}
+
+#footer {
+height: 70px;
+position: absolute;
+bottom: 0;
 }
 
 /* Адаптивные дизайны для устройств */
@@ -292,7 +303,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
    #about {
    top: 190px;
-   width: 500px;
+   width: 550px;
    left: 70px;
    }
 
@@ -302,12 +313,12 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
    #glass img {
    max-height: 450px;
-   right: 70px;
+   right: 80px;
    top: 60px;
    }
 
    #social {
-   width: 500px;
+   width: 550px;
    display: flex;
    position: absolute;
    top: 370px;
@@ -315,20 +326,20 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
    }
 
    #social a {
-   width: 130px;
+   width: 160px;
    height: 45px;
    font-size: 18px;
    }
 
    #tg {
-   	left: 160px;
+   	left: 180px;
    }
 
    #in {
-   left: 320px;
+   left: 360px;
    }
 
-   #works {
+   details {
    top: 550px;
    }
 }
