@@ -1,3 +1,9 @@
+* {
+margin: 0;
+padding: 0;
+border: none;
+}
+
 html {
 background: #BBB89F;
 height: 100%;
