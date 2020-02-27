@@ -4,6 +4,11 @@ padding: 0;
 border: none;
 }
 
+::selection {
+color: #F9F4C7;
+background: #662A6A;
+}
+
 html {
 background: #BBB89F;
 height: 100%;
@@ -144,10 +149,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', end
 }
 
 #works {
-position: absolute;
+position: relative;
 top: 650px;
-width: 980px;
-left: 150px;
+width: 1100px;
+margin: 0 auto;
+}
+
+details {
+ padding-bottom: 30px;
 }
 
 details summary {
@@ -235,9 +244,9 @@ details summary:hover:after, details[open] summary:after, details summary:hover:
 }
 
 table {
-width: 960px;
+width: 990px;
 position: relative;
-margin: 10px 0 50px;
+margin: 10px auto 50px;
 }
 
 tr {
@@ -249,7 +258,7 @@ width: 300px;
 display: flex;
 align-items: flex-start;
 justify-content: center;
-padding: 10px;
+padding: 15px;
 }
 
 td img {
@@ -259,14 +268,14 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
 /* Адаптивные дизайны для устройств */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
 
    #wall {
    height: 440px;
    }
 
    #hellobox {
-   width: 1024px;
+   width: 1100px;
    height: 600px;
    }
 
@@ -321,7 +330,6 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
    #works {
    top: 550px;
-   left: 22px;
    }
 }
 
