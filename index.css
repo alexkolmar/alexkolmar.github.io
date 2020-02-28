@@ -17,9 +17,12 @@ color: #F9F4C7;
 background: #662A6A;
 }
 
+html, body {
+	height: 100%;
+}
+
 html {
 background: #BBB89F;
-height: 100%;
 }
 
 body {
@@ -29,18 +32,17 @@ overflow-x: hidden;
 overflow-y: auto;
 }
 
-#hellobox {
-width: 1280px;
-height: 800px;
-position: relative;
-margin: 0 auto;
+.wrapper {
+min-height: 800px;
+height: auto;
 }
 
-#wall {
+header {
+width: 1280px;
+position: relative;
+margin: 0 auto 120px;
 height: 520px;
 background: #f9f4c7;
-width: 100%;
-position: absolute;
 }
 
 #hello {
@@ -159,9 +161,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', end
 
 details {
  position: relative;
- top: 650px;
+ top: 0;
  margin: 0 auto;
- width: 1100px;
+ min-width: 1280px;
+ height: auto;
 }
 
 details summary {
@@ -272,23 +275,27 @@ max-width: 300px;
 box-shadow: 0 3px 8px rgba(0,0,0,.5);
 }
 
-#footer {
-height: 70px;
-position: absolute;
+footer {
+height: 50px;
+min-width: 1280px;
+position: relative;
 bottom: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: roboto;
+font-size: 12px;
+color: #252854;
 }
 
 /* Адаптивные дизайны для устройств */
 
 @media screen and (max-width: 1100px) {
 
-   #wall {
-   height: 440px;
-   }
-
-   #hellobox {
+   header {
    width: 1100px;
-   height: 600px;
+   height: 440px;
+   margin-bottom: 100px;
    }
 
    #hello {
@@ -341,7 +348,12 @@ bottom: 0;
    }
 
    details {
-   top: 550px;
+   min-width: 1100px;
+   top: 0;
+   }
+
+   footer {
+   min-width: 1100px;
    }
 }
 
