@@ -41,8 +41,8 @@ height: auto;
 }
 
 header {
-min-width: 1280px;
-position: relative;
+width: 100%;
+position: absolute;
 margin: 0 auto 120px;
 height: 530px;
 background: #f9f4c7 repeat-x 100%;
