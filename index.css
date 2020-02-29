@@ -42,6 +42,7 @@ height: auto;
 
 header {
 width: 100%;
+min-width: 1280px;
 position: relative;
 margin: 0 auto 120px;
 height: 530px;
@@ -306,6 +307,7 @@ color: #252854;
 
    header {
    height: 470px;
+   min-width: 1100px;
    margin-bottom: 100px;
    }
 
