@@ -1,5 +1,5 @@
 /* Font Awesome */
-@import url(../fonts/webfonts/all.css);
+@import url(fonts/webfonts/all.css);
 
 * {
 margin: 0;
@@ -63,11 +63,11 @@ font-style: normal;
 font-weight: normal;
 font-size: 60px;
 line-height: 1.3;
-display: block;
+display: flex;
+align-items: center;
 color: #472D6E;
 position: absolute;
 width: 550px;
-height: 130px;
 left: 70px;
 }
 
@@ -135,7 +135,7 @@ box-shadow:
    inset 0 0 3px rgba(255,255,255,.5);
 }
 
-#social a:hover, #social a:focus, details summary:hover, details[open] summary {
+#social a:hover, #social a:focus, details summary:hover, details[open] summary, .tabs > input:checked + label {
   box-shadow:
    0 2px rgb(71, 45, 110),
    0 1px 3px rgba(0,0,0,.4),
@@ -264,6 +264,57 @@ details summary:hover:after, details[open] summary:after, details summary:hover:
   animation-play-state: paused;
 }
 
+.tabs { 
+  max-width: 1100px;
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tabs>input { 
+  display: none; 
+}
+
+.tabs>div {
+    display: none;
+    padding: 12px;
+    border: none;
+    background: transparent;
+}
+
+.tabs>label {
+    display: inline-flex;
+    margin: 20px 46px;
+    text-align: center;
+    color: #666666;
+    background: #E0E0E0;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-family: PT sans;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .2s;
+    box-shadow:
+   0 4px rgb(71, 45, 110),
+   0 3px 5px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+}
+
+.tabs>input:checked + label {
+    color: #000000;
+    border: none;
+    background: #f9f4c7;
+}
+
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4 { display: block; }
+
 table {
 width: 990px;
 position: relative;
@@ -362,6 +413,14 @@ color: #252854;
    top: 0;
    }
 
+   .tabs {
+    max-width: 1050px;
+   }
+
+   .tabs > label {
+    margin: 20px 39px;
+   }
+
    footer {
    min-width: 1100px;
    }
@@ -454,6 +513,16 @@ color: #252854;
     width: 140px;
     height: 40px;
     font-size: 16px;
+    }
+
+    .tabs {
+    max-width: 560px;
+    }
+
+    .tabs > label {
+    margin: 20px 7px;
+    width: 120px;
+    height: 30px;
     }
 
     table {
