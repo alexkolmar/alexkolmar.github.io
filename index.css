@@ -45,7 +45,7 @@ width: 100%;
 position: relative;
 margin: 0 auto 120px;
 height: 530px;
-background: #f9f4c7;
+background: #f9f4c7 repeat-x 100%;
 }
 
 #hello {
