@@ -41,7 +41,7 @@ height: auto;
 }
 
 header {
-width: auto;
+min-width: 1280px;
 position: relative;
 margin: 0 auto 120px;
 height: 530px;
