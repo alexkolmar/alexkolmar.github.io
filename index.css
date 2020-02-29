@@ -42,7 +42,7 @@ height: auto;
 
 header {
 width: 100%;
-position: absolute;
+position: relative;
 margin: 0 auto 120px;
 height: 530px;
 background: #f9f4c7 repeat-x 100%;
@@ -370,6 +370,7 @@ color: #252854;
    header {
    height: 415px;
    margin-bottom: 100px;
+   min-width: 560px;
    }
 
    #hello {
