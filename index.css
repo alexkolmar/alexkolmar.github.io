@@ -362,14 +362,14 @@ color: #252854;
 
    header {
    width: 560px;
-   height: 375px;
+   height: 395px;
    margin-bottom: 100px;
    }
 
    #hello {
    	position: absolute;
    	width: auto;
-   	top: initial;
+   	top: 20px;
    	left: 30px;
    }
 
@@ -389,13 +389,13 @@ color: #252854;
    #glass img {
    width: auto;
    height: 360px;
-   top: 70px;
+   top: 90px;
    right: 0;
    transform: scale(-1, 1);
    }
 
    #about {
-    top: 120px;
+    top: 140px;
     width: 250px;
     left: 30px;
     }
@@ -406,7 +406,7 @@ color: #252854;
 
     #social {
     width: 250px;
-    top: 315px;
+    top: 335px;
     left: 30px;
     }
 
