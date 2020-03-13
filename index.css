@@ -580,10 +580,11 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 #useful {
   width: 100%;
   position: relative;
-  padding: 80px 50px 10px;
+  padding: 80px 0 10px;
   margin-bottom: 50px;
   background-color: #f9f4c7;
 }
+
 
 #gallery h1, #useful h1 {
   text-align: center;
@@ -595,9 +596,12 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
   font-size: 40px;
 }
 
+#useful .container {
+  padding: 0 50px;
+}
+
 #useful p {
   text-align: justify;
-  padding: 20px 0;
 }
 
 #useful details {
@@ -689,7 +693,7 @@ color: #252854;
    margin-bottom: 100px;
    min-width: 560px;
    }
-   
+
    #gallery, #useful {
    min-width: 560px;
    }
