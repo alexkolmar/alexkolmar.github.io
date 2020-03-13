@@ -579,6 +579,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
 #useful {
   width: 100%;
+  min-height: 750px;
   position: relative;
   padding: 80px 0 10px;
   margin-bottom: 50px;
