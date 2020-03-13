@@ -689,6 +689,10 @@ color: #252854;
    margin-bottom: 100px;
    min-width: 560px;
    }
+   
+   #gallery {
+   min-width: 560px;
+   }
 
    #useful {
    min-width: 460px;
