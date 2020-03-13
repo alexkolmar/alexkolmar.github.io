@@ -635,6 +635,10 @@ color: #252854;
    width: 1100px;
    top: 40px;
    }
+   
+   #gallery, #useful {
+    width: 1100px;
+   }
 
    h1 {
    font-size: 50px;
