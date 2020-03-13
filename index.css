@@ -683,14 +683,14 @@ color: #252854;
 }
 
 @media screen and (max-width: 560px) {
+   
+   body {
+    min-width: 560px;
+   }
 
    #title {
    height: 365px;
    margin-bottom: 100px;
-   }
-   
-   #title, #gallery, #useful {
-    min-width: 560px;
    }
 
    #hello {
