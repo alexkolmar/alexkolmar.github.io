@@ -477,6 +477,7 @@ details summary::-webkit-details-marker {  /* нестандартный псе�
 
 #gallery {
   position: relative;
+  min-width: 1100px;
   margin-bottom: 50px;
   padding-top: 80px;
   min-height: 750px;
@@ -577,8 +578,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 /* ПОЛЕЗНЫЕ ССЫЛКИ */
 
 #useful {
-  min-height: 750px;
-  width: auto;
+  width: 100%;
   position: relative;
   padding: 80px 50px 10px;
   margin-bottom: 50px;
@@ -687,6 +687,11 @@ color: #252854;
    #title {
    height: 365px;
    margin-bottom: 100px;
+   min-width: 560px;
+   }
+
+   #useful {
+   min-width: 460px;
    }
 
    #hello {
@@ -706,7 +711,7 @@ color: #252854;
    #glass {
     width: 560px;
     position: absolute;
-    right; 40px;
+    right: 40px;
    }
 
    #glass img {
