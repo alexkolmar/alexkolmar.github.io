@@ -710,7 +710,7 @@ color: #252854;
    #glass {
     width: 560px;
     position: absolute;
-    padding-right; 40px;
+    right; 40px;
    }
 
    #glass img {
