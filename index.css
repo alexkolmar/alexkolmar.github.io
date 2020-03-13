@@ -812,5 +812,9 @@ color: #252854;
 
     td img {
     max-width: 150px;
-    }
+   }
+   
+   footer {
+   min-width: 560px;
+   }
 }
