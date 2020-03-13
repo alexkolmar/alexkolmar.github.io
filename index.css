@@ -690,12 +690,8 @@ color: #252854;
    min-width: 560px;
    }
    
-   #gallery {
+   #gallery, #useful {
    min-width: 560px;
-   }
-
-   #useful {
-   min-width: 460px;
    }
 
    #hello {
