@@ -692,6 +692,10 @@ color: #252854;
    .tabs > label {
     margin: 20px 39px;
    }
+   
+   footer {
+   min-width: 1100px;
+   }
 }
 
 @media screen and (max-width: 560px) {
