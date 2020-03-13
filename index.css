@@ -39,6 +39,24 @@ overflow-y: auto;
 min-height: 800px;
 height: auto;
 }
+        
+@-webkit-keyframes fadeIn {
+ from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+        
+@keyframes fadeIn {
+ from {
+ opacity: 0;
+ }
+ to {
+ opacity: 1;
+ }
+}
 
 /* меню */
 
@@ -216,6 +234,7 @@ font-size: 18px;
    }
   }
 
+/* ГЛАВНАЯ СТРАНИЦА */
 
 /* шапка */
 
@@ -226,7 +245,7 @@ position: relative;
 margin: 0 auto 120px;
 height: 530px;
 background: #f9f4c7 repeat-x 100%;
-top: 50px;
+padding-top: 50px;
 }
 
 #hello {
@@ -317,7 +336,7 @@ box-shadow:
    inset 0 0 3px rgba(255,255,255,.5);
 }
 
-#social a:hover, #social a:focus, details summary:hover, details[open] summary, .tabs > input:checked + label {
+#social a:hover, #social a:focus, #resume details summary:hover, #resume details[open] summary, .tabs > input:checked + label {
   box-shadow:
    0 2px rgb(71, 45, 110),
    0 1px 3px rgba(0,0,0,.4),
@@ -353,17 +372,19 @@ background: linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', endColorstr='#a14ba0', GradientType=1 );
 }
 
-/* портфолио */
+#resume {
+  position: relative;
+  top: 50px;
+  min-height: 350px;
+}
 
-details {
- position: relative;
- top: 60px;
+#resume details {
  margin: 0 auto 20px;
- min-width: 1280px;
+ width: 100%;
  height: auto;
 }
 
-details summary {
+#resume details summary {
   display: flex;  /* у summary по умолчанию свойство display в значении list-item, потому поддерживается свойство list-style */
   align-items: center;
   justify-content: center;
@@ -393,7 +414,11 @@ details summary {
   transition: ease 0.3s;
 }
 
-details summary:before {
+details summary {
+  display: block;
+}
+
+#resume details summary:before {
     content: "";
     display: block;
     width: 100%;
@@ -408,7 +433,7 @@ details summary:before {
     transition: ease 0.3s;
 }
 
-details summary:after {
+#resume details summary:after {
     content: "";
     display: block;
     width: 30px;
@@ -443,14 +468,30 @@ details summary::-webkit-details-marker {  /* нестандартный псе�
   display: none;
 }
 
-details summary:hover:after, details[open] summary:after, details summary:hover:before, details[open] summary:before {
+#resume details summary:hover:after, #resume details[open] summary:after, #resume details summary:hover:before, #resume details[open] summary:before {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 
+/* ГАЛЕРЕЯ */
+
+#gallery {
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 80px;
+  min-height: 750px;
+  background-color: #f9f4c7;
+  -webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+-webkit-animation-name: fadeIn;
+animation-name: fadeIn;
+}
+
 .tabs { 
   max-width: 1100px;
-  padding: 20px 0;
+  padding: 20px 0 0;
   margin: 0 auto;
   width: 100%;
 }
@@ -471,14 +512,16 @@ details summary:hover:after, details[open] summary:after, details summary:hover:
     margin: 20px 46px;
     text-align: center;
     color: #666666;
-    background: #E0E0E0;
+    background: #ADB6BB;
     cursor: pointer;
     width: 180px;
     height: 40px;
     align-items: center;
     justify-content: center;
     font-family: PT sans;
+    font-weight: bold;
     font-size: 18px;
+    letter-spacing: 1px;
     border-radius: 4px;
     transition: .2s;
     box-shadow:
@@ -489,15 +532,23 @@ details summary:hover:after, details[open] summary:after, details summary:hover:
 }
 
 .tabs>input:checked + label {
-    color: #000000;
+    color: #DDDBCB;
     border: none;
-    background: #f9f4c7;
+    background: #213D4D;
 }
 
 #tab_1:checked ~ #txt_1,
 #tab_2:checked ~ #txt_2,
 #tab_3:checked ~ #txt_3,
-#tab_4:checked ~ #txt_4 { display: block; }
+#tab_4:checked ~ #txt_4 {
+  display: block;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 
 table {
 width: 990px;
@@ -523,9 +574,39 @@ max-width: 300px;
 box-shadow: 0 3px 8px rgba(0,0,0,.5);
 }
 
+/* ПОЛЕЗНЫЕ ССЫЛКИ */
+
+#useful {
+  min-height: 750px;
+  width: auto;
+  position: relative;
+  padding: 80px 50px 10px;
+  margin-bottom: 50px;
+  background-color: #f9f4c7;
+}
+
+#gallery h1, #useful h1 {
+  text-align: center;
+  width: auto;
+  left: initial;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  font-size: 40px;
+}
+
+#useful p {
+  text-align: justify;
+  padding: 20px 0;
+}
+
+#useful details {
+  min-width: auto;
+}
+
 footer {
 height: 50px;
-min-width: 1280px;
+width: 100%;
 position: relative;
 bottom: 0;
 display: flex;
@@ -592,10 +673,6 @@ color: #252854;
    left: 360px;
    }
 
-   details {
-   min-width: 1100px;
-   }
-
    .tabs {
     max-width: 1050px;
    }
@@ -603,16 +680,12 @@ color: #252854;
    .tabs > label {
     margin: 20px 39px;
    }
-
-   footer {
-   min-width: 1100px;
-   }
 }
 
 @media screen and (max-width: 560px) {
 
    #title {
-   height: 415px;
+   height: 365px;
    margin-bottom: 100px;
    min-width: 560px;
    }
@@ -687,12 +760,12 @@ color: #252854;
       font-size: 30px;
     }
 
-    details {
+    #resume details {
     min-width: 560px;
     top: 40px;
     }
 
-    details summary {
+    #resume details summary {
     width: 140px;
     height: 40px;
     font-size: 16px;
@@ -719,9 +792,5 @@ color: #252854;
 
     td img {
     max-width: 150px;
-    }
-
-    footer {
-    min-width: 560px;
     }
 }
