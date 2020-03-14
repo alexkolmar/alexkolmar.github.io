@@ -756,9 +756,11 @@ box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
    min-width: 560px;
    }
 
+   /*
    #gallery, #useful, #blog, #prices {
    min-width: 560px;
    }
+   */
 
    #hello {
     position: absolute;
