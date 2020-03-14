@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header_body">
             <div class="header_logo">
-                <img src="https://i.imgur.com/nWkeqV5.gif" alt="">
+                <img src="https://i.imgur.com/nWkeqV5.gif" title="пока нет лого, пусть этот чувак тут всех приветствует">
             </div>
             <div class="header_burger">
                 <span></span>
@@ -31,13 +31,13 @@
                         <a href="#gallery" class="header_link">Галерея</a>
                     </li>
                     <li>
-                        <a href="" class="header_link">Блог</a>
+                        <a href="#blog" class="header_link">Блог</a>
                     </li>
                     <li>
                         <a href="#useful" class="header_link">Полезное</a>
                     </li>
                     <li>
-                        <a href="" class="header_link">Услуги и цены</a>
+                        <a href="#prices" class="header_link">Услуги и цены</a>
                     </li>
                 </ul>
             </nav>
@@ -46,12 +46,13 @@
 </header>
 
 <div class="wrapper">
-    <div id="index" class="wow fadeInUp">
+    <div id="index" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
         <div id="title">
             <div id="hello">
             <h1>Hello! My name is Alex Kolmar</h1>
             <div id="about">
-                <p>Добро пожаловать на мой сайт! Я веб-дизайнер, иллюстратор и художник. Каждый день стараюсь сделать этот мир немного лучше и прекраснее, а также помочь другим в этом нелёгком деле.</p>
+                <p>Добро пожаловать на мой сайт! Я веб-дизайнер, иллюстратор и художник. Каждый день стараюсь сделать этот мир немного прекраснее, а также готов помочь другим в этом нелёгком деле.</p>
+                <p>Я в соцсетях и мессенджерах:</p>
                 </div>
                 <div id="glass">
                     <img src="images/glassfamily.png"></div>
@@ -66,12 +67,12 @@
         <div id="resume">
             <details>
                 <summary>обо мне</summary>
-                буп
+                <p>буп</p>
             </details>
         </div>
     </div>
 
-    <div id="gallery" class="wow fadeInUp"><h1>Мои работы</h1>
+    <div id="gallery" class="wow zoomIn" data-wow-duration="1s" data-wow-delay=".5s"><h1>Мои работы</h1>
         <div class="tabs">
             <input type="radio" name="inset" value="" id="tab_1" checked>
                 <label for="tab_1">веб</label>
@@ -85,65 +86,83 @@
             <input type="radio" name="inset" value="" id="tab_4">
                 <label for="tab_4">прочее</label>
         
-            <div id="txt_1">
-                <table>
-                    <tr>
-                        <td><img src="https://i.imgur.com/3CKSqpN.jpg"></td>
-                        <td><img src="https://i.imgur.com/m40cbiH.jpg"></td>
-                        <td><a href="http://alexkolmar.moy.su/sw/chronology.html" target="_blank"><img src="https://i.imgur.com/VInHRgO.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://alexkolmar.github.io/detroit/detroit.html" target="_blank"><img src="https://i.imgur.com/RixW6fF.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
-                        <td><a href="https://alexkolmar.github.io/tallahassee/tallahassee.html" target="_blank"><img src="https://i.imgur.com/sHrpg9N.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
-                        <td><a href="https://alexkolmar.github.io/menu/layout.html" target="_blank"><img src="https://i.imgur.com/xBri6Mo.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
-                    </tr>
-                </table>
+            <div id="txt_1" class="fadeIn">
+              <table>
+                <tr>
+                  <td><img src="https://i.imgur.com/3CKSqpN.jpg"></td>
+                  <td><img src="https://i.imgur.com/m40cbiH.jpg"></td>
+                  <td><a href="http://alexkolmar.moy.su/sw/chronology.html" target="_blank"><img src="https://i.imgur.com/VInHRgO.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://alexkolmar.github.io/detroit/detroit.html" target="_blank"><img src="https://i.imgur.com/RixW6fF.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
+                  <td><a href="https://alexkolmar.github.io/tallahassee/tallahassee.html" target="_blank"><img src="https://i.imgur.com/sHrpg9N.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
+                  <td><a href="https://alexkolmar.github.io/menu/layout.html" target="_blank"><img src="https://i.imgur.com/xBri6Mo.png" title="нажмите на картинку, чтобы посмотреть пример вживую в новой вкладке"></a></td>
+                </tr>
+              </table>
+          </div>
+          <div id="txt_2" class="fadeIn">
+              <table>
+                <tr>
+                  <td><img src="https://i.imgur.com/TR0EBzm.png"></td>
+                  <td><img src="https://i.imgur.com/reG0fyj.png" style="border-radius: 50%;"></td>
+                  <td><a href="https://i.imgur.com/2lPDj7i.png" title="нажмите, чтобы посмотреть картинку в большом разрешении" target="_blank"><img src="https://i.imgur.com/2lPDj7i.png"></a></td>
+                </tr>
+              </table>
+          </div>
+          <div id="txt_3" class="fadeIn">
+              <table>
+                <tr>
+                  <td><img src="https://i.imgur.com/TCwrK5G.png"></td>
+                  <td><img src="https://i.imgur.com/DABWSAl.jpg"></td>
+                  <td><img src="https://i.imgur.com/sqM1qNJ.png"></td>
+                </tr>
+                <tr>
+                  <td><img src="https://i.imgur.com/JthNN8z.png"></td>
+                  <td><img src="https://i.imgur.com/CkLrY0b.png"></td>
+                  <td><img src="https://i.imgur.com/1CU193a.png"></td>
+                </tr>
+                <tr>
+                  <td><img src="https://i.imgur.com/gosXQMj.png"></td>
+                  <td><img src="https://i.imgur.com/GBMqtj3.png"></td>
+                  <td><img src="https://i.imgur.com/tRLbbBm.png"></td>
+                </tr>
+                <tr>
+                  <td><img src="https://i.imgur.com/GXjoY90.png"></td>
+                  <td><img src="https://i.imgur.com/TcNn4eQ.png"></td>
+                  <td><img src="https://i.imgur.com/3kLONGs.jpg"></td>
+                </tr>
+                <tr>
+                  <td><img src="https://i.imgur.com/MPpMAUN.png"></td>
+                  <td><img src="https://i.imgur.com/DYdFEKI.png"></td>
+                  <td><img src="https://i.imgur.com/NrmzjQx.jpg"></td>
+                </tr>
+                <tr>
+                  <td><img src="https://i.imgur.com/u794mlX.png"></td>
+                  <td><img src="https://i.imgur.com/T9hFl9i.png"></td>
+                  <td><img src="https://i.imgur.com/2IryQah.png"></td>
+                </tr>
+              </table>
             </div>
-            <div id="txt_2">
-                <table>
-                    <tr>
-                        <td><img src="https://i.imgur.com/TR0EBzm.png"></td>
-                        <td><img src="https://i.imgur.com/reG0fyj.png" style="border-radius: 50%;"></td>
-                        <td><a href="https://i.imgur.com/2lPDj7i.png" title="нажмите, чтобы посмотреть картинку в большом разрешении" target="_blank"><img src="https://i.imgur.com/2lPDj7i.png"></a></td>
-                    </tr>
-                </table>
-            </div>
-            <div id="txt_3">
-                <table>
-                    <tr>
-                        <td><img src="https://i.imgur.com/MPpMAUN.png"></td>
-                        <td><img src="https://i.imgur.com/DYdFEKI.png"></td>
-                        <td><img src="https://i.imgur.com/NrmzjQx.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/u794mlX.png"></td>
-                        <td><img src="https://i.imgur.com/T9hFl9i.png"></td>
-                        <td><img src="https://i.imgur.com/2IryQah.png"></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/JthNN8z.png"></td>
-                        <td><img src="https://i.imgur.com/CkLrY0b.png"></td>
-                        <td><img src="https://i.imgur.com/1CU193a.png"></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/gosXQMj.png"></td>
-                        <td><img src="https://i.imgur.com/GBMqtj3.png"></td>
-                        <td><img src="https://i.imgur.com/tRLbbBm.png"></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/GXjoY90.png"></td>
-                        <td><img src="https://i.imgur.com/TcNn4eQ.png"></td>
-                        <td><img src="https://i.imgur.com/3kLONGs.jpg"></td>
-                    </tr>
-                </table>
-            </div>
-            <div id="txt_4">
-                ...
+            <div id="txt_4" class="fadeIn">
+              <p>Совместная работа с коллегами. Макеты коллег, вёрстка моя.</p>
+              <table>
+                <tr>
+                  <td><img src="https://i.imgur.com/fAArpaY.png"></td>
+                  <td><img src="https://i.imgur.com/u7pXKBi.png"></td>
+                  <td><img src=""></td>
+                </tr>
+              </table>
             </div>
         </div>
     </div>
 
-    <div id="useful" class="wow fadeInUp">
+    <div id="blog" class="wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="100">
+      <div class="container">
+        <h1>Статьи</h1>
+      </div>
+    </div>
+
+    <div id="useful" class="wow fadeInRightBig" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="100">
       <div class="container">
         <h1>Полезные ссылки</h1>
             <p>Поскольку придумывать всё из головы — дело трудное и неблагодарное, у меня как и у любого уважающего себя дизайнера под рукой есть полезные ссылки и инструменты, к которым я прибегаю, чтобы ускорить и улучшить свою работу. Собственно, ниже следует список наиболее интересных ресусов в помощь дизайнеру. Пользуйтесь на здоровье и не сочтите за рекламу.</p>
@@ -252,6 +271,11 @@
      </div>
     </div>
 
+    <div id="prices" class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="100">
+      <div class="container">
+        <h1>Услуги и цены</h1>
+      </div>
+    </div>
 
 </div>
 
