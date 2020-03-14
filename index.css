@@ -16,7 +16,7 @@ scrollbar-color: #79687A transparent ; /* 1 - бегунок, 2 - полоса *
    ::-webkit-scrollbar-thumb:active {background:#662A6A;}
    
 ::selection {
-color: #F9F4C7;
+color: #FCF8D6;
 background: #662A6A;
 }
 
@@ -40,23 +40,6 @@ min-height: 800px;
 height: auto;
 }
         
-@-webkit-keyframes fadeIn {
- from {
-  opacity: 0;
-  }
-  to {
-  opacity: 1;
-  }
-}
-        
-@keyframes fadeIn {
- from {
- opacity: 0;
- }
- to {
- opacity: 1;
- }
-}
 
 /* меню */
 
@@ -66,7 +49,6 @@ width: 100%;
 top: 0;
 left: 0;
 z-index: 50;
-box-shadow: 0 2px 2px 0px rgba(104, 74, 82, .7);
 }
 
 .header:before {
@@ -76,11 +58,12 @@ box-shadow: 0 2px 2px 0px rgba(104, 74, 82, .7);
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #bbb89f;
+  background-color: #B6D6C7;
+  box-shadow: 0 2px 2px 0px rgba(110, 130, 121, .7);
   z-index: 2;
 }
 
-.container {
+.header .container {
 max-width: 1024px;
 margin: 0 auto;
 padding: 0 15px;
@@ -163,7 +146,7 @@ font-size: 18px;
 
    .header_burger span {
     position: absolute;
-    background-color: #FCF9E0;
+    background-color: #FCF8D6;
     width: 100%;
     height: 2px;
     left: 0;
@@ -174,7 +157,7 @@ font-size: 18px;
    .header_burger:before,
    .header_burger:after {
     content: '';
-    background-color: #FCF9E0;
+    background-color: #FCF8D6;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -211,7 +194,7 @@ font-size: 18px;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(138, 89, 98, .9);
+    background-color: rgba(110, 130, 121, 0.9);
     padding: 50px 0 0 0;
     transition: all .3s ease 0s;
    }
@@ -244,7 +227,7 @@ min-width: 1280px;
 position: relative;
 margin: 0 auto 120px;
 height: 530px;
-background: #f9f4c7 repeat-x 100%;
+background: #FCF8D6 repeat-x 100%;
 padding-top: 50px;
 }
 
@@ -264,10 +247,17 @@ font-size: 60px;
 line-height: 1.3;
 display: flex;
 align-items: center;
-color: #472D6E;
+color: #2D7150;
 position: absolute;
 width: 550px;
 left: 70px;
+}
+
+h2 {
+  font-family: PT Sans;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #6E8279;
 }
 
 #about {
@@ -276,8 +266,8 @@ flex-direction: column;
 padding: 0px;
 position: absolute;
 width: 650px;
-height: 180px;
-top: 170px;
+height: 120px;
+top: 180px;
 left: 70px
 }
 
@@ -309,7 +299,7 @@ top: 0;
 width: 650px;
 display: flex;
 position: absolute;
-top: 375px;
+top: 340px;
 left: 70px;
 }
 
@@ -401,21 +391,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', end
   letter-spacing: 1px;
   color: #fff;
   text-shadow: 0 1px 0 #000;
- /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#babcd6+0,2f3270+100 */
-  background: #babcd6; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #babcd6 0%, #2f3270 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  #babcd6 0%,#2f3270 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  #babcd6 0%,#2f3270 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#babcd6', endColorstr='#2f3270',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#C7BFD4+0,2f3270+100 */
+  background: #C7BFD4; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #C7BFD4 0%, #472D6E 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #C7BFD4 0%,#472D6E 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #C7BFD4 0%,#472D6E 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C7BFD4', endColorstr='#472D6E',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   box-shadow: 0 4px rgb(71, 45, 110), 0 3px 5px rgba(0,0,0,.4), inset 0 1px rgba(255,255,255,.3), inset 0 0 3px rgba(255,255,255,.5);
   position: relative;
   overflow: hidden;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
-}
-
-details summary {
-  display: block;
 }
 
 #resume details summary:before {
@@ -473,26 +459,29 @@ details summary::-webkit-details-marker {  /* нестандартный псе�
   animation-play-state: paused;
 }
 
+details summary {
+  display: block;
+  cursor: pointer;
+  outline-style: none;
+}
+
+details summary:hover {
+  text-decoration: underline;
+}
+
 /* ГАЛЕРЕЯ */
 
 #gallery {
   position: relative;
   min-width: 1100px;
-  margin-bottom: 50px;
-  padding-top: 80px;
+  padding: 50px 0;
   min-height: 750px;
-  background-color: #f9f4c7;
-  -webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
--webkit-animation-name: fadeIn;
-animation-name: fadeIn;
+  background-color: #FCF9E0;
 }
 
 .tabs { 
   max-width: 1100px;
-  padding: 20px 0 0;
+  padding: 0;
   margin: 0 auto;
   width: 100%;
 }
@@ -512,8 +501,8 @@ animation-name: fadeIn;
     display: inline-flex;
     margin: 20px 46px;
     text-align: center;
-    color: #666666;
-    background: #ADB6BB;
+    color: #6E8279;
+    background: #BFD6CB;
     cursor: pointer;
     width: 180px;
     height: 40px;
@@ -533,9 +522,9 @@ animation-name: fadeIn;
 }
 
 .tabs>input:checked + label {
-    color: #DDDBCB;
+    color: #BFD6CB;
     border: none;
-    background: #213D4D;
+    background: #6E8279;
 }
 
 #tab_1:checked ~ #txt_1,
@@ -543,12 +532,35 @@ animation-name: fadeIn;
 #tab_3:checked ~ #txt_3,
 #tab_4:checked ~ #txt_4 {
   display: block;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+}
+
+.fadeIn {
+-webkit-animation-duration: 1.5s;
+animation-duration: 1.5s;
+-webkit-animation-delay: .3s;
+animation-delay: .3s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+-webkit-animation-name: fadeIn;
+animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+ from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+        
+@keyframes fadeIn {
+ from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
 }
 
 table {
@@ -575,39 +587,71 @@ max-width: 300px;
 box-shadow: 0 3px 8px rgba(0,0,0,.5);
 }
 
-/* ПОЛЕЗНЫЕ ССЫЛКИ */
+/* БЛОГ, ПОЛЕЗНЫЕ ССЫЛКИ, ЦЕНЫ */
 
-#useful {
+#blog, #useful, #prices {
   width: 100%;
   min-height: 750px;
   position: relative;
-  padding: 80px 0 10px;
-  margin-bottom: 50px;
-  background-color: #f9f4c7;
+  padding: 50px 0 0;
+  background-color: #FCF9E0;
 }
 
-#gallery h1, #useful h1 {
+#gallery h1, #useful h1, #blog h1, #prices h1 {
   text-align: center;
-  width: auto;
   left: initial;
-  margin: 0 auto;
+  margin: 20px auto;
   position: relative;
   display: block;
   font-size: 40px;
+  padding: 10px 0 15px;
+  border-top: 3px double;
+  border-bottom: 3px double;
+  line-height: 1;
+  border-radius: 15px;
+  width: 400px;
 }
 
-#useful .container {
+#useful .container, #blog .container, #prices .container {
   padding: 0 50px;
 }
 
-#useful p {
+#useful p, #blog p, #prices p {
   text-align: justify;
   min-width: auto;
   width: 100%;
 }
 
-#useful details {
+#useful details, #blog details, #prices details {
   min-width: auto;
+}
+
+ol {
+  padding-left: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#useful a {
+  text-decoration: none;
+  color: #A29841;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+s, del {
+  text-decoration: none;
+  filter: blur(3px) opacity(.5);
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+s:hover, del:hover {
+background: transparent;
+color: currentColor;
+text-decoration: none!important;
+filter: blur(0px) opacity(1);
+animation: .5s linear 0s normal none 1 running Blur;
 }
 
 footer {
@@ -620,7 +664,9 @@ align-items: center;
 justify-content: center;
 font-family: roboto;
 font-size: 12px;
-color: #252854;
+color: #2D7150;
+background-color: #B6D6C7;
+box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
 }
 
 /* Адаптивные дизайны для устройств */
@@ -638,9 +684,11 @@ color: #252854;
    top: 40px;
    }
    
-   #gallery, #useful {
+   /*
+   #gallery, #useful, #blog, #prices {
     min-width: 1100px;
    }
+   */
 
    h1 {
    font-size: 50px;
@@ -648,8 +696,8 @@ color: #252854;
    }
 
    #about {
-   top: 155px;
-   width: 550px;
+   top: 165px;
+   width: 560px;
    }
 
    p {
@@ -665,7 +713,7 @@ color: #252854;
    width: 550px;
    display: flex;
    position: absolute;
-   top: 345px;
+   top: 315px;
    left: 70px;
    }
 
@@ -708,7 +756,7 @@ color: #252854;
    min-width: 560px;
    }
 
-   #gallery, #useful {
+   #gallery, #useful, #blog, #prices {
    min-width: 560px;
    }
 
@@ -741,7 +789,7 @@ color: #252854;
    }
 
    #about {
-    top: 120px;
+    top: 140px;
     width: 280px;
     left: 30px;
     }
@@ -752,7 +800,7 @@ color: #252854;
 
     #social {
     width: 250px;
-    top: 325px;
+    top: 300px;
     left: 30px;
     }
 
