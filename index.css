@@ -271,9 +271,7 @@ top: 180px;
 left: 70px
 }
 
-p {
-left: 0px;
-top: 0px;
+#title p {
 text-align: left;
 font-family: Roboto;
 font-style: normal;
