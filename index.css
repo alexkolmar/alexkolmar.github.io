@@ -618,7 +618,6 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
 #useful p, #blog p, #prices p {
   text-align: justify;
-  min-width: auto;
   width: 100%;
 }
 
