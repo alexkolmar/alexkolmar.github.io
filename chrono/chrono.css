@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	margin: 0 auto;
+	position: relative;
+}
+
+#chrono {
+	position: relative;
+	margin: 0 auto;
+	width: 500px;
+	height: 530px;
+	background: url(background.png);
+	padding: 30px 50px 40px;
+}
+
+.tab, .tab-title {
+    display: inline-block; /* Выстраиваем по горизонтали */
+}
+
+.tab input[type="radio"] {
+   	display: none;
+}
+   
+.tab-title {
+    background: #3c2f1d; /* Цвет фона */
+    padding: 0; /* Поля вокруг текста */
+    border: 2px solid #8f8271;
+    -moz-border-image: -moz-linear-gradient(top, #8f8271 0%, #564731 100%);  
+    -webkit-border-image: -webkit-linear-gradient(top, #8f8271 0%, #564731 100%);  
+    border-image: linear-gradient(to bottom, #8f8271 0%, #564731 100%);  
+    border-image-slice: 1;  
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px #241003, 0 4px 5px #241003;
+    color: #b19f80;
+    text-shadow: 0 0px 1px #241003;
+    font-size: 20px;
+    font-family: poiret one;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin: 0 0 0 15px;
+}
+
+.tab-content {
+    position: absolute; /* Абсолютное позиционирование */
+    border: none; /* Параметры рамки */
+    border-radius: 10px;
+    padding: 0; /* Поля вокруг текста */
+    left: 50px; /* Размещаем у левого края */
+    bottom: 40px;
+    width: 500px; /* Ширина содержимого */
+    height: 460px;
+    display: none; /* Прячем вкладку */
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.dossier {
+    background: url(dossier.png) no-repeat;
+}
+
+.relations {
+    background: url(relations.png) no-repeat;
+}
+
+.chronology {
+    background: url(chronology.png) no-repeat;
+}
+
+.inner {
+    padding: 10px 20px;
+    overflow: auto;
+    font-family: roboto;
+    font-size: 12px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    text-align: justify;
+    }
+        
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+        
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+a {
+    text-decoration: none;
+    color: #241003;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.tab :checked + .tab-title {
+    position: relative; /* Относительное позиционирование */
+    background: #b19f80; /* Цвет фона */
+    color: #241003;
+    z-index: 1; /* Отображаем поверх содержимого */
+}
+
+.tab :checked ~ .tab-content {
+    display: block; /* Показываем активную вкладку */
+}
