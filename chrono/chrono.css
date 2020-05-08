@@ -393,12 +393,12 @@ option, optgroup {
   content: '';
   color: transparent;
   margin: 5px 7px 5px 5px;
-  box-shadow: 0 0 7px #bfff76;
+  box-shadow: 0 0 7px #bf0;
   width: 7px;
   height: 7px;
   float: left;
   border-radius: 50%;
-  background: radial-gradient(at top, #a6ff75, #46cc46, #006400);
+  background: radial-gradient(at top, #98ea36, #8ac176, #628c52);
   display: block; 
 }
 
