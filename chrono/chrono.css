@@ -2,9 +2,15 @@
     margin: 0;
     padding: 0;
     border: none;
-    scrollbar-width: thin;
+    scrollbar-width: thin; /* полоса прокрутки мозиллы */
     scrollbar-color: #8c7a60 transparent ; /* 1 - бегунок, 2 - полоса */
    }
+
+/* полоса прокрутки (кроме мозиллы) */
+   ::-webkit-scrollbar {width: 6px; height: 8px;}
+   ::-webkit-scrollbar-track {background-color:transparent;}
+   ::-webkit-scrollbar-thumb {background-color:#8c7a60;}
+   ::-webkit-scrollbar-thumb:active {background:#564731;}
 
 body {
     margin: 0 auto;
