@@ -1,23 +1,23 @@
 * {
-	margin: 0;
-	padding: 0;
-	border: none;
+    margin: 0;
+    padding: 0;
+    border: none;
     scrollbar-width: thin;
     scrollbar-color: #8c7a60 transparent ; /* 1 - бегунок, 2 - полоса */
    }
 
 body {
-	margin: 0 auto;
-	position: relative;
+    margin: 0 auto;
+    position: relative;
 }
 
 #chrono {
-	position: relative;
-	margin: 0 auto;
-	width: 500px;
-	height: 530px;
-	background: url(background.png);
-	padding: 30px 50px 40px;
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 530px;
+    background: url(background.png);
+    padding: 30px 50px 40px;
 }
 
 .tab, .tab-title {
@@ -25,7 +25,7 @@ body {
 }
 
 .tab input[type="radio"] {
-   	display: none;
+    display: none;
 }
    
 .tab-title {
@@ -335,11 +335,12 @@ option, optgroup {
     padding: 5px;
 }
 
-.chronology ul li {
-    margin-left: 0;
-    display: flex;
+.chronology ul li, .chronology span {
+    margin: 0;
+    display: block;
     align-items: center;
     height: 17px;
+    font-size: 14px;
 }
 
 .chronology ul {
@@ -369,49 +370,55 @@ option, optgroup {
 }
 
 .plot:before {
-  content: url(plot.png);
-  margin: 5px 10px 5px 0;
-  box-shadow: 0 0 7px #ff1800;
-  font-weight: bold;
-  border-radius: 50%;
-  height: 7px;
-  width: 7px;
-  display: inline-grid;
-  font-size: 14px;
+    content: '';
+    color: transparent;
+    margin: 5px 7px 5px 5px;
+    box-shadow: 0 0 7px red;
+    width: 7px;
+    height: 7px;
+    float: left;
+    border-radius: 50%;
+    background: radial-gradient(at top, #ff6600, red, #a50000);
+    display: block;
 }
 
 .finished:before {
-  content: url(finished.png);
-  margin: 5px 10px 5px 0;
-  box-shadow: 0 0 7px #a6ff75;
-  border-radius: 50%;
-  height: 7px;
+  content: '';
+  color: transparent;
+  margin: 5px 7px 5px 5px;
+  box-shadow: 0 0 7px #bfff76;
   width: 7px;
-  display: inline-grid; 
-  font-size: 14px;
+  height: 7px;
+  float: left;
+  border-radius: 50%;
+  background: radial-gradient(at top, #a6ff75, #46cc46, #006400);
+  display: block; 
 }
 
 .active:before {
-  content: url(active.png);
-  margin: 5px 10px 5px 0;
+  content: '';
+  color: transparent;
+  margin: 5px 7px 5px 5px;
   box-shadow: 0 0 7px #fff0a0;
-  color: yellow;
-  border-radius: 50%;
-  height: 7px;
   width: 7px;
-  display: inline-grid;
-  font-size: 14px;
+  height: 7px;
+  float: left;
+  border-radius: 50%;
+  background: radial-gradient(circle at 3px 2px, #fff0a0, #d8ac00, #ff6600);
+  display: block; 
 }
 
 .dead:before {
-  content: url(dead.png);
-  margin: 5px 10px 5px 0;
-  box-shadow: none;
-  border-radius: 50%;
-  height: 7px;
+  content: '';
+  color: transparent;
+  margin: 5px 7px 5px 5px;
+  box-shadow: inset 0 0 4px #252525;
   width: 7px;
-  display: inline-grid; 
-  font-size: 14px;
+  height: 7px;
+  float: left;
+  border-radius: 50%;
+  background: radial-gradient(circle at 3px 2px, #cccccc, #545454, black);
+  display: block; 
 }
 
 #legend {
@@ -481,11 +488,12 @@ box-shadow: inset 0 0 5px rgba(36, 16, 3, .3), inset 0 0 10px rgba(36, 16, 3, .5
     background: transparent;
     color: #b19f80;
     text-transform: uppercase;
-    font-family: roboto;
+    font-family: arial;
     cursor: pointer;
     font-size: 18px;
     margin: 5px;
     transition: all 0.2s ease 0.2s;
+    border: none;
 }
 
 .contact button:hover {
