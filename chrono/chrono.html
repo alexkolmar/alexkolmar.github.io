@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Simon Gordon's chronology (Offworld)</title>
+	<meta name="keywords" content=" ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="https://alexkolmar.github.io/images/favicon.ico">
 	<link href="chrono.css" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto&display=swap" rel="stylesheet"> 
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+    <script type='text/javascript' src='filter.js'></script>
 </head>
 <body>
 	<div id="chrono">
@@ -11,24 +17,321 @@
 			<input type="radio" id="tab1" name="tab-group" checked>
 			<label for="tab1" class="tab-title">Досье</label> 
 			<section class="tab-content dossier">
-				<div class="inner">ы</div>
+				<div class="inner">
+					<div id="topsecret">
+						<h1>федеральное бюро расследований</h1>
+						<div class="name">
+							<h3>Саймон Гордон</h3>
+						</div>
+						<div class="photo">
+							<img src="3.png">
+						</div>
+						<div class="dob">
+							<div class="first">дата рождения:</div>
+							<div class="second">24.11.1983</div>
+						</div>
+						<div class="cz">
+							<div class="first">гражданство:</div>
+							<div class="second">соединённые штаты</div>
+						</div>
+						<div class="lang">
+							<div class="first">знание языков:</div>
+							<div class="second">
+								<select>
+									<option>английский</option>
+									<option>французский</option>
+									<option>испанский</option>
+									<option>итальянский</option>
+									<option>немецкий</option>
+								</select>
+							</div>
+						</div>
+						<div class="marital">
+							<div class="first">семейное положение:</div>
+							<div class="second">холост</div>
+						</div>
+						<div class="listed">
+							<div class="first">числится как:</div>
+							<div class="second">специальный агент</div>
+						</div>
+						<h2 class="appearance">внешность</h2>
+						<div class="hair">
+							<div class="first">цвет волос:</div>
+							<div class="second">шатен</div>
+						</div>
+						<div class="eyes">
+							<div class="first">цвет глаз:</div>
+							<div class="second">карий</div>
+						</div>
+						<div class="marks">
+							<div class="first">особые приметы:</div>
+							<div class="second">отсутствуют</div>
+						</div>
+						<div class="bodytype">
+							<div class="first">телосложение:</div>
+							<div class="second">астеник</div>
+						</div>
+						<div class="height">
+							<div class="third">рост:</div>
+							<div class="fourth">6'1 (185 см)</div>
+						</div>
+						<div class="weight">
+							<div class="third">вес:</div>
+							<div class="fourth">155 lbs (70,5 кг)</div>
+						</div>
+						<div class="feet">
+							<div class="third">размер обуви:</div>
+							<div class="fourth">13 (45)</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 		<div class="tab">
 			<input type="radio" id="tab2" name="tab-group">
 			<label for="tab2" class="tab-title">Хронология</label> 
 			<section class="tab-content chronology">
-				<div class="inner">ы</div>
+				<div class="inner">
+					<div id="legend">
+						<h2>Легенда</h2>
+						<table>
+							<tr>
+								<td class="active">активный эпизод</td>
+								<td class="finished">завершённый эпизод</td>
+							</tr>
+							<tr>
+								<td class="plot">сюжетный эпизод</td>
+								<td class="dead">незавршённый эпизод</td>
+							</tr>
+						</table>
+						<div id="eps-nav">
+							<a rel="all" class="current">Все</a> 
+							<a rel="simon">Саймон</a> 
+							<a rel="dale">Дейл</a>
+						</div>
+					</div>
+					<div id="all-eps">
+					<h1>Настоящее</h1>
+					<ul>
+						<li class="all simon ep dead"><a href="http://off.rusff.ru/viewtopic.php?id=221">U—II; 30.06.2019 — something to believe</a></li>
+						<li class="all simon ep plot"><a href="http://off.rusff.ru/viewtopic.php?id=268">U—II; 02.07.2019 — EXHUMATION</a></li>
+						<li class="all simon ep finished"><a href="http://off.rusff.ru/viewtopic.php?id=239">U—II; 07.07.2019 — Lupus in fabula</a></li>
+						<li class="all simon ep finished"><a href="http://off.rusff.ru/viewtopic.php?id=340">U—II; 12.07.2019 — Сколько волка ни корми...</a></li>
+						<li class="all simon ep plot"><a href="http://off.rusff.ru/viewtopic.php?id=269">U—II; 16.07.2019 — HAIL SERPENT</a></li>
+						<li class="all simon ep active"><a href="http://off.rusff.ru/viewtopic.php?id=498">U—II; 25.07.2019 — Dog on a leash</a></li>
+						<li class="all simon ep dead"><a href="http://off.rusff.ru/viewtopic.php?id=369">U—II; 29.07.2019 — Stuck in textures</a></li>
+						<li class="all dale simon ep active"><a href="http://off.rusff.ru/viewtopic.php?id=379">U—II; 03.08.2019 — Dance of Fire</a></li>
+						<li class="all dale ep active"><a href="http://off.rusff.ru/viewtopic.php?id=404">U—II; 08.08.2019 — The Ghost of You</a></li>
+						<li class="all simon ep active"><a href="http://off.rusff.ru/viewtopic.php?id=381">U—II; 10.08.2019 — Light it up</a></li>
+					</ul>
+					<h2>Прошлое</h2>
+					<ul>
+						<li class="all simon ep dead"><a href="http://off.rusff.ru/viewtopic.php?id=247">U—II; 07.04.2015 — Sorry for your loss</a></li>
+					</ul>
+					</div>
+				</div>
 			</section>
 		</div>
 		<div class="tab">
 			<input type="radio" id="tab3" name="tab-group">
 			<label for="tab3" class="tab-title">Отношения</label> 
 			<section class="tab-content relations">
-				<div class="inner">ы</div>
+				<div class="inner">
+					<h1>семья</h1>
+					<h4>Саймон</h4>
+					<ul>
+						<li>Оливер Гордон, род. 1956 &mdash; отец</li>
+						<li>Джулия Гордон (Майер), род. 1960 &mdash; мать</li>
+						<li>Дэниел Гордон, род. 1986 &mdash; брат</li>
+						<li><a href="#" class="person" onclick="document.getElementById('nessa').style.display='block'; return false;">Ванесса Гордон</a>, род. 1994 &mdash; сестра</li>
+					</ul>
+					<h4>Дейл</h4>
+					<ul>
+						<li>Дастин Гордон, 1956-2018 &mdash; отец</li>
+						<li>Джульетта Гордон (Майер), 1960-2018 &mdash; мать</li>
+						<li>Тимоти Гордон, род. 1986 &mdash; брат</li>
+						<li>Вероника Гордон, 1994-2018 &mdash; сестра</li>
+					</ul>
+					<h2>контакты</h2>
+					<ul>
+						<li><a href="#" class="person" onclick="document.getElementById('isa').style.display='block'; return false;">Изабель Митчелл</a></li>
+						<li><a href="#" class="person" onclick="document.getElementById('hanna').style.display='block'; return false;">Ханна Вайс</a></li>
+						<li><a href="#" class="person" onclick="document.getElementById('cory').style.display='block'; return false;">Корвин Уилсон</a></li>
+					</ul>
+				</div>
+				<div id="profiles">
+					<div id="nessa" class="contact">
+						<button onclick="document.getElementById('nessa').style.display='none'; return false;">&#10006;</button>
+						<div id="topsecret">
+							<h1>Досье №49345</h1>
+							<div class="name">
+								<h3><a href="http://off.rusff.ru/profile.php?id=165">Ванесса Гордон</a></h3>
+							</div>
+							<div class="photo">
+								<img src="https://i.imgur.com/EtkVZUv.png">
+							</div>
+							<div class="dob">
+								<div class="first">дата рождения:</div>
+								<div class="second">08.08.1994</div>
+							</div>
+							<div class="cz">
+								<div class="first">гражданство:</div>
+								<div class="second">соединённые штаты</div>
+							</div>
+							<div class="lang">
+								<div class="first">знание языков:</div>
+								<div class="second">английский</div>
+							</div>
+							<div class="marital">
+								<div class="first">семейное положение:</div>
+								<div class="second">не замужем</div>
+							</div>
+							<div class="listed">
+								<div class="first">занятость:</div>
+								<div class="second">администратор</div>
+							</div>
+							<div class="description">
+								<h2>описание</h2>
+								<div class="container">
+									<p>Моя младшая сестра, с которой я уже потерял всякую надежду наладить отношения. 7 лет назад они вместе с мамой оказались в заложниках у террористов, желавших мне отомстить. После того как этот кошмар закончился, Ванесса обвинила во всём меня больше не желала меня знать. Она ненавидит полицию и ФБР и старается держаться от весего этого подальше. Я до сих пор не знаю, что пришлось ей пережить, но, похоже, она так и не смогла до конца оправиться. Мне остаётся лишь надеяться на то, что когда-нибудь предоставится удачный случай показать ей, что ФБР и полиция - хорошие ребята, которые приносят пользу людям.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="isa" class="contact">
+						<button title="закрыть" onclick="document.getElementById('isa').style.display='none'; return false;">&#10006;</button>
+						<div id="topsecret">
+							<h1>федеральное бюро расследований</h1>
+							<div class="name">
+								<h3><a href="http://off.rusff.ru/profile.php?id=141">Изабель Митчелл</a></h3>
+							</div>
+							<div class="photo">
+								<img src="https://i.imgur.com/uuujm0u.png">
+							</div>
+							<div class="dob">
+								<div class="first">дата рождения:</div>
+								<div class="second">27.01.1989</div>
+							</div>
+							<div class="cz">
+								<div class="first">гражданство:</div>
+								<div class="second">соединённые штаты</div>
+							</div>
+							<div class="lang">
+								<div class="first">знание языков:</div>
+								<div class="second">
+									<select>
+										<option>английский</option>
+										<option>французский</option>
+										<option>немецкий</option>
+									</select>
+								</div>
+							</div>
+							<div class="marital">
+								<div class="first">семейное положение:</div>
+								<div class="second">не замужем</div>
+							</div>
+							<div class="listed">
+								<div class="first">числится как:</div>
+								<div class="second">специальный агент</div>
+							</div>
+							<div class="description">
+								<h2>описание</h2>
+								<div class="container">
+									<p>Мы познакомились, когда меня попросили провести курс лекций по психологии для студентов ФБР. Изабелла с интересом слушала все лекции и задавала вопросы после их окончания. Ознакомившись с её делом, я понял, в связи с чем были заданы вопросы. Как выяснилось, превратности судьбы привели Беллу на порог ФБР: сначала загадочная гибель её старших брата и сестры, затем преследователь, которому ясно было что-то известно.</p>
+									<p>Я вызвался помочь ей расследовать обстоятельства гибели её брата и сестры. В итоге дело зашло в тупик, но мы за время расследования сблизились и стали хорошими друзьями. Из-за специфики работы наших отделов мы виделись нечасто, поэтому сложно было говорить о чём-то серьёзном, хотя у нас явно есть друг к другу взаимный интерес.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="hanna" class="contact">
+						<button onclick="document.getElementById('hanna').style.display='none'; return false;">&#10006;</button>
+						<div id="topsecret">
+							<h1>Досье №76545</h1>
+							<div class="name">
+								<h3><a href="http://off.rusff.ru/profile.php?id=37">Ханна Вайс</a></h3>
+							</div>
+							<div class="photo">
+								<img src="https://i.imgur.com/yb7As07.png">
+							</div>
+							<div class="dob">
+								<div class="first">дата рождения:</div>
+								<div class="second">20.04.1995</div>
+							</div>
+							<div class="cz">
+								<div class="first">гражданство:</div>
+								<div class="second">соединённые штаты</div>
+							</div>
+							<div class="lang">
+								<div class="first">знание языков:</div>
+								<div class="second">
+									<select>
+										<option>немецкий</option>
+										<option>английский</option>
+									</select>
+								</div>
+							</div>
+							<div class="marital">
+								<div class="first">семейное положение:</div>
+								<div class="second">не замужем</div>
+							</div>
+							<div class="listed">
+								<div class="first">занятость:</div>
+								<div class="second">безработная</div>
+							</div>
+							<div class="description">
+								<h2>описание</h2>
+								<div class="container">
+									<p>С делом Ханны я столкнулся уже в Шарлотте во время расследования зверского убийства полковника Роджерса. В отчёте судмедэксперта говорилось, что мужчину растерзало крупное животное, похожее на волка, прямо у него дома, при том, что он не держал дома собак. Я отправился на поиски его приёмной дочери, поскольку её исчезновение после этого случая явно говорило о том, что девушка что-то знает. Из дела Ханны я понял, что у неё было трудное детство и сложные отношения с отчимом. Поскольку до работы в ФБР я работал с трудными подростками в социальной службе, у меня пред глазами сложилась вполне очевидная картина: девушка замешана в гибели отчима.</p>
+									<p>Я шёл по следу крупного волка, которого видели в черте города, и столкнулся с животным, подходящим под описание, на заброшенной стройке. Там же я обнаружил и следы ханны. Очень скоро я понял, что Ханна, как и я, обрела способность после контакта со злополучным туманом, и теперь может превращаться в волчицу. После недолгого диалога она призналась в убийстве отчима. Но я позволил себе слабость и не арестовал Ханну, поскольку не хотел, чтобы над ней проводили опыты. Я надеялся помочь ей начать нормальную жизнь и назначил сеанс. Но всё как обычно пошло не так.</p>
+									<p>Уже на первом сеансе я заметил, что у Ханны возникает нездоровая привязаннсть ко мне. Разумеется, я предполагал такой вариант развития событий. Но в отличие от всех предыдущих случаев сейчас я имел дело с человеком, способным за несколько секунд превратиться из забитой девушки в опасного хищника. Ещё на стройке во время первого столкновения моя способность спасла меня от волчьих зубов на моей шее. Я понимал, что неосторожное слово с моей стороны или попытка избавиться от назойливого внимания Ханны могут быть восприняты ей как предательство. Я испугался.</p>
+									<p>Ситуация казалась тупиковой. Несколько раз я переосмыслял свои действия и обещал впредь не нарушать правил. Какими бы ни были обстоятельства - убийца есть убийца, и решать его судьбу должен суд. На моей совести было уже несколько загубленных жизней. Этого могло не случиться, если бы я схватил волчицу ещё на стройке. Самое поганое то, что если я арестую Ханну сейчас, она уже точно никогда не вернёт веру в людей. Я должен что-то придумать.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="cory" class="contact">
+						<button onclick="document.getElementById('cory').style.display='none'; return false;">&#10006;</button>
+						<div id="topsecret">
+							<h1>Досье №63576</h1>
+							<div class="name">
+								<h3><a href="http://off.rusff.ru/profile.php?id=69">Корвин Уилсон</a></h3>
+							</div>
+							<div class="photo">
+								<img src="https://i.imgur.com/qqj0Jt1.png">
+							</div>
+							<div class="dob">
+								<div class="first">дата рождения:</div>
+								<div class="second">27.08.1994</div>
+							</div>
+							<div class="cz">
+								<div class="first">гражданство:</div>
+								<div class="second">соединённые штаты</div>
+							</div>
+							<div class="lang">
+								<div class="first">знание языков:</div>
+								<div class="second">английский</div>
+							</div>
+							<div class="marital">
+								<div class="first">семейное положение:</div>
+								<div class="second">холост</div>
+							</div>
+							<div class="listed">
+								<div class="first">занятость:</div>
+								<div class="second">модель, актёр</div>
+							</div>
+							<div class="description">
+								<h2>описание</h2>
+								<div class="container">
+									<p>С Корвином я познакомился при весьма печальных обстоятельствах, хотя на момент знакомства они не казались печальными и вообще ничто не предвещало беду. Ну почти. Я отдыхал с приятелями в торговом центре в свой заслуженный выходной, когда вдруг объявили эвакуацию в связи с возгоранием. Прибывшие на место полицейские были обеспокоены действиями поджигателя и попросили меня помочь сделать обход по этажам, чтобы проверить, не осталось ли кого в здании. Я согласился.</p>
+									<p>Я обнаружил Корвина в туалете и предложил следовать за мной. Как выяснилось, парень работает актёром - недаром его лицо показалось мне знакомым. Разумеется, я не думал, что он и есть нарушитель, тем более, что очень скоро мы столкнулись с виновницей произошедшего. Непродолжительное преследование поджигательницы привело меня на крышу торгового центра. Там произошло очередное столкновение лицом к лицу, в ходе которого я оступился и полетел вниз. К сожалению, на сей раз способность меня не спасла.</p>
+									<p>Я очнулся уже в больнице и понял, что прикован к постели. До меня дошли слухи, что Кори обнаружил меня мёртвым, но воспользовался своей способностью, дабы привести из неживого состояние в критическое. К сожалению, последующее восстановление уже не входило в сферу его возможностей. Но если вернуть к жизни стало возможным, то наверняка возможно и исцелить. Однако шансы встретить такого способного минимальны. Поэтому в ближайшие месяцы я едва ли вернусь к своим прежним обязанностям и образу жизни.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			</section> 
 		</div>
-	</div>
 </body>
 </html>
-
