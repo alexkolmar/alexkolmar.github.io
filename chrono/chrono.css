@@ -377,6 +377,7 @@ option, optgroup {
   height: 7px;
   width: 7px;
   display: inline-grid;
+  font-size: 14px;
 }
 
 .finished:before {
@@ -387,6 +388,7 @@ option, optgroup {
   height: 7px;
   width: 7px;
   display: inline-grid; 
+  font-size: 14px;
 }
 
 .active:before {
@@ -397,7 +399,8 @@ option, optgroup {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  display: inline-grid;  
+  display: inline-grid;
+  font-size: 14px;
 }
 
 .dead:before {
@@ -408,6 +411,7 @@ option, optgroup {
   height: 7px;
   width: 7px;
   display: inline-grid; 
+  font-size: 14px;
 }
 
 #legend {
