@@ -376,7 +376,7 @@ option, optgroup {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  display: inline-flex;
+  display: inline-grid;
 }
 
 .finished:before {
@@ -386,7 +386,7 @@ option, optgroup {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  display: inline-flex; 
+  display: inline-grid; 
 }
 
 .active:before {
@@ -397,7 +397,7 @@ option, optgroup {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  display: inline-flex;  
+  display: inline-grid;  
 }
 
 .dead:before {
@@ -407,7 +407,7 @@ option, optgroup {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  display: inline-flex; 
+  display: inline-grid; 
 }
 
 #legend {
