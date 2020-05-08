@@ -12,6 +12,12 @@
    ::-webkit-scrollbar-thumb {background-color:#8c7a60;}
    ::-webkit-scrollbar-thumb:active {background:#564731;}
 
+/* выделение */
+   ::selection {
+    background: #564731;
+    color: #b19f80;
+   }
+
 body {
     margin: 0 auto;
     position: relative;
