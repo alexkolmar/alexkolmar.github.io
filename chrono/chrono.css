@@ -183,7 +183,7 @@ h4 {
     letter-spacing: 1px;
     font-weight: bold;
     background: linear-gradient(to bottom, #564731 0%, #241003 100%); 
-    background-clip: text;
+    background-clip: text!important;
 }
 
 p {
