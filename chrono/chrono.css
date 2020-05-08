@@ -335,16 +335,23 @@ option, optgroup {
     padding: 5px;
 }
 
-.chronology ul li, .chronology span {
+.chronology ul li {
     margin: 0;
     display: block;
-    align-items: center;
     height: 17px;
     font-size: 14px;
 }
 
 .chronology ul {
   list-style: none;
+}
+
+.chronology span {
+    margin: 0;
+    display: block;
+    height: 18px;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 #eps-nav {
