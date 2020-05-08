@@ -340,6 +340,7 @@ option, optgroup {
     margin-left: 0;
     display: flex;
     align-items: center;
+    height: 17px;
 }
 
 .chronology ul {
@@ -370,7 +371,7 @@ option, optgroup {
 
 .plot:before {
   content: url(plot.png);
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
   box-shadow: 0 0 7px #ff1800;
   font-weight: bold;
   border-radius: 50%;
@@ -382,7 +383,7 @@ option, optgroup {
 
 .finished:before {
   content: url(finished.png);
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
   box-shadow: 0 0 7px #a6ff75;
   border-radius: 50%;
   height: 7px;
@@ -393,7 +394,7 @@ option, optgroup {
 
 .active:before {
   content: url(active.png);
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
   box-shadow: 0 0 7px #fff0a0;
   color: yellow;
   border-radius: 50%;
@@ -405,7 +406,7 @@ option, optgroup {
 
 .dead:before {
   content: url(dead.png);
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
   box-shadow: none;
   border-radius: 50%;
   height: 7px;
