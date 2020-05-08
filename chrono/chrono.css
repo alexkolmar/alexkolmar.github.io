@@ -179,11 +179,9 @@ h4 {
     font-family: poiret one;
     font-size: 18px;
     text-align: center;
-    color: transparent;
+    color: #241003;
     letter-spacing: 1px;
     font-weight: bold;
-    background: linear-gradient(to bottom, #564731 0%, #241003 100%); 
-    background-clip: text!important;
 }
 
 p {
