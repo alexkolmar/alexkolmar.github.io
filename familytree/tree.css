@@ -221,10 +221,10 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.4), inset 0 3px 5px rgba(255,255,255,.7), in
 }
 
 .gloss {
-background-image: -webkit-linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .7));
-background-image: -moz-linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .7));
-background-image: -o-linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .7));
-background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .7));
+background-image: -webkit-linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1));
+background-image: -moz-linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1));
+background-image: -o-linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1));
+background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1));
 position: absolute;
 display: block;
 height: 75px;
