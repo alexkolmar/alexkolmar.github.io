@@ -573,10 +573,6 @@ box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
     position: relative;
   }
 
-  .header {
-    max-width: 1024px;
-  }
-
   #title {
     height: 500px;
   }
@@ -613,10 +609,6 @@ box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
     position: relative;
   }
 
-  .header {
-    max-width: 960px;
-  }
-
   #title {
     height: 440px;
   }
@@ -644,10 +636,6 @@ box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
   html {
     max-width: 800px;
     position: relative;
-  }
-
-  .header {
-    max-width: 800px;
   }
 
   #title {
@@ -703,10 +691,6 @@ box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
   html {
     max-width: 640px;
     position: relative;
-  }
-
-  .header {
-    max-width: 640px;
   }
 
     #title {
@@ -765,10 +749,6 @@ box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
   html {
     max-width: 480px;
     position: relative;
-  }
-
-  .header {
-    max-width: 480px;
   }
 
   #title {
