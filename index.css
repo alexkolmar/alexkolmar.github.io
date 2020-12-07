@@ -39,183 +39,7 @@ overflow-y: auto;
 min-height: 800px;
 height: auto;
 }
-        
 
-/* меню */
-
-.header {
-position: fixed;
-width: 100%;
-top: 0;
-left: 0;
-z-index: 50;
-}
-
-.header:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #B6D6C7;
-  box-shadow: 0 2px 2px 0px rgba(110, 130, 121, .7);
-  z-index: 2;
-}
-
-.header .container {
-max-width: 1024px;
-margin: 0 auto;
-padding: 0 15px;
-}
-
-.header_body {
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-height: 50px;
-}
-
-.header_logo {
-flex: 0 0 45px;
-border-radius: 50%;
-overflow: hidden;
-position: relative;
-z-index: 3;
-}
-
-.header_logo img {
-max-width: 100%;
-display: block;
-}
-
-.header_burger {
-display: none;
-}
-
-.header_list {
-display: flex;
-position: relative;
-z-index: 2;
-}
-
-.header_list li {
-list-style: none;
-margin: 0 0 0 20px;
-}
-
-.header_link {
-color: #FCF9E0;
-text-transform: lowercase;
-text-decoration: none;
-letter-spacing: 1px;
-font-family: PT sans;
-font-weight: bold;
-font-size: 18px;
-}
-
-@media (max-width: 767px) {
-
-  #title {
-    top: 50px!important;
-  }
-
-  body.lock {
-    overflow: hidden;
-  }
-
-/* адаптивное меню */
-
-   .header_body {
-    height: 50px;
-   }
-
-   .header_logo {
-    flex: 0 0 40px;
-   }
-
-   .header_burger {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 20px;
-    position: relative;
-    z-index: 3;
-   }
-
-   .header_burger span {
-    position: absolute;
-    background-color: #FCF8D6;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    top: 9px;
-    transition: all .3s ease 0s;
-   }
-
-   .header_burger:before,
-   .header_burger:after {
-    content: '';
-    background-color: #FCF8D6;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    transition: all .3s ease 0s;
-   }
-
-   .header_burger:before {
-    top: 0;
-   }
-
-   .header_burger:after {
-    bottom: 0;
-   }
-
-   .header_burger.active:before {
-    transform: rotate(45deg);
-    top: 9px;
-   }
-
-   .header_burger.active:after {
-    transform: rotate(-45deg);
-    bottom: 9px;
-   }
-
-   .header_burger.active span {
-    transform: scale(0);
-   }
-
-   .header_menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(110, 130, 121, 0.9);
-    padding: 50px 0 0 0;
-    transition: all .3s ease 0s;
-   }
-
-   .header_menu.active {
-    top: 0;
-    transition: all .3s ease 0s;
-   }
-
-   .header_list {
-    display: block;
-   }
-
-   .header_list li {
-    margin: 20px 0 0 20px;
-   }
-
-   .header_link {
-    text-transform: uppercase;
-   }
-  }
 
 /* ГЛАВНАЯ СТРАНИЦА */
 
@@ -223,7 +47,6 @@ font-size: 18px;
 
 #title {
 width: 100%;
-min-width: 1280px;
 position: relative;
 margin: 0 auto 120px;
 height: 530px;
@@ -233,10 +56,23 @@ padding-top: 50px;
 
 #hello {
 position: relative;
-width: 1280px;
-height: 520px;
+max-width: 1280px;
+height: auto;
 margin: 0 auto;
-top: 70px;
+top: 50px;
+}
+
+#about {
+display: flex;
+flex-direction: column;
+padding: 0px;
+position: relative;
+float: left;
+height: auto;
+width: 50%;
+max-width: 640px;
+top: 0;
+left: 5%;
 }
 
 h1 {
@@ -248,9 +84,18 @@ line-height: 1.3;
 display: flex;
 align-items: center;
 color: #2D7150;
-position: absolute;
+position: relative;
+float: left;
 width: 550px;
-left: 70px;
+left: 0;
+}
+
+#about h1 {
+padding-bottom: 25px;
+}
+
+#about p {
+padding-bottom: 10px;
 }
 
 h2 {
@@ -258,22 +103,10 @@ h2 {
   font-size: 24px;
   letter-spacing: 1px;
   color: #6E8279;
-}
-
-#about {
-display: flex;
-flex-direction: column;
-padding: 0px;
-position: absolute;
-width: 650px;
-height: 120px;
-top: 180px;
-left: 70px
+  padding: 10px 0;
 }
 
 p {
-top: 0;
-left: 0;
 text-align: left;
 font-family: Roboto;
 font-style: normal;
@@ -285,27 +118,46 @@ align-items: center;
 color: #000000;
 }
 
+#glass {
+display: block;
+position: relative;
+max-width: 640px;
+width: 40%;
+max-height: 550px;
+height: 100%;
+padding: 0;
+float: right;
+right: 5%;
+}
+
 #glass img {
-position: absolute;
-width: auto;
-height: 550px;
-right: 100px;
+position: relative;
+max-width: 450px;
+width: 100%;
+height: auto;
+min-width: 200px;
 top: 0;
+display: block;
+left: 5%;
 }
 
 /* контакты */
 
 #social {
-width: 650px;
+width: 100%;
+max-width: 640px;
 display: flex;
-position: absolute;
-top: 340px;
-left: 70px;
+position: relative;
+float: left;
+top: 0;
+left: 0;
+justify-content: space-between;
 }
 
 #social a {
-position: absolute;
-width: 180px;
+position: relative;
+max-width: 180px;
+width: 30%;
 height: 50px;
 top: 0;
 border-radius: 4px;
@@ -341,17 +193,14 @@ box-shadow:
 }
 
 #vk {
-left: 0;
 background: #4a76a8;
 }
 
 #tg {
-left: 200px;
 background: #139bd0;
 }
 
 #in {
-left: 400px;
 background: #ffd77a;
 background: -moz-linear-gradient(45deg, #ffd77a 0%, #e05a5f 50%, #a14ba0 100%);
 background: -webkit-gradient(left bottom, right top, color-stop(0%, #ffd77a), color-stop(50%, #e05a5f), color-stop(100%, #a14ba0));
@@ -363,9 +212,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd77a', end
 }
 
 #resume {
-  position: relative;
-  top: 50px;
-  min-height: 350px;
+ position: relative;
+ top: 50px;
+ min-height: 350px;
+ max-width: 980px;
+ margin: 0 auto 100px;
+}
+
+#resume .inner {
+  margin: 20px;
+  background: #FCF9E0;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,.4);
+}
+
+#resume .inner p {
+  padding: 5px 20px;
+  text-align: justify;
+}
+
+ul {
+  margin-left: 15px;
+  padding: 5px 20px;
+  text-align: justify;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #000000;
 }
 
 #resume details {
@@ -463,17 +339,24 @@ details summary {
   display: block;
   cursor: pointer;
   outline-style: none;
+  font-family: PT sans;
+  font-size: 18px;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 details summary:hover {
   text-decoration: underline;
 }
 
+summary h2 {
+  padding: 0!important;
+}
+
 /* ГАЛЕРЕЯ */
 
 #gallery {
   position: relative;
-  min-width: 1100px;
   padding: 50px 0;
   min-height: 750px;
   background-color: #FCF9E0;
@@ -504,8 +387,9 @@ details summary:hover {
     color: #6E8279;
     background: #BFD6CB;
     cursor: pointer;
-    width: 180px;
-    height: 40px;
+    width: auto;
+    height: auto;
+    padding: 10px 30px;
     align-items: center;
     justify-content: center;
     font-family: PT sans;
@@ -587,6 +471,12 @@ max-width: 300px;
 box-shadow: 0 3px 8px rgba(0,0,0,.5);
 }
 
+#avatars {
+display: block;
+width: 100%;
+text-align: center;
+}
+
 /* БЛОГ, ПОЛЕЗНЫЕ ССЫЛКИ, ЦЕНЫ */
 
 #blog, #useful, #prices {
@@ -618,6 +508,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,.5);
 
 #useful p, #blog p, #prices p {
   text-align: justify;
+  min-width: auto;
   width: 100%;
 }
 
@@ -668,200 +559,270 @@ background-color: #B6D6C7;
 box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
 }
 
-/* Адаптивные дизайны для устройств */
+/*******************************************************************
+                  Адаптивные дизайны для устройств 
+*******************************************************************/
 
-@media screen and (max-width: 1100px) {
 
-   #title {
-   height: 470px;
-   min-width: 1100px;
-   margin-bottom: 100px;
-   }
+/*                         ШИРИНА 1024px
+*******************************************************************/
 
-   #hello {
-   width: 1100px;
-   top: 40px;
-   }
-   
-   #gallery, #useful, #blog, #prices {
-    min-width: 1100px;
-   }
+@media screen and (max-width: 1024px) {
 
-   h1 {
-   font-size: 50px;
-   width: 450px;
-   }
+  html {
+    max-width: 1024px;
+    position: relative;
+  }
 
-   #about {
-   top: 165px;
-   width: 560px;
-   }
+  .header {
+    max-width: 1024px;
+  }
 
-   p {
-   font-size: 18px;
-   }
+  #title {
+    height: 500px;
+  }
 
-   #glass img {
-   max-height: 510px;
-   right: 80px;
-   }
+  #hello h1 {
+    font-size: 50px;
+    width: 450px;
+  }
 
-   #social {
-   width: 550px;
-   display: flex;
-   position: absolute;
-   top: 315px;
-   left: 70px;
-   }
+  #hello p {
 
-   #social a {
-   width: 160px;
-   height: 45px;
-   font-size: 18px;
-   }
+  }
 
-   #tg {
-    left: 180px;
-   }
+  #social {
+    max-width: 460px;
+  }
 
-   #in {
-   left: 360px;
-   }
-   
-   #resume details {
-   min-width: 1100px;
-   }
+  #social a {
+    width: 30%;
+    max-width: 150px;
+    font-size: 18px;
+    height: 42px;
+  }
 
-   .tabs {
-    max-width: 1050px;
-   }
-
-   .tabs > label {
-    margin: 20px 39px;
-   }
-   
-   footer {
-   min-width: 1100px;
-   }
 }
 
-@media screen and (max-width: 560px) {
+/*                         ШИРИНА 960px
+*******************************************************************/
 
-   #title {
-   height: 365px;
-   margin-bottom: 100px;
-   min-width: 560px;
-   }
-   
-   #gallery, #useful, #blog, #prices {
-   min-width: 560px;
-   }
+@media screen and (max-width: 960px) {
 
-   #hello {
-    position: absolute;
-    width: 560px;
-    top: 20px;
-   }
+  html {
+    max-width: 960px;
+    position: relative;
+  }
 
-   h1 {
-    position: absolute;
-    font-size: 40px;
-    width: 400px;
-    margin: 0;
-    left: 30px;
-   }
+  .header {
+    max-width: 960px;
+  }
 
-   #glass {
-    width: 560px;
-    position: absolute;
-    right: 40px;
-   }
+  #title {
+    height: 440px;
+  }
 
-   #glass img {
-   width: auto;
-   height: 360px;
-   top: 90px;
-   right: 0;
-   transform: scale(-1, 1);
-   }
+  #hello h1 {
+    font-size: 46px;
+  }
 
-   #about {
-    top: 140px;
-    width: 280px;
-    left: 30px;
-    }
+  #hello p {
+    font-size: 18px;
+  }
 
-    p {
+  #social a {
+    font-size: 16px;
+    height: 40px;
+  }
+
+}
+
+/*                         ШИРИНА 800px
+*******************************************************************/
+
+@media screen and (max-width: 800px) {
+
+  html {
+    max-width: 800px;
+    position: relative;
+  }
+
+  .header {
+    max-width: 800px;
+  }
+
+  #title {
+    height: 350px;
+  }
+
+  #about {
+   width: 60%;
+  }
+
+  #hello h1 {
+    font-size: 36px;
+    width: 360px;
+  }
+
+  #hello p {
     font-size: 14px;
-    }
+  }
 
-    #social {
-    width: 250px;
-    top: 300px;
-    left: 30px;
-    }
+  #social {
+  max-width: 200px;
+  }
 
-    #social a {
+  #social a {
     width: 50px;
     height: 45px;
     font-size: 0;
     font-family: 'Font Awesome 5 Free';
-    }
+  }
 
-    .fab {
+  .fab {
     padding-left: 0;
     margin: 0 auto;
     position: absolute;
-    }
+  }
 
-    #tg {
-    left: 70px;
-    }
+  .fa-vk::before, .fa-telegram-plane::before, .fa-instagram::before {
+    display: block;
+    font-size: 30px;
+  }
 
-    #in {
-    left: 140px;
-    }
+  #glass img {
+    transform: scale(-1, 1);
+  }
 
-    .fa-vk::before, .fa-telegram-plane::before, .fa-instagram::before {
-      display: block;
-      font-size: 30px;
-    }
+}
 
-    #resume details {
-    min-width: 560px;
-    top: 40px;
-    }
+/*                         ШИРИНА 640px
+*******************************************************************/
 
-    #resume details summary {
-    width: 140px;
+@media screen and (max-width: 640px) {
+
+  html {
+    max-width: 640px;
+    position: relative;
+  }
+
+  .header {
+    max-width: 640px;
+  }
+
+    #title {
+    height: 360px;
+    padding-top: 20px;
+  }
+
+  #about, #glass {
+   width: 50%;
+  }
+
+  #glass {
+    padding-top: 30px;
+  }
+
+  #hello h1 {
+    font-size: 30px;
+    width: 280px;
+    padding-bottom: 10px;
+  }
+
+  #hello p {
+    font-size: 14px;
+    padding-bottom: 7px;
+  }
+
+  #social {
+  max-width: 180px;
+  }
+
+  #social a {
+    width: 45px;
     height: 40px;
-    font-size: 16px;
-    }
+    font-size: 0;
+    font-family: 'Font Awesome 5 Free';
+  }
 
-    .tabs {
-    max-width: 560px;
-    }
+  .fab {
+    padding-left: 0;
+    margin: 0 auto;
+    position: absolute;
+  }
 
-    .tabs > label {
-    margin: 20px 7px;
-    width: 120px;
-    height: 30px;
-    }
+  .fa-vk::before, .fa-telegram-plane::before, .fa-instagram::before {
+    display: block;
+    font-size: 28px;
+  }
 
-    table {
-    width: auto;
-    }
+}
 
-    td {
-    width: 33%;
-    padding: 10px;
-    }
+/*                         ШИРИНА 480px
+*******************************************************************/
 
-    td img {
-    max-width: 150px;
-   }
-   
-   footer {
-   min-width: 560px;
-   }
+@media screen and (max-width: 480px) {
+
+  html {
+    max-width: 480px;
+    position: relative;
+  }
+
+  .header {
+    max-width: 480px;
+  }
+
+  #title {
+    height: 340px;
+    padding-top: 20px;
+  }
+
+  #about, #glass {
+   width: 50%;
+  }
+
+  #glass {
+    padding-top: 30px;
+  }
+
+  #hello h1 {
+    font-size: 30px;
+    width: 280px;
+    padding-bottom: 10px;
+  }
+
+  #hello p {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  #social {
+  max-width: 150px;
+  }
+
+  #social a {
+    width: 40px;
+    height: 36px;
+    font-size: 0;
+    font-family: 'Font Awesome 5 Free';
+  }
+
+  .fab {
+    padding-left: 0;
+    margin: 0 auto;
+    position: absolute;
+  }
+
+  .fa-vk::before, .fa-telegram-plane::before, .fa-instagram::before {
+    display: block;
+    font-size: 24px;
+  }
+
+}
+
+/*                         ШИРИНА 320px
+*******************************************************************/
+
+@media screen and (max-width: 320px) {
+
 }
