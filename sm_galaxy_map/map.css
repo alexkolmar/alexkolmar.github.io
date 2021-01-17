@@ -78,6 +78,7 @@ text-align: center;
 width: 878px;
 height: 535px;
 margin: 0 auto;
+overflow: hidden;
 }
 
 svg {
