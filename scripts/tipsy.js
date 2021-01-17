@@ -3,7 +3,7 @@
 	var defaults = {
 		speed: 500,
 		xOffset: 25,
-		yOffset: -25
+		yOffset: -30
 	};
 
 	var options = $.extend(defaults, options);
