@@ -2,7 +2,7 @@
 
 	var defaults = {
 		speed: 500,
-		xOffset: 26,
+		xOffset: -25,
 		yOffset: -5
 	};
 
