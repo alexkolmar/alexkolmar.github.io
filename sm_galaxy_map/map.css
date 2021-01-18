@@ -14,15 +14,15 @@ padding:0;
 /* GoodVibesPro */
 
 @font-face {
-    font-family: 'GoodVibesPro';
-    src: url('http://forumstatic.ru/files/001a/e4/9d/66491.eot');
-    src: url('http://forumstatic.ru/files/001a/e4/9d/66491.eot?#iefix') format('embedded-opentype'),
-         url('http://forumstatic.ru/files/001a/e4/9d/86110.woff2') format('woff2'),
-         url('http://forumstatic.ru/files/001a/e4/9d/31550.woff') format('woff'),
-         url('http://forumstatic.ru/files/001a/e4/9d/13019.ttf') format('truetype'),
-         url('http://forumstatic.ru/files/001a/e4/9d/93372.svg#GoodVibesPro') format('svg');
-    font-weight: normal;
-    font-style: normal;
+font-family: 'GoodVibesPro';
+src: url('fonts/good_vibes_pro-webfont.eot');
+src: url('fonts/good_vibes_pro-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/good_vibes_pro-webfont.woff2') format('woff2'),
+url('fonts/good_vibes_pro-webfont.woff') format('woff'),
+url('fonts/good_vibes_pro-webfont.ttf') format('truetype'),
+url('fonts/good_vibes_pro-webfont.svg#GoodVibesPro') format('svg');
+font-weight: normal;
+font-style: normal;
 }
 
 body {
