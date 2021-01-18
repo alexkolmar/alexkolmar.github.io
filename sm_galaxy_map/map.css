@@ -32,11 +32,9 @@ height: 535px;
 p, li {
 text-align: justify;
 text-align-last: left;
-font: normal 11px arial; 
-margin: 0 3px;
-padding: 5px 20px;
+font: normal 11px arial;
+padding: 0 5px;
 color: #52577f;
-clear: both;
 z-index: 17;
 position: relative;
 }
@@ -230,6 +228,19 @@ line-height: 1;
 z-index: 16;
 }
 
+.description .inner {
+position: relative;
+clear: both;
+width: 345px;
+margin: 0 auto;
+max-height: 250px;
+overflow: auto;
+scrollbar-width: thin;
+box-sizing: border-box;
+scrollbar-color: #babbd5 transparent;
+top: 5px;
+}
+
 /* Черта */
 
 .description .line {
@@ -238,7 +249,8 @@ display: block;
 position: relative;
 height: 23px;
 width: 226px;
-margin: 0 auto 20px;
+margin: 10px auto 20px;
+z-index: 15;
 }
 
 /************************
