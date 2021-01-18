@@ -96,7 +96,6 @@ stroke: white;
 stroke-width: 1;
 opacity: 1;
 transition: .5s;
-z-index: 12;
 }
 
 circle:hover, circle.active, path:hover, path.active {
