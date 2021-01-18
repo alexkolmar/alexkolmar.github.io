@@ -209,7 +209,7 @@ padding: 0;
 margin: 0;
 }
 
-/* Блок названия */
+/* Название блока */
 
 .description h2 {
 font-family: GoodVibesPro;
@@ -227,6 +227,8 @@ float: right;
 width: 280px;
 right: 25px;
 }
+
+/* Содержимое блока */
 
 .description .inner {
 position: relative;
