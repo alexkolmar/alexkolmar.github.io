@@ -211,7 +211,7 @@ margin: 0;
 
 /* Название блока */
 
-.description h2 {
+h2 {
 font-family: GoodVibesPro;
 font-weight: bold;
 font-size: 48px;
