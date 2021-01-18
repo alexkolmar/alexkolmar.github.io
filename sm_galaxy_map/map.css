@@ -285,20 +285,18 @@ opacity: .6;
 /* Всплывающая подсказка при наведении */
 #tooltip {
   position: absolute;
-  background: rgba(27, 12, 12,.75);
+  background: rgba(1, 34, 51, .75);
   z-index: 999;
-  font-variant: small-caps;
   display: none;
   padding: 4px 10px 5px;
   max-width: 180px;
   border: none;
   border-radius: 2px;
   font-weight: bold;
-  font-family: tahoma; /* шрифт */
+  font-family: verdana; /* шрифт */
   font-size: 10px; /* размер текста */
-  color: #958d77; /* цвет текста */
-  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #cecee9; /* цвет текста */
   text-align: center;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 3px rgba(0,0,0,.2)
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
 }
