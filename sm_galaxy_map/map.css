@@ -27,18 +27,7 @@ width: 878px;
 height: 535px;
 }
 
-.name h2 {
-font-family: GoodVibesPro;
-font-weight: bold;
-font-size: 48px;
-margin: 0 -10px -20px 0;
-color: #282983;
-display: block;
-top: 7px;
-position: relative;
-padding: 0 0 35px;
-line-height: 1;
-}
+/* Описание */
 
 p, li {
 text-align: justify;
@@ -48,16 +37,24 @@ margin: 0 3px;
 padding: 5px 20px;
 color: #52577f;
 clear: both;
+z-index: 17;
+position: relative;
 }
 
+/* Ссылки в описании */
+
 p a, li a {
-color: #B0C4DE; /*lightsteelblue*/
+color: #282983;
 text-decoration: none;
+transition: all 0.3s linear 0s;
+font-weight: bold;
 }
 
 p a:hover, li a:hover {
-font-weight: bold;
+color: #6f66a5;
 }
+
+/* Кнопка "закрыть" */
 
 button.close {
 border: none;
@@ -70,7 +67,7 @@ right: 0;
 margin: -3px -2px 0 0;
 }
 
-/* Map */
+/* Карта */
 
 .map {
 position: absolute;
@@ -90,6 +87,8 @@ width: 878px;
 z-index: 12;
 }
 
+/* Маркеры карты */
+
 circle, path {
 fill: transparent;
 stroke: white;
@@ -108,7 +107,7 @@ filter: drop-shadow(0 0 5px #b4d5ff);
 -webkit-filter: drop-shadow(0 0 5px #b4d5ff);
 }
 
-/* Locations */
+/* Окно описания */
 
 .description {
 position: absolute;
@@ -123,8 +122,51 @@ color: #52577f;
 padding: 0;
 top: 30px;
 left: 30px;
-z-index: 15
+z-index: 15;
 }
+
+/* Окно снизу */
+
+.bottom {
+bottom: 10px;
+top: initial!important;
+}
+
+/* Окно справа */
+
+.right {
+right: 10px;
+left: initial!important;
+}
+
+/* Уголки блока описания */
+
+.description::before {
+position: absolute;
+content: '';
+z-index: 11;
+border: none;
+background: url(img/corner.png) no-repeat top right;
+display: block;
+width: 55px;
+height: 50px;
+margin: -12px -11px 0 0;
+right: 0;
+}
+
+.description::after {
+position: absolute;
+content: '';
+z-index: 11;
+border: none;
+background: url(img/corners.png) no-repeat bottom center;
+display: block;
+width: 407px;
+height: 50px;
+margin: -38px 0 0 -11px;
+}
+
+/* Блок картинки с планетой */
 
 .description .planets {
 background: transparent;
@@ -161,6 +203,8 @@ padding: 0;
 margin: 0;
 }
 
+/* Блок названия */
+
 .description .name {
 display: block;
 position: relative;
@@ -172,6 +216,22 @@ outline: 4px solid rgba(82, 87, 127, .2);
 outline-offset: -35px;
 }
 
+.name h2 {
+font-family: GoodVibesPro;
+font-weight: bold;
+font-size: 48px;
+margin: 0 -10px -20px 0;
+color: #282983;
+display: block;
+top: 7px;
+position: relative;
+padding: 0 0 35px;
+line-height: 1;
+z-index: 16;
+}
+
+/* Черта */
+
 .description .line {
 background: url(http://forumuploads.ru/uploads/001a/e4/9d/2/942931.jpg) center no-repeat;
 display: block;
@@ -181,43 +241,13 @@ width: 226px;
 margin: 0 auto 20px;
 }
 
-.description::before {
-position: absolute;
-content: '';
-z-index: 11;
-border: none;
-background: url(img/corner.png) no-repeat top right;
-display: block;
-width: 55px;
-height: 50px;
-margin: -12px -11px 0 0;
-right: 0;
-}
+/************************
 
-.description::after {
-position: absolute;
-content: '';
-z-index: 11;
-border: none;
-background: url(img/corners.png) no-repeat bottom center;
-display: block;
-width: 407px;
-height: 50px;
-margin: -38px 0 0 -11px;
-}
+   Дополнительные слои
+************************/
 
-.bottom {
-bottom: 10px;
-top: initial!important;
-}
+/* Ссылка названия */
 
-.right {
-right: 10px;
-left: initial!important;
-}
-
-
-/* layers */
 .names_link {
 position: absolute;
 background: url(img/n.png);
@@ -238,6 +268,22 @@ background: url(img/nhover.png);
 opacity: 1;
 }
 
+/* Слой названия */
+
+#names {
+position: absolute;
+width: 878px;
+height: 535px;
+top: 0;
+left: 0;
+background: url(img/names.png);
+z-index: 10;
+display: none;
+opacity: .6;
+}
+
+/* Ссылка сетка */
+
 .grid_link {
 position: absolute;
 background: url(img/grid_off.png);
@@ -257,17 +303,7 @@ background: url(img/grid_on.png);
 opacity: 1;
 }
 
-#names {
-position: absolute;
-width: 878px;
-height: 535px;
-top: 0;
-left: 0;
-background: url(img/names.png);
-z-index: 10;
-display: none;
-opacity: .6;
-}
+/* Слой сетка */
 
 #grid {
 position: absolute;
@@ -279,6 +315,61 @@ background: url(img/grid.png);
 z-index: 10;
 display: none;
 opacity: .6;
+}
+
+/* Ссылка копирайт */
+
+.copyright_link {
+position: absolute;
+bottom: 10px;
+right: 10px;
+color: #8a8ab9;
+font-size: 14px;
+font-family: verdana;
+text-transform: uppercase;
+font-weight: bold;
+background: transparent;
+border: none;
+cursor: pointer;
+z-index: 13;
+transition: all 0.3s linear 0s;
+opacity: .7;
+}
+
+.copyright_link:hover, .copyright_link.on {
+color: #cecee9;
+text-shadow: 0 0 3px #b4d5ff;
+opacity: 1;
+}
+
+/* Блок копирайт */
+
+#copyright {
+position: absolute;
+bottom: 0;
+right: 30px;
+width: 250px;
+height: auto;
+color: #cecee9;
+text-shadow: 1px 1px 0 black;
+background: rgba(1, 34, 51, .75);
+font-size: 10px;
+font-family: verdana;
+text-align: justify;
+padding: 7px 12px;
+z-index: 15;
+display: none;
+line-height: 1.3;
+}
+
+#copyright a {
+color: #bbb0f5;
+text-decoration: none;
+transition: all 0.3s linear 0s;
+}
+
+#copyright a:hover {
+color: #a38fc2;
 }
 
 /* Всплывающая подсказка при наведении */
@@ -297,5 +388,6 @@ opacity: .6;
   font-variant: small-caps;
   color: #cecee9; /* цвет текста */
   text-align: center;
+  text-shadow: 1px 1px 0 black;
   box-shadow: 0 2px 3px rgba(0,0,0,.2);
 }
