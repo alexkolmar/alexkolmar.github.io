@@ -1,0 +1,12 @@
+
+/* Sitka Banner */
+
+@font-face {
+font-family: Sitka Banner, serif; 
+src: url("//forumstatic.ru/files/001b/3a/90/25397.eot");
+src: url("//forumstatic.ru/files/001b/3a/90/25397.eot?#iefix") format("embedded-opentype"),
+url("//forumstatic.ru/files/001b/3a/90/64901.woff2") format("woff2"),
+url("//forumstatic.ru/files/001b/3a/90/72769.woff") format("woff"),
+url("//forumstatic.ru/files/001b/3a/90/78194.ttf") format("truetype"),
+url("//forumstatic.ru/files/001b/3a/90/87561.svg#Sitka Banner") format("svg");
+} 
