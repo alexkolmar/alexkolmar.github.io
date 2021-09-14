@@ -1,0 +1,147 @@
+<style type="text/css">
+.methods {
+  text-align: center;
+}
+
+.methods .method-button {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 3px 5px;
+  margin: 0 3px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.methods .method-button.active {
+  opacity: 1;
+  background-color: lightgray;
+}
+
+
+.filters {
+  text-align: center;
+}
+
+.filters .filter-button {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 3px 5px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.filters.has-active .filter-button {
+  opacity: 0.4;
+}
+.filters.has-active .filter-button.active {
+  opacity: 1;
+  background-color: lightgray;
+}
+
+
+.items .item {
+  /* display: none*/
+  opacity: 0.2;
+}
+.items .item.active {
+  /* display: block*/
+  opacity: 1;
+}
+</style>
+
+<div class="methods">
+    <em class="method-button" id="all">All filters</em>
+    <em class="method-button" id="any">Any filter</em>
+</div>
+
+<div class="filters">
+    <em class="filter-button" id="batman">Batman</em>
+    <em class="filter-button" id="superman">Superman</em>
+    <em class="filter-button" id="flash">Flash</em>
+</div>
+
+<div class="items">
+    <div class="item" data-filters="batman superman">batman+superman 1</div>
+    <div class="item" data-filters="batman">batman 1</div>
+    <div class="item" data-filters="batman superman">batman+superman 2</div>
+    <div class="item" data-filters="superman">superman 1</div>
+    <div class="item" data-filters="superman">superman 2</div>
+    <div class="item" data-filters="batman superman flash">batman+superman+flash 1</div>
+    <div class="item" data-filters="batman flash">btman+flash 1</div>
+    <div class="item" data-filters="flash">flash 1</div>
+    <div class="item" data-filters="superman">superman 3</div>
+    <div class="item" data-filters="batman superman">batman+superman 3</div>
+</div>
+
+<script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+<script type="text/javascript">
+    (($) => {
+        let methods = $('.methods');
+        let filters = $('.filters');
+        let buttons = $('.filter-button', filters);
+        let items = $('.items .item');
+        let filterItems = {}
+
+        buttons.each((i, button) => { filterItems[button.id] = []; });
+        
+        items.each((i, item) => {
+            const keys = $(item).attr('data-filters').split(' ');
+
+            for (const key of keys) {
+                filterItems[key].push(item);
+            }
+            
+            $(item).data('filters', keys);
+        });
+        
+        function setState() {
+            let actives = buttons.map((i, item) => { return $(item).hasClass('active') ? item.id : null; }).toArray();
+            let method = $('.method-button.active', methods).attr('id');
+            
+            filters.toggleClass('has-active', actives.length > 0);
+            
+            if (actives.length > 0) {
+                    if (method === 'any') {
+                        items.removeClass('active');
+                    
+                    for (const active of actives) {
+                        for (const item of filterItems[active]) {
+                            $(item).addClass('active');
+                        }
+                    }
+                }
+                else if (method === 'all') {
+                        items.removeClass('active');
+                    
+                        items.each((i, item) => {
+                                    const keys = $(item).data('filters');
+                        
+                        console.log(keys);
+            
+                            for (const active of actives) {
+                                if (keys.indexOf(active) === -1) {
+                                    return;
+                            }
+                            }
+                        
+                        $(item).addClass('active');
+                    });
+                }
+            }
+            else {
+                items.addClass('active');
+            }
+        }
+        
+        buttons.on('click', function () {
+            $(this).toggleClass('active');
+            setState();
+        });
+        
+        $('.method-button', methods).on('click', function () {
+                $('.method-button', methods).removeClass('active');
+                $(this).addClass('active');
+            setState();
+        }).filter('#all').addClass('active');
+
+        setState();
+    })(jQuery);
+</script>
