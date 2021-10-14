@@ -7,7 +7,7 @@
          url('https://alexkolmar.github.io/fonts/intro/intro_regular.woff2') format('woff2'),
          url('https://alexkolmar.github.io/fonts/intro/intro_regular.woff') format('woff'),
          url('https://alexkolmar.github.io/fonts/intro/intro_regular.ttf') format('truetype'),
-         url('https://alexkolmar.github.io/fonts/intro/intro_regular.svg#intro_regular') format('svg');
+         url('https://alexkolmar.github.io/fonts/intro/intro_regular.svg#Intro Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,7 +19,7 @@
          url('https://alexkolmar.github.io/fonts/intro/intro_bold.woff2') format('woff2'),
          url('https://alexkolmar.github.io/fonts/intro/intro_bold.woff') format('woff'),
          url('https://alexkolmar.github.io/fonts/intro/intro_bold.ttf') format('truetype'),
-         url('https://alexkolmar.github.io/fonts/intro/intro_bold.svg#intro_bold') format('svg');
+         url('https://alexkolmar.github.io/fonts/intro/intro_bold.svg#Intro Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
