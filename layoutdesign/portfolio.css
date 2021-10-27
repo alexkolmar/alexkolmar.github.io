@@ -167,11 +167,33 @@ h3 {
     color: var(--headline-text);
 }
 
+h5 {
+	width: 100%;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+
+a {transition: all .5s linear 0s;}
+b {font-weight: 500;}
+
 .tab .inner {
 	overflow: auto;
 	max-height: 500px;
 	padding-right: 10px;
 	margin-right: -10px;
+	position: relative;
+}
+
+.inner a {
+	color: var(--main-link);
+	text-decoration: underline dashed var(--sec-bg);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.inner a:hover {
+	color: var(--hover-link);
 }
 
 .inner p {
@@ -182,23 +204,107 @@ h3 {
 	margin: 5px 0;
 }
 
-.inner ul {list-style-type: square;}
-
-.inner li {margin-left: 20px;}
-
-li span {
+.inner span {
 	font-weight: 500;
 	font-size: 16px;
+	line-height: 180%;
 }
 
-a {transition: all .5s linear 0s;}
+.inner ul {list-style-type: square;}
 
-.inner a {
-	color: var(--main-link);
-	text-decoration: underline dashed var(--sec-bg);
-	font-weight: 500;
+.inner li {margin: 5px 0 5px 25px;}
+
+.inner li p {text-indent: 0;}
+
+.inner img {
+	display: block;
+	max-width: 100%;
+	max-height: 450px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
 }
 
-.inner a:hover {
-	color: var(--hover-link);
+.inner details {}
+
+.inner details summary {
+	display: block;
 }
+
+.inner details summary h3, .inner details summary span {cursor: pointer;}
+
+.design {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+.type_a {
+	flex-direction: row;
+}
+
+.type_b {
+	flex-direction: column;
+}
+
+.type_a > div {width: calc(50% - 10px);}
+.type_b > div {width: 100%;}
+
+.type_b .image {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.design iframe {
+	margin: 10px auto;
+	display: block;
+}
+
+.design .opis {
+	line-height: 180%;
+	text-align: justify;
+}
+
+.design .opis span {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.design .opis summary span {display: unset;}
+
+.smallpreview {
+	display: flex;
+	display: -webkit-flex;
+	width: 100%;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.smallpreview .site {
+	width: calc(100% / 3 - 5px);
+	display: block;
+	margin-bottom: 10px;
+}
+
+.smallpreview span {
+	width: 100%;
+	text-align: center;
+}
+
+.site span {
+	text-align: center;
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	line-height: 120%;
+}
+
+.site h5 {margin-bottom: 5px;}
