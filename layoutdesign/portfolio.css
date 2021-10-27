@@ -33,7 +33,7 @@ body {
 #portfolio:before {
 	content: "";
 	position: absolute;
-	background-image: url(1556174712_5974.jpg);
+	background-image: url(bg.jpg);
 	background-attachment: scroll;
 	background-size: cover;
 	background-repeat: no-repeat;
