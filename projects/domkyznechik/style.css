@@ -234,7 +234,7 @@ body {
         z-index: 100;
 }
 
-.LIKES {
+#letstalk .LIKES {
 	display: none;
 	flex-direction: column;
 	justify-content: center;
