@@ -7,7 +7,7 @@
 /* Sitka Banner */
 
 @font-face {
-font-family: Sitka Banner, serif;
+font-family: Sitka Banner;
 src: url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.eot");
 src: url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.eot?#iefix") format("embedded-opentype"),
 url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.woff2") format("woff2"),
@@ -251,7 +251,7 @@ body {
   box-sizing: border-box;
   pointer-events: all;
   padding: 3% 2% 0;
-  font: 16px/170% Sitka Banner, sans-serif;
+  font: 16px/170% Sitka Banner;
   z-index: 100;
 }
 
