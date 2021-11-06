@@ -7,14 +7,12 @@
 /* Sitka Banner */
 
 @font-face {
-font-family: Sitka Banner;
-src: url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.eot");
-src: url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.eot?#iefix") format("embedded-opentype"),
-url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.woff2") format("woff2"),
-url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.woff") format("woff"),
-url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.ttf") format("truetype"),
-url("//alexkolmar.github.io/fonts/SitkaBanner/SitkaBanner.svg#Sitka Banner") format ("svg");
-} 
+font-family: 'Sitka Banner';
+url('https://forumstatic.ru/files/001b/3a/90/72769.woff') format('woff'),
+url('https://forumstatic.ru/files/001b/3a/90/78194.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
 
 body {
 	background: lightsteelblue;
