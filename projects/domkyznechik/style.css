@@ -8,8 +8,8 @@
 
 @font-face {
 font-family: 'Sitka Banner';
-url('https://forumstatic.ru/files/001b/3a/90/72769.woff') format('woff'),
-url('https://forumstatic.ru/files/001b/3a/90/78194.ttf') format('truetype');
+src: url('https://forumstatic.ru/files/001b/3a/90/72769.woff') format('woff'),
+src: url('https://forumstatic.ru/files/001b/3a/90/78194.ttf') format('truetype');
 font-variant-numeric: oldstyle-nums;
 font-weight: normal;
 font-style: normal;
