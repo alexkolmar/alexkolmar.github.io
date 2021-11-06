@@ -162,7 +162,7 @@ body {
 	display: flex;
 	display: -webkit-flex;
 	padding-bottom: 5px;
-	justify-content: right;
+	justify-content: flex-end;
 	align-items: center;
 	height: 35px;
 	box-sizing: border-box;
