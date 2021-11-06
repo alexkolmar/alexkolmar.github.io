@@ -294,3 +294,111 @@ body {
 	color: rgba(0,0,0,.3);
 	margin-top: -10px;
 }
+
+#laugh .inner {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: space-between;
+	padding: 65px 20px;
+	box-sizing: border-box;
+	color: #381510;
+}
+
+#laugh .humor {
+	display: block;
+	width: 60%;
+}
+
+#laugh .humor span {
+	display: inline-block;
+	font-weight: bold;
+	border-bottom: 1px solid currentColor;
+	margin-bottom: 10px;
+	width: auto;
+}
+
+#laugh .demot {
+	display: block;
+	width: 40%;
+}
+
+#laugh .demot img {
+	width: 100%;
+}
+
+#laugh .grats {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+
+#laugh .grats .textblock {
+	text-align: center;
+	width: 70%;
+	display: block;
+}
+
+#laugh .grats img {
+	width: 30%;
+	display: block;
+	padding: 0 20px;
+}
+
+#theme .inner {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#theme .themeofday {width: 20px;}
+#theme .themeofday img {width: 100%;}
+
+
+#theme .themeofday.left {
+	margin-left: -80px;
+}
+
+#theme .themeofday.right {
+	margin-right: -75px;
+	transform: rotate(180deg);
+}
+
+#theme .picblock {
+	position: relative;
+	display: block;
+	margin-top: 20px;
+	width: 484px;
+	height: 384px;
+	background: url(img/theme_frame_back.png) no-repeat top center/auto;
+}
+
+#theme .picblock:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 484px;
+	height: 384px;
+	background: url(img/theme_frame_front.png) no-repeat top center/auto;
+}
+
+#theme .picblock img {
+	width: 400px;
+	height: 357px;
+	display: block;
+	margin: 0 auto;
+	object-fit: cover;
+	object-position: top center;
+	box-sizing: border-box;
+	padding: 5px;
+}
