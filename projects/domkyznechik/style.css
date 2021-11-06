@@ -8,8 +8,8 @@
 
 @font-face {
 font-family: 'Sitka Banner';
-src: url('https://forumstatic.ru/files/001b/3a/90/72769.woff') format('woff'),
-src: url('https://forumstatic.ru/files/001b/3a/90/78194.ttf') format('truetype');
+url('https://forumstatic.ru/files/001b/3a/90/72769.woff') format('woff'),
+url('https://forumstatic.ru/files/001b/3a/90/78194.ttf') format('truetype');
 font-variant-numeric: oldstyle-nums;
 font-weight: normal;
 font-style: normal;
@@ -81,15 +81,15 @@ body {
 }
 
 .polaroids .meme {
-	top: 0;
-	left: 45%;
-	margin-top: -80%;
+	top: 30%;
+	right: 5%;
+	/* margin-top: -80%; */
 	-webkit-transform: rotate(4deg);
 	-moz-transform: rotate(4deg);
 }
 
 .polaroids .picture {
-	top: 3%;
+	top: 45%;
 	left: 2%;
 	-webkit-transform: rotate(-5deg);
 	-moz-transform: rotate(-5deg);
@@ -111,7 +111,7 @@ body {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -webkit-transition: -webkit-transform .15s linear;
-    position: relative;
+    position: absolute;
 }
 
 .polaroids a:after {
@@ -160,6 +160,7 @@ body {
 
 .buttons {
 	display: flex;
+	display: -webkit-flex;
 	padding-bottom: 5px;
 	justify-content: right;
 	align-items: center;
