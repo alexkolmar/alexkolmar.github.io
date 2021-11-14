@@ -19,8 +19,8 @@ body {
 #secretsanta {
 	display: block;
 	position: relative;
-	width: 1024px;
-	height: 747px;
+	width: 1200px;
+	height: 870px;
 	margin: 0 auto;
 	background: url(img/fireplace.jpg) no-repeat top center/100% #201616;
 }
