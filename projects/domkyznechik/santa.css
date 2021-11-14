@@ -77,8 +77,10 @@ body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 420px;
-	height: 400px;
+	display: block;
+	width: 400px;
+        height: 360px;
+	background: url(//forumstatic.ru/files/0018/1e/e2/32299.png) no-repeat bottom right/100%;
 }
 
 .candles a span {
@@ -87,6 +89,9 @@ body {
 	z-index: 10;
 	opacity: .5;
 	transition: opacity .5s linear 0s;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .candles a:hover span {
@@ -95,42 +100,42 @@ body {
 
 .bcandle {
 	position: absolute;
-	right: 0;
-	height: 305px;
-	bottom: 0;
+	right: 5%;
+	width: 42%;
+	height: 82%;
+	bottom: 16%;
 	margin: 0;
 }
 
 .bcandle span {
 	height: 45px;
-	bottom: 50px;
-	right: 55px;
 }
 
 .mcandle {
+	display: block;
 	position: absolute;
-	right: 60px;
-	height: 245px;
-	bottom: 0;
+	right: 35%;
+	height: 67%;
+	bottom: 12%;
+	width: 37%;
+	margin: 0;
 }
 
 .mcandle span {
-	height: 45px;
-	bottom: 35px;
-	left: 32px;
+	height: 40px;
 }
 
 .scandle {
+	display: block;
 	position: absolute;
-	right: 155px;
-	height: 150px;
-	bottom: 0;
+	left: 7%;
+	height: 42%;
+	bottom: 6%;
+	width: 30%;
 }
 
 .scandle span {
 	height: 30px;
-	bottom: 20px;
-	left: 50px;
 }
 
 .players {
