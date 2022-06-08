@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'styrene a web black';
-    src: url('styreneaweb-black.eot');
-    src: url('styreneaweb-black.eot?#iefix') format('embedded-opentype'),
-         url('styreneaweb-black.woff2') format('woff2'),
-         url('styreneaweb-black.woff') format('woff'),
-         url('styreneaweb-black.ttf') format('truetype'),
-         url('styreneaweb-black.svg#styrene a web black') format('svg');
+    src: url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-black.eot');
+    src: url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-black.eot?#iefix') format('embedded-opentype'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-black.woff2') format('woff2'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-black.woff') format('woff'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-black.ttf') format('truetype'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-black.svg#styrene a web black') format('svg');
     font-weight: normal;
     font-style: normal;
 }
