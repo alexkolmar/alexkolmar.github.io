@@ -13,6 +13,18 @@
 }
 
 @font-face {
+    font-family: 'styrene a web bold';
+    src: url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-bold.eot');
+    src: url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-bold.eot?#iefix') format('embedded-opentype'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-bold.woff2') format('woff2'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-bold.woff') format('woff'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-bold.ttf') format('truetype'),
+         url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-bold.svg#styrene a web bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'styrene a web regular';
     src: url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-regular.eot');
     src: url('https://alexkolmar.github.io/fonts/Styreneaweb/styreneaweb-regular.eot?#iefix') format('embedded-opentype'),
