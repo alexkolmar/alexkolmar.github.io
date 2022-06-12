@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'BerolinaCapC';
-    src: url('berolinacapc-webfont.eot');
-    src: url('berolinacapc-webfont.eot?#iefix') format('embedded-opentype'),
-         url('berolinacapc-webfont.woff2') format('woff2'),
-         url('berolinacapc-webfont.woff') format('woff'),
-         url('berolinacapc-webfont.ttf') format('truetype'),
-         url('berolinacapc-webfont.svg#BerolinaCapC') format('svg');
+    src: url('https://alexkolmar.github.io/fonts/berolinacapc/berolinacapc.eot');
+    src: url('https://alexkolmar.github.io/fonts/berolinacapc/berolinacapc.eot?#iefix') format('embedded-opentype'),
+         url('https://alexkolmar.github.io/fonts/berolinacapc/berolinacapc.woff2') format('woff2'),
+         url('https://alexkolmar.github.io/fonts/berolinacapc/berolinacapc.woff') format('woff'),
+         url('https://alexkolmar.github.io/fonts/berolinacapc/berolinacapc.ttf') format('truetype'),
+         url('https://alexkolmar.github.io/fonts/berolinacapc/berolinacapc.svg#BerolinaCapC') format('svg');
     font-weight: normal;
     font-style: normal;
 }
