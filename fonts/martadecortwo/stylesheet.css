@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Marta Decor Two';
-    src: url('marta_decor_two-webfont.eot');
-    src: url('marta_decor_two-webfont.eot?#iefix') format('embedded-opentype'),
-         url('marta_decor_two-webfont.woff2') format('woff2'),
-         url('marta_decor_two-webfont.woff') format('woff'),
-         url('marta_decor_two-webfont.ttf') format('truetype'),
-         url('marta_decor_two-webfont.svg#Marta Decor Two') format('svg');
+    src: url('https://alexkolmar.github.io/fonts/martadecortwo/martadecortwo.eot');
+    src: url('https://alexkolmar.github.io/fonts/martadecortwo/martadecortwo.eot?#iefix') format('embedded-opentype'),
+         url('https://alexkolmar.github.io/fonts/martadecortwo/martadecortwo.woff2') format('woff2'),
+         url('https://alexkolmar.github.io/fonts/martadecortwo/martadecortwo.woff') format('woff'),
+         url('https://alexkolmar.github.io/fonts/martadecortwo/martadecortwo.ttf') format('truetype'),
+         url('https://alexkolmar.github.io/fonts/martadecortwo/martadecortwo.svg#Marta Decor Two') format('svg');
     font-weight: normal;
     font-style: normal;
 }
