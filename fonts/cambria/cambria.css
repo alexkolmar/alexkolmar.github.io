@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Cambria';
-    src: url('cambria.eot');
-    src: url('cambria.eot?#iefix') format('embedded-opentype'),
-        url('cambria.woff2') format('woff2'),
-        url('cambria.woff') format('woff'),
-        url('cambria.ttf') format('truetype'),
-        url('cambria.svg#Cambria') format('svg');
+    src: url('https://alexkolmar.github.io/fonts/cambria/cambria.eot');
+    src: url('https://alexkolmar.github.io/fonts/cambria/cambria.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/cambria/cambria.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/cambria/cambria.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/cambria/cambria.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/cambria/cambria.svg#Cambria') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
