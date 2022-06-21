@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'The Royal Chambers';
-    src: url('TheRoyalChambers.eot');
-    src: url('TheRoyalChambers.eot?#iefix') format('embedded-opentype'),
-        url('TheRoyalChambers.woff2') format('woff2'),
-        url('TheRoyalChambers.woff') format('woff'),
-        url('TheRoyalChambers.ttf') format('truetype'),
-        url('TheRoyalChambers.svg#TheRoyalChambers') format('svg');
+    src: url('https://alexkolmar.github.io/fonts/TheRoyalChambers/TheRoyalChambers.eot');
+    src: url('https://alexkolmar.github.io/fonts/TheRoyalChambers/TheRoyalChambers.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/TheRoyalChambers/TheRoyalChambers.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/TheRoyalChambers/TheRoyalChambers.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/TheRoyalChambers/TheRoyalChambers.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/TheRoyalChambers/TheRoyalChambers.svg#TheRoyalChambers') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
