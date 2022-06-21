@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Geometria';
-    src: url('GeometriaExtraBold.eot');
-    src: url('GeometriaExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('GeometriaExtraBold.woff2') format('woff2'),
-        url('GeometriaExtraBold.woff') format('woff'),
-        url('GeometriaExtraBold.ttf') format('truetype'),
-        url('GeometriaExtraBold.svg#Geometria-ExtraBold') format('svg');
+    src: url('//alexkolmar.github.io/fonts/Geometria/GeometriaExtraBold.eot');
+    src: url('//alexkolmar.github.io/fonts/Geometria/GeometriaExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('//alexkolmar.github.io/fonts/Geometria/GeometriaExtraBold.woff2') format('woff2'),
+        url('//alexkolmar.github.io/fonts/Geometria/GeometriaExtraBold.woff') format('woff'),
+        url('//alexkolmar.github.io/fonts/Geometria/GeometriaExtraBold.ttf') format('truetype'),
+        url('//alexkolmar.github.io/fonts/Geometria/GeometriaExtraBold.svg#GeometriaExtraBold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
