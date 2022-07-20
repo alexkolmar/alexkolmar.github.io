@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Philosopher';
+    src: url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherBold.eot');
+    src: local('Philosopher Bold'), local('Philosopher-Bold'), local('PhilosopherBold'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherBold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherBold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherBold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherBold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherBold.svg#Philosopher Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherRegular.eot');
+    src: local('Philosopher Regular'), local('Philosopher-Regular'), local('PhilosopherRegular'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherRegular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherRegular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherRegular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Philosopher/PhilosopherRegular.svg#Philosopher Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
