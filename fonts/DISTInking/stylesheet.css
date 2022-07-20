@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'DISTInking';
+    src: url('https://alexkolmar.github.io/fonts/DISTInking/DISTInking.eot');
+    src: url('https://alexkolmar.github.io/fonts/DISTInking/DISTInking.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/DISTInking/DISTInking.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/DISTInking/DISTInking.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/DISTInking/DISTInking.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/DISTInking/DISTInking.svg#DISTInking') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
