@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Romul';
+    src: url('Romul.eot');
+    src: local('Romul'),
+        url('Romul.eot?#iefix') format('embedded-opentype'),
+        url('Romul.woff2') format('woff2'),
+        url('Romul.woff') format('woff'),
+        url('Romul.ttf') format('truetype'),
+        url('Romul.svg#Romul') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
