@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Column Simple cyr-lat';
-    src: url('ColumnSimplecyr-lat.eot');
+    src: url('https://alexkolmar.github.io/fonts/ColumnSimplecyr-lat/ColumnSimplecyr-lat.eot');
     src: local('Column Simple cyr-lat'), local('ColumnSimplecyr-lat'),
-        url('ColumnSimplecyr-lat.eot?#iefix') format('embedded-opentype'),
-        url('ColumnSimplecyr-lat.woff2') format('woff2'),
-        url('ColumnSimplecyr-lat.woff') format('woff'),
-        url('ColumnSimplecyr-lat.ttf') format('truetype'),
-        url('ColumnSimplecyr-lat.svg#ColumnSimplecyr-lat') format('svg');
+        url('https://alexkolmar.github.io/fonts/ColumnSimplecyr-lat/ColumnSimplecyr-lat.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/ColumnSimplecyr-lat/ColumnSimplecyr-lat.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/ColumnSimplecyr-lat/ColumnSimplecyr-lat.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/ColumnSimplecyr-lat/ColumnSimplecyr-lat.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/ColumnSimplecyr-lat/ColumnSimplecyr-lat.svg#ColumnSimplecyr-lat') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
