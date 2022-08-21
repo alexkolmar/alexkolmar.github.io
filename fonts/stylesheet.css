@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Uk_Antique';
+    src: url('Uk_Antique.eot');
+    src: local('Uk_Antique'),
+        url('Uk_Antique.eot?#iefix') format('embedded-opentype'),
+        url('Uk_Antique.woff2') format('woff2'),
+        url('Uk_Antique.woff') format('woff'),
+        url('Uk_Antique.ttf') format('truetype'),
+        url('Uk_Antique.svg#Uk_Antique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
