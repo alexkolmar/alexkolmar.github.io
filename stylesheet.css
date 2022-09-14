@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('https://alexkolmar.github.io/fonts/bookos/BookmanOldStyle.eot');
+    src: local('Bookman Old Style'), local('BookmanOldStyle'),
+        url('https://alexkolmar.github.io/fonts/bookos/BookmanOldStyle.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/bookos/BookmanOldStyle.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/bookos/BookmanOldStyle.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/bookos/BookmanOldStyle.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/bookos/BookmanOldStyle.svg#BookmanOldStyle') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
