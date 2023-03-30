@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Gropled';
+    src: url('GropledBold.eot');
+    src: local('Gropled Bold'), local('GropledBold'), local('Gropled'),
+        url('https://alexkolmar.github.io/fonts/Gropled/Gropled.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gropled/Gropled.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gropled/Gropled.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gropled/Gropled.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gropled/Gropled.svg#Gropled') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
