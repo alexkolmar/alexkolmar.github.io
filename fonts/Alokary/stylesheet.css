@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Alokary';
+    src: url('https://alexkolmar.github.io/fonts/Alokary/Alokary.eot');
+    src: url('https://alexkolmar.github.io/fonts/Alokary/Alokary.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Alokary/Alokary.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Alokary/Alokary.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Alokary/Alokary.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Alokary/Alokary.svg#Alokary') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
