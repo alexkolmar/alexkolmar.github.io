@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'THE BERLIN';
+    src: url('//alexkolmar.github.io/fonts/theberlin/THEBERLIN-Regular.eot');
+    src: local('THE BERLIN Regular'), local('THEBERLIN-Regular'),
+        url('//alexkolmar.github.io/fonts/theberlin/THEBERLIN-Regular.eot?#iefix') format('embedded-opentype'),
+        url('//alexkolmar.github.io/fonts/theberlin/THEBERLIN-Regular.woff2') format('woff2'),
+        url('//alexkolmar.github.io/fonts/theberlin/THEBERLIN-Regular.woff') format('woff'),
+        url('//alexkolmar.github.io/fonts/theberlin/THEBERLIN-Regular.ttf') format('truetype'),
+        url('//alexkolmar.github.io/fonts/theberlin/THEBERLIN-Regular.svg#THEBERLIN-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
