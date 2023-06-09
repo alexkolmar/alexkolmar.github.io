@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'El Messiri';
+    src: url('https://alexkolmar.github.io/fonts/ElMessiri/ElMessiri.eot');
+    src: local('El Messiri'), local('ElMessiri'), local('ElMessiri-Regular'),
+        url('https://alexkolmar.github.io/fonts/ElMessiri/ElMessiri.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/ElMessiri/ElMessiri.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/ElMessiri/ElMessiri.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/ElMessiri/ElMessiri.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/ElMessiri/ElMessiri.svg#ElMessiri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
