@@ -1,0 +1,11 @@
+﻿/* Zekton */
+@font-face {
+font-family: 'Zekton';
+src: url('//alexkolmar.github.io/fonts/zekton/zekton.eot');
+src: url('//alexkolmar.github.io/fonts/zekton/zekton.eot?#iefix') format('embedded-opentype'),
+url('//alexkolmar.github.io/fonts/zekton/zekton.woff') format('woff'),
+url('//alexkolmar.github.io/fonts/zekton/zekton.ttf') format('truetype'),
+url('//alexkolmar.github.io/fonts/zekton/zekton.svg#zekton') format('svg');
+font-weight: normal;
+font-style: normal;
+}
