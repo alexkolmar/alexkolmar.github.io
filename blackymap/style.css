@@ -1,6 +1,38 @@
+body {
+  margin: 0;
+}
+
+h2, p {
+  margin: 0;
+}
+
 .map {
+  position: relative;
   background-image: url(25734.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
+.description {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 400px;
+  background: #3b3933;
+  box-shadow: rgb(22 16 11) 0px 3px 5px 0px, inset 0 0 1px 3px #968d80;
+  border: 3px solid #968d80;
+  border-radius: 50px 0 50px 0px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.description h2 {
+  text-align: center;
+}
+
+.description button {
+  margin: 0 auto;
+  display: block;
+}
