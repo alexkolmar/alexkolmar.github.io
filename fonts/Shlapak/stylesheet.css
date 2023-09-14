@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Shlapak Script';
+    src: local('Shlapak Script'), local('ShlapakScript'),
+        url('https://alexkolmar.github.io/fonts/Shlapak/ShlapakScript.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Shlapak/ShlapakScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
