@@ -34,7 +34,18 @@ body {
 }
 
 .map button {
+  background-color: #e3cda1;
+  border: none;
+  box-shadow: 0 2px 0 #1a1411;
+  border-radius: 3px;
+  padding: 2px 5px;
+  transition: all .2s linear 0s;
   cursor: pointer;
+}
+
+.map button:hover {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .map *::selection {
