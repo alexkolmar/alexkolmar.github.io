@@ -1,5 +1,15 @@
 @font-face {
     font-family: 'Segoe UI';
+    src: local('Segoe UI Light'), local('SegoeUI-Light'),
+        url('https://alexkolmar.github.io/fonts/SegoeUI/SegoeUILight.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/SegoeUI/SegoeUILight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
     src: local('Segoe UI'), local('SegoeUI'),
         url('https://alexkolmar.github.io/fonts/SegoeUI/SegoeUI.woff2') format('woff2'),
         url('https://alexkolmar.github.io/fonts/SegoeUI/SegoeUI.woff') format('woff');
