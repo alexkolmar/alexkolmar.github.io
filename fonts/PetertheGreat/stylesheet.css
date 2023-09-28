@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Peter the Great';
+    src: local('Peter the Great'), local('PetertheGreat'),
+        url('https://alexkolmar.github.io/fonts/PetertheGreat/PetertheGreat.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/PetertheGreat/PetertheGreat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
