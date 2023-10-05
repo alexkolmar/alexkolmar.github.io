@@ -17,3 +17,23 @@
     font-weight: 500;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
