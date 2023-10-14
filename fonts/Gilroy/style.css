@@ -27,7 +27,7 @@
 }
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: 'Gilroy-Black';
     src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.woff2') format('woff2'),
         url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.woff') format('woff'),
         url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.ttf') format('truetype');
@@ -37,7 +37,7 @@
 }
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: 'Gilroy-Heavy';
     src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.woff2') format('woff2'),
         url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.woff') format('woff'),
         url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.ttf') format('truetype');
