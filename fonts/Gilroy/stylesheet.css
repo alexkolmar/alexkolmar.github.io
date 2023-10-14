@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Regular.eot');
+    src: local('☞Gilroy-Regular'), local('Gilroy-Regular'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Regular.svg#Gilroy-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Thin.eot');
+    src: local('☞Gilroy-Thin'), local('Gilroy-Thin'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Thin.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Thin.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Thin.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Thin.svg#Gilroy-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-UltraLight.eot');
+    src: local('☞Gilroy-UltraLight'), local('Gilroy-UltraLight'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-UltraLight.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-UltraLight.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-UltraLight.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-UltraLight.svg#Gilroy-UltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Light.eot');
+    src: local('☞Gilroy-Light'), local('Gilroy-Light'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Light.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Light.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Light.svg#Gilroy-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Medium.eot');
+    src: local('☞Gilroy-Medium'), local('Gilroy-Medium'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Medium.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Medium.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Medium.svg#Gilroy-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-SemiBold.eot');
+    src: local('☞Gilroy-SemiBold'), local('Gilroy-SemiBold'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-SemiBold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-SemiBold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-SemiBold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-SemiBold.svg#Gilroy-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.eot');
+    src: local('☞Gilroy-Bold'), local('Gilroy-Bold'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Bold.svg#Gilroy-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-ExtraBold.eot');
+    src: local('☞Gilroy-ExtraBold'), local('Gilroy-ExtraBold'),
+        url('Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Gilroy-ExtraBold.woff2') format('woff2'),
+        url('Gilroy-ExtraBold.woff') format('woff'),
+        url('Gilroy-ExtraBold.ttf') format('truetype'),
+        url('Gilroy-ExtraBold.svg#Gilroy-ExtraBold') format('svg');
+    font-weight: 750;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.eot');
+    src: local('☞Gilroy-Black'), local('Gilroy-Black'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Black.svg#Gilroy-Black') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.eot');
+    src: local('☞Gilroy-Heavy'), local('Gilroy-Heavy'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Gilroy/Gilroy-Heavy.svg#Gilroy-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
