@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'FoglihtenNo06';
+    src: url('FoglihtenNo06.eot');
+    src: local('FoglihtenNo06'),
+        url('//alexkolmar.github.io/fonts/FoglihtenNo06/FoglihtenNo06.eot?#iefix') format('embedded-opentype'),
+        url('//alexkolmar.github.io/fonts/FoglihtenNo06/FoglihtenNo06.woff2') format('woff2'),
+        url('//alexkolmar.github.io/fonts/FoglihtenNo06/FoglihtenNo06.woff') format('woff'),
+        url('//alexkolmar.github.io/fonts/FoglihtenNo06/FoglihtenNo06.ttf') format('truetype'),
+        url('//alexkolmar.github.io/fonts/FoglihtenNo06/FoglihtenNo06.svg#FoglihtenNo06') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
