@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('BalooCyrillic.eot');
+    src: local('Baloo Cyrillic'), local('BalooCyrillic'),
+        url('https://alexkolmar.github.io/fonts/Baloo/BalooCyrillic.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Baloo/BalooCyrillic.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Baloo/BalooCyrillic.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Baloo/BalooCyrillic.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Baloo/BalooCyrillic.svg#BalooCyrillic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
