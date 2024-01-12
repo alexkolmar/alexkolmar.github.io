@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Rihena';
+    src: url('Rihena.eot');
+    src: local('Rihena'),
+        url('https://alexkolmar.github.io/fonts/Rihena/Rihena.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Rihena/Rihena.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Rihena/Rihena.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Rihena/Rihena.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Rihena/Rihena.svg#Rihena') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
