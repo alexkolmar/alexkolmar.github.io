@@ -15,7 +15,7 @@
 @font-face {
     font-family: 'Roca One';
     src: url('RocaOne-Th.eot');
-    src: local('Roca One'), local('RocaOne-Rg'),
+    src: local('Roca One'), local('RocaOne-Th'),
         url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.eot?#iefix') format('embedded-opentype'),
         url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.woff2') format('woff2'),
         url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.woff') format('woff'),
