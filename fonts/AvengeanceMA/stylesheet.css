@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Avengeance MA';
+    src: url('AvengeanceMA.eot');
+    src: local('Avengeance MA'), local('AvengeanceMA'),
+        url('https://alexkolmar.github.io/fonts/AvengeanceMA/AvengeanceMA.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/AvengeanceMA/AvengeanceMA.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/AvengeanceMA/AvengeanceMA.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/AvengeanceMA/AvengeanceMA.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/AvengeanceMA/AvengeanceMA.svg#AvengeanceMA') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
