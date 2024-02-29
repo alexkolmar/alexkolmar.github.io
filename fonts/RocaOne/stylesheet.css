@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Roca One';
+    src: url('RocaOne-Rg.eot');
+    src: local('Roca One'), local('RocaOne-Rg'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Rg.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Rg.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Rg.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Rg.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Rg.svg#RocaOne-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roca One';
+    src: url('RocaOne-Th.eot');
+    src: local('Roca One'), local('RocaOne-Th'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/RocaOne/RocaOne-Th.svg#RocaOne-Th') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}

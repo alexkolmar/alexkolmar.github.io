@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'komika_axis_cyr';
+    src: url('komika_axis_cyr.eot');
+    src: local('komika_axis_cyr'),
+        url('https://alexkolmar.github.io/fonts/komika_axis/komika_axis_cyr.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/komika_axis/komika_axis_cyr.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/komika_axis/komika_axis_cyr.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/komika_axis/komika_axis_cyr.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/komika_axis/komika_axis_cyr.svg#komika_axis_cyr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
