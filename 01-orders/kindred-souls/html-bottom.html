@@ -1,0 +1,81 @@
+<!-- Перенос Колонок тем и сообщений под Описание Форума / Deff, Alex_63 -->
+    <script type="text/javascript">
+    (function(){
+       $.catch = function(a,f){$(function(){var t,i=0;function s(){i++;if(i>120)return;t=setTimeout(function(){if(!$(a).length){s();return};f()},100);}s();});}
+       function appendTopicS(){
+         $('.category td.tcl,#f-subforums td.tcl .lastpost').each(function() {
+           var L=$(this).parents('tr:first');
+           var str='<br><div class="Add"><div class="themes"><span class="left">тем:</span><span class="right">'+L.find('td.tc2').text()+'</span></div>\
+           <div class="messages"><span class="left">сообщений:</span><span class="right">'+L.find('td.tc3').text()+'</span></div>\
+           </div>';$(str).appendTo(this);
+         });
+       }
+       if($('#pun-index').length){appendTopicS ();}
+       if($('#pun-viewforum').length){
+         var summ=$('.main table[summary]').attr('summary').split(': ')[1].substr(0,1);
+         if(summ=='#'||summ==String.fromCharCode(173))$.catch('#f-subforums',function(){appendTopicS()});
+       }
+    }());
+    </script>
+
+<!-- Разделение обычных и важных тем на блоки -->
+<script>
+$("#pun-viewforum .hasicon").each(function(){
+$(this).find('.isticky').wrapAll("<div class='stickythemes'>");
+$(this).find('tr:not(.isticky)').wrapAll("<div class='ordinarythemes'>");
+});
+</script>
+
+<script>$('.post#p431 .post-rating p').trigger('mouseover')</script>
+
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/0016/01/4e/35317.png"></div>
+<div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/0016/01/4e/35317.png"></div>
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+
+
+<!--Выделение кода в блоке "Код" с перемещение в буфер обмена // © Damassk, версия 2019г. --> 
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'выделить [копируется сразу]' //текст ссылки</script>
+<!-- конец -->
+
+
+<div class="copyright">дизайн от <a href="https://forumd.ru/profile.php?id=8926">MOJU</a>, верстка от <a href="https://vk.com/byalexkolmar">бродяги</a></div>
+
+<div class="banners">
+<div class="container">
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+<a href=""><img src="https://dummyimage.com/88x31/D9D9D9/fff.png"></a>
+</div>
+</div>
