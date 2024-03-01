@@ -1,0 +1,391 @@
+@import url(style_cs.css);
+@import url(https://alexkolmar.github.io/fonts/FoglihtenNo06/stylesheet.css);
+@import url(https://alexkolmar.github.io/fonts/bodoni/stylesheet.css);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital@1&family=Forum&family=Playfair+Display&family=Raleway:wght@400;500&display=swap');
+@import url('//forumstatic.ru/files/001a/e1/7e/82877.css');
+
+/********** Чистый стардартный стиль для MyBB ***********/
+/******** Cпециально для ForumD.ru © Gerda, 2023 ********/
+/**************************************************
+!!! Условия использования !!!
+
+1. Данный копирайт не удалять
+2. При публикации производных работ указывать ссылку на автора и ForumD.ru
+3. При публикации в общий доступ указывать ссылку на автора и ForumD.ru
+4. Публичный производный контент должен распостраняться на тех же условиях
+
+Подробно: forumd.ru/viewtopic.php?id=5751#rule
+**************************************************/
+
+/* ================== */
+
+/* Скрываем элементы форума */
+
+#pun:after,
+.punbb .container:after,
+.punbb .post-links ul:after,
+.punbb .main div.inline:after,
+.punbb .post-box:after,
+.punbb .linksb:after {clear: both; content: "."; display: block; height: 0; visibility: hidden; overflow:hidden; line-height: 0.0; font-size: 0;}
+
+.acchide,
+#pun-index #pun-main h1,
+#pun-navlinks h2,
+#pun-status h2,
+#pun-ulinks h2,
+.punbb .forum h2,
+.punbb .multipage .topic h2,
+.punbb dl.post-sig dt span,
+.punbb p.crumbs strong,
+.punbb .divider hr,
+.punbb .required label em,
+.punbb .formsubmit label,
+.punbb .submitfield label,
+.punbb .modmenu label,
+#pun-userlist .main h2,
+#pun-title h1,
+#pun-announcement h2 {
+  font-size: 0;
+  height: 0;
+  width: 0;
+  line-height: 0.0;
+  position:absolute;
+  left: -9999px;
+  overflow: hidden
+}
+
+/* ================== */
+
+/* Общие стили */
+body {margin: 0;}
+ul, dl, li, dd, dt {list-style: none;}
+
+body {font: 12px var(--second-family);}
+h1, h2 {
+font-size: 16px; 
+font-weight: normal;
+padding: 5px 10px;
+margin: 0;
+}
+
+address, em {font-style: normal}
+
+a {text-decoration: none;}
+
+/* ================== */
+
+/* Тело форума */
+.punbb {
+margin: 0 auto;
+}
+
+/* ================== */
+
+/* Меню навигации */
+#pun-navlinks .container {
+margin: 0;
+padding: 13px 10px;
+}
+#pun-navlinks li {
+display: inline;
+}
+
+/* Юзер меню */
+#pun-ulinks .container {padding: 12px 10px;}
+#pun-ulinks li {
+display: inline;
+}
+
+/* ================== */
+
+/* Объявление */
+#pun-announcement .container {padding: 20px;}
+
+/* Статус (Добро пожаловать) */
+#pun-status .container {
+margin: 0;
+padding: 10px 20px;
+}
+#pun-status span {
+white-space: nowrap;
+margin-right: 5px;
+}
+
+#pun-crumbs1 p.container {
+padding: 10px 20px;
+margin-top: 0;
+}
+
+/*хлебные крошки */
+.container.crumbs {
+padding: 10px 20px;
+}
+#pun-crumbs1 .container.crumbs {margin: 10px 0 0;}
+#pun-crumbs2 .container.crumbs {
+margin-top: 10px;
+margin-bottom: 0;
+}
+
+/* Копирайт майбб */
+#pun-about .container {text-align: center;}
+
+/* ================== */
+
+/* Форумные таблицы */
+table {table-layout: fixed; width: 100%;}
+.tcl {width: 50%;}
+.tc2, .tc3, .tcmod {
+text-align: center;
+width: 10%;
+}
+.tcr {width: 30%;}
+
+#pun-searchtopics .tcl,
+#pun-modviewforum .tcl {
+width: 40%
+}
+
+#pun-searchtopics .tc2 {
+text-align: left;
+width: 20%;
+}
+
+#pun-debug table .tcl {width: 15%;white-space:normal;}
+#pun-debug .tcr {width: 90%; white-space: normal;}
+
+td {padding: 8px 10px;}
+th {padding: 4px 10px;}
+
+tbody.hasicon td.tcl {padding-left: 20px}
+
+div.icon {
+  position: relative;
+  width: 52px;
+  height: 59px;
+}
+
+/* ================== */
+
+/* Категории */
+.category {margin-top: 20px;}
+#pun-category1 {margin-top: 0;}
+.punbb td .modlist {
+display: block;
+padding-top: 5px;
+}
+
+/* Статистика */
+#pun-stats .container {padding: 20px}
+#pun-stats li.item1, #pun-stats li.item2 {
+float: left;
+clear: both;
+line-height: 150%;
+}
+#pun-stats li.item3, #pun-stats li.item4 {
+text-align: right;
+line-height: 150%;
+}
+li#onlinelist {
+margin-top: 10px;
+line-height: 130%;
+}
+li#onlinelist div {padding: 8px 0 0 0;}
+
+/* ================== */
+
+/* Пагинация (Переключаемые страницы, Новая тема + Опрос, Подписка) */
+.multipage {margin-top: 30px;}
+.punbb .linkst {
+position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+.linkst .postlink {text-align: right;}
+
+.punbb .linksb {
+text-align: right;
+padding: 5px 20px;
+}
+.linksb .pagelink {float: left; text-align: left;}
+.linksb .postlink {float: right;}
+.subscribelink {
+clear:both;
+padding: 5px 0;
+}
+
+/* Модераторское меню, RSS, Atom */
+.modmenu .container {padding: 5px 20px;text-align: right;}
+.modmenu .container strong {float: left;}
+.modmenu input {margin-left: 10px;}
+
+/* ================== */
+
+/* Страница топика */
+.post {margin-top: 20px;}
+.toppost, .topicpost {margin-top: 0;}
+
+.post h3 span {
+padding: 5px 20px;
+display: block;
+margin-left: 240px;
+}
+.post h3 strong {
+float: right;
+text-align: right;
+font-weight: normal;
+}
+
+.post .post-author {
+float: left;
+}
+.post-body {margin-left: 220px;}
+.post-box {padding: 20px;}
+
+.post-links ul {
+margin: 0;
+padding: 10px 20px 20px;
+text-align: right;
+}
+.post-links li {
+display: inline;
+}
+.post-links li:not(:first-child) {
+padding-left: 10px;
+}
+
+.pl-email, .pl-website {float: left;}
+.clearer {clear: both; height: 0; font-size: 0;}
+
+/* ================== */
+
+/* Подпись в топике */
+.post-sig dt, .post-sig dd, .post-sig dl {margin: 0} 
+.post-sig dt {
+display: block;
+margin: 5px 0;
+}
+
+/* Контент поста */
+.post-content em {font-style: italic}
+.post-content em.bbuline {font-style: normal; text-decoration: underline;}
+.post-content p {
+margin: 0;
+padding: 0 0 12px 0;
+}
+.post-content img {vertical-align: middle;}
+.scrollbox {
+width: 100%;
+overflow: auto;
+max-height: 200px;
+}
+.quote-box, .code-box {
+margin: 0 0 10px;
+}
+.quote-box cite, .code-box strong.legend {
+display: block;
+font-style: normal;
+}
+
+/* ================== */
+
+/* Формы */
+.checkfield input[type="checkbox"], .radiofield input[type="radio"] {margin: 0 3px;}
+p[class="checkfield"] *, div[class="checkfield"] *, fieldset[class="radiofield"] * {height: 20px; vertical-align: middle;}
+
+textarea, input, select, optgroup {font-size: 14px;}
+optgroup {font-weight: bold;}
+
+.formal .container {padding: 10px 20px;}
+
+.formsubmit {
+padding: 0 0 0 15px;
+margin: 10px 0 0 0;
+}
+.formsubmit input, .formsubmit a, .formsubmit span {margin: 0 6px 0 0;}
+
+fieldset {border: none;}
+fieldset legend {
+font-style: normal;
+font-weight: normal;
+}
+fieldset fieldset {
+border: none;
+margin: 0;
+padding: 0 0 8px 0
+}
+.fs-box {padding: 5px 0;}
+.fs-box p, .fs-box fieldset {padding: 0 0 8px 0;}
+
+.inline .inputfield, .inline .selectfield, .inline .passfield {float: left;margin-right: 1em;}
+.inline .infofield {clear:both}
+.datafield br {display: none}
+.required label, .datafield span.input {font-size: 10px;}
+textarea, .longinput input {width: 64%; margin: 0;}
+.hashelp {position: relative;}
+
+/* ================== */
+
+/* Предпросмотр сообщения */
+#pun-post .topic {margin-top: 10px;}
+
+/* ================== */
+
+/* Профиль + ЛС */
+#profile .container {padding-left: 300px;}
+#profilenav {
+  float: left;
+  width: 300px;
+  margin-left: -300px;
+}
+
+#profilenav li {padding-bottom: 10px;}
+#viewprofile ul, #profilenav ul {
+padding: 10px;
+margin: 0 0 10px 0;
+}
+#viewprofile h2, #profilenav h2 {
+padding: 0;
+margin: 0;
+}
+#viewprofile li {margin-bottom:2px;}
+#viewprofile li span {
+float: left;
+width: 180px;
+padding: 5px 10px;
+font-weight: bold;
+}
+#viewprofile li strong, #viewprofile li div {
+display: block;
+padding: 5px 10px;
+font-weight: normal;
+}
+.punbb img.avatardemo {float: right;margin: 0 0 8px 18px;}
+
+/* ================== */
+
+/* Список пользователей */
+#pun-userlist .formal, #pun-userlist .formal .container {margin-bottom: 0;}
+#pun-userlist .tc2 {
+text-align: left;
+width: 20%;
+}
+#pun-userlist .tcl {width: 40%}
+
+/* ================== */
+
+/* Собщения об ошибках */
+.info .container {padding: 5px 10px;}
+.info .container .backlink {padding-top: 8px;}
+
+/* ================== */
+
+/* Регистрация */
+.info-box {
+padding: 10px 15px;
+margin: 0 0 10px 0;
+}
+.punbb .info-box * {padding: 0 0 5px 0;}
+.punbb #pun-main .info-box .legend {
+font-weight: bold;
+}
