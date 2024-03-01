@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Lack';
+    src: url('Lack-Regular.eot');
+    src: local('Lack Regular'), local('Lack-Regular'),
+        url('https://alexkolmar.github.io/fonts/lack/Lack-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/lack/Lack-Regular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/lack/Lack-Regular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/lack/Lack-Regular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/lack/Lack-Regular.svg#Lack-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
