@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Muller Narrow';
+    src: url('MullerNarrow-ExtraBoldItalic.eot');
+    src: local('Muller Narrow ExtraBold Italic'), local('MullerNarrow-ExtraBoldItalic'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBoldItalic.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBoldItalic.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBoldItalic.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBoldItalic.svg#MullerNarrow-ExtraBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller Narrow';
+    src: url('MullerNarrow-ExtraBold.eot');
+    src: local('Muller Narrow ExtraBold'), local('MullerNarrow-ExtraBold'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-ExtraBold.svg#MullerNarrow-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller Narrow';
+    src: url('MullerNarrow-Light.eot');
+    src: local('Muller Narrow Light'), local('MullerNarrow-Light'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-Light.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-Light.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-Light.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-Light.svg#MullerNarrow-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller Narrow';
+    src: url('MullerNarrow-LightItalic.eot');
+    src: local('Muller Narrow Light Italic'), local('MullerNarrow-LightItalic'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-LightItalic.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-LightItalic.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-LightItalic.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/MullerNarrow/MullerNarrow-LightItalic.svg#MullerNarrow-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+

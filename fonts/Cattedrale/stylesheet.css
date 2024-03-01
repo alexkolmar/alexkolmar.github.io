@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Cattedrale';
+    src: url('Cattedrale.eot');
+    src: local('Cattedrale-Demo'), local('Cattedrale-Demo-Regular'),
+        url('https://alexkolmar.github.io/fonts/Cattedrale/Cattedrale.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Cattedrale/Cattedrale.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Cattedrale/Cattedrale.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Cattedrale/Cattedrale.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Cattedrale/Cattedrale.svg#Cattedrale') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
