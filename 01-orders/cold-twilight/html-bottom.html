@@ -1,0 +1,135 @@
+<!--Скрипты-->
+<!--// Быстроплюсы v.2 РЕНО by Deff //-->
+<script type="text/javascript" src="https://forumstatic.ru/files/0012/d8/04/58219.js" addComment="1"></script>
+
+
+<!-- Мгновенный предпросмотр сообщения © Alex_63 -->
+    <script type="text/javascript">
+    var PPREV = {};
+    PPREV.position = 0; //Положение окна Предпросмотра: 0 - над полем ввода, 1 - под полем ввода, 2 - справа
+    PPREV.quote_cite = 'написал(а):'; //Надпись в окне цитаты
+    </script>
+    <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/10524.js"></script>
+    <!-- Кнопка отключения мгновенного предпросмотра -->
+    <style>#togglePreview{float:right;margin-top:-17px}</style>
+    <script type="text/javascript">(function (){
+      var a='Включить быстрый предпросмотр';
+      var b='Отключить быстрый предпросмотр';
+      var d='_PreviewToggle';
+      setCookiePPrev=function(a,b,c){if(c){var d=new Date();d.setTime(d.getTime()+c);}if(a && b)document.cookie=a+'='+b+(c ? '; expires='+d.toUTCString() : '');else return false;}
+      getCookiePPrev=function(a){var b=new RegExp(a+'=([^;]){1,}');var c=b.exec(document.cookie);if(c)c=c[0].split('=');else return false;return c[1] ? c[1] : false;}
+      $('<small id="togglePreview"><input type="button" class="button" value="'+ b +'" onclick="togglePreview(this)"/></small>').insertAfter('#post fieldset:last legend');
+      var x = ParseContent;
+      window.togglePreview = function(sel){//alert(sel.value);
+        if(sel.value==a){sel.value=b;setCookiePPrev(d,'0',-1000);ParseContent=x;ParseContent();$('#post-preview').show(); return}
+        if(sel.value==b){sel.value=a;setCookiePPrev(d,'OFF',30*3600*24*30*1000);if($('#pun-viewtopic').length){$('#post-preview').hide()}ParseContent=function(){return};return}
+      }; if(getCookiePPrev(d)=='OFF'){$('#togglePreview>.button').click()};
+    }())
+    </script>
+
+
+<!--Переключение раскладки выделенного текста -->
+<style>#button-transL{background-image:url(https://forumstatic.ru/files/001a/48/60/20889.png)}</style>
+<script type="text/javascript">S='<img src="https://forum.mybb.ru/i/blank.gif" title="Lat- Русс" onclick="bbcode(\'[Lat-Rus]\',\'[/Rus-Lat]\');LatRus();"/>';
+$("#button-font").after('<td id=button-transL>'+S+'</td>');var TxtTrans1='lat';
+function LatRus(){if(TxtTrans1=='lat'){TxtTrans1='rus'}else{TxtTrans1='lat'};
+lat0='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~[].'.split('');
+lat='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~'.split('');
+lat.push('\\[');lat.push('\\]');lat.push('\\.');
+rus=('йцукенгшщзфывапролджэячсмитьбЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёЁхъю').split('');
+function transF(p){ar1=lat;ar2=rus;if(TxtTrans1=='lat'){ar2=lat0;ar1=rus}for(var i=0; i<ar1.length; i++){trans='/'+ar1[i]+'/g';p=p.replace(eval(trans), ar2[i])}return p;}L=$('#main-reply').val();L=L.replace(/\[Lat-Rus\]([\s\S]*)\[\/Rus-Lat\]/mg,function(a,b,c){return transF(b);});$('#main-reply').val(L);}
+</script>
+<!-- Конец -->
+
+
+<!-- ОБТЕКАНИЕ ИЗОБРАЖЕНИЯ -->
+<script language="javascript">
+$(function(){
+$('td#button-link').before('<td id="floatbut" style=\'background-image:url("https://forumstatic.ru/files/0014/7a/91/50348.png")\'></td>');
+$('#floatbut, .vibor').click(function(){
+$('div#float').toggle();});
+  });
+elm=document.getElementsByTagName("div")
+for(x in elm) if(elm[x].className=="post-content") 
+{
+post = elm[x].innerHTML;
+if(post.indexOf("[/float]") != -1) {
+floats = /\[float=(.*?)\]([^\[]{1,11000})\[\/float\]/gi
+elm[x].innerHTML = elm[x].innerHTML.replace(floats, "<span style='float: $1; margin: 8px; text-align: $1;'>$2</span>")
+}}
+</script>
+<div id="float">
+<div><strong>направление обтекания</strong></div><br>
+<div align="center">
+<img class="vibor" src="//i.imgur.com/ofXbfGs.png" title="left" onclick="bbcode('[float=left]', '[/float]')" />
+<img class="vibor" src="//i.imgur.com/UUzNUi1.png" title="right" onclick="bbcode('[float=right]', '[/float]')" />
+</div></div>
+<script>$('#html-footer').find('#float').each(function(){$(this).appendTo('#tags');});</script>
+<!-- Конец -->
+
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/001c/02/7b/89560.png"></div>
+<div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/001c/02/7b/89560.png"></div>
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+
+<div class="legenda">
+  <div class="legenda_users">
+    <a class="group1" href="https://coldtwilight.quadrobb.me/userlist.php?username=&show_group=1">Администраторы</a> | 
+    <a class="group2" href="https://coldtwilight.quadrobb.me/userlist.php?username=&show_group=2">Модераторы</a> | 
+    <a class="group4" href="https://coldtwilight.quadrobb.me/userlist.php?username=&show_group=4">Пользователи</a> | 
+    <a class="group5" href="https://coldtwilight.quadrobb.me/userlist.php?username=&show_group=5">Друзья</a> | 
+    <a class="group3" href="https://coldtwilight.quadrobb.me/userlist.php?username=&show_group=3">Гости</a> | 
+    <a class="group6" href="https://coldtwilight.quadrobb.me/userlist.php?username=&show_group=6">Заблокированные</a>
+  </div>
+  <div class="legenda_icons">
+    <div><img src="https://forumstatic.ru/files/001c/02/7b/72608.png"> <p>- нет новых сообщений</p></div>
+    <div><img src="https://forumstatic.ru/files/001c/02/7b/48602.png"> <p>- есть новые сообщения</p></div>
+    <div><img src="https://forumstatic.ru/files/001c/02/7b/61569.png"> <p>- важная тема</p></div>
+    <div><img src="https://forumstatic.ru/files/001c/02/7b/24952.png"> <p>- закрытая тема</p></div>
+  </div>
+</div>
+<script>$('#html-footer').find('.legenda').each(function(){$(this).prependTo('.statscon');});</script>
+
+
+<div class="banners">
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+  <a href="" title="баннер"><img src="https://dummyimage.com/88x31/000/fff.png"></a>
+</div>
+
+<div class="copyright">
+Copyright &copy; Дизайн от <a href="https://forumd.ru/profile.php?id=7006" target="_blank">ocean</a>, вёрстка от <a href="https://vk.com/byalexkolmar" target="_blank">бродяги</a> 2009<script>new Date().getFullYear()>2009&&document.write("-"+new Date().getFullYear());</script>. All rights reserved.
+</div>

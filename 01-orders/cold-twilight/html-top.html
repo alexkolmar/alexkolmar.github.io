@@ -1,0 +1,114 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+<nav class="navig">
+  <a class="navig-link" href="https://coldtwilight.quadrobb.me/viewtopic.php?id=24#p26">правила</a>
+  <a class="navig-link" href="https://coldtwilight.quadrobb.me/viewtopic.php?id=173#p460">Fast Travel</a>
+  <div class="nav">
+<! -- скрипт навигации выпадающим окном [основа скрипт вкладок https://imagiart.ru/, переработка вещего духа] --> 
+<script type="text/javascript" src="https://forumstatic.ru/files/001a/18/bd/96460.js"></script>
+<div class="spirit-navigation" id="navig-batton" title="навигация">полезные ссылки</div>
+<div id="navigblock" class="navigblock" style="display:none"><div class="sslka">
+<!-- важные ссылки -->
+<a href="ссылка">название</a> 
+<a href="ссылка">название</a> 
+<a href="ссылка">название</a> 
+</div></div>
+  </div>
+  <a class="navig-link" href="https://t.me/+SJ25ffVuER05OTgy">Telegram</a>
+</nav>
+
+
+    <!-- Пиар-вход v.2 -->
+    <script src="//forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+    <script type="text/javascript">
+    PR.nick = 'Реклама'; //Ник PR-аккаунта
+    PR.pass = '666666'; //Пароль PR-аккаунта
+    PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+    PR.set();</script>
+
+
+<!-- Смена стиля, (с) ForumD.ru, satsana -->
+<ul id="stylelist"></ul>
+<script type="text/javascript">
+var styleList = [{
+    class: 'day',
+    name: 'День'
+}, {
+    class: 'night',
+    name: 'Ночь'
+}];
+
+function getCookie(a){return(a=document.cookie.match(new RegExp("(?:^|; )"+a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,"\\$1")+"=([^;]*)")))?decodeURIComponent(a[1]):void 0}function setStyle(a){$("body").attr("class",a);$("#stylelist li").removeClass("active");$('#stylelist li[data="'+a+'"]').addClass("active");selStyle=a;document.cookie="selStyle="+a+"; max-age=2592000"}var selStyle=getCookie("selStyle");selStyle&&setStyle(selStyle);
+$(document).pun_mainReady(function(){$("#stylelist").length||$("body").prepend('<ul id="stylelist"></ul>');for(i=0;i<styleList.length;i++)$("#stylelist").append('<li data="'+styleList[i]["class"]+'"'+(selStyle==styleList[i]["class"]?' class="active"':"")+'><a href="/" onclick="setStyle($(this.parentNode).attr(\'data\'));return false">'+styleList[i].name+"</a></li>")});
+</script> <!-- Смена стиля - END -->
+
+
+<!-- html-верх - Cпойлер для cкрытия полей мини-профиля в топиках, (с) ForumD.ru, satsana, 2021 -->
+<script type="text/javascript" src="https://forumstatic.ru/files/0017/b3/fc/83644.js"></script>
+<script type="text/javascript">
+//  satMSP.vertical = 1; // вертикальный спойлер (кнопки расположены в столбик, вкладка открывается под кнопкой); по умолчанию кнопки расположены в одну строку над вкладками
+//  satMSP.nofold = 1; // не закрывать открытые ранее вкладки при открытии новой; по умолчанию закрываются
+//  satMSP.showtab = 2; // номер отображаемой при загрузке вкладки; по умолчанию все вкладки свёрнуты
+//  satMSP.showbut = 1; // 1 - показывать все кнопки; по умолчанию копки пустых вкладок не отображаются
+//  satMSP.speed = 600; // время сворачивания-разворачивания вкладок в мс (1 секунда = 1000мс), 0 - мгновенно, значение по умолчанию 400.
+  satMSP.fields = [
+    { // Список полей перед спойлером
+      flist: [
+"pa-author",	// Ник
+"pa-title",	// Статус
+"pa-avatar",	// Аватар
+      ""] // Конец списка полей перед спойлером
+    },
+    { // Первая вкладка
+      name: "Спойлер",
+      img: "https://forumstatic.ru/files/0014/7a/91/93795.png",
+      flist: [
+"pa-fld1",	// Доп.поле1
+"pa-fld2",	// Доп.поле2
+"pa-fld3",	// Доп.поле3
+"pa-fld4",	// Доп.поле4
+"pa-fld5",	// Доп.поле5
+      ""]
+    }, // Конец первой вкладки
+    { // Вторая вкладка
+      name: "Автор",
+      img: "https://forumstatic.ru/files/0014/7a/91/21469.png",
+      flist: [
+"pa-sex",	// Пол
+"pa-age",	// Возраст
+"pa-from",	// Откуда
+"pa-invites",	// Приглашений
+"pa-posts",	// Сообщений
+"pa-respect",	// Уважение
+"pa-positive",	// Позитив
+"pa-social",	// Контакты (скайп и т.п.)
+"pa-reg",	// Зарегистрирован
+"pa-time-visit",// Провёл на форуме
+//"pa-ip",	// IP
+      ""]
+    }, // Конец второй вкладки
+    { // Третья вкладка
+      name: "Награды",
+      img: "https://forumstatic.ru/files/0014/7a/91/86081.png",
+      flist: [
+"award",	// Награды rusff
+"gift",	// Подарки rusff
+//"pa-last-visit", // Последний визит
+//"pa-online",	// Онлайн
+      ""]
+    }, // Конец третьей вкладки
+    {} // Конец списка вкладок
+  ];
+</script><!-- Cпойлер cкрытия полей мини-профиля - КОНЕЦ -->
+
+
+<!--Скрытие профиля в теме тегом-->
+<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+.hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+<script>
+    FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+    $().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+</script>
+<!-- Конец -->
