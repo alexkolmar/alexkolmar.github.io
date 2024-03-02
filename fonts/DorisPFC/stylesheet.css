@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Doris PP';
+    src: url('DorisPFC-Bold.eot');
+    src: local('https://alexkolmar.github.io/fonts/DorisPFC/Doris P bold'), local('DorisPFC-Bold'),
+        url('https://alexkolmar.github.io/fonts/DorisPFC/DorisPFC-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/DorisPFC/DorisPFC-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/DorisPFC/DorisPFC-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/DorisPFC/DorisPFC-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/DorisPFC/DorisPFC-Bold.svg#DorisPFC-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
