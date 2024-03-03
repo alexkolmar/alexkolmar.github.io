@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Muller';
+	src: url('Muller_ExtraBold.eot');
+    src: local('Muller_ExtraBold'),
+		url('https://alexkolmar.github.io/fonts/Muller/muller_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('https://alexkolmar.github.io/fonts/Muller/muller_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('https://alexkolmar.github.io/fonts/Muller/muller_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('https://alexkolmar.github.io/fonts/Muller/muller_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('https://alexkolmar.github.io/fonts/Muller/muller_extrabold.svg#muller_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerRegular.eot');
+    src: local('MullerRegular'),
+        url('https://alexkolmar.github.io/fonts/Muller/MullerRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Muller/MullerRegular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Muller/MullerRegular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Muller/MullerRegular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Muller/MullerRegular.svg#MullerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

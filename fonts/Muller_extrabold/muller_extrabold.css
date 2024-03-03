@@ -1,9 +1,0 @@
-@font-face {
-	font-family: 'Muller ExtraBold';
-	src: url('https://alexkolmar.github.io/fonts/Muller_extrabold/muller_extrabold.eot'); /* IE 9 Compatibility Mode */
-	src: url('https://alexkolmar.github.io/fonts/Muller_extrabold/muller_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('https://alexkolmar.github.io/fonts/Muller_extrabold/muller_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('https://alexkolmar.github.io/fonts/Muller_extrabold/muller_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('https://alexkolmar.github.io/fonts/Muller_extrabold/muller_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('https://alexkolmar.github.io/fonts/Muller_extrabold/muller_extrabold.svg#muller_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
-}
