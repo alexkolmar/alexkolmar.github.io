@@ -700,6 +700,7 @@ li#onlinelist {
 .pa-author a {
   font-size: 16px;
   font-family: var(--font2), var(--font3) ;
+  font-weight: 700;
 }
 
 .pa-title {
