@@ -1,0 +1,105 @@
+<!-- Универсальный скрипт замены © deff -->
+<script type="text/javascript">
+    function changeS(sc,ch,st){$(sc).parent().each(function(){$(this).html($(this).html().replace(ch,st));});}
+       changeS('#navindex span','Форум','home');
+       changeS('#navuserlist span','Участники','users');
+       changeS('#navsearch span','Поиск','search');
+       changeS('#navprofile span','Профиль','profile');
+       changeS('#navpm span','Сообщения','messages');
+       changeS('#navadmin span','Администрирование','admin');
+       changeS('#navlogout span','Выход','logout');
+       changeS('#navregister span','Регистрация','join us');
+       changeS('#navlogin span','Войти','login');
+       changeS('#pun-stats h2 span','Статистика форума','Statistics');
+    </script>
+    
+    
+    <!-- Регулировка размера шрифта в постах © Alex_63 -->
+    <style>
+    .FNTslider {
+      border-radius: 4px;
+      position:relative;z-index:1000;
+      background: #ccc;
+      width: 110px;
+      height: 5px;
+      margin: 3px 5px;
+      border: none;
+      float: right;
+      margin-top: 5px;
+      margin-right: 7%;
+    }
+    .FNTslider .before {
+      height: 6px;
+      border: solid 0px transparent;
+      border-right: none 0;
+      border-radius: 4px 0 0 4px;
+      position: absolute;
+      background: #fff;
+      margin-top: -1px;
+      box-shadow: 0px 0px 2px 0px rgb(203, 176, 120) inset;
+    }
+    .FNTslider .thumb {
+      width: 8px;
+      height: 13px;
+      border-radius: 3px;
+      position: relative;
+      top: -4px;
+      background: #fff;
+      cursor: pointer;
+      border: 1px solid var(--gray);
+      box-sizing: border-box;
+    }
+    </style>
+    <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+    <!-- Конец -->
+    
+    
+    <!--Кнопки вверх вниз-->
+    <div class="go-up" id='ToTop' title="вверх"></div>
+    <div class="go-down" id='OnBottom' title="вниз"></div>
+    <script type="text/javascript">
+    $(function(){
+    if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+    $(window).scroll(function(){
+      if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+      else $("#ToTop").fadeIn("slow")
+    });
+    if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+      else $("#OnBottom").fadeIn("slow")
+    });
+    $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+    $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+    });
+    </script>
+    
+    
+    <!-- Баннеры -->
+    <div class="banners">
+      <div class="container">
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+        <a href="" title="название ролевой"><img src="https://dummyimage.com/88x31/000000/fff.png"></a>
+      </div>
+    </div>
