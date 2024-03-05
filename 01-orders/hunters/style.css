@@ -570,6 +570,8 @@ pre {font: 11px monaco;}
 .quote-box cite {
   display: block;
   padding-bottom: 5px;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .code-box strong.legend {
@@ -577,6 +579,12 @@ pre {font: 11px monaco;}
   padding-bottom: 5px;
   font-weight: bold;
   font-style: normal;
+}
+
+.post-sig dt {
+  border-bottom: 1px solid #ccc;
+  width: 300px;
+  margin: 10px auto;
 }
 
 /* Форма ответа */
