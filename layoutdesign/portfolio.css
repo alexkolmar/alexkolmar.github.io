@@ -1,39 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Play:wght@400;700&family=Roboto:wght@400;500&display=swap');
-
-* {
-	margin: 0;
-	padding: 0;
-	border: none;
-	scrollbar-width: thin;
-	scrollbar-color: var(--sec-bg) transparent;
-}
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined');
+@import url('https://pro.fontawesome.com/releases/v5.2.0/css/all.css');
 
 :root {
 	--main-bg: #d9ebe9;
 	--sec-bg: #798f8c;
 	--main-border: #44535e;
-	--sec-border: #;
 	--main-text: #0e1821;
 	--sec-text: #000;
 	--headline-text: #700001;
-	--headline-bg: #;
 	--main-link: #2a555e;
 	--hover-link: #c10001;
 }
 
-html {
-	position: relative;
+#portfolio::selection {
+	background: var(--headline-text);
+	color: var(--main-bg);
 }
 
-body {
-	margin: 0;
-	background: var(--main-bg);
+:focus {outline: none;}
+
+#portfolio * {
+scrollbar-width: thin;
+scrollbar-color: var(--sec-bg) transparent;
 }
 
 #portfolio:before {
 	content: "";
 	position: absolute;
-	background-image: url(img/bg.jpg);
+	background-image: url(https://forumstatic.ru/files/0018/1e/e2/25040.jpg);
 	background-attachment: scroll;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -45,6 +40,7 @@ body {
 	height: 100%;
 	filter: blur(.5px) opacity(.9);
 	-webkit-filter: blur(.5px) opacity(.9);
+	pointer-events: none;
 }
 
 #portfolio {
@@ -53,7 +49,7 @@ body {
 	height: 650px;
 	margin: 5px auto;
 	position: relative;
-	background-color: var(--sec-bg);
+ /*	background-color: var(--sec-bg); */
 	padding: 25px 40px 40px;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
@@ -75,21 +71,19 @@ body {
 	color: var(--main-text);
 }
 
-.tab, .tab-title {
+#portfolio .tab, #portfolio .tab-title {
     display: inline-block;
 }
 
-.tab input[type="radio"] { display: none; }
+#portfolio .tab input[type="radio"] { display: none; }
    
-.tab-title {
-white-space: nowrap;
+#portfolio .tab-title {
 margin: 0 auto;
 display: block;
 padding: 2px 20px;
 width: auto;
 box-sizing: border-box;
 background-color: rgba(217, 235, 233,.4);
-cursor: pointer;
 position: relative;
 transition: all 0.3s ease-in-out 0s;
 z-index: 2;
@@ -97,59 +91,119 @@ white-space: nowrap;
 cursor: pointer;
 letter-spacing: 1px;
 text-align: center;
+text-transform: unset;
 font: 400 small-caps 20px/2 'Oswald', sans-serif;
-text-align: center;
 box-shadow: 0 0 10px 2px var(--sec-bg) inset, 0 0 2px 1px var(--main-border) inset, 0 0 2px 1px var(--main-border);
 border: 1px solid var(--main-border);
 outline: 1px solid var(--sec-bg);
 }
 
-.tab-title span {
+#portfolio .tab-title span {
 color: var(--main-border);
 z-index: 100;
 position: relative;
+transition: all 0.3s ease-in-out 0s;
 }
 
-.tab :checked + .tab-title, .tab-title:hover {
+#portfolio .tab :checked + .tab-title, #portfolio .tab-title:hover {
     border-top: 1px solid var(--hover-link);
     border-bottom: 1px solid var(--hover-link);
     background: rgba(217, 235, 233,.7);
 }
 
-.tab-title span:hover {    
+#portfolio .tab-title span:hover {    
 	color: var(--headline-text);
 }
 
-.tab :checked + .tab-title {
+#portfolio .tab :checked + .tab-title {
 
 }
 
-.tab :checked + .tab-title span {
+#portfolio .tab :checked + .tab-title span, #portfolio .tab :checked + .tab-title:after {
 color: var(--headline-text);
 border-color: var(--hover-link);
 z-index: 100;
 }
 
-.tab :checked ~ .tab-content {
+#portfolio .tab :checked ~ .tab-content {
     display: block; 
 }
 
-.tab-content {
+#portfolio .tab-content {
     position: absolute;
-    padding: 10px 20px 20px;
+    padding: 0 15px;
     left: 0;
     width: 100%;
     height: calc(100% - 60px);
     margin-top: 20px;
     display: none;
     box-sizing: border-box;
-    -webkit-animation: 1s both fadeIn;
-	animation: 1s both fadeIn;
-	background: rgba(217, 235, 233,.7);
-	box-shadow: 0 0 12px 3px var(--sec-bg) inset, 0 0 2px 1px var(--main-border) inset, 0 0 2px 1px var(--main-border);
-	border: 1px solid var(--main-border);
-	outline: 1px solid var(--sec-bg);
+    background: rgba(217, 235, 233,.7);
+    box-shadow: 0 0 12px 3px var(--sec-bg) inset, 0 0 2px 1px var(--main-border) inset, 0 0 2px 1px var(--main-border);
+    border: 1px solid var(--main-border);
+    outline: 1px solid var(--sec-bg);
 }
+
+#portfolio h3 {
+    text-align: center;
+    font: 400 24px/2 'Oswald', sans-serif;
+    color: var(--headline-text);
+    position: relative;
+    right: unset;
+    width: unset;
+    top: unset;
+    margin: unset;
+}
+
+#portfolio h5 {
+	width: 100%;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+        position: relative;
+        margin: 0;
+}
+
+#portfolio a {
+	color: var(--main-link) !important;
+	text-decoration: underline dashed var(--sec-bg);
+	font-weight: 500;
+	cursor: pointer;
+	transition: all .5s linear 0s;
+}
+
+#portfolio a:hover {
+	color: var(--hover-link) !important;
+}
+
+#portfolio p {
+        font-family: Roboto !important;
+	font-size: 14px;
+	text-align: justify;
+	line-height: 140%;
+	text-indent: 35px;
+	margin: 5px 0;
+	padding: 0;
+}
+
+#portfolio .service p {text-align: left;}
+
+#portfolio b {font-weight: 500;}
+
+#portfolio .tab-content .inner {
+	overflow: auto;
+	max-height: 521px;
+	padding-right: 15px;
+	margin-right: -15px;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: none;
+	border: none;
+	-webkit-animation: 1s both fadeIn;
+	animation: 1s both fadeIn;
+}
+
 
 @-webkit-keyframes fadeIn {
 	from {opacity: 0;}
@@ -161,62 +215,55 @@ z-index: 100;
 	to {opacity: 1;}
 }
 
-h3 {
-    text-align: center;
-    font: 400 24px/2 'Oswald', sans-serif;
-    color: var(--headline-text);
-}
-
-h5 {
-	width: 100%;
-	font-size: 12px;
-	font-weight: normal;
-	text-align: center;
-}
-
-a {transition: all .5s linear 0s;}
-b {font-weight: 500;}
-
-.tab .inner {
-	overflow: auto;
-	max-height: 500px;
-	padding-right: 10px;
-	margin-right: -10px;
-	position: relative;
-}
-
-.inner a {
-	color: var(--main-link);
-	text-decoration: underline dashed var(--sec-bg);
-	font-weight: 500;
-	cursor: pointer;
-}
-
-.inner a:hover {
-	color: var(--hover-link);
-}
-
-.inner p {
-	font-size: 13px;
-	text-align: justify;
-	line-height: 140%;
-	text-indent: 35px;
-	margin: 5px 0;
-}
-
-.inner span {
+#portfolio .inner span, #portfolio .process span {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 180%;
+	width: 100%;
+	display: block;
 }
 
-.inner ul {list-style-type: square;}
+#portfolio .aboutme span {text-align: left;}
 
-.inner li {margin: 5px 0 5px 25px;}
+#portfolio .wip span, #portfolio .works span {
+	text-align: center;
+}
 
-.inner li p {text-indent: 0;}
+#portfolio .tab .wip {
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: baseline;
+	padding-top: 10px;
+	height: calc(100% - 10px);
+}
 
-.inner img {
+#portfolio .wip p, #portfolio #rules p, #portfolio #askme p {
+	text-indent: 0;
+}
+
+#portfolio ul, #portfolio ol {margin: 0;}
+
+#portfolio ul, #portfolio ul li {
+list-style: square outside none;
+padding: 0;
+}
+
+#portfolio ol, #portfolio ol li {
+list-style: decimal outside none;
+padding: 0;
+}
+
+#portfolio ul li, #portfolio ol li {
+margin: 5px 0 5px 25px;
+text-align: justify;
+display: list-item !important;
+}
+
+#portfolio li p {text-indent: 0;}
+
+#portfolio .inner img {
 	display: block;
 	max-width: 100%;
 	max-height: 450px;
@@ -225,15 +272,45 @@ b {font-weight: 500;}
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
 }
 
-.inner details {}
+#portfolio details {}
 
-.inner details summary {
+#portfolio details summary {
 	display: block;
 }
 
-.inner details summary h3, .inner details summary span {cursor: pointer;}
+#portfolio details summary h3, #portfolio .inner details summary span {cursor: pointer;}
 
-.design {
+#portfolio .service {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	width: 290px;
+	margin: 10px 0;
+	height: 100px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	border: 1px solid var(--sec-bg);
+	box-shadow: 0 3px 5px 1px var(--main-border);
+	background: rgba(217, 235, 233,.5);
+	text-decoration: none;
+	transition: all .5s linear 0s;
+	cursor: pointer;
+}
+
+#portfolio .service:hover, #portfolio .service.active {
+	transform: translateY(3px);
+	box-shadow: none;
+}
+
+#portfolio .service img {
+	box-shadow: none;
+	margin: 0 15px 0 0;
+}
+
+#portfolio .designs {
 	display: flex;
 	display: -webkit-flex;
 	flex-wrap: nowrap;
@@ -241,18 +318,18 @@ b {font-weight: 500;}
 	padding: 10px 0;
 }
 
-.type_a {
+#portfolio .type_a {
 	flex-direction: row;
 }
 
-.type_b {
+#portfolio .type_b {
 	flex-direction: column;
 }
 
-.type_a > div {width: calc(50% - 10px);}
-.type_b > div {width: 100%;}
+#portfolio .type_a > div {width: calc(50% - 10px);}
+#portfolio .type_b > div {width: 100%;}
 
-.type_b .image {
+#portfolio .type_b .image {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -261,25 +338,31 @@ b {font-weight: 500;}
 	margin-top: 10px;
 }
 
-.design iframe {
+#portfolio .designs .kyz a {
+	width: calc(50% - 5px);
+}
+
+#portfolio .svg img {box-shadow: none;}
+
+#portfolio .designs iframe {
 	margin: 10px auto;
 	display: block;
 }
 
-.design .opis {
+#portfolio .designs .opis {
 	line-height: 180%;
 	text-align: justify;
 }
 
-.design .opis span {
+#portfolio .designs .opis span {
 	width: 100%;
 	display: block;
 	text-align: center;
 }
 
-.design .opis summary span {display: unset;}
+#portfolio .designs .opis summary span {display: unset;}
 
-.smallpreview {
+#portfolio .smallpreview {
 	display: flex;
 	display: -webkit-flex;
 	width: 100%;
@@ -288,18 +371,18 @@ b {font-weight: 500;}
 	justify-content: space-between;
 }
 
-.smallpreview .site {
+#portfolio .smallpreview .site {
 	width: calc(100% / 3 - 5px);
 	display: block;
 	margin-bottom: 10px;
 }
 
-.smallpreview span {
+#portfolio #portfolio .smallpreview span {
 	width: 100%;
 	text-align: center;
 }
 
-.site span {
+#portfolio .site span {
 	text-align: center;
 	width: 100%;
 	display: block;
@@ -307,4 +390,231 @@ b {font-weight: 500;}
 	line-height: 120%;
 }
 
-.site h5 {margin-bottom: 5px;}
+#portfolio .site h5 {margin-bottom: 5px;}
+
+#portfolio .process {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	padding: 0 15px;
+	box-sizing: border-box;
+	background: var(--main-bg);
+	box-shadow: 0 0 5px 2px var(--sec-bg) inset, 0 0 2px 1px var(--main-border) inset, 0 0 2px 1px var(--main-border);
+}
+
+#portfolio .process:before {
+	content: "";
+	position: absolute;
+	background-image: url(https://forumstatic.ru/files/0018/1e/e2/25040.jpg);
+	background-attachment: scroll;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	mix-blend-mode: hard-light;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(.5px) opacity(.9);
+	-webkit-filter: blur(.5px) opacity(.15);
+	pointer-events: none;
+}
+
+#portfolio a.close {
+	display: flex;
+	top: 0;
+	right: 0;
+	position: absolute;
+	margin: 7px;
+	font: normal 0/1 sans-serif;
+	text-decoration: none;
+	color: var(--main-link);;
+	border: 2px solid var(--main-link);
+	align-items: center;
+	justify-content: center;
+	height: 20px;
+	width: 20px;
+    z-index: 10;
+}
+
+#portfolio a.close:before {
+	content: '\f230';
+	font-family: 'Material Icons Outlined';
+	font-weight: 400;
+	font-size: 30px;
+}
+
+#portfolio a.close:hover {
+	color:  var(--hover-link);
+	border: 2px solid var(--hover-link);
+}
+
+#portfolio .process .scrollable {
+	overflow: auto;
+	width: 100%;
+	max-height: unset;
+	height: calc(100% - 48px);
+	overflow: auto;
+	padding-right: 15px;
+	margin-right: -15px;
+	position: relative;
+}
+
+#portfolio .contacts {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	margin: 0 auto 15px;
+	align-items: center;
+	justify-content: center;
+}
+
+#portfolio .contacts .soc {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	margin: 0 10px;
+	text-indent: 0;
+	font-weight: normal;
+	color: var(--main-text) !important;
+}
+
+#portfolio .contacts a:hover {color: var(--hover-link) !important;}
+
+#portfolio .contacts .soc:before {
+	font-family: 'Font Awesome 5 Brands';
+	font-size: 30px;
+	margin-right: 5px;
+}
+
+#portfolio .discord:before {
+	content: '\f392';
+	color: #5765f2;
+}
+
+#portfolio .tg:before {
+	content: '\f3fe';
+	color: #25a2e0;
+}
+
+#portfolio .vk:before {
+	content: '\f189';
+	color: #0077ff;
+}
+
+#portfolio .ig:before {
+	content: '\f16d';
+	color: #bd37a2;
+}
+
+/* Ширина экрана до 650px
+-------------------------------------------------------------*/
+
+@media screen and (max-width: 650px) { 
+
+#portfolio {
+width: 100%;
+padding: 20px 20px 25px;
+}
+
+#portfolio .tab-title {padding: 2px 15px;}
+
+#portfolio .tab-content .inner {max-height: 541px;}
+
+#portfolio .service {
+width: 265px;
+margin: 7px 0;
+height: 90px;
+}
+
+}
+
+
+/* Ширина экрана до 600px
+-------------------------------------------------------------*/
+
+@media screen and (max-width: 600px) { 
+
+	#portfolio {
+		padding-bottom: 40px;
+	}
+
+	#portfolio .tab label.tab-title {
+		line-height: 1;
+	}
+
+	#portfolio .tab label.tab-title span {
+		font-size: 0;
+		width: 0;
+		display: inline-block;
+	}
+
+	#portfolio .tab label.tab-title:after {
+		content: '';
+		font-family: 'Font Awesome 5 Pro';
+		font-size: 40px;
+		line-height: 120%;
+                color: var(--main-border);
+	}
+
+	#portfolio .tab label[for="tab1"].tab-title:after {content: '\f2bb';}
+
+	#portfolio .tab label[for="tab2"].tab-title:after {content: "\f085";}
+
+	#portfolio .tab label[for="tab3"].tab-title:after {content: '\f302';}
+
+}
+
+
+/* Ширина экрана до 540px
+-------------------------------------------------------------*/
+
+@media screen and (max-width: 540px) { 
+
+	#portfolio {
+		padding: 25px 30px 30px;
+	}
+
+	#portfolio .tab-content {height: calc(100% - 75px);}
+
+	#portfolio .tab .inner {max-height: 731px;}
+
+	#portfolio .process h3, #portfolio .process h5 {text-align: left;}
+
+	#portfolio .designs {flex-wrap: wrap;}
+
+	#portfolio .type_b .image a {margin: 0 auto;}
+
+	#portfolio .designs .image {order: -1;}
+
+	#portfolio .designs .kyz {margin: 0;}
+
+	#portfolio .designs .kyz a {width: 100%;}
+
+	#portfolio .smallpreview .site {width: 100%;}
+
+	#portfolio .smallpreview .site > a {
+		display: block;
+		width: 100%;
+	}
+
+	#portfolio .smallpreview .site > a img {margin: 0 auto;}
+
+	#portfolio .type_a > div {width: 100%;}
+
+	#portfolio .contacts .soc {
+		margin: 5px 0;
+		width: 100%;
+		font-size: 20px;
+	}
+
+	#portfolio .contacts .soc:before {
+		font-size: 40px;
+		margin-right: 10px;
+	}
+
+}
