@@ -49,7 +49,7 @@
 	display: block;
 	width: 720px;
 	height: 650px;
-	margin: 5px 10px;
+	margin: 5px auto;
 	position: relative;
 	/*	background-color: var(--sec-bg); */
 	padding: 25px 40px 40px;
