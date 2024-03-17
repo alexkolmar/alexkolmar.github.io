@@ -1,0 +1,707 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Интерактивная карта Таллахасси</title>
+	<meta name="area" content="">
+	<meta name="keywords" content=" ">
+        <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="tallahassee_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap&subset=cyrillic" rel="stylesheet"> 
+	<link rel="icon" type="image/x-icon" href="">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+	<div class="map">
+		<svg viewBox="0 0 860 940">
+
+<a class="area" onclick="document.getElementById('summerbrook'); return false;" title="Саммербрук">
+<path class="good" d="m 436,15 h -91 l 6,14 9,42 -7,15 v 53 h -3 v 22 h 66 v -29 h 14 v -27 h -9 v -7 h 29 V 82 h 6 v 3 h 7 V 55 h -27 z">
+</a>
+
+<a class="area" onclick="document.getElementById('rosehill'); return false;" title="Роузхилл">
+<path class="good" d="M 525.5,152 H 463 v 19 h -29 l -18,-10 h -66 l 1,92 1,8 2,105 52,-27 29,-6 8,-19 17,-19 9,-13 z">
+</a>
+
+<a class="area" onclick="document.getElementById('killearn'); return false;" title="Киллёрн">
+<path class="neutral" d="m 586,347 -76,-11 -75,-3 8,-19 17,-19 9,-13 56.5,-130 H 540 l -10e-6,13 H 556 v 27 l 6,11 9,3 5,6 16,-5 10,5.75 6,0.26 3.7,-5 5.3,-0.01 3,3.7 23,1.1 4,-3.75 10,13 -43,41 -11,20 -4,22 z">
+</a>
+
+<a class="area" onclick="document.getElementById('mc'); return false;" title="Миккошеки-Сентервилл">
+<path class="neutral" d="m 680,201 v 33 h 69 v -29 h 70.5 c 3.6,-0.3 7.75,0.65 12,9 v 61.25 L 803,291 v 24.5 h 14 V 329 h -28 v 9.5 h -5 v 5.5 h 2 v 41 c -13.8,2.2 -26.25,4.75 -46,13 l -53,-41 c -7.76,-6.7 -14.36,-10.5 -30,-11 l -71,1 13,-43 4,-21 11,-20 18,-18 z">
+</a>
+
+<a class="area" onclick="document.getElementById('brewster'); return false;" title="Брюстер">
+<path class="neutral" d="m 514,494 v -17 l -7,-9 -2,-12 24,-19 78,-34 80,-46 53,41 -154,65 z">
+</a>
+
+<a class="area" onclick="document.getElementById('hv'); return false;" title="Хидден Вэлли">
+<path class="neutral" d="m 505,456 c -5.75,-15 -17,-18.5 -19,-33 h 9 v -4 l 12,-14 5,-10 13,-11 31,-14 c 25,-3.8 27.5,-13 30,-23 l 71,-1 c 14,-0.5 22.5,4.7 30,11 l -80,46 -78,34 z">
+</a>
+
+<a class="area" onclick="document.getElementById('eastgate'); return false;" title="Истгейт">
+<path class="neutral" d="m 486,423 c 2.1,-31.8 -6.66,-32.48 -14,-44 -15,-15.77 -19.77,-29.7 -22,-45 l 60,2 76,11 c -1.5,9.27317 -4.37,18.3 -30,23 l -31,14 -13,11 -5,10 -12,14 v 4 z">
+</a>
+
+<a class="area" onclick="document.getElementById('betton'); return false;" title="Беттон">
+<path class="neutral" d="m 435,333 -6,27 -1,19 -20,46 -12,17 -15,30 -14,14 -12,18 -10,26 v 19 h 31 l 65,-27 73,-31 v -14 l -7,-9 -2,-12 c -6.95,-16.4 -16.19,-17.5 -19,-33 1.67,-30.35 -3.75,-29.14 -14,-44 -14.3,-14.38 -19.7,-29.55 -22,-45 z">
+</a>
+
+<a class="area" onclick="document.getElementById('glendale'); return false;" title="Глендейл">
+<path class="neutral" d="m 435,333 -29,6 -52,27 -57,25 -33,12 c -10.43,-8 -14.98,-6.35 -18,-2 l 13,9 15,7 55,46 11,16 4,22 1,29 10,-26 12,-18 14,-14 15,-30 12,-17 20,-46 1,-19 z">
+</a>
+
+<a class="area" onclick="document.getElementById('hl'); return false;" title="Хидден Лейкс">
+<path class="neutral" d="M 340,479 H 204 l -14,-8 -51,2 -8,-42 1,-10 h 60 l 49,-12 5,-8 13,9 15,7 55,46 z">
+</a>
+
+<a class="area" onclick="document.getElementById('ss'); return false;" title="Сетлерс Спрингс">
+<path class="neutral" d="m 246,401 -5,8 -49,12 h -85 v -10 h 10 l -4,-2 v -10 h -8 v -15 h 6 v -14 h 6 l -4,-16 h 13 l 5,-3 6,-1 c 2.16,-4.48 7.9,-6.52 8,-6 v -4 l -2,-4 1,-3 -1,-2 h 15 l 3,-2 h 27 l 18,41 c 4.48,13 15.26,15.62 25,20 z">
+</a>
+
+<a class="area" onclick="document.getElementById('westover'); return false;" title="Уэстовер">
+<path class="bad" d="m 132,421 h -31 v -3 l -6,-1 -3,3 -15,-5 v 17 h -5 l -4,11 9,9 H 58 v 52 l 22,-7 v 4 l 12,-4 v -3 c 11.97093,-3.81794 26.84384,0.60818 46,13 l -5,-14 1,-20 h 5 l -8,-42 z">
+</a>
+
+<a class="area" onclick="document.getElementById('san_luis'); return false;" title="Сан Луис">
+<path class="neutral" d="m 224,479 h -20 l -14,-8 -56,2 -1,20 5,14 47,26 c 26.24,14.1 22.5,18.38 42,0 z">
+</a>
+
+<a class="area" onclick="document.getElementById('frenchtown'); return false;" title="Френчтаун">
+<path class="neutral" d="m 345,549 h -46 l -30,-16 h -42 l -3,-54 h 116 l 4,22 1,29 z">
+</a>
+
+<a class="area" onclick="document.getElementById('college_town'); return false;" title="Колледж Таун">
+<path class="good" d="m 345,549 h -46 l -30,-16 h -8 v 49 h 14 v 77 l -4,10 h 74 z">
+</a>
+
+<a class="area" onclick="document.getElementById('chapel_ridge'); return false;" title="Чапел Ридж">
+<path class="neutral" d="m 261,533 h -34 c -19.34,18 -15.18,14.8 -42,0 l -47,-26 -12,55 14,29 16,16 h 24 l 12,-2 83,12 v -35 h -14 z">
+</a>
+
+<a class="area" onclick="document.getElementById('providence'); return false;" title="Провиденс">
+<path class="neutral" d="m 126,562 -13,-5 v 75 c 3.2,3.8 6.3,7.63 7,13 h 4 l 15,18 h 38 l 14,6 h 80 l 4,-10 v -42 l -83,-12 -12,2 h -24 l -16,-16 z">
+</a>
+
+<a class="area" onclick="document.getElementById('airport'); return false;" title="международный аэропорт">
+<path class="neutral" d="m 31,726 47,-0.35 V 642 h 7 v -16 h 10 v -6 h 5 v -8 h 13 v 20 c 10,12 7.2,13 -1,26 v 54 c 0.03,3.86 3.88,9.4 9,12 h 72 l 19,15 -28,24 h -72 v 34 l -12,8 H 78 v -48 h -5 v -5.6 H 31 Z">
+</a>
+
+<a class="area" onclick="document.getElementById('bradford'); return false;" title="Брадфорд">
+<path class="neutral" d="m 120,645 h 4 l 15,18 h 38 l 14,6 -11.37,21 -1.85,9.52375 -2.9,5.55 -0.8,6.35 L 161.37,724 H 121 c -3.53,-2.54 -7.55,-4.5175 -9,-12 v -54 c 2.24,-3.16 4.66,-6.8 8,-13 z">
+</a>
+
+<a class="area" onclick="document.getElementById('liberty_park'); return false;" title="Либерти Парк">
+<path class="neutral" d="m 191,669 -11.37,21 -1.85,9.5 -2.9,5.55 -0.8,6.35 L 161.37,724 H 193 l 19,15 46,-38 13,-32 z">
+</a>
+
+<a class="area" onclick="document.getElementById('wilson_green'); return false;" title="Уилсон Грин">
+<path class="neutral" d="m 345,669 h -74 l -13,32 -46,38 -17,15 38,32 v 19 h 14 v -4 h 7 l 8,10 2,-9 5,-1 2,-7 19,13 h 16 l 38.5,-92 0.5,-7 z">
+</a>
+
+<a class="area" onclick="document.getElementById('oak_ridge'); return false;" title="Оак Ридж">
+<path class="neutral" d="m 306,807 38.5,-92 33.5,92 z">
+</a>
+
+<a class="area" onclick="document.getElementById('lakewood'); return false;" title="Лейквуд">
+<path class="neutral" d="m 378.5,806 -34,-91 0.5,-7 21.5,8.5 L 494,791 v 15 l -7,0.25 c -3.8,5.9 -10,10.6 -23.75,11.25 l -0.25,3.25 -79.75,-0.5 z">
+</a>
+
+<a class="area" onclick="document.getElementById('shepherd'); return false;" title="Шеферд">
+<path class="neutral" d="M 570,832.34 517,834 v -27 l -23,-1 v -15 l -7,-4 3,-23 2,-103.3 c 1.23,-6.9 5.5,-12.6 14,-17.7 10.55,-8.14 13,-9.56 13,-29 l 58,-4.36 V 616 l -4,1 -1,16 h 19 v 22 h -4 v 8 l -21,-4 v 14 h 6 v 23 h 8 l -1,115 h -9 z">
+</a>
+
+<a class="area" onclick="document.getElementById('bh'); return false;" title="Бикон Хилл">
+<path class="neutral" d="m 345,708 21.5,8.5 120.5,70.5 3,-23 1.7,-88 H 455 l -16,-5 -19,-1 -11,2 -11,-3 h -53 z">
+</a>
+
+<a class="area" onclick="document.getElementById('woodland'); return false;" title="Вудланд">
+<path class="good" d="m 345,669 v -95 h 45 l 55,22 45,19 29,-1 c -0.23,15.42 -0.71,20.77 -13,29 -4.89,2.77 -12.9,9.2 -14,17.7 L 491.7,676 H 455 l -16,-5 -19,-1 -11,2 -11,-3 z">
+</a>
+
+<a class="area" onclick="document.getElementById('lafayette'); return false;" title="Лафайет">
+<path class="good" d="M 519,614 V 508 l -5,-10 v -4 l 72,-31 v 15 h 123 l -2e-5,32 14,23 11,0.5 49.25,23.25 L 790,568 v 17 l -54,-5 v 8 l -94,1 2e-5,5 -21.25,1 -1.75,-4 h -6 v -3 l -9,10e-6 1,9 -4,1 -2,10 z">
+</a>
+
+<a class="area" onclick="document.getElementById('meadowbrook'); return false;" title="Медоубрук">
+<path class="neutral" d="m 445,560 v -8 l -4,-5 v -25 l 73,-31 v 7 l 5,10 v 52 z">
+</a>
+
+<a class="area" onclick="document.getElementById('towne_east'); return false;" title="Таун Ист">
+<path class="neutral" d="m 445,560 v 36 l 45,19 29,-1 v -54 z">
+</a>
+
+<a class="area" onclick="document.getElementById('fp'); return false;" title="Ферндейл Плейс">
+<path class="neutral" d="m 445,596 -55,-22 h -45 v -25 h 31 l 65,-27 v 25 l 4,5 z">
+</a>
+
+<a class="area" onclick="document.getElementById('ghetto'); return false;" title="гетто">
+<path class="bad" d="m 570,811 v 102 l 218,1 v -82 l -20,6 -105,-7 -84,-20 z">
+</a>
+
+<a class="area" onclick="document.getElementById('capitol'); return false;" title="Капитолий">
+<circle class="place" r="3" cx="339" cy="575">
+</a>
+
+<a class="area" onclick="document.getElementById('city_hall'); return false;" title="мэрия">
+<circle class="place" r="3" cx="335" cy="567">
+</a>
+
+<a class="area" onclick="document.getElementById('library'); return false;" title="библиотека">
+<circle class="place" r="3" cx="335" cy="557">
+</a>
+
+<a class="area" onclick="document.getElementById('caduceus'); return false;" title="НИИ &laquoКадуцей&raquo">
+<circle class="mplace" r="6" cx="366" cy="605">
+</a>
+
+<a class="area" onclick="document.getElementById('tmh'); return false;" title="городская больница">
+<circle class="mplace" r="6" cx="415" cy="497">
+</a>
+
+<a class="area" onclick="document.getElementById('fsu'); return false;" title="государственный университет Флориды">
+<circle class="mplace" r="6" cx="278" cy="556">
+</a>
+
+<a class="area" onclick="document.getElementById('fci'); return false;" title="федеральная тюрьма">
+<circle class="mplace" r="6" cx="575" cy="650">
+</a>
+
+<a class="area" onclick="document.getElementById('police'); return false;" title="департамент полиции">
+<circle class="mplace" r="6" cx="350" cy="491">
+</a>
+
+<a class="area" onclick="document.getElementById('cemetery'); return false;" title="Клабдище Роузлон">
+<circle class="mplace" r="6" cx="391" cy="390">
+</a>
+
+<a class="area" onclick="document.getElementById('amtrak'); return false;" title="железнодорожная станция">
+<circle class="mplace" r="6" cx="315" cy="591">
+</a>
+
+<a class="area" onclick="document.getElementById('the_moon'); return false;" title="ночной клуб &laquoЛуна&raquo">
+<circle class="mplace" r="6" cx="391" cy="585">
+</a>
+
+<a class="area" onclick="document.getElementById('tall_weekly'); return false;" title="редакция &laquotall weekly&raquo">
+<circle class="mplace" r="6" cx="200" cy="372">
+</a>
+
+<a class="area" onclick="document.getElementById('old_base'); return false;" title="супермаркет">
+<circle class="place" r="4" cx="390" cy="777">
+</a>
+
+<a class="area" onclick="document.getElementById('kl'); return false;" title="бар &laquoКеросиновая лампа&raquo">
+<circle class="mplace" r="6" cx="151" cy="499">
+</a>
+
+<a class="area" onclick="document.getElementById('bridge'); return false;" title="место первого убийства">
+<circle class="place" r="4" cx="258" cy="703">
+</a>
+
+<a class="area" onclick="document.getElementById('horn_house'); return false;" title="место второго убийства">
+<circle class="place" r="4" cx="298" cy="689">
+</a>
+
+<a class="area" onclick="document.getElementById('ridley_estate'); return false;" title="дом семьи Ридли">
+<circle class="place" r="4" cx="362" cy="738">
+</a>
+
+			</svg>
+
+<div id="summerbrook" class="description1">
+<h2>Саммербрук</h2>
+<img src="img/summerbrook.png" alt="">
+<p>Элитный спальный район на самом севере города - для обеспечанных граждан, которые ценят тишину, покой и красивую природу подальше от суеты деловых и торговых районов.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="rosehill" class="description1">
+<h2>Роузхилл</h2>
+<img src="img/rosehill.png" alt="">
+<p>Ещё один большой живописный спальный район на севере Таллахасси. Здесь расположены сады Альфреда Б. Маклая - государственный парк, историческое место площадью 1176 акров. Помимо в Роузхилл есть несколько небольших озёр, у берегов которых местные жители любят гулять и устраивать пикники.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="killearn" class="description1">
+<h2>Киллерн</h2>
+<img src="img/killearn.png" alt="">
+<p>Большой живописный спальный район на севере города со множеством парков, скверов, прудов и мелких озёрец. По праву он мог бы считаться элитным, если бы не его соседство с огромным промышленным районом. Однако именно благодаря этому факту многие представители среднего класса смогли позволить себе жильё в данном районе. И, судя по всему такое сомнительное соседство их совсем не омрачает.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="mc" class="description1">
+<h2>Миккошеки-Сентервилл</h2>
+<img src="img/mc.png" alt="">
+<p>Большой промышленный район на северо-востоке города. Основная часть построек и комплексов в районе - фабрики, заводы и склады, где трудятся жители города и близлежащих окрестностей. Большинство рабочих - люди без способностей. Также есть и автоматизированное производство. Помимо производственных зданий на юге района вблизи магистрали I-10 расположено несколько жилых кварталов.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="brewster" class="description">
+<h2>Брюстер</h2>
+<img src="img/brewster.png" alt="">
+<p>Район, расположенный вдоль Махан Драйв между центром города и промышленной зоной. Здесь есть всё - и жилые квартары, и небольшие торговые центры и даже мелкое производство. И всё же как минимум одно примечательное место найдётся даже в таком разношёрстом районе: это музей автомобилей, расположенный в западной части района вблизи магистрали I-10.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="hv" class="description">
+<h2>Хидден Вэлли</h2>
+<img src="img/hv.png" alt="">
+<p>Обычный, ничем не примечательный небольшой жилой район на северо-востоке города.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="eastgate" class="description">
+<h2>Истгейт</h2>
+<img src="img/eastgate.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="betton" class="description">
+<h2>Беттон</h2>
+<img src="img/betton.png" alt="">
+<p>Крупный район чуть севернее центра города, в самом сердце которого расположен комплекс зданий городской больницы. Помимо больницы здесь есть и жилые кварталы с небольшими супермаркетами и фермерскими рынками.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="glendale" class="description">
+<h2>Глендейл</h2>
+<img src="img/glendale.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="hl" class="description">
+<h2>Хидден Лейкс</h2>
+<img src="img/hl.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="ss" class="description">
+<h2>Сетлерс Спрингс</h2>
+<img src="img/ss.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="westover" class="description">
+<h2>Уэстовер</h2>
+<img src="img/westover.png" alt="">
+<p>Этот район по праву можно назвать вторым по уровню преступности в городе после гетто. Здесь собрались самые "сливки" падшего общества - наркодилеры, "торчки", проститутки, игроки, воры и прочие им подобные. В отличие от гетто, большинство местных являются агрессивно настроенными прекларусами, готовыми шмальнуть фаерболом или выкрутить суставы одним ментальным воздействием, поэтому добропорядочные граждане стараются не иметь с ними дел.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="san_luis" class="description">
+<h2>Сан Луис</h2>
+<img src="img/san_luis.png" alt="">
+<p>Гуляя по улицам этого района нетрудно понять, что бо&#x301льшая часть его населения - латиноамериканцы и афроамериканцы. Сан Луис с натяжкой можно назвать спокойным местом: здесь повсюду заведения с сомнительной репутацией вроде отелей и баров с подпольными бойцовскими клубами и наркопритонами. Однако их владельцы дорожат своей репутацией и делают всё необходимое, чтобы уберечься от пристального взора органов правопорядка.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="frenchtown" class="description">
+<h2>Френчтаун</h2>
+<img src="img/frenchtown.png" alt="">
+<p>Как можно понять из названия, этот район многое связывает с культурой Франции. В первую очередь он известен своими великолепными ресторанами, кафе и закусочными, где можно отведать блюда не только французской, но и другой средиземноморской кухни, а также отелями на любой вкус и кошелёк. Многие гости города останавливаются в этом районе.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="college_town" class="description">
+<h2>Колледж Таун</h2>
+<img src="img/college_town.png" alt="">
+<p>Деловой центр города, в котором расположены Капитолий, мэрия, библиотека и университет. Кажется, что жизнь кипит здесь круглосуточно, даже глубокой ночью. И это естественно, ведь помимо правительства, сливок общества и деловых людей сюда каждый день приезжают десятки туристов, которые в любую погоду неустанно изучают интересные места города, коих в Даунтауне великое множество.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="chapel_ridge" class="description">
+<h2>Чапел Ридж</h2>
+<img src="img/chapel_ridge.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="providence" class="description">
+<h2>Провиденс</h2>
+<img src="img/providence.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="airport" class="description">
+<h2>Международный аэропорт Таллахасси</h2>
+<img src="img/airport.png" alt="">
+<p>Один из крупнейших аэропортов Флориды, расположен в 5 милях к югу от Даунтауна города. Несмотря на своё название, не имел международных направлений вплоть до 2028 года, когда Таллахасси стал столицей США.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="bradford" class="description">
+<h2>Брадфорд</h2>
+<img src="img/bradford.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="liberty_park" class="description">
+<h2>Либерти Парк</h2>
+<img src="img/liberty_park.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="wilson_green" class="description">
+<h2>Уилсон Грин</h2>
+<img src="img/wilson_green.png" alt="">
+<p>До череды двух громких убийств этот спальный район на юге города считался тихим, приятным и спокойным, как и несколько других граничащих с ним районов. Но потом ситуация изменилась: всё лето здесь усиленно работали патрульные службы, а местные жители старались избегать прогулок в одиночку по тихим скверам, особенно вблизи реки Мансон-Слау и в тёмное время суток. Сейчас жизнь района постепенно возвращается в привычное русло.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="oak_ridge" class="description">
+<h2>Оак Ридж</h2>
+<img src="img/oak_ridge.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="lakewood" class="description">
+<h2>Лейквуд</h2>
+<img src="img/lakewood.png" alt="">
+<p>Относительно тихий спальный район на юге города, где живут преимущественно небогатые граждане. Вдоль улиц простые одноэтажные дома расположены в основном хаотично. Однако даже в таком районе есть несколько участков с коттеджными домами, принадлежащими явно более обеспеченным жителям.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="shepherd" class="description">
+<h2>Шеферд</h2>
+<img src="img/shepherd.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="bh" class="description">
+<h2>Бикон Хилл</h2>
+<img src="img/bh.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="woodland" class="description">
+<h2>Вудленд</h2>
+<img src="img/bwoodland.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="lafayette" class="description">
+<h2>Лафайетт</h2>
+<img src="img/lafayette.png" alt="">
+<p>Большой живописный спальный район для состоятельных и просто небедных жителей города. Он имеет удобное расположение от центра, куда можно добраться по дороге Восток Парк-авеню, по пути проезжая мимо главных торговых и развлекательных точек города.</p>
+<p>Единственной ложкой дёгтя в этой бочке мёда до 2022 года была исправительная колония на Капитал Сёркл, поэтому было принято решение отстроить новое здание на юге в районе Шеферд, а старое снести.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="meadowbrook" class="description">
+<h2>Медоубрук</h2>
+<img src="img/meadowbrook.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="towne_east" class="description">
+<h2>Таун Восток</h2>
+<img src="img/towne_east.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="fp" class="description">
+<h2>Ферндейл Плейс</h2>
+<img src="img/fp.png" alt="">
+<p>Торгово-развлекательный район в самом сердце города. Здесь находится известный торговый центр Governor's Square Mall, где можно пройтись по дорогим и не очень дорогим бутикам, а также поужинать в ресторанах или кафе. Помимо торгового центра здесь есть парк, кинотеатр, несколько универмагов, магазин электроники и кафе быстрого обслуживания.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="ghetto" class="description">
+<h2>Гетто</h2>
+<img src="img/ghetto.png" alt="">
+<p>Место обитания людей без способностей, у которых нет тыла в виде близких родственников-прекларусов. Здесь царит атмосфера упадка. Многие живут за чертой бедности в полуразрушенных многоэтажках, похожих на общежития. Тем не менее, даже здесь находятся добровольцы, пытающиеся навести порядок и поднять боевой дух ущемлённых в правах жителей.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="capitol" class="description">
+<h2>Капитолий штата Флорида</h2>
+<img src="img/capitol.png" alt="">
+<p>описание</p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Руководители:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=307" rel="nofollow" target="_blank">Jack Hurrell</a></dd>
+  <dt>Служащие:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=303" rel="nofollow" target="_blank">Oliver Ridley</a></dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="city_hall" class="description">
+<h2>Мэрия</h2>
+<img src="img/city_hall.png" alt="">
+<p>описание</p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Мэр:</dt>
+   <dd><a href="http://thebreakdown.ru/viewtopic.php?id=525#p116889" rel="nofollow" target="_blank">Daniel Crow</a></dd>
+  <dt>Служащие:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=29" rel="nofollow" target="_blank">Avis Hunt</a> (помощник мэра)</dd>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=165" rel="nofollow" target="_blank">Andrew Hunt</a> (пресс-секретарь)</dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="library" class="description">
+<h2>Публичная библиотека Лероя Коллинза</h2>
+<img src="img/library.png" alt="">
+<p>Публичная библиотека округа Леон была основана в мае 1955 года. На момент открытия, состоявшегося  21 марта 1956 года, на её полках находилось около 5000 томов. 17 сентября 1993 года заведение было переименовано в Публичную библиотеку Лероя Коллинза округа Леон в честь 33-го губернатора Флориды Лероя Коллинза.</p>
+<p>Система публичных библиотек Лероя Коллинза округа Леон обогащает сообщество, вдохновляя его на любовь к чтению, предоставляя местным жителям динамичный ресурс для творческих, интеллектуальных и развлекательных занятий.</p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Руководитель:</dt>
+   <dd>...</dd>
+  <dt>Сотрудники:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=378" rel="nofollow" target="_blank">Aaron Hunt</a> (библиотекарь)</dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="caduceus" class="description">
+<h2>НИИ "Кадуцей"</h2>
+<img src="img/caduceus.png" alt="">
+<p>описание</p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Руководители:</dt>
+   <dd><a href="http://thebreakdown.ru" rel="nofollow" target="_blank">Dietrich von Witzleben</a></dd>
+   <dd><a href="http://thebreakdown.ru" rel="nofollow" target="_blank">Jonathan Pierce</a></dd>
+  <dt>Сотрудники:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=201" rel="nofollow" target="_blank">Ophelia Lindholm</a></dd>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=204" rel="nofollow" target="_blank">Ian Syversen</a></dd>
+   <dd><a href="http://thebreakdown.ru" rel="nofollow" target="_blank">Anthony O'Dwyer</a></dd>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=290" rel="nofollow" target="_blank">Loreley Maureen</a></dd>
+  <dt>Подопытные:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=294" rel="nofollow" target="_blank">Aleister Crowrey</a></dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="tmh" class="description">
+<h2>Больница Таллахасси Мемориал</h2>
+<img src="img/tmh.png" alt="">
+<p>Один из самых крупных медицинских центров в городе, куда ежедневно приходят сотни граждан, чтобы поправить здоровье. В комплексе зданий есть все необходимые отделения и филиалы для полного обследования: терапевтическое отделение, отделение интенсивной терапии, стоматология, женская консультация и родильный дом, кожно-венерологический диспансер, центр лечения онкобольных и прочие.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="fsu" class="description">
+<h2>Университет штата Флорида</h2>
+<img src="img/fsu.png" alt="">
+<p>Университет был создан в 1851 году и является одним из старейших вузов в штате Флорида. Он включает в себя 16 отдельных колледжей и более 110 центров, помещений, лабораторий и институтов, которые предлагают более 300 программ обучения, в том числе профессиональных программ. Помимо этого, университет славится очень высокой исследовательской деятельностью.</p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Преподаватели:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=303" target="_blank">Oliver Ridley</a> (психология)</dd>
+  <dt>Студенты:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=290" rel="nofollow" target="_blank">Loreley Maureen</a></dd>
+   <dd>...</dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="fci" class="description">
+<h2>Федеральная тюрьма</h2>
+<img src="img/fci.png" alt="">
+<p>Исправительное учреждение общего режима, в котором осуждённые отбывают наказания. Старое здание тюрьмы на Капитал Сёркл было снесено после открытия нового здания в 2022 году на Олд-Сейнт-Огастин-Роуд.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="police" class="description">
+<h2>Департамент полиции</h2>
+<img src="img/police.png" alt="">
+<p>Это небольшое малопримечательное здание является штабом городской полиции. </p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Капитан:</dt>
+   <dd>...</dd>
+  <dt>Полицейские:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=379" rel="nofollow" target="_blank">James Hawk</a> (детектив)</dd>
+   <dd><a href="" rel="nofollow" target="_blank"></a> ()</dd>
+  <dt>WASP</dt>
+   <dd><dd><a href="http://thebreakdown.ru/profile.php?id=178" rel="nofollow" target="_blank">Matthew Knight</a> (офицер)</dd></dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="cemetery" class="description">
+<h2>Кладбище Роузлон</h2>
+<img src="img/cemetery.png" alt="">
+<p>Место, где усопшие жители нашли своё последнее пристанище. Кладбище открыто ежедневно до 8 часов вечера, после чего охрана делает обход и провожает припозднившихся граждан перед закрытием. Здесь тщательно следят за порядком и за последние годы ещё не было случаев с кладбищенскими тусовками представителей субкультур и прочим кощунством.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="amtrak" class="description">
+<h2>Железнодорожная станция</h2>
+<img src="img/amtrak.png" alt="">
+<p>Все пути ведут... нет, не в Рим! В Таллахасси. Для тех, кто ещё не привык или не желает перемещаться по воздуху, по-прежнему существует железная дорога. Станция удобно расположена практически в самом сердце города близ Даунтауна. А поезда компании "Амтрак" не один десяток лет обеспечивают перевозки пассажиров на дальние расстояния.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="the_moon" class="description">
+<h2>Ночной клуб "Луна"</h2>
+<img src="img/the_moon.png" alt="">
+<p>Известный ночной клуб, существующий в городе вот уже более 50 лет. Здесь всегда звучит музыка, а танцпол и VIP-ложа заполнены посетителями. Но, возможно, не только концерты известных музыкантов и шоу со спецэффектами делают это место столь популярным, но и эскорт-агентство, о котором, впрочем, знают только доверенные лица.</p>
+<details>
+ <summary><h3>Персонал:</h3></summary>
+<dl>
+  <dt>Владелец эскорт-агентства:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=77" rel="nofollow" target="_blank">Cinderella Vortigern</a></dd>
+  <dt>Работники эскорт-агентства:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=377" rel="nofollow" target="_blank">Anna Hunt</a> (администратор)</dd>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=197" rel="nofollow" target="_blank">Eva Lindberg</a> (эскорт)</dd>
+   <dd><a href="http://thebreakdown.ru/viewtopic.php?pid=31803#p31803" rel="nofollow" target="_blank">Atlantis Underwood</a> (эскорт)</dd>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=79" rel="nofollow" target="_blank">Orion Weiss</a> (эскорт)</dd>
+  <dt>Постоянные клиенты:</dt>
+   <dd><a href="http://thebreakdown.ru/profile.php?id=307" rel="nofollow" target="_blank">Jack Hurrell</a></dd>
+</dl>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="tall_weekly" class="description">
+<h2>Редакция газеты " Tall' weekly"</h2>
+<img src="img/tall_weekly.png" alt="">
+<p>описание</p>
+<button>Закрыть</button>
+</div>
+
+<div id="old_base" class="description">
+<h2>Супермаркет</h2>
+<img src="img/old_base.png" alt="">
+<p>Ничем с виду не примечательный супермаркет, куда каждый день ходят местные жители за товарами первой необходимости. Однако особо внимательного посетителя наверняка насторожит тот факт, что дверь в подсобное посещение по каким-то не вполне очевидным причинам пользуется особой популярностью не только у персонала магазина...</p>
+<details>
+ <summary><h3>Эпизоды:</h3></summary>
+<ul>
+<li>[17.07.2043] <a href="http://thebreakdown.ru/viewtopic.php?id=729" rel="nofollow" target="_blank">bada boom</a></li>
+</ul>
+</details>
+<button>Закрыть</button>
+</div>
+
+<div id="kl" class="description">
+<h2>Бар "Керосиновая лампа"</h2>
+<img src="img/kl.png" alt="">
+<p>Это место не для всех. Пользуется дурной славой. Говорят, там был наркопритон, но слухи не подтвердились. Дешёвое пойло, тусклый свет и странные звуки. Хотите приключений на свою пятую точку? Вам сюда.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="bridge" class="description">
+<h2>Мост через реку Мансон Слау</h2>
+<img src="img/bridge.png" alt="">
+<p>Мост через реку Мансон Слау на Спрингхилл Роуд - место обнаружения первой жертвы серийного убийцы.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="horn_house" class="description">
+<h2>Дом Бриттани Хорн</h2>
+<img src="img/horn_house.png" alt="">
+<p>Небольшой дом на Стаффорд Стрит, принадлежавший Бриттани Хорн - художнице, которая обнаружила голову первой жертвы, найденной под мостом, и которая сама впоследствии стала жетвой серийного убийцы. На заднем дворе есть сарай, оборудованный под рабочее место художницы.</p>
+<button>Закрыть</button>
+</div>
+
+<div id="ridley_estate" class="description">
+<h2>Дом семьи Ридли</h2>
+<img src="img/ridley_estate.png" alt="">
+<p>Обычный двухэтажный частный дом, каких великое множество в спальных районах. Всё бы ничего, но только владелец знает, что в подвале находится секретная лаборатория, которой нет на плане дома.</p>
+<details>
+ <summary><h3>Обитатели:</h3></summary>
+<ul>
+<li><a href="http://thebreakdown.ru/profile.php?id=303" rel="nofollow" target="_blank">Oliver Ridley</a></li>
+<li><a href="http://thebreakdown.ru/profile.php?id=400" rel="nofollow" target="_blank">Samantha Ridley</a></li>
+<li><a href="http://thebreakdown.ru/viewtopic.php?pid=119249#p119249" rel="nofollow" target="_blank">Emma Ridley</a></li>
+</ul>
+</details>
+<button>Закрыть</button>
+</div>
+			
+<img src="tallahassee_map.png" alt="">
+
+<button id="faq_link" onclick="document.getElementById('faq'); return false;" title="нажмите для справки">F.A.Q.</button>
+<div id="faq">
+<h2>F.A.Q.</h2>
+<p>Перед вами интерактивная карта Таллахасси. Она представлена для лучшего понимания текущего положения дел в городе и для удобства навигации. Чтобы узнать больше о каком-либо месте, нажмите на интересующую область.</p>
+<br>
+<dl><dt>Условные обозначения:</dt>
+<dd id="good"><strong>Благополучный район</strong> - район, где проживают преимущественно обеспеченные граждане, либо находящийся во владении крупной корпорации. Здесь не лежат мусорные кучи на обочинах, поскольку за чистой и порядком тщательно следят как местные жители, так и соответствующие службы.</dd>
+<dd id="neutral"><strong>Обычный район</strong> - район, по которому можно перемещаться без риска для жизни. Уровень бедности здесь невысок, за порядком следит полиция.</dd>
+<dd id="bad"><strong>Неблагополучный район</strong> - район с высоким уровнем преступности и бедности, где среди местных жителей царят упаднические настроения. Это не то место, где можно без риска для жизни прогуливаться ночью по улице, особенно если ты выделяешься на фоне местных жителей...</dd>
+<dd><div class="circle"></div> - важные места в городе, с которыми могут быть связаны какие-либо сюжетные события, а также дома персонажей и локации за городской чертой.</dd></dl>
+<button>Закрыть</button>
+</div>
+<button id="copy_link" onclick="document.getElementById('copyright'); return false;" title="о карте">&copy;</button>
+<div id="copyright">
+<h2>Copyright</h2>
+<p>Вёрстка, дизайн и описание локаций - Alex Kolmar. Карта - <a href="https://www.openstreetmap.org/copyright" target="_blank">Участники OpenStreetMap</a>.</p>
+<p>Полное или частичное копирование кода и информации запрещено.</p>
+<button>Закрыть</button>
+</div>
+</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$('.area').click(function(){$('.description, .description1').eq($(this).index()).fadeIn(600).siblings('.description, .description1').fadeOut(600)})</script>
+<script>$(function() {
+  $('path, circle, button').click(function() {
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+});</script>
+<script>$(document).ready(function(){ 
+ $('button#copy_link').click(function() { 
+    $('#copyright').fadeIn(600);
+  });
+
+ $('#copyright button').click(function() { 
+    $('#copyright').fadeOut(600);
+  });
+
+ $('button#faq_link').click(function() { 
+    $('#faq').fadeIn(600);
+  });
+
+ $('#faq button').click(function() { 
+    $('#faq').fadeOut(600);
+  });
+
+ $('.description button, .description1 button').click(function() { 
+    $('.description, .description1').fadeOut(600);
+  });
+ });
+</script>
+<!--Всплывающие Подсказки при наведении-->
+<script type="text/javascript" src="scripts/tipsy.js"></script>
+<!--//End//-Всплывающие Подсказки при наведении-->
+</body>
+</html>

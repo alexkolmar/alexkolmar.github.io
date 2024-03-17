@@ -1,0 +1,423 @@
+/* Main */
+
+*{
+margin:0;
+padding:0;
+}
+
+body {
+margin: 0 auto;
+padding: 0;
+overflow: auto;
+width: 860px;
+height: 1000px;
+}
+
+h2 {
+font-family: 'Oswald', sans-serif;
+font-weight: normal;
+font-size: 14px;
+margin: 2px 0 3px;
+color: #cacaca;
+text-transform: uppercase;
+}
+
+h3 {
+font-size: 14px;
+font-family: montserrat;
+font-weight: normal;
+margin: 2px;
+color: #cacaca;
+text-align: center;
+}
+
+dl {
+font-family: montserrat;
+font-weight: normal;
+margin: 2px;
+color: #cacaca;
+text-align: center;
+}
+
+dl {
+font-size: 12px;
+}
+
+p, dd, li {
+text-align: justify;
+text-align-last: left;
+font: normal 11px arial; 
+margin: 2px;
+padding: 0 5px;
+color: #aaaaaa;
+}
+
+#good strong, #neutral strong, #bad strong {
+color: #000;
+}
+
+p a, dd a, li a {
+color: #B0C4DE; /*lightsteelblue*/
+text-decoration: none;
+}
+
+p a:hover, dd a:hover, li a:hover {
+font-weight: bold;
+}
+
+ul {
+padding: 0 10px;
+}
+
+details summary {
+  display: block;
+  width: 10em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: underline dotted;
+  outline-style: none;
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+padding: 0 5px;
+}
+
+button {
+background: #401515;
+padding: 3px 10px 5px;
+margin: 3px;
+letter-spacing: 1px;
+color: #958d77;
+font-family: tahoma!important;
+font-size: 12px!important;
+font-variant: small-caps!important;
+font-weight: bold!important;
+text-decoration: none;
+text-transform: lowercase;
+border-radius: 3px;
+border: none;
+box-shadow: inset 0 2px 3px #7c0214, inset 0 -2px 3px black, 0 2px 2px rgba(0,0,0,.3);
+cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.3s ease-in-out 0.1s;
+    background: radial-gradient(ellipse at center, #7c0214 0%,#401515 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    cursor: pointer;
+}
+
+/* Map */
+
+.map {
+position: absolute;
+text-align: center;
+width: 860px;
+height: 940px;
+margin: 0 auto;
+}
+
+svg {
+position: absolute;
+top: 0;
+left: 0;
+height: 940px;
+width: 100%;
+background-image: url(Tallahassee_map.png);
+}
+
+path {
+fill: wheat;
+fill-opacity: .3;
+stroke: transparent;
+stroke-width: 2;
+stroke-dasharray: 5;
+stroke-linejoin: round;
+stroke-opacity: .3;
+transition: .5s;
+}
+
+path:hover, path.active {
+transition: opacity .2s ease;
+fill-opacity: .6;
+cursor: pointer;
+transition: .5s;
+}
+
+circle {
+fill: white;
+stroke: darkblue;
+stroke-width: 3;
+opacity: .5;
+transition: .5s;
+}
+
+circle:hover, circle.active {
+opacity: 1;
+stroke: red;
+cursor: pointer;
+transition: .5s;
+}
+
+/* Locations */
+
+.mplace {
+fill: white;
+stroke-width: 4;
+opacity: .5;
+}
+
+path.bad:hover, path.bad.active {
+fill: #CD5C5C;
+}
+
+path.neutral:hover, path.neutral.active {
+fill: #9BCD9B;
+}
+
+path.good:hover, path.good.active {
+fill: #6495ED;
+}
+
+.description, .description1 {
+position: absolute;
+width:270px;
+height: auto;
+border: none;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+display: none;
+z-index: 10;
+background: rgba(36, 40, 46, .9);
+color:#cacaca;
+box-shadow: -3px 5px 10px #555555;
+padding: 0px 5px 4px;
+}
+
+.description {
+box-shadow: -3px -5px 10px #555555;
+}
+
+.description1 {
+box-shadow: -3px 5px 10px #555555;
+}
+
+.description img, .description1 img {
+filter: grayscale(50%) opacity(1) brightness(110%) contrast(110%);
+-webkit-filter: grayscale(50%) opacity(1) brightness(110%) contrast(110%);
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.description1::before, .description::after {
+position: absolute;
+content: attr(tooltip);
+z-index: 11;
+border: 10px solid transparent;
+left: calc(50% - 10px);
+}
+
+.description1::before {
+border-bottom: 12px solid rgba(36, 40, 46, .9);
+top: -22px;
+}
+
+.description::after {
+border-top: 12px solid rgba(36, 40, 46, .9);
+bottom: -22px;
+}
+
+/* Special markers */
+#airport::after {left:97px;}
+#westover::after {left:97px;}
+
+/* Districts & places */
+#summerbrook {top:165px;left:245px;}
+#rosehill {top:350px;left:250px;}
+#killearn {right:175px;top:350px;}
+#mc {right:0;top:380px;}
+#brewster {right:30px;bottom:585px;}
+#hv {right:70px;bottom:600px;}
+#eastgate {right:210px;bottom:610px;}
+#betton {bottom:605px;left:305px;}
+#glendale {left:240px;bottom:590px;}
+#ss {left:20px;bottom:615px;}
+#westover {left:0;bottom:520px;}
+#hl {left:110px;bottom:535px;}
+#san_luis {left:30px;bottom:475px;}
+#frenchtown {left:140px;bottom:465px;}
+#college_town {left:170px;bottom:400px;}
+#chapel_ridge {left:20px;bottom:425px;}
+#providence {left:0px;bottom:350px;}
+#airport {left:0px;bottom:335px;}
+#bradford {left:0px;bottom:285px;}
+#liberty_park {left:90px;bottom:275px;}
+#wilson_green {left:165px;bottom:275px;}
+#oak_ridge {left:205px;bottom:228px;}
+#lakewood {left:220px;bottom:233px;}
+#shepherd {right:170px;bottom:335px;}
+#ghetto {right:60px;bottom:115px;}
+#bh {left:273px;bottom:273px;}
+#woodland {left:230px;bottom:370px;}
+#fp {left:280px;bottom:415px;}
+#meadowbrook {right:210px;bottom:450px;}
+#towne_east {right:230px;bottom:390px;}
+#lafayette {right:140px;bottom:480px;}
+#capitol {left:199px;bottom:380px;}
+#city_hall {left:195px;bottom:390px;}
+#library {left:195px;bottom:399px;}
+#caduceus {left:226px;bottom:355px;}
+#tmh {left:275px;bottom:463px;}
+#fsu {left:138px;bottom:403px;}
+#fci {right:145px;bottom:310px;}
+#police {left:210px;bottom:468px;}
+#cemetery {left:252px;bottom:570px;}
+#amtrak {left:175px;bottom:369px;}
+#the_moon {left:251px;bottom:375px;}
+#tall_weekly {left:60px;bottom:587px;}
+#old_base {left:250px;bottom:180px;}
+#kl {bottom:460px;left:11px;}
+#bridge {left:118px;bottom:254px;}
+#horn_house {left:158px;bottom:268px;}
+#ridley_estate {left:222px;bottom:219px;}
+
+/*F.A.Q.*/
+
+button#faq_link, button#copy_link {
+position: absolute;
+color: white;
+opacity: .5;
+margin: 0;
+}
+
+button#faq_link:hover, button#copy_link:hover, button#faq_link.active, button#copy_link.active {
+opacity: .8;
+}
+
+button#faq_link {
+left: 10px;
+top: 10px;
+}
+
+button#copy_link {
+right: 5px;
+bottom: 5px;
+}
+
+#district > strong {
+border: 2px dashed rgba(74, 101, 133, .5);
+padding: 2px;
+}
+
+#district {
+padding-bottom: 5px;
+}
+
+#good  > strong {
+background: rgba(100,149,237,.6);
+padding: 2px 5px;
+}
+
+#neutral  > strong {
+background: rgba(155,205,155,.6);
+padding: 2px 5px;
+}
+
+#bad  > strong {
+background: rgba(205,92,92,.6);
+padding: 2px 5px;
+}
+
+.circle{
+width: 9px;
+height: 9px;
+display: inline-block;
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+-khtml-border-radius: 50px;
+text-align: center;
+background: white;
+border: 4px solid darkblue;
+opacity: .7;
+cursor: pointer;
+transition: .5s;
+}
+
+.circle:hover {
+border-color: #maroon;
+opacity: 1;
+}
+
+#faq {
+position: absolute;
+width:500px;
+height: auto;
+border: none;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+display: none;
+z-index: 11;
+background: rgba(36, 40, 46, .9);
+color:#000000;
+padding: 0px 5px 4px;
+box-shadow: 3px 5px 10px #555555;
+left: 5px;
+top: 5px;
+text-align: center;
+}
+
+/*Copyright*/
+
+#copyright {
+position: absolute;
+right: 5px;
+bottom: 5px;
+width:260px;
+height: auto;
+border: none;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+display: none;
+z-index: 10;
+background: rgba(36, 40, 46, .9);
+box-shadow: -3px -5px 10px #555555;
+color:#000000;
+padding: 0px 5px 4px;
+}
+
+/* Всплывающая подсказка при наведении */
+#tooltip {
+  position: absolute;
+  background: rgba(27, 12, 12,.75);
+  z-index: 999;
+  font-variant: small-caps;
+  display: none;
+  padding: 4px 10px 5px;
+  max-width: 180px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-family: tahoma; /* шрифт */
+  font-size: 10px; /* размер текста */
+  color: #958d77; /* цвет текста */
+  text-transform: lowercase;
+  text-align: center;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.2)
+}

@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    scrollbar-width: thin; /* полоса прокрутки мозиллы */
+    scrollbar-color: #8c7a60 transparent ; /* 1 - бегунок, 2 - полоса */
+   }
+
+/* полоса прокрутки (кроме мозиллы) */
+   ::-webkit-scrollbar {width: 6px; height: 8px;}
+   ::-webkit-scrollbar-track {background-color:transparent;}
+   ::-webkit-scrollbar-thumb {background-color:#8c7a60;}
+   ::-webkit-scrollbar-thumb:active {background:#564731;}
+
+/* выделение */
+   ::selection {
+    background: #564731;
+    color: #b19f80;
+   }
+
+body {
+    margin: 0 auto;
+    position: relative;
+}
+
+#chrono {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 530px;
+    background: url(background.png);
+    padding: 30px 50px 40px;
+}
+
+.tab, .tab-title {
+    display: inline-block; /* Выстраиваем по горизонтали */
+}
+
+.tab input[type="radio"] {
+    display: none;
+}
+   
+.tab-title {
+    background: #3c2f1d; /* Цвет фона */
+    padding: 0; /* Поля вокруг текста */
+    text-decoration: none;
+    outline: none;
+    border: 2px solid #8f8271;
+    -moz-border-image: -moz-linear-gradient(top, #8f8271 0%, #564731 100%);  
+    -webkit-border-image: -webkit-linear-gradient(top, #8f8271 0%, #564731 100%);  
+    border-image: linear-gradient(to bottom, #8f8271 0%, #564731 100%);  
+    border-image-slice: 1;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px #241003, 0 4px 5px #241003;
+    color: #b19f80;
+    text-shadow: 0 0px 1px #241003;
+    font-size: 20px;
+    font-family: poiret one;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin: 0 0 0 15px;
+    transition: .8s cubic-bezier(.165,.84,.44,1);
+}
+
+.tab :checked + .tab-title {
+    position: relative; /* Относительное позиционирование */
+    background: #b19f80; /* Цвет фона */
+    color: #241003;
+    z-index: 1; /* Отображаем поверх содержимого */
+}
+
+.tab :checked ~ .tab-content {
+    display: block; /* Показываем активную вкладку */
+}
+
+.tab-content {
+    position: absolute; /* Абсолютное позиционирование */
+    border: none; /* Параметры рамки */
+    border-radius: 10px;
+    padding: 0; /* Поля вокруг текста */
+    left: 50px; /* Размещаем у левого края */
+    bottom: 40px;
+    width: 500px; /* Ширина содержимого */
+    height: 460px;
+    display: none; /* Прячем вкладку */
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    border: 2px solid #564731;
+    box-shadow: inset 0 0 5px rgba(36, 16, 3, .3),
+    inset 0 0 10px rgba(36, 16, 3, .5);
+}
+
+.dossier {
+    background: url(dossier.png) no-repeat;
+}
+
+.chronology {
+    background: url(chronology.png) no-repeat;
+}
+
+.relations {
+    background: url(relations.png) no-repeat;
+}
+
+.inner {
+    margin: 7px 5px;
+    padding: 0 10px;
+    position: absolute;
+    width: 470px;
+    height: 444px;
+    overflow-x: hidden;
+    font-family: roboto;
+    font-size: 14px;
+    color: #241003;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    text-align: justify;
+}
+        
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+        
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+h1 {
+    font-size: 18px;
+    padding: 7px 5px;
+    width: 460px;
+    color: #b19f80;
+    font-family: roboto;
+    text-align: center;
+    background: #241003;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px auto;
+}
+
+h2 {
+    font-size: 14px;
+    padding: 5px;
+    font-size: 14px;
+    padding: 7px 5px;
+    width: 460px;
+    color: #b19f80;
+    font-family: roboto;
+    text-align: center;
+    background: #241003;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px auto;
+}
+
+h3 {
+    font-family: roboto;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px 0;
+}
+
+h4 {
+    padding: 5px;
+    font-family: poiret one;
+    font-size: 18px;
+    text-align: center;
+    color: #241003;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+p {
+    font-family: roboto;
+    font-size: 14px;
+    color: #564731;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: #564731;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+a:hover {
+    text-decoration: underline dashed currentColor;
+}
+
+li {
+    margin-left: 10px;
+}
+
+#topsecret {
+    width: 470px;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: arial;
+    margin: 0 auto;
+}
+
+.name {
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 45px;
+}
+
+.photo {
+    padding: 0;
+    position: absolute;
+    width: 165px;
+    height: 220px;
+    top: 50px;
+    right: 0;
+    border: 2px solid #241003;
+}
+
+.contact .photo {
+    padding: 0;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 50px;
+    right: 0;
+    border: 2px solid #241003;
+}
+
+.photo img {
+    opacity: .8;
+}
+
+.first, .third {
+    left: 0;
+    font-weight: bold;
+    position: absolute;
+    text-align: left;
+}
+
+.second {
+    left: 150px;
+    position: absolute;
+    text-align: left;
+}
+
+.fourth {
+    left: 100px;
+    position: absolute;
+    text-transform: lowercase;
+    text-align: left;
+}
+
+.appearance {
+    position: absolute;
+    top: 280px;
+}
+
+.description {
+    position: absolute;
+    top: 240px;
+}
+
+.container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 158px;
+    width: 470px;
+}
+
+.description p {
+    text-transform: initial;
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 11px;
+}
+
+.dob, .cz, .lang, .marital, .listed, .hair, .eyes, .marks, .bodytype {
+    position: absolute;
+    display: inline-block;
+    width: 280px;
+    left: 0;
+    height: 15px;
+}
+
+.height, .weight, .feet {
+    position: absolute;
+    display: inline-block;
+    width: 190px;
+    left: 280px;
+    height: 15px;
+}
+
+select {
+    scrollbar-width: initial;
+    width: 120px;
+    background: #b19f80;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: arial;
+}
+
+option, optgroup {
+    background: #b19f80;
+    text-transform: uppercase;
+}
+
+.dob {top: 100px;}
+.cz {top: 125px;}
+.lang {top: 150px;}
+.marital {top: 175px;}
+.listed {top: 200px;}
+.hair, .height {top: 325px;}
+.eyes, .weight {top: 350px;}
+.marks, .feet {top: 375px;}
+.bodytype {top: 400px;}
+
+.chronology ul, .relations ul {
+    padding: 5px;
+}
+
+.chronology ul li {
+    margin: 0;
+    display: block;
+    height: 17px;
+    font-size: 14px;
+}
+
+.chronology ul {
+  list-style: none;
+}
+
+.chronology span {
+    margin: 0;
+    display: block;
+    height: 18px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#eps-nav {
+    text-align: center;
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#eps-nav a {
+    padding: 5px 10px 3px;
+    cursor: pointer;
+    border: 1px solid #241003;
+    margin: 0 5px;
+    background: #8c7a60;
+    color: #241003;
+    text-transform: uppercase;
+}
+
+#eps-nav a.current {
+    background: #564731;
+    color: #b19f80;
+}
+
+.plot:before {
+    content: '';
+    color: transparent;
+    margin: 5px 7px 5px 5px;
+    box-shadow: 0 0 7px red;
+    width: 7px;
+    height: 7px;
+    float: left;
+    border-radius: 50%;
+    background: radial-gradient(circle at 3px 2px, #ff5e00, #d80000, #ff2727);
+    display: block;
+}
+
+.finished:before {
+  content: '';
+  color: transparent;
+  margin: 5px 7px 5px 5px;
+  box-shadow: 0 0 7px #bf0;
+  width: 7px;
+  height: 7px;
+  float: left;
+  border-radius: 50%;
+  background: radial-gradient(circle at 3px 2px, #98ea36, #81b16f, #8ac176);
+  display: block; 
+}
+
+.active:before {
+  content: '';
+  color: transparent;
+  margin: 5px 7px 5px 5px;
+  box-shadow: 0 0 7px #fff0a0;
+  width: 7px;
+  height: 7px;
+  float: left;
+  border-radius: 50%;
+  background: radial-gradient(circle at 3px 2px, #fff0a0, #d8ac00, #ffde2f);
+  display: block; 
+}
+
+.dead:before {
+  content: '';
+  color: transparent;
+  margin: 5px 7px 5px 5px;
+  box-shadow: 0 0 2px 1px #484848;
+  width: 7px;
+  height: 7px;
+  float: left;
+  border-radius: 50%;
+  background: radial-gradient(circle at 3px 2px, #9a9a9a, #252525, #545454);
+  display: block; 
+}
+
+#legend {
+    width: 470px;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+#legend table {
+    padding: 5px;
+}
+
+#legend td {
+    width: 230px;
+}
+
+summary {
+    text-decoration: none;
+    color: #564731;
+    transition: all 0.2s ease-in-out 0.1s;
+    position: relative;
+    width: auto;
+    display: inline-block;
+    padding-left: 15px;
+}
+
+summary:hover {
+    cursor: pointer;
+    text-decoration: underline dashed #564731;
+}
+
+details p {
+    padding: 0;
+    color: #241003;
+}
+
+.contact {
+top: 0;
+left: 0;
+margin: 0;
+padding: 7px 10px;
+position: absolute;
+width: 480px;
+height: 446px;
+display: none;
+z-index: 10;
+color: #241003;
+overflow-x: hidden;
+font-family: roboto;
+font-size: 14px;
+text-align: justify;
+border: none;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+-moz-border-radius: 10px;
+-o-border-radius: 10px;
+border-radius: 10px;
+background: url(relations.png) no-repeat;
+box-shadow: inset 0 0 5px rgba(36, 16, 3, .3), inset 0 0 10px rgba(36, 16, 3, .5);
+}
+
+.contact button {
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+    right: 10px;
+    background: transparent;
+    color: #b19f80;
+    text-transform: uppercase;
+    font-family: arial;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+    transition: all 0.2s ease 0.2s;
+    border: none;
+}
+
+.contact button:hover {
+    color: red;
+}

@@ -1,0 +1,411 @@
+/* Main */
+
+*{
+margin:0;
+padding:0;
+}
+
+/* полоса прокрутки (кроме мозиллы) */
+::-webkit-scrollbar {width: 7px; height: 8px;}
+::-webkit-scrollbar-track {background-color:transparent;}
+::-webkit-scrollbar-thumb {background-color:#babbd5;}
+::-webkit-scrollbar-thumb:active {background:#8e85b6;}
+
+/* GoodVibesPro */
+
+@font-face {
+    font-family: 'GoodVibesPro';
+    src: url('fonts/good_vibes_pro-webfont.eot');
+    src: url('fonts/good_vibes_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/good_vibes_pro-webfont.woff2') format('woff2'),
+         url('fonts/good_vibes_pro-webfont.woff') format('woff'),
+         url('fonts/good_vibes_pro-webfont.ttf') format('truetype'),
+         url('fonts/good_vibes_pro-webfont.svg#GoodVibesPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+margin: 0 auto;
+padding: 0;
+overflow: hidden;
+width: 878px;
+height: 535px;
+scrollbar-width: thin;
+scrollbar-color: #babbd5 transparent;
+}
+
+/* Описание */
+
+p, li {
+text-align: justify;
+text-align-last: left;
+font: normal 11px arial;
+padding: 0 5px;
+color: #52577f;
+z-index: 17;
+position: relative;
+}
+
+/* Ссылки в описании */
+
+p a, li a {
+color: #282983;
+text-decoration: none;
+transition: all 0.3s linear 0s;
+font-weight: bold;
+}
+
+p a:hover, li a:hover {
+color: #6f66a5;
+}
+
+/* Кнопка "закрыть" */
+
+button.close {
+border: none;
+background: transparent;
+z-index: 15;
+position: absolute;
+cursor: pointer;
+top: 0;
+right: 0;
+margin: -3px -2px 0 0;
+}
+
+/* Карта */
+
+.map {
+position: absolute;
+text-align: center;
+width: 878px;
+height: 535px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+svg {
+position: absolute;
+top: 0;
+left: 0;
+height: 535px;
+width: 878px;
+z-index: 12;
+}
+
+/* Маркеры карты */
+
+circle, path {
+fill: transparent;
+stroke: white;
+stroke-width: 1;
+opacity: 1;
+transition: .5s;
+}
+
+circle:hover, circle.active, path:hover, path.active {
+opacity: 1;
+fill: #508ede;
+stroke: white;
+cursor: pointer;
+transition: .5s;
+filter: drop-shadow(0 0 5px #b4d5ff);
+-webkit-filter: drop-shadow(0 0 5px #b4d5ff);
+}
+
+/* Окно описания */
+
+.description {
+position: absolute;
+width:385px;
+height: auto;
+border: none;
+display: none;
+z-index: 10;
+background: url(img/description_top.png) no-repeat top center, url(img/description_bottom.png) no-repeat bottom center, url(img/description_middle.png) repeat-y top center;
+background-color: rgba(209, 209, 234, .9);
+color: #52577f;
+padding: 0;
+top: 30px;
+left: 30px;
+z-index: 15;
+}
+
+/* Окно снизу */
+
+.bottom {
+bottom: 10px;
+top: initial!important;
+}
+
+/* Окно справа */
+
+.right {
+right: 10px;
+left: initial!important;
+}
+
+/* Уголки блока описания */
+
+.description::before {
+position: absolute;
+content: '';
+z-index: 11;
+border: none;
+background: url(img/corner.png) no-repeat top right;
+display: block;
+width: 55px;
+height: 50px;
+margin: -12px -11px 0 0;
+right: 0;
+}
+
+.description::after {
+position: absolute;
+content: '';
+z-index: 11;
+border: none;
+background: url(img/corners.png) no-repeat bottom center;
+display: block;
+width: 407px;
+height: 50px;
+margin: -38px 0 0 -11px;
+}
+
+/* Блок картинки с планетой */
+
+.description .planets {
+background: transparent;
+position: absolute;
+display: block;
+width: 125px;
+height: 125px;
+margin: -45px 0 0 -40px;
+}
+
+.description .planets_frame {
+background: url(img/planets.png) no-repeat top right transparent;
+position: absolute;
+display: block;
+width: 125px;
+height: 125px;
+margin: 0;
+z-index: 100;
+}
+
+.description .planets img {
+position: relative;
+display: block;
+height: 75px;
+width: 75px;
+margin: 0 auto;
+top: 27px;
+border-radius: 50%;
+}
+
+.description img {
+border: none;
+padding: 0;
+margin: 0;
+}
+
+/* Название блока */
+
+.description .name {
+color: #282983;
+display: grid;
+position: relative;
+padding: 15px 10px 5px;
+z-index: 16;
+float: right;
+width: 280px;
+height: 50px;
+align-content: center;
+right: 15px;
+}
+
+h2 {
+font-family: GoodVibesPro;
+font-weight: bold;
+margin: 0 auto;
+font-size: 48px;
+line-height: 1;
+}
+
+/* Содержимое блока */
+
+.description .inner {
+position: relative;
+clear: both;
+width: 345px;
+margin: 0 auto;
+max-height: 250px;
+overflow: auto;
+box-sizing: border-box;
+scrollbar-width: thin;
+scrollbar-color: #babbd5 transparent;
+top: 0;
+}
+
+/* Черта */
+
+.description .line {
+background: url(//forumuploads.ru/uploads/001a/e4/9d/2/942931.jpg) center no-repeat;
+display: block;
+position: relative;
+height: 23px;
+width: 226px;
+margin: 5px auto 20px;
+z-index: 15;
+}
+
+/************************
+
+   Дополнительные слои
+************************/
+
+/* Ссылка названия */
+
+.names_link {
+position: absolute;
+background: url(img/n.png);
+border: none;
+width: 36px;
+height: 25px;
+right: 20px;
+top: 30px;
+line-height: 1.5;
+cursor: pointer;
+z-index: 13;
+transition: opacity 0.3s linear 0s;
+opacity: .7;
+}
+
+.names_link:hover, .names_link.on {
+background: url(img/nhover.png);
+opacity: 1;
+}
+
+/* Слой названия */
+
+#names {
+position: absolute;
+width: 878px;
+height: 535px;
+top: 0;
+left: 0;
+background: url(img/names.png);
+z-index: 10;
+display: none;
+opacity: .6;
+}
+
+/* Ссылка сетка */
+
+.grid_link {
+position: absolute;
+background: url(img/grid_off.png);
+border: none;
+width: 48px;
+height: 51px;
+right: 12px;
+top: 50px;
+cursor: pointer;
+z-index: 13;
+transition: opacity 0.3s linear 0s;
+opacity: .7;
+}
+
+.grid_link:hover, .grid_link.on {
+background: url(img/grid_on.png);
+opacity: 1;
+}
+
+/* Слой сетка */
+
+#grid {
+position: absolute;
+width: 878px;
+height: 535px;
+top: 0;
+left: 0;
+background: url(img/grid.png);
+z-index: 10;
+display: none;
+opacity: .6;
+}
+
+/* Ссылка копирайт */
+
+.copyright_link {
+position: absolute;
+bottom: 10px;
+right: 10px;
+color: #8a8ab9;
+font-size: 14px;
+font-family: verdana;
+text-transform: uppercase;
+font-weight: bold;
+background: transparent;
+border: none;
+cursor: pointer;
+z-index: 13;
+transition: all 0.3s linear 0s;
+opacity: .7;
+}
+
+.copyright_link:hover, .copyright_link.on {
+color: #cecee9;
+text-shadow: 0 0 3px #b4d5ff;
+opacity: 1;
+}
+
+/* Блок копирайт */
+
+#copyright {
+position: absolute;
+bottom: 0;
+right: 30px;
+width: 250px;
+height: auto;
+color: #cecee9;
+text-shadow: 1px 1px 0 black;
+background: rgba(1, 34, 51, .75);
+font-size: 10px;
+font-family: verdana;
+text-align: justify;
+padding: 7px 12px;
+z-index: 15;
+display: none;
+line-height: 1.3;
+}
+
+#copyright a {
+color: #bbb0f5;
+text-decoration: none;
+transition: all 0.3s linear 0s;
+}
+
+#copyright a:hover {
+color: #a38fc2;
+}
+
+/* Всплывающая подсказка при наведении */
+#tooltip {
+  position: absolute;
+  background: rgba(1, 34, 51, .75);
+  z-index: 999;
+  display: none;
+  padding: 4px 10px 5px;
+  max-width: 180px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-family: verdana; /* шрифт */
+  font-size: 10px; /* размер текста */
+  font-variant: small-caps;
+  color: #cecee9; /* цвет текста */
+  text-align: center;
+  text-shadow: 1px 1px 0 black;
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
+}
