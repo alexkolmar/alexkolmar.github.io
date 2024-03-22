@@ -28,15 +28,31 @@
   overflow: hidden;
 }
 
+#pun:after,
+.punbb .post-links ul:after,
+.punbb .main div.inline:after,
+.punbb .post-box:after,
+.punbb .linksb:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow:hidden;
+  line-height: 0.0;
+  font-size: 0;
+}
+
+
 /* Основные переменные
 ------------------------------------------*/
 
 :root {
-  --body-bg: silver;
+  --body-bg: Burlywood;
   --pun-bg: ivory;
   --sec-bg: cornsilk;
-  --link: navy;
-  --link-hover: steelblue;
+  --link: darkgoldenrod;
+  --link-hover: goldenrod;
   --padding: 10px 20px;
   --tpad: 5px 20px;
   --mpad: 5px 10px;
@@ -105,6 +121,7 @@ address, em {font-style: normal;}
 ------------------------------------------*/
 
 input.button, #pun-admain input.button, #sub4, input[type="button"] {
+  padding: 2px 10px;
   border: 1px solid currentColor;
   cursor: pointer;
   transition: all .2s linear 0s;
@@ -113,6 +130,15 @@ input.button, #pun-admain input.button, #sub4, input[type="button"] {
 input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="button"]:hover {
 
 }
+
+/* ОФОРМЛЕНИЕ ПОЛЕЙ ВВОДА
+------------------------------------------*/
+
+input[type="text"], input[type="password"], textarea, select {
+  padding: 2px 5px;
+  border: 1px solid var(--link-hover);
+}
+
 
 /* Админка
 ------------------------------------------*/
@@ -295,6 +321,10 @@ tr.iclosed div.icon {
   text-align: right;
 }
 
+.linksb .postlink {
+  margin-left: auto;
+}
+
 /* Модераторское меню, RSS, Atom */
 
 .modmenu .container {
@@ -447,7 +477,9 @@ text-transform: uppercase;
   text-align: center;
 }
 
-.post-author ul {}
+.post-author ul {
+  padding: 10px;
+}
 
 .pa-author {}
 
@@ -538,6 +570,8 @@ pre {font: 11px monaco;}
 .quote-box cite {
   display: block;
   padding-bottom: 5px;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .code-box strong.legend {
@@ -545,6 +579,12 @@ pre {font: 11px monaco;}
   padding-bottom: 5px;
   font-weight: bold;
   font-style: normal;
+}
+
+.post-sig dt {
+  border-bottom: 1px solid #ccc;
+  width: 300px;
+  margin: 10px auto;
 }
 
 /* Форма ответа */
@@ -610,9 +650,27 @@ textarea, .longinput input {width: 64%; margin: 0;}
   margin: 0;
 }
 
-img.avatardemo {float: right;margin: 0 0 8px 18px;}
+#viewprofile li {
+  padding: 5px 0;
+}
 
-#pun-messages .clearer {display: none;}
+#profile-right li {
+  display: flex;
+}
+
+#profile-right li span {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+img.avatardemo {
+  float: right;
+  margin: 0 0 8px 18px;
+}
+
+#pun-messages .clearer {
+  display: none;
+}
 
 /* Прочие страницы
 ------------------------------------------*/
