@@ -1,0 +1,609 @@
+<!------------------------------------------------ Дайсы --------------------------------------------------------------------------------------------------------------------------------------------->
+<input type="button" onclick="dice()" value="Кинуть кубики" />
+<script type="text/javascript">
+function dice()
+{
+	var FoundErrors = '';
+	var diceRes=""
+	var CountCube = prompt("Количество кубиков", "3");
+	var SideCube = prompt("Сколько граней у кубика?", "10");
+	if(CountCube>10){
+	alert("Нельзя бросать столько кубиков"); 
+	return false;}
+	if(SideCube>10){
+	alert("Не бывает таких кубиков"); 
+	return false;}
+	if (!CountCube)
+	{return false;}
+	if (!SideCube)
+	{return false;}
+	for(i=0; i<CountCube;i++){
+	var dice = (Math.round(Math.random()*SideCube))
+	if(dice==0) dice=1;
+	diceRes += dice*1936+"-"
+	}
+	smile('[dice='+diceRes+CountCube+SideCube+']')
+}
+</script>
+<script>
+function addDice(str,from,internal){
+var pos=0,pos2=0,newpos=0
+if((pos=str.indexOf("[dice=",from))==-1) return str;
+if((pos2=str.indexOf("]"),pos+6)==-1) return str;
+newpos=str.indexOf("]",pos+6)
+if(newpos<pos2 && newpos!=-1) str=addDice(str,pos+6,true)
+if((pos2=str.indexOf("]",pos+6))==-1) return str;
+str=str.substring(0,pos)+makeDice(str.substring(pos+6,pos2))+str.substring(pos2+1,str.length)
+if( str.indexOf("[dice=")!=-1 && internal==false) str=addDice(str,0,false)
+return str}
+
+function makeDice(dice){
+diceMass = dice.split("-")
+diceC = dice.substring(dice.length-2, dice.length-1)
+diceS = dice.substring(dice.length-1, dice.length)
+var diceR=0, diceRu="";
+for(i=0;i<diceMass.length-1;i++){diceR+=diceMass[i]/1936;}
+for(i=0;i<diceMass.length-1;i++){if(diceMass[i]==diceMass[diceMass.length-2]){diceRu+=diceMass[i]/1936;}else{diceRu+=parseInt(diceMass[i]/1936)+"+";}}
+txt="<div class=\"quote-box\"><blockquote><p><b>Количество кубиков</b>: "+diceC+"<br /><b>Граней в кубике</b>: "+diceS+"<br /><br /><b>Результаты броска</b>: ("+diceRu+")="+diceR+"</p></blockquote></div>"
+return txt}
+
+if(document.URL.indexOf("viewtopic.php")!=-1){
+elm=document.getElementById("pun-main").getElementsByTagName("div")
+for(x in elm) if(elm[x].className=="post-content"){
+var post=elm[x]
+post.innerHTML=addDice(post.innerHTML,0,false)}}
+</script>
+<!-- Конец -->
+
+<!------------------------------------------------ ББ ЦИТАТА --------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- BB-цитирование © Alex_63, 2024 -->
+<script type="text/javascript" src="https://forumstatic.ru/f/su/1bb/bbquote.js?v=1"></script>
+
+
+
+<!------------------------------------------------ ВЫДЕЛИТЬ КОД с перемещением в буфер обмена © Damassk, 2019 --------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'скопировать код' //текст ссылки</script>
+
+<!-- Быстрая отправка/копировать запрещено -->
+<script type="text/javascript"> 
+document.onkeydown=function(e){
+if (e) event=e
+if ((event.keyCode==13)&&(event.ctrlKey)){
+document.getElementById('post').submit.click();
+}}
+</script>
+<!-- Конец -->
+
+
+<!------------------------------------------------ смайлы --------------------------------------------------------------------------------------------------------------------------------------------->
+<script src="https://forumstatic.ru/files/0013/66/99/85375.js"></script>
+<script>
+$(document).ready(function() {
+  hvStickerPack.init("https://forumstatic.ru/files/0013/66/99/36875.txt");
+});
+</script>
+<!-- Конец -->
+
+<!-------------------------------------------------------------------------------------------- ВЫРАВНИВАНИЕ ПО ШИРИНЕ --------------------------------------------------------------------------------------------------------------------------------------------->
+    <style type="text/css">
+    #button-justify { background:url(https://icons.iconarchive.com/icons/famfamfam/silk/16/text-align-justify-icon.png) center no-repeat!important;}
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $("#post #button-center").after('<td id=button-justify align=center valign=center title="Выравнивание по ширине"><img onclick="bbcode(\'[align=justify]\',\'[/align]\')" src="/i/blank.gif"/></td>');});
+    </script>
+<!-- Конец -->
+
+<!----------------------------------------------------------------------------------------------- КНОПКА АБЗАЦА - [indent] --------------------------------------------------------------------------------------------------------------------------------------------->
+<style>#button-indent {background: url(https://s7.uploads.ru/t/mnkgq.png) no-repeat center 6px!important;}</style>
+<script type="text/javascript">(function()
+{var b = '[indent]'; 
+$("#button-strike").after('<td id="button-indent" title="Отступы"><img src="/i/blank.gif"  onclick="insert(\''+b+'\')"></td>');
+var indent = '<span style="display: inline-block; margin: 1em 2.1em;"></span>'; 
+$('.post-content p:contains("'+b+'")').each(function(){ $(this).html( $(this).html().replace(/\[indent\]/gm,indent));});}());
+</script>
+<!-- Конец -->
+
+  <!--Переключение раскладки выделенного текста v.2 -->
+    <style>#button-transL{background-image:url(https://forumupload.ru/uploads/000f/09/5e/6201/44477.png)}</style>
+    <script type="text/javascript">S='<img src="https://forum.mybb.ru/i/blank.gif" title="Lat ↔ Рус" onclick="LatRus();"/>';
+    $("#button-font").after('<td id=button-transL>'+S+'</td>');
+    function LatRus(){
+    lat0='|@#$^&/?qwertyuiopasdfghjkl;\'zxcvbnm,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~[].'.split('');
+    lat='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~'.split('');
+    lat.push('\\[','\\]','\\.','\\?','\\/','\\&','\\^','\\$','\\#','\\@','\\|');
+    rus0=('йцукенгшщзфывапролджэячсмитьбЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёЁхъю,.?:;№"/').split('');
+    rus=('\,йцукенгшщзфывапролджэячсмитьбЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёЁхъю').split('');
+    rus.unshift ('\\/','\\"','\\№','\\;','\\:','\\?','\\.');
+    var selstart = document.getElementById("main-reply").selectionStart;
+    var selend = document.getElementById("main-reply").selectionEnd;
+    L=$('#main-reply').val();
+    if (typeof selstart === "number" && typeof selend === "number"){
+    var TxtTrans1 = (L.substring(selstart,selend).search(/[qwertyuiopasdfghjklzxcvbnm]/i)!=-1?'rus':'lat');
+    var ar2=lat0,ar1=rus; if(TxtTrans1=='rus'){ar1=lat;ar2=rus0;
+    selstart+=L.substring(selstart,selend).search(/[.,]*?[qwertyuiopasdfghjklzxcvbnm]/i); latend=L.substring(selstart,selend).search(/[йцукенгшщзфывапролджэячсмитьёхъю]/i);
+    if (latend != -1) {selend = selstart+latend;}}
+    L=L.substring(0,selstart) + L.substring(selstart,selend).replace(/[\s\S]*/mg,function(p){
+    for(var i=0; i<ar1.length; i++){trans='/'+ar1[i]+'/g';p=p.replace(eval(trans), ar2[i])}return p;}) + L.substring(selend);}$('#main-reply').val(L);}</script>
+<!-- Расширенная палитра цветов (NEW) -->
+    <script type="text/javascript">
+    $('#color-area tr').append('<td><input type="color" id="litr" style="cursor:pointer;padding:0;width:22px;" title="Показать всю палитру" value="#ffa500"></td>');$('#litr').change(function(){bbcode('[color='+this.value+']','[/color]');});
+    </script>
+    <style type="text/css">
+    input[type=color]::-webkit-color-swatch {background-color: transparent !important; border:none;}
+    input[type=color]::-moz-color-swatch {background-color: transparent !important; border:none;}
+    #litr{background: url(https://forumupload.ru/uploads/001b/cb/f4/21/780573.png) no-repeat scroll 0 0 / cover ;}
+    </style>
+
+<!--------------------------------------------------------------------------------- СЧЕТЧИК СИМВОЛОВ В ФОРМЕ ОТВЕТА --------------------------------------------------------------------------------------------------------------------------------------------->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng">написано <b>00</b> символов </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+<!-- *************************************************************** -->
+
+<!----------------------------------------------------------------------------- Включаем HTML в Постах в Вспл.табличке --------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script type="text/javascript">
+$(function(){$('img.a-info,.my-tabs>span').live('click',function(){$("li.tab-a").map(function(){HTMLinPost.parseTags($(this).attr("data-group-id",0))});
+$('*[title]').quicktip({speed:700 /*Скорость появления подсказки*/});
+});});
+</script>
+<!-- Конец -->
+
+<!------------------------------------------------------------------------------------- ОТКЛЮЧЕНИЕ ФУНКЦИЙ И КНОПОК --------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Отключение сокращения ссылок -->
+<script type="text/javascript">
+FORUM.set("editor.link.short_url", function() { return false; });
+</script>
+
+<!-- Скрыть "Пожаловаться" -->
+<style type="text/css">
+.pl-reports {display:none!important;}
+</style>
+
+<!-- Скрыть "rss-atom" -->
+<style type="text/css">
+.punbb .modmenu .container span {display: none;}
+</style>
+
+<!------------------------------------------------------------------------------------- МАСКА --------------------------------------------------------------------------------------------------------------------------------------------->
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+hvScriptSet.addMask({
+    guestAccess: ['раздел', 'раздел2', 'раздел3', 'раздел4'],
+    forumAccessExtended: {
+        'раздел': ['Игрок', 'группа пользователя'],
+        'раздел1': ['Игрок', 'группа пользователя'],
+        'раздел2': ['Игрок', 'группа пользователя'],
+        'раздел4': ['группа пользователя', 'группа пользователя'],
+
+    },
+    userFields: ['pa-author', 'pa-title', 'pa-avatar', 'pa-fld1', 'pa-fld2', 'pa-posts', 'pa-respect']
+});
+</script>
+<!-- Конец -->
+
+
+<script type="text/javascript">
+var nabor=[];
+
+ nabor['эмоджи'] = [
+'https://forumstatic.ru/files/001b/2b/70/15810.png',
+'http://forumstatic.ru/files/001b/2b/70/35653.png',
+'http://forumstatic.ru/files/001b/2b/70/49668.png',
+'http://forumstatic.ru/files/001b/2b/70/64714.png',
+'http://forumstatic.ru/files/001b/2b/70/56918.png',
+'http://forumstatic.ru/files/001b/2b/70/61262.png',
+'http://forumstatic.ru/files/001b/2b/70/27642.png',
+'http://forumstatic.ru/files/001b/2b/70/43648.png',
+'http://forumstatic.ru/files/001b/2b/70/51781.png',
+'http://forumstatic.ru/files/001b/2b/70/93419.png',
+'http://forumstatic.ru/files/001b/2b/70/41586.png',
+'http://forumstatic.ru/files/001b/2b/70/27840.png',
+'http://forumstatic.ru/files/001b/2b/70/95837.png',
+'http://forumstatic.ru/files/001b/2b/70/57038.png',
+'http://forumstatic.ru/files/001b/2b/70/50856.png',
+'http://forumstatic.ru/files/001b/2b/70/87573.png',
+'http://forumstatic.ru/files/001b/2b/70/89175.png',
+'http://forumstatic.ru/files/001b/2b/70/28550.png',
+'http://forumstatic.ru/files/001b/2b/70/26667.png',
+'http://forumstatic.ru/files/001b/2b/70/38135.png',
+'http://forumstatic.ru/files/001b/2b/70/92421.png',
+'http://forumstatic.ru/files/001b/2b/70/64941.png',
+'http://forumstatic.ru/files/001b/2b/70/33894.png',
+'http://forumstatic.ru/files/001b/2b/70/15022.png',
+'http://forumstatic.ru/files/001b/2b/70/17284.png',
+'http://forumstatic.ru/files/001b/2b/70/17588.png',
+'http://forumstatic.ru/files/001b/2b/70/57921.png',
+'http://forumstatic.ru/files/001b/2b/70/10633.png',
+'http://forumstatic.ru/files/001b/2b/70/75847.png',
+'http://forumstatic.ru/files/001b/2b/70/77650.png',
+'http://forumstatic.ru/files/001b/2b/70/67189.png',
+'http://forumstatic.ru/files/001b/2b/70/37926.png',
+'http://forumstatic.ru/files/001b/2b/70/70389.png',
+'http://forumstatic.ru/files/001b/2b/70/16884.png',
+'http://forumstatic.ru/files/001b/2b/70/42119.png',
+'http://forumstatic.ru/files/001b/2b/70/88028.png',
+'http://forumstatic.ru/files/001b/2b/70/69035.png',
+'http://forumstatic.ru/files/001b/2b/70/32627.png',
+'http://forumstatic.ru/files/001b/2b/70/73650.png',
+'http://forumstatic.ru/files/001b/2b/70/70594.png',
+'http://forumstatic.ru/files/001b/2b/70/28267.png',
+'http://forumstatic.ru/files/001b/2b/70/35307.png',
+'http://forumstatic.ru/files/001b/2b/70/30023.png',
+'http://forumstatic.ru/files/001b/2b/70/62721.png',
+'http://forumstatic.ru/files/001b/2b/70/77220.png',
+'http://forumstatic.ru/files/001b/2b/70/43767.png',
+'http://forumstatic.ru/files/001b/2b/70/54717.png',
+'http://forumstatic.ru/files/001b/2b/70/51918.png',
+'http://forumstatic.ru/files/001b/2b/70/31191.png',
+'http://forumstatic.ru/files/001b/2b/70/54103.png',
+'http://forumstatic.ru/files/001b/2b/70/79366.png',
+'http://forumstatic.ru/files/001b/2b/70/94562.png',
+'http://forumstatic.ru/files/001b/2b/70/55019.png',
+'http://forumstatic.ru/files/001b/2b/70/29322.png',
+'http://forumstatic.ru/files/001b/2b/70/37303.png',
+'http://forumstatic.ru/files/001b/2b/70/29638.png',
+'http://forumstatic.ru/files/001b/2b/70/28778.png',
+'http://forumstatic.ru/files/001b/2b/70/13614.png',
+'http://forumstatic.ru/files/001b/2b/70/27398.png',
+'http://forumstatic.ru/files/001b/2b/70/54345.png',
+'http://forumstatic.ru/files/001b/2b/70/50276.png',
+'http://forumstatic.ru/files/001b/2b/70/68648.png',
+'http://forumstatic.ru/files/001b/2b/70/58990.png',
+'http://forumstatic.ru/files/001b/2b/70/49234.png',
+'http://forumstatic.ru/files/001b/2b/70/55211.png',
+'http://forumstatic.ru/files/001b/2b/70/35582.png',
+'http://forumstatic.ru/files/001b/2b/70/19198.png',
+'http://forumstatic.ru/files/001b/2b/70/20423.png',
+'http://forumstatic.ru/files/001b/2b/70/97154.png',
+'http://forumstatic.ru/files/001b/2b/70/57405.png',
+'http://forumstatic.ru/files/001b/2b/70/54655.png',
+'http://forumstatic.ru/files/001b/2b/70/67396.png',
+'http://forumstatic.ru/files/001b/2b/70/67894.png',
+'http://forumstatic.ru/files/001b/2b/70/13042.png',
+'http://forumstatic.ru/files/001b/2b/70/68032.png',
+'http://forumstatic.ru/files/001b/2b/70/52513.png',
+'http://forumstatic.ru/files/001b/2b/70/66191.png',
+'http://forumstatic.ru/files/001b/2b/70/82012.png',
+'http://forumstatic.ru/files/001b/2b/70/52675.png',
+'http://forumstatic.ru/files/001b/2b/70/82972.png',
+'http://forumstatic.ru/files/001b/2b/70/68606.png',
+'http://forumstatic.ru/files/001b/2b/70/94003.png',
+'http://forumstatic.ru/files/001b/2b/70/51554.png',
+'http://forumstatic.ru/files/001b/2b/70/81385.png',
+'http://forumstatic.ru/files/001b/2b/70/51866.png',
+'http://forumstatic.ru/files/001b/2b/70/83895.png'];
+
+nabor['киски'] = ['https://i.imgur.com/c0yLHP0.png',
+'https://i.imgur.com/HhNWhVz.png',
+'https://i.imgur.com/NR49NKb.png',
+'https://i.imgur.com/taPumb8.png',
+'https://i.imgur.com/mRR0KkR.gif',
+'https://i.imgur.com/cyq3CV4.gif',
+'https://i.imgur.com/V4FO8fU.gif',
+'https://i.imgur.com/gf9gKBU.gif',
+'https://i.imgur.com/Sir2dz7.png',
+'https://i.imgur.com/undmDyj.gif',
+'https://i.imgur.com/guvcD2b.png',
+'https://i.imgur.com/AZoKt6B.gif',
+'https://i.imgur.com/u7WDESb.png',
+'https://i.imgur.com/S9il12l.gif',
+'https://i.imgur.com/3WptGmR.png',
+'https://i.imgur.com/6N7hU5d.gif',
+'https://i.imgur.com/VI6rK5E.png',
+'https://i.imgur.com/ILNQriV.gif',
+'https://i.imgur.com/ua0q6y6.gif',
+'https://i.imgur.com/l2AwjGL.gif',
+'https://i.imgur.com/uOOLCPq.gif',
+'https://i.imgur.com/osSoGLq.gif',
+'https://i.imgur.com/4t1VNxw.gif',
+'https://i.imgur.com/4i9kukz.gif',
+'https://i.imgur.com/PIzKqYY.gif',
+'https://i.imgur.com/iPjuAbD.png',
+'https://i.imgur.com/vjfgeRr.png',
+'https://i.imgur.com/wHYQy07.png',
+'https://i.imgur.com/aJtwsot.gif',
+'https://i.imgur.com/V9lN9fw.gif',
+'https://i.imgur.com/BdILQLb.gif',
+'https://i.imgur.com/BSxMxTy.gif',
+'https://i.imgur.com/Qvqwhga.gif',
+'https://i.imgur.com/7o3tBLC.gif',
+'https://i.imgur.com/QVSnWi9.gif',
+'https://i.imgur.com/JRF13LP.gif',
+'https://i.imgur.com/1Dok9iv.gif',
+'https://i.imgur.com/e16J05C.png',
+'https://i.imgur.com/mIkj9tz.gif',
+'https://i.imgur.com/p9qNF6o.gif',
+'https://i.imgur.com/smQLr9g.gif',
+'https://i.imgur.com/judWeTI.gif',
+'https://i.imgur.com/esFZOF3.gif',
+'https://i.imgur.com/0PVKK7y.gif',
+'https://i.imgur.com/TIdZy6o.gif',
+'https://i.imgur.com/ObyFx6f.gif',
+'https://i.imgur.com/9v1mxtu.png',
+'https://i.imgur.com/yUS3bPh.png',
+'https://i.imgur.com/DEoStIo.png',
+'https://i.imgur.com/zypb36Y.gif',
+'https://i.imgur.com/8H57HjD.gif',
+'https://i.imgur.com/HCXJifi.gif',
+'https://i.imgur.com/BIcqciD.gif',
+'https://i.imgur.com/PqXt602.gif',
+'https://i.imgur.com/2ElifsP.gif',
+'https://i.imgur.com/pHemO1q.gif',
+'https://i.imgur.com/1KUS4Fq.gif',
+'https://i.imgur.com/ix93JXL.gif',
+'https://i.imgur.com/g60uCfa.png',
+'https://i.imgur.com/xayOPPo.gif',
+'https://i.imgur.com/8EoRdEq.gif',
+'https://i.imgur.com/6fJpi.png',
+'https://i.imgur.com/PHQFe3s.png',
+'https://i.imgur.com/xqrD26n.gif',
+'https://i.imgur.com/9P0Qcpf.png',
+'https://i.imgur.com/9SX57zJ.png',
+'https://i.imgur.com/168qb.png'];
+
+nabor['колобки'] = [
+'https://imgs.su/tmp/2012-09-23/1348351154-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351186-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351196-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351206-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351218-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351229-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351239-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351251-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351265-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351285-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351298-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351314-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351328-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351358-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351368-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351405-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348351424-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348352007-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348352018-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348352091-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348352108-711.jpg',
+'http://imgs.su/tmp/2013-01-15/1358196278-711.jpg',
+'http://imgs.su/tmp/2013-01-15/1358196200-711.jpg',
+'http://imgs.su/tmp/2012-09-23/1348352372-711.jpg',
+'http://imgs.su/tmp/2013-01-15/1358196366-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847603-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847635-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847653-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847670-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847755-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847764-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359847783-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359848523-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359848532-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359848553-711.jpg',
+'http://imgs.su/tmp/2013-02-03/1359848563-711.jpg',
+'http://imgs.su/tmp/2013-01-15/1358196152-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367244749-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367244760-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367244771-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367245170-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367245183-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367245200-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367245451-711.jpg',
+'http://imgs.su/tmp/2013-04-29/1367245481-711.jpg',
+'http://s7.uploads.ru/Y7OHR.gif'
+];
+
+nabor['гифки'] = [
+'https://i.imgur.com/plrPgkR.gif',
+'https://i.imgur.com/wdmBMaZ.gif',
+'https://i.imgur.com/jc4IEPw.gif',
+'https://i.imgur.com/FeCP2wH.gif',
+'https://i.imgur.com/iHFooWC.gif',
+'https://i.imgur.com/bYzO9kR.gif',
+'https://i.imgur.com/C3QtPTO.gif',
+'https://i.imgur.com/GrSm8XP.gif',
+'https://i.imgur.com/opaTIOS.gif',
+'https://i.imgur.com/EVIXOrp.gif',
+'https://i.imgur.com/JP6rLjM.gif',
+'https://i.imgur.com/9uhgaCR.gif',
+'https://i.imgur.com/uU6V5yW.gif',
+'https://i.imgur.com/4hrTfMK.gif',
+'https://i.imgur.com/Kx6wEni.gif',
+'https://i.imgur.com/tWvgIWw.gif',
+'https://i.imgur.com/IW8PZ74.gif',
+'https://i.imgur.com/SXUgLrE.gif',
+'https://i.imgur.com/r6CJHNy.gif',
+'https://i.imgur.com/WUXsbKB.gif',
+'https://i.imgur.com/G6Mx44x.gif',
+'https://i.imgur.com/oej7M6Z.gif',
+'https://i.imgur.com/s7WahQs.gif',
+'https://i.imgur.com/rU9KB3d.gif',
+'https://i.imgur.com/G7fjKxt.gif',
+'https://i.imgur.com/wpPoxJ5.gif',
+'https://i.imgur.com/4juQXE0.gif',
+'https://i.imgur.com/9dOHbO2.gif',
+'https://i.imgur.com/CrjFH5q.gif',
+'https://i.imgur.com/plaKT3j.gif',
+'https://i.imgur.com/ZnDC2q3.gif',
+'https://i.imgur.com/0eDRUjo.gif',
+'https://i.imgur.com/jRUy8zF.gif',
+'https://i.imgur.com/FLw0lY8.gif',
+'https://i.imgur.com/vwvNnyr.gif',
+'https://i.imgur.com/q5ZVbW8.gif',
+'https://i.imgur.com/wJfNJp1.gif',
+'https://i.imgur.com/P2L0ThI.gif',
+'https://i.imgur.com/tKwrZvB.gif',
+'https://i.imgur.com/SvPF9H3.gif',
+'https://i.imgur.com/Eec5MLV.gif',
+'https://i.imgur.com/T8bwU2E.gif',
+'https://i.imgur.com/9d5UM88.gif',
+'https://i.imgur.com/QbV1ErL.gif',
+'https://i.imgur.com/4cFB5Cv.gif',
+'https://i.imgur.com/tg0JaLy.gif',
+'https://i.imgur.com/aEqR1TI.gif',
+'https://i.imgur.com/mwvQHzM.gif',
+'https://i.imgur.com/HTRGtkL.gif',
+'https://i.imgur.com/LzVoaZm.gif',
+'https://i.imgur.com/A2RHxcQ.gif',
+'https://i.imgur.com/x45cVyL.gif',
+'https://i.imgur.com/4ip5Ej4.gif',
+'https://i.imgur.com/cTpUsMX.gif',
+'https://i.imgur.com/THTnJdQ.gif',
+'https://i.imgur.com/4v05GPq.gif',
+'https://i.imgur.com/W8HkwU8.gif',
+'https://i.imgur.com/4I3n2D3.gif',
+'https://i.imgur.com/dz83V9a.gif',
+'https://i.imgur.com/er8ot0b.gif',
+'https://i.imgur.com/EqpWMfN.gif',
+'https://i.imgur.com/X4FOaZT.gif',
+'https://i.imgur.com/9UynNzt.gif',
+'https://i.imgur.com/Hkcigpf.gif',
+'https://i.imgur.com/GK6g1QG.gif',
+'https://i.imgur.com/ekvtBYb.gif',
+'https://i.imgur.com/0nkmC4K.gif',
+'https://i.imgur.com/9m1KCI1.gif',
+'https://i.imgur.com/cran1JT.gif',
+'https://i.imgur.com/lfa3GSh.gif',
+'https://i.imgur.com/qOJCEPG.gif',
+'https://i.imgur.com/nFlyIfO.gif',
+'https://i.imgur.com/MneSRvm.gif',
+'https://i.imgur.com/6q6yWxe.gif',
+'https://i.imgur.com/eAsRJjK.gif',
+'https://i.imgur.com/biDrLs9.gif',
+'https://i.imgur.com/2r3AmbA.gif',
+'https://i.imgur.com/Imt6h2t.gif',
+'https://i.imgur.com/IopEd41.gif',
+'https://i.imgur.com/GSebPAy.gif',
+'https://i.imgur.com/FYPvu0W.gif',
+'https://i.imgur.com/F7ghuLM.gif',
+'https://i.imgur.com/0xj4EoO.gif',
+'https://i.imgur.com/nkncOky.gif',
+'https://i.imgur.com/CPMaywU.gif',
+'https://i.imgur.com/RMHOzF7.gif',
+'https://i.imgur.com/FMTNX4m.gif',
+'https://i.imgur.com/Tzkpw4Y.gif',
+'https://i.imgur.com/mUSlNGe.gif',
+'https://i.imgur.com/9EbgZUb.gif',
+'https://i.imgur.com/TYNy03I.gif',
+'https://i.imgur.com/k0oyx0m.gif',
+'https://i.imgur.com/GJtC0DB.gif',
+'https://i.imgur.com/PMqYj5E.gif',
+'https://i.imgur.com/pnVZyEs.gif',
+'https://i.imgur.com/0v5Y1AI.gif',
+'https://i.imgur.com/lbSV3pm.gif',
+'https://i.imgur.com/IY8PrFM.gif',
+'https://i.imgur.com/N8nBgsI.gif',
+'https://i.imgur.com/POeCttU.gif',
+'https://i.imgur.com/wdwh9SR.gif',
+'https://i.imgur.com/A8aw0Ce.gif',
+'https://i.imgur.com/XiZfbBa.gif',
+'https://i.imgur.com/uqFpdsQ.gif',
+'https://i.imgur.com/Nwx9XHh.gif',
+'https://i.imgur.com/2e9GXwN.gif',
+'https://i.imgur.com/LqR7pWv.gif',
+'https://i.imgur.com/pukEzMk.gif',
+'https://i.imgur.com/1Hg3XLK.gif',
+'https://i.imgur.com/tkraFRg.gif',
+'https://i.imgur.com/FZZOeQH.gif',
+'https://i.imgur.com/KTGai4s.gif',
+'https://i.imgur.com/RrSYMSI.gif',
+'https://i.imgur.com/L2ZVSIF.gif',
+'https://i.imgur.com/AviBAC6.gif',
+'https://i.imgur.com/IrdeGFr.gif',
+'https://i.imgur.com/BTWMKct.gif',
+'https://i.imgur.com/fJuKhat.gif',
+'https://i.imgur.com/yybgZb1.png',
+'https://i.imgur.com/LyFLffD.gif',
+'https://i.imgur.com/VoeWpor.gif',
+'https://i.imgur.com/Z40IX45.gif',
+'https://i.imgur.com/RcnAY8o.gif',
+'https://i.imgur.com/VJxXRwX.gif',
+'https://i.imgur.com/Th7JeyM.gif',
+'https://i.imgur.com/6G7fI92.gif',
+'https://i.imgur.com/IJPtVYu.gif',
+'https://i.imgur.com/4PSaErB.gif',
+'https://i.imgur.com/pWHwKox.gif',
+'https://i.imgur.com/qqN1mto.gif',
+'https://i.imgur.com/9TA3m5G.gif',
+'https://i.imgur.com/1Dg1Z12.gif',
+'https://i.imgur.com/aNgi5xv.gif',
+'https://i.imgur.com/I7hZeJA.gif',
+'https://i.imgur.com/1BDbd0C.gif',
+'https://i.imgur.com/mbfb8BD.gif',
+'https://i.imgur.com/VhnPVpV.gif',
+'https://i.imgur.com/mUvJizx.gif',
+'https://i.imgur.com/7tlfOCa.gif',
+'https://i.imgur.com/80IaQFO.gif',
+'https://i.imgur.com/ZADgQxo.gif',
+'https://i.imgur.com/k0dsJBf.gif',
+'https://i.imgur.com/eOtpTrT.gif',
+'https://i.imgur.com/GAmWx5e.gif',
+'https://i.imgur.com/puIUUK7.gif',
+'https://i.imgur.com/7QbBUIp.gif',
+'https://i.imgur.com/GIw42fk.gif',
+'https://i.imgur.com/i8e9lpP.gif',
+'https://i.imgur.com/6QLMvxi.gif',
+'https://i.imgur.com/PEcPmqH.gif',
+'https://i.imgur.com/ZIz365O.gif',
+'https://i.imgur.com/H2bIr8d.gif',
+'https://s7.uploads.ru/t/RHoUG.gif',
+'https://s9.uploads.ru/y2PEx.gif',
+'https://i.imgur.com/m7jxebz.gif',
+'https://i.imgur.com/rtBz02K.gif',
+'https://i.imgur.com/coHF0Er.gif',
+'https://i.imgur.com/nM310XH.gif',
+'https://i.imgur.com/84cLeBw.gif',
+'https://i.imgur.com/EZswfxN.gif',
+'https://s9.uploads.ru/rcNEH.gif'
+];
+
+//[0].removeAttribute('onclick')
+ $('#button-smile').one('click',function(){var vkl = '<div id="wrapper"><ul class="tabs" onclick="smilies();return 0;"></ul></div>';$('#smilies-area')[0].removeAttribute('onclick');$('#smilies-area').html(vkl);var j=0;for(var i in nabor){$('.tabs').append('<li class="t-'+i+(!j?' active':'')+'"><a>'+i+'</a></li>');$('#wrapper').append('<div class="t-'+i+'" '+(j?'style="display:none;"':'')+'></div>');$.each(nabor[i],function(q){$('div.t-'+i).append('<img " width: " 100px " src="'+nabor[i][q]+'" onclick=smile("[img=smalimg]'+nabor[i][q]+'[/img]") />');});j++};$('.tabs li').click(function(){var thisClass=this.className;$('#smilies-area div[class^="t-"]').hide();$('div.'+thisClass).fadeToggle('slow');$('.tabs li').removeClass('active');$(this).addClass('active');}); $('#smilies-area img').click(function(){ $('#smilies-area').hide();});});
+</script>
+
+<style type="text/css">
+#wrapper {width: 460px; background-color: #d4d4d4;}
+#smilies-area {width: 460px; padding: 10px;}
+#smilies-area img {margin: 2px!important;}
+/* вкладки доп смайлов */
+ul.tabs {height: 25px;line-height: 20px;margin: 0 0 3px;list-style: none;}
+ul.tabs li {float: left;margin-right: 1px; cursor:pointer;}
+ul.tabs li a {background: url("https://flowplayer.org/img/global/tabs.png") no-repeat scroll -652px 0 transparent;color: #444444;cursor: pointer;display: block;margin-bottom: -1px;padding: 0 14px 1px;position: relative;text-decoration: none;width: 70px;}
+ul.tabs li a:hover {color:#EFEFEF;padding: 0 14px;background: url("http://flowplayer.org/img/global/tabs.png")no-repeat scroll;background-position: -652px -31px; text-decoration:none;}
+ul.tabs li.tab-current a {color: #444;padding: 0px 14px 2px;border:medium hidden;line-height: 22px;background-position: -652px -62px;}
+ul.tabs li.tab-current a:hover {color: #6A5ACD;}
+div[class="t-эмоджи"]{background: #e9e9e9;}
+div[class="t-киски"]{background: #e9e9e9;}
+div[class="t-колобки"]{background: #e9e9e9;}
+div[class="t-гифки"]{background: #e9e9e9;}
+div[class^="t-"]{
+    width: 460px;
+    height: 126px;
+    overflow-y: auto;}
+</style>
+
+<!--дополнительные шрифты -->
+<script type="text/javascript">
+$(document).ready(function(){
+
+     $("#font-area").append('<div style="font-family:Arkhip"><span>Arkhip</span><img onclick="bbcode(\'[font=Arkhip]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Baron Neue"><span>Baron Neue</span><img onclick="bbcode(\'[font=Baron Neue]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Basis"><span>Basis</span><img onclick="bbcode(\'[font=Basis]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Bebas Neue"><span>Bebas Neue</span><img onclick="bbcode(\'[font=Bebas Neue]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Yeseva One"><span>Yeseva One</span><img onclick="bbcode(\'[font=Yeseva One]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Bradobrei"><span>Bradobrei</span><img onclick="bbcode(\'[font=Bradobrei]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Cuprum"><span>Cuprum</span><img onclick="bbcode(\'[font=Cuprum]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Calypso"><span>Calypso</span><img onclick="bbcode(\'[font=Calypso]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Cheque"><span>Cheque</span><img onclick="bbcode(\'[font=Cheque]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Code Pro"><span>Code Pro</span><img onclick="bbcode(\'[font=Code Pro]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Curator"><span>Curator</span><img onclick="bbcode(\'[font=Curator]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Gunny Rewritten"><span>Gunny Rewritten</span><img onclick="bbcode(\'[font=Gunny Rewritten]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Helvetica Neue Medium"><span>Helvetica Neue Medium</span><img onclick="bbcode(\'[font=Helvetica Neue Medium]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Journalism"><span>Journalism</span><img onclick="bbcode(\'[font=Journalism]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Lighthaus"><span>Lighthaus</span><img onclick="bbcode(\'[font=Lighthaus]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+     $("#font-area").append('<div style="font-family:Pirata One"><span>Pirata One</span><img onclick="bbcode(\'[font=Pirata One]\',\'[/font]\')" src="/i/blank.gif" /></div>');
+
+
+});
+</script>

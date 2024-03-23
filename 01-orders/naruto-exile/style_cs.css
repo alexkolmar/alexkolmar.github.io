@@ -1,0 +1,55 @@
+/* Переключения стилей
+------------------------------------------------------*/
+
+/* Кнопки переключения стилей */
+
+#stylelist {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    z-index: 10000;
+  }
+  
+  #stylelist a {
+    color: var(--buttontextcolor);
+  }
+  
+  /* Светлый стиль */
+  
+  .light #stylelist a {
+    color: var(--accent-light);
+  }
+  
+  body.light::before {
+    background: var(--wordcolor) url(https://forumstatic.ru/files/0015/28/00/73696.jpg) no-repeat fixed top center/cover;
+  }
+  
+  .light #pun-title {
+    background: url(https://forumstatic.ru/files/0016/01/4e/96159.png) no-repeat top center,  url(https://forumstatic.ru/files/0015/28/00/73696.jpg) no-repeat fixed top center/cover var(--wordcolor);
+    height: 354px;
+  }
+  
+  .light #pun-navlinks li a {
+    color: var(--accent-light);
+  }
+  
+  .light #pun-navlinks li a:hover {
+    color: var(--buttoncolor);
+  }
+  
+  .light .forum_info {
+    color: var(--wordcolor1);
+  }
+  
+  .light .ssilki a {
+    background: #e2e2e2;
+    color: var(--black);
+  }
+  
+  .light .ssilki a:hover {
+    color: var(--buttontextcolor);
+  }
