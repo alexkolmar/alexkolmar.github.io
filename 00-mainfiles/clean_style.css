@@ -321,8 +321,13 @@ tr.iclosed div.icon {
   text-align: right;
 }
 
+.linksb noindex {
+  order: 1;
+}
+
 .linksb .postlink {
   margin-left: auto;
+  text-align: right;
 }
 
 /* Модераторское меню, RSS, Atom */
