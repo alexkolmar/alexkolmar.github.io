@@ -670,16 +670,17 @@ tr.iclosed div.icon {
 }
 
 #pun-index .user-avatar {
-  opacity: 1;
+  margin: 2px 10px 0 0;
+  float: left;
   height: 28px;
   width: 28px;
-  margin: 2px 10px 0 0;
+  opacity: 1;
 }
 
 #pun-index .user-avatar .avatar-image {
-  opacity: 1;
   height: 28px;
   width: 28px;
+  opacity: 1;
   filter: contrast(1.5) brightness(1) grayscale(0.5);
 }
 
@@ -1192,9 +1193,13 @@ li#onlinelist {
   background: url(https://forumstatic.ru/files/0015/28/00/73696.jpg);
 }
 
-.pa-avatar img {}
+.pa-avatar img {
+  max-height: 190px;
+  max-width: 190px;
+  border: solid 1px var(--wordcolor1);
+}
 
-.pa-fld2 rank {
+.pa-fld2 rank, #pa-fld2 rank {
   display: flex;
   justify-content: center;
   width: 238px;
@@ -1203,7 +1208,7 @@ li#onlinelist {
   overflow: hidden;
 }
 
-.pa-fld2 rank text {
+.pa-fld2 rank text, #pa-fld2 rank text {
   padding: 2px 10px 0;
   width: 100%;
   display: flex;
@@ -1219,7 +1224,7 @@ li#onlinelist {
   color: var(--white);
 }
 
-.pa-fld2 rank text niz {
+.pa-fld2 rank text niz, #pa-fld2 rank text niz {
   font-size: 12px;
   margin-top: -2px;
   font-weight: 300;
@@ -1606,7 +1611,7 @@ fieldset fieldset {
   padding: 0 0 8px 0
 }
 
-.fs-box {padding: 5px 0;}
+.fs-box {padding: 10px 0;}
 
 .fs-box p, .fs-box fieldset {padding: 0 0 8px 0;}
 
@@ -1646,10 +1651,71 @@ textarea, .longinput input {width: 64%; margin: 0;}
 
 #viewprofile li {
   padding: 5px 0;
+  margin-bottom: 2px;
+}
+
+#pun-profile #profile-left strong, #pun-profile #profile-right strong {
+  font-weight: 400 !important;
+}
+
+#pun-profile #profile-left {
+  margin: 0 auto;
+  padding: 15px 0 !important;
+  width: 240px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--bordercolor);
+  background-color: var(--wordcolor);
+  border-radius: 15px;
+}
+
+#profile-left #profile-name {
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'cuprum';
+  letter-spacing: 1px;
+  color: var(--buttoncolor);
+  text-transform: uppercase;
+}
+
+#profile-left #profile-title {
+  margin: 0 auto 5px;
+  padding: 3px;
+  width: 180px;
+  font-size: 10px;
+  line-height: 1;
+  font-family: Arial;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+#profile-left #pa-online {
+  color: var(--textcolor);
+  text-transform: uppercase;
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  box-sizing: border-box;
+  line-height: 1;
+  font-family: Arial;
 }
 
 #profile-right li {
   display: flex;
+}
+
+#viewprofile li {
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: Arial;
 }
 
 #profile-right li span {
@@ -1668,8 +1734,11 @@ img.avatardemo {
 
 #pun-messages .post h3 span {padding: 10px 0;}
 
+
 /* Прочие страницы
 ------------------------------------------*/
+
+.punbb td .user-avatar {float: right;}
 
 /* Список пользователей */
 
