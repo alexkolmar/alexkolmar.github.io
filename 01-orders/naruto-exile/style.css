@@ -486,8 +486,6 @@ tr.iclosed div.icon {
   letter-spacing: 0.4px;
 }
 
-.linkst .pagelink {}
-
 .linkst .postlink {
   text-align: right;
 }
@@ -1751,8 +1749,6 @@ img.avatardemo {
 
 #pun-userlist .tcl {width: 40%}
 
-.usertable .container {}
-
 /* Собщения об ошибках */
 
 .info .container {padding: var(--mpad);}
@@ -1854,3 +1850,108 @@ img.avatardemo {
 html
 **********************************/
 
+.need {
+  background: #ccce url(https://forumstatic.ru/files/0013/66/99/68472.png) top center/cover;
+  height: 631px;
+  width: auto;
+  border: 1px solid #0000;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 0px 80px var(--white) inset;
+  margin: 5px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+
+.need #stat {
+display: none;
+}
+
+.need #info {
+  display: flex;
+  border: 1px solid #000;
+  padding: 30px 50px 25px;
+  background: #000000bd url(https://forumstatic.ru/files/0015/28/00/93955.png);
+  color: var(--white);
+  gap: 0 147px;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.need #info blok img {
+  border: 1px solid var(--linkhover);
+}
+
+.need #info blok span {
+  display: block;
+  font-family: var(--rus);
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.need #info blok name {
+  display: block;
+  text-align: center;
+  font-family: 'cuprum';
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white) !important;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.need #info blok prof, .need #info blok owl, .need #info blok born {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: var(--rus);
+  text-transform: uppercase;
+}
+
+.need #info blok z {
+  font-weight: 700;
+  color: var(--accentcolor2);
+  letter-spacing: .5px;
+}
+
+.need #bio {
+  margin: 10px;
+  padding: 10px;
+  color: #282927;
+  height: 310px;
+  overflow: hidden;
+  text-align: justify;
+  background: #ffffffa8;
+}
+
+.need zagolovok {
+  display: block;
+  color: #373737;
+  font-family: var(--rus);
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.need zagolovok::before {
+  content: '\eac3';
+  font-family: var(--mso);
+}
+
+.need zagolovok::after {
+  content: '\eac9';
+  font-family: var(--mso);
+}
+
+.need text {
+  overflow: auto;
+  height: 290px;
+  display: block;
+}
+
+.punbb .need text p {
+  padding: 0;
+}
