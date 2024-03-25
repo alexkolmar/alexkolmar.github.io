@@ -462,6 +462,7 @@ text-transform: uppercase;
 .post .container {
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
 }
 
 .post h3 {}
