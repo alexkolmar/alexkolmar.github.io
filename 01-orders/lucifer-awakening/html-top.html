@@ -1,0 +1,124 @@
+<div class="mob_header">
+    <img src="https://forumstatic.ru/files/0010/ed/c4/81280.jpg">
+    </div>
+    
+    <div id="MyGuest" style="">
+        <script>if (GroupID ==3) {$("div.#MyGuest").show()};</script>
+        <style> 
+        #okno {position:fixed; bottom:2%; right:2%; padding:-2px; float:left;} 
+         #okno {background:#111; border:20px solid #222; font-size:20px; font-weight:bold;color:#fff; width: 245px; padding:2px;margin:0px auto 0px auto;-moz-box-shadow: 0px 0px 4px #888;-webkit-box-shadow: 0px 0px 4px #888;box-shadow: 0px 0px 28px #888; -webkit-border-radius: px;-moz-border-radius: 3px;border-radius: 3px; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; filter: alpha(opacity=80); -moz-opacity: 0.8; -khtml-opacity: 0.8; opacity: 0.8;} 
+         #text{color:#fff; font-weight:bold; font-size: 12px;} 
+         </style> 
+         
+        <div id="okno"> 
+         <div id="okno"> 
+        <table valign="top1"><tbody><tr><td id="text">СРОЧНО НУЖНЫ</td><td><a onclick="$('#okno').fadeOut();" style="cursor: pointer"><img src="http://binhot.3dn.ru/img/deletend.png" border="0"></a></td></tr></tbody></table> 
+        Элла Лопез, Мейзикин Смит, Дэн Эспиноза<br> 
+        Анкеты для них уже готовы!!!<br> 
+        <a onclick="$('#malo').slideToggle('slow');" href="javascript://">    </a> <a href="http://lucifer.forenger.com/register.php">Регистрация</a> <a href="http://lucifer.forenger.com/login.php">Войти</a><br> 
+         
+        <z id="malo" style="display: none;"> 
+         ...<br>
+        
+         </z> 
+         </div></div>
+        </div>
+    
+    
+        <!-- Скрываем профиль от гостей -->
+        <style id="HideProfile">.gid3 #pun-profile .main{display:none}</style>
+        <script type="text/javascript">
+        if(self==top&&GroupID==3&&$('#pun-profile').length)$().pun_mainReady(function(){
+        var s='Информация',s1=$('#pun-title h1>span').text();document.title=s1;
+        var L=' »&nbsp;<a href="/">'+s1+'</a> »&nbsp;'+s;$('.crumbs').html(L);
+        $().pun_aboutReady(function(){$('#pun-crumbs2>.crumbs').html(L);});
+        $('#pun-main').html('<h1><span>'+s+'</span></h1><div class=info>\
+        <div class=container>Вы не имеете прав для доступа к этой странице.\
+        </div></div>');$('style#HideProfile').remove();});
+        </script>
+    
+    
+        <!-- Запрет вставки ссылок в Личные сообщения --><script>
+        if($('#pun-messages').length&&[1,2].indexOf(GroupID)==-1)$().pun_mainReady(function(){$('#button-link').remove();
+        var reg = /(?:http)(?:s?)(?:\:\/\/)([а-яёA-Za-z0-9\-]*?)(\.[а-яёA-Za-z0-9\-]+?)(\.[а-яA-Za-z]+)(?:\/?)/gim,test = true,
+        btn = $('.button[name="submit"]'),tstAlert = 'В личных сообщениях запрещено использовать ссылки на сторонние ресурсы.';
+        function rpl(str,p1,p2,p3,offset,s){if((p1+p2+p3)!=location.hostname)test = false;return''};btn.on('click',function(){
+        test=!0;var c=$('#main-reply').val();c.replace(reg,rpl);if(c.match(reg)&&!test){$.jGrowl(tstAlert);return!1}});});
+        </script>
+    
+    
+    <!--выделить код. Alex_63 new.2019--> 
+    <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+    <script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+    <script type="text/javascript">select_text.linkText = 'Скопировать по клику' //текст ссылки</script>
+    <!-- конец -->
+    
+    
+      <style>.pa-online{display:none!important;}</style>
+    
+    
+    <style type="text/css">
+    #pun-index .category .tc2,#pun-index .category .tc3,
+    #f-subforums .tc2,#f-subforums .tc3{
+      display:none!important;
+    }
+    .Tems_And_messages {
+      display:inline-block;
+      width:116px;
+    }
+    .main table .Add {
+      display: inline-block;
+      background-color: #DBE9F3;
+      border-radius: 6px;
+      padding: 1px 7px;
+      box-shadow: inset 0 0 1.4em rgba(57, 111, 177, 0.8);
+    }
+    .Tems_And_messages .right{
+      float:right;
+    }
+    </style>
+    
+    
+    <!-- Музыка в постах и подписях (c) Emerael, Часть 1 в ХТМЛ-Верх -->
+    <script>
+    FORUM.set('editor.music', {
+    name: 'Аудио',
+    audio_url: function() {
+      return prompt("Поместите ссылку на трек", "https://")
+    },
+    audio_title: function() {
+      return prompt("Введите название трека", "Трек")
+    },
+    onclick: function(){
+    const link = FORUM.get('editor.music.audio_url()');
+    if (!link || link === "https://" || $.trim(link) === "") return false;
+    
+    const title = FORUM.get('editor.music.audio_title()');
+    document.querySelector("#main-reply").value += `[audio=${link}]${title || 'Песня'}[/audio]`;
+    }})
+    </script>
+    
+    
+    
+    
+    
+    
+    <!-- Круглый аватар -->
+    <style>
+    li.pa-avatar.item2 img {
+        border: #0F0F0F solid 2px;
+        max-width: 120px;
+        height: 120px;
+        margin-left: -3px;
+        border-radius: 100px;
+    }
+    </style>
+    
+    
+    <!-- Пиар-вход v.2 -->
+        <script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script><script src="http://forumstatic.ru/files/0013/44/56/37000.js?19808"></script>
+        <script type="text/javascript">
+        PR.nick = 'Реклама'; //Ник PR-аккаунта
+        PR.pass = '1111'; //Пароль PR-аккаунта
+        PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+        PR.set();</script>
