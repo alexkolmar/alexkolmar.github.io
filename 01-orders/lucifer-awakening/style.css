@@ -1461,11 +1461,13 @@ content: "";
 
 /* Верхние ссылки в топике и списках тем */
 .punbb .linkst {
-  padding: 5px 10px;
+  padding: 0;
   display: flex;
+  justify-content: space-between;
 }
 
 .linkst .pagelink {
+  margin: 0;
   width: fit-content;
 }
 
@@ -1499,6 +1501,12 @@ content: "";
 }
 
 .punbb .postlink.long {width: auto;}
+
+.punbb .modmenu .container {
+  justify-content: space-between;
+}
+
+.punbb .modmenu:not(#topic-users-in) .container span {order: 2;}
 
 .punbb .modmenu strong, .punbb .modmenu a {height: initial;}
 
@@ -1880,6 +1888,17 @@ margin: 0;
   padding: 0;
 }
 
+#profile #profile10 .submitend .pagelink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#profile #profile10 .submitend .files-pagelink {
+  margin-right: auto;
+}
+
 #profile #messages fieldset, #profile #messages fieldset .fs-box {
   padding: 0;
   margin: 0;
@@ -1944,6 +1963,8 @@ box-shadow: 0 -1px rgba(0, 0, 0, .3), 0 1px rgba(0, 0, 0, .4), 0 2px rgba(255, 2
 
 .punbb-admin #pun-admain .adformal div ul, .punbb-admin #pun-admain div p {padding: 5px !important;}
 
+.punbb-admin #pun-admain .adcontainer {padding: 5px !important;}
+
 .punbb-admin .adcontainer .adsubmitfield {
   display: flex;
   flex-direction: column;
@@ -1976,6 +1997,44 @@ box-shadow: 0 -1px rgba(0, 0, 0, .3), 0 1px rgba(0, 0, 0, .4), 0 2px rgba(255, 2
 }
 
 #pun-admain .adformal p.submittop input[type="submit"], #pun-admain .adformal p.submitend input[type="submit"] {margin: 0 5px;}
+
+.punbb-admin #filetable tr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.punbb-admin #filetable .tcl {
+  width: 100% !important;
+  border-bottom: none !important;
+}
+
+.punbb-admin #filetable .tc2, .punbb-admin #filetable .tc3:not(.checker) {
+display: none;
+} 
+
+.punbb-admin #filetable .tcr {
+  width: calc(100% - 30px) !important;
+}
+
+.punbb-admin #filetable .tc3 {
+  padding: 0;
+  border-bottom: none !important;
+}
+
+.punbb-admin .adfs-box .submitend {
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.punbb-admin .adfs-box .pagelink {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.punbb-admin .per-page-select .page-container {margin-right: auto !important;}
 
 
 /* Корректировка скриптов
