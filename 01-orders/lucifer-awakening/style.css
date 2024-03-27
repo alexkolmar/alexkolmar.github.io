@@ -1644,6 +1644,7 @@ content: ";";
 /* Тело поста */
 .punbb .post-body {
   margin: 0;
+  width: 100%;
 }
 
 /* Содержимое тела поста */
@@ -2040,7 +2041,10 @@ display: none;
 /* Корректировка скриптов
 -------------------------------------------------------------*/
 
-.go-up, .go-down {display: none !important;}
+.go-up, .go-down {
+  right: 0;
+  width: 20px;
+}
 
 .punbb .post h3 span strong.fnt {
   order: 1;
