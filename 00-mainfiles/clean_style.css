@@ -1,5 +1,8 @@
 @import url(style_cs.css);
 
+/* Иконический шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
 
@@ -109,7 +112,7 @@ address, em {font-style: normal;}
 
 .modlist, .lastedit, .punbb div#pun-live-rusff, .punbb .topic a.sharelink {display: none;}
 
-#tags .container, .post_report, .post_reputation {
+#tags .container, .post_report, .post_reputation, #MyBookmarks {
   background: var(--sec-bg);
 }
 
@@ -733,8 +736,3 @@ img.avatardemo {
 }
 
 .go-down:hover, .go-up:hover {opacity: 1;}
-
-
-/* html
--------------------------------------------------------*/
-
