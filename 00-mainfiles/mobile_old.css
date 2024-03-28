@@ -96,7 +96,6 @@ input[type="text"], input[type="password"], textarea, select {
 
 #pun-navlinks li {
   display: block;
-  margin: 5px 7px;
 }
 
 #pun-navlinks li a {
@@ -148,7 +147,7 @@ input[type="text"], input[type="password"], textarea, select {
   display: block;
   width: 50px;
   height: 50px;
-  margin: 0;
+  margin: 0 0 0 auto;
   position: relative;
   border: none;
   z-index: 90;
@@ -181,7 +180,7 @@ input[type="text"], input[type="password"], textarea, select {
     z-index: 100;
     position: absolute;
     top: 50px;
-    left: 0;
+    right: 0;
 }
 
 #pun-ulinks:hover ul, #pun-ulinks:focus ul {
@@ -189,8 +188,9 @@ input[type="text"], input[type="password"], textarea, select {
 }
 
 #pun-ulinks li {
-    display: block !important;
-    padding: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  white-space: nowrap;
 }
 
 #pun-ulinks li a {
@@ -217,6 +217,8 @@ input[type="text"], input[type="password"], textarea, select {
   justify-content: center;
   font-size: 12px;
 }
+
+.punbb .container.crumbs {display: block;}
 
 
 /* Главная форумная таблица
@@ -267,7 +269,10 @@ padding-right: 55px;
 flex-grow: 1;
 }
 
-.punbb div.icon {order: 2;}
+.punbb div.icon {
+  position: relative;
+  order: 2;
+}
 
 .punbb .main .tc2, .punbb .main .tc3, #pun-searchtopics .main .tc2, #pun-searchtopics .main .tc3 {
 text-align: left;
@@ -406,9 +411,10 @@ display: none;
 
 /* Автор */
 .punbb .post .post-author {
-  width: 100%;
   margin: 0;
   padding: 5px 10px;
+  width: 100%;
+  min-height: 90px;
   box-sizing: border-box;
   background: rgba(0,0,0,.1);
 }
@@ -453,6 +459,8 @@ display: none;
   height: 100%;
   object-fit: contain;
   object-position: center;
+  max-height: 75px;
+  max-width: 75px;
 }
 
 /* Ник и статус */
@@ -478,13 +486,12 @@ display: none;
 /* Тело поста */
 .punbb .post-body {
   margin: 0;
-  order: 2;
+  width: 100%;
 }
 
 /* Содержимое тела поста */
 .punbb .post-box {
   padding: 10px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2) inset;
 }
 
 /* Строки поста */
@@ -507,8 +514,6 @@ display: none;
 
 /* Ссылки профиль, удалить, цитировать и т.п. */
 .punbb .post-links {
-  box-shadow: 0 -1px rgb(255, 255, 255) inset, 0 -2px rgba(0, 0, 0, .3) inset;
-  background: rgba(0, 0, 0, .1);
   margin: 0;
 }
 
@@ -563,6 +568,19 @@ display: none;
 display: block;
 width: 26px;
 height: 26px;
+}
+
+#post-form #tags .container {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  display: flex;
+  gap: 5px 10px;
+}
+
+#post-form #tags #font-area {
+  padding-bottom: 15px !important;
 }
 
 
