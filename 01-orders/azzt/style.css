@@ -6,6 +6,9 @@
 /* Иконический шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
 
+/* Font Awesome */
+@import url('//forumstatic.ru/files/001a/e1/7e/82877.css');
+
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
 
@@ -81,6 +84,7 @@
   --tpad: 5px 20px;
   --mpad: 5px 10px;
   --tnr: times new roman, serif;
+  --fa: 'Font Awesome 5 Pro', 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
 }
 
 /* Global
@@ -1042,14 +1046,13 @@ pre {font: 11px Courier New;}
 
 /* Форма ответа */
 
-#post-form #form-buttons td {
+/* #post-form #form-buttons td {
   background-image: url(http://forumstatic.ru/files/001c/02/7b/49759.png);
   background-repeat: no-repeat;
 }
 
 #post-form #form-buttons td#button-sticker {
-  background: url('https://i.imgur.com/VzyJif6.png') 50% no-repeat;
-  background-size: contain;
+  background: url(http://forumstatic.ru/files/001c/02/7b/17190.png) 50% no-repeat;
   cursor: pointer;
 }
 
@@ -1057,11 +1060,96 @@ pre {font: 11px Courier New;}
   background-position: left 50% bottom 4px;
 }
 
-#form-buttons td#button-files_rusff, #form-buttons td#button-graffiti_rusff {display: none !important;}
+#form-buttons td#button-files_rusff, #form-buttons td#button-graffiti_rusff {display: none !important;}*/
 
-#tags {
-  position: relative;
+
+/* Иконки в форме ответа 
+-------------------------------------------------------------*/
+
+.punbb #main-reply {box-sizing: border-box;}
+.punbb #form-buttons table {width: 100%;}
+
+.punbb #form-buttons tr {
+display: flex;
+display: -webkit-flex;
+flex-wrap: wrap;
+-webkit-flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 0 5px;
+width: 100%;
 }
+
+#form-buttons td {
+background-image: none !important;
+position: relative;
+display: inline-block;
+width: 30px;
+height: 30px;
+}
+
+.punbb #form-buttons td img {
+width: 30px;
+height: 30px;
+}
+
+#form-buttons td:before {
+content: " ";
+font-family: var(--fa);
+font-size: 20px;
+color: var(--vine);
+font-weight: 400;
+position: absolute;
+pointer-events: none;
+transition: all .5s linear 0s;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 0;
+top: 0;
+}
+
+#form-buttons td:hover:before {color: var(--tab-link);}
+
+/* Стандартные кнопки */
+
+td#button-font:before {content: "\f031";}
+td#button-size:before {content: "\f894";}
+td#button-bold:before {content: "\f032";}
+td#button-italic:before {content: "\f033";}
+td#button-underline:before {content: "\f0cd";}
+td#button-strike:before {content: "\f0cc";}
+td#button-left:before {content: "\f036";}
+td#button-center:before {content: "\f037";}
+td#button-right:before {content: "\f038";}
+td#button-link:before {content: "\f0c1";}
+td#button-spoiler:before {content: "\f070";}
+td#button-spoiler:hover:before {content: "\f06e";}
+td#button-image:before {content: "\f1c5";}
+td#button-video:before {content: "\f144";}
+td#button-hide:before {content: "\f13e";}
+td#button-hide:hover:before {content: "\f023";}
+td#button-quote:before {content: "\f086";}
+td#button-code:before {content: "\f121";}
+td#button-color:before {content: "\f53f";}
+td#button-table:before {content: "\f0ce";}
+td#button-smile:before {content: "\f59a";}
+td#button-keyboard:before {content: "\f11c";}
+td#button-addition:before {content: "\f0fe";}
+td#button-files_rusff:before {content: "\f07b";}
+td#button-files_rusff:hover:before {content: "\f07c";}
+td#button-graffiti_rusff:before {content: "\f5bd";}
+
+/* Дополнительные кнопки */
+
+td#button-indent:before {content: "\f03c";} /* тег абзаца */
+td#button-styles:before {content: "\f1de";} /* дополнительные стили */
+td#floatbut:before {content: "\f1ea";} /* тег обтекания изображения от Romych */
+td#button-justify:before {content: "\f039";} /* тег выравнивания по ширине */
+td#button-mask:before {content: "\f630";} /* тег для скрипта ролевой маски от человека-шамана */
+td#button-sticker:before {content: "\f1b0";} /* тег для дополнительных смайлов от человека-шамана */
+
 
 #main-reply {
   box-sizing: border-box;
@@ -1692,7 +1780,9 @@ text-align: right;
 .punbb .linkst {padding: 5px 10px;}
 
 /* Меню модератора */
-.punbb .modmenu .container span {flex-grow: 1;}
+.punbb .modmenu .container {gap: 5px;}
+
+.punbb .modmenu:not(#topic-users-in) .container span {flex-grow: 1;}
 
 /* Нижние ссылки в топике и списках тем */
 .punbb .linksb {
@@ -1950,10 +2040,25 @@ display: none;
 }
 
 #form-buttons td {
-display: block;
-width: 26px;
-height: 26px;
+  display: block;
+  width: 26px;
+  height: 26px;
 }
+
+#post-form #tags .container {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  display: flex;
+  gap: 5px 10px;
+}
+
+#post-form #font-area {
+  padding-bottom: 15px !important;
+}
+
+#table-area tr {padding: 0;}
 
 /* Поиск сообщений
 -------------------------------------------------------------*/
