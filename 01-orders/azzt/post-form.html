@@ -1,0 +1,16 @@
+<script src="https://forumstatic.ru/files/0017/95/29/40399.js"></script>
+<script>
+$(document).ready(function() {
+  hvStickerPack.init("https://forumstatic.ru/files/0017/8a/e6/73771.txt");
+});
+</script>
+
+
+<!--- дайсы в форме ответа--->
+<script type="text/javascript">
+FORUM.set('editor.addition.tags.d100', {name:'d100',onclick:function(){insert("Результат от 1 до 100: " + Math.floor(1 + Math.random() * (100)) + "\n");}});
+FORUM.set('editor.addition.tags.d20', {name:'d20',onclick:function(){insert("Результат от 1 до 20: " + Math.floor(1 + Math.random() * (20)) + "\n");}});
+
+
+$('#addition-area').append('<div onclick="FORUM.get(\'editor.addition.tags.d100.onclick()\')"><span>d100</span></div><div onclick="FORUM.get(\'editor.addition.tags.d20.onclick()\')"><span>d20</span></div>');
+</script>

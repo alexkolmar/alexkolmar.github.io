@@ -1,0 +1,116 @@
+<!-- описание категории -->
+<script type="text/javascript">
+    makeDescription(1, "зомби–апокалипсис — прекрасная мотивация для занятий спортом")
+    makeDescription(2, "смерть не является оправданием")
+    makeDescription(3, "про зомби есть порно")
+    makeDescription(4, "ходите, вытянув руки вперед — так вы избежите опасных препятствий")
+    makeDescription(5, "как известно, не все живое, что движется")
+
+    function makeDescription(id, txt){
+    var div = document.getElementsByClassName("catleft")
+    var idN = id-1;
+    div[idN].nextSibling.innerHTML+="<div class=categoryLine></div><span class=categoryTool>"+txt+"</span>"
+    }
+    </script>
+<!-------------------------------------------------------->
+
+
+<!-- стрелки -->
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+<!-------------------------------------------------------->
+
+<!-- Пиар-вход v.2 -->
+<script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script><script src="https://forumstatic.ru/files/0013/44/56/37000.js?19806"></script>
+<script type="text/javascript">
+PR.nick = 'реклама'; //Ник PR-аккаунта
+PR.pass = 'ароэра'; //Пароль PR-аккаунта
+PR.btn_text = 'Реклама'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+PR.set();</script>
+<!------------------------------------------------------------>
+
+<!-- аватар по умолчанию -->
+<script type="text/javascript">
+var DefAvtr="https://forumstatic.ru/files/0017/8a/e6/80398.jpg";
+var s='<li class="pa-avatar item2"><img class="defavtr" src="'+DefAvtr+'" alt="Аватар"/></li>';$("li.pa-title").each(function(){if (($(this).parent("ul").find("li.pa-avatar").html())==null){$(this).after(s);};});
+</script>
+<!------------------------------------>
+
+<!-- кнопка в меню "НОВЫЕ СООБЩЕНИЯ" -->
+<script type="text/javascript">
+if(GroupID != 3) { $('#pun-ulinks .container').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>'); }
+</script>
+<!------------------------------------>
+
+<!-- Регулировка размера шрифта в постах © Alex_63 -->
+<style>
+.FNTslider {
+  border-radius: 4px;
+  position: relative;
+  z-index: 1000;
+  background: var(--vine);
+  width: 110px;
+  height: 5px;
+  margin: 2px 7% 2px 5px;
+  border: solid 1px var(--forum-link);
+  float: right;
+}
+.FNTslider .before {
+  height: 5px;
+  border: solid 1px transparent;
+  border-right: none 0;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  margin-top: -1px;
+}
+.FNTslider .thumb {
+  width: 8px;
+  height: 13px;
+  border-radius: 3px;
+  position: relative;
+  top: -4px;
+  background: #a4a3a7;
+  cursor: pointer;
+}
+</style>
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+<!---------------------------->
+
+<!-- запятые на тег b -------->
+<script type="text/javascript">
+function to(username)
+{insert('[b]' + username + '[/b]' + ', ');}
+</script>
+<!---------------------------->
+
+<div class="banners">
+<a href="https://holod.rusff.me" target="_blank"><img src="https://s7.uploads.ru/YmQdR.gif" title="ХОЛОД" width="88" height="31"></a>
+
+<a href="https://urchoice.rolka.me/" target="_blank"><img src="https://forumstatic.ru/files/000b/09/4f/76237.gif" title="Каталог форумов" alt="LYL" width="88" height="31"></a>
+
+<a href="https://imagiart.ru/" target="_blank"> <img src="https://i.imgur.com/h3ba1GC.gif" title="photoshop: Renaissance" border="0" alt="photoshop: Renaissance"></a>
+
+<a href="http://rpg-hit.ru/" title="каталог ролевых: RPG-HIT" target="_blank"><img src="https://forumstatic.ru/files/001b/c3/c4/23045.gif"></a>
+
+<a href="https://britinvasion.rusff.me" title="BRITISH INVASION" target="_blank"> <img src="https://forumstatic.ru/files/001c/0d/b5/63862.gif" border="0" alt="British Invasion"></a>
+
+<a href="https://karma.f-rpg.me/" target="_blank"><img src="https://forumupload.ru/uploads/0013/26/8a/4/813808.png" title="karma cross" border="0" width="88" height="31"></a>
+
+<a href="http://artishock.rusff.me/" target="_blank"><img src="https://s2.uploads.ru/nzVxs.gif" title="ARTISHOCK" border="0" width="88" height="31"></a>
+<br>
+<a href="https://azzt.anihub.me/pages/banners" target="_blank">далее...</a>
+</div>

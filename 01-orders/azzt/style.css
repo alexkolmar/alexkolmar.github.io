@@ -55,7 +55,6 @@
 ------------------------------------------*/
 
 :root {
-  --body-bg: Burlywood;
   --vine: #4b2f3c;
   --darkvine: #3a2532;
   --brown: #473b41;
@@ -66,6 +65,7 @@
   --cat-tool: #322126;
   --stats: #565455;
   --gray: #cdced1;
+  --light-gray: #c8c8c8;
   --navlink: #e0dddd;
   --navlink-hover: #b9b2b2;
   --text-shadow: #211219;
@@ -74,6 +74,9 @@
   --tab-link: #322a2d;
   --thumb: #655656;
   --track: #443c3e;
+  --quote-bg: rgba(150, 148, 149, .22);
+  --author-text: #c3c5c8;
+  --author-text-hover: #b59e9e;
   --padding: 10px 20px;
   --tpad: 5px 20px;
   --mpad: 5px 10px;
@@ -123,6 +126,9 @@ h1, h2 {
   font-weight: normal;
   text-align: center;
   font-size: 16px;
+  font-family: var(--tnr);
+  text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 ul, dl, li, dd, dt {list-style: none;}
@@ -144,14 +150,15 @@ address, em {font-style: normal;}
 ------------------------------------------*/
 
 input.button, #pun-admain input.button, #sub4, input[type="button"] {
-  padding: 2px 10px;
-  border: 1px solid currentColor;
+  padding: 3px 10px;
+  background: var(--tab-link);
+  color: var(--light-gray);
   cursor: pointer;
   transition: all .2s linear 0s;
 }
 
 input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="button"]:hover {
-
+  background: var(--vine);
 }
 
 /* ОФОРМЛЕНИЕ ПОЛЕЙ ВВОДА
@@ -159,7 +166,9 @@ input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="but
 
 input[type="text"], input[type="password"], textarea, select {
   padding: 2px 5px;
-  border: 1px solid var(--link-hover);
+  border: 1px solid #979898;
+  background: var(--quote-bg);
+  box-shadow: 0 0 1px #dedede;
 }
 
 
@@ -173,7 +182,7 @@ input[type="text"], input[type="password"], textarea, select {
 ------------------------------------------*/
 
 html {
-background: var(--body-bg) url(http://forumstatic.ru/files/001c/02/7b/54455.jpg) repeat top center;
+background: var(--vine) url(http://forumstatic.ru/files/001c/02/7b/54455.jpg) repeat top center;
 }
 
 #pun {
@@ -536,7 +545,41 @@ li#onlinelist {
   position: absolute;
 }
 
-#КонтентРотатор img {display:none;}
+.azzt {
+  position: absolute;
+  width: 440px;
+}
+
+#img1 .azzt {
+  right: 30px;
+  bottom: 25px;
+}
+
+#img2 .azzt {
+  top: 40px;
+  left: 40px;
+}
+
+.azzt_h2 {
+  padding: 0;
+  color: #c6bcbf;
+  font-size: 24px;
+  letter-spacing: 0;
+  text-shadow: 1px 1px #191214;
+}
+
+.azzt_p {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: rgba(21, 21, 21, .33);
+  box-sizing: border-box;
+  text-align: justify;
+  font-size: 10px;
+  line-height: 13px;
+  color: #c7c7c7;
+}
+
+#КонтентРотатор .table_img {display:none;}
 
 .tablica_over {
   position: absolute;
@@ -627,7 +670,7 @@ li#onlinelist {
   justify-content: center;
   box-sizing: border-box;
   background: var(--tab-link);
-  color: #c8c8c8;
+  color: var(--light-gray);
   font-size: 11px;
 }
 
@@ -659,13 +702,13 @@ a.bestep {
   display: flex;
   align-items: center;
   background: var(--tab-link);
-  color: #c8c8c8;
+  color: var(--light-gray);
   transition: all .3s linear 0s;
 }
 
 a.bestep:hover {
   width: 175px;
-  color: #c8c8c8;
+  color: var(--light-gray);
 }
 
 .bestep span {
@@ -762,15 +805,15 @@ a.bestep:hover span {
   display: block;
   background: url(http://forumstatic.ru/files/001c/02/7b/54455.jpg) repeat top center;
   box-shadow: 0 1px 0 1px var(--vine), 0 0 1px 0 #f7f7f7, inset 0 0 5px rgba(0,0,0,.5);
-  color: #c3c5c8;
+  color: var(--author-text);
 }
 
 .post h3 a {
-  color: #c3c5c8;
+  color: var(--author-text);
 }
 
 .post h3 a:hover {
-  color: #b59e9e;
+  color: var(--author-text-hover);
 }
 
 .post h3 strong {
@@ -791,7 +834,7 @@ a.bestep:hover span {
   text-align: center;
   background: url(http://forumstatic.ru/files/001c/02/7b/54455.jpg) repeat top center;
   box-shadow: -24px 0 0 -17px var(--vine), 0 0 1px 0 #f7f7f7, inset 0 0 5px rgba(0,0,0,.5);
-  color: #c3c5c8;
+  color: var(--author-text);
   font-size: 10px;
 }
 
@@ -800,11 +843,11 @@ a.bestep:hover span {
 }
 
 .post-author a {
-  color: #c3c5c8;
+  color: var(--author-text);
 }
 
 .post-author a:hover {
-  color: #b59e9e;
+  color: var(--author-text-hover);
 }
 
 .pa-author {
@@ -921,7 +964,12 @@ pre {font: 11px Courier New;}
 
 .post .post-content td {border-width: 0px !important;}
 
-.post-content em.bbuline {font-style: normal; text-decoration: underline;}
+.post-content em.bbuline {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+}
 
 .post-content p {
   margin: 0;
@@ -952,7 +1000,7 @@ pre {font: 11px Courier New;}
   margin: 4px 10px 10px;
   padding: 7px 12px;
   border: 1px solid #979898;
-  background: rgba(150, 148, 149, .22);
+  background: var(--quote-bg);
   box-shadow: 0 0 1px #dedede;
 }
 
@@ -971,11 +1019,19 @@ pre {font: 11px Courier New;}
 }
 
  div.code-box strong.legend a {
-  color: #c3c5c8;
+  color: var(--author-text);
 }
 
  div.code-box strong.legend a:hover {
-  color: #b59e9e;
+  color: var(--author-text-hover);
+}
+
+.punbb .post-content .spoiler-box > div {
+  background: url(http://forumstatic.ru/files/001c/02/7b/19600.png) no-repeat left center;
+}
+
+.punbb .post-content .spoiler-box > div.visible {
+  background: url(http://forumstatic.ru/files/001c/02/7b/91292.png) no-repeat left center;
 }
 
 .post-sig dt {
@@ -986,12 +1042,32 @@ pre {font: 11px Courier New;}
 
 /* Форма ответа */
 
+#post-form #form-buttons td {
+  background-image: url(http://forumstatic.ru/files/001c/02/7b/49759.png);
+  background-repeat: no-repeat;
+}
+
+#post-form #form-buttons td#button-sticker {
+  background: url('https://i.imgur.com/VzyJif6.png') 50% no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#post-form #form-buttons td#button-mask {
+  background-position: left 50% bottom 4px;
+}
+
+#form-buttons td#button-files_rusff, #form-buttons td#button-graffiti_rusff {display: none !important;}
+
 #tags {
   position: relative;
 }
 
 #main-reply {
   box-sizing: border-box;
+  border: 1px solid #979898;
+  background: rgba(150, 148, 149, .22);
+  box-shadow: 0 0 1px #dedede;
 }
 
 /* Формы
@@ -1037,6 +1113,48 @@ textarea, .longinput input {width: 64%; margin: 0;}
 /* Профиль + ЛС
 ------------------------------------------*/
 
+#viewprofile .container {
+  padding: 5px 6px;
+}
+
+#viewprofile .container tr {
+  gap: 40px;
+  display: flex;
+}
+
+#viewprofile #profile-left {
+  padding: 5px 0 !important;
+  width: 210px;
+  text-align: center;
+  background: url(http://forumstatic.ru/files/001c/02/7b/54455.jpg) repeat top center;
+  box-shadow: -24px 0 0 -17px var(--vine), 0 0 1px 0 #f7f7f7, inset 0 0 5px rgba(0,0,0,.5);
+  color: var(--author-text);
+  font-size: 10px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+#viewprofile li#profile-name strong {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: 12px;
+  font-weight: normal !important;
+}
+
+#viewprofile li#pa-edit strong a {
+  color: var(--author-text);
+}
+
+#viewprofile li#pa-avatar img {
+  border: 2px solid var(--vine);
+}
+
+#viewprofile li#pa-edit strong a:hover {
+  color: var(--author-text-hover);
+}
+
+#profile-right li strong {font-weight: normal !important;}
+
 #profile .container {
   padding-left: 200px;
   min-height: 100px;
@@ -1044,13 +1162,36 @@ textarea, .longinput input {width: 64%; margin: 0;}
 
 #profilenav {
   float: left;
-  width: 180px;
-  margin-left: -180px;
+  width: 170px;
+  margin-left: -193px;
+  padding: 5px 0 10px !important;
+  text-align: center;
+  background: url(http://forumstatic.ru/files/001c/02/7b/54455.jpg) repeat top center;
+  box-shadow: -24px 0 0 -17px var(--vine), 0 0 1px 0 #f7f7f7, inset 0 0 5px rgba(0,0,0,.5);
+  color: var(--author-text);
+  box-sizing: border-box;
 }
 
-#viewprofile h2, #profilenav h2 {
+#viewprofile h2 {
   padding: 0;
   margin: 0;
+}
+
+#profilenav h2 {
+  padding: 0;
+  margin: 10px 0;
+}
+
+#profilenav ul li {
+  margin-bottom: 5px;
+}
+
+#profilenav ul li a {
+  color: var(--author-text);
+}
+
+#profilenav ul li a:hover, #profilenav ul li.isactive a {
+  color: var(--author-text-hover);
 }
 
 #viewprofile li {
@@ -1069,6 +1210,16 @@ textarea, .longinput input {width: 64%; margin: 0;}
 img.avatardemo {
   float: right;
   margin: 0 0 8px 18px;
+}
+
+#messages legend span {
+  padding: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 16px;
+  font-family: var(--tnr);
+  text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 #pun-messages .clearer {
@@ -1271,6 +1422,7 @@ width: 100%;
 }
 
 #pun-navlinks .container {
+  min-height: 50px;
   height: auto;
   position: relative;
   display: flex;
@@ -1278,10 +1430,10 @@ width: 100%;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   align-content: center;
   box-sizing: border-box;
-  padding: 0 !important;
+  padding: 0 50px 0 0 !important;
 }
 
 #pun-navlinks li {
@@ -1338,10 +1490,10 @@ width: 100%;
   display: block;
   width: 50px;
   height: 50px;
-  margin: 0 0 0 auto;
+  margin: -50px 0 0 auto;
   position: relative;
   border: none;
-  z-index: 90;
+  z-index: 100;
 }
 
 #pun-ulinks:after {
@@ -1353,6 +1505,7 @@ width: 100%;
   font: normal 48px/50px 'Material Icons Outlined';
   text-align: center;
   cursor: pointer;
+  color: var(--navlink);
 }
 
 #pun-ulinks .container {
@@ -1840,9 +1993,10 @@ margin: 0;
 }
 
 #viewprofile #profile-left {
+  margin: 0 auto;
   text-align: center;
   padding-bottom: 10px !important;
-  box-shadow: 0 1px rgba(0, 0, 0, .3), 0 2px rgba(255, 255, 255, .75);
+  box-shadow: 0 0 1px 0 #f7f7f7, inset 0 0 5px rgba(0,0,0,.5);
 }
 
 #viewprofile #profile-left li#pa-avatar {padding: 5px;}
@@ -1870,12 +2024,24 @@ margin: 0;
 /* Редактирование профиля и ЛС
 -------------------------------------------------------------*/
 
-#profile > .container {padding: 5px 10px !important;}
+#profile > .container {padding: 5px 6px !important;}
+
+#profile #volume-set {
+  display: flex;
+  align-items: center;
+}
 
 .punbb #profilenav {
   width: 100%;
-  margin: 0;
+  margin: 0 0 10px;
+  padding: 10px 0 !important;
   display: block;
+  box-shadow: -24px 0 0 -17px var(--vine), 24px 0 0 -17px var(--vine), 0 0 1px 0 #f7f7f7, inset 0 0 5px rgba(0,0,0,.5);
+}
+
+#messages legend {
+  display: block;
+  margin: 0 auto;
 }
 
 #viewprofile h2, #profilenav h2 {margin: 0;}
