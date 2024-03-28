@@ -53,3 +53,15 @@ body.light::before {
 .light .ssilki a:hover {
   color: var(--buttontextcolor);
 }
+
+@media screen and (max-width: 540px) {
+
+.light #pun-navlinks .container {
+background: var(--wordcolor) url(https://forumstatic.ru/files/0015/28/00/73696.jpg) no-repeat fixed top center/cover;
+}
+
+.light #pun-title {
+    background: url(https://forumstatic.ru/files/0016/01/4e/77424.png) no-repeat top center, url(https://forumstatic.ru/files/0015/28/00/73696.jpg) no-repeat fixed top center/cover var(--wordcolor);
+}
+
+}
