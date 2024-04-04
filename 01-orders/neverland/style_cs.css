@@ -1,6 +1,20 @@
 /* html
 -------------------------------------------------------*/
 
+/* общие стили */
+
+.addition {
+    position: relative;
+    margin: 5px auto 20px;
+    padding: 50px 30px 0;
+    display: block;
+    width: 515px;
+    height: 457px;
+    background: var(--forum) url(https://forumstatic.ru/files/0010/ed/c4/92570.jpg) no-repeat top center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
 /* новости */
 
 .newspost {
@@ -236,4 +250,203 @@
 
 .newspost_couple a {
   display: block;
+}
+
+/* гостевая */
+
+.guestbook .inner {
+    padding: 14px 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--forum);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.welcome {
+    margin-top: -15px;
+}
+
+.welcome span {
+    margin: 0 auto;
+    padding: 6px 26px 5px;
+    display: block;
+    width: fit-content;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: lowercase;
+    color: var(--link);
+    background: var(--forum);
+    transform: translate(0, 50%);
+    box-sizing: border-box;
+}
+
+.welcome_text {
+    margin: 0 auto;
+    width: 360px;
+    height: 128px;
+    border: 1px solid var(--profile);
+    border-radius: 13px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 144%;
+    text-transform: lowercase;
+    text-align: center;
+    color: var(--darkgray);
+    padding: 21px 19px 16px;
+    box-sizing: border-box;
+    background: var(--white);
+  }
+
+  .hotlinks {
+    width: 324px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+.hotlinks a {
+  border-radius: 0 0 5px 5px;
+  width: 75px;
+  height: 21px;
+  background: #aec1dc;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: lowercase;
+  color: var(--white);
+  text-align: center;
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+
+.faces {
+    display: flex;
+    margin: 18px auto 0;
+    background: var(--white);
+    border-radius: 13px;
+    width: 360px;
+    height: 148px;
+    box-sizing: border-box;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.faces span {
+    margin: 0 auto;
+    padding-top: 12px;
+    width: 61px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -50%);
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 8px;
+    text-align: center;
+    color: var(--link);
+    background: var(--forum);
+    border-radius: 8px;
+}
+
+.faces_block {
+    padding: 0 20px;
+    width: 150px;
+    height: 114px;
+    overflow: auto;
+    margin-top: -10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.faces_block b {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 8px;
+    text-transform: lowercase;
+    text-align: left;
+    color: var(--darkgray);
+}
+
+.faces_block p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: lowercase;
+    text-align: left;
+    color: var(--darkgray);
+    padding: 0 0 5px 5px !important;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.faces_block p a {
+    color: var(--darkgray);
+}
+
+.faces_block p a:after {
+    content: "";
+    display: inline-block;
+    background: var(--link);
+    width: 3px;
+    height: 3px;
+    border-radius: 1px;
+    margin: 0 6px;
+}
+
+.faces_note {
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 235px;
+    height: 24px;
+    display: block;
+    flex-shrink: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 7px;
+    text-transform: lowercase;
+    text-align: center;
+    color: var(--darkgray);
+    background: var(--white);
+    box-sizing: border-box;
+    padding: 4px 18px;
+    transform: translate(0, 40%);
+}
+
+.music_pause {
+    position: relative;
+    margin-top: 41px;
+    border-radius: 13px;
+    width: 434px;
+    height: 55px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 8px;
+    text-transform: lowercase;
+    color: var(--darkgray2);
+}
+
+.music_pause::before {
+    content: "";
+    background: url(https://forumstatic.ru/files/0010/ed/c4/34256.svg) no-repeat top left;
+    width: 33px;
+    height: 24px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
 }
