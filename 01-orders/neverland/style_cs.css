@@ -1,0 +1,239 @@
+/* html
+-------------------------------------------------------*/
+
+/* новости */
+
+.newspost {
+    position: relative;
+    margin: 5px auto;
+    padding: 50px 30px 4px;
+    display: block;
+    width: 515px;
+    height: 457px;
+    background: var(--forum) url(https://forumstatic.ru/files/0010/ed/c4/92570.jpg) no-repeat top center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.newspost .inner {
+    padding: 14px 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--forum);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.ams_says {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    box-sizing: border-box;
+    height: 55px;
+}
+
+.ams_pic {
+    border-radius: 5px;
+    border: 1px solid var(--profile);
+}
+
+.ams_text {
+    width: 280px;
+    border-bottom: 1px solid var(--profile);
+}
+
+.ams_text a {
+    margin-bottom: 3px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: lowercase;
+    color: var(--link);
+}
+
+.ams_text span {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: lowercase;
+    color: var(--darkgray2);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.attention {
+  width: 335px;
+}
+
+.attention span {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  width: fit-content;
+  background: var(--forum);
+  padding: 6px 42px 5px;
+  transform: translate(0, 50%);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: lowercase;
+  color: var(--link);
+}
+
+.attention_text {
+  padding: 21px 17px 11px;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--profile);
+  border-radius: 13px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 9px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--darkgray);
+  box-sizing: border-box;
+}
+
+.newspost_text {
+  margin-top: 19px;
+  width: 335px;
+  height: 149px;
+  overflow: auto;
+  padding-right: 20px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 9px;
+  text-transform: lowercase;
+  text-align: justify;
+  color: var(--darkgray);
+}
+
+.newspost_bestpost {
+  margin-top: 19px;
+  width: 335px;
+  height: 33px;
+  display: flex;
+  gap: 12px;
+}
+
+.bestpost_icon {
+  border-radius: 15px;
+  width: 5px;
+  height: 33px;
+  background: var(--link-hover);
+  flex-shrink: 0;
+}
+
+.bestpost_text {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 9px;
+  text-transform: lowercase;
+  text-align: justify;
+  color: var(--darkgray);
+}
+
+.newspost_quote::before {
+  content: "";
+  position: absolute;
+  width: 33px;
+  height: 24px;
+  top: -10px;
+  left: -10px;
+  background: url(https://forumstatic.ru/files/0010/ed/c4/34256.svg) no-repeat top left;
+}
+
+.newspost_quote {
+  position: absolute;
+  padding: 18px 21px 17px;
+  top: 95px;
+  left: 427px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border-radius: 13px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 8px;
+  text-transform: lowercase;
+  color: var(--darkgray2);
+}
+
+.song span {
+  font-weight: 900;
+}
+
+.newspost_activist {
+  position: absolute;
+  top: 181px;
+  right: 0;
+  width: 55px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  background: var(--white);
+  border-radius: 13px 0 0 13px;
+}
+
+.n_activist {
+  display: block;
+  width: 23px;
+  height: 23px;
+  border-radius: 5px;
+  filter: grayscale(1);
+}
+
+.newspost_activists {
+  position: absolute;
+  top: 234px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  height: 97px;
+  width: 88px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  gap: 6px 10px;
+  background: var(--white);
+  border-radius: 13px 0 0 13px;
+}
+
+.newspost_bestep {
+  position: absolute;
+  top: 341px;
+  left: 427px;
+  box-sizing: border-box;
+  border-radius: 13px;
+  width: 201px;
+  background: var(--white);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 7px;
+  text-transform: lowercase;
+  color: var(--link);
+  padding: 12px 16px 11px;
+}
+
+.newspost_couple {
+  border-radius: 13px;
+  width: 201px;
+  position: absolute;
+  top: 395px;
+  left: 427px;
+  padding: 12px 36px 11px;
+  box-sizing: border-box;
+  background: var(--white) url(https://forumstatic.ru/files/0010/ed/c4/42782.png) no-repeat center left 16px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 7px;
+  text-transform: lowercase;
+  color: var(--link);
+}
+
+.newspost_couple a {
+  display: block;
+}
