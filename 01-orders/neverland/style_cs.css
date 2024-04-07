@@ -453,11 +453,11 @@
 
 /* банк */
 
-.bank1 {
+.bank {
   height: 492px;
 }
 
-.bank1 .inner {
+.bank .inner {
   border-radius: 12px;
   width: 455px;
   height: 423px;
@@ -498,7 +498,7 @@
   transform: translate(0, 50%);
 }
 
-.bank1_tabs {
+.bank_tabs {
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -507,15 +507,15 @@
   width: 360px;
 }
 
-.bank1_tab, .bank1_tab-title {
+.bank_tab, .bank_tab-title {
   display: inline-block;
 }
 
-.bank1_tab input[type="radio"] {
+.bank_tab input[type="radio"] {
   display: none;
 }
 
-.bank1_tab-title {
+.bank_tab-title {
   cursor: pointer;
   box-sizing: border-box;
   width: 86px;
@@ -536,7 +536,7 @@
   color: var(--link-hover);
 }
 
-.bank1_tab-content {
+.bank_tab-content {
   position: absolute;
   margin-top: 18px;
   padding: 12px 23px 24px;
@@ -549,18 +549,18 @@
   height: 256px;
 }
 
-.bank1_tab :checked + .bank1_tab-title {
+.bank_tab :checked + .bank_tab-title {
   position: relative;
   background: #aec1dc;
   color: var(--white);
   z-index: 1;
 }
 
-.bank1_tab :checked ~ .bank1_tab-content {
+.bank_tab :checked ~ .bank_tab-content {
   display: block;
 }
 
-.bank1_span {
+.bank_span {
   margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
@@ -572,7 +572,7 @@
   color: var(--body-bg);
 }
 
-.bank1_lots {
+.bank_lots {
   height: 200px;
   overflow: auto;
   margin-right: -10px;
