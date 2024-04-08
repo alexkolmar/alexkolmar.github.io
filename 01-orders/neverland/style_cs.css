@@ -464,7 +464,7 @@
   background: var(--forum);
 }
 
-.bank_text, .shop_text, .activities_text {
+.bank_text, .shop_text, .activities_text, .wannasee_text, .attent_text {
   border: 1px solid var(--profile);
   border-radius: 13px;
   width: 360px;
@@ -749,7 +749,7 @@
   padding-bottom: 25px;
 }
 
-.activities .inner {
+.activities .inner, .wannasee .inner, .attent .inner {
   height: 100%;
   border-radius: 12px;
   background: var(--forum);
@@ -791,4 +791,437 @@
   line-height: initial;
   text-align: left;
   text-transform: lowercase;
+}
+
+/* хочу видеть и attention */
+
+.wannasee, .attent {
+  padding-bottom: 35px;
+  height: initial;
+  min-height: 180px;
+}
+
+.wannasee_descr span, .attent_descr span {
+  margin: 0 auto;
+  padding: 6px 43px 5px;
+  display: block;
+  width: fit-content;
+  background: var(--forum);
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--link);
+  transform: translate(0, 50%);
+}
+
+/* инстачат */
+
+.instachat {
+  margin: 0 auto;
+  padding: 8px 6px;
+  width: 343px;
+  height: 519px;
+  border-radius: 20px;
+  background: #f3f3f3;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.instachat_inner {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  border-radius: 20px;
+}
+
+.instachat_header {
+  padding: 16px 25px;
+  height: 86px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+  color: var(--white);
+  box-sizing: border-box;
+}
+
+.instachat_info {
+  text-align: right;
+}
+
+.instachat_header span {
+  display: block;
+}
+
+.instachat_nick {
+  margin-bottom: 9px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 82%;
+}
+
+.instachat_status {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 45%;
+}
+
+.instachat_online {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+}
+
+.instachat_av {
+  border-radius: 10px;
+  width: 54px;
+  height: 54px;
+  border: 3px solid var(--white);
+  box-sizing: border-box;
+}
+
+.instachat_av img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.instachat_main {
+  padding: 19px 17px 12px;
+  height: 417px;
+  width: 100%;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1px solid #b7b7b7;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.inst_my {
+  margin: 0 0 10px auto;
+  padding: 12px 15px 12px 26px;
+  width: fit-content;
+  max-width: 279px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 90%;
+  color: var(--darkgray);
+  text-align: right;
+  background: #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0 8px;
+}
+
+.instachat_img {
+  padding: 0;
+  background: none;
+  max-height: 122px;
+  max-width: 122px;
+}
+
+.instachat_img img {
+  height: auto;
+  width: 100%;
+  border-radius: 8px 8px 0 8px;
+}
+
+.inst_time {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+  color: #b7b7b7;
+  text-align: right;
+  display: block;
+}
+
+.instachat_post {
+  height: 35px;
+  border: 1px solid #B7B7B7;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* инста главная */
+
+.instamain {
+  margin: 0 auto;
+  padding: 8px 6px;
+  width: 368px;
+  height: 500px;
+  background: #ededed;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.instamain_inner {
+  width: 100%;
+  height: 100%;
+  background: var(--white) url(https://forumstatic.ru/files/0010/ed/c4/46225.png) no-repeat top center;
+  box-sizing: border-box;
+  border: 1px solid #b7b7b7;
+  border-radius: 20px;
+}
+
+.instamain_header {
+  display: flex;
+  gap: 33px;
+  padding: 21px 16px 0;
+}
+
+.instamain_pic {
+  border-radius: 10px;
+  width: 103px;
+  height: 103px;
+  box-sizing: border-box;
+  border: 7px solid var(--white);
+  background: var(--white);
+  flex-shrink: 0;
+}
+
+.instamain_pic img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.instamain_header span {
+  display: block;
+}
+
+.instamain_name {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 82%;
+  color: var(--darkgray);
+}
+
+.instamain_nick {
+  margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 45%;
+  color: var(--white);
+}
+
+.instamain_status {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+  color: var(--darkgray);
+}
+
+.instamain_stats {
+  display: flex;
+  gap: 30px;
+}
+
+.instamain_stats > div {
+  border-radius: 5px;
+  width: 36px;
+  font-weight: 500;
+  font-size: 7px;
+  line-height: 114%;
+  text-align: center;
+  color: var(--darkgray);
+  padding-top: 31px;
+}
+
+.instamain_subscribers {
+  background: var(--white) url(https://forumstatic.ru/files/0010/ed/c4/27662.svg) no-repeat top 8px center;
+}
+
+.instamain_likes {
+  background: var(--white) url(https://forumstatic.ru/files/0010/ed/c4/22172.svg) no-repeat top 8px center;
+}
+
+.instamain_posts {
+  background: var(--white) url(https://forumstatic.ru/files/0010/ed/c4/55912.svg) no-repeat top 9px center;
+}
+
+.instamain_main {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 8px 8px;
+  grid-auto-flow: row;
+}
+
+.small_pic, .big_pic {
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+}
+
+.small_pic {
+  width: 103px;
+  height: 103px;
+}
+
+.big_pic {
+  width: 213px;
+  height: 213px;
+}
+  
+.big_pic { grid-area: 2 / 1 / 4 / 3; }
+
+.small_pic1 { grid-area: 1 / 1 / 2 / 2; }
+  
+.small_pic2 { grid-area: 1 / 2 / 2 / 3; }
+  
+.small_pic1 { grid-area: 1 / 1 / 2 / 2; }
+  
+.small_pic3 { grid-area: 1 / 3 / 2 / 4; }
+  
+.small_pic4 { grid-area: 2 / 3 / 3 / 4; }
+  
+.small_pic5 { grid-area: 3 / 3 / 4 / 4; }
+  
+/* инста пост */
+
+.instapost {
+  margin: 0 auto;
+  padding: 8px 6px;
+  width: 368px;
+  min-height: 519px;
+  background: #ededed;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.instapost_inner {
+  width: 100%;
+  height: 100%;
+  background: var(--white) url(https://forumstatic.ru/files/0010/ed/c4/76432.png) no-repeat top center;
+  border: 1px solid #b7b7b7;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.instapost_header {
+  padding: 16px 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.instapost_av {
+  width: 54px;
+  height: 54px;
+  background: var(--white);
+  border: 5px solid var(--white);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.instapost_av img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.instapost_info {
+  text-align: right;
+}
+
+.instapost_info span {
+  display: block;
+}
+
+.instapost_time {
+  margin-bottom: 9px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 82%;
+  color: #0d1920;
+}
+
+.instapost_date {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 45%;
+  color: var(--white);
+}
+
+.instapost_place {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.instapost_pic {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 304px;
+  height: 304px;
+  background: var(--white);
+  border: 7px solid var(--white);
+  box-sizing: border-box;
+}
+
+.instapost_pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+}
+
+.instapost_details {
+  padding: 6px 26px 15px;
+}
+
+.instapost_icons {
+  margin-bottom: 11px;
+  display: flex;
+  gap: 21px;
+}
+
+.instapost_descr {
+  margin-bottom: 17px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+  color: var(--darkgray);
+}
+
+.instapost_descr b {
+  padding-bottom: 7px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 90%;
+  display: block;
+}
+
+.instapost_descr p {
+  padding: 0 !important;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+}
+
+.instapost_comm {
+  padding-left: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 100%;
+  text-align: right;
+  color: #b7b7b7;
 }
