@@ -88,7 +88,7 @@
   scrollbar-color: var(--link) var(--white);
 }
 
-*::-webkit-scrollbar {width: 7px; height: 7px;}
+*::-webkit-scrollbar {width: 5px; height: 5px;}
 *::-webkit-scrollbar-track {background-color: var(--white);}
 *::-webkit-scrollbar-thumb {background-color: var(--link);}
 *::-webkit-scrollbar-thumb:active {background: var(--link-hover);}
@@ -446,11 +446,10 @@ div.icon {
   margin-left: -30px;
   width: 20px;
   height: 20px;
-  background: var(--link) url() no-repeat top center;
 }
 
 tr.inew div.icon {
-  background: var() url() no-repeat top center;
+  background: var(--link) url() no-repeat top center;
 }
 
 tr.isticky div.icon {
@@ -947,6 +946,8 @@ li#onlinelist {
   white-space: nowrap;
 }
 
+::-webkit-scrollbar:horizontal {height: 3px; width: 3px;}
+
 .news {
   width: 187px;
   display: inline-flex;
@@ -1095,7 +1096,7 @@ li#onlinelist {
   position: relative;
   height: 44px;
   width: 212px;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
   display: flex;
   align-items: end;
   justify-content: end;
