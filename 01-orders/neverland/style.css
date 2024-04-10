@@ -226,9 +226,12 @@ body::before {
 #pun-navlinks .container {
   display: flex;
   gap: 12px;
-  justify-content: end;
+  justify-content: flex-end;
   font-size: 7px;
   text-transform: lowercase;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
 }
 
 #pun-navlinks .container:after {
