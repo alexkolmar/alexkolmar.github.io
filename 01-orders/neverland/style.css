@@ -150,7 +150,6 @@ input.button, #pun-admain input.button, #sub4, input[type="button"] {
   border: none;
   cursor: pointer;
   transition: all .2s linear 0s;
-  text-transform: lowercase;
 }
 
 input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="button"]:hover {
@@ -165,7 +164,6 @@ input[type="text"], input[type="password"], textarea, select {
   background: var(--forum);
   border-radius: 5px;
   font-weight: 500;
-  text-transform: lowercase;
 }
 
 select {
@@ -210,8 +208,8 @@ body::before {
 .punbb {
   margin-top: 389px;
   font: 12px var(--font-family), Arial, Verdana;
-  text-transform: lowercase;
   color: var(--darkgray);
+  text-transform: lowercase;
 }
 
 .punbb > div .container {padding: var(--spad);}
@@ -944,9 +942,8 @@ li#onlinelist {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  scrollbar-color: var(--forum) transparent;
 }
-
-::-webkit-scrollbar:horizontal {height: 3px; width: 3px;}
 
 .news {
   width: 187px;
@@ -1123,12 +1120,13 @@ li#onlinelist {
 .pa-title {
   border-radius: 10px;
   width: 196px;
+  min-height: 28px;
   z-index: 11;
   position: relative;
   background: var(--forum);
   color: var(--link);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 9px;
   text-align: center;
   margin: 0 auto 20px;
   box-sizing: border-box;
@@ -1147,7 +1145,7 @@ li#onlinelist {
 
 .lz a {
   font-weight: 500;
-  font-size: 9px;
+  font-size: 10px;
   padding-bottom: 6px;
   display: block;
   border-bottom: 1px solid var(--profile);
@@ -1156,7 +1154,7 @@ li#onlinelist {
 }
 
 .lz span {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   padding: 0 10px;
   display: block;
   font-weight: 500;
@@ -1198,6 +1196,7 @@ li#onlinelist {
   font-weight: 700;
   font-size: 6px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .plank p {
@@ -1214,7 +1213,7 @@ li#onlinelist {
 }
 
 .pa-posts, .pa-respect, .pa-fld5, .pa-fld6 {
-  margin: 0 5px;
+  margin: 5px 5px 0;
   display: inline-block;
   font-weight: 500;
   font-size: 7px;
@@ -1443,6 +1442,10 @@ textarea, .longinput input {width: fit-content; margin: 0;}
 #viewprofile h2, #profilenav h2 {
   padding: 0;
   margin: 0;
+}
+
+#profilenav li {
+  margin-bottom: 5px;
 }
 
 #viewprofile li {
