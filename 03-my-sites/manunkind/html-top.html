@@ -1,0 +1,419 @@
+<!--Профилактика-->
+<div id="resplash" style="display: none;">
+    <div class='profilactica'><form id='login' class='container' method='post' action='login.php?action=in' onsubmit='return my_form(this)'><fieldset>
+    <span>Дорогие гости и игроки! У нас небольшой перерыв в связи с оптимизацией игрового пространства и организационных моментов. Не переключайтесь и спасибо за понимание.</span>
+    <div class='fs-box inline'><input type='hidden' name='form_sent' value='1' /><input type='hidden' name='redirect_url' value='/' /><p class='inputfield required'> <label for='fld1'>Имя <em>(Обязательно)</em></label> <span class='input'> <input type='text' id='fld1' name='req_username' size='25' maxlength='25'/></span></p> <p class='inputfield required'> <label for='fld2'>Пароль <em>(Обязательно)</em></label> <span class='input'> <input type='password'  id='fld2'  name='req_password'  size='25'  maxlength='25' /></span></p></div></fieldset> <center><p class='formsubmit'> <input type='submit' class='button' id='customebutton' name='login' value='Войти как Администратор' /></p></center></form></div></div>
+    <script type="text/javascript">
+    var active = 0;
+    if(GroupID != 1 && active == 1){
+    e10 = document.createElement('div')
+    e10.innerHTML = document.getElementById("resplash").innerHTML;
+    document.getElementsByTagName('body')[0].insertBefore(e10,document.getElementById('pun_wrap'))
+    document.write("<style type=\"text/css\">html, body {background: var(--main-dark-bg);} #customebutton {margin: auto;} #pun {display: none;}</style>");
+    document.title= 'Форум на профилактике - '+document.title;
+    }
+    </script>
+    <!--Конец профилактики-->
+    
+    
+    
+    <!---------------------------- Фавиконка ---------------------------->
+    <link id="favicon" rel="shortcut icon" href="//forumstatic.ru/files/0018/1e/e2/77348.ico" type="image/x-icon">
+    <link id="favicon" rel="apple-touch-icon" href="//forumstatic.ru/files/0018/1e/e2/24106.png">
+    <link id="favicon" rel="mask-icon" href="//forumstatic.ru/files/001a/e1/7e/87212.svg" color="#4c7398">
+    <script>$('#html-header').find('#favicon').each(function(){$(this).prependTo('head');});</script>
+    
+    
+    <!-- Cчётчик Игровых постов -->
+    <script type="text/javascript">
+    /*delete localStorage.alertsAMS_onCountCode;*/
+    /***************************
+     Настройки!
+     ***************************/
+    FORUM._NUMpa_fld = 3;    // Номер.Доп.поля,
+    FORUM._color_fld = "#759dbb"; // Цвет шрифта cчётчика,
+    FORUM.includeFirstPost = 0; // 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
+    FORUM.AddOrSlash = 0;    // 0 - Поле отдельно, 1 - через слеш с общ. числом сообщений,
+    FORUM.Number_winners = [10,[1,12]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
+    FORUM.Subscription_Code = "e835764257d433de123b2e182217bd4695367a24"; //Код подписки;/выдаётся на этапе теста/
+    /**** НАСТРОЙКА Игровых локаций ****/
+    function ad_ (){/*!~!FORUM.ForArrAy = {
+    
+    //Форум  //Темы (включаемые, или исключаемые)
+    f8:  -[207,420],  // Сюжетные эпизоды
+    f9:  -[0],  // Личные эпизоды
+    f10: -[0],  // Альтернатива
+    f11: -[0]   // Завершённые эпизоды //Последний элемент без запятой!
+    }
+    !~!*/}ad_ = ad_.toString().split('!~!')[1]; </script>
+    <script type="text/javascript" src="//forumstatic.ru/files/0013/44/56/77707.js"></script>
+      <style>#profile-right strong.GamePst2{ color: #1B160F!important }</style>
+    <!-- END//Cчётчик Игровых постов -->
+    
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(69922606, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/69922606" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    
+    
+    <!-- Таблица в шапке -->
+    <div id="header">
+        <div class="about">Форумная ролевая игра по мотивам Detective Comics. Способности, эпизоды, nc-17.</div>
+        <div class="head_inner">
+            <div class="head_left col"><!-- Левая колонка Начало -->
+                <div class="newsblock"><!-- Блок новостей Начало -->
+                    <div class="newstitle">новости</div>
+                    <div class="news">
+                        <ul>
+    <li><p><span class="date">05/04</span> <a href="https://dc-manunkind.ru/viewtopic.php?id=38&p=2#p51007">Техническое обновление!</a></p></li>
+    <li><p><span class="date">19/08</span> Нам 3 года! <a href="https://dc-manunkind.ru/viewtopic.php?id=38&p=2#p49340">С Днём Рождения!</a></p></li>
+    <li><p><span class="date">06/03</span> Вау, да это же первые <a href="https://dc-manunkind.ru/viewtopic.php?id=38&p=2#p48117">весенние новости</a> подоспели!</p></li>
+    <li><p><span class="date">11/01</span>Немного хороших <a href="https://dc-manunkind.ru/viewtopic.php?id=38#p46937">январских новостей</a> :з Спешите прочесть!</p></li>
+    <li><p><span class="date">04/12</span><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p46446">Новости постанабиозные!</a></p></li>
+    <li><p><span class="date">02/03</span><b><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p44637">Важные новости!</a></b></p></li>
+    <li><p><span class="date">27/01</span><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p43979">Январские новости!</a> Выходим из зимней спячки и вперёд - совершать новые подвиги!</p></li>
+    <li><p><span class="date">26/12</span><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p43030">Новости! Новогодние!</a> Читаем, участвуем <a href="https://manunkind.rusff.me/viewtopic.php?id=428#p43029">в праздничном флэшмобе</a>!</p></li>
+    <li><p><span class="date">25/11</span>Мы запустили новый <a href="https://manunkind.rusff.me/viewtopic.php?id=420">сюжетный квест!</a> Любители концертов похардкорнее - вам это обязательно понравится :з</p></li>
+    <li><p><span class="date">11/11</span>А вот и <a href="https://manunkind.rusff.me/viewtopic.php?id=38#p41260">ноябрьские новости</a> :з И вслед за <a href="https://manunkind.rusff.me/viewtopic.php?id=317">общей хролологией эпизодов</a> появилась <a href="https://manunkind.rusff.me/viewtopic.php?id=416">общая комиксная хронология</a>!</p></li>
+    <li><p><span class="date">31/10</span>Всем весёлого Хэллоуина! Не забывайте участвовать в <a href="https://manunkind.rusff.me/viewtopic.php?id=38#p38603">конкурсах</a> и получать вкусные плюшки :з</p></li>
+    <li><p><span class="date">10/10</span>Октябрьские <a href="https://manunkind.rusff.me/viewtopic.php?id=38#p34132">новости</a> и свежая <a  href="https://manunkind.rusff.me/viewtopic.php?id=221#p34127">сезонная акция</a> постучались в двери! Читаем, радуемся, готовимся к скорому празднику!</p></li>
+    <li><p><span class="date">15/09</span>Свежие осенние <a href="//manunkind.rusff.me/viewtopic.php?id=38#p28894">новости</a> уже в эфире!</p></li>
+    <li><p><span class="date">19/08</span><b>Нам исполнился год!!!</b> Не пропустите свежую <a href="//manunkind.rusff.me/viewtopic.php?id=221#p27315">акцию</a> и возможность <a href="//manunkind.rusff.me/viewtopic.php?id=281#p27317">выбрать</a> первую жертву! Подробности в <a href="//manunkind.rusff.me/viewtopic.php?id=38#p27316">юбилейных новостях</a>!</p></li>
+                        </ul>
+                    </div>
+                </div><!-- Блок новостей Конец -->
+                <div class="wantedblock"><!-- Блок нужных Начало -->
+                    <div class="wantedtitle">Нужные</div>
+                    <div id="КонтентРотатор2"><!-- Ротатор -->
+                        <div class="allwanted">
+                            <div class="wanted"><a href="https://dc-manunkind.ru/viewtopic.php?id=15#p44042" title="Бэтмен ищет Джокера!"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/895372.png"></a></div>
+                            <div class="wanted"><a href="https://manunkind.rusff.me/viewtopic.php?id=15#p10754" title="Найтвинг ищет Рейвен!"><img src="https://i.imgur.com/H0OtMtZ.png"></a></div>
+                            <div class="wanted"><a href="https://manunkind.rusff.me/viewtopic.php?id=15#p12960" title="Робин разыскивает мать!"><img src="https://i.imgur.com/whSfHi8.png"></a></div>
+                        </div>
+                        <div class="allwanted">
+                            <div class="wanted"><a href="javascript:to('Kent Connor')" title="Мэтч ищет Паэургёрл!"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/t496690.png"></a></div>
+                            <div class="wanted"><a href="//manunkind.rusff.me/viewtopic.php?id=15#p44041" title="Бэт-семья ищет Красного Робина!"><img src="//forumupload.ru/uploads/001a/e1/7e/3/672366.png"></a></div>
+                            <div class="wanted"><a href="//manunkind.rusff.me/viewtopic.php?id=15#p28345" title="Красный Колпак разыскивает Арсенала!"><img src="//forumupload.ru/uploads/001a/e1/7e/3/923272.png"></a></div>
+                        </div>
+                    </div>
+                    <script language="javascript">
+                        function Rotator_cont(selek) {
+                        var s = 20000;  // Время отображения
+                        var N=$(selek).length;
+                        var i=Math.round(Math.random()*(N-1));Rotator(i);
+    
+                        function Rotator(i) {
+                            $(selek).hide();$(selek).eq(i).show();i++;
+                            if(i>N-1){i=0};
+                            timerId01=setTimeout(function(){Rotator(i)},s);return;}
+                        }Rotator_cont('#КонтентРотатор2 .allwanted')
+                    </script><!-- Ротатор Конец -->
+                </div><!-- Блок нужных Конец -->
+            </div><!-- Левая колонка Конец -->
+            <div class="head_center">
+                <div class="logo">ManUNkind</div>
+                <div class="navblock" style="display:none">
+                    <ul class="hotlinks">
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=2">Гостевая</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=5">Правила</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=6">F.A.Q. по форуму</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=8">Сюжет</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=317">Хронология игры</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=38">Новости</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=13">Путеводитель</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=15">Нужные персонажи</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=9">Информация о мире</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=3">Занятые внешности</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=4">Список персонажей</a></li>
+                        <li><a href="//manunkind.rusff.me/viewtopic.php?id=32">Шаблон анкеты</a></li>
+                    </ul>
+                </div>
+                <div class="imgwrap">
+                    <div id="КонтентРотатор"><!-- Ротатор -->
+                        <img class="dcloc" src="//forumstatic.ru/files/0018/1e/e2/19841.jpg">
+                        <img class="dcloc" src="//forumstatic.ru/files/0018/1e/e2/62644.jpg">
+                        <img class="dcloc" src="//forumstatic.ru/files/0018/1e/e2/15053.jpg">
+                    </div>
+                    <script type='text/javascript'>
+                        function Rotator_cont(selek) {
+                        var s = 360000;  // Время отображения
+                        var N=$(selek).length;
+                        var i=Math.round(Math.random()*(N-1));Rotator(i);
+    
+                        function Rotator(i) {
+                            $(selek).hide();$(selek).eq(i).show();i++;
+                            if(i>N-1){i=0};
+                            timerId01=setTimeout(function(){Rotator(i)},s);return;}
+                        }Rotator_cont('#КонтентРотатор .dcloc')
+                    </script>
+                </div>
+                <div class="navigation">
+                    <a class="navtrigger" href="#">полезные ссылки</a>
+                    <script type='text/javascript'>
+                        $(document).ready(function(){
+                            $("a.navtrigger").click(function(){
+                                $(".navblock").fadeToggle();return false;
+                            });
+                        });
+                        $(document).ready(function(){
+                            $('a.navtrigger').click(function () {
+                                $(this).toggleClass('active');
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="head_right col">
+                <div class="questsblock">
+                    <div class="queststitle">сюжетные квесты</div>
+                    <div class="quests">
+                        <ul>
+                            <li>
+                                <div class="more">
+                                    <div class="tooltip">
+                                        <span>
+                                            <a href="//manunkind.rusff.me/viewtopic.php?id=421">Прячься у всех на виду</a>
+                                        </span>
+                                        <div class="plot">Лос-Анджелес, 19.01.2021<br>
+    Второй концерт молодой рок-группы, который должен пройти в одном из прогрессивных ночных клубов Лос-Анджелеса. После предыдущего концерта, состоявшегося в Нью-Йорке, несколько десятков посетителей этого мероприятия покончили собой тем же вечером. Инцидент вызвал у полиции и супергероев множество вопросов, но каких-либо доказательств и взаимосвязей найдено не было. Произошедшее в Нью-Йорке не испугало фанатов - почти все билеты на предстоящий концерт в Лос-Анджелесе распроданы. Шоу состоится несмотря ни на что. Будут ли ещё жертвы?
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="queue">Game Master</span>
+                            </li>
+                            <li>
+                                <div class="more">
+                                    <div class="tooltip">
+                                        <span>
+                                            <a href="//dc-manunkind.ru/viewtopic.php?id=481">Values and sacrificies</a>
+                                        </span>
+                                        <div class="plot">29 марта 2021 года.<br><br>
+                                            После потери связи и последующего известия от Бэтмена про вторжение Брейниака, Дэмиен Уэйн вынужден обеспечить безопасность того, что готовил его отец на данный случай в соответствии с протоколом, которому должен следовать. Ему нужно укомплектовать машину, которая видимо играет важную роль для Бэтмена, и перевезти её в нужное и, скорее всего, безопасное место. Для этой задачи Робину оказывает помощь Джейсон Тодд. Пара рук лишней не бывает.
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="queue">Damian Wayne</span>
+                            </li>
+                            <li>
+                                <div class="more">
+                                    <div class="tooltip">
+                                        <span>
+                                            <a href="//dc-manunkind.ru/viewtopic.php?id=485">Hope is not yet lost</a>
+                                        </span>
+                                        <div class="plot">30 марта 2021 года.<br><br>
+                                            Прибыв на Смотровую Башню Лиги Справедливости, Блицкриг, Фрост и Охотница получают новое задание от Бэтмена. Темный Рыцарь направляет их в Метрополис, над которым с наибольшей долей вероятности произойдет последнее сражение с Брейниаком. Их задача доставить и установить новое оборудование в нескольких точках города по заданным координатам и обеспечить его сохранность до прибытия членов Лиги.
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="queue">Game Master</span>
+                            </li>
+                            <li>
+                                <div class="more">
+                                    <div class="tooltip">
+                                        <span>
+                                            <a href="//dc-manunkind.ru/viewtopic.php?id=486">Trespassing the line</a>
+                                        </span>
+                                        <div class="plot">30 марта 2021 года.<br><br>
+                                            Возвращаясь обратно на Смотровую Башню, Бэтгерл и Найтвинг узнают, что Лиге удалось восстановить систему телепортации. Теперь после обеспечения поддержки Супергерл, Гордон и Грейсон должны вернуться обратно в Метрополис и проникнуть на один из кораблей поддержки Брейниака для обезвреживания его флота изнутри. Какой бы ни была опасной их миссия, двое героев отправляются в тыл врага...
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="queue">Dick Grayson</span>
+                            </li>
+                            <li>
+                                <div class="more">
+                                    <div class="tooltip">
+                                        <span>
+                                            <a href="//dc-manunkind.ru/viewtopic.php?id=487">Lightning never strikes twice in the same place</a>
+                                        </span>
+                                        <div class="plot">30 марта 2021 года.<br><br>
+                                            Завершая последние приготовления и вернувшись из Ирландских лесов, Затанна Затара готовится применить древний артефакт, переданный ей Бэтменом. Однако, оказывается, что Ящик Пандоры куда опаснее, чем можно было представить и совладать с таким козырем будет непросто. Стараясь уберечь выживших жителей Метрополиса, Затанна телепортирует вырвавшихся из укрытия детей, среди которых находился Билли Бэтсон, наделенный силой богов...
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="queue">Game Master</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="best"><!-- Блок лучших Начало -->
+                    <div class="bestep">
+                        <div class="besteptitle">Лучший эпизод</div>
+                        <div class="bestep_bg">
+                        <div class="bestplot">
+                            <a href="https://dc-manunkind.ru/viewtopic.php?id=471">Al son del flamenco</a>
+                            <p>Dick Grayson & Barbara Gordon</p>
+                        </div>
+                        <div class="eppic"><img src="https://forumupload.ru/uploads/001a/e1/7e/7/t394296.jpg"></div>
+                        </div>
+                    </div>
+                    <div class="besttitle">Активисты</div>
+                    <div class="activists">
+                        <div class="activist"><a href="https://manunkind.rusff.me/profile.php?id=55" title="Бэтмен"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/367791.png"></a></div>
+                        <div class="activist"><a href="https://manunkind.rusff.me/profile.php?id=64" title="Блитцкриг"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/704420.png"></a></div>
+                        <div class="activist"><a href="https://manunkind.rusff.me/profile.php?id=69" title="Красный Колпак"><img src="https://i.imgur.com/KyN3YFW.png"></a></div>
+                    </div>
+                </div><!-- Блок лучших Конец -->
+            </div>
+        </div>
+    </div>
+    
+    
+        <!-- Пиар-вход v.2 -->
+        <script src="//forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+        <script type="text/javascript">
+        PR.nick = 'PR'; //Ник PR-аккаунта
+        PR.pass = '1111'; //Пароль PR-аккаунта
+        PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+        PR.set();</script>
+    
+    
+    <!--кнопки вверх вниз-->
+    <div class="go-up" id='ToTop'><img src="//forumstatic.ru/files/0018/1e/e2/16418.svg"></div>
+    <div class="go-down" id='OnBottom'><img src="//forumstatic.ru/files/0018/1e/e2/54872.svg"></div>
+    <script type="text/javascript">
+    $(function(){
+    if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+    $(window).scroll(function(){
+     if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+     else $("#ToTop").fadeIn("slow")
+      });
+     if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+      $(window).scroll(function(){
+      if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+         else $("#OnBottom").fadeIn("slow")
+     });
+    $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+    $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+    });
+    </script>
+    
+    
+    <!--Скрытие профиля в теме тегом-->
+    <style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+    .hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+    <script>
+        FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+        $().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+    </script>
+    <!-- Конец -->
+    
+    
+    <!--убрать "это интересно"--> 
+    <script type="text/javascript">
+    rusffLive.enable = false;
+    </script>
+    
+    <!-- Отключить "Вложения"-->
+    <script type="text/javascript">
+    RusffCore.sets.files.button = false;
+    </script>
+    
+    
+    <style type="text/css">
+    @font-face {
+        font-family: "Intro Inline";
+        src: url("/files/0014/cf/95/52281.eot");
+        src: url("/files/0014/cf/95/52281.eot?#iefix")format("embedded-opentype"),
+        url("/files/0014/cf/95/30220.woff") format("woff"),
+        url("/files/0014/cf/95/90696.ttf") format("truetype");
+        url('/files/0014/cf/95/51585.svg#svgFontName') format('svg');
+        font-style: normal;
+        font-weight: normal;
+    }
+    </style>
+    
+    
+    <!-- Всплывающие окна с информацией ч.1 -->
+    <script src="//forumstatic.ru/files/0011/e9/e1/56920.js" type="text/javascript"></script>
+    
+    
+    <!--Всплывающие Подсказки при наведении-->
+    <script type="text/javascript" src="//forumstatic.ru/files/0018/1e/e2/10216.js"></script>
+    <!--//End//-Всплывающие Подсказки при наведении-->
+    
+    
+    <!--Выделение кода в блоке "Код" с перемещение в буфер обмена // © Damassk, версия 2019г. --> 
+    <script type="text/javascript" src="//forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+    <script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+    <script type="text/javascript">select_text.linkText = 'выделить [копируется сразу]' //текст ссылки</script>
+    <!-- конец -->
+    
+    
+    <!-- Ссылка на авторский пост в цитате v4 © Alex_63, 2024 -->
+    <script type="text/javascript">
+    $(document).on('pun_main_ready pun_post pun_edit WYSI_insert WYSI_init',function(){
+    $('.quote-box>cite:contains("#p")').each(function() {
+      var cntq = $(this).text(), pid = cntq.split(',')[0], lnkq = '<a class="qc-post-link" href="';
+      if($('.post'+pid).length){$(this).html(lnkq+pid+'">'+cntq.split(',')[1]+'</a>');}
+      else{$(this).html(lnkq+'/viewtopic.php?pid='+pid.split('#p')[1]+pid+'">'+cntq.split(',')[1]+'</a>');}
+    });$('#pun-viewtopic .pl-quote>a').each(function() { if($(this).attr('href').indexOf('(\'#p')!=-1)return;
+      $(this).attr('href',$(this).attr('href').replace('(\'','(\'#'+$(this).parents('.post').attr('id')+','));
+    });});
+    </script>
+    
+    
+    <!-- Инструмент для добавления bb-кодов -->
+    <script src="https://mybb.kozhilya.ru/script/mybbcode.min.js"></script>
+    <!-- END Инструмент для добавления bb-кодов -->
+    
+    <!--ТЕГ абзаца - [indent] -->
+    <style>#button-indent {background:url(http://s7.uploads.ru/t/mnkgq.png)no-repeat center 6px!important;}
+    .custom_tag_indent {margin:1em 2.1em;}</style>
+    <script>
+        MyBBCode.addEditorButton('indent', {
+            name: "Красная строка",
+            onclick: () => smile('[indent]'),
+        }, 'left');
+        MyBBCode.addEditorButton('styles', {
+            name: "Пресеты",
+            onclick: () => $('#Styles').fadeToggle('slow')
+        }, 'keyboard');
+    </script>
+    
+    
+    <!-- Скрипт для создания анкет © ForumD.ru -->
+    <script type="text/javascript">
+    var Questnr = {};
+    Questnr.groups = [1,2]; //Группы, которым разрешено создавать шаблоны для анкет
+    Questnr.forums = [1,5,7]; //Форумы с допуском к анкетированию
+    Questnr.title  = 'Анкета'; //Начало заголовка темы с анкетой (по умолчанию)
+    Questnr.noedit = 0; //Запрет редактирования заполненной анкеты пользователем
+    </script><script type="text/javascript">
+    ['viewforum','viewtopic','post','edit'].indexOf($('.punbb')[0].id.substr(4))!=-1&&
+    $().pun_mainReady(function(){var s='script',l='//forumstatic.ru/files/0017/b3/fc/41332.js';
+    var f=$('#pun-viewforum').length?$('link[rel="alternate"]'):$('.crumbs a[href*="viewforum"]:last');
+    f=+f[0].href.match(/id=(\d+)$/)[1];Questnr.forums.indexOf(f)!=-1&&document.write('<'+s+' src="'+l+'"></'+s+'>')});
+    </script>
+    <script>
+    Questnr.allowReply = [+$('link[rel="alternate"]')[0].href.match(/id=(\d+)$/)[1]]; //текущая тема
+    </script>
+    
+    <!-- Анкета: Добавка кнопок BB-тегов к textarea -->
+    <style>
+     .new[id=form-buttons] td{display: inline-block; height:24px;}
+    </style>
+    <script type="text/javascript">
+     if(GroupID != 3)$(function() {var button_tbl = $('#post #form-buttons').clone().addClass('new');
+      button_tbl.find('#button-image>img')[0].setAttribute('onclick','bbcode(\'['+'img]\',\'[/img]\')');
+      button_tbl.find('td:not(#button-bold):not(#button-italic):not(#button-underline):not(#button-image):not(#button-strike):not(#button-left):not(#button-center):not(#button-right):not(#button-link):not(#button-spoiler):not(#button-hide):not(#button-code):not(#button-color):not(#button-mask)').remove();
+      button_tbl.insertBefore('.questionary-post textarea');
+        $('.new[id="form-buttons"]').on('mouseenter',function() {
+        var area = $(this).next('textarea');if(!area.length){area = $(this).next().find('textarea');}
+        $('.questionary-post').find('textarea').removeAttr('id');
+        if(area[0].id!='main-reply')area.attr('id','main-reply');
+         }).on('mouseleave',function(){$('.questionary-post textarea').removeAttr('id');});
+      });
+    </script>
