@@ -376,6 +376,7 @@
     box-sizing: border-box;
     font-family: open-sans, verdana, arial, sans-serif;
     font-size: 12px;
+    max-width: initial;
     }
     
     #pun-admain textarea {

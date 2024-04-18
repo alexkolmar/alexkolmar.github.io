@@ -1,10 +1,10 @@
 <!--Профилактика-->
 <div id="resplash" style="display: none;">
     <div class='profilactica'><form id='login' class='container' method='post' action='login.php?action=in' onsubmit='return my_form(this)'><fieldset>
-    <span>Дорогие гости и игроки! У нас небольшой перерыв в связи с оптимизацией игрового пространства и организационных моментов. Не переключайтесь и спасибо за понимание.</span>
+    <span>Дорогие гости и игроки! У нас небольшой перерыв в связи со сменой дизайна. Не переключайтесь и спасибо за понимание.</span>
     <div class='fs-box inline'><input type='hidden' name='form_sent' value='1' /><input type='hidden' name='redirect_url' value='/' /><p class='inputfield required'> <label for='fld1'>Имя <em>(Обязательно)</em></label> <span class='input'> <input type='text' id='fld1' name='req_username' size='25' maxlength='25'/></span></p> <p class='inputfield required'> <label for='fld2'>Пароль <em>(Обязательно)</em></label> <span class='input'> <input type='password'  id='fld2'  name='req_password'  size='25'  maxlength='25' /></span></p></div></fieldset> <center><p class='formsubmit'> <input type='submit' class='button' id='customebutton' name='login' value='Войти как Администратор' /></p></center></form></div></div>
     <script type="text/javascript">
-    var active = 0;
+    var active = 1;
     if(GroupID != 1 && active == 1){
     e10 = document.createElement('div')
     e10.innerHTML = document.getElementById("resplash").innerHTML;
