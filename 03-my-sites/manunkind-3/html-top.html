@@ -1,0 +1,283 @@
+<!--Профилактика-->
+<div id="resplash" style="display: none;">
+    <div class='profilactica'><form id='login' class='container' method='post' action='login.php?action=in' onsubmit='return my_form(this)'><fieldset>
+    <span>Дорогие гости и игроки! У нас небольшой перерыв в связи со сменой дизайна. Не переключайтесь и спасибо за понимание.</span>
+    <div class='fs-box inline'><input type='hidden' name='form_sent' value='1' /><input type='hidden' name='redirect_url' value='/' /><p class='inputfield required'> <label for='fld1'>Имя <em>(Обязательно)</em></label> <span class='input'> <input type='text' id='fld1' name='req_username' size='25' maxlength='25'/></span></p> <p class='inputfield required'> <label for='fld2'>Пароль <em>(Обязательно)</em></label> <span class='input'> <input type='password'  id='fld2'  name='req_password'  size='25'  maxlength='25' /></span></p></div></fieldset> <center><p class='formsubmit'> <input type='submit' class='button' id='customebutton' name='login' value='Войти как Администратор' /></p></center></form></div></div>
+    <script type="text/javascript">
+    var active = 0;
+    if(GroupID != 1 && active == 1){
+    e10 = document.createElement('div')
+    e10.innerHTML = document.getElementById("resplash").innerHTML;
+    document.getElementsByTagName('body')[0].insertBefore(e10,document.getElementById('pun_wrap'))
+    document.write("<style type=\"text/css\">html, body {background: var(--main-dark-bg);} #customebutton {margin: auto;} #pun {display: none;}</style>");
+    document.title= 'Форум на профилактике - '+document.title;
+    }
+    </script>
+    <!--Конец профилактики-->
+    
+    
+    
+    <!---------------------------- Фавиконка ---------------------------->
+    <link id="favicon" rel="shortcut icon" href="//forumstatic.ru/files/001c/09/2b/23604.png" type="image/x-icon">
+    <link id="favicon" rel="apple-touch-icon" href="//forumstatic.ru/files/001c/09/2b/23604.png">
+    <link id="favicon" rel="mask-icon" href="//forumstatic.ru/files/001a/e1/7e/87212.svg" color="#4c7398">
+    <script>$('#html-header').find('#favicon').each(function(){$(this).prependTo('head');});</script>
+    
+    
+    <!-- Cчётчик Игровых постов -->
+    <script type="text/javascript">
+    /*delete localStorage.alertsAMS_onCountCode;*/
+    /***************************
+     Настройки!
+     ***************************/
+    FORUM._NUMpa_fld = 3;    // Номер.Доп.поля,
+    FORUM._color_fld = "#FFECC7"; // Цвет шрифта cчётчика,
+    FORUM.includeFirstPost = 0; // 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
+    FORUM.AddOrSlash = 0;    // 0 - Поле отдельно, 1 - через слеш с общ. числом сообщений,
+    FORUM.Number_winners = [10,[1,12]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
+    FORUM.Subscription_Code = "e835764257d433de123b2e182217bd4695367a24"; //Код подписки;/выдаётся на этапе теста/
+    /**** НАСТРОЙКА Игровых локаций ****/
+    function ad_ (){/*!~!FORUM.ForArrAy = {
+    
+    //Форум  //Темы (включаемые, или исключаемые)
+    f8:  -[207,420],  // Сюжетные эпизоды
+    f9:  -[0],  // Личные эпизоды
+    f10: -[0],  // Альтернатива
+    f11: -[0]   // Завершённые эпизоды //Последний элемент без запятой!
+    }
+    !~!*/}ad_ = ad_.toString().split('!~!')[1]; </script>
+    <script type="text/javascript" src="//forumstatic.ru/files/0013/44/56/77707.js"></script>
+      <style>#profile-right strong.GamePst2{ color: #1B160F!important }</style>
+    <!-- END//Cчётчик Игровых постов -->
+    
+    
+    <!-- Таблица в шапке -->
+    <div class="tablica">
+      <div class="tablica_hover">
+        <div class="tabside">
+          <div class="tabblock">
+            <ul class="news">
+              <li><p><span class="date">05/04</span> <a href="https://dc-manunkind.ru/viewtopic.php?id=38&p=2#p51007">Техническое обновление!</a></p></li>
+              <li><p><span class="date">19/08</span> Нам 3 года! <a href="https://dc-manunkind.ru/viewtopic.php?id=38&p=2#p49340">С Днём Рождения!</a></p></li>
+              <li><p><span class="date">06/03</span> Вау, да это же первые <a href="https://dc-manunkind.ru/viewtopic.php?id=38&p=2#p48117">весенние новости</a> подоспели!</p></li>
+              <li><p><span class="date">11/01</span>Немного хороших <a href="https://dc-manunkind.ru/viewtopic.php?id=38#p46937">январских новостей</a> :з Спешите прочесть!</p></li>
+              <li><p><span class="date">04/12</span><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p46446">Новости постанабиозные!</a></p></li>
+              <li><p><span class="date">02/03</span><b><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p44637">Важные новости!</a></b></p></li>
+              <li><p><span class="date">27/01</span><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p43979">Январские новости!</a> Выходим из зимней спячки и вперёд - совершать новые подвиги!</p></li>
+              <li><p><span class="date">26/12</span><a href="https://manunkind.rusff.me/viewtopic.php?id=38#p43030">Новости! Новогодние!</a> Читаем, участвуем <a href="https://manunkind.rusff.me/viewtopic.php?id=428#p43029">в праздничном флэшмобе</a>!</p></li>
+              <li><p><span class="date">25/11</span>Мы запустили новый <a href="https://manunkind.rusff.me/viewtopic.php?id=420">сюжетный квест!</a> Любители концертов похардкорнее - вам это обязательно понравится :з</p></li>
+            </ul>
+          </div>
+          <div class="faceblock">
+            <a href="https://dc-manunkind.ru/viewtopic.php?id=15#p44042" title="Бэтмен ищет Джокера!"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/895372.png"></a>
+            <a href="https://manunkind.rusff.me/viewtopic.php?id=15#p10754" title="Найтвинг ищет Рейвен!"><img src="https://i.imgur.com/H0OtMtZ.png"></a>
+            <a href="https://manunkind.rusff.me/viewtopic.php?id=15#p12960" title="Робин разыскивает мать!"><img src="https://i.imgur.com/whSfHi8.png"></a>
+          </div>
+        </div>
+        <div class="tabcenter">
+          <div class="bestep">
+             <span><a href="https://dc-manunkind.ru/viewtopic.php?id=487">Lightning never strikes twice in the same place</a></span>
+            <div class="bestimg"><img src="https://forumstatic.ru/files/001c/09/2b/51418.webp"></div>
+          </div>
+          <ul class="hotlinks">
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=2">Гостевая</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=5">Правила</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=6">F.A.Q. по форуму</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=8">Сюжет</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=317">Хронология игры</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=38">Новости</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=13">Путеводитель</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=15">Нужные персонажи</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=9">Информация о мире</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=3">Занятые внешности</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=4">Список персонажей</a></li>
+            <li><a href="https://manunkind.rusff.me/viewtopic.php?id=32">Шаблон анкеты</a></li>
+          </ul>
+        </div>
+        <div class="tabside">
+          <div class="tabblock">
+            <ul class="quests">
+              <li>
+                <span><a href="https://dc-manunkind.ru/viewtopic.php?id=481">Values and sacrificies</a></span>
+                <p>Damian Wayne</p>
+              </li>
+              <li>
+                <span><a href="https://dc-manunkind.ru/viewtopic.php?id=485">Hope is not yet lost</a></span>
+                <p>Game Master</p>
+              </li>
+              <li>
+                <span><a href="https://dc-manunkind.ru/viewtopic.php?id=486">Trespassing the line</a></span>
+                <p>Dick Grayson</p>
+              </li>
+              <li>
+                <span><a href="https://dc-manunkind.ru/viewtopic.php?id=487">Lightning never strikes twice in the same place</a></span>
+                <p>Game Master</p>
+              </li>
+            </ul>
+          </div>
+          <div class="faceblock">
+            <a href="https://dc-manunkind.ru/profile.php?id=10" title="Дик Грейсон"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/814969.png"></a>
+            <a href="https://dc-manunkind.ru/profile.php?id=7" title="Барбара Гордон"><img src="https://i.imgur.com/Yj3bMlK.png"></a>
+            <a href="https://dc-manunkind.ru/profile.php?id=64" title="Ева Вагнер"><img src="https://forumupload.ru/uploads/001a/e1/7e/3/704420.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="tablica_bg">
+        <div class="dc_logo">
+          <img class="dc_emblem"src="https://forumstatic.ru/files/001c/09/2b/76424.svg">
+          <div class="dc_info">
+            <span class="year">2021 год</span>
+            <span class="rate">NC-17</span>
+          </div>
+        </div>
+        <div class="about">Форумная ролевая игра по мотивам Detective Comics • способности • эпизоды</div>
+        <div class="dc_name">
+          <span class="man">Man</span>
+          <span class="un">UN</span>
+          <span class="kind">kind</span>
+        </div>
+      </div>
+    </div>
+    
+    
+        <!-- Пиар-вход v.2 -->
+        <script src="//forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+        <script type="text/javascript">
+        PR.nick = 'PR'; //Ник PR-аккаунта
+        PR.pass = '1111'; //Пароль PR-аккаунта
+        PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+        PR.set();</script>
+    
+    
+    <!--кнопки вверх вниз-->
+    <div class="go-up" id='ToTop'><img src="https://forumstatic.ru/files/001c/09/2b/93766.png"></div>
+    <div class="go-down" id='OnBottom'><img src="https://forumstatic.ru/files/001c/09/2b/71805.png"></div>
+    <script type="text/javascript">
+    $(function(){
+    if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+    $(window).scroll(function(){
+     if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+     else $("#ToTop").fadeIn("slow")
+      });
+     if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+      $(window).scroll(function(){
+      if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+         else $("#OnBottom").fadeIn("slow")
+     });
+    $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+    $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+    });
+    </script>
+    
+    
+    <!--Скрытие профиля в теме тегом-->
+    <style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+    .hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+    <script>
+        FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+        $().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+    </script>
+    <!-- Конец -->
+    
+    
+    <!--убрать "это интересно"--> 
+    <script type="text/javascript">
+    rusffLive.enable = false;
+    </script>
+    
+    <!-- Отключить "Вложения"-->
+    <script type="text/javascript">
+    RusffCore.sets.files.button = false;
+    </script>
+    
+    
+    <!— BB-цитатa (NEW) —><script> 
+    var BBQuote = {}; 
+    BBQuote.mode = 0; // BB-цитирование: 0 - по стандартной кнопке цитаты, 1 - со вставкой новой кнопки; 
+    BBQuote.text = 'BB-цитата'; // Надпись на кнопке BB-цитирования 
+    </script> 
+    <script type="text/javascript" src="//forumstatic.ru/files/0015/c4/3f/62091.js"></script>
+    <!— конец —>
+    
+    
+    <!-- Всплывающие окна с информацией ч.1 -->
+    <script src="//forumstatic.ru/files/0011/e9/e1/56920.js" type="text/javascript"></script>
+    
+    
+    <!--Всплывающие Подсказки при наведении-->
+    <script type="text/javascript" src="//forumstatic.ru/files/0018/1e/e2/10216.js"></script>
+    <!--//End//-Всплывающие Подсказки при наведении-->
+    
+    
+    <!--Выделение кода в блоке "Код" с перемещение в буфер обмена // © Damassk, версия 2019г. --> 
+    <script type="text/javascript" src="//forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+    <script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+    <script type="text/javascript">select_text.linkText = 'выделить [копируется сразу]' //текст ссылки</script>
+    <!-- конец -->
+    
+    
+        <!-- Ссылка на авторский пост в цитате v4 © Alex_63, 2024 -->
+        <script type="text/javascript">
+        $(document).on('pun_main_ready pun_post pun_edit WYSI_insert WYSI_init',function(){
+        $('.quote-box>cite:contains("#p")').each(function() {
+          var cntq = $(this).text(), pid = cntq.split(',')[0], lnkq = '<a class="qc-post-link" href="';
+          if($('.post'+pid).length){$(this).html(lnkq+pid+'">'+cntq.split(',')[1]+'</a>');}
+          else{$(this).html(lnkq+'/viewtopic.php?pid='+pid.split('#p')[1]+pid+'">'+cntq.split(',')[1]+'</a>');}
+        });$('#pun-viewtopic .pl-quote>a').each(function() { if($(this).attr('href').indexOf('(\'#p')!=-1)return;
+          $(this).attr('href',$(this).attr('href').replace('(\'','(\'#'+$(this).parents('.post').attr('id')+','));
+        });});
+        </script>
+        
+        
+        <!-- Инструмент для добавления bb-кодов -->
+        <script src="https://mybb.kozhilya.ru/script/mybbcode.min.js"></script>
+        <!-- END Инструмент для добавления bb-кодов -->
+        
+        <!--ТЕГ абзаца - [indent] -->
+        <style>#button-indent {background:url(http://s7.uploads.ru/t/mnkgq.png)no-repeat center 6px!important;}
+        .custom_tag_indent {margin:1em 2.1em;}</style>
+        <script>
+            MyBBCode.addEditorButton('indent', {
+                name: "Красная строка",
+                onclick: () => smile('[indent]'),
+            }, 'left');
+            MyBBCode.addEditorButton('styles', {
+                name: "Пресеты",
+                onclick: () => $('#Styles').fadeToggle('slow')
+            }, 'keyboard');
+        </script>
+    
+    
+    <!-- Скрипт для создания анкет © ForumD.ru -->
+    <script type="text/javascript">
+    var Questnr = {};
+    Questnr.groups = [1,2]; //Группы, которым разрешено создавать шаблоны для анкет
+    Questnr.forums = [1,5,7]; //Форумы с допуском к анкетированию
+    Questnr.title  = 'Анкета'; //Начало заголовка темы с анкетой (по умолчанию)
+    Questnr.noedit = 0; //Запрет редактирования заполненной анкеты пользователем
+    </script><script type="text/javascript">
+    ['viewforum','viewtopic','post','edit'].indexOf($('.punbb')[0].id.substr(4))!=-1&&
+    $().pun_mainReady(function(){var s='script',l='//forumstatic.ru/files/0017/b3/fc/41332.js';
+    var f=$('#pun-viewforum').length?$('link[rel="alternate"]'):$('.crumbs a[href*="viewforum"]:last');
+    f=+f[0].href.match(/id=(\d+)$/)[1];Questnr.forums.indexOf(f)!=-1&&document.write('<'+s+' src="'+l+'"></'+s+'>')});
+    </script>
+    <script>
+    Questnr.allowReply = [+$('link[rel="alternate"]')[0].href.match(/id=(\d+)$/)[1]]; //текущая тема
+    </script>
+    
+    <!-- Анкета: Добавка кнопок BB-тегов к textarea -->
+    <style>
+     .new[id=form-buttons] td{display: inline-block; height:24px;}
+    </style>
+    <script type="text/javascript">
+     if(GroupID != 3)$(function() {var button_tbl = $('#post #form-buttons').clone().addClass('new');
+      button_tbl.find('#button-image>img')[0].setAttribute('onclick','bbcode(\'['+'img]\',\'[/img]\')');
+      button_tbl.find('td:not(#button-bold):not(#button-italic):not(#button-underline):not(#button-image):not(#button-strike):not(#button-left):not(#button-center):not(#button-right):not(#button-link):not(#button-spoiler):not(#button-hide):not(#button-code):not(#button-color):not(#button-mask)').remove();
+      button_tbl.insertBefore('.questionary-post textarea');
+        $('.new[id="form-buttons"]').on('mouseenter',function() {
+        var area = $(this).next('textarea');if(!area.length){area = $(this).next().find('textarea');}
+        $('.questionary-post').find('textarea').removeAttr('id');
+        if(area[0].id!='main-reply')area.attr('id','main-reply');
+         }).on('mouseleave',function(){$('.questionary-post textarea').removeAttr('id');});
+      });
+    </script>
