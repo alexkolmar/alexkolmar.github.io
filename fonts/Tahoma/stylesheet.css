@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Tahoma';
+    src: url('Tahoma.eot');
+    src: local('Tahoma'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma.svg#Tahoma') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('Tahoma-Bold.eot');
+    src: local('Tahoma Bold'), local('Tahoma-Bold'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Tahoma/Tahoma-Bold.svg#Tahoma-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
