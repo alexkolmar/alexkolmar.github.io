@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Arthur Gothic';
+    src: url('https://alexkolmar.github.io/fonts/Arthur_Gothic/ArthurGothic.eot');
+    src: url('https://alexkolmar.github.io/fonts/Arthur_Gothic/ArthurGothic.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Arthur_Gothic/ArthurGothic.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Arthur_Gothic/ArthurGothic.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Arthur_Gothic/ArthurGothic.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Arthur_Gothic/ArthurGothic.svg#ArthurGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
