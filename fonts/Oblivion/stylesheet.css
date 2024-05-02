@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Oblivion';
+    src: url('https://alexkolmar.github.io/fonts/Oblivion/Oblivion.eot');
+    src: url('https://alexkolmar.github.io/fonts/Oblivion/Oblivion.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Oblivion/Oblivion.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Oblivion/Oblivion.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Oblivion/Oblivion.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Oblivion/Oblivion.svg#Oblivion') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
