@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Abaddon';
+    src: url('https://alexkolmar.github.io/fonts/Abaddon/Abaddon.eot');
+    src: url('https://alexkolmar.github.io/fonts/Abaddon/Abaddon.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Abaddon/Abaddon.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Abaddon/Abaddon.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Abaddon/Abaddon.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Abaddon/Abaddon.svg#Abaddon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
