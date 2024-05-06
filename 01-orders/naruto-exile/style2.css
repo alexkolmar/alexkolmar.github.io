@@ -192,7 +192,8 @@ h1, h2 {
 .punbb #pun-main h1:not(.editBookmark h1) {
     font-size: 14px !important;
     color: var(--buttontextcolor);
-    background: url(https://forumstatic.ru/files/0015/28/00/19470.png?v=1);
+    background: URL(https://forumstatic.ru/files/0015/28/00/29146.jpg);
+    background-attachment: fixed;
     border-radius: 10px;
 }
 
@@ -298,13 +299,13 @@ body::before {
   min-width: 100vw;
   min-height: 100vh;
   z-index: -10;
-  background: var(--wordcolor1) url(https://forumstatic.ru/files/0015/28/00/78585.jpg) no-repeat fixed top center/cover;
+  background: var(--wordcolor1) url(https://forumstatic.ru/files/0015/28/00/29146.jpg) no-repeat fixed top center/cover;
 }
 
 #pun {
   margin: 35px auto 20px;
   width: 1153px;
-  background: url(https://forumstatic.ru/files/0015/28/00/98730.png) repeat-y top center;
+  background: url(https://forumstatic.ru/files/0015/28/00/50603.png) repeat-y top center;
   border-radius: 10px;
 }
 
@@ -324,7 +325,7 @@ body::before {
 }
 
 #pun-navlinks .container {
-  text-align: center;
+    text-align: center;
 }
 
 #pun-navlinks li {
@@ -734,7 +735,8 @@ tr.iclosed div.icon {
     color: var(--buttontextcolor);
     clear: both;
     width: 1128px;
-    background: URL(https://forumstatic.ru/files/0015/28/00/19470.png);
+    background: URL(https://forumstatic.ru/files/0015/28/00/29146.jpg);
+    background-attachment: fixed;
     border-radius: 6px;
 }
 
@@ -767,10 +769,11 @@ tr.iclosed div.icon {
     position: relative;
     display: flex;
     align-items: center;
-    background: url(https://forumstatic.ru/files/0015/28/00/26008.png);
+    /* background: url(https://forumstatic.ru/files/0015/28/00/26008.png); */
+    background: #eee6;
     border-radius: 5px;
     overflow: hidden;
-    border: solid 1px #43434333;
+    /* border: solid 1px #43434333; */
 }
 
 #pun-index .forum_wrap {
@@ -930,7 +933,7 @@ li#onlinelist {
 ------------------------------------------*/
 
 #pun-title {
-  background: url(https://forumstatic.ru/files/0015/28/00/89240.png) no-repeat top center, url(https://forumstatic.ru/files/0015/28/00/78585.jpg) no-repeat fixed top center/cover var(--wordcolor1);
+  background: url(https://forumstatic.ru/files/0015/28/00/50673.png) no-repeat top center, url(https://forumstatic.ru/files/0015/28/00/29146.jpg) no-repeat fixed top center/cover var(--wordcolor1);
   height: 352px;
 }
 
@@ -939,16 +942,16 @@ li#onlinelist {
     position: absolute;
     width: 1153px;
     height: 349px;
-    top: -33px;
-    left: 495px;
+    top: -38px;
+    left: 493px;
     margin-left: -495px;
     z-index: 0;
 }
 .bg-0 {
-  background: url(https://forumstatic.ru/files/0015/28/00/36951.png) no-repeat center;
+  background: url(https://forumstatic.ru/files/0015/28/00/78255.png) no-repeat center;
 }
 .bg-1 {
-  background: url(https://forumstatic.ru/files/0015/28/00/41646.png) no-repeat center;
+  background: url(https://forumstatic.ru/files/0015/28/00/12371.png) no-repeat center;
 }
 
 
@@ -956,25 +959,26 @@ li#onlinelist {
 
 #html-header {
   position: absolute;
-  top: 35px;
+  top: 50px;
 }
 
 .tablica {
   position: relative;
-  width: 1153px;
+  width: 1149px;
   height: 320px;
   z-index: 1;
 }
 
 .exile--table {
-  padding-top: 20px;
+  position: relative;
+  margin: 12px 10px;
   box-sizing: border-box;
   height: 266px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: url(https://forumstatic.ru/files/0015/28/00/11810.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/0015/28/00/96988.png) no-repeat top center;
   opacity: 0;
   transition: all .4s ease 0s;
 }
@@ -1064,7 +1068,7 @@ li#onlinelist {
 .exile--table-best_post-text {
   padding: 10px;
   display: block;
-  width: 455px;
+  width: 391px;
   height: 114px;
   font-family: Arial;
   font-size: 11px;
@@ -1145,7 +1149,7 @@ li#onlinelist {
 }
 
 .exile--table-right {
-  width: 400px;
+  width: 485px;
 }
 
 .exile--table-right span {
@@ -1153,7 +1157,7 @@ li#onlinelist {
 }
 
 .village_rate {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1230,12 +1234,13 @@ li#onlinelist {
 
 .forum_info {
   display: flex;
+  margin-top: 10px;
   text-transform: uppercase;
   font-weight: 700;
   height: 35px;
   font-size: 7px;
   font-family: verdana;
-  color: var(--buttontextcolor);
+  color: #0b4f58;
   text-align: center;
   align-items: center;
   justify-content: space-around;
@@ -1246,7 +1251,7 @@ li#onlinelist {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35px;
+  height: 21px;
 }
 
 .ssilki {
@@ -1280,13 +1285,14 @@ li#onlinelist {
 }
 
 
+
 /* Футер
 ------------------------------------------*/
 
 /* Копирайт сервиса */
 
 #pun-about {
-  background: url(https://forumstatic.ru/files/0015/28/00/60136.png) no-repeat bottom center;
+  background: url(https://forumstatic.ru/files/0015/28/00/13807.png) no-repeat bottom center;
   height: 139px;
 }
 
@@ -1384,7 +1390,7 @@ li#onlinelist {
     width: 239px;
     text-align: center;
     border-radius: 15px;
-    background: var(--wordcolor1);
+    background: url(https://forumstatic.ru/files/0015/28/00/64554.jpg);
     border: 1px solid var(--wordcolor1);
     color: var(--white);
 }
@@ -1469,12 +1475,14 @@ li#onlinelist {
 
 
 .pa-fld2 rank, #pa-fld2 rank {
-  display: flex;
-  justify-content: center;
-  width: 220px;
-  margin: -1px 0 4px;
-  background: var(--wordcolor1);
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 155px;
+    margin: 2px 31px 4px;
+    background: linear-gradient(0deg, rgb(50 52 51) 0%, rgb(63 66 65) 100%);
+    overflow: hidden;
+    border-radius: 5px;
+    border: solid 1px #272626;
 }
 
 
@@ -1513,7 +1521,7 @@ li#onlinelist {
   font-family: 'cuprum';
   text-align: center;
   text-transform: uppercase;
-  background: var(--wordcolor1);
+  /* background: var(--wordcolor1); */
 }
 
 .pa-fld3 a {
@@ -1743,7 +1751,7 @@ div#notify-settings {
 
 .post-links ul {
   padding: 0;
-  margin-left: -240px;
+  margin-left: -247px;
   text-align: right;
 }
 
@@ -1769,7 +1777,7 @@ div#notify-settings {
 .post .blockButton {
     position: absolute;
     bottom: 14px;
-    left: 2em;
+    left: 1.5em;
 }
 .post .blockButton::before {
     content: "ЧС";
@@ -2081,18 +2089,36 @@ textarea, .longinput input {width: 64%; margin: 0;}
 
 #profilenav ul li.isactive a {color: var(--linkcolor);}
 
-#viewprofile li {
-  padding: 5px 0;
-  margin-bottom: 2px;
+#viewprofile .container ul table {
+  margin: 20px 0;
+  padding: 20px 0;
+  border: 1px solid var(--bordercolor);
+  background-color: var(--wordcolor);
+  border-radius: 15px;
 }
 
-#pun-profile #profile-left strong, #pun-profile #profile-right strong {
+#viewprofile .container ul table tr {
+  display: flex;
+  align-items: start;
+}
+
+#viewprofile li {
+  margin-bottom: 2px;
+  padding: 5px 0;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: Arial;
+  letter-spacing: .5px;
+}
+
+#pun-profile #profile-left strong {
   font-weight: 400 !important;
 }
 
 #pun-profile #profile-left {
   margin: 0 auto;
-  padding: 15px 0 !important;
+  padding: 0 !important;
   width: 240px;
   overflow: hidden;
   box-sizing: border-box;
@@ -2102,9 +2128,7 @@ textarea, .longinput input {width: 64%; margin: 0;}
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  border: 1px solid var(--bordercolor);
-  background-color: var(--wordcolor);
-  border-radius: 15px;
+  flex-shrink: 0;
 }
 
 #profile-left #profile-name {
@@ -2129,36 +2153,78 @@ textarea, .longinput input {width: 64%; margin: 0;}
 }
 
 #profile-left #pa-online {
-  color: var(--textcolor);
+  color: var(--buttoncolor);
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 11px;
   font-style: normal;
   letter-spacing: 0.2px;
   box-sizing: border-box;
   line-height: 1;
-  font-family: Arial;
+  font-family: cuprum;
+  width: 100%;
+  text-align: left;
 }
 
 #profile-left li#pa-edit {
   font-family: 'cuprum';
   font-size: 18px;
   text-transform: lowercase;
+  width: 100%;
+  text-align: left;
+}
+
+#profile-right {
+  display: flex;
+  flex-direction: column;
 }
 
 #profile-right li {
   display: flex;
-}
-
-#viewprofile li {
-  font-size: 11px;
-  line-height: 1;
-  font-weight: 400;
-  font-family: Arial;
+  align-items: center;
 }
 
 #profile-right li span {
-  width: 150px;
+  width: 200px;
   flex-shrink: 0;
+  background: var(--white);
+  padding: 10px 10px 10px 30px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: var(--grey);
+  font-weight: bold;
+}
+
+#profile-right li#pa-fld3 {
+  order: -2;
+}
+
+#profile-right li#pa-fld3 .plinks {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 15px;
+  background: var(--white);
+  font-size: 16px;
+  font-family: 'cuprum';
+  text-align: center;
+  font-weight: 700 !important;
+}
+
+#profile-right li#pa-fld2 {
+  order: -1;
+}
+
+.punbb #profile-right li#pa-fld2 strong rank {
+  margin: 0;
+  width: 200px;
+  border-radius: 15px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img.avatardemo {
@@ -2472,7 +2538,7 @@ input[type="text"], input[type="password"], textarea, select {
 
 #pun-title {
   min-height: 50px;
-  background: url(https://forumstatic.ru/files/0015/28/00/89240.png?v=1) no-repeat top center, url(https://forumstatic.ru/files/0015/28/00/78585.jpg) no-repeat fixed top center/cover var(--wordcolor1);
+  background: url(https://forumstatic.ru/files/0015/28/00/50673.png) no-repeat top center, url(https://forumstatic.ru/files/0015/28/00/29146.jpg) no-repeat fixed top center/cover var(--wordcolor1);
   position: relative;
   top: 36px;
 }
@@ -2513,8 +2579,9 @@ input[type="text"], input[type="password"], textarea, select {
 }
 
 .exile_news {
-  padding: 0 20px 10px;
-  background: rgba(0,0,0,.3);
+    padding: 0 20px 10px;
+    background: rgba(0,0,0,.3);
+    margin-right: 30px;
 }
 
 .header_links {
@@ -2625,6 +2692,8 @@ input[type="text"], input[type="password"], textarea, select {
 #pun-navlinks li#navpr a:before {content: "\ef49";}
 #pun-navlinks li#navawards a:before {content: "\ea23";}
 #pun-navlinks li#navrules a:before {content: "\e85f";}
+#pun-navlinks li#navpr_1 a:before {content: "\ef49";}
+#pun-navlinks li#navpr_2 a:before {content: "\e54b";}
 
 #pun-navlinks a::after {
   position: absolute;
@@ -2825,8 +2894,6 @@ content: "";
   display: flex;
   display: -webkit-flex;
 }
-
-
 
 
 /* Главная страница
@@ -3074,7 +3141,7 @@ display: none;
 }
 
 /* Скрыть поля профиля */
-.post-author .pa-fld2, .post-author .pa-fld3, .pa-reg, .pa-from, .pa-invites, .pa-positive, .pa-icq, .pa-sex, .pa-age, .pa-ip, .pa-time-visit, .pa-last-visit, .pa-online, .pa-awards {
+.post-author .pa-fld2, .pa-reg, .pa-from, .pa-invites, .pa-positive, .pa-icq, .pa-sex, .pa-age, .pa-ip, .pa-time-visit, .pa-last-visit, .pa-online, .pa-awards {
     display: none !important;
 }
 
@@ -3117,6 +3184,12 @@ display: none;
   padding: 0;
   width: 100%;
   text-align: left;
+  order: -2;
+}
+
+.punbb .post-author .pa-fld3 {
+  order: -1;
+  margin: 0 0 0 75px;
 }
 
 /* Сообщения и репутация */
@@ -3344,14 +3417,6 @@ margin: 0;
   margin: 0;
 }
 
-#viewprofile tr {
-  flex-direction: column;
-  border: 1px solid var(--bordercolor);
-  background-color: var(--wordcolor);
-  border-radius: 15px;
-  margin: 10px auto;
-}
-
 #viewprofile td {width: 100%;}
 
 #viewprofile li {
@@ -3374,7 +3439,42 @@ margin: 0;
 
 #viewprofile #profile-left li {padding: 5px 0}
 
+#profile-left #profile-name {
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'cuprum';
+  letter-spacing: 1px;
+  color: var(--buttoncolor);
+  text-transform: uppercase;
+}
+
+#profile-left #profile-title {
+  margin: 0 auto 5px;
+  padding: 3px;
+  width: 180px;
+  font-size: 10px;
+  line-height: 1;
+  font-family: Arial;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
 #viewprofile #profile-left li#pa-avatar {padding: 5px;}
+
+#profile-left #pa-online {
+  color: var(--textcolor);
+  text-transform: uppercase;
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  box-sizing: border-box;
+  line-height: 1;
+  font-family: Arial;
+  text-align: center;
+}
+
+#profile-left li#pa-edit {text-align: center;}
 
 #viewprofile #profile-right {padding: 10px 0 0;}
 
@@ -3389,6 +3489,7 @@ margin: 0;
   font-family: 'cuprum';
   font-size: 14px;
   text-transform: uppercase;
+  background: none;
 }
 
 #viewprofile #profile-right li strong {
@@ -3399,6 +3500,10 @@ margin: 0;
 #profile-right li#pa-fld2 strong {
   display: block;
   width: 100%;
+}
+
+#profile-right li#pa-fld3 strong {
+  font-size: 20px;
 }
 
 #pun-profile #profile-left strong, #pun-profile #profile-right strong {
@@ -3417,53 +3522,14 @@ margin: 0;
   text-align: left;
 }
 
-#profile-right #profile-name {
-  box-sizing: border-box;
-  font-weight: bold;
-  font-size: 15px;
-  font-family: 'cuprum';
-  letter-spacing: 1px;
-  color: var(--buttoncolor);
-  text-transform: uppercase;
-}
-
-#profile-right #profile-title {
-  margin: 0 auto 5px;
-  padding: 3px;
-  width: 180px;
-  font-size: 10px;
-  line-height: 1;
-  font-family: Arial;
-  letter-spacing: 1px;
-  text-transform: lowercase;
-}
-
-#profile-right #pa-online {
-  color: var(--textcolor);
-  text-transform: uppercase;
-  font-size: 9px;
-  font-style: normal;
-  letter-spacing: 0.2px;
-  box-sizing: border-box;
-  line-height: 1;
-  font-family: Arial;
-}
-
 #profile-right li#pa-fld3 {
   order: -2;
   margin: 0 auto 5px;
 }
 
-#profile-right li#pa-fld3 span, #profile-right li#pa-fld2, #profile-right li#pa-fld1, #profile-right li#pa-fld4, #profile-right li#pa-invites {display: none;}
+#profile-right li#pa-fld3 span, #profile-right li#pa-fld2 span, #profile-right li#pa-fld1, #profile-right li#pa-fld4, #profile-right li#pa-invites {display: none;}
 
-#profile-right li#pa-fld3 strong {
-  font-size: 20px;
-  font-family: 'cuprum';
-  text-align: center;
-  font-weight: 700 !important;
-}
-
-#profile-right li.pa-fld2 {
+#profile-right li#pa-fld2 {
   order: -1;
   margin: 0 auto 5px;
 }
@@ -3629,8 +3695,8 @@ button:hover, input.button:hover {background: silver;}
 -------------------------------------------------------------*/
 
 #stylelist {
-  top: 273px;
-  left: 20px;
+  top: 279px;
+  left: 5px;
 }
 
 .light #pun-navlinks .container {
