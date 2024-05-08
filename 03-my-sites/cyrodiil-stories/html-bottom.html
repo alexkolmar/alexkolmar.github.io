@@ -1,0 +1,39 @@
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх">Up</div>
+<div class="go-down" id='OnBottom' title="вниз">Down</div>
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+
+
+<!-- Анти-в-строчку для Сообщений и Репутации © deff -->
+<script type="text/javascript">
+function changeS(sc,ch,st){$(sc).parent().each(function(){$(this).html($(this).html().replace(ch,st));});}
+   changeS('.pa-posts','Сообщений:','<i class="fad fa-envelope" title="Сообщений"></i></br>');
+   changeS('.pa-respect','Уважение</a>:','<i class="fad fa-heart-half-stroke" title="Репутация"></i></a><br>');
+   changeS('.pa-respect','Уважение:','<i class="fad fa-heart-half-stroke" title="Репутация"></i><br>');
+   changeS('.pa-fld3','Посты:','<i class="fad fa-feather" title="Посты"></i>');
+   changeS('.pa-fld4','Банк:','<i class="fad fa-light fa-coin-vertical" title="Банк"></i>');
+</script>
+
+<script type="text/javascript">
+  $('.pa-respect').attr('title','Репутация');
+</script>
+
+
+<script type="text/javascript">
+  document.querySelector('.pa-respect .fld-name a').classList.add('fad', 'fa-heart-half-stroke');
+</script>
