@@ -679,7 +679,6 @@ text-transform: uppercase;
 
 .post-author ul {
   padding: 20px 15px;
-  min-height: 100px;
 }
 
 .pa-author {
@@ -699,7 +698,12 @@ text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.pa-avatar img {}
+.pa-avatar img {
+  border: 3px solid transparent;
+  -moz-border-image: url(https://forumstatic.ru/files/0011/c0/7c/53852.png) 3 repeat;
+  -webkit-border-image: url(https://forumstatic.ru/files/0011/c0/7c/53852.png) 3 repeat;
+  border-image: url(https://forumstatic.ru/files/0011/c0/7c/53852.png) 3 repeat;
+}
 
 .plank {
   margin-bottom: 10px;
