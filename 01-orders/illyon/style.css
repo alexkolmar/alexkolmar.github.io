@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
     border: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brown) transparent;
 }
 
 :root {
     --light: #eeeae4;
     --gray: #ccc;
-    --violet: #669;
-    --color: #9CF;
     --brown: rgba(79, 48, 29, 15%);
     --gold: #9f722f;
+    --light-gold: #d7b27a;
 }
+
+/* Матчасть */
 
 .matchast {
     width: 850px;
@@ -88,6 +91,14 @@
     text-shadow: 1px 1px #000;
 }
 
+.matchast_top a {
+    color: var(--light-gold);
+}
+
+.matchast_top a:hover {
+    color: var(--gold);
+}
+
 .matchast_top span {
     display: block;
     text-align: center;
@@ -112,7 +123,7 @@
     display: block;
 }
   
-.container {
+.matchast .container {
     margin: 0 auto;
     padding: 20px;
     width: fit-content;
@@ -123,10 +134,11 @@
 .tabs {
     position: relative;
     width: 810px;
+    height: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
 }
   
@@ -214,4 +226,23 @@ details summary {
 
 .sejm td {
     width: 50%;
+}
+
+.names td {
+    width: 25%;
+}
+
+.money td {
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+/* Гостевая */
+
+.guestbook {
+    margin: 0 auto;
+    display: block;
+    width: 730px;
+    min-height: 1000px;
+    background: url(https://forumstatic.ru/files/0016/01/4e/41817.jpg) no-repeat center center;
 }

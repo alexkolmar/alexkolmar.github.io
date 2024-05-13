@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'A La Russ';
+    src: url('ALaRuss.eot');
+    src: local('A La Russ'), local('ALaRuss'),
+        url('https://alexkolmar.github.io/fonts/ALaRuss/ALaRuss.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/ALaRuss/ALaRuss.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/ALaRuss/ALaRuss.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/ALaRuss/ALaRuss.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/ALaRuss/ALaRuss.svg#ALaRuss') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
