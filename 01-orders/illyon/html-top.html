@@ -1,3 +1,42 @@
+<link rel="preconnect" href="https://alexkolmar.github.io">
+<link href="https://alexkolmar.github.io/fonts/Hemswald/stylesheet.css" rel="stylesheet">
+<link rel="stylesheet" href="https://alexkolmar.github.io/fonts/ALaRuss/stylesheet.css">
+
+
+<!-- Dice (c) Spiritus Tergi, ч1 в хтмл-верх -->
+<script type="text/javascript" src="https://forumstatic.ru/files/000f/3e/d5/42785.js" charset="UTF-8"></script>
+
+
+<!---------------------- Красивая профилактика © Deff, мод. max, the murderer! ---------------------->
+<div id="pircs2"><link rel="stylesheet" type="text/css" href="/files/001b/a8/40/30530.css" /><div id="LogIn_Window" style="height: auto"><center>Здесь делается вжух с:</center><br></div></div><!-- --><script type="text/javascript">
+
+var ON_button=0; // Cвитч включения: 1 - включено; 0 - выключено
+var  moderDostyp_ON=0; // Модер-доступ включён: 1 - включён; 0 - выключен
+
+if(ON_button!=1||GroupID ==1||moderDostyp_ON*GroupID==2){
+$("style.#style_st,div.#pircs2").replaceWith("");}
+  else {$("#msg-n2").replaceWith("");
+if(GroupID ==3) {$("#LogIn_Window").show();if(document.URL.indexOf("/login.php")==-1){
+document.location.href = "../login.php"}else {
+$(document).ready(function(){$("form#login").appendTo("#LogIn_Window");
+$("#LogIn_Window").find("p.formsubmit a[href*='register.php']").text("");
+var v=$("#LogIn_Window").find("p.formsubmit a[href*='action=forget']");
+v.replaceWith("<span>Вход только для администраторов</span>");});};}
+else {document.location.href = "../login.php?action=out&id="+UserID};}
+</script>
+<!---------------------- Красивая профилактика END ---------------------->
+
+
+<div class="tablica">
+
+<!--Левое окно-->
+<div class="left-window">
+ <img src="https://forumstatic.ru/files/0016/01/4e/47870.png">
+</div>
+
+<!--черепушка-->
+<img class="skull" src="https://forumstatic.ru/files/0016/01/4e/28366.png">
+
 <!--Слайдер-->
 <div class="tab_slide">
  <div id="pageContainer">
@@ -5,49 +44,37 @@
   <!-- Slideshow HTML -->
   <div id="slideshow">
    <div id="slidesContainer">
-    <div class="slide"><br><br>
-     <center><br>
-      <a href="https://illyon.rusff.me/"><span style="color:#cac6be">лучший эпизод: <br> вскоре
-        вернёмся!</color></a>
-     </center>
+    <div class="slide slide-three">
+
     </div>
 
-    <div class="slide">
-     <div class="activs">
-      <a href="https://illyon.rusff.me/" target="_blank"><img
-        src="https://forumupload.ru/uploads/001c/08/62/4/t567259.png" title="Лучший игрок"></a>
-      <a href="https://illyon.rusff.me/" target="_blank"><img
-        src="https://forumupload.ru/uploads/001c/08/62/4/t752069.png" title="Лучший игрок"></a>
-     </div>
-
-     <div class="activs2">
-      <a href="https://illyon.rusff.me/" target="_blank"><img
-        src="https://forumupload.ru/uploads/001c/08/62/4/t635069.png" title="Активист"></a>
-      <a href="https://illyon.rusff.me/" target="_blank"><img
-        src="https://forumupload.ru/uploads/001c/08/62/4/t351473.png" title="Активист"></a>
-      <a href="https://illyon.rusff.me/" target="_blank"><img
-        src="https://forumupload.ru/uploads/001c/08/62/4/t153725.png" title="Активист"></a>
-     </div>
-    </div>
-
-    <div class="slide">
-     <!--ПЕРВЫЙ КОНТЕЙНЕР-->
-     <div class="textp_fon">
-      <div class="textpost">
-       <center>Авторский мир с антуражными локациями.
-        <br>В игре осень 1570 года.<br>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=14"><span style="color:#cac6be">внешности ♦</color></a>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=15"><span style="color:#cac6be">роли ♦</color></a>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=19"><span style="color:#cac6be">нужные ♦</color></a>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=18"><span style="color:#cac6be">хочу к вам ♦</color></a><a href="http://illyon.rusff.me/viewtopic.php?id=18">
-        <a href="http://illyon.rusff.me/viewtopic.php?id=107"><span style="color:#cac6be">сюжет ♦</color></a>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=34"><span style="color:#cac6be">путеводитель ♦</color></a>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=11"><span style="color:#cac6be">магия ♦</color></a>
-        <a href="http://illyon.rusff.me/viewtopic.php?id=12"><span style="color:#cac6be">религия ♦</color></a>
-        <a href="ССЫЛКА"><span style="color:#cac6be">система дайсов</color></a>
-       </center>
+    <div class="slide slide-two">
+     <div class="actives">
+      <span>самые активные</span>
+      <div class="actives_inner">
+        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
       </div>
      </div>
+     <nav class="nav">
+      <! -- скрипт навигации выпадающим окном [основа скрипт вкладок http://imagiart.ru/, переработка вещего духа] --> 
+      <script type="text/javascript" src="https://forumstatic.ru/files/001a/18/bd/96460.js"></script>
+      <div class="spirit-navigation" id="navig-batton" title="навигация">полезные ссылки</div>
+      <div id="navigblock">
+       <div class="sslka">
+        <!-- важные ссылки -->
+        <a href="ссылка">название</a> 
+        <a href="ссылка">название</a> 
+        <a href="ссылка">название</a> 
+       </div>
+      </div>
+     </nav>
+    </div>
+
+    <div class="slide slide-one">
+     <p class="slide-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
     </div>
    </div>
   </div>
@@ -58,7 +85,7 @@
 <script type="text/javascript">
  $(document).ready(function () {
   var currentPosition = 0;
-  var slideWidth = 170;
+  var slideWidth = 236;
   var slides = $('.slide');
   var numberOfSlides = slides.length;
   // Remove scrollbar in JS
@@ -101,3 +128,215 @@
   }
  });
 </script>
+
+<!--Центральное окно-->
+<div class="center-window">
+<img src="https://forumstatic.ru/files/0016/01/4e/93379.png">
+</div>
+
+<!--Табличка справа-->
+<div class="text-right">
+ <p class="slide-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div>
+
+<!--Правое окно-->
+<div class="right-window">
+ <img src="https://forumstatic.ru/files/0016/01/4e/40631.png">
+</div>
+
+</div>
+
+
+<!--Скрытие профиля в теме тегом-->
+<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website,.hideprofile .post-sig{display:none!important}
+.hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+<script>
+    FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+    $().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+</script>
+<!-- Конец -->
+
+
+<!-- Убрать пожаловаться -->
+<script type="text/javascript">
+RusffCore.sets.show_reportBtn = 0;
+</script>
+<!-- конец -->
+
+
+<!--Выделение кода в блоке "Код" с перемещение в буфер обмена // © Damassk, версия 2019г. -->
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'ctrl + c' //текст ссылки</script>
+<!-- конец -->
+
+
+<!-- Пиар-вход v.2 -->
+<script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+<script type="text/javascript">
+PR.nick = 'pigeon'; //Ник PR-аккаунта
+PR.pass = '1111'; //Пароль PR-аккаунта
+PR.btn_text = 'https://forumstatic.ru/files/001c/0b/94/84064.png'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+PR.set();</script>
+
+
+<script>
+RusffCore.sets.realtimeTopicReaders = false
+</script>
+
+
+<!--// Быстроплюсы v.2 РЕНО by Deff //-->
+<script type="text/javascript" src="https://forumstatic.ru/files/0012/d8/04/58219.js" addComment="1"></script>
+
+
+
+<!-------------------------- СМЕНА АВАТАРА ПРЯМО В ТЕМЕ © Deff, Alex_63 ---------------------------->
+<script>var NoChangeAvatar = ["Б.А.Б.К.А."]; /* Имя Ника для Пиар Аккаунта(дабы не менял)*/;</script>
+<script type="text/javascript" src="https://forumstatic.ru/files/0014/cc/0a/82168.js"></script>
+<style type="text/css">
+.pa-avatar.item2 img.allow_change:hover {
+outline-color: var(--color-accent);}
+
+.pa-avatar.item2 img.allow_change {
+   
+    transition: outline-color .2s ease;
+    cursor: pointer;
+    float: none!important;
+}
+
+.pun-modal.change_avatar_theme .modal-inner {
+    background: #cecdcd;
+    width: 702px;
+max-height: 300px!important;
+    max-width: 701px!important;
+    padding: 0;
+    border-radius: 0;
+    border: none!important;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.pun-modal.change_avatar_theme .modal-inner h2 {
+background: #3C3C3C!important;
+    color: #D6D6D6!important;
+    text-transform: uppercase;
+    text-align: center!important;
+    height: 23px!important;
+    padding: 0!important;
+    width: auto!important;
+    font-weight: bold;
+    font-family: var(--font-title);
+    font-size: 16px;
+    padding-top: 8px!important;
+    padding-bottom: 3px!important;
+    border-radius: 0!important;
+    margin: 0!important;
+    }
+#pun-main > div.pun-modal.change_avatar_theme > div.modal-inner.section > div {
+    border: 1px solid black;
+    border-top: none;
+}
+
+.punbb .pun-modal.change_avatar_theme .modal-inner h2>span {
+    margin-top: -10px!important;
+}</style>
+
+
+<style>
+/* Оформление к Dice Roller (c) Spiritus Tergi, ч3 */
+
+.hidden {
+display: none !important;
+}
+
+#button-dice {
+	background: url("/files/000f/3e/d5/81483.png") center;
+}
+
+form#dice-form {
+    display: inline-flex;
+    gap: 23px;
+    width: 340px;
+    padding: 6px;
+    text-align: right;
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    background: rgb(172 175 176);
+    border: 1px solid #6c6b6b;
+    border-radius: 2px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+form#dice-form input {
+width: 22px;
+}
+
+#dice-form label {
+display: block;
+margin: 3px;
+vertical-align: top;
+}
+
+#dice-form span {
+font-weight: bold;
+width: 100px;
+text-align: right;
+display: inline-block;
+vertical-align: top;
+}
+
+#dice-form label > span::after {
+content: ":"
+}
+
+#dice-form textarea {
+width: 130px !important;
+height: 69px !important;
+}
+
+#dice-form > div {
+    /* width: 160px; */
+    /* display: inline-block; */
+    vertical-align: top;
+}
+
+#dice-form > label {
+display: inline-block;
+}
+
+#dice-form > div:nth-child(2) {
+    margin-top: -18px;
+    margin-right: 37px;
+}
+
+.roll-dice::before, .roll-value::before, .roll-reason::before, .roll-result::before {
+  font-weight: bold;
+}
+
+.roll-dice::before {
+    content: "Бросок: ";
+}
+
+.roll-dice::after {
+  content: " (бонус)";
+  margin-right: -5px;
+}
+
+.roll-value::before {
+    content: " , с результатом: ";
+}
+
+.roll-reason::before {
+  content: "Действие: "
+}
+
+.roll-result::before {
+  content: "Итог: "
+}
+
+#pun .roll-result {
+  padding-bottom: 0px;
+}</style>
