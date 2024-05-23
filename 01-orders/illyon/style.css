@@ -6,6 +6,418 @@
 /* A La Russ */
 @import url('https://alexkolmar.github.io/fonts/ALaRuss/stylesheet.css');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Viaoda+Libre&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@font-face {
+  font-family: 'goth';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://forumstatic.ru/files/001c/0b/94/68339.otf);
+}
+
+@font-face {
+  font-family: 'helmswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://forumstatic.ru/files/001c/0b/94/70158.otf);
+}
+
+@font-face {
+  font-family: 'kawo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://forumstatic.ru/files/001c/0b/94/73692.otf);
+}
+
+
+  @import url('https://fonts.googleapis.com/css?family=Oranienbaum|Old Standard TT|Amatic+SC|Bad+Script|Caveat|Cormorant+Unicase|Lobster|Pacifico|Pattaya|Philosopher|Playfair+Display+SC|Playfair+Display|Poiret+One|Yeseva+One|Marck+Script|Pangolin|Raleway:900i|Cormorant+SC|Arima+Madurai|Cabin+Sketch|Pompiere|Cinzel+Decorative|Megrim|Cookie|Roboto|Lora|Yanone+Kaffeesatz|EB+Garamond|Cormorant Garamond|Alice|Neucha|Play|Prata|Press+Start+2P|Rubik+Mono+One|Montserrat|Arsenal|Tenor+Sans|Vollkorn+SC');
+
+@font-face { font-family: Truetypewriter PolyglOTT; src: local("Truetypewriter PolyglOTT"), url(https://forumstatic.ru/files/001a/ff/52/20322.ttf); }
+
+@font-face { font-family: Play; src: local("Play"), url(https://forumstatic.ru/files/001b/d5/f7/93398.ttf); }
+
+@font-face { font-family: AngstThinS; src: local("AngstThinS"), url(https://forumstatic.ru/files/001b/fb/fc/19881.otf); }
+@font-face { font-family: AngstNormalS; src: local("AngstNormalS"), url(https://forumstatic.ru/files/001b/fb/fc/21827.otf); }
+@font-face { font-family: AngstBoldS; src: local("AngstBoldS"), url(https://forumstatic.ru/files/001b/fb/fc/50620.otf); }
+
+@font-face { font-family: AngstThin; src: local("AngstThin"), url(https://forumstatic.ru/files/001b/fb/fc/64484.otf); }
+@font-face { font-family: AngstNormal; src: local("AngstNormal"), url(https://forumstatic.ru/files/001b/fb/fc/34220.otf); }
+@font-face { font-family: AngstBold; src: local("AngstBold"), url(https://forumstatic.ru/files/001b/fb/fc/58297.otf); }
+
+@font-face { font-family: FemmeFatale; src: local("FemmeFatale"), url(https://forumstatic.ru/files/001b/fb/fc/49265.otf); }
+@font-face { font-family: fashionwacks; src: local("fashionwacks"), url(https://forumstatic.ru/files/001c/03/bd/51362.otf); }
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+@font-face {
+    font-family: 'Le Murmure';
+    src: url('/files/0019/a4/9b/62236.eot');
+    src: url('/files/0019/a4/9b/62236.eot?#iefix') format('embedded-opentype'),
+        url('/files/0019/a4/9b/91127.woff2') format('woff2'),
+        url('/files/0019/a4/9b/66219.woff') format('woff'),
+        url('/files/0019/a4/9b/83379.ttf') format('truetype'),
+        url('/files/0019/a4/9b/54730.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moki';
+    src: url('https://forumstatic.ru/files/001b/ed/f6/13726.eot');
+    src: url('https://forumstatic.ru/files/001b/ed/f6/13726.eot?#iefix') format('embedded-opentype'),
+        url('https://forumstatic.ru/files/001b/ed/f6/17612.woff2') format('woff2'),
+        url('https://forumstatic.ru/files/001b/ed/f6/22696.woff') format('woff'),
+        url('https://forumstatic.ru/files/001b/ed/f6/42758.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'underrated';
+    src: url('/files/001b/ed/f6/23885.otf');
+    src: url('/files/001b/ed/f6/23885.otf?#iefix') format('embedded-opentype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crasey';
+    src: url('/files/001b/9b/e5/35229.eot');
+    src: url('/files/001b/9b/e5/35229.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/9b/e5/51257.woff2') format('woff2'),
+        url('/files/001b/9b/e5/70566.woff') format('woff'),
+        url('/files/001b/9b/e5/32581.ttf') format('truetype'),
+        url('/files/001b/9b/e5/33949.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zatiyan';
+    src: url('/files/001b/9b/e5/55362.eot');
+    src: url('/files/001b/9b/e5/55362.eot') format('embedded-opentype'),
+        url('/files/001b/9b/e5/94313.woff2') format('woff2'),
+        url('/files/001b/9b/e5/90836.woff') format('woff'),
+        url('/files/001b/9b/e5/35638.ttf') format('truetype'),
+        url('/files/001b/9b/e5/65681.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'CyGrotesk';
+    src: url('/files/001b/9b/e5/93500.eot');
+    src: url('/files/001b/9b/e5/93500.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/9b/e5/87492.woff2') format('woff2'),
+        url('/files/001b/9b/e5/35498.woff') format('woff'),
+        url('/files/001b/9b/e5/89599.ttf') format('truetype'),
+        url('/files/001b/9b/e5/88647.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url('/files/001b/9b/e5/60634.eot');
+    src: url('/files/001b/9b/e5/60634.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/9b/e5/78111.woff2') format('woff2'),
+        url('/files/001b/9b/e5/72018.woff') format('woff'),
+        url('/files/001b/9b/e5/80978.ttf') format('truetype'),
+        url('/files/001b/9b/e5/44792.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miratrix';
+    src: url('/files/001b/9b/e5/95752.eot');
+    src: url('/files/001b/9b/e5/95752.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/9b/e5/52795.woff2') format('woff2'),
+        url('/files/001b/9b/e5/54718.woff') format('woff'),
+        url('/files/001b/9b/e5/32348.ttf') format('truetype'),
+        url('/files/001b/9b/e5/36892.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Ambidexter';
+    src: url('/files/001b/9b/e5/52209.eot');
+    src: url('/files/001b/9b/e5/52209.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/9b/e5/35211.woff2') format('woff2'),
+        url('/files/001b/9b/e5/75474.woff') format('woff'),
+        url('/files/001b/9b/e5/55069.ttf') format('truetype'),
+        url('/files/001b/9b/e5/65002.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Garciamarquez';
+    src: url('/files/001b/81/0a/64024.eot');
+    src: url('/files/001b/81/0a/64024.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/81/0a/31107.woff2') format('woff2'),
+        url('/files/001b/81/0a/10160.woff') format('woff'),
+        url('/files/001b/81/0a/98309.ttf') format('truetype'),
+        url('/files/001b/81/0a/46633.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {font-family: "Neue Machina Ultrabold";
+    src: url("/files/0019/a4/9b/33361.eot");
+    src: url("/files/0019/a4/9b/33361.eot#iefix") format("embedded-opentype"),
+        url("/files/0019/a4/9b/24824.woff2") format("woff2"),
+        url("/files/0019/a4/9b/54826.woff") format("woff"),
+        url("/files/0019/a4/9b/66237.ttf") format("truetype"),
+        url("/files/0019/a4/9b/95428.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/files/001b/2a/da/65086.eot'),
+        url('/files/001b/2a/da/65086.eot') format('embedded-opentype'),
+        url('/files/001b/2a/da/86614.woff2') format('woff2'),
+        url('/files/001b/2a/da/78032.woff') format('woff'),
+        url('/files/001b/2a/da/83163.ttf') format('truetype'),
+        url('/files/001b/2a/da/20420.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mak Bold';
+  src: url('/files/001a/af/4f/78134.eot'),
+        url('/files/001a/af/4f/78134.eot') format('embedded-opentype'),
+        url('/files/001a/af/4f/54847.woff2') format('woff2'),
+        url('/files/001a/af/4f/33178.woff') format('woff'),
+        url('/files/001a/af/4f/70817.ttf') format('truetype'),
+        url('/files/001a/af/4f/78380.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yeseva One';
+  src: url('/files/001a/e0/d3/90700.eot'),
+        url('/files/001a/e0/d3/90700.eot') format('embedded-opentype'),
+        url('/files/001a/e0/d3/72552.woff2') format('woff2'),
+        url('/files/001a/e0/d3/16828.woff') format('woff'),
+        url('/files/001a/e0/d3/67345.ttf') format('truetype'),
+        url('/files/001a/e0/d3/20529.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Deutsch Gothic Regular';
+  src: url('/files/001a/af/4f/20861.eot'),
+        url('/files/001a/af/4f/20861.eot') format('embedded-opentype'),
+        url('/files/001a/af/4f/86480.woff2') format('woff2'),
+        url('/files/001a/af/4f/39718.woff') format('woff'),
+        url('/files/001a/af/4f/84400.ttf') format('truetype'),
+        url('/files/001a/af/4f/76512.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Regular';
+  src: url('/files/001a/af/4f/61315.eot'),
+        url('/files/001a/af/4f/61315.eot') format('embedded-opentype'),
+        url('/files/001a/af/4f/60274.woff2') format('woff2'),
+        url('/files/001a/af/4f/86300.woff') format('woff'),
+        url('/files/001a/af/4f/24698.ttf') format('truetype'),
+        url('/files/001a/af/4f/55343.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('/files/001b/81/0a/65378.eot'),
+        url('/files/001b/81/0a/65378.eot') format('embedded-opentype'),
+        url('/files/001b/81/0a/27250.woff2') format('woff2'),
+        url('/files/001b/81/0a/87726.woff') format('woff'),
+        url('/files/001b/81/0a/52823.ttf') format('truetype'),
+        url('/files/001b/81/0a/65703.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Black';
+  src: url('/files/001a/af/4f/69620.eot'),
+        url('/files/001a/af/4f/69620.eot') format('embedded-opentype'),
+        url('/files/001a/af/4f/71595.woff2') format('woff2'),
+        url('/files/001a/af/4f/72640.woff') format('woff'),
+        url('/files/001a/af/4f/19483.ttf') format('truetype'),
+        url('/files/001a/af/4f/93123.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('/files/001a/af/4f/67254.eot'),
+        url('/files/001a/af/4f/67254.eot') format('embedded-opentype'),
+        url('/files/001a/af/4f/13346.woff2') format('woff2'),
+        url('/files/001a/af/4f/94145.woff') format('woff'),
+        url('/files/001a/af/4f/19835.ttf') format('truetype'),
+        url('/files/001a/af/4f/49022.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Doppelganger';
+    src: url('/files/001b/68/bd/82836.eot');
+    src: url('/files/001b/68/bd/82836.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/68/bd/87753.woff2') format('woff2'),
+        url('/files/001b/68/bd/44161.woff') format('woff'),
+        url('/files/001b/68/bd/66155.ttf') format('truetype'),
+        url('/files/001b/68/bd/23152.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calypso';
+    src: url('/files/001b/6e/78/13864.eot');
+    src: url('/files/001b/6e/78/13864.eot?#iefix') format('embedded-opentype'),
+        url('/files/001b/6e/78/89240.woff2') format('woff2'),
+        url('/files/001b/6e/78/41154.woff') format('woff'),
+        url('/files/001b/6e/78/84875.ttf') format('truetype'),
+        url('/files/001b/6e/78/67907.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'SoyuzGrotesk';
+  src: url('/files/001b/7c/d0/61445.eot'),
+        url('/files/001b/7c/d0/61445.eot') format('embedded-opentype'),
+        url('/files/001b/7c/d0/70423.woff2') format('woff2'),
+        url('/files/001b/7c/d0/31967.woff') format('woff'),
+        url('/files/001b/7c/d0/11717.ttf') format('truetype'),
+        url('/files/001b/7c/d0/88825.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halimun';
+  src: url('/files/001b/2a/da/41454.eot'),
+        url('/files/001b/2a/da/41454.eot') format('embedded-opentype'),
+        url('https://forumstatic.ru/files/001b/2a/da/77328.woff2') format('woff2'),
+        url('https://forumstatic.ru/files/001b/2a/da/38483.woff') format('woff'),
+        url('https://forumstatic.ru/files/001b/2a/da/26409.ttf') format('truetype'),
+        url('https://forumstatic.ru/files/001b/2a/da/10202.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('https://forumstatic.ru/files/001b/2a/da/49920.eot'),
+        url('https://forumstatic.ru/files/001b/2a/da/49920.eot') format('embedded-opentype'),
+        url('https://forumstatic.ru/files/001b/2a/da/39059.woff2') format('woff2'),
+        url('https://forumstatic.ru/files/001b/2a/da/61164.woff') format('woff'),
+        url('https://forumstatic.ru/files/001b/2a/da/17921.ttf') format('truetype'),
+        url('https://forumstatic.ru/files/001b/2a/da/93655.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+/* icon fonts*/
+@font-face {
+    font-family: icomoon;
+    src: url("https://forumstatic.ru/files/001b/61/c9/55259.ttf") format("truetype");
+}
+@font-face {
+    font-family: fa-thin;
+    src: url("https://forumstatic.ru/files/001b/73/d1/69011.ttf?v=1") format("truetype");
+}
+@font-face {
+    font-family: fa-solid;
+    src: url("https://forumstatic.ru/files/001b/73/d1/43250.ttf?v=1") format("truetype");
+}
+@font-face {
+    font-family: fa-regular;
+    src: url("https://forumstatic.ru/files/001b/73/d1/37687.ttf?v=1") format("truetype");
+}
+@font-face {
+    font-family: fa-light;
+    src: url("https://forumstatic.ru/files/001b/73/d1/90046.ttf?v=1") format("truetype");
+}
+@font-face {
+    font-family: fa-duotone;
+    src: url("https://forumstatic.ru/files/001b/73/d1/16351.ttf?v=1") format("truetype");
+}
+@font-face {
+    font-family: fa-brands;
+    src: url("https://forumstatic.ru/files/001b/73/d1/66477.ttf?v=1") format("truetype");
+}
+
+/*fonts*/
+@font-face {
+    font-family: fanatiqs;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/35867.ttf") format("truetype");
+}
+@font-face {
+    font-family: SkylarSans;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/80218.eot");
+}
+@font-face {
+    font-family: Neoreby;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/20136.eot") format("OpenType");
+}
+@font-face {
+    font-family: Moonchief;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/12898.eot") format("OpenType");
+}
+@font-face {
+    font-family: HorrorScope;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/62715.eot") format("OpenType");
+}
+@font-face {
+    font-family: HANDECKE;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/76764.eot") format("OpenType");
+}
+@font-face {
+    font-family: CinemaMacabre;
+    src: url("https://forumstatic.ru/files/001b/d5/f7/22878.eot") format("OpenType");
+}
+
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
 
@@ -62,13 +474,15 @@
   --link-hover: goldenrod;
     --light: #eeeae4;
     --gray: #ccc;
-    --brown: rgba(79, 48, 29, 8%);
+    --brown: rgba(79, 48, 29, 5%);
     --brown2: rgba(48, 37, 22, 10%);
     --brown3: #412714;
-    --brown4: rgba(48, 37, 22, 60%);
+    --brown4: rgba(48, 37, 22, 30%);
     --brown5: rgba(48, 37, 22, 70%);
     --darkred: #91251d;
     --sandy: #8f7563;
+    --sandy2: #ab917a;
+    --sandy3: #94725b;
     --gold: #9f722f;
     --light-gold: #d7b27a;
     --slide-text: #635847;
@@ -130,7 +544,7 @@ ul, dl, li, dd, dt {list-style: none;}
 
 address, em {font-style: normal;}
 
-.modlist, .lastedit, .punbb div#pun-live-rusff, .punbb .topic a.sharelink {display: none;}
+.modlist, .lastedit, .punbb div#pun-live-rusff, .punbb .topic a.sharelink, .reactions-root {display: none;}
 
 #tags .container, .post_report, .post_reputation, #MyBookmarks {
   background: var(--light);
@@ -160,7 +574,8 @@ input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="but
 
 input[type="text"], input[type="password"], textarea, select {
   padding: 2px 5px;
-  border: 1px solid var(--link-hover);
+  border: 1px solid var(--brown4);
+  background: var(--brown2);
 }
 
 #main-reply {box-sizing: border-box;}
@@ -172,12 +587,16 @@ input[type="text"], input[type="password"], textarea, select {
 .punbb-admin .adcontainer, .punbb-admin .adformal {border: none;}
 
 .punbb-admin #pun-adnav {
-  margin-left: -126px;
+  margin-left: -146px;
   width: 150px;
 }
 
 #pun-admain .adformal {
   padding-right: 55px;
+}
+
+.punbb-admin .adminmain {
+  padding-left: 200px;
 }
 
 
@@ -210,7 +629,8 @@ body::before {
 .punbb {
   margin: 0 auto;
   padding: 22px 0 24px;
-  font: 12px Arial, Verdana;
+  font: normal 70% Verdana, Arial;
+  color: #39332e;
   width: 1010px;
   background: url(https://forumstatic.ru/files/0016/01/4e/89152.jpg);
   border-image: url(https://forumstatic.ru/files/0016/01/4e/35439.png) 110/115px/18px repeat;
@@ -263,15 +683,20 @@ body::before {
 }
 
 #pun-navlinks li a, #pun-ulinks li a {
-  background: linear-gradient(to right, #c2a687 0%,#977b5f 50%,#6d5846 100%) repeat top center/10%;
-  color: transparent;
-  background-clip: text;
+  background: linear-gradient(45deg, #a38c7b 33%, #977c69 66%, #88705e);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #88705e;
+  transition-duration: 1s;
   text-shadow: 0 0 3px rgba(0, 0, 0, 20%);
 }
 
 #pun-navlinks li a:hover, #pun-ulinks li a:hover {
-color: rgba(251, 232, 78, 30%);
+  background: linear-gradient(45deg, #c89966 33%, #b87f4d 66%, #a66a45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #88705e;
+  transition-duration: 1s;
 }
 
 /* Пользовательские ссылки */
@@ -292,25 +717,55 @@ color: rgba(251, 232, 78, 30%);
 #pun-ulinks li {
   padding: 0 5px;
   display: inline;
-  font-size: 8px;
+  font-size: 9px;
   text-transform: lowercase;
+  letter-spacing: .5px;
 }
 
 /* Статус */
+
+#pun-status .container {
+  font-size: 10px;
+  font-family: lora;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-transform: lowercase;
+}
 
 #pun-status span {
   white-space: nowrap;
   margin-right: 5px;
 }
 
+.container.crumbs {
+  box-sizing: border-box;
+  font-family: lora;
+  font-size: 13px;
+  width: 100%;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 4px;
+  letter-spacing: 0.6px;
+}
+
+#pun-crumbs1 p.container {
+  text-align: center;
+}
+
 /* Копирайт */
 #pun-about .container {
   text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: lora;
+  text-transform: lowercase;
 }
 
 
 /* Главная форумная таблица
 ------------------------------------------*/
+
+.punbb #pun-main #subforums {padding: var(--bigpad);}
 
 .main table {
   table-layout: fixed; width: 100%;
@@ -318,6 +773,7 @@ color: rgba(251, 232, 78, 30%);
 
 .main th {
   padding: 5px 10px;
+  font-size: 0;
 }
 
 .main td {
@@ -329,9 +785,18 @@ color: rgba(251, 232, 78, 30%);
   width: 50%;
 }
 
+.punbb:not(#pun-index) .intd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .tc2, .tc3, .tcmod {
+  width: 5%;
   text-align: center;
-  width: 10%;
+  font-size: 11px;
+  font-family: lora !important;
+  font-weight: 400;
 }
 
 .tcr {
@@ -343,7 +808,7 @@ color: rgba(251, 232, 78, 30%);
 }
 
 #pun-searchtopics .tc2 {
-  text-align: left;
+  text-align: center;
   width: 20%;
 }
 
@@ -355,22 +820,31 @@ color: rgba(251, 232, 78, 30%);
   width: 90%;
 }
 
-tbody.hasicon td.tcl {
-  padding-left: 40px;
+#pun-viewforum .tclcon a, #pun-messages .tclcon a, #pun-searchtopics .tclcon a {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: lora;
 }
+
+#pun-viewforum span.byuser, #pun-messages span.byuser, #pun-searchtopics span.byuser {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: lora !important;
+}
+
 
 /* Иконки */
 
 div.icon {
-  position: absolute; 
-  margin-left: -30px;
   width: 27px;
   height: 26px;
   background: url(https://forumstatic.ru/files/0016/01/4e/16790.png) no-repeat top center;
   opacity: .6;
+  flex-shrink: 0;
 }
 
 #pun-index div.icon {
+  position: absolute;
   background: url(https://forumstatic.ru/files/0016/01/4e/63577.png) no-repeat top center;
   margin: 2px 0;
   opacity: 1;
@@ -414,15 +888,15 @@ tr.iclosed div.icon {
 
 .multipage {margin-top: 10px;}
 
-.linkst {
+.linkst, .linksb {
   position: relative;
   padding: var(--bigpad);
   display: flex;
   justify-content: space-between;
-}
-
-.linkst .pagelink {
-
+  font-size: 10px;
+  font-weight: 400;
+  font-family: lora !important;
+  text-transform: lowercase;
 }
 
 .linkst .postlink {
@@ -435,6 +909,10 @@ tr.iclosed div.icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: lora !important;
+  text-transform: lowercase;
 }
 
 .linksb .pagelink {
@@ -460,6 +938,10 @@ tr.iclosed div.icon {
 .modmenu .container {
   padding: var(--mpad);
   text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: lora !important;
+  text-transform: lowercase;
 }
 
 .modmenu .container strong {
@@ -477,12 +959,49 @@ tr.iclosed div.icon {
 
 #pun-index thead, #pun-index .tc2 {display: none;}
 
-#pun-index .category tr {
+#pun-index .category tr, #pun-stats .container {
+  margin: 0 auto 10px;
   background: var(--brown);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
   display: block;
   width: 850px;
-  margin: 0 auto 10px;
+  box-sizing: border-box;
+}
+
+.punbb .category h2, #pun-stats h2 {
+  margin: 0 auto;
+  padding: 0;
+  height: 65px;
+}
+
+.punbb .category h2 span, #pun-stats h2 span {display: none;}
+
+.punbb .category-1 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/35867.png) no-repeat top center;
+}
+
+.punbb .category-2 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/12851.png) no-repeat top center;
+}
+
+.punbb .category-3 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/56358.png) no-repeat top center;
+}
+
+.punbb .category-4 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/99535.png) no-repeat top center;
+}
+
+.punbb .category-5 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/52440.png) no-repeat top center;
+}
+
+.punbb .category-6 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/15221.png) no-repeat top center;
+}
+
+.punbb .category-7 h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/73100.png) no-repeat top center;
 }
 
 #pun-index tbody.hasicon td.tcl {
@@ -508,6 +1027,7 @@ tr.iclosed div.icon {
 
 #pun-index .tclcon h3 a {
   color: var(--brown3);
+  font-weight: normal;
 }
 
 #pun-index .tclcon h3 a:hover {
@@ -522,10 +1042,25 @@ tr.iclosed div.icon {
 }
 
 #pun-index .tcr {
+  position: relative;
   width: 220px;
   color: var(--brown4);
   font-size: 10px;
   letter-spacing: .7px;
+}
+
+#pun-index .user-avatar {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#pun-index .tcr br {display: none;}
+
+#pun-index .tcr .lastpost-link, #pun-index .tcr .lastpost {
+  margin-left: 55px;
+  display: block;
 }
 
 #pun-index .tcr .lastpost-link {
@@ -536,15 +1071,25 @@ tr.iclosed div.icon {
   color: var(--darkred);
 }
 
+
 /* Статистика */
 
-#pun-stats li.item1, #pun-stats li.item2 {
-  float: left;
-  clear: both;
+#pun-stats h2 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/63519.png) no-repeat top center;
 }
 
-#pun-stats li.item3, #pun-stats li.item4 {
-  text-align: right;
+#pun-stats .statscon {padding-top: 10px;}
+
+#pun-stats .container {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-family: lora;
 }
 
 li#onlinelist {
@@ -734,8 +1279,6 @@ text-transform: uppercase;
   letter-spacing: 1.6px;
 }
 
-.banners {}
-
 .banners a {
   opacity: .5;
 }
@@ -753,16 +1296,12 @@ text-transform: uppercase;
 /* Топик
 ------------------------------------------*/
 
-#pun-viewtopic .post .container {
-  padding: var(--padding);
-}
-
-.post {
-  margin-top: 10px;
+.punbb .post .container {
+  padding: 10px 53px;
 }
 
 .toppost, .topicpost {
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 .post .container {
@@ -774,7 +1313,7 @@ text-transform: uppercase;
 .post h3 {
   background: url(https://forumstatic.ru/files/0016/01/4e/34959.png) no-repeat top center;
   height: 65px;
-  margin: -10px auto -20px;
+  margin: -20px auto;
 }
 
 .post h3 span {
@@ -783,27 +1322,42 @@ text-transform: uppercase;
   display: block;
   box-sizing: border-box;
   line-height: 25px;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.post h3 span a.permalink {
+  display: block;
 }
 
 .post h3 strong {
+  display: block;
   float: right;
   text-align: right;
   font-weight: normal;
+  color: var(--sandy2);
 }
 
 /* Автор */
 
 .post-author {
   position: relative;
-  margin: -22px 0 0 15px;
+  margin: -22px 0 10px -15px;
   width: 230px;
   text-align: center;
   background: url(https://forumstatic.ru/files/0016/01/4e/78999.png) no-repeat top center, url(https://forumstatic.ru/files/0016/01/4e/82430.png) no-repeat bottom center, url(https://forumstatic.ru/files/0016/01/4e/41644.png) repeat-y top center;
   color: var(--sandy);
+  box-shadow: 0 0 4px 1px rgba(0,0,0,.5);
 }
 
 .post-author ul {
   padding: 16px 18px;
+}
+
+.punbb .post .post-author a {
+  color: #bc9168;
+  font-weight: 500;
 }
 
 .place {
@@ -813,6 +1367,10 @@ text-transform: uppercase;
   line-height: 30px;
   background: url(https://forumstatic.ru/files/0016/01/4e/99193.png) no-repeat top center;
   height: 28px;
+  width: 194px;
+  text-align: center;
+  color: var(--sandy);
+  font-weight: normal;
 }
 
 .pa-author {
@@ -825,29 +1383,151 @@ text-transform: uppercase;
 .pa-author a {}
 
 .pa-title {
+  margin-bottom: 10px;
   font-size: 9px;
-  letter-spacing: .9px;
-  padding-bottom: 7px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  text-align: center;
+  font-family: 'Lora';
+  text-transform: lowercase;
 }
 
-.pa-avatar img {}
+.pa-fld1 {
+  background: #00000040;
+  border: 1px solid #564d3e4a;
+  padding: 5px 5px 0;
+  margin: 0px 5px;
+}
 
-.lz {}
+.pa-fld1 name, #pa-fld1 name {
+  display: block;
+  font-family: viaoda libre;
+  font-size: 16px;
+}
+
+.pa-fld1 zv, #pa-fld1 zv {
+  font-family: lora;
+  display: block;
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin-top: 2px;
+  line-height: 10px;
+}
+
+.pa-fld1 tex, #pa-fld1 tex {
+  text-align: justify;
+  display: block;
+  margin: 3px 6px 6px 6px;
+  font-family: roboto;
+  font-size: 9px;
+  line-height: 11px;
+  color: #85745e;
+}
 
 .pa-posts, .pa-respect {
- /* display: inline-block; */
+  display: inline-block;
+  width: 66px;
+  font-size: 9px;
+  box-sizing: border-box;
+  border: 3px double rgba(159, 114, 47, .2);
+  padding: 2px 5px;
+  font-style: italic;
 }
 
-.pa-online, .pa-last-visit {}
+.pa-posts {
+  margin: 10px 12px 10px 16px;
+}
+
+.pa-respect {
+  margin: 10px 16px 10px 12px;
+}
+
+.pa-posts .fld-name, .pa-respect .fld-name {
+  font-style: normal;
+}
+
+.pa-fld3, .pa-fld4 {
+  margin: 0 8px 10px;
+  display: inline-block;
+  width: 76px;
+  height: 17px;
+  line-height: 20px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  font-size: 10px;
+}
+
+.pa-fld3 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/99941.png) no-repeat top center;
+}
+
+.pa-fld4 {
+  background: url(https://forumstatic.ru/files/0016/01/4e/64176.png) no-repeat top center;
+}
+
+.pa-online, .pa-offline {
+  position: relative;
+  height: 19px;
+  background: url(https://forumstatic.ru/files/0016/01/4e/61287.png) no-repeat bottom center;
+}
+
+.pa-online::before {
+  content: "online";
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: var(--sandy3);
+}
+
+.pa-offline::before {
+  content: "offline";
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: var(--sandy3);
+}
+
+
+.pa-online strong, .pa-last-visit {
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  padding: 5px 10px;
+  left: 50%;
+  opacity: 0;
+  top: 21px;
+  background: rgba(0,0,0,.7);
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: opacity .2s linear 0s;
+  pointer-events: none;
+}
+
+.pa-online:hover strong, .pa-offline:hover .pa-last-visit {
+  opacity: 1;
+}
+
+.pa-online strong::after, .pa-last-visit::after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  border: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: -10px;
+  left: 50%;
+  border-bottom: 10px solid rgba(0,0,0,.7);
+  top: -10px;
+}
 
 
 /* Тело поста */
 
 .post-body {
-  width: calc(100% - 250px);
+  width: calc(100% - 218px);
 }
 
-.post-box {padding: 10px;}
+.post-box {padding: 10px 20px;}
 
 .post-links {
   margin-left: 230px;
@@ -855,9 +1535,16 @@ text-transform: uppercase;
 }
 
 .post-links ul {
-  padding: 0;
+  padding: var(--padding);
   margin-left: -230px;
   text-align: right;
+  box-sizing: border-box;
+  font-size: 9px;
+  font-family: lora !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: .5px;
 }
 
 .post-links li {
@@ -944,27 +1631,33 @@ html.punbb {border: none;}
 .checkfield input[type="checkbox"], .radiofield input[type="radio"] {margin: 0 3px;}
 p[class="checkfield"] *, div[class="checkfield"] *, fieldset[class="radiofield"] * {height: 20px; vertical-align: middle;}
 
-textarea, input, select, optgroup {font-size: 14px;}
-optgroup {font-weight: bold;}
+textarea, input, select, optgroup {font-size: 11px;}
+optgroup {font-weight: normal;}
 
 .formal .container {padding: var(--padding);}
 
 .formsubmit {
-padding: 0;
-margin: 10px 0 0 0;
+  padding: 0;
+  margin: 10px 0 0 0;
 }
+
 .formsubmit input, .formsubmit a, .formsubmit span {margin: 0 6px 0 0;}
 
 fieldset {border: none;}
+
 fieldset legend {
-font-style: italic;
-font-weight: bold
+ font-size: 11px;
+  font-weight: 400;
+  font-family: lora;
+  text-transform: lowercase;
 }
+
 fieldset fieldset {
-border: none;
-margin: 0;
-padding: 0 0 8px 0
+  border: none;
+  margin: 0;
+  padding: 0 0 8px 0
 }
+
 .fs-box {padding: 5px 0;}
 .fs-box p, .fs-box fieldset {padding: 0 0 8px 0;}
 
@@ -1017,6 +1710,14 @@ img.avatardemo {
   margin: 0 0 8px 18px;
 }
 
+#pun-messages .post h3 {
+  background: none;
+}
+
+#pun-messages .post h3 span {
+  text-shadow: none;
+}
+
 #pun-messages .clearer {
   display: none;
 }
@@ -1034,8 +1735,6 @@ img.avatardemo {
 }
 
 #pun-userlist .tcl {width: 40%}
-
-.usertable .container {}
 
 /* Собщения об ошибках */
 
@@ -1112,7 +1811,7 @@ width: 100%;
   display: block;
   width: 17px;
   height: 39px;
-  text-indent: -10000px;
+  font-size: 0;
   position: absolute;
   cursor: pointer;
 }
@@ -1149,7 +1848,7 @@ width: 100%;
 
 .slide-text {
   width: 210px;
-  margin: 10px auto;
+  margin: 11px auto;
   height: 90px;
   overflow: auto;
   text-align: justify;
@@ -1185,6 +1884,7 @@ width: 100%;
 
 .matchast ul {
     list-style: none;
+    text-align: justify;
 }
 
 .matchast h2 {
@@ -1212,6 +1912,7 @@ width: 100%;
 }
 
 .matchast table {
+    width: 100%;
     border-spacing: 10px;
 }
 
@@ -1264,6 +1965,28 @@ width: 100%;
     font: normal 20px/120% serif;
 }
 
+.matchast_top span i {
+  font: italic 12px/14px sans-serif;
+}
+
+.matchast_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px 50px;
+  margin: 10px 0;
+}
+
+.matchast_info > div {
+  width: 200px;
+  text-align: center;
+}
+
+.matchast_info b {
+  display: block;
+}
+
 .union_info {
     display: flex;
     flex-wrap: wrap;
@@ -1297,7 +2020,6 @@ width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 20px;
 }
   
@@ -1351,9 +2073,26 @@ width: 100%;
 }
 
 .matchast details summary {
-  margin: 0 auto 5px;
+  margin: 0 auto;
   width: fit-content;
   cursor: pointer;
+  font-family: 'lora';
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .5px;
+  color: #434646;
+}
+
+.matchast details[open] > summary {
+  margin: 0 auto 5px;
+}
+
+.matchast_top details {
+  background: rgba(238, 234, 228, .3);
+}
+
+.matchast_top details summary {
+  color: var(--light);
 }
 
 .title_name, .title_address, .title_who {
@@ -1394,6 +2133,25 @@ width: 100%;
 .money td {
     width: calc(100% / 3);
     text-align: center;
+}
+
+.guild {
+  background: var(--brown);
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.malumnia .tabs, .elmhold .tabs {
+  gap: 13px;
+}
+
+.malumnia .money td {
+  width: auto;
+}
+
+.army {
+  text-align: center;
 }
 
 /* Гостевая */
