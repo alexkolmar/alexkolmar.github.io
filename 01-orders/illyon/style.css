@@ -1196,59 +1196,8 @@ li#onlinelist {
 
 .nav{
   position: relative;
-  height: 30px;
-  width: 250px;
 }
 
-/* КОД ССЫЛОК НАВИГАЦИИ ОТ ВЕЩЕГО ДУХА */
-/* настройка кнопки, может быть текстом */
-.spirit-navigation {
-  height: 30px;
-  width: 250px;
-  display: flex;
-  cursor: pointer;
-  position: absolute;
-  transition: all 0.3s ease-in-out 0s;
-  align-items: center;
-  justify-content: center;
-}
-
-/* вид кнопки после клика по ней */
-.spirit-navigation.spirit-navigation_hover{
-
-}
-
-/* настройка позиции выпадающего по клику окна и его ширина */
-#navigblock {
-width: 200px;
-position: absolute;
-top: 30px;
-z-index: 999;
-background: white;
-display: none;
-}
-
-/* настройка блока ссылок, цвет фона, тени, прозрачность, отступы */
-.sslka {
-display: block;
-padding: 5px;
-}
-
-/* настройка вида самой ссылки, ширина, цвет, фон, шрифты и так далее */
-#pun .sslka a {
-white-space: nowrap;
-margin: 5px auto;
-text-align: center;
-transition: all 0.3s linear 0s;
-display: block;
-padding: 4px;
-text-transform: uppercase;
-}
-
-/* ссылка при наведении */
-#pun .sslka a:hover {
-
-}
 
 /* Футер
 ------------------------------------------*/
