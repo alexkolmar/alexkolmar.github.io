@@ -27,12 +27,28 @@ else {document.location.href = "../login.php?action=out&id="+UserID};}
 <!---------------------- Красивая профилактика END ---------------------->
 
 
+<!-- Таблица в шапке -->
 <div class="tablica">
 
 <!--Левое окно-->
-<div class="left-window">
- <img src="https://forumstatic.ru/files/0016/01/4e/47870.png">
+<style>#КонтентРотатор img{display:none}</style>
+<div id="КонтентРотатор" class="left-window"><!-- Ротатор произвольного контента -->
+  <img src="https://forumstatic.ru/files/0016/01/4e/47870.png">
+  <img src="https://forumstatic.ru/files/0016/01/4e/25905.png">
+  <img src="https://forumstatic.ru/files/0016/01/4e/97112.png">
 </div>
+<script type='text/javascript'>
+  function Rotator_cont(selek) {
+  var s = 360000;  // Время отображения
+  var N=$(selek).length;
+  var i=Math.round(Math.random()*(N-1));Rotator(i);
+
+  function Rotator(i) {
+  $(selek).hide();$(selek).eq(i).show();i++;
+  if(i>N-1){i=0};
+  timerId01=setTimeout(function(){Rotator(i)},s);return;}
+  }Rotator_cont('#КонтентРотатор img')
+</script>
 
 <!--черепушка-->
 <img class="skull" src="https://forumstatic.ru/files/0016/01/4e/28366.png">
@@ -45,32 +61,31 @@ else {document.location.href = "../login.php?action=out&id="+UserID};}
   <div id="slideshow">
    <div id="slidesContainer">
     <div class="slide slide-three">
-
+     <span>Авторский мир с антуражными локациями.<br>
+     В игре осень 1570 года.</span>
+     <nav class="nav">
+      <a href="http://illyon.rusff.me/viewtopic.php?id=14">внешности</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=15">роли</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=19">нужные</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=18">хочу к вам</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=107">сюжет</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=34">путеводитель</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=11">магия</a> ♦ 
+      <a href="http://illyon.rusff.me/viewtopic.php?id=12">религия</a> ♦ 
+      <a href="ССЫЛКА">система дайсов</a>
+     </nav>
     </div>
 
     <div class="slide slide-two">
      <div class="actives">
       <span>самые активные</span>
       <div class="actives_inner">
-        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
-        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
-        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
-        <a class="" title="активист"><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class=""><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class=""><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class=""><img src="https://dummyimage.com/40x40/000/fff"></a>
+        <a class=""><img src="https://dummyimage.com/40x40/000/fff"></a>
       </div>
      </div>
-     <nav class="nav">
-      <! -- скрипт навигации выпадающим окном [основа скрипт вкладок http://imagiart.ru/, переработка вещего духа] --> 
-      <script type="text/javascript" src="https://forumstatic.ru/files/001a/18/bd/96460.js"></script>
-      <div class="spirit-navigation" id="navig-batton" title="навигация">полезные ссылки</div>
-      <div id="navigblock">
-       <div class="sslka">
-        <!-- важные ссылки -->
-        <a href="ссылка">название</a> 
-        <a href="ссылка">название</a> 
-        <a href="ссылка">название</a> 
-       </div>
-      </div>
-     </nav>
     </div>
 
     <div class="slide slide-one">
@@ -130,9 +145,24 @@ else {document.location.href = "../login.php?action=out&id="+UserID};}
 </script>
 
 <!--Центральное окно-->
-<div class="center-window">
-<img src="https://forumstatic.ru/files/0016/01/4e/93379.png">
+<style>#КонтентРотатор3 img{display:none}</style>
+<div id="КонтентРотатор3" class="center-window"><!-- Ротатор произвольного контента -->
+  <img src="https://forumstatic.ru/files/0016/01/4e/93379.png">
+  <img src="https://forumstatic.ru/files/0016/01/4e/50666.png">
+  <img src="https://forumstatic.ru/files/0016/01/4e/63831.png">
 </div>
+<script type='text/javascript'>
+  function Rotator_cont(selek) {
+  var s = 360000;  // Время отображения
+  var N=$(selek).length;
+  var i=Math.round(Math.random()*(N-1));Rotator(i);
+
+  function Rotator(i) {
+  $(selek).hide();$(selek).eq(i).show();i++;
+  if(i>N-1){i=0};
+  timerId01=setTimeout(function(){Rotator(i)},s);return;}
+  }Rotator_cont('#КонтентРотатор3 img')
+</script>
 
 <!--Табличка справа-->
 <div class="text-right">
@@ -140,15 +170,31 @@ else {document.location.href = "../login.php?action=out&id="+UserID};}
 </div>
 
 <!--Правое окно-->
-<div class="right-window">
- <img src="https://forumstatic.ru/files/0016/01/4e/40631.png">
+<style>#КонтентРотатор2 img{display:none}</style>
+<div id="КонтентРотатор2" class="right-window"><!-- Ротатор произвольного контента -->
+  <img src="https://forumstatic.ru/files/0016/01/4e/40631.png">
+  <img src="https://forumstatic.ru/files/0016/01/4e/76260.png">
+  <img src="https://forumstatic.ru/files/0016/01/4e/79132.png">
 </div>
+<script type='text/javascript'>
+  function Rotator_cont(selek) {
+  var s = 360000;  // Время отображения
+  var N=$(selek).length;
+  var i=Math.round(Math.random()*(N-1));Rotator(i);
+
+  function Rotator(i) {
+  $(selek).hide();$(selek).eq(i).show();i++;
+  if(i>N-1){i=0};
+  timerId01=setTimeout(function(){Rotator(i)},s);return;}
+  }Rotator_cont('#КонтентРотатор2 img')
+</script>
 
 </div>
+<!--Конец таблицы в шапке-->
 
 
 <!--Скрытие профиля в теме тегом-->
-<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website,.hideprofile .post-sig{display:none!important}
+<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
 .hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
 <script>
     FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
