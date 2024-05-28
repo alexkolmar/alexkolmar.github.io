@@ -552,24 +552,23 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scrollbar-width: thin;
-  scrollbar-color: var() var();
+  scrollbar-color: #6e5340 #02040559;
 }
 
-*::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+/*---Прокрутка---*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #02040559;
 }
 
-*::-webkit-scrollbar-track {
-  background-color: var();
+::-webkit-scrollbar-thumb {
+    background-color: #6e5340;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: var();
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background: var();
+::selection {
+    background: #2b4755 !important;
+    color: #d7d8d0;
 }
 
 :focus {
@@ -1150,10 +1149,9 @@ tr.iclosed div.icon {
 #pun-index tbody.hasicon td.tcl {
   padding: 10px;
   width: 560px;
-  color: var(--brown4);
-  letter-spacing: 1.7px;
   text-align: justify;
-  font-size: 9px;
+  font-family: lora;
+  font-size: 10px;
 }
 
 #pun-index .tclcon h3 {
@@ -1477,7 +1475,23 @@ li#onlinelist {
   letter-spacing: .25px;
 }
 
-.pa-author a {}
+.pa-author a {
+  background: linear-gradient(45deg, #c89966 33%, #b87f4d 66%, #a66a45);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #88705e;
+  transition: 1s;
+}
+
+.pa-author a:hover {
+  background: linear-gradient(257deg, #c89966 33%, #b87f4d 66%, #a66a45);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #88705e;
+  transition: 1s;
+}
 
 .pa-title {
   margin-bottom: 5px;
@@ -1533,7 +1547,7 @@ li#onlinelist {
   font-size: 9px;
   box-sizing: border-box;
   border: 3px double rgba(159, 114, 47, .2);
-  padding: 2px 5px;
+  padding: 2px;
   font-style: italic;
 }
 
@@ -1685,7 +1699,7 @@ li#onlinelist {
 }
 
 pre {
-  font: 11px monaco;
+  font: 1.1em/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace;
 }
 
 .post-content em {
@@ -1721,22 +1735,24 @@ pre {
 .quote-box,
 .code-box {
   margin: 4px 10px 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
+  padding: 15px 20px;
+  color: #39332e;
+  background: #b9b4aa4f;
+  border: 1px solid #b4ada585;
 }
 
-.quote-box cite {
+.quote-box cite, .code-box strong.legend {
+  text-align: left;
   display: block;
-  padding-bottom: 5px;
-  font-weight: bold;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Lora';
+  width: auto;
+  text-transform: uppercase;
   font-style: normal;
-}
-
-.code-box strong.legend {
-  display: block;
-  padding-bottom: 5px;
-  font-weight: bold;
-  font-style: normal;
+  letter-spacing: 0.2px;
+  color: #74502c;
+  margin-bottom: 5px;
 }
 
 .post-sig dt {
@@ -2296,7 +2312,7 @@ img.avatardemo {
 
 .matchast details {
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 15px;
   background: var(--brown);
 }
 
@@ -2387,6 +2403,34 @@ img.avatardemo {
 .army {
   text-align: center;
 }
+
+.months {
+  display: flex;
+  gap: 10px;
+}
+
+.months ul {
+  width: 50%;
+}
+
+.months ul:first-of-type {
+  text-align: right;
+}
+
+.rels td {
+  text-align: center;
+}
+
+.holidays td:first-of-type {
+  width: 30%;
+  text-align: center;
+}
+
+.holidays td:last-of-type {
+  width: 70%;
+  text-align: justify;
+}
+
 
 /* Гостевая */
 
