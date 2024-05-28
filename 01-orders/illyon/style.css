@@ -1564,7 +1564,19 @@ li#onlinelist {
   font-style: normal;
 }
 
-.pa-fld3,
+.pa-fld3 {
+  background: #00000040;
+  border: 1px solid #6a5a404a;
+  padding: 0 5px;
+  margin: 7px 5px;
+  font-family: lora;
+  text-transform: uppercase;
+  font-size: 8.5px;
+  letter-spacing: 1px;
+  line-height: 17px;
+}
+
+.pa-fld5,
 .pa-fld4 {
   margin: 0 8px 10px;
   display: inline-block;
@@ -1575,7 +1587,7 @@ li#onlinelist {
   font-size: 10px;
 }
 
-.pa-fld3 {
+.pa-fld5 {
   background: url(https://forumstatic.ru/files/0016/01/4e/99941.png) no-repeat top center;
 }
 
