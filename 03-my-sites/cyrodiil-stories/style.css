@@ -2,7 +2,7 @@
 
 /* Иконический шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
-@import url('https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css');
+@import url('https://alexkolmar.github.io/fonts/fa/all.css');
 
 /* Tahoma */
 @import url('https://alexkolmar.github.io/fonts/Tahoma/stylesheet.css');
@@ -81,7 +81,8 @@
   --ktp: 'Kingthings Petrock';
   --abd: 'Abaddon';
   --obl: 'Oblivion';
-  --fa: 'Font Awesome 5 Pro', 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  --fa: 'Font Awesome 6 Pro', 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+  --fad: 'Font Awesome 6 Duotone';
 }
 
 /* Global
@@ -139,12 +140,15 @@ address, em {font-style: normal;}
 .modlist, .lastedit, .punbb div#pun-live-rusff, .punbb .topic a.sharelink {display: none;}
 
 #tags .container, .post_report, .post_reputation, #MyBookmarks {
-  background: var(--sec-bg);
+  background: var(--pun-bg);
 }
 
 #tags .container {
   padding: var(--mpad) !important;
+  border: 1px solid var(--gold);
   top: 0 !important;
+  max-height: 300px;
+  overflow: auto;
 }
 
 /* ОФОРМЛЕНИЕ КНОПОК
@@ -616,6 +620,10 @@ text-transform: uppercase;
 /* Футер
 ------------------------------------------*/
 
+.punbb #html-footer .container {
+  padding: 0;
+}
+
 .banners {}
 
 .banners a {
@@ -1039,6 +1047,126 @@ img.avatardemo {
 }
 
 .go-down:hover, .go-up:hover {opacity: 1;}
+
+
+/* Иконки в форме ответа 
+-------------------------------------------------------------*/
+
+.punbb #main-reply {box-sizing: border-box;}
+.punbb #form-buttons table {width: 100%;}
+
+.punbb #form-buttons tr {
+display: flex;
+display: -webkit-flex;
+flex-wrap: wrap;
+-webkit-flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 0 5px;
+width: 100%;
+}
+
+#form-buttons td {
+background-image: none !important;
+position: relative;
+display: inline-block;
+width: 30px;
+height: 30px;
+}
+
+.punbb #form-buttons td img {
+width: 30px;
+height: 30px;
+}
+
+#form-buttons td:before, #form-buttons td:after {
+content: " ";
+font-family: var(--fad);
+font-size: 20px;
+color: var(--gold);
+font-weight: 900;
+position: absolute;
+pointer-events: none;
+transition: all .5s linear 0s;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 0;
+top: 0;
+}
+
+#form-buttons td:hover:before {color: var(--link-hover);}
+
+/* Стандартные кнопки */
+
+td#button-font:before {content: "\f031";}
+td#button-font:after {content: "\f031\f031";}
+td#button-size:before {content: "\f894";}
+td#button-size:after {content: "\f894\f894";}
+td#button-bold:before {content: "\f032";}
+td#button-bold:after {content: "\f032\f032";}
+td#button-italic:before {content: "\f033";}
+td#button-italic:after {content: "\f033\f033";}
+td#button-underline:before {content: "\f0cd";}
+td#button-underline:after  {content: "\f0cd\f0cd";}
+td#button-strike:before {content: "\f0cc";}
+td#button-strike:after {content: "\f0cc\f0cc";}
+td#button-left:before {content: "\f036";}
+td#button-left:after {content: "\f036\f036";}
+td#button-center:before {content: "\f037";}
+td#button-center:after {content: "\f037\f037";}
+td#button-right:before {content: "\f038";}
+td#button-right:after {content: "\f038\f038";}
+td#button-link:before {content: "\f0c1";}
+td#button-link:after {content: "\f0c1\f0c1";}
+td#button-spoiler:before {content: "\f070";}
+td#button-spoiler:after {content: "\f070\f070";}
+td#button-spoiler:hover:before {content: "\f06e";}
+td#button-spoiler:hover:after {content: "\f06e\f06e";}
+td#button-image:before {content: "\f1c5";}
+td#button-image:after {content: "\f1c5\f1c5";}
+td#button-video:before {content: "\f144";}
+td#button-video:after {content: "\f144\f144";}
+td#button-hide:before {content: "\f13e";}
+td#button-hide:after {content: "\f13e\f13e";}
+td#button-hide:hover:before {content: "\f023";}
+td#button-hide:hover:after{content: "\f023\f023";}
+td#button-quote:before {content: "\f086";}
+td#button-quote:after {content: "\f086\f086";}
+td#button-code:before {content: "\f121";}
+td#button-code:after {content: "\f121\f121";}
+td#button-color:before {content: "\f53f";}
+td#button-color:after{content: "\f53f\f53f";}
+td#button-table:before {content: "\f0ce";}
+td#button-table:after {content: "\f0ce\f0ce";}
+td#button-smile:before {content: "\f59a";}
+td#button-smile:after {content: "\f59a\f59a";}
+td#button-keyboard:before {content: "\f11c";}
+td#button-keyboard:after {content: "\f11c\f11c";}
+td#button-addition:before {content: "\f0fe";}
+td#button-addition:after {content: "\f0fe\f0fe";}
+td#button-files_rusff:before {content: "\f07b";}
+td#button-files_rusff:after {content: "\f07b\f07b";}
+td#button-files_rusff:hover:before {content: "\f07c";}
+td#button-files_rusff:hover:after {content: "\f07c\f07c";}
+td#button-graffiti_rusff:before {content: "\f5bd";}
+td#button-graffiti_rusff:after {content: "\f5bd\f5bd";}
+
+/* Дополнительные кнопки */
+
+td#button-indent:before {content: "\f03c";} /* тег абзаца */
+td#button-indent:after {content: "\f03c\f03c";}
+td#button-styles:before {content: "\f1de";} /* дополнительные стили */
+td#button-styles:after {content: "\f1de\f1de";}
+td#floatbut:before {content: "\f1ea";} /* тег обтекания изображения от Romych */
+td#floatbut:after {content: "\f1ea\f1ea";}
+td#button-justify:before {content: "\f039";} /* тег выравнивания по ширине */
+td#button-justify:after {content: "\f039\f039";}
+td#button-mask:before {content: "\f630";} /* тег для скрипта ролевой маски от человека-шамана */
+td#button-mask:after {content: "\f630\f630";}
+td#button-sticker:before {content: "\f1b0";} /* тег для дополнительных смайлов от человека-шамана */
+td#button-sticker:after {content: "\f1b0\f1b0";}
 
 
 /* html
