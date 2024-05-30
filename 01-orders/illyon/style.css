@@ -515,8 +515,6 @@
 ------------------------------------------*/
 
 :root {
-  --link: darkgoldenrod;
-  --link-hover: goldenrod;
   --light: #eeeae4;
   --gray: #ccc;
   --brown: rgba(79, 48, 29, 5%);
@@ -578,7 +576,7 @@
 a,
 .punbb #pun-admain a {
   text-decoration: none;
-  color: var(--gold);
+  color: var(--slide-text);
   transition: all .2s linear 0s;
 }
 
@@ -645,6 +643,14 @@ em {
   overflow: auto;
 }
 
+#tooltip {
+  position: absolute;
+  background: rgba(0,0,0,.7);
+  color: var(--light);
+  font: normal 11px/14px sans-serif;
+  padding: 2px 10px;
+}
+
 /* ОФОРМЛЕНИЕ КНОПОК
 ------------------------------------------*/
 
@@ -687,6 +693,7 @@ select {
 
 #main-reply {
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 
@@ -700,7 +707,7 @@ select {
 
 .punbb-admin #pun-adnav {
   margin-left: -146px;
-  width: 150px;
+  width: 146px;
 }
 
 #pun-admain .adformal {
@@ -764,7 +771,7 @@ body::before {
 }
 
 #pun-navlinks .container {
-  padding: 0;
+  padding: 5px 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -799,8 +806,7 @@ body::before {
   letter-spacing: .5px;
 }
 
-#pun-navlinks li a,
-#pun-ulinks li a {
+#pun-navlinks li a {
   background: linear-gradient(45deg, #a38c7b 33%, #977c69 66%, #88705e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -809,8 +815,7 @@ body::before {
   text-shadow: 0 0 3px rgba(0, 0, 0, 20%);
 }
 
-#pun-navlinks li a:hover,
-#pun-ulinks li a:hover {
+#pun-navlinks li a:hover {
   background: linear-gradient(45deg, #c89966 33%, #b87f4d 66%, #a66a45);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -826,11 +831,11 @@ body::before {
 }
 
 #pun-ulinks .container {
-  padding: 0 0 10px;
+  padding: 10px;
   text-align: center;
-  height: 8px;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #pun-ulinks li {
@@ -1148,7 +1153,7 @@ tr.iclosed div.icon {
 
 #pun-index tbody.hasicon td.tcl {
   padding: 10px;
-  width: 560px;
+  width: 500px;
   text-align: justify;
   font-family: lora;
   font-size: 10px;
@@ -1184,8 +1189,8 @@ tr.iclosed div.icon {
 
 #pun-index .tcr {
   position: relative;
-  width: 220px;
-  color: var(--brown4);
+  width: 280px;
+  color: var(--slide-text);
   font-size: 10px;
   letter-spacing: .7px;
 }
@@ -1208,7 +1213,7 @@ tr.iclosed div.icon {
 }
 
 #pun-index .tcr .lastpost-link {
-  color: var(--brown4);
+  color: var(--slide-text);
 }
 
 #pun-index .tcr .lastpost-link:hover {
@@ -1581,18 +1586,17 @@ li#onlinelist {
   margin: 0 8px 10px;
   display: inline-block;
   width: 76px;
-  height: 17px;
-  line-height: 20px;
+  line-height: 17px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
   font-size: 10px;
 }
 
 .pa-fld5 {
-  background: url(https://forumstatic.ru/files/0016/01/4e/99941.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/0016/01/4e/99941.png) no-repeat bottom center;
 }
 
 .pa-fld4 {
-  background: url(https://forumstatic.ru/files/0016/01/4e/64176.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/0016/01/4e/64176.png) no-repeat bottom center;
 }
 
 .pa-online,
@@ -1998,11 +2002,11 @@ img.avatardemo {
 }
 
 .go-up {
-  top: 285px;
+  top: 335px;
 }
 
 .go-down {
-  top: 320px;
+  top: 370px;
 }
 
 .go-down img {
@@ -2023,6 +2027,8 @@ img.avatardemo {
 }
 
 .hideprofile .post-sig {display: none;}
+
+#my-form {padding: var(--bigpad);}
 
 
 /* Слайдер
@@ -2085,6 +2091,8 @@ img.avatardemo {
 
 .slide-one {
   background: url(https://forumstatic.ru/files/0016/01/4e/57790.png) no-repeat top center;
+  padding: 15px;
+  text-align: center;
 }
 
 #slideshow .slide-two span {
@@ -2110,7 +2118,7 @@ img.avatardemo {
   margin: 3px auto 5px;
 }
 
-.actives a {
+.actives_inner a {
   background: url(https://forumstatic.ru/files/0016/01/4e/46452.png) no-repeat center;
   width: 54px;
   height: 51px;
@@ -2119,9 +2127,22 @@ img.avatardemo {
   justify-content: center;
 }
 
-.slide-three {
-  padding: 10px 15px;
+.bestep {
+  display: flex;
+  width: 120px;
+  margin: 10px auto;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #00000040;
+  border: 1px solid #6a5a40;
+  padding: 0 5px;
+  font-family: lora;
+  text-transform: uppercase;
+  font-size: 8.5px;
+  letter-spacing: 1px;
+  line-height: 17px;
+  color: var(--light-gold);
 }
 
 /* Матчасть */
