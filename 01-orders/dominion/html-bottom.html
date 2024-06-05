@@ -1,0 +1,148 @@
+<!--АВАТАР ПО УМОЛЧАНИЮ-->
+<script type="text/javascript">
+    var DefAvtr="https://forumstatic.ru/files/001c/21/d6/91539.jpg";
+
+    var s='<li class="pa-avatar item2"><img class="defavtr" src="'+DefAvtr+'" alt="Аватар"/></li>';$("li.pa-title").each(function(){if (($(this).parent("ul").find("li.pa-avatar").html())==null){$(this).after(s);};});
+    </script>
+
+
+    <!--Репутация поста v.2.2-->
+    <script type="text/javascript">
+    $('div.post').map(function()
+    {var PostID=$(this).find('div.post-content').attr('id').slice(1,-8);var tyt=$(this).find('.post-rating p');var tmp_abort,timer,ava,vote,kr=[];function cl(){$('.tipsy').fadeOut(200);setTimeout(function(){$('.tipsy').remove();},200);};function ton(){timer=setTimeout(function(){cl();},500)}$(tyt).on('mouseenter',function(){$(this).tipsy({fade:!0,gravity:'se',trigger:'manual',html:!0});var w='<table id="respect"><tr><td style="font-weight:bolder"> Oценили: </td></tr><tr>';var f='<table id="vse"  width="100%"><tr>';tmp_abort=setTimeout(function(){$.get('/api.php',{method:'post.getVotes',sort_dir:'desc',limit:100,post_id:PostID,fields:'user_id,username,avatar,value,datetime'},function(data){var x=data.response.votes;for(var i in x){var v=x[i];vote=v.value;if(vote==1){vote='http://petushki-city.ru/files/0002/10/47/26356.png';}else{vote='http://petushki-city.ru/files/0002/10/47/46689.png';};ava=v.avatar;if(ava==''){ava='https://forumstatic.ru/files/0000/14/1c/20038.jpg'};kr[i]='<td><figure><img class="vote" src="'+vote+'"><a class="prof" href="/profile.php?id='+v.user_id+'"><img class="person" src="'+ava+'" title="'+v.datetime+'"><figcaption><p>'+v.username+'</p></figcaption></a></figure></td>';}w+=kr.slice(0,5).join(' ');w+='</tr></table>';if(kr.length>=6){w+='<p id="showt" style="cursor:pointer;font-weight:bold;margin:5px;"> Показать всех </p>';}$(tyt).attr('original-title',w).tipsy('show');for(var k=0;k<kr.length;k++){f+=kr[k];if(k%5==4){f+='</tr><tr>';}}f+='</tr></table>';$('#showt').on('click',function(){cl();$.jGrowl(f,{sticky:!0,position:'center',header:kr.length+' оценили',theme:'rating_theme'});});},'json');},600);}).on('mouseleave',function(){clearTimeout(tmp_abort);ton();$('.tipsy').on('mouseover',function(){clearTimeout(timer);});$('.tipsy').on('mouseout',function(){ton();});});$('body').on('click',function(){$('.rating_theme .jGrowl-close').trigger('click');});
+    });
+    </script>
+
+
+    <script type="text/javascript">
+    function to(username)
+    {insert('[b]' + username + '[/b]' + ', ');}
+    </script>
+
+
+<!-- Регулировка размера шрифта в постах © Alex_63 -->
+    <style>
+    .FNTslider {
+      border-radius: 4px;
+      position:relative;z-index:1000;
+      background: #E0E0E0;
+      width: 110px;
+      height: 5px;
+      margin: 3px 5px;
+      border: solid 1px #ccc;
+      float: right;
+      margin-right: 7%;
+    }
+    .FNTslider .before {
+      height: 5px;
+      border: solid 1px transparent;
+      border-right: none 0;
+      border-radius: 4px 0 0 4px;
+      position: absolute;
+      background: #A0BCDA;
+      margin-top: -1px;
+    }
+    .FNTslider .thumb {
+      width: 8px;
+      height: 13px;
+      border-radius: 3px;
+      position: relative;
+      top: -4px;
+      background: #3980D8;
+      cursor: pointer;
+    }
+    </style>
+    <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+
+
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+hvScriptSet.addMask({
+    forumAccessExtended: {
+        'Летопись Ада': ['Пользователи'],
+        'Личные истории': ['Пользователи'],
+        'Досужие вымыслы': ['Пользователи'],
+        'Беседы и увеселения': ['Пользователи'],
+        'Авторы и их персонажи': ['Пользователи'],
+        'Досье персонажей': ['Пользователи']
+    },
+    userFields: ['pa-online', 'pa-author', 'pa-avatar', 'pa-title', 'pa-posts', 'pa-respect', 'pa-ip', 'pa-fld1', 'pa-awards', 'pa-gifts']
+});
+</script>
+
+
+
+<!-- HTML низ -Cпойлер cкрытия Инфы под N-кнопок в Профиле Топика -->
+    <script>
+    var a1 = 1	// 0 - спойлер-аккордеон, 1 - вертикальный спойлер; 3 - обычный спойлер
+    var a2 = 0	// 0 - Скрытие первой вкладки; 1 - Показ первой вкладки;
+    var a3 = 0 // Резкость Открытия: 0 - Плавно; 1 - Резко;
+
+    var LiArr=new Array(
+    //При наличии двух косых => // в начале пункта, - пункт не скрывается.
+
+    //"pa-author",     //Ник-Нейм
+    //"pa-avatar",     //Аватар
+    //"pa-title",      //статус
+
+    // 1 кнопка - ссылка на Картинку
+    //В квадратных скобках, прямо к ссылке можно добавить своё описание (по желанию)
+    "https://forumstatic.ru/files/001c/21/d6/94285.png",
+
+    "pa-reg",        //Зарегистрирован
+    "pa-invites", //Приглашений
+    "pa-posts",      //Кол-во сообщений:
+    "pa-respect",    //Уважение:
+    "pa-positive",   //Позитив
+    "pa-sex",        //Пол
+    "pa-age",        //Возраст
+    "pa-icq",        //Аська
+    "pa-ip",         //IP Юзера
+    "pa-time-visit", //Провел на форуме:
+    "pa-last-visit", //Последний визит:
+    //"pa-online",     //Пользователь online - Не засовываем в спойлеры
+
+    // 2 кнопка- ссылка на Картинку
+    "https://forumstatic.ru/files/001c/21/d6/94285.png",
+
+    "pa-from",       //Откуда
+    "pa-fld1",       //Доп.Поле.1
+
+    // 3 кнопка- ссылка на Картинку
+    "https://forumstatic.ru/files/001c/21/d6/94285.png",
+
+    "pa-fld2",       //Доп.Поле.2
+    "pa-fld3",       //Доп.Поле.3
+    "pa-fld4",       //Доп.Поле.4
+    "pa-fld5",       //Доп.Поле.5
+    "award",      //Награды(только для rusff и ork)
+    "gift",         //Подарки(только для rusff и ork)
+
+    //Конец Списка,
+    "_End"); SetProvilSpoil(a1,a2,a3);
+    </script>
+    <!--Конец//=Cпойлер cкрытия Инфы под N-кнопок в Профиле Топик-->
+
+
+    <!-- Перенос Колонок тем и сообщений под Описание Форума / Deff, Alex_63 -->
+    <script type="text/javascript">
+    (function(){
+       $.catch = function(a,f){$(function(){var t,i=0;function s(){i++;if(i>120)return;t=setTimeout(function(){if(!$(a).length){s();return};f()},100);}s();});}
+       function appendTopicS(){
+         $('.category td.tcl .tclcon,#f-subforums td.tcl .tclcon').each(function() {
+           var L=$(this).parents('tr:first');
+           var str='<br><div class="Add"><div class="Tems_And_messages">Teм: <span class="right">'+L.find('td.tc2').text()+'</span></div>\
+           <div style="margin-left:12px;" class="Tems_And_messages">Cообщений: <span class="right">'+L.find('td.tc3').text()+'</span></div>\
+           </div>';$(str).appendTo(this);
+         });
+       }
+       if($('#pun-index').length){appendTopicS ();}
+       if($('#pun-viewforum').length){
+         var summ=$('.main table[summary]').attr('summary').split(': ')[1].substr(0,1);
+         if(summ=='#'||summ==String.fromCharCode(173))$.catch('#f-subforums',function(){appendTopicS()});
+       }
+    }());
+    </script>
+
+
+<div class="main" id="spo_all"><div class="category" id="spo_top" onclick="obj=this.parentNode.childNodes[1].style; tmp=(obj.display!='block') ? 'block' : 'none'; obj.display=tmp; return false;"><h2>БАННЕРЫ</h2></div><div id="spoiler4"><a href="https://dominion.f-rpg.me/"><img src="https://forumupload.ru/uploads/001c/21/d6/2/959456.png"></a> <a href="https://imagiart.ru/" target="_blank"> <img src="https://i.imgur.com/h3ba1GC.gif" title="photoshop: Renaissance" border="0" alt="photoshop: Renaissance"></a> <a href="https://badger.rolevaya.ru/" target="_blank"> <img src="https://forumupload.ru/uploads/001c/15/dc/2/672198.png" title="#барсук" border="0" alt="#барсук"></a> <a href="https://dff.f-rpg.me/" target="_blank"><img src="https://forumupload.ru/uploads/001b/57/10/186/626806.jpg" title="Don't fight the feeling"></a><br></div></div>

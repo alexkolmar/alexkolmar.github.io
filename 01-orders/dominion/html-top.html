@@ -1,0 +1,52 @@
+<div class="tablica">
+    <div class="drag">
+      <br><br>Всякая заблудшая душа <br>да обретет здесь приют. 
+      <br>
+      <br>Хоррор, мистика, драма. 18+ <br><br>
+      <br><br>Форум открыт для игры, но все еще в процессе настроек и дописывания. Периодически ведется тестирование некоторых функций и скриптов. Производятся правки дизайна.
+    </div>
+  </div>
+  
+  <!-- HTML верх -Cпойлер cкрытия Инфы под N-кнопок в Профиле Топика -->
+  <style>img.post-img-Sp {margin:6px 3px;}
+  div.tipsy.tipsy-s.Sp-imgSp-img .tipsy-inner{font-size:14px;letter-spacing:1px;}
+  </style>
+  <script type="text/javascript" src="https://forumstatic.ru/files/0010/b4/f8/57844.js"></script>
+  
+  
+  <!-- Выделение кода в блоке "Код" // © Alex_63, версия 2017г. -->
+  <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+  <script type="text/javascript">select_text.linkText = 'Выделить код' //текст ссылки</script>
+  
+  
+      <!--кнопки вверх вниз-->
+      <div class="go-up" id='ToTop'><img src="https://forumstatic.ru/files/001c/21/d6/28018.png" border="0" width=100%/></div>
+      <div class="go-down" id='OnBottom'><img src="https://forumstatic.ru/files/001c/21/d6/96336.png" border="0" width=100%/></div>
+  
+      <script type="text/javascript">
+      $(function(){
+      if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+      $(window).scroll(function(){
+        if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+        else $("#ToTop").fadeIn("slow")
+      });
+      if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+      $(window).scroll(function(){
+        if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+        else $("#OnBottom").fadeIn("slow")
+      });
+      $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+      $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+      });
+      </script>
+  
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V72YBFL7T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-6V72YBFL7T');
+  </script>
