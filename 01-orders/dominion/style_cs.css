@@ -121,11 +121,11 @@ input[type="text"], input[type="password"], textarea, select {
 ------------------------------------------*/
 
 html {
-  background: url(https://forumstatic.ru/files/001c/09/2b/87302.png) no-repeat top 212px center, url(https://forumstatic.ru/files/001c/21/d6/73440.png) center top no-repeat, url(https://forumstatic.ru/files/001c/21/d6/40883.jpg) center 360px repeat-y var(--body-bg);
+  background: url(https://forumstatic.ru/files/001c/09/2b/87302.png) no-repeat top 212px center, url(https://forumstatic.ru/files/001c/21/d6/73440.png) center top no-repeat, url(https://forumstatic.ru/files/001c/09/2b/50577.jpg) no-repeat bottom center, url(https://forumstatic.ru/files/001c/21/d6/40883.jpg) center 360px repeat-y var(--body-bg);
 }
 
 #pun {
-  margin: 375px auto 0;
+  margin: 375px auto 41px;
   width: 1032px;
   padding: 50px 0;
   background: url(https://forumstatic.ru/files/001c/09/2b/34412.jpg) repeat-y top center;
@@ -755,6 +755,8 @@ li.pa-title {
 .pl-reports a:before {
   content: 'report';
 }
+
+.post-links li.pl-reports {display: none;}
 
 .clearer {clear: both; height: 0; font-size: 0;}
 
