@@ -392,6 +392,19 @@ body::before {
   .punbb .main .tc2:before, .punbb .main .tc3:before {
   content: "";
   }
+
+  .main table .Add {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    width: fit-content;
+    padding: 0 15px;
+  }
+
+  .Tems_And_messages {
+    margin-left: 0 !important;
+    width: fit-content;
+  }
   
   #pun-index .main .tc2:before {content: "Тем: ";}
   #pun-index .main .tc3:before {content: "Сообщений: ";}
@@ -622,6 +635,10 @@ body::before {
     order: 1;
   }
 
+.punbb .post .post-author ul img.post-img-Sp {
+  margin: 5px 0;
+}
+
 .punbb .post .post-author ul .post-ul-Sp {
   margin-bottom: 10px;
   width: 100%;
@@ -655,6 +672,11 @@ body::before {
   
   /* Подпись */
   .punbb .post-box .post-sig {display: none;}
+
+  /* Рейтинг поста */
+ .punbb .post .post-rating .container {
+   padding: 0 !important;
+  }
   
   /* Ссылки профиль, удалить, цитировать и т.п. */
   .punbb .post-links {
@@ -714,7 +736,7 @@ body::before {
   height: 26px;
   }
 
-#form-buttons td#button-files_rusff, #form-buttons td#button-graffiti_rusff {display: none !important;}
+#form-buttons td#button-files_rusff, #form-buttons td#button-graffiti_rusff, #button-color, #button-addition {display: none !important;}
   
   #post-form #tags .container {
     position: relative;
