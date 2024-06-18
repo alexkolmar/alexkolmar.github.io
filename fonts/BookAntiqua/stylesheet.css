@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Book Antiqua';
+    src: url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua-Bold.eot');
+    src: local('Book Antiqua Bold'), local('BookAntiqua-Bold'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua-Bold.svg#BookAntiqua-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Book Antiqua';
+    src: url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua.eot');
+    src: local('Book Antiqua'), local('BookAntiqua'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/BookAntiqua/BookAntiqua.svg#BookAntiqua') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
