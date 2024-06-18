@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('https://alexkolmar.github.io/fonts/Comfortaa/Comfortaa.eot');
+    src: local('Comfortaa Regular'), local('Comfortaa-Regular'),
+        url('https://alexkolmar.github.io/fonts/Comfortaa/Comfortaa.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Comfortaa/Comfortaa.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Comfortaa/Comfortaa.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Comfortaa/Comfortaa.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Comfortaa/Comfortaa.svg#Comfortaa') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
