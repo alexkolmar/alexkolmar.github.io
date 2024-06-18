@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Viner Hand ITC';
+    src: url('https://alexkolmar.github.io/fonts/VinerHand/VinerHandITC.eot');
+    src: local('Viner Hand ITC'), local('VinerHandITC'),
+        url('https://alexkolmar.github.io/fonts/VinerHand/VinerHandITC.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/VinerHand/VinerHandITC.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/VinerHand/VinerHandITC.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/VinerHand/VinerHandITC.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/VinerHand/VinerHandITC.svg#VinerHandITC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
