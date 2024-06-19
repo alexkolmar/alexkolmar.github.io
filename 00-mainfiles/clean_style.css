@@ -499,6 +499,8 @@ li#onlinelist {
 /* Футер
 ------------------------------------------*/
 
+#html-footer .container {padding: 0;}
+
 .banners {}
 
 .banners a {
