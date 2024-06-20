@@ -1,0 +1,121 @@
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/0012/0b/b4/74953.svg"></div>
+<div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/0012/0b/b4/74953.svg"></div>
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+
+
+<script>
+$(".post-author").each(function(){
+$(this).find('.pa-posts, .pa-respect, .pa-fld2').wrapAll("<div class='addflds'>");
+});
+</script>
+
+
+<script>
+$('.pa-last-visit').wrap('<div class="pa-offline">');
+</script>
+
+
+<!-- Анти-в-строчку для Сообщений и Репутации © deff -->
+<script type="text/javascript">
+function changeS(sc,ch,st){$(sc).parent().each(function(){$(this).html($(this).html().replace(ch,st));});}
+   changeS('.pa-posts','Сообщений:','письма:</br>');
+   changeS('.pa-respect','Уважение</a>:','Уважение</a>:<br>');
+   changeS('.pa-respect','Уважение:','Уважение:<br>');
+</script>
+
+
+<!-- Регулировка размера шрифта в постах © Alex_63 -->
+<style>
+.FNTslider {
+  border-radius: 4px;
+  position:relative;z-index:1000;
+  background: #ccc;
+  width: 110px;
+  height: 5px;
+  margin: 3px 5px;
+  border: solid 0px #;
+  float: right;
+  margin-top: 5px;
+  margin-right: 7%;
+}
+.FNTslider .before {
+  height: 6px;
+  border: solid 0px transparent;
+  border-right: none 0;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  background: #fff;
+  margin-top: -1px;
+  box-shadow: 0px 0px 2px 0px rgb(203, 176, 120) inset;
+}
+.FNTslider .thumb {
+  width: 8px;
+  height: 13px;
+  border-radius: 3px;
+  position: relative;
+  top: -4px;
+  background: #fff;
+  cursor: pointer;
+}
+</style>
+<script type="text/javascript" src="http://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+<!-- Конец -->
+
+
+<!--написано символов-->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng" style="border:1px solid;padding:2px 3px;margin:0 20px 0 10px;">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+<!--конец -->
+
+
+<!--НАЧАЛО. выравнивание по ширине-->
+    <script>
+    $("#button-right").after('<td id="button-justify" title="Выравнивание по ширине"><img src="/i/blank.gif" onclick="bbcode(\'[align=justify]\', \'[/align]\');"/></td>');
+    </script>
+    <style>
+    #button-justify {
+        background: url("http://se.uploads.ru/LVN4z.png") no-repeat scroll center 6px rgba(0, 0, 0, 0) !important;
+    }
+    </style>
+<!--КОНЕЦ. выравнивание по ширине-->
+
+
+<!-- запятая после ника -->
+<script type="text/javascript">
+function to(username)
+{insert('[b]' + username + '[/b]' + ', ');}
+</script>
+<!--конец-->
+
+
+<!-- Аватар для гостя и по умолчанию / Deff, Alex_63 
+mod by ForumD.ru  -->
+    <script type="text/javascript">
+    var DefAvtr = 'https://i.imgur.com/XhMEu1b.png'; //Ссылка на аватар по умолчанию
+    var GuestAvtr = 'https://i.imgur.com/WuJu8FM.png'; //Ссылка на аватар для Гостя
+
+   $('#pun-viewtopic,#pun-messages').find('.pa-title').each(function(){
+      var b = DefAvtr;
+      if (+$(this).parents('.post').attr('data-group-id') == 3) b = GuestAvtr;
+      var s='<li class="pa-avatar item2"><img class="defavtr" src="'+b+'" alt="Аватар"/></li>';
+      if($(this).parent().find('.pa-avatar').html()==null)$(this).after(s);
+    });
+    $('#profile-left strong:contains("Нет аватара")')
+    .parent().html('<div><img src="'+DefAvtr+'"/></div>');
+    </script>
+<!-- Конец -->

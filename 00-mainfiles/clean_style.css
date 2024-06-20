@@ -811,6 +811,10 @@ textarea,
   margin: 0;
 }
 
+#profilenav li {
+  padding: 0 0 5px;
+}
+
 #viewprofile li {
   padding: 5px 0;
 }
