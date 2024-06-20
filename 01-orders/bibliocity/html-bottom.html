@@ -18,6 +18,18 @@ $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).he
 });
 </script>
 
+<!-- замена слова репутация -->
+<script type="text/javascript"> 
+var nWRD="уважение"; 
+function setRespecNew(){ 
+$(".pa-respect a[href^='/respect.php?']").each(function (){ 
+$(this).html(nWRD);});} 
+function TestRespect(){ 
+if($(".pa-respect:contains('Репутация')").length){setRespecNew();return; 
+}else {timerID = setTimeout("TestRespect()",110);return;} 
+}TestRespect() 
+</script> 
+
 
 <script>
 $(".post-author").each(function(){

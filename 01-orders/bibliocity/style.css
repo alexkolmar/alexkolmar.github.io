@@ -245,7 +245,7 @@ html {
 #pun {
   margin: 385px auto 30px;
   width: 950px;
-  background: url(https://forumstatic.ru/files/0012/0b/b4/15996.jpg) repeat top left;
+  background: url(https://forumstatic.ru/files/0012/0b/b4/34200.jpg) repeat top left;
 }
 
 .punbb {
@@ -976,6 +976,7 @@ li#onlinelist {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
+  text-transform: lowercase;
 }
 
 .pa-posts,
@@ -1180,7 +1181,7 @@ pre {
 .quote-box .quote-box {border: 1px solid var(--h3);}
 
 .post-sig dt {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--h3);
   width: 300px;
   margin: 10px auto;
 }
