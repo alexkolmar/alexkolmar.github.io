@@ -349,7 +349,7 @@ html {
 
 .container.crumbs {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -370,6 +370,7 @@ html {
 
 .main th {
   padding: 5px 10px;
+  color: var(--link);
 }
 
 .main td {
@@ -468,7 +469,7 @@ div.icon {
   justify-content: space-between;
 }
 
-.linkst .pagelink {}
+.linkst, .linksb {color: var(--link);}
 
 .linkst .postlink {
   text-align: right;
@@ -520,7 +521,7 @@ div.icon {
 
 /* Категории */
 
-#pun-index .category .container, .statscon {
+#pun-index .category .container {
   padding: 0;
   background: url(https://forumstatic.ru/files/0012/0b/b4/78036.jpg) repeat;
 }
@@ -639,6 +640,8 @@ div.icon {
 #pun-index .lastpost .byuser {
   text-transform: uppercase;
 }
+
+#pun-index .tcr br {display: none;}
 
 /* Статистика */
 
@@ -829,7 +832,12 @@ li#onlinelist {
 /* Список тем
 ------------------------------------------*/
 
+#pun-searchtopics .main h1 {display :none;}
 
+#pun-searchtopics .main .container,
+#pun-viewforum .main .container {
+  font-size: 14px;
+}
 
 /* Топик
 ------------------------------------------*/
@@ -1136,6 +1144,10 @@ pre {
   vertical-align: middle;
 }
 
+.post-content hr {
+  border: 1px solid var(--h3);
+}
+
 .scrollbox {
   width: 100%;
   overflow: auto;
@@ -1389,7 +1401,6 @@ img.avatardemo {
 .go-up,
 .go-down {
   cursor: pointer;
-  opacity: .5;
   z-index: 9999;
   display: none;
   position: fixed;
@@ -1404,11 +1415,6 @@ img.avatardemo {
 
 .go-down {
   top: 300px;
-}
-
-.go-down:hover,
-.go-up:hover {
-  opacity: 1;
 }
 
 .go-down img {
