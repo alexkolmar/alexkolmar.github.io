@@ -57,6 +57,7 @@
   --sec-bg: cornsilk;
   --link: darkgoldenrod;
   --link-hover: goldenrod;
+  --pwidth: 240px;
   --padding: 10px 20px;
   --tpad: 5px 20px;
   --mpad: 5px 10px;
@@ -552,7 +553,7 @@ li#onlinelist {
 /* Автор */
 
 .post-author {
-  width: 240px;
+  width: var(--pwidth);
   text-align: center;
 }
 
@@ -582,7 +583,7 @@ li#onlinelist {
 /* Тело поста */
 
 .post-body {
-  width: calc(100% - 240px);
+  width: calc(100% - var(--pwidth));
 }
 
 .post-box {
@@ -590,13 +591,13 @@ li#onlinelist {
 }
 
 .post-links {
-  margin-left: 240px;
+  margin-left: var(--pwidth);
   width: 100%;
 }
 
 .post-links ul {
   padding: 0;
-  margin-left: -240px;
+  margin-left: calc(var(--pwidth) * -1);
   text-align: right;
 }
 
