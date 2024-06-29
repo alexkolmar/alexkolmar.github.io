@@ -627,7 +627,7 @@ li#onlinelist {
 }
 
 pre {
-  font: 11px monaco;
+  font: 12px/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace;
 }
 
 .post-content em {
