@@ -2,11 +2,11 @@
     font-family: 'Ouvality';
     src: url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.eot');
     src: local('Ouvality'),
-        url('https://alexkolmar.github.io/fonts/OuvalityOuvality.eot?#iefix') format('embedded-opentype'),
-        url('https://alexkolmar.github.io/fonts/OuvalityOuvality.woff2') format('woff2'),
-        url('https://alexkolmar.github.io/fonts/OuvalityOuvality.woff') format('woff'),
-        url('https://alexkolmar.github.io/fonts/OuvalityOuvality.ttf') format('truetype'),
-        url('https://alexkolmar.github.io/fonts/OuvalityOuvality.svg#Ouvality') format('svg');
+        url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.svg#Ouvality') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
