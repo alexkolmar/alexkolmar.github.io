@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'a_OldTyper';
+    src: url('https://alexkolmar.github.io/fonts/a_OldTyper/AOldTyper.eot');
+    src: local('a_OldTyper'), local('AOldTyper'),
+        url('https://alexkolmar.github.io/fonts/a_OldTyper/AOldTyper.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/a_OldTyper/AOldTyper.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/a_OldTyper/AOldTyper.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/a_OldTyper/AOldTyper.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/a_OldTyper/AOldTyper.svg#a_OldTyper') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
