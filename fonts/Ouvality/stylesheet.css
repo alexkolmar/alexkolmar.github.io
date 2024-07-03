@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Ouvality';
     src: url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.eot');
-    src: local('Ouvality'),
-        url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.eot?#iefix') format('embedded-opentype'),
+    src: url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.eot?#iefix') format('embedded-opentype'),
         url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.woff2') format('woff2'),
         url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.woff') format('woff'),
         url('https://alexkolmar.github.io/fonts/Ouvality/Ouvality.ttf') format('truetype'),
