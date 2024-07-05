@@ -1,0 +1,68 @@
+<link rel="preconnect" href="https://alexkolmar.github.io">
+<link href="https://alexkolmar.github.io/fonts/a_OldTyper/stylesheet.css" rel="stylesheet">
+<link href="https://alexkolmar.github.io/fonts/Pobeda/stylesheet.css" rel="stylesheet">
+<link href="https://alexkolmar.github.io/fonts/Ouvality/stylesheet.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="tablica">
+    <div class="logo_top">Lights. Camera</div>
+    <div class="logo_bottom">action!</div>
+    <div class="tab_inner">
+        <div class="tab_left">
+            <div class="game_info">Какая-то информация о ролевой. Жанр, рейтинг, эпизоды</div>
+            <div class="news">
+                <div class="news_inner">
+                    <p><b>15.07</b> Мы открылись!</p>
+                    <p><b>10.07.</b> На форуме ведутся профилактические работы. Мы трудимся, чтобы улучшить игру для вас! Не переключайтесь!</p>
+                    <p><b>06.07</b> Какая-то информация.</p>
+                </div>
+            </div>
+            <div class="ams">
+                <a href="">Name Surname</a>
+                <a href="">Name Surname</a>
+                <a href="">Name Surname</a>
+            </div>
+            <div class="bestquote">
+                <a href="" title="Имя">
+                    <img src="">
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            </div>
+        </div>
+        <div class="tab_right">
+            <div class="wanted">
+                <div class="wanted1">
+                    <img src="">
+                    <div class="wanted_text">
+                        <a href="">Name</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+                <div class="wanted2">
+                    <img src="">
+                    <div class="wanted_text">
+                        <a href="">Name</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="spirit_nav-wrap">
+                <div class="nav_button">Важное <img src="https://forumstatic.ru/files/0016/01/4e/93740.png"></div>
+                <div class="nav_block">
+                    <div class="link">
+                        <a href="ссылка">правила</a>
+                        <a href="ссылка">фак</a>
+                        <a href="ссылка">роли</a>
+                        <a href="ссылка">акции</a>
+                        <a href="ссылка">мир</a>
+                        <a href="ссылка">связь</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

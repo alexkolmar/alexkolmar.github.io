@@ -1,0 +1,42 @@
+<!---Аватар у приветствия--->
+<script>$('#pun-status>p').prepend('<span class="status_userava"><img src="'+(window.UserAvatar?UserAvatar:'/i/default_avatar.jpg')+'"/></span>')</script>
+<!---конец---->
+
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/0016/01/4e/69207.svg"></div>
+<div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/0016/01/4e/64410.svg"></div>
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+
+
+<! -- скрипт навигации от духа --> 
+<script type="text/javascript" src="https://forumstatic.ru/files/001a/08/74/57494.js"></script>
+
+
+<!-- Анти-в-строчку для Сообщений и Репутации © deff -->
+<script type="text/javascript">
+function changeS(sc,ch,st){$(sc).parent().each(function(){$(this).html($(this).html().replace(ch,st));});}
+   changeS('.pa-posts','Сообщений:','<span class="material-symbols-outlined" title="Сообщения">mail</span></br>');
+   changeS('.pa-respect','Уважение</a>:','Уважение</a><br>');
+   changeS('.pa-respect','Уважение:','Уважение<br>');
+   changeS('.pa-fld3','посты:','<span class="material-symbols-outlined" title="Посты">edit_note</span>');
+   changeS('.pa-fld4','банк:','<span class="material-symbols-outlined" title="Банк">payments</span>');</script>
+
+<script type="text/javascript">
+  $('.pa-respect').attr('title','Репутация');
+</script>
