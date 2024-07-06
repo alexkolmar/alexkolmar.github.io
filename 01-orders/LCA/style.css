@@ -751,13 +751,13 @@ li#onlinelist {
   padding-right: 5px;
 }
 
-.wanted {
+.wantedblock {
   display: flex;
   gap: 30px;
   margin-top: 38px;
 }
 
-.wanted > div {
+.wanted {
   position: relative;
   width: 180px;
   height: 210px;
@@ -796,6 +796,10 @@ li#onlinelist {
   text-align: right;
   font: bold 20px/24px var(--pob);
   color: var(--link-hover);
+}
+
+.wanted a:hover {
+  color: var(--link);
 }
 
 .wanted p {
@@ -947,6 +951,11 @@ li#onlinelist {
   display: inline-block;
   width: 45px;
   margin-bottom: 10px;
+  color: var(--link-hover);
+}
+
+.pa-posts .fld-name, .pa-respect .fld-name, .pa-fld2 .fld-name, .pa-fld3 .fld-name {
+  color: var(--gray);
 }
 
 .pa-respect .fld-name, .pa-respect .fld-name a {
@@ -1481,3 +1490,90 @@ img.avatardemo {
   background: var(--beige);
   color: var(--link);
 }
+
+
+/* Иконки в форме ответа 
+-------------------------------------------------------------*/
+
+.punbb #main-reply {box-sizing: border-box;}
+.punbb #form-buttons table {width: 100%;}
+
+.punbb #form-buttons tr {
+display: flex;
+display: -webkit-flex;
+flex-wrap: wrap;
+-webkit-flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 0 5px;
+width: 100%;
+}
+
+#form-buttons td {
+background-image: none !important;
+position: relative;
+display: inline-block;
+width: 30px;
+height: 30px;
+}
+
+.punbb #form-buttons td img {
+width: 30px;
+height: 30px;
+}
+
+#form-buttons td:before {
+content: " ";
+font-family: 'Material Icons Outlined';
+font-size: 24px;
+color: var(--link);
+position: absolute;
+pointer-events: none;
+transition: all .5s linear 0s;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 0;
+top: 0;
+}
+
+#form-buttons td:hover:before {color: var(--link-hover);}
+
+/* Стандартные кнопки */
+
+td#button-font:before {content: "\e167";}
+td#button-size:before {content: "\e262";}
+td#button-bold:before {content: "\e238";}
+td#button-italic:before {content: "\e23f";}
+td#button-underline:before {content: "\e249";}
+td#button-strike:before {content: "\e257";}
+td#button-left:before {content: "\e236";}
+td#button-center:before {content: "\e234";}
+td#button-right:before {content: "\e237";}
+td#button-link:before {content: "\e157";}
+td#button-spoiler:before {content: "\e8f5";}
+td#button-spoiler:hover:before {content: "\e8f4";}
+td#button-image:before {content: "\e43e";}
+td#button-video:before {content: "\e070";}
+td#button-hide:before {content: "\e898";}
+td#button-hide:hover:before {content: "\e897";}
+td#button-quote:before {content: "\e8af";}
+td#button-code:before {content: "\e86f";}
+td#button-color:before {content: "\e40a";}
+td#button-table:before {content: "\e3ec";}
+td#button-smile:before {content: "\ea22";}
+td#button-keyboard:before {content: "\f028";}
+td#button-addition:before {content: "\ea20";}
+td#button-files_rusff:before {content: "\e2c7";}
+td#button-files_rusff:hover:before {content: "\e2c8";}
+td#button-graffiti_rusff:before {content: "\e3ae";}
+
+/* Дополнительные кнопки */
+
+td#button-indent:before {content: "\e23e";} /* тег абзаца */
+td#button-styles:before {content: "\e41d";} /* дополнительные стили */
+td#floatbut:before {content: "\efe0";} /* тег обтекания изображения от Romych */
+td#button-justify:before {content: "\e235";} /* тег выравнивания по ширине */
+td#button-mask:before {content: "\f218";} /* тег для скрипта ролевой маски от человека-шамана */
+td#button-sticker:before {content: "\e91d";} /* тег для дополнительных смайлов от человека-шамана */

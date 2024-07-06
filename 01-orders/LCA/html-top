@@ -34,22 +34,58 @@
             </div>
         </div>
         <div class="tab_right">
-            <div class="wanted">
-                <div class="wanted1">
-                    <img src="">
-                    <div class="wanted_text">
-                        <a href="">Name</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <style>#КонтентРотатор .wanted_wrap{display:none}</style>
+            <div id="КонтентРотатор"><!-- Ротатор произвольного контента -->
+                <div class="wanted_wrap">
+                    <div class="wantedblock">
+                        <div class="wanted">
+                            <img src="">
+                            <div class="wanted_text">
+                                <a href="">Name</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="wanted">
+                            <img src="">
+                            <div class="wanted_text">
+                                <a href="">Name</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="wanted2">
-                    <img src="">
-                    <div class="wanted_text">
-                        <a href="">Name</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                <div class="wanted_wrap">
+                    <div class="wantedblock">
+                        <div class="wanted">
+                            <img src="">
+                            <div class="wanted_text">
+                                <a href="">Name</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="wanted">
+                            <img src="">
+                            <div class="wanted_text">
+                                <a href="">Name</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <script type='text/javascript'>
+                function Rotator_cont(selek) {
+                    var s = 21600;  // Время отображения
+                    var N=$(selek).length;
+                    var i=Math.round(Math.random()*(N-1));Rotator(i);
+                    
+                    function Rotator(i) {
+                        $(selek).hide();$(selek).eq(i).show();i++;
+                        if(i>N-1){i=0};
+                        timerId01=setTimeout(function(){Rotator(i)},s);return;}
+                    
+                }Rotator_cont('#КонтентРотатор .wanted_wrap')
+            </script>
             <nav class="spirit_nav-wrap">
                 <div class="nav_button">Важное <img src="https://forumstatic.ru/files/0016/01/4e/93740.png"></div>
                 <div class="nav_block">
