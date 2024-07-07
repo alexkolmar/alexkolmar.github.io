@@ -1207,7 +1207,7 @@ fieldset {
 }
 
 fieldset legend {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 fieldset fieldset {
@@ -1491,6 +1491,18 @@ img.avatardemo {
   color: var(--link);
 }
 
+/* Счётчик символов
+-------------------------------------------------------------*/
+
+#plng {
+  border: 1px solid var(--silver);
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin-right: 10px;
+  font-family: var(--aot);
+  font-size: 11px;
+}
+
 
 /* Иконки в форме ответа 
 -------------------------------------------------------------*/
@@ -1577,3 +1589,100 @@ td#floatbut:before {content: "\efe0";} /* тег обтекания изобра
 td#button-justify:before {content: "\e235";} /* тег выравнивания по ширине */
 td#button-mask:before {content: "\f218";} /* тег для скрипта ролевой маски от человека-шамана */
 td#button-sticker:before {content: "\e91d";} /* тег для дополнительных смайлов от человека-шамана */
+
+/* Анкета */
+
+.quenta {
+  margin: 5px auto;
+  max-width: 600px;
+  width: 100%;
+  background: var(--light2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--silver);
+  border-radius: 30px;
+}
+
+.quenta h2 {
+  background: var(--beige);
+  border-radius: 30px 30px 0 0;
+  border-bottom: 1px solid var(--silver);
+  color: var(--link);
+}
+
+.quenta_top {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.q_pics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.q_pics img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.q_info li, .q_song {
+  font: normal 16px/24px var(--aot);
+  display: flex;
+}
+
+.q_info li::before, .q_song::before {
+  content: "";
+  margin-right: 10px;
+  font: normal 24px/24px 'material icons outlined';
+}
+
+.q_info li.date::before {
+  content: "\e7e9";
+}
+
+.q_info li.place::before {
+  content: "\e0c8";
+}
+
+.q_info li.occ::before {
+  content: "\e8f9";
+}
+
+.q_info li.mar::before {
+  content: "\e87d";
+}
+
+.q_info li.face::before {
+  content: "\e7fd";
+}
+
+.q_song {
+  margin: 0 auto 20px;
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  border-top: 1px solid var(--silver);
+  border-bottom: 1px solid var(--silver);
+}
+
+.q_song::before {
+  content: "\e405";
+}
+
+.bio {
+  padding: 0 20px 20px;
+  text-align: justify;
+}
+
+.bio p {
+  text-indent: 30px;
+}
