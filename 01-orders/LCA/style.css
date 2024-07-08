@@ -1632,12 +1632,12 @@ td#button-sticker:before {content: "\e91d";} /* тег для дополните
   flex-shrink: 0;
 }
 
-.q_info li, .q_song {
+.q_info li {
   font: normal 16px/24px var(--aot);
   display: flex;
 }
 
-.q_info li::before, .q_song::before {
+.q_info li::before {
   content: "";
   margin-right: 10px;
   font: normal 24px/24px 'material icons outlined';
@@ -1666,7 +1666,9 @@ td#button-sticker:before {content: "\e91d";} /* тег для дополните
 .q_song {
   margin: 0 auto 20px;
   padding: 10px;
+  display: flex;
   width: 90%;
+  font: normal 12px/20px var(--aot);
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -1676,6 +1678,8 @@ td#button-sticker:before {content: "\e91d";} /* тег для дополните
 
 .q_song::before {
   content: "\e405";
+  margin-right: 5px;
+  font: normal 16px/20px 'material icons outlined';
 }
 
 .bio {
@@ -1685,4 +1689,168 @@ td#button-sticker:before {content: "\e91d";} /* тег для дополните
 
 .bio p {
   text-indent: 30px;
+}
+
+/* Занятые внешности */
+
+.faceclaim {
+  margin: 5px auto;
+  width: 600px;
+  height: 500px;
+  background: var(--light2);
+  border: 1px solid var(--silver);
+  border-radius: 30px;
+}
+
+.fc_top, .occ_top {
+  padding: 0;
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(https://forumstatic.ru/files/0016/01/4e/13189.jpg?v=1) no-repeat top -90px center/100% auto;
+  border-radius: 30px 30px 0 0;
+  font: bold 50px/50px var(--pob);
+  box-sizing: border-box;
+  color: var(--light2);
+  text-shadow: -1px -1px #000;
+}
+
+.fc_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.fc_girls, .fc_boys {
+  max-width: 255px;
+  flex-grow: 1;
+  border: 1px solid var(--silver);
+  border-radius: 20px;
+  background: var(--light1);
+  box-sizing: border-box;
+}
+
+.fc_bottom h3 {
+  text-align: center;
+  background: var(--beige);
+  border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid var(--silver);
+  font: bold 20px/30px var(--pob);
+  color: var(--link-hover)
+}
+
+.fc_inner {
+  margin: 10px;
+  padding: 0 5px;
+  display: block;
+  height: 280px;
+  overflow: auto;
+  box-sizing: border-box;
+  font: normal 11px/14px verdana, sans-serif;
+  color: var(--gray);
+}
+
+.fc_inner h4, .occupation h4 {
+  border-top: 1px solid var(--silver);
+  border-bottom:  1px solid var(--silver);
+  text-align: center;
+  margin-bottom: 10px;
+  font: normal 14px/20px var(--aot);
+}
+
+.fc_inner h4:not(:first-of-type), .occupation h4:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.fc_inner p {
+  padding: 0;
+}
+
+/* Занятость */
+
+.occupation {
+  background: var(--light2);
+  width: 800px;
+  margin: 5px auto;
+  border-radius: 30px;
+  border: 1px solid var(--silver);
+  box-sizing: border-box;
+}
+
+.occ_info {
+  padding: 20px 30px 0;
+}
+
+.occupation .inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: fit-content;
+  height: 450px;
+  background: var(--color);
+  border: 1px solid var(--violet);
+}
+
+.occupation small {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.tabs {
+  position: relative;
+  width: 740px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab, .tab-title {
+  display: inline-block;
+}
+
+.tab input[type="radio"] {
+  display: none;
+}
+
+.tab-title {
+  padding: 5px 10px;
+  width: 210px;
+  background: var(--light1);
+  border: 1px solid var(--silver);
+  cursor: pointer;
+  line-height: 18px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+  font: normal 12px/16px var(--aot);
+}
+
+.tab-content {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 450px;
+  border: 1px solid var(--silver);
+  display: none;
+  box-sizing: border-box;
+  background: var(--light1);
+  border-radius: 20px;
+}
+
+.tab :checked + .tab-title {
+  position: relative;
+  background: var(--beige);
+  z-index: 1;
+}
+
+.tab :checked ~ .tab-content {
+  display: block;
 }

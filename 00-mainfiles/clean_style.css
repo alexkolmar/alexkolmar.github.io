@@ -156,6 +156,7 @@ em {
 .post_report,
 .post_reputation,
 #MyBookmarks,
+.inner.popup_graffiti,
 .pun-modal .modal-inner {
   background: var(--sec-bg);
 }
