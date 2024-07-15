@@ -1222,6 +1222,11 @@ li.pa-fld5, li.pa-fld5 details {width: 100%;}
 
   /* html
   -------------------------------------------------------------*/
+  
+  .fc_top, .occ_top {
+      background: url(https://forumstatic.ru/files/0016/01/4e/13189.jpg?v=1) no-repeat top center;
+      font: bold 10vw/15vw var(--pob);
+  }
 
   .quenta p, .fc_inner p, .occupation p {
     padding: 0 !important;
@@ -1231,11 +1236,15 @@ li.pa-fld5, li.pa-fld5 details {width: 100%;}
     width: auto;
   }
 
-.tab-nav {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .tab-nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tab-btn {
+    width: fit-content;
+  }
   
   /* Дополнительно
   -------------------------------------------------------------*/
