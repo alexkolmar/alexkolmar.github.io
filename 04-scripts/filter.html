@@ -1,0 +1,140 @@
+<style>
+
+    /* Список персонажей
+    -----------------------------------------------*/
+    
+    #occup * {margin: 0;}
+    
+    #occup {
+      position: relative;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      max-width: 750px;
+      height: auto;
+      margin: 5px 0;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: linen;
+      color: #000;
+      font: normal 12px/16px sans-serif;
+    }
+    
+    #occup span {
+      text-align: center;
+      font: bold 14px/16px sans-serif;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      width: 100%;
+      display: block;
+    }
+    
+    #occup > span  {
+      font: bold 16px/20px sans-serif;
+    }
+    
+    #occup a {
+      text-decoration: none;
+      font-weight: normal;
+    }
+    
+    #occup .inner {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    #occup .inner .chars-nav, #occup .inner .all-chars {
+      border: 1px solid currentColor;
+      margin: 0 5px;
+      box-sizing: border-box;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #occup .chars-nav {
+      width: 30%;
+    }
+    
+    #occup .chars-nav a {
+      width: fit-content;
+      cursor: pointer;
+    }
+    
+    #occup .chars-nav .current {font-weight: bold;}
+    
+    #occup .all-chars {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #occup ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    #occup .org {display: none;}
+    
+    #occup .org p {font: normal 12px/16px sans-serif;}
+    
+    </style>
+    
+    <div id="occup">
+        <span class="actitle">Список персонажей и занятость</span>
+        <div class="inner">
+            <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+            <!--фильтрация объектов по классу, адаптация by Alex Kolmar-->
+            <script type="text/javascript">
+                $(function() {
+                    var newSelection = "";
+                    $(".chars-nav a").click(function(){
+                        $(".all-chars").show();
+                        $(".chars-nav a").removeClass("current");
+                        $(this).addClass("current");
+                        newSelection = $(this).attr("rel");
+                        $(".char").not("."+newSelection).slideUp();
+                        $("."+newSelection).slideDown();
+                    });
+                });
+            </script>
+            <div class="chars-nav">
+                <span>Сфера деятельности</span>
+                <a rel="all" class="current">Все персонажи</a>
+                <a rel="edu">Образование</a>
+                <a rel="law">Органы правопорядка</a>
+                <a rel="med">Здравоохранение</a>
+                <a rel="cre">Творчество</a>
+                <a rel="other">Прочее</a>
+            </div>
+            <ul class="all-chars">
+                <li class="edu char org"><span>Образование</span>
+                    <div class="orgdescr">
+                        <p>Студенты, преподаватели, ученики, профессора - все, кто так или иначе даёт или получает знания в учебных заведениях.</p>
+                    </div>
+                </li>
+                <li class="law char org"><span>Органы правопорядка</span>
+                    <div class="orgdescr">
+                        <p>Их служба и опасна и трудна! Те, кто стоит на страже закона и порядка.</p>
+                    </div>
+                </li>
+                <li class="med char org"><span>Здравоохранение</span>
+                    <div class="orgdescr">
+                        <p>Во тьме ночной, при свете дня они борются за жизни, не жалея себя.</p>
+                    </div>
+                </li>
+                <li class="cre char org"><span>Творчество</span>
+                    <div class="orgdescr">
+                        <p>Самовыражение достойно уважения! Те, кто так или иначе пожелал заявить о себе миру.</p>
+                    </div>
+                </li>
+                <li class="edu other all char"><a href="">Taylor Noble, 22y.o.</a> - студентка, няня</li>
+                <li class="edu cre all char"><a href="">Archie Cooper, 20y.o.</a> - студент, рок-музыкант</li>
+                <li class="law all char"><a href="">John Fraser, 46y.o.</a> - сержант полиции</li>
+                <li class="cre edu all char"><a href="">Leon Matthews, 34y.o.</a> - журналист, преподаватель в университете</li>
+                <li class="law cre all char"><a href="">Eloise Simmons, 38y.o.</a> - детектив полиции, писательница</li>
+                <li class="med edu all char"><a href="">Charlotte Lewis, 51y.o.</a> - заведующая хирургическим отделением, преподаватель в университете</li>
+                <li class="cre all char"><a href="">Jocelyn Brosseau, 43y.o.</a> - художница</li>
+            </ul>
+        </div>
+    </div>
