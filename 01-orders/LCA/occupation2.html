@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Занятость</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style_cs.css">
+</head>
+
+<body>
+
+ <div class="occupation">
+  <div class="occ_top">
+   Занятость
+  </div>
+  <div class="occ_info">
+   <p>Здесь указаны места работы персонажей. Чтобы добавить вашего персонажа, заполните, пожалуйста, шаблон, указанный
+    ниже:</p>
+  </div>
+  <div class="inner tab" id="tab-1">
+   <div class="tab-nav">
+    <button type="button" class="tab-btn tab-btn-active" data-target-id="0">Закон и охрана порядка</button>
+    <button type="button" class="tab-btn" data-target-id="1">Политика</button>
+    <button type="button" class="tab-btn" data-target-id="2">Шоу-бизнес</button>
+    <button type="button" class="tab-btn" data-target-id="3">Медицина</button>
+   </div>
+   <div class="tab-content">
+    <div class="tab-pane tab-pane-show" data-id="0">
+     <div class="tab-wrap">
+      <h4>Полицейский участок №4</h4>
+      <small>Здесь какое-то описание</small>
+      <p><a href="">Имя фамилия</a> - детектив</p>
+      <p><a href="">Имя фамилия</a> - сержант</p>
+     </div>
+    </div>
+    <div class="tab-pane" data-id="1">
+     <div class="tab-wrap">Содержимое 2...</div>
+    </div>
+    <div class="tab-pane" data-id="2">
+     <div class="tab-wrap">
+      <h4>Кинематограф</h4>
+      <small>Здесь какое-то описание</small>
+      <p><a href="">Имя фамилия</a> - режиссёр</p>
+      <p><a href="">Имя фамилия</a> - продюсер</p>
+      <p><a href="">Имя фамилия</a> - актёр</p>
+      <p><a href="">Имя фамилия</a> - актриса</p>
+      <h4>Музыка</h4>
+      <small>Здесь какое-то описание</small>
+      <p><a href="">Имя фамилия</a> - директор звукозаписывающей компании</p>
+      <p><a href="">Имя фамилия</a> - продюсер</p>
+      <p><a href="">Имя фамилия</a> - певец</p>
+      <p><a href="">Имя фамилия</a> - рок-музыкант</p>
+      <p><a href="">Имя фамилия</a> - скрипачка</p>
+      <h4>Спорт</h4>
+      <small>Здесь какое-то описание</small>
+      <p><a href="">Имя фамилия</a> - футбольный тренер</p>
+      <p><a href="">Имя фамилия</a> - президент хоккейного клуба</p>
+      <p><a href="">Имя фамилия</a> - футболист</p>
+      <p><a href="">Имя фамилия</a> - хоккеист</p>
+     </div>
+    </div>
+    <div class="tab-pane" data-id="3">
+     <div class="tab-wrap">Содержимое 4...</div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+<script>
+ const showTab = (elTabBtn) => {
+  const elTab = elTabBtn.closest('.tab');
+  if (elTabBtn.classList.contains('tab-btn-active')) {
+    return;
+  }
+  const targetId = elTabBtn.dataset.targetId;
+  const elTabPane = elTab.querySelector(`.tab-pane[data-id="${targetId}"]`);
+  if (elTabPane) {
+    const elTabBtnActive = elTab.querySelector('.tab-btn-active');
+    elTabBtnActive.classList.remove('tab-btn-active');
+    const elTabPaneShow = elTab.querySelector('.tab-pane-show');
+    elTabPaneShow.classList.remove('tab-pane-show');
+    elTabBtn.classList.add('tab-btn-active');
+    elTabPane.classList.add('tab-pane-show');
+  }
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target && !e.target.closest('.tab-btn')) {
+    return;
+  }
+  const elTabBtn = e.target.closest('.tab-btn');
+  showTab(elTabBtn);
+});
+</script>
+
+</body>
+
+</html>
