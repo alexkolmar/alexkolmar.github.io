@@ -1,0 +1,108 @@
+<! -- скрипт навигации от духа --> 
+<script type="text/javascript" src="https://forumstatic.ru/files/001a/08/74/57494.js"></script>
+
+
+<!-- Ивент-календарь, вкладки и слайдеры в постах © ForumD.ru | Gerda -->
+<script>
+//скорость анимации слайдера
+var fdksTime = '800';
+
+//кнопки слайдера
+var fdksArrows = 'always'; //стрелки (always - показывать, never - скрыть)
+var fdksBullets = 'always'; //буллеты: кружки по количества слайдов (always - показывать, never - скрыть)
+var fdksPlayStop = 'true'; //кнопка включения/выключения слайдшоу (true - показывать, false - скрыть)
+var fdksPlay = 'Включить слайдшоу'; //текст кнопки включения слайдшоу
+var fdksStop = 'Отключить слайдшоу'; //текст кнопки отключения слайдшоу
+
+//автопроигрывание слайдера
+var fdksAutoPlay = 'false';  //включить/отключить (true - включить, false - отключить)
+var fdksHoverStop = 'true'; //останавка при наведении курсора (true - останавливать, false - не останавливать)
+var fdksAutoTime = '400'; //скорость показа следующего слайда
+
+//направление прокрутки слайдов: toRight - направо, toLeft - налево, toTop - наверх, toBottom - вниз
+var fdksNext = 'toLeft'; //следующий
+var fdksPrev = 'toRight'; //предыдущий
+
+</script>
+<script type="text/javascript" src="https://forumstatic.ru/files/001b/de/5c/19321.js"></script>
+
+
+<!-- Кнопки вверх-вниз © Домовой -->
+<div class="go-up" id='ToTop'><div class="inside"><img src="/files/001a/fc/45/61081.svg"></div></div>
+<div class="go-down" id='OnBottom'><div class="inside"><img src="/files/001a/fc/45/61081.svg"></div></div>
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("fast")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("fast")
+  else $("#ToTop").fadeIn("fast")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("fast")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("fast")
+  else $("#OnBottom").fadeIn("fast")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"fast")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"fast")})
+});
+</script>
+
+
+<script type="text/javascript" >
+  $('.pa-respect').attr('title','Репутация');
+</script>
+
+
+<script><!--Универсальный скрипт замены. -->
+function UniverСhange(selektor,changed,substitute){
+$(selektor).each(function(){if ($(this).parent().html()!=null){if($(this).parent().html().indexOf(changed)!=-1){
+$(this).parent().html($(this).parent().html().replace(changed,substitute));};};});}
+
+UniverСhange("li.item1 span","Всего тем:","Тем:"); 
+UniverСhange("li.item2 span","Всего сообщений:","Сообщений:"); 
+UniverСhange("li.item3 span","Зарегистрированных пользователей:","Пришедших:"); 
+UniverСhange("li.item4 span","Последним зарегистрировался:","Последним пришел:"); 
+UniverСhange("#pun-stats h2","Статистика форума","Statistic"); 
+UniverСhange("#onlinelist a","Активны","На месте"); 
+UniverСhange("#onlinelist a","Посетили за сутки","Были сегодня"); 
+UniverСhange("#pun-status .item1","Привет, Гость!","Поиграем, Гость?"); 
+UniverСhange("#pun-status .item1","Привет,","С возвращением,"); 
+UniverСhange("#pun-status .item2","Ваш последний визит:","Вас видели"); 
+UniverСhange("li#navindex","Форум","Материя"); 
+UniverСhange("li#navuserlist","Участники","Жители"); 
+UniverСhange("li#navlogin","Войти","вход"); 
+
+UniverСhange("li#navpm","Сообщения","Почта"); 
+UniverСhange("li#navadmin","Администрирование","Амс"); 
+
+UniverСhange('.pa-posts','Сообщений:','<i class="fa-solid fa-message" title="Сообщений"></i>'); 
+UniverСhange('.pa-respect','Уважение</a>:','<i class="fa-solid fa-star"></i></a>'); 
+UniverСhange('.pa-respect','Уважение:','<i class="fa-solid fa-star""></i>'); 
+UniverСhange('.pa-fld5','посты:','<i class="fa-solid fa-feather" title="Посты"></i>'); 
+</script>
+
+
+<!-- КАТЕГОРИИ -->
+<script>
+$(function (){ 
+$( "<q>Всматриваясь все больше в движения его лица я все чаще ловила себя на мысли, что вероятно, мы знакомы. Однако, не стала ломать голову над этой загадкой, при дворе было предостаточно красивых кавалеров, всех и не упомнить (c) Элиана Морца</q>").insertAfter( ".category.category-1 h2 span" );
+
+$( "<q>Столица по укладу жизни напоминала бесконечный праздник, меняющий одни роскошные интерьеры на другие. Из одной резиденции в другую. От одного повода к другому, а иногда вообще без повода. (с) Николас Арманд Эйвиос</q>" ).insertAfter( ".category.category-2 h2 span" );
+
+$( "<q>Запах духов чуть усиливается, дразнит, становится более мягким, тягучим, приятно обволакивающим. Он снова вызовет фантазии? Какие? Быть может, чётче обрисует облик мужчины, который играет в них главную роль? Добавит в сцену столь желанные пикантные нотки? (с) Изабель Леруа</q>" ).insertAfter( ".category.category-3 h2 span" );
+
+$( "<q>Пару дней назад, Академию посетили работники Красного Дома. Что не удивительно, этим нордическим мужчинам часто нужна консультация таких специалистов как мы. Давно говорил им: заведите механиков в штат и не мучайтесь - Но они только и могут что таращить свои глаза и быть красивыми. (с) Фердинанд Лайт</q>" ).insertAfter( ".category.category-4 h2 span" );
+
+$( "<q>Он долго был работником Красного дома, а это отражается на улыбке самым скверным образом.(с) Мелос-Рат </q>" ).insertAfter( ".category.category-5 h2 span" );
+
+$( "<q> Этикет  отставлен в сторону, но это не значит, что на его место проникла хоть капля искренности.(с) Дарий Аэрас </q>" ).insertAfter( ".category.category-6 h2 span" );
+
+$( "<q>семь Нельзя прожить свою жизнь для других. Надо выбрать то, что нужно именно тебе, даже если это не понравится твоим близким. </q>" ).insertAfter( ".category.category-7 h2 span" );
+});
+  </script>
+
+
+<!--Отключить функцию "Поделиться"-->
+<script type="text/javascript">
+RusffCore.sets.share = false;
+</script>
