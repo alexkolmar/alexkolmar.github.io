@@ -1723,6 +1723,8 @@ margin: 0 0 10px 0;
     text-align: justify;
 }
 
+.guest-container a {color: #e5d584c7;}
+
 .guest-occupied {
     display: flex;
     justify-content: space-between;
@@ -1782,13 +1784,13 @@ margin: 0 0 10px 0;
     text-shadow: 0px 0px 1px #8181788f;
     font-family: 'Beaufort';
     font-size: 12px;
-    color: var(--body);
+    color: #d7d8d0;
     background: #7c4848;
     border: 1px solid #ada268;
 }
 
 .letter {
-    background: url(http://forumstatic.ru/files/001b/6f/93/31361.jpg) top left no-repeat;
+    background: url(https://forumstatic.ru/files/001b/6f/93/31361.jpg) top left no-repeat;
     box-shadow: 0 1px 4px rgb(0 0 0 / 10%), -20px 0 20px -23px rgb(0 0 0 / 20%), 20px 0 20px -23px rgb(0 0 0 / 20%), 0px 0px 0px 1px #9f9f965c inset;
     transform: rotate(0.4deg);
     padding: 12px 20px;
@@ -1877,7 +1879,7 @@ margin: 0 0 10px 0;
 }
 
 .title-cart {
-    background: url(http://forumstatic.ru/files/001b/6f/93/44168.jpg);
+    background: url(https://forumstatic.ru/files/001b/6f/93/44168.jpg);
     display: flex;
     align-items: center;
     position: relative;
@@ -2020,7 +2022,7 @@ margin: 0 0 10px 0;
 }
 
 .individual .episode-title {color: #c1b46c}
-.individual .episode-char {color: var(--body);}
+.individual .episode-char {color: #d7d8d0;}
 
 .individual .sh-item {
     border: 1px solid #c7c6be;
@@ -2101,27 +2103,26 @@ position: relative;
 }
 
 .kelendar .item {
-color: #000;
-box-shadow: 0px 0px 6px #b7b7b766, 0px 0px 10px #5e5e5c38 inset;
-background: #e6e6e6;
-border: 1px solid #b5b5b5;
+    background: #cbcac2;
+    border: 1px solid #b7a275;
+    box-shadow: 0px 0px 10px #1f232617, 0px 0px 20px inset #bbb8a082;
 }
 .kelendar .item.action {
-background: #eee390;
-border: 1px solid #ccb718;
-transition: all 1s;
--webkit-transition: all 1s;
-cursor: pointer;
+    background: #7c4848;
+    color: #e5d584c7;
+    border: 1px solid #ada268;
+    box-shadow: 0px 0px 10px #95978d69;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    cursor: pointer;
 }
 .kelendar .item.action:hover {
-background: #000;
-border: 1px solid #000;
+    border: 1px solid #85836c;
+    background: #1f2426;
+    border-radius: 2px;
+    color: #b4b4ac;
 }
-.kelendar .item.action .date {
-color: #800808;
-font-weight: bold;
-}
-.kelendar .item.action:hover .date {color: #fff;}
+.kelendar .item.action .date {font-weight: bold;}
 .kelendar .item.empty {opacity: 0.35; color: #626262;}
 .kelendar .date {
 padding: 0 0 0 10px;
@@ -2149,9 +2150,10 @@ vertical-align: top;
     overflow-y: auto;
     cursor: default;
     z-index: 999;
-    box-shadow: 0px 0px 6px #b7b7b766, 0px 0px 10px #5e5e5c38 inset;
-    background: var(--bg);
-    border: var(--border100);
+    border: 1px solid #85836c;
+    background: #1f2426;
+    border-radius: 2px;
+    color: #b4b4ac;
 }
 
 .kelendar .event.show {visibility: visible; opacity: 1;}
@@ -2160,10 +2162,9 @@ vertical-align: top;
     cursor: pointer;
     position: absolute;
     top: -5px;
-    left: 0px;
+    right: 0px;
     padding: 10px;
-    background: var(--link);
-    color: var(--bg-green);
+    background: #1f2426;
     font-weight: bold;
 }
 
@@ -2260,8 +2261,6 @@ transition: all 0.8s;
 
 .kelendar.tab .date {padding: 0;}
 .kelendar.tab .item.action {display: inline-block; vertical-align: top;}
-.kelendar.tab .item.action .event {color: #000;}
-.kelendar.tab .item.action:hover {color: #fff;}
 
 .kelendar.tags {display:block;}
 .kelendar .popup {cursor: alias;text-decoration-line: underline;position: relative;}
@@ -2634,16 +2633,15 @@ p[class="checkfield"] img, div[class="checkfield"] img, fieldset[class="radiofie
   content: '\00a0';
 }
 
-
-@font-face {
-  font-family: 'mybb';
-  src: url('./res/font/icons.woff2?3') format('woff2'),
-       url('./res/font/icons.woff?3') format('woff'),
-       url('./res/font/icons.ttf') format('truetype'),
-       url('./res/font/icons.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+    @font-face {
+      font-family: 'mybb';
+      src: url('https://mojudesign.mybb.ru/style/res/font/icons.woff2?3') format('woff2'),
+           url('https://mojudesign.mybb.ru/style/res/font/icons.woff?3') format('woff'),
+           url('https://mojudesign.mybb.ru/style/res/font/icons.ttf') format('truetype'),
+           url('https://mojudesign.mybb.ru/style/res/font/icons.svg') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
 i[class^="icons-"]:before, i[class*=" icons-"]:before, .i[class*=" icons-"]:before, .i[class^="icons-"] {
   font-family: "mybb";
   font-style: normal;
