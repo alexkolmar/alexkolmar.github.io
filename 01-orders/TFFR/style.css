@@ -3,6 +3,10 @@
 /* Иконический шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
 
+
+/* Font Awesome */
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap');
@@ -213,10 +217,6 @@
 
 :root {
   --body-bg: Burlywood;
-  --pun-bg: ivory;
-  --sec-bg: cornsilk;
-  --link: darkgoldenrod;
-  --link-hover: goldenrod;
   --bckgrnd-color: #182037;
   --pun-color: #ddd6d0;
   --pun-color-border: #a8a7af36;
@@ -236,7 +236,6 @@
   --base-font-accent: 'Coco';
   --pwidth: 248px;
   --padding: 10px 70px;
-  --tpad: 5px 20px;
   --mpad: 5px 10px;
   --star: url(https://i.vgy.me/qfiiB8.png);
   --pun-up: url(https://forumstatic.ru/files/001b/1b/16/62966.png);
@@ -257,24 +256,37 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scrollbar-width: thin;
-  scrollbar-color: var() var();
+  scrollbar-color: var(--font-accent-color) var(--pun-color);
 }
 
-*::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+/*СКРОЛЛБАР*/
+
+::-webkit-scrollbar {
+	width: 9px;
+	height: 9px;
 }
 
-*::-webkit-scrollbar-track {
-  background-color: var();
+::-webkit-scrollbar-track {
+	background-color: var(--pun-color);
+
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: var();
+::-webkit-scrollbar-thumb {
+	background-color: var(--font-accent-color);
 }
 
-*::-webkit-scrollbar-thumb:active {
-  background: var();
+/*ВЫДЕЛЕНИЕ ТЕКСТА */
+
+::selection {
+	background: none repeat scroll 0 0 var(--font-accent-color);
+	color: var(--pun-color);
+	opacity: 1;
+}
+
+*::-moz-selection {
+	background: none repeat scroll 0 0 var(--font-accent-color);
+	color: var(--pun-color);
+	opacity: 1;
 }
 
 :focus {
@@ -343,12 +355,26 @@ em {
 #MyBookmarks,
 .inner.popup_graffiti,
 .pun-modal .modal-inner {
-  background: var(--sec-bg);
+  border: solid 1px var(--pun-color-border);
+  background-color: var(--under-forum);
 }
 
 #tags .container {
   padding: var(--mpad) !important;
   top: 0 !important;
+  max-height: 250px;
+}
+
+#tags #addition-area.container {
+  max-height: unset;
+}
+
+#tags #font-area.container {
+  width: 600px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* ОФОРМЛЕНИЕ КНОПОК
@@ -418,7 +444,8 @@ select {
 ------------------------------------------*/
 
 html {
-  background: var(--body-bg) url() no-repeat top center;
+  background: var(--font-accent-two-color);
+  scrollbar-color: var(--font-color-table) var(--bckgrnd-color);
 }
 
 body::before {
@@ -726,8 +753,6 @@ tr.iclosed div.icon {
   box-sizing: border-box;
 }
 
-.linkst .pagelink {}
-
 .linksb .pagelink {
   order: -1;
 }
@@ -953,6 +978,7 @@ li#onlinelist {
   padding:20px 38px 15px;
   box-sizing: border-box;
   color: var(--font-color-table);
+  justify-content: space-between;
 }
 
 .tab_left, .tab_right {
@@ -967,6 +993,7 @@ li#onlinelist {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .tablica .sslka {
@@ -1136,8 +1163,6 @@ li#onlinelist {
 #pun-title .title-logo {
   display: none;
 }
-
-.tablica {}
 
 
 /* Футер
@@ -1355,7 +1380,7 @@ li.pa-online {
 }
 
 .post-box {
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
 }
 
 .post-links {
@@ -1416,6 +1441,18 @@ pre {
   text-decoration: underline;
 }
 
+.punbb .post-content del {
+	filter: blur(1px);
+	text-decoration: none;
+	transition: all 1s cubic-bezier(0.2, 0.2, 0.2, 1), color 0.5s 0.2s linear;
+	opacity: .5;
+}
+
+.punbb .post-content del:hover {
+	filter: blur(0px);
+	opacity: 1;
+}
+
 .post-content p {
   margin: 0;
   padding: 0 0 12px 0;
@@ -1465,9 +1502,10 @@ pre {
 }
 
 .post-sig dt {
-  border-bottom: 1px solid #ccc;
-  width: 300px;
-  margin: 10px auto;
+  display: block;
+  border-top: 1px solid var(--back-tr-border);
+  margin-top: 15px;
+  margin-bottom: 7px;
 }
 
 /* Форма ответа */
@@ -1949,13 +1987,11 @@ img.avatardemo {
 }
 
 #left-panel .content-L {
-	padding: 2px;
-	width: 300px;
-	height: 536px;
-	margin-left: 26px;
-	position: absolute;
-	font-size: 15px;
-	margin-top: 65px;
+  width: 350px;
+  position: absolute;
+  font-size: 15px;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 #left-panel td {
@@ -1964,17 +2000,277 @@ img.avatardemo {
 	padding: 5px;
 }
 
-#left-panel .header>h2 {
+#left-panel .header > h2 {
+  margin-bottom: 10px;
+  padding: 0;
+  display: block;
+  color: var(--font-accent-color);
+  font-family: "Ostrovsky";
+  text-transform: uppercase;
+  font-size: 19px;
+  text-align: left;
+  letter-spacing: -0.5px;
+}
+
+/* Hotkeys by max, the murderer! и бла бла бла */
+
+
+.tooltip_extra {
+	opacity: .38;
+	margin-left: 6px !important;
+	transition: all .2s ease;
+}
+
+#addition-area div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#hotkeys_wrap {
+	background: var(--bckgrnd-color);
+	border-top: 1px solid rgb(255 255 255 / .12);
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 32px 0;
+	display: none;
+	color: rgb(255 255 255 / .87);
+}
+
+#hotkeys {
+	width: 1096px;
+	margin: 0 auto;
+	padding: 0 80px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+#hotkeys .column {
+	width: 100%;
+}
+
+#hotkeys .column:not(:last-child) {
+	padding-right: 64px;
+}
+
+#hotkeys .item {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 0;
+	margin: 0 4px 6px 0;
+}
+
+#hotkeys .item:last-of-type {
+    display: none;
+}
+
+#hotkeys .tooltip_extra {
+    opacity: .6;
+}
+
+#hotkeys p {
+	display: inline-block;
+	font: bold 16px 'Inter', verdana, sans-serif;
+	margin-bottom: 16px;
+	padding: 2px 8px;
+	background: rgb(255 255 255 / .87);
+	color: rgb(18 18 18 / 1);
+	border-radius: 4px;
+	border: 2px solid rgb(18 18 18 / 1);
+	box-shadow: 2px 3px 0 rgb(255 255 255 / .87);
+	transition: all .2s ease;
+}
+
+#hotkeys p:hover {
+	box-shadow: 0 0 0 rgb(255 255 255 / .87);
+	transform: translate(2px, 3px);
+	cursor: default;
+}
+
+.hotkeys_help {
+	position: relative;
+	top: 0;
+	right: 0px;
+	padding: 0px 0px !important;
+	transition: all .2s ease;
+	font: 400 11px 'Inter', sans-serif;
+	margin-top: -28px !important;
+	margin-bottom: 1em !important;
+	float: right;
+	width: 181.89px;
+	opacity: 0.5;
+	margin-right: 250px !important;
+}
+
+button.button.hotkeys_help {
 	position: absolute;
+	top: 3px;
+	right: 0px;
+	padding: 0px 0px !important;
+	transition: all .2s ease;
+	font: 400 11px 'Inter', sans-serif;
+	margin-bottom: 1em !important;
+	float: right;
+	width: 170px;
+	opacity: 0.5;
+	margin-right: 215px !important;
+	padding: 5px 0px !important;
+}
+
+.hotkeys_help:hover .tooltip_extra {
+	opacity: 1;
+	color: rgb(255 255 255 / .87);
+}
+
+
+/* Иконки в форме ответа 
+-------------------------------------------------------------*/
+
+.punbb #main-reply {box-sizing: border-box;}
+.punbb #form-buttons table {width: 100%;}
+
+.punbb #form-buttons tr {
+display: flex;
+display: -webkit-flex;
+flex-wrap: wrap;
+-webkit-flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 0 5px;
+width: 100%;
+}
+
+#form-buttons td {
+background-image: none !important;
+position: relative;
+display: inline-block;
+width: 30px;
+height: 30px;
+}
+
+.punbb #form-buttons td img {
+width: 30px;
+height: 30px;
+}
+
+#form-buttons td:before {
+content: " ";
+font-family: "Font Awesome 5 Free";
+font-size: 15px;
+color: var(--font-accent-color-buttons);
+font-weight: 700;
+position: absolute;
+pointer-events: none;
+transition: all .5s linear 0s;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 0;
+top: 0;
+}
+
+#form-buttons td:hover:before {color: #535e60;}
+
+/* Стандартные кнопки */
+
+td#button-font:before {content: "\f031";}
+td#button-size:before {content: "\f034";}
+td#button-bold:before {content: "\f032";}
+td#button-italic:before {content: "\f033";}
+td#button-underline:before {content: "\f0cd";}
+td#button-strike:before {content: "\f0cc";}
+td#button-left:before {content: "\f036";}
+td#button-center:before {content: "\f037";}
+td#button-right:before {content: "\f038";}
+td#button-link:before {content: "\f0c1";}
+td#button-spoiler:before {content: '\f518';}
+td#button-image:before {content: "\f302";}
+td#button-video:before {content: "\f144";}
+td#button-hide:before {content: "\f070";}
+td#button-quote:before {content: "\f27a";}
+td#button-code:before {content: "\f121";}
+td#button-color:before {content: "\f53f";}
+td#button-table:before {content: "\f0ce";}
+td#button-smile:before {content: "\f59a";}
+td#button-keyboard:before {content: "\f11c";}
+td#button-addition:before {content: "\f150";}
+td#button-files_rusff:before {content: "\f07b";}
+td#button-files_rusff:hover:before {content: "\f07c";}
+td#button-graffiti_rusff:before {content: "\f5bd";}
+
+/* Дополнительные кнопки */
+
+td#button-indent:before {content: "\f03c";} /* тег абзаца */
+td#button-styles:before {content: "\f1de";} /* дополнительные стили */
+td#floatbut:before {content: "\f1ea";} /* тег обтекания изображения от Romych */
+td#button-justify:before {content: "\f039";} /* тег выравнивания по ширине */
+td#button-mask:before {content: "\f630";} /* тег для скрипта ролевой маски от человека-шамана */
+td#button-sticker:before {content: "\f005";} /* тег для дополнительных смайлов от человека-шамана */
+td#button-dice::before {content: '\f523';} /* дайсы */
+td#AutoBorder_menu::before {content: '\f5fd';} /* доп. теги */
+
+#form-buttons #button-image b p {
+  top: 6px;
+  right: 0;
+  color: rgb(19, 19, 19);
+  margin: 0 !important;
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+/*СТРЕЛКИ*/
+
+.go-up,
+.go-down {
 	display: block;
-	height: 60px;
-	color: var(--font-accent-color);
-	border-bottom: none;
-	font-family: "Ostrovsky";
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 19px;
-	top: -29px;
-	left: -35px;
-	width: 267px;
+	position: fixed; /*позиционируем*/
+	width: 120px; /*ширина кнопки*/
+	height: 266px; /*высота кнопки*/
+	margin-left: 1100px !important;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	opacity: .7; /*прозрачность*/
+	z-index: 9999; /*показываем поверх всех элементов на странице*/
+	background-image: url(https://i.vgy.me/uHC6Fq.png);
+	scale: .8;
+}
+
+.go-up:hover,
+.go-down:hover {
+	transition: opacity 0.8s ease-out;
+	opacity: 1; /*эффект при наведении*/
+}
+
+.go-up {
+	top: 100px;
+	background-position: top;
+}
+
+.go-down {
+	background-position: bottom;
+	top: 310px;
+}
+
+/* Скрытие профиля в теме тегом */
+
+.hideprofile .post-author,
+.hideprofile .pl-email,
+.hideprofile .pl-website {
+  display: none !important
+}
+
+.hideprofile .post-body,
+.hideprofile .post-links,
+.hideprofile .post-links ul,
+.post.hideprofile h3 {
+  margin-left: 0 !important;
+  width: 100%;
 }
