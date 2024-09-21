@@ -33,7 +33,7 @@
   
   #html-header {order: initial;}
   #pun-title {order: initial;}
-  #pun-navlinks {order: -1;}
+  #pun-navlinks {order: initial;}
   #pun-ulinks {order: initial;}
   #pun-status {order: initial;}
   #pun-crumbs1 {order: initial;}
@@ -45,8 +45,8 @@
   
   /* Основные настройки содержимого*/
   
-  .punbb > div .container {
-    padding: 5px 10px !important;
+  .punbb > div > .container {
+    padding: 5px 10px;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
@@ -72,7 +72,7 @@
   
   
   #pun-navlinks {
-  /*  position: fixed; */
+    position: fixed;
     top: 0;
     width: 100%;
     box-sizing: border-box;
@@ -87,10 +87,10 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     box-sizing: border-box;
-    padding: 0 !important;
+    padding: 0 50px 0 0 !important;
     background: gainsboro;
   }
   
@@ -108,7 +108,7 @@
   
   #pun-navlinks li a:after, #pun-ulinks:after  {
     content: "";
-    font: normal 36px/100% 'Material Icons Outlined';
+    font: normal 36px/40px 'Material Icons Outlined';
   }
   
   #pun-navlinks li#navindex a:after {content: "\e88a";}
@@ -144,13 +144,15 @@
   -------------------------------------------------------------*/
   
   #pun-ulinks {
+    position: fixed;
+    top: 0;
+    right: 0;
     display: block;
-    width: 50px;
-    height: 50px;
-    margin: 0 0 0 auto;
-    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px 0 auto;
     border: none;
-    z-index: 90;
+    z-index: 110;
   }
   
   #pun-ulinks:after {
@@ -159,14 +161,13 @@
     display: block;
     width: 100%;
     height: 100%;
-    font: normal 48px/50px 'Material Icons Outlined';
     text-align: center;
     cursor: pointer;
   }
   
   #pun-ulinks .container {
       padding: 0;
-      margin: 0;
+      margin: 0 -5px 0 0;
       height: auto;
       border: none ;
       text-align: left;
@@ -179,7 +180,7 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
       z-index: 100;
       position: absolute;
-      top: 50px;
+      top: 40px;
       right: 0;
   }
   
@@ -219,6 +220,15 @@
   }
   
   .punbb .container.crumbs {display: block;}
+
+
+  /* Футер
+  -------------------------------------------------------------*/
+
+  /* Копирайт */
+  #pun-about .container {
+    justify-content: center;
+  }
   
   
   /* Главная форумная таблица
@@ -264,14 +274,21 @@
     width: 100%;
   }
   
-  .punbb .tclcon {
-  padding-right: 55px;
-  flex-grow: 1;
+ .punbb .tclcon {
+    padding-right: 30px;
+    flex-grow: 1;
   }
   
   .punbb div.icon {
     position: relative;
     order: 2;
+    flex-shrink: 0;
+  }
+
+  #pun-index div.icon {
+    position: absolute;
+    right: 10px;
+    margin: 0;
   }
   
   .punbb .main .tc2, .punbb .main .tc3, #pun-searchtopics .main .tc2, #pun-searchtopics .main .tc3 {
@@ -329,7 +346,7 @@
   .punbb .linkst {padding: 5px 10px;}
   
   /* Меню модератора */
-  .punbb .modmenu .container span {flex-grow: 1;}
+  .punbb .modmenu .container  {gap: 5px;}
   
   /* Нижние ссылки в топике и списках тем */
   .punbb .linksb {
@@ -826,17 +843,9 @@
   /* Отключение закругления текстовых полей в Safari */
   
   button, input.button, input[type="text"], input[type="password"], select {
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border: 1px solid #8f8f9d;
     appearance: auto;
     -webkit-appearance: none;
     -moz-appearance: auto;
-    background: #e9e9ed;
-    color: currentColor;
-    padding: 2px 5px;
   }
-  
-  button:hover, input.button:hover {background: silver;}
   
   }
