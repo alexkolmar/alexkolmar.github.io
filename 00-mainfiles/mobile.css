@@ -3,6 +3,7 @@
 
 /*****************************
 ---------- МОБИЛЬНЫЙ СТИЛЬ ----------
+------- by Alex Kolmar (бродяга) -------
 *****************************/
 
 @media screen and (max-width: 540px) {
@@ -341,12 +342,39 @@
   
   /* Темы и страницы
   -------------------------------------------------------------*/
+
+  #pun-searchposts .post h3 span {
+    justify-content: flex-start;
+    gap: 0 10px;
+  }
   
   /* Верхние ссылки в топике и списках тем */
   .punbb .linkst {padding: 5px 10px;}
   
   /* Меню модератора */
-  .punbb .modmenu .container  {gap: 5px;}
+  .punbb .modmenu .container {
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #topic-users-in .container {
+    justify-content: flex-start;
+  }
+
+  .punbb .modmenu .container:after {
+    display: none;
+  }
+
+  .punbb .modmenu strong, .punbb .modmenu a {height: initial;}
+  
+  #pun-viewforum .modmenu .container strong a {font-size: 0;}
+  
+  #pun-viewforum .modmenu .container strong a:after {
+  content: "Действия с темами";
+  font-size: initial;
+  }
   
   /* Нижние ссылки в топике и списках тем */
   .punbb .linksb {
@@ -374,27 +402,18 @@
   }
   
   .punbb .postlink.long {width: auto;}
-  
-  .punbb .modmenu strong, .punbb .modmenu a {height: initial;}
-  
-  #pun-viewforum .modmenu .container strong a {font-size: 0;}
-  
-  #pun-viewforum .modmenu .container strong a:after {
-  content: "Действия с темами";
-  font-size: initial;
-  }
 
   #pun-admain #tag-filter-container {
     margin-bottom: 10px;
   }
 
-  .punbb .per-page-select {
+  .punbb .per-page-select, #profile10 .submitend .pagelink {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
   }
 
-  .punbb .per-page-select .page-container {flex-grow: 1;}
+  .punbb .per-page-select .page-container, .files-pagelink {flex-grow: 1;}
   
   /* Список пользователей
   -------------------------------------------------------------*/
@@ -414,7 +433,10 @@
   -------------------------------------------------------------*/
   
   /* Пост */
-  .punbb .post {margin: 0;}
+  .punbb .post {
+    margin: 0;
+    scroll-margin-top: 40px;
+  }
   
   /* Дата поста */
   .punbb .post h3 {
@@ -651,8 +673,8 @@
   #viewprofile-next #profilenav {display: none;}
   
   #viewprofile ul, #profilenav ul {
-    padding: 0 5px;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 10px;
   }
   
   #viewprofile tr {flex-direction: column;}
@@ -708,12 +730,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px 10px;
   }
   
   #profilenav li {
     padding: 0;
-    font-weight: bold;
-    width: 50%;
     box-sizing: border-box;
   }
   
@@ -822,7 +843,7 @@
   /* Админка
   -------------------------------------------------------------*/
 
-  .punbb-admin * {
+  .punbb-admin .adminmain * {
     box-sizing: border-box;
     max-width: 100%;
    }
@@ -947,3 +968,11 @@
   }
   
   }
+
+@media screen and (max-width: 378px) {
+
+  .punbb .post {
+    scroll-margin-top: 80px;
+  }
+
+}
