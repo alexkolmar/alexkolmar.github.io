@@ -139,6 +139,16 @@
     -webkit-animation: blinkColor 2s linear infinite;
     background: gainsboro;
   }
+
+  #pun-navlinks li#navpm span.num_msg {
+    margin-top: 0;
+    height: 20px !important;
+   }
+ 
+   span.num_msg::before {
+     top: -3px !important;
+     z-index: 100;
+   }
   
   
   /* Меню пользовательских ссылок
