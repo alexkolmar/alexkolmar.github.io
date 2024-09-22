@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('https://alexkolmar.github.io/fonts/Calibri/Calibri-Bold.eot');
+    src: local('Calibri Bold'), local('Calibri-Bold'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('https://alexkolmar.github.io/fonts/Calibri/Calibri.eot');
+    src: local('Calibri'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Calibri/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
