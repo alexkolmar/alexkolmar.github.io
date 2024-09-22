@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Porter';
+    src: url('https://alexkolmar.github.io/fonts/Porter/Porter-Bold.eot');
+    src: local('Porter Bold DEMO'), local('Porter-BoldDEMO'),
+        url('https://alexkolmar.github.io/fonts/Porter/Porter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Porter/Porter-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Porter/Porter-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Porter/Porter-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Porter/Porter-Bold.svg#Porter-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
