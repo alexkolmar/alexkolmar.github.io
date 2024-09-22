@@ -54,7 +54,7 @@
   
   /* Поля ввода*/
   
-  input[type="text"], input[type="password"], textarea, select {
+  input, input[type="text"], input[type="password"], textarea, select {
     max-width: 100%;
   }
   
@@ -383,6 +383,18 @@
   content: "Действия с темами";
   font-size: initial;
   }
+
+  #pun-admain #tag-filter-container {
+    margin-bottom: 10px;
+  }
+
+  .punbb .per-page-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .punbb .per-page-select .page-container {flex-grow: 1;}
   
   /* Список пользователей
   -------------------------------------------------------------*/
@@ -776,8 +788,44 @@
     display: block;
   }
   
+  /* Загрузка файлов
+  -------------------------------------------------------------*/
+
+  #filetable {
+     margin-bottom: 10px;
+  }
+
+  #filetable tr {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+
+  .punbb #filetable td {
+    width: 100% !important;
+  }
+
+  .punbb #filetable .tc2, .punbb #filetable .tc3:not(.checker) {
+    display: none;
+  }
+
+  .punbb #filetable .tc3.checker {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .punbb #filetable .tc3.checker:before {
+    content: "Выбрать:"
+  }
+  
   /* Админка
   -------------------------------------------------------------*/
+
+  .punbb-admin * {
+    box-sizing: border-box;
+    max-width: 100%;
+   }
   
   .punbb-admin #pun-adnav {margin: 0;}
   
@@ -786,7 +834,7 @@
   .punbb-admin #pun-adnav ul {
     display: flex;
     flex-wrap: wrap;
-    padding: 5px 10px;
+    padding: 0;
   }
   
   .punbb-admin #pun-adnav li {padding: 2px 5px;}
@@ -801,9 +849,18 @@
     display: block;
     text-align: center;
   }
+
+  .punbb-admin .adcontainer {
+    padding: 5px 10px !important;
+  }
   
   .punbb-admin #pun-admain .adformal div ul, .punbb-admin #pun-admain div p {padding: 5px !important;}
   
+  .punbb-admin #pun-admain .adcontainer td {
+    border: none;
+    padding: 5px;
+  }
+
   .punbb-admin .adcontainer .adsubmitfield {
     display: flex;
     flex-direction: column;
@@ -816,7 +873,7 @@
     margin: 0 auto;
     display: block;
     padding: 5px;
-   left: 0;
+    left: 0;
   }
   
   .punbb-admin #pun-admain1 .sortable p input[name^="cat_name"] {
@@ -832,10 +889,51 @@
   
   #pun-admain .adformal p.submittop, #pun-admain .adformal p.submitend {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
   }
   
   #pun-admain .adformal p.submittop input[type="submit"], #pun-admain .adformal p.submitend input[type="submit"] {margin: 0 5px;}
+
+  .punbb-admin #pun-admain fieldset .subforums {
+    margin-left: 0;
+  }
+
+  .punbb-admin .admin-advert-block {width: auto;}
+
+  .punbb-admin input[type="text"] {
+    width: 100%;
+   }
+
+  .page-list tr, #pun-admin_logs #pun-admain .adcontainer tr {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+
+  .punbb-admin #pun-admain .page-list td {
+    width: 100% !important;
+  }
+
+  #metatags input#fld0content {margin: 0 !important;}
+
+  #pun-admin_paid_services #pun-admain .linksb {
+    height: auto !important;
+    flex-direction: column;
+  }
+
+  #pun-admin_logs #pun-admain .adcontainer tbody {
+    width: 100%;
+    display: block;
+  }
+
+  #pun-admin_logs #pun-admain .adcontainer td {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
   
   /* Дополнительно
   -------------------------------------------------------------*/
