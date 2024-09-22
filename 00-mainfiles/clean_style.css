@@ -172,7 +172,8 @@ em {
 input.button,
 #pun-admain input.button,
 #sub4,
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   padding: 2px 10px;
   border: 1px solid currentColor;
   cursor: pointer;
@@ -182,7 +183,8 @@ input[type="button"] {
 input.button:hover,
 #pun-admain input.button:hover,
 #sub4:hover,
-input[type="button"]:hover {}
+input[type="button"]:hover,
+input[type="submit"]:hover {}
 
 /* ОФОРМЛЕНИЕ ПОЛЕЙ ВВОДА
 ------------------------------------------*/
