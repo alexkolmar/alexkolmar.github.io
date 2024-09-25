@@ -1,0 +1,224 @@
+<div class="tablica">
+    <div class="forum_name">Tales from the Forgotten Realms</div>
+    <div class="tab_inner">
+      <div class="tab_left">
+        <!-- НОВОСТИ -->
+        <div id="news">
+      <span>14/09/24</span> <a href="https://forgotten-realms.ru/viewtopic.php?id=79#p1752">Первый новостной отчет. Все, что было сделано, и немного о том, что предстоит сделать.</a><br>
+        </div>
+        <!-- ДАТА -->
+        <div id="date">
+          Настоящее время: с 01.01.1495 по 01.06.1495
+        </div>
+        <!-- АМС -->
+        <div id="ams">
+      <a href="https://forgotten-realms.ru/userlist.php?username=&amp;show_group=1&amp;sort_by=last_visit&amp;sort_dir=DESC&amp;search=%CE%F2%EF%F0%E0%E2%E8%F2%FC" class="sslka">Администрация</a>
+      <a href="https://forgotten-realms.ru/profile.php?id=3"><img src="https://forumupload.ru/uploads/001c/16/c4/3/419330.png"></a>
+      <a href="https://forgotten-realms.ru/profile.php?id=4"><img src="https://i.vgy.me/5xtHCv.png"></a>
+      <a href="https://forgotten-realms.ru/profile.php?id=6"><img src="https://i.vgy.me/tsE3rN.png"></a>
+      <a href="https://forgotten-realms.ru/profile.php?id=2"><img src="https://i.vgy.me/GWUtRx.png"></a>
+        </div>
+      </div>
+      <div class="tab_center">
+        <!-- ЦИТАТЫ-->
+        <style> .rotation {display:none;}</style>
+        <div id="quotes"></div>
+      </div>
+      <div class="tab_right">
+        <!----- НАВИГАЦИЯ ----->
+        <div id="ssl">
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=2">Гостевая</a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=5">Сюжет</a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=6">Роли</a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=41">Анкета</a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=8">FAQ</a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=58">Лор</a>
+        </div>
+        <!-- АКЦИИ-->
+        <div id="wanted">
+      <a href="https://forgotten-realms.ru/viewforum.php?id=11" class="sslka">Акции</a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=33#p502"><img src='https://i.vgy.me/es0ZrL.png'></a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=33#p502"><img src='https://i.vgy.me/n0ZvN1.jpg'></a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=33#p502"><img src='https://i.vgy.me/cEjyT2.png'></a>
+      <a href="https://forgotten-realms.ru/viewtopic.php?id=33#p502"><img src='https://i.vgy.me/BaQorZ.png'></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- звезды -->
+  <div id="parallaxwrapone"><div class="parallax"></div></div>
+  <div id="parallaxwraptwo"><div class="parallax"></div></div>
+  <div id="parallaxwrapthree"><div class="parallax"></div></div>
+  
+  <script type="text/javascript">
+      $().pun_mainReady( () => {
+          const bgs = document.querySelectorAll('.parallax');
+  
+          window.addEventListener('mousemove', (e) => {
+              const x = e.clientX / window.innerWidth;
+              const y = e.clientY / window.innerHeight;
+  
+              bgs.forEach(bg => {
+                  const rect = bg.getBoundingClientRect();
+                  const normalizedElementX = (rect.left + rect.right) / (2 * window.innerWidth) - 0.5;
+                  const normalizedElementY = (rect.top + rect.bottom) / (2 * window.innerHeight) - 0.5;
+                  const distanceFromCenter = Math.sqrt(normalizedElementX ** 2 + normalizedElementY ** 2);
+  
+                  const multiplier = 4 + distanceFromCenter * 3; // adjust second value to control sens
+  
+                  const offsetX = (x - normalizedElementX) * multiplier;
+                  const offsetY = (y - normalizedElementY) * multiplier;
+  
+                  bg.style.transform = `translate(${-offsetX}px, ${-offsetY}px)`;
+              });
+          });
+      });
+  </script>
+  
+  
+  <!-- *************************************************************** -->
+  
+  
+  <!--Защита от отключения JS -->
+  <noscript>
+      <link rel="stylesheet" href="https://forumstatic.ru/files/0016/0b/c8/13249.css" />
+  </noscript>
+  
+  
+  <!-- Уведомления -->
+  
+  <link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/notifications.css"/>
+  <script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/notifications.js"></script>
+  
+  <script type="text/javascript">
+  notifications.load('mentions');
+  notifications.load('new_user');
+  notifications.load('reputation');
+  notifications.load('subscriptions');
+  notifications.addons.tgbot.noInvite = true;
+  </script>
+  
+  <script >
+      notifications.load('common', {});
+      notifications.load('important', { topics: [5,79] }); // ID важных тем (через запятую)
+  </script>
+  
+  <!-- Отключение скриптов русфф -->
+  
+  <script type="text/javascript">
+      RusffCore.sets.tags = false; //теги 
+      RusffCore.sets.graffiti = false; //графити 
+      rusffLive.enable = false; //русфф лайф 
+      RusffCore.sets.TextAreaResizer = 0; //растягивания форм (вызывает конфликты в стилях)
+      ReactionsPlugin.setConfig({ disable: true });  //реакции 
+      RusffCore.sets.foundation = 0; //Использование фонда форума
+      RusffCore.sets.show_reportBtn = 0; //жалобы
+      RusffCore.sets.use_awards = 0; //награды
+      RusffCore.sets.auth_methods = 0; // Убираем ссылки на соцсети
+      RusffCore.sets.files.button = false; // Убираем кнопку "Вложения"
+  </script>
+  
+  <!-- Выездной календарь -->
+  <script>
+      function PanelToggleL(panel) {
+          var isVisible = panel.hasClass('visible');
+          panel.toggleClass('visible', !isVisible);
+  
+          // add event listener
+          if (!isVisible) {
+              $(document).on('click.outsidePanel', function (event) {
+                  if (!panel.is(event.target) && panel.has(event.target).length === 0 && !$('#img-left').is(event.target)) {
+                      panel.removeClass('visible');
+                      $(document).off('click.outsidePanel'); // del event listener
+                  }
+              });
+          } else {
+              $(document).off('click.outsidePanel'); //del if panel is hidden
+          }
+      }
+  </script>
+  
+  
+  <!-- Загрузчик контента  -->
+  <script>
+  $(function () {
+    (n => n == 1 && $("#txt").load("/viewtopic.php?id=85 .post-content"))(window['GroupID']);
+  });
+  </script>
+  
+  <style>
+      .p_name > a {
+          color: #a9a6a3 !important;
+      }
+  </style>
+  
+  <!-- Ротатор -->
+  <script>
+      $(document).ready(function () {
+          
+          $("#quotes").load("/pages/quotes #quote-box", function() {
+              var $rotations = $('.rotation');
+              if ($rotations.length) {
+                  var rotationIndex = Math.floor(Math.random() * $rotations.length);
+                  $rotations.eq(rotationIndex).show();
+              }
+          });
+      });
+  </script>
+  
+  <!-- Идикатор загруки -->
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const progress = document.createElement("div");
+          progress.id = "progress";
+          document.body.appendChild(progress);
+  
+          // init width
+          requestAnimationFrame(() => {
+              progress.style.width = `${30 + Math.random() * 30}%`;
+          });
+  
+          window.addEventListener("load", () => {
+              progress.style.width = "100%";
+              progress.style.opacity = "0";
+              setTimeout(() => {
+                  progress.remove();
+              }, 700); // 300ms delay + 400ms fadeout
+          });
+      });
+  </script>
+  
+  
+  <!-- *************************************************************** -->
+  
+  <!--Скрытие профиля в теме тегом-->
+  <script type="text/javascript">
+      FORUM.set('editor.addition.tags.hideprofile', { name: 'Скрыть минипрофиль', onclick: function () { insert('[hideprofile]'); } });
+      
+      $().pun_mainReady(function () { $('.post:contains("[hideprofile]")').addClass('hideprofile').html(function () { return $(this).html().replace(/\[hideprofile\]/gim, '') }) });
+  </script>
+  
+  <!-- Обтекание текста слева/справа -->
+  <script type="text/javascript">
+      FORUM.set('editor.addition.tags.float_left', { name: 'Обтекание слева', onclick: function () { bbcode('[abbr="float:left"]', '[/abbr]'); } });
+      FORUM.set('editor.addition.tags.float_right', { name: 'Обтекание справа', onclick: function () { bbcode('[abbr="float:right"]', '[/abbr]'); } });
+  
+  </script>
+  
+  <!-- Автофокус комментария репутации -->
+  <script>
+  $(document).ready(function(){function t(){let t=$(".post_reputation");t.is(":visible")&&$("#reputationText").focus()}let e=new MutationObserver(function(e){e.forEach(function(e){$(e.target).find(".post_reputation").length>0&&t()})}),n=document.getElementById("pun-main");n&&e.observe(n,{childList:!0,subtree:!0}),t()});
+  </script>
+  
+  <!-- Регулятор размера шрифта + ajax (с) satsana, Orve -->
+  <div id="chfontsize" title="Размер шрифта">
+      <div class="fsizeplus"></div>
+      <div class="fsize"></div>
+      <div class="fsizeminus"></div>
+  </div>
+  
+  <script type="text/javascript">
+  var chfsize;function setfsize(i){localStorage.setItem("fontsize",i),$(".fsize").text(i),$(".post-content p").css("font-size",i+"px")}function initializeFontSizeControls(){$(".fsizeplus").off("click").on("click",function(){setfsize(chfsize=Math.min(chfsize+1,72))}),$(".fsizeminus").off("click").on("click",function(){setfsize(chfsize=Math.max(chfsize-1,6))})}localStorage.fontsize||localStorage.setItem("fontsize",12),chfsize=+localStorage.getItem("fontsize"),$(document).ready(function(){setfsize(chfsize),initializeFontSizeControls()}),$(document).on("pun_post pun_edit",function(){setfsize(chfsize),initializeFontSizeControls()});
+  </script>
