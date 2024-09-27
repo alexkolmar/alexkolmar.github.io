@@ -278,7 +278,7 @@ body::before {
 
 #pun-ulinks .container {
   text-align: center;
-  padding: 0 0 10px;
+  padding: 10px;
 }
 
 #pun-ulinks li {
@@ -400,6 +400,11 @@ td.tcr {
 #pun-modviewforum .tcl {
   width: 40%;
   text-align: left;
+}
+
+#pun-searchtopics td.tcl,
+#pun-modviewforum td.tcl {
+  padding-left: 0;
 }
 
 #pun-viewforum .tclcon a, #pun-searchtopics .tclcon a, #pun-message .tclcon a {
@@ -584,6 +589,10 @@ tr.iclosed div.icon {
 
 /* Категории */
 
+#pun-index .category:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
 #pun-index .category h2 {
   padding: 0;
 }
@@ -666,15 +675,8 @@ tr.iclosed div.icon {
 
 #pun-stats h2 span {display: none;}
 
-#pun-stats h2::before {
-  content: 'Смотрите на звёзды, но крепко стойте на земле';
-  position: relative;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  font-family: var(--base-font);
-  color: var(--font-color);
-  margin-top: 9px;
-  text-align: center;
+.statscon {
+  margin-top: 30px;
 }
 
 #onlinelist .e1 {
@@ -740,6 +742,10 @@ li#onlinelist {
   opacity: .5;
 }
 
+.forum_name::before {
+    content: 'tales form the forgotten realms';
+}
+
 .tab_inner {
   display: flex;
   gap: 40px;
@@ -791,7 +797,6 @@ li#onlinelist {
   line-height: 16px;
   font-size: 11px;
   padding-right: 10px;
-  overflow: auto;
 }
 
 #news span {
@@ -1142,6 +1147,10 @@ li.pa-online {
   animation: blinkColor 4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
 }
 
+li.pa-replies {
+  padding-bottom: 10px;
+}
+
 
 /* Тело поста */
 
@@ -1335,7 +1344,12 @@ fieldset {
   background: var(--pun-up);
 }
 
-fieldset legend {
+#post-form fieldset legend {
+  display: block;
+  margin-left: auto;
+}
+
+fieldset legend span {
   display: none;
   font-weight: bold;
 }
@@ -1489,7 +1503,7 @@ textarea,
   padding: 10px 15px;
 }
 
-.punbb #profile fieldset legend {
+.punbb #profile fieldset legend span {
   display: block;
   background: var(--under-forum);
   padding: 0 10px;
@@ -1898,6 +1912,27 @@ button.button.hotkeys_help {
 	color: rgb(255 255 255 / .87);
 }
 
+/* Быстрый предпросмотр
+-------------------------------------------------------------*/
+
+#post-preview {
+  margin-bottom: 20px;
+}
+
+/* Счётчик символов
+-------------------------------------------------------------*/
+
+#plng {
+  padding: 3px;
+  letter-spacing: 1px;
+  border: solid 1px var(--pun-color-border);
+  background: var(--under-forum) !important;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: var(--base-font);
+  color: var(--font-accent-color);
+}
+
 
 /* Иконки в форме ответа 
 -------------------------------------------------------------*/
@@ -2083,3 +2118,221 @@ td#AutoBorder_menu::before {content: '\f5fd';} /* доп. теги */
 		color: var(--font-color);
 		font-weight: bold;
 	}
+
+/* Гостевая
+--------------------------------- */
+
+  #gostevaya {
+    padding: 20px;
+    width: 730px;
+    height: 520px;
+    position: relative;
+    border: 1px solid #ccc;
+    outline: 1px solid #1d2840;
+    outline-offset: 6px;
+    margin: 10px auto;
+    background: #aaa url(https://i.vgy.me/U66iXQ.png) center fixed repeat;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    color: #FFF;
+    font-family: "LT Remark";
+    font-size: 13px;
+  }
+
+  #gostevaya * {
+    box-sizing: border-box;
+  }
+
+  #gostevaya picture {
+    background: url(https://forumupload.ru/uploads/001c/16/c4/6/615572.png) no-repeat top center/cover;
+    height: 100%;
+    width: 200px;
+    display: block;
+    border: 1px solid #D3AF4C;
+    flex-shrink: 0;
+  }
+
+  .g_infobox {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+  }
+
+  #gostevaya h1 {
+    color: #D3AF4C;
+    font-size: 23px;
+    font-family: "Ostrovsky";
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0px;
+    border-bottom: 1px solid #D3AF4C;
+    padding: 0;
+    height: auto;
+    letter-spacing: 0;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+
+  #gostevaya p {
+    padding: 0 !important;
+  }
+
+  #gostevaya a {
+    color: #D3AF4C;
+  }
+
+.g_links {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#block3 {
+  margin: 10px 0;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border: 1px solid #D3AF4C;
+}
+
+#gostevaya .container {
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+#gostevaya .container:after {
+  display: none;
+}
+
+#gostevaya h2 {
+  margin-bottom: 5px;
+  padding: 0;
+  color: #1e1e1e;
+  font-size: 12px;
+  font-family: "Ostrovsky";
+  width: auto;
+  text-align: center;
+  border-bottom: 1px solid #D3AF4C;
+  text-shadow: 0px 1px 0.5px #d3af4c;
+  letter-spacing: 0;
+  line-height: 1.8;
+  font-weight: normal;
+}
+
+#gostevaya .container > div {
+  display: block;
+  width: 49%;
+  height: 125px;
+  padding: 5px;
+  background: #E3E1DD;
+  overflow: auto;
+}
+
+#gostevaya .container p {
+  color: #000;
+  font-size: 10px;
+  line-height: 1.8;
+text-align: center;
+}
+
+/* Список ролей
+--------------------------------- */
+
+#claims {
+  width: 550px;
+  height: auto;
+  border: 1px solid #ccc;
+  outline: 1px solid #1d2840;
+  outline-offset: 10px;
+  font-family: "LT Remark";
+  color: #191919;
+  line-height: 180%;
+  font-size: 12px;
+  margin: 12px auto;
+  background: #aaa url(https://i.vgy.me/U66iXQ.png)center fixed repeat;
+}
+
+#claims a {
+  color: #bb9656;
+  display: block;
+  text-decoration: none;
+  width: fit-content;
+}
+
+#claims maintitle {
+  position: relative;
+  display: block;
+  height: 60px;
+  border-bottom: 1px solid #bb9656;
+  overflow: hidden;
+  font-family: "Ostrovsky";
+  font-weight: 800;
+  text-align: center;
+  color: #FFFF;
+  text-transform: uppercase;
+  line-height: 230%;
+  font-size: 40px;
+}
+
+#claims text {
+  font-family: "LT Remark";
+  padding: 20px;
+  display: block;
+  color: #FFFFFF;
+  text-align: justify;
+  font-size: 11px;
+  line-height: 190%;
+}
+
+#claims subtitle {
+  position: relative;
+  display: block;
+  height: 20px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  font-family: "Ostrovsky";
+  font-weight: 800;
+  text-align: center;
+  color: #D3AF4C;
+  text-transform: uppercase;
+  line-height: 140%;
+  font-size: 20px;
+}
+
+#claims descript {
+  width: 450px;
+  height: 10px;
+  position: relative;
+  display: flex;
+  margin: 3px auto;
+  justify-content: space-between;
+  color: #FFFF;
+  line-height: 100%;
+  font-size: 11px;
+  border-bottom: 1px solid #eee;
+}
+
+#claims nameblock {
+  width: 450px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  margin: 10px auto 30px;
+  justify-content: space-between;
+  color: #FFFF;
+  line-height: 150%;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}

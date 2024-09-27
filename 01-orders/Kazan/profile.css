@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.tab {
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 700px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: url(http://forumstatic.ru/files/001b/26/b3/87885.png) repeat top left;
+    font: normal 12px/140% verdana;
+  }
+
+.tab * {
+    box-sizing: border-box;
+}
+
+.tab ul {
+    list-style: none;
+}
+
+.tab a {
+    color: #C47C63;
+    text-decoration: none;
+}
+
+.tab h2 {
+    width: 100%;
+    font-family: "Amatic SC";
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tab-nav {
+    border: 1px solid #000;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tab-btn {
+    border: 1px solid #000;
+    width: 88px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: all .3s linear 0s;
+    font-family: "Amatic SC";
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tab-btn-active {
+    pointer-events: none;
+    color: #C47C63;
+}
+
+.tab-pane:not(.tab-pane-show) {
+    display: none;
+}
+
+.tab-pane {
+    height: 390px;
+    overflow: auto;
+    -webkit-animation: 1s both fadeIn;
+    animation: 1s both fadeIn;
+    padding-right: 20px;
+    margin-right: -20px;
+}
+
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+        
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.tab-char {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.charinfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.charinfo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.charinfo ul {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.charinfo b {
+    margin-right: 10px;
+}
+
+.money {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding-left: 140px;
+    font-size: 16px;
+    background: url(https://forumstatic.ru/files/001b/26/b3/93919.svg) no-repeat left 10px center;
+}
+
+.occupation, .charquote {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000;
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+}
+
+.tab-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.acq {
+    border: 1px solid #000;
+    width: 310px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.acq img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.acq-text {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.acq a {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.acq p {
+    font-size: 11px;
+    line-height: 13px;
+    height: 53px;
+    overflow: auto;
+    margin-right: -10px;
+    padding-right: 10px;
+}
+
+.tab-eps, .tab-graphics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eps-block, .graphics-block {
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.tab-eps ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tab-eps li {
+    padding: 10px;
+}
+
+.tab-eps li:not(:last-of-type) {
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.tab-awards, .tab-achieves, .tab-graphics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.awards-block, .achieves-block {
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.achieves-block {
+    height: 390px;
+    overflow: auto;
+}
+
+.graphics-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.graphics-block img {
+    max-height: 350px;
+}
