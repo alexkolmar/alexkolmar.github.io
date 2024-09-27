@@ -6060,7 +6060,7 @@ line-height: 1;
         .fi-rr-it-alt:before {
     content: "\e8fa";
     }
-        .fi-rr-it-computer.:before {
+        .fi-rr-it-computer:before {
     content: "\e8fc";
     }
         .fi-rr-italian:before {
