@@ -1,0 +1,78 @@
+<!--ПРОФИЛАКТИКА НАЧАЛО-->
+<div id="pircs2"><!-- std.v.1/0/profilaktika --><link rel="stylesheet" type="text/css" href="http://hostjs-mybb2011.narod.ru/css/profilaktika.css" /><div id="msg-n2">У Вас отключён javascript.<br>В данном режиме, отображение ресурса<br/>браузером не поддерживается <br/></div><div id="LogIn_Window" style="display:none"><center>Оставайтесь на связи!</center><br/><hr><br/><br/></div></div><!-- --><script type="text/javascript">
+    var ON_button=0; //Cвитч включения: 1 - включено!; 0 - выключено
+    var  moderDostyp_ON=0; //?Модер-доступ включён?: 1 - включен!; 0 - выключен
+    if(ON_button!=1||GroupID ==1||moderDostyp_ON*GroupID==2){
+    $("style.#style_st,div.#pircs2").replaceWith("");}
+      else {$("#msg-n2").replaceWith("");
+    if(GroupID ==3) {$("#LogIn_Window").show();if(document.URL.indexOf("/login.php")==-1){
+    document.location.href = "../login.php"}else {
+    $(document).ready(function(){$("form#login").appendTo("#LogIn_Window");
+    $("#LogIn_Window").find("p.formsubmit a[href*='register.php']").text("");
+    var v=$("#LogIn_Window").find("p.formsubmit a[href*='action=forget']");
+    v.replaceWith("<span>Вход только для Администраторов</span>");});};}
+    else {document.location.href = "../login.php?action=out&id="+UserID};}
+    </script><!--end/profilaktika-->
+<!--ПРОФИЛАКТИКА КОНЕЦ-->
+
+<link rel="stylesheet" href="https://forumstatic.ru/files/0010/ed/c4/24932.css?v=2">
+
+<div class="tablica">
+  <div class="tab_top">
+    <div class="tab_left">
+      <div class="wanted">
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+      </div>
+      <div class="bestep">>> <a href="">ссылка на эпизод</a> <<</div>
+      <div class="bestquote">
+        <span>name says:</span>
+        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста</p>
+        <a href="">читать далее</a>
+      </div>
+    </div>
+    <div class="tab_right">
+      <div class="admins">
+        <a href="">kai</a> >> <a href="">belle</a> >> <a href="">jooheon</a><br>
+        <a href="">taemin</a> << <a href="">heeseung</a>
+      </div>
+      <div class="tab_links">
+        <a href="">ссылка 1</a>  >>  <a href="">сылка 2</a>  >>  <a href="">ссылка 3</a>
+      </div>
+      <div class="bestep">>> <a href="">ссылка на эпизод</a> <<</div>
+      <div class="actives">
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+        <a href="" title="имя фамилия"><img src="https://forumstatic.ru/files/0010/ed/c4/45860.png"></a>
+      </div>
+      <div class="tab_links">
+        <a href="">ссылка 1</a>  >>  <a href="">сылка 2</a>  >>  <a href="">ссылка 3</a>  >>  <a href="">ссылка 4</a>
+      </div>
+    </div>
+  </div>
+  <div class="tab_bottom">
+    <a class="newsplank" href="">
+      <img src="https://forumstatic.ru/files/0010/ed/c4/32614.png">
+      <p>самое время веселиться</p>
+    </a>
+    <a class="newsplank" href="">
+      <img src="https://forumstatic.ru/files/0010/ed/c4/32614.png">
+      <p>самое время веселиться</p>
+    </a>
+    <a class="newsplank" href="">
+      <img src="https://forumstatic.ru/files/0010/ed/c4/32614.png">
+      <p>самое время веселиться</p>
+    </a>
+    <a class="newsplank" href="">
+      <img src="https://forumstatic.ru/files/0010/ed/c4/32614.png">
+      <p>самое время веселиться</p>
+    </a>
+    <a class="newsplank" href="">
+      <img src="https://forumstatic.ru/files/0010/ed/c4/32614.png">
+      <p>самое время веселиться</p>
+    </a>
+  </div>
+</div>

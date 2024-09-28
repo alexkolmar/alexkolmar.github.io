@@ -1,0 +1,63 @@
+<!-- КАТЕГОРИИ -->
+<script>
+    $(function (){ 
+    $("<p>I had to take on, cause you had me stuck in the middle of nowhere <br> And my faith it would shake, I know you're trying your best to take me</p>").insertAfter(".category.category-1 h2 span");
+    
+    $("<p>I had to take on, cause you had me stuck in the middle of nowhere <br> And my faith it would shake, I know you're trying your best to take me</p>" ).insertAfter(".category.category-2 h2 span");
+    
+    $("<p>I had to take on, cause you had me stuck in the middle of nowhere <br> And my faith it would shake, I know you're trying your best to take me</p>" ).insertAfter(".category.category-3 h2 span");
+    });
+      </script>
+    
+    
+    <script>
+    $(".post-author").each(function(){
+    $(this).find('.pa-posts, .pa-respect, .pa-fld3, .pa-fld4').wrapAll("<div class='addflds'>");
+    });
+    </script>
+    
+    
+    <!-- Анти-в-строчку для Сообщений и Репутации © deff -->
+    <script type="text/javascript">
+    function changeS(sc,ch,st){$(sc).parent().each(function(){$(this).html($(this).html().replace(ch,st));});}
+       changeS('.pa-posts','Сообщений:','<i class="fi fi-rr-envelope" title="сообщений"></i></br>');
+       changeS('.pa-respect','Уважение</a>:','<i class="fi fi-rr-heart"></i></a><br>');
+       changeS('.pa-respect','Уважение:','<i class="fi fi-rr-heart"></i></i><br>');
+       changeS('.pa-fld3','Банк:','<i class="fi fi-rr-dollar" title="банк"></i>');
+       changeS('.pa-fld4','Посты:','<i class="fi fi-rr-edit" title="посты"></i>');
+    </script>
+    
+    
+    <!--Кнопки вверх вниз-->
+    <div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/0010/ed/c4/69020.png"></div>
+    <div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/0010/ed/c4/47977.png"></div>
+    <script type="text/javascript">
+    $(function(){
+    if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+    $(window).scroll(function(){
+      if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+      else $("#ToTop").fadeIn("slow")
+    });
+    if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+      else $("#OnBottom").fadeIn("slow")
+    });
+    $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+    $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+    });
+    </script>
+    
+    
+    <div class="banners">
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+      <a href=""><img src="https://dummyimage.com/88x31/ffffff/fff.png"></a>
+    </div>
