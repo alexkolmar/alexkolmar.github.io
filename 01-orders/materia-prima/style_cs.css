@@ -1,3 +1,10 @@
+.topicname.imp {width: calc(100% - 20px);}
+.post-content .cnt-part p {text-align: start;}
+.ams-news blockquote {background: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg) no-repeat bottom center / cover;}
+
+
+
+
 /********** Чистый стандартный стиль для MyBB ***********/
 /******** Cпециально для ForumD.ru © Gerda, 2023 ********/
 /**************************************************
@@ -137,12 +144,12 @@ a:hover {
 /* Скроллбары */
 * {
 scrollbar-width: thin; 
-scrollbar-color: #cfba6a #523329;
+scrollbar-color: var(--color2) var(--dark);
 }
 
 *::-webkit-scrollbar {width: 9px; height: 9px;}
-*::-webkit-scrollbar-track {background-color: #523329;}
-*::-webkit-scrollbar-thumb {background-color: #cfba6a;}
+*::-webkit-scrollbar-track {background-color: var(--dark);}
+*::-webkit-scrollbar-thumb {background-color: var(--color2);}
 
 /* ОФОРМЛЕНИЕ КНОПОК
 ------------------------------------------*/
@@ -728,6 +735,13 @@ td.tcr a {
   mix-blend-mode: luminosity;
 }
 
+.punbb .user-avatar .isonline {
+  background: #b34747 !important;
+  z-index: 1 !important;
+  right: -4px !important;
+  top: -2px !important;
+}
+
 /* ================== */
 
 /* Главная страница */
@@ -1279,7 +1293,7 @@ li.pa-title {
 .pa-posts, .pa-respect, .pa-fld5 {
   display: inline-flex;
   align-items: center;
-  font-size: 9px;
+  font-size: 14px;
   padding: 0px 4px !important;
   margin: 10px 4px 0;
   width: fit-content;
@@ -1291,7 +1305,7 @@ li.pa-title {
 }
 
 .post-author .fa-solid {
-  font-size: 20px;
+  font-size: 14px;
   color: #294455;
 }
 
@@ -1422,6 +1436,95 @@ pre {
     justify-content: flex-end;
 }
 
+/* Иконки в форме ответа 
+-------------------------------------------------------------*/
+
+.punbb #main-reply {box-sizing: border-box;}
+.punbb #form-buttons table {width: 100%;}
+
+.punbb #form-buttons tr {
+display: flex;
+display: -webkit-flex;
+flex-wrap: wrap;
+-webkit-flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 0 5px;
+width: 100%;
+}
+
+#form-buttons td {
+background-image: none !important;
+position: relative;
+display: inline-block;
+width: 30px;
+height: 30px;
+}
+
+.punbb #form-buttons td img {
+width: 30px;
+height: 30px;
+}
+
+#form-buttons td:before {
+content: "";
+font-family: var(--msr);
+font-size: 24px;
+color: #5c7c8d;
+position: absolute;
+pointer-events: none;
+transition: all .5s linear 0s;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 0;
+top: 0;
+}
+
+#form-buttons td:hover:before {color: #808080;}
+
+/* Стандартные кнопки */
+
+td#button-font:before {content: "\e167";}
+td#button-size:before {content: "\e262";}
+td#button-bold:before {content: "\e238";}
+td#button-italic:before {content: "\e23f";}
+td#button-underline:before {content: "\e249";}
+td#button-strike:before {content: "\e257";}
+td#button-left:before {content: "\e236";}
+td#button-center:before {content: "\e234";}
+td#button-right:before {content: "\e237";}
+td#button-link:before {content: "\e157";}
+td#button-spoiler:before {content: "\e8f5";}
+td#button-spoiler:hover:before {content: "\e8f4";}
+td#button-image:before {content: "\e43e";}
+td#button-video:before {content: "\e070";}
+td#button-hide:before {content: "\e898";}
+td#button-hide:hover:before {content: "\e897";}
+td#button-quote:before {content: "\e8af";}
+td#button-code:before {content: "\e86f";}
+td#button-color:before {content: "\e40a";}
+td#button-table:before {content: "\e3ec";}
+td#button-smile:before {content: "\ea22";}
+td#button-keyboard:before {content: "\f028";}
+td#button-addition:before {content: "\ea20";}
+td#button-files_rusff:before {content: "\e2c7";}
+td#button-files_rusff:hover:before {content: "\e2c8";}
+td#button-graffiti_rusff:before {content: "\e3ae";}
+
+/* Дополнительные кнопки */
+
+td#button-indent:before {content: "\e23e";} /* тег абзаца */
+td#button-transL:before {content: "\e915";} /* переключение раскладки */
+td#button-dice:before {content: "\eb40";} /* дайсы */
+td#button-grouphide:before {content: "\e73c";} /* скрытие для групп */
+td#button-styles:before {content: "\e41d";} /* дополнительные стили */
+td#floatbut:before {content: "\efe0";} /* тег обтекания изображения от Romych */
+td#button-justify:before {content: "\e235";} /* тег выравнивания по ширине */
+td#button-mask:before {content: "\f218";} /* тег для скрипта ролевой маски от человека-шамана */
+td#button-sticker:before {content: "\e91d";} /* тег для дополнительных смайлов от человека-шамана */
+
 /* ================== */
 
 /* Формы */
@@ -1435,13 +1538,16 @@ optgroup {font-weight: bold;}
 .formal .container {padding: 10px 20px;}
 
 .formsubmit {
-padding: 0;
+padding: 0 20px;
 margin: 10px 0 0 0;
 }
 
 .formsubmit input, .formsubmit a, .formsubmit span {margin: 0 6px 0 0;}
 
-fieldset {border: none;}
+fieldset {
+  border: none;
+  padding: 0 20px;
+}
 
 fieldset legend {
 font-style: normal;
@@ -1495,7 +1601,10 @@ textarea, .longinput input {width: 64%; margin: 0;}
 /* ================== */
 
 /* Профиль + ЛС */
-#profile .container {padding-left: 230px;}
+#profile .container {
+  padding: 0 40px 0 230px;
+}
+
 #profilenav {
   float: left;
   width: 200px;
@@ -1529,6 +1638,8 @@ font-weight: normal;
   flex-direction: column;
   text-align: center;
 }
+
+#viewprofile #profile-left {text-align: center;}
 
 img.avatardemo {float: right;margin: 0 0 8px 18px;}
 
@@ -1566,11 +1677,18 @@ width: 20%;
 
 /* Регистрация */
 .info-box {
-padding: 10px 15px;
+padding: 10px 20px;
 margin: 0 0 10px 0;
 }
 .info-box * {padding: 0 0 5px 0;}
 .info-box .legend {font-weight: bold;}
+
+/* ================== */
+
+/* Пользователи */
+.usertable .container {
+  padding: 0 30px;
+}
 
 /* ================== */
 
@@ -1723,7 +1841,7 @@ margin: 0 0 10px 0;
     text-align: justify;
 }
 
-.guest-container a {color: #e5d584c7;}
+.guest-container a, .individual .episode-char a {color: #e5d584c7;}
 
 .guest-occupied {
     display: flex;
@@ -1996,7 +2114,6 @@ margin: 0 0 10px 0;
 }
 
 .episode-title {
-    text-align: center;
     font-family: 'Forum';
     font-size: 26px;
     color: #2a404d;
@@ -2005,10 +2122,13 @@ margin: 0 0 10px 0;
 
 .episode-char {
     font-size: 10px;
-    text-align: center;
     color: #181818;
     text-transform: uppercase;
+    margin-top: 10px;
 }
+
+.episode-title p, .episode-char p, .multik .button p {text-align: center;}
+.episode-title p {line-height: 80%;}
 
 .sh-container.individual {
     background: #1f2527;
@@ -2045,6 +2165,20 @@ margin: 0 0 10px 0;
     color: #b4b4ac;
     box-shadow: none;
 }
+
+.fr-info.ams-news a, .sh-item.anketa-head a {
+    font-weight: bold;
+    color: #a26141;
+}
+
+.anketa .fr-info, .sh-item.anketa-head {padding: 20px 20px 8px;}
+
+.sh-item.anketa-head img {
+    border: 1px solid #8e814e;
+    box-shadow: 0px 0px 3px #00000017;
+}
+
+.sh-item.anketa-head br {display: none;}
 
 
 
@@ -2108,7 +2242,7 @@ position: relative;
     box-shadow: 0px 0px 10px #1f232617, 0px 0px 20px inset #bbb8a082;
 }
 .kelendar .item.action {
-    background: #7c4848;
+    background: #325464;
     color: #e5d584c7;
     border: 1px solid #ada268;
     box-shadow: 0px 0px 10px #95978d69;
@@ -2129,10 +2263,10 @@ padding: 0 0 0 10px;
 font-family: 'BEWARE';
 }
 .kelendar .date div {display: inline-block;}
-.kelendar .number {font-size: 30px;}
+.kelendar .number {font-size: 14px;}
 .kelendar .day {
 padding: 0 0 0 5px;
-font-size: 15px;
+font-size: 10px;
 vertical-align: top;
 }
 
@@ -2151,9 +2285,9 @@ vertical-align: top;
     cursor: default;
     z-index: 999;
     border: 1px solid #85836c;
-    background: #1f2426;
+    background: #d6d7cf;
     border-radius: 2px;
-    color: #b4b4ac;
+    color: #1f2426;
 }
 
 .kelendar .event.show {visibility: visible; opacity: 1;}
@@ -2164,7 +2298,6 @@ vertical-align: top;
     top: -5px;
     right: 0px;
     padding: 10px;
-    background: #1f2426;
     font-weight: bold;
 }
 
@@ -2253,6 +2386,12 @@ transition: all 0.8s;
     transition: all 0.8s ease;
 }
 
+.button.ams-news, .multik .button.ams-news.but-act {
+    background: #333b3e url(https://forumstatic.ru/files/001b/f8/73/41803.jpg) center top;
+}
+
+
+
 .fdklinks br {display: none;}
 
 .fdkpost .fdk-header {display: none;}
@@ -2265,55 +2404,67 @@ transition: all 0.8s;
 .kelendar.tags {display:block;}
 .kelendar .popup {cursor: alias;text-decoration-line: underline;position: relative;}
 
-.fdk-slider {max-height: 390px;}
-.fdk-slider .slide {max-height: 350px; min-height: 350px;}
-.rhino-container {padding: 0 0 36px;}
+.fdk-slider {
+    max-height: 372px;
+    border: 1px solid #b7a275;
+    box-shadow: 0px 0px 10px #1f232617, 0px 0px 20px inset #e9e8de;
+    margin-bottom: 13px;
+    background: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg) no-repeat bottom center / cover;
+    box-sizing: border-box;
+} 
 
 .fdk-slider .slide {
-width: calc(100% - 102px) !important;
-margin: 0 40px !important;
-height: auto !important;
-overflow: auto !important;
+    max-height: 350px; 
+    min-height: 350px;
+}
 
-padding: 10px;
-  box-shadow: 0px 0px 6px #b7b7b766, 0px 0px 10px #5e5e5c38 inset;
-  background: #e6e6e6;
-  border: 1px solid #b5b5b5;
+.rhino-container {
+    padding: 0 0 36px;
+    width: 100% !important;
+    height: 390px !important;
+}
+
+.fdk-slider .slide {
+    width: calc(100% - 70px) !important;
+    height: auto !important;
+    overflow: auto !important;
+    padding: 10px 5px 10px 10px;
+    margin: 10px 33px !important;
+    text-align: justify;
+    box-sizing: border-box;
 }
 
 
-.rhino-prev, .rhino-next {top: calc(50% - 40px); font-size: 0;}
-.rhino-prev {left: 0;}
-.rhino-next {right: 0;}
+.rhino-prev, .rhino-next {top: calc(50% - 40px); font-size: 0; z-index: 1;}
+.rhino-prev {left: 11px;}
+.rhino-next {right: 11px;}
 .rhino-prev:before {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
+    content: '\f0d9';
 }
 .rhino-next:before {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+    content: '\f0da';
 }
 .rhino-prev:before, 
 .rhino-next:before {
-content: '';
-    border: solid #79798a;
-    border-width: 0 5px 5px 0;
     display: inline-block;
-    padding: 12px;
-transition: all 0.8s;
-  -webkit-transition: all 0.8s;
+    padding: 0 5px;
+    transition: all 0.8s;
+     -webkit-transition: all 0.8s;
+    font-family: fontawesome;
+    font-size: 12px;
+    color: #b7a275;
+    opacity: .3;
 }
 
 .rhino-prev:hover:before, 
-.rhino-next:hover:before {border-color: #000;}
+.rhino-next:hover:before {border-color: #000; opacity: 1;}
 
 
 .rhino-bullets {
-margin: 0;
-padding: 0 40px 0 230px;
-  width: calc(100% - 270px);
-text-align: right; 
-z-index: 20;
+    margin: 0;
+    padding: 0 0 0 230px;
+    width: calc(100% - 225px);
+    text-align: right;
 }
 .punbb .rhino-bullets li {
 line-height: 36px;
@@ -2321,9 +2472,9 @@ margin: 0 5px;
 display: inline-block;
 }
 .rhino-bullets a {
-height: 12px;
-  width: 12px;
-background: #79798a;
+height: 8px;
+  width: 8px;
+    background: #5b7d91;
 transition: all 0.8s;
   -webkit-transition: all 0.8s;
 cursor: pointer;
@@ -2331,20 +2482,27 @@ font-size: 0;
 display: block;
 border-radius: 50%;
 }
-.rhino-bullets a:hover {background: #000;}
-.rhino-bullets a.rhino-active-bullet {background: #ccb718;}
+.rhino-bullets a:hover {background: #3c311a;}
+.rhino-bullets a.rhino-active-bullet {background: #b7a275;}
 
 .rhino-toggle {
-background-color: #a6a6b0;
-text-transform: uppercase;
-padding: 4px 15px;
-transition: all 0.8s;
--webkit-transition: all 0.8s;
-border-radius: 5px;
-color: #292e3e;
-z-index: 40;
+    text-transform: uppercase;
+    padding: 4px 15px;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    color: #292e3e;
+    z-index: 40;
+    background: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg) no-repeat bottom center / cover;
+    border: 1px solid #c7c7b8;
+    color: #1a1918;
+    font-family: 'Open Sans';
 }
-.rhino-toggle:hover {background: #000; color: #fff;}
+
+.rhino-toggle:hover {
+    background: #5b7d91;
+    border: 1px solid #4e6e81;
+    color: #e1d27b;
+}
 
 
 

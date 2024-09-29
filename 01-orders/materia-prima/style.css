@@ -1,8 +1,9 @@
 @import url(style_cs.css);
 @import url('https://forumstatic.ru/files/001b/df/32/99049.css'); /*Font Awesome ver 6.5.1*/
+@import url('https://forumstatic.ru/files/001a/e1/7e/82877.css');
 
 /* Иконический шрифт */
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&family=Roboto:wght@100;300;400;500;700&display=swap');
@@ -24,8 +25,8 @@
   --body: #d7d8d0;
   --color2: #c9cbc0;
   --bea: 'beaufort';
-  --fa: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
-  --mio: Material Icons Outlined;
+  --fa: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'Font Awesome 5 Pro', 'Font Awesome 5 Brands';
+  --msr: Material Symbols Rounded;
 }
 
 
@@ -114,6 +115,7 @@
     max-width: 100%;
   }
   
+  fieldset {padding: 0 10px;}
   
   /* Шапка
   -------------------------------------------------------------*/
@@ -122,18 +124,46 @@
     min-height: 50px;
     width: 100%;
     position: relative;
-    background: var(--green) url(https://forumstatic.ru/files/001b/ff/af/36067.png) no-repeat top 20px center/95%;
+    background: url(https://forumstatic.ru/files/001b/ff/af/36067.png) no-repeat top 20px center/95%, url(https://forumstatic.ru/files/001b/f8/73/41803.jpg) no-repeat top center var(--green);
   }
   
   #html-header {
     width: 100%;
   }
 
-  .tablica {
+.tablica {
     flex-wrap: wrap;
-    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 20px;
   }
-  
+
+.rotator, .newws, .navs {
+  display: none
+}
+
+.tab_left {
+  height: auto;
+  width: 100%;
+}
+
+.social_b {
+  flex-direction: row;
+}
+
+.tab_center {
+  padding: 0;
+  text-align: center;
+  order: -1;
+}
+
+.tab_right {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
   /* Меню навигации
   -------------------------------------------------------------*/
   
@@ -173,7 +203,7 @@
   
   #pun-navlinks li a:after, #pun-ulinks:after  {
     content: "";
-    font: normal 36px/100% 'Material Icons Outlined';
+    font: normal 36px/100% var(--msr);
   }
   
   #pun-navlinks li#navindex a:after {content: "\e88a";}
@@ -317,7 +347,7 @@
     line-height: 120%;
   }
   
-  .punbb thead {display: none;}
+ .category h2 q, .punbb thead {display: none;}
   
   .punbb .main .hasicon, .punbb .main tr {
     display: flex;
@@ -417,6 +447,8 @@
     display: flex;
     display: -webkit-flex;
   }
+
+  #pun-index .tcr {padding: 5px 10px;}
   
   /* Статистика
   -------------------------------------------------------------*/
@@ -590,7 +622,7 @@
     order: -2;
   }
   
-  .online .pa-author::after {
+  /*  .online .pa-author::after {
     content: "";
     display: inline-block;
     width: 7px;
@@ -599,7 +631,7 @@
     box-shadow: 0 0 10px #bf0;
     background: radial-gradient(circle at 3px 2px, #98ea36, #81b16f, #8ac176);
     margin: 2px 0 2px 7px;
-  }
+  }*/
   
   .punbb .post-author .pa-avatar img {
     margin: 0;
@@ -618,6 +650,16 @@
     width: 100%;
     text-align: left;
   }
+
+  li.pa-title, li.pa-fld1, li.pa-fld3, .lzinfo, li.pa-fld4, li.pa-fld6 {display: none}
+
+  li.pa-fld2 {
+    order: 1;
+    width: 100%;
+    margin-left: 85px;
+  }
+
+  .lzclan {border-bottom: none;}
   
   /* Сообщения */
   .punbb .post-author .pa-posts {
@@ -665,7 +707,7 @@
   
   .punbb .post-links ul {
     padding: 0 10px;
-    margin: 5px 0 0;
+    margin: 5px 0;
   }
   .punbb .post-links li a {font-size: 0;}
   
@@ -681,17 +723,25 @@
   
   .punbb .post-links li a::before {
     content: "";
-    font-size: 24px;
-    font-family: 'Material Icons Outlined';
+    font-size: 16px;
+    font-family: var(--fa);
+    display: inline-flex;
+    height: 24px;
+    width: 24px;
+    background: #425c6c;
+    align-items: center;
+    justify-content: center;
+    color: var(--color2);
+    border-radius: 4px;
   }
   
-  .punbb .post-links li.profile a:before {content: "\ea67";}
-  .punbb .post-links li.pm a:before {content: "\e0be";}
-  .punbb .post-links li.email a:before {content: "\e0e6";}
-  .punbb .post-links li.pl-delete a:before {content: "\e92e";}
-  .punbb .post-links li.pl-edit a:before {content: "\e3c9";}
-  .punbb .post-links li.pl-quote a:before {content: "\e244";}
-  .punbb .post-links li.pl-reports a:before {content: "\e8b2";}
+  .punbb .post-links li.profile a:before {content: "\f2bb";}
+  .punbb .post-links li.pm a:before {content: "\f0e0";}
+  .punbb .post-links li.email a:before {content: "\f1fa";}
+  .punbb .post-links li.pl-delete a:before {content: "\f2ed";}
+  .punbb .post-links li.pl-edit a:before {content: "\f044";}
+  .punbb .post-links li.pl-quote a:before {content: "\f4ad";}
+  .punbb .post-links li.pl-reports a:before {content: "\f071";}
   
   
   /* Форма ответа */

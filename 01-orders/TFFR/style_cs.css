@@ -133,6 +133,10 @@ em {
   flex-wrap: wrap;
 }
 
+#tags #table-area tr {
+  padding: 0;
+}
+
 /* ОФОРМЛЕНИЕ КНОПОК
 ------------------------------------------*/
 
@@ -1015,8 +1019,6 @@ li#onlinelist {
   margin-bottom: 20px;
   width: var(--pwidth);
   text-align: center;
-  position: sticky;
-  top: 0;
   background: url(https://forumupload.ru/uploads/001c/16/c4/6/222222.png) no-repeat bottom center, url(https://i.vgy.me/Hg3bcd.png) repeat top center;
   box-shadow: 0 0 0 1px #363d6e54;
   border: 4px solid var(--under-forum);
@@ -1061,6 +1063,8 @@ li.pa-title {
   max-height: 270px;
   margin: auto;
 }
+
+ .punbb .post-author .pa-fld1 .fld-name, .punbb .post-author .pa-fld1 > br {display: none;}
 
 .lz-container {
   position: relative;
@@ -2070,7 +2074,8 @@ td#AutoBorder_menu::before {content: '\f5fd';} /* доп. теги */
 
 .hideprofile .post-author,
 .hideprofile .pl-email,
-.hideprofile .pl-website {
+.hideprofile .pl-website,
+.hideprofile .post-sig {
   display: none !important
 }
 
@@ -2120,7 +2125,7 @@ td#AutoBorder_menu::before {content: '\f5fd';} /* доп. теги */
 	}
 
 /* Гостевая
---------------------------------- */
+  --------------------------------- */
 
   #gostevaya {
     padding: 20px;
@@ -2244,7 +2249,7 @@ td#AutoBorder_menu::before {content: '\f5fd';} /* доп. теги */
   color: #000;
   font-size: 10px;
   line-height: 1.8;
-text-align: center;
+  text-align: center;
 }
 
 /* Список ролей
@@ -2297,6 +2302,7 @@ text-align: center;
 }
 
 #claims subtitle {
+  padding: 0 20px;
   position: relative;
   display: block;
   height: 20px;
@@ -2336,3 +2342,281 @@ text-align: center;
   font-size: 14px;
   border-bottom: 1px solid #eee;
 }
+
+
+/* Время первых шагов
+----------------------------------------- */
+
+  #eternal {
+    height: 490px;
+    width: 634px;
+    position: relative;
+    margin: 10px auto;
+    background: #20283f;
+    outline: 1px solid #1d2840;
+    outline-offset: 6px;
+}
+
+  #eternal img {
+    height: 60px;
+    width: 60px;
+    float: left;
+    padding-right:9px;
+    margin-top: -10px; 
+  }
+  
+  #eternal img1 {
+    height: 490px;
+    width: 170px;
+    position: absolute;
+    filter: grayscale(100%);
+    background-size: cover;
+  opacity:0.4;
+ }
+
+#eternal h1 {
+  position: absolute;
+  bottom: 25px;
+  right: 350px;
+  background: none;
+  width: 150px;
+  font-family: "Ostrovsky";
+  text-transform: uppercase;
+  color: #EDC707;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 0.9;
+}
+
+  #eternal descs {
+    height: 65px;
+    width: 140px;
+    position: absolute;
+    bottom: 45px;
+    background: none;
+    left: 25px;
+    text-align: right;
+    font-family: "LT Remark";
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #EDC707;
+    line-height: 2.7;
+    font-weight: 700;
+  }
+
+  #eternal li1 {
+    height: 150px;
+    width: 1px;
+    background: #EDC707;
+    position: absolute;
+    bottom: 120px;
+    left: 170px;
+  }
+
+  #eternal-cont {
+    height: 438px;
+    width: 410px;
+    top: 30px;
+    right: 25px;
+    position: absolute;
+    background: none;
+    overflow: hidden
+  }
+
+  #eternal-cont1,
+  #eternal-cont2,
+  #eternal-cont3 {
+    height: 438px;
+    width: 410px;
+    background: none;
+    position: absolute;
+    color: #eee;
+    font-family: "LT Remark";
+    font-size: 13px;
+    transition: 0.6s;
+    overflow: auto;
+    line-height: 0.9;
+    text-align: justify;
+    scrollbar-width: thin;
+    scrollbar-color: #EDC707 #222; 
+  }
+
+  #eternaltab1+label,
+  #eternaltab2+label,
+  #eternaltab3+label {
+    display: block;
+    position: relative;
+    font-family: "LT Remark";
+    color: #eee;
+    font-size: 12px;
+    letter-spacing: 1px;
+    left: 120px;
+    top: 185px;
+    margin-bottom: 15px;
+    cursor: crosshair;
+    transition: 0.3s;
+    height: 20px;
+    line-height: 1;
+  }
+
+  #eternal input {
+    display: none
+  }
+
+  #eternaltab1:checked+label,
+  #eternaltab2:checked+label,
+  #eternaltab3:checked+label {
+    color: #EDC707;
+  }
+
+  #eternaltab1:checked+label~#eternal-cont>#eternal-cont1 {
+    top: 00px
+  }
+
+  #eternaltab1:checked+label~#eternal-cont>#eternal-cont2 {
+    top: 500px
+  }
+
+  #eternaltab1:checked+label~#eternal-cont>#eternal-cont3 {
+    top: 600px
+  }
+
+  #eternaltab2:checked+label~#eternal-cont>#eternal-cont1 {
+    top: -600px
+  }
+
+  #eternaltab2:checked+label~#eternal-cont>#eternal-cont2 {
+    top: 0px
+  }
+
+  #eternaltab2:checked+label~#eternal-cont>#eternal-cont3 {
+    top: 800px
+  }
+
+  #eternaltab3:checked+label~#eternal-cont>#eternal-cont1 {
+    top: -1000px
+  }
+
+  #eternaltab3:checked+label~#eternal-cont>#eternal-cont2 {
+    top: -600px
+  }
+
+  #eternaltab3:checked+label~#eternal-cont>#eternal-cont3 {
+    top: 0px
+  }
+
+
+@supports selector(::-webkit-scrollbar) {
+  #eternal-cont1::-webkit-scrollbar,
+  #eternal-cont2::-webkit-scrollbar,
+  #eternal-cont3::-webkit-scrollbar {
+    width: 5px
+  }
+
+  #eternal-cont1::-webkit-scrollbar-thumb,
+  #eternal-cont2::-webkit-scrollbar-thumb,
+  #eternal-cont3::-webkit-scrollbar-thumb {
+    background: #EDC707;
+    border: 2px solid #222
+  }
+
+  #eternal-cont1::-webkit-scrollbar-track,
+  #eternal-cont2::-webkit-scrollbar-track,
+  #eternal-cont3::-webkit-scrollbar-track {
+    background: #222;
+    border: none !important
+  }
+}
+
+  #eternal h2 {
+    font-family: "Ostrovsky";
+    font-style: italic;
+    font-size: 19px;
+    text-transform: uppercase;
+    border-style:solid 4px;
+    margin-bottom:1px;
+    color: #EDC707
+  }
+
+  #eternal ttl1,
+  #eternal ttl2,
+  #eternal ttl3 {
+    font-family: "Ostrovsky";
+    color: #eee;
+    width: 100px;
+    height: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 10px;
+    z-index: 10;
+    position: absolute;
+    left: -px;
+    text-align: right;
+    opacity: 0;
+    transition: 0.3s;
+    letter-spacing: 1px
+  }
+
+  #eternal ttl1 {
+    top: 180px;
+  }
+
+  #eternal ttl2 {
+    top: 215px;
+  }
+
+  #eternal ttl3 {
+    top: 250px;
+  }
+
+  #eternaltab1:checked+label~ttl1 {
+    opacity: 1
+  }
+
+  #eternaltab2:checked+label~ttl2 {
+    opacity: 1
+  }
+
+  #eternaltab3:checked+label~ttl3 {
+    opacity: 1
+  }
+
+  #eternal li2 {
+    height: 25px;
+    width: 1px;
+    left: 170px;
+    bottom: 0;
+    background: #EDC707;
+    position: absolute
+  }
+
+#quote {
+  display: block;
+  width: 370px;
+  height: auto;
+  padding: 9px;
+  margin-top:2px;
+  border: 1px solid #D3AF4C;
+}
+
+
+
+	/* Кастомный BBcode */
+
+
+	.name {
+		display: inline-table;
+		margin-top: 2px;
+		margin-left: 1px;
+		margin-right: 1px;
+		font-family: Alegreya !important;
+		height: 23px;
+		background: var(--background-mark);
+		color: var(--under-forum) !important;
+		outline: 1px solid;
+		outline-color: #363d6e54;
+		border: 3px solid;
+		border-color: var(--under-forum);
+		text-align: center;
+		width: 100%;
+	}

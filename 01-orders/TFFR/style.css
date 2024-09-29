@@ -843,6 +843,7 @@
     padding: 0;
     width: 100%;
     text-align: left;
+    max-width: unset;
   }
   
   /* Сообщения */
@@ -858,8 +859,43 @@
   
   /* Доп. поле 1 (лз) */
   .punbb .post-author .pa-fld1 {
-    width: 100%;
+    height: auto;
     order: 1;
+    cursor: pointer;
+    position: absolute;
+    margin-left: auto;
+    right: 10px;
+    bottom: 10px;
+    width: calc(100% - 80px);
+    pointer-events: none;
+  }
+
+  .punbb .post-author .pa-fld1 .fld-name {
+    pointer-events: all;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    border: 1px solid var(--font-accent-color);
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    color: var(--font-accent-color);
+  }
+
+.post-author .pa-fld1 {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+  .post-author .pa-fld1 .lz-container {
+    display: none;
+    width: calc(100% - 55px);
+    position: absolute;
+    top: -71px;
+    right: 34px;
+    max-width: 395px;
+    pointer-events: all;
   }
 
   .lz-container {width: 100%;}
@@ -870,7 +906,7 @@
 
   li.pa-online {
     order: 2;
-    margin: 5px -10px -5px;
+    margin: 15px -10px -5px;
     width: calc(100% + 20px);
   }
   
@@ -1290,6 +1326,96 @@
   #gostevaya .container > div {
      width: 100%;
   }
+
+
+/* Список ролей
+  --------------------------------- */
+
+#claims {
+  outline-offset: 5px;
+  margin: 6px auto;
+  width: calc(100% - 12px);
+}
+
+#claims maintitle {
+  line-height: 120%;
+  padding: 20px 20px 0;
+  font-size: 9vw;
+}
+
+#claims maintitle, #claims subtitle, #claims descript, #claims nameblock {
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+/* Время первых шагов
+----------------------------------------- */
+
+  #eternal {
+    width: calc(100% - 14px);
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  #eternal img1 {
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+#eternaltab1 + label, #eternaltab2 + label, #eternaltab3 + label {
+  left: initial;
+  top: initial;
+}
+
+  #eternal-cont {
+    width: calc(100% - 20px);
+    left: 10px;
+    top: 100px;
+    height: 390px;
+  }
+
+#eternal-cont1, #eternal-cont2, #eternal-cont3 {
+  width: 100%;
+}
+
+#eternal li1, #eternal li2 {display:  none;}
+
+  #eternal h1 {
+    top: 0;
+    right: unset;
+    font-size: 6vw;
+    padding: 10px;
+    width: 100% !important;
+  }
+
+#eternal ttl1 {
+  top: 60px;
+  text-align: center;
+  left: 10%;
+}
+
+  #eternal ttl2 {
+    top: 60px;
+    text-align: center;
+    left: 50%;
+    margin-right: -50%;
+    transform: translatex(-50%);
+  }
+
+#eternal ttl3 {
+  top: 60px;
+  text-align: center;
+  right: 10%;
+}
+
+#quote {
+  width: 100%;
+}
 
 }
 
