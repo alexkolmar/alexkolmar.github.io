@@ -12,6 +12,9 @@
 /* Porter */
 @import url(https://alexkolmar.github.io/fonts/Porter/stylesheet.css);
 
+/* Samory */
+@import url(https://forumstatic.ru/files/001c/3b/8d/40980.css);
+
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
 
@@ -1719,4 +1722,181 @@ img.avatardemo {
   line-height: 1.2;
   text-align: justify;
   letter-spacing: 2px;
+}
+
+/* Новости */
+
+.news {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 534px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 1px #733938;
+  border-radius: 25px;
+  background-color: #421715;
+}
+
+.n_inner {
+  border: 1px solid #783d3d;
+  border-radius: 25px;
+  background-color: var(--pun-bg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.n_header {
+  padding: 20px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.n_img {
+  height: 115px;
+  width: 115px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.n_main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.n_header h3 {
+  font-weight: normal;
+  font-size: 22px;
+  font-family: "Samory";
+  color: rgb(66, 23, 21);
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.n_header h3 b {
+  font-size: 36px;
+}
+
+.n_music {
+  padding: 0 15px;
+  display: flex;
+  min-height: 18px;
+  box-sizing: border-box;
+  align-items: center;
+  background: #421715;
+  width: 100%;
+  border-radius: 9px;
+  font-size: 10px;
+  font-family: "Arial";
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.n_date {
+  font-size: 24px;
+  font-family: var(--cal);
+  font-style: italic;
+  color: #421715;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.n_text {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(234, 232, 232, .5);
+  box-shadow: inset 0px 0px 18px 0px rgba(0, 0, 0, 0.2);
+  width: 502px;
+  box-sizing: border-box;
+}
+
+.n_text_inner {
+  padding-right: 5px;
+  max-height: 180px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #421715 #bb8383;
+}
+
+.n_text p {
+  padding: 0 !important;
+  font-size: 10px;
+  font-family: "Arial";
+  color: #421715;
+  line-height: 1.2;
+  text-align: left;
+}
+.n_ps {
+  margin: 5px auto;
+  font-size: 9px;
+  font-family: "Arial";
+  color: #000;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.n_ps i {
+  display: block;
+}
+
+.n_active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 66px;
+  margin-bottom: 10px;
+}
+
+.n_active img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.n_active_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 206px;
+  height: 52px;
+  border-radius: 20px;
+  background-color: var(--pun-bg);
+  box-shadow: inset 0px 0px 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.n_active span {
+  font-size: 10px;
+  font-family: "Arial";
+  color: #421715;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 2px;
+  transform: translateY(-50%);
 }
