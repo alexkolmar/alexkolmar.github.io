@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Samory';
+    src: url('https://alexkolmar.github.io/fonts/Samory/Samory.eot');
+    src: url('https://alexkolmar.github.io/fonts/Samory/Samory.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Samory/Samory.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Samory/Samory.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Samory/Samory.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Samory/Samory.svg#Samory') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1677,3 +1677,46 @@ img.avatardemo {
   line-height: 1.2;
   letter-spacing: 2px;
 }
+
+/* Простая тема */
+
+.theme {
+  margin: 0 auto;
+  padding-top: 30px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  width: 610px;
+  background: url(https://forumstatic.ru/files/001c/3b/8d/85890.png) no-repeat top center;
+}
+
+.t_inner {
+  background: #3c1d1c;
+  border-radius: 25px;
+}
+
+.t_quote {
+  padding: 0 70px;
+  font-size: 10px;
+  font-family: "Arial";
+  color: #fff;
+  line-height: 1.2;
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+.t_text {
+  border: 1px solid #6b3f3f;
+  border-radius: 25px;
+  background-color: var(--pun-bg);
+  padding: 10px 40px 15px;
+}
+
+.t_text p {
+  padding: 0 !important;
+  font-size: 10px;
+  font-family: "Arial";
+  color: #3c1d1c;
+  line-height: 1.2;
+  text-align: justify;
+  letter-spacing: 2px;
+}
