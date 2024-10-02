@@ -1,40 +1,40 @@
 <!-- display message -->
 
 <script>
-//by Orve, mention author if used etc etc tec
-$(document).ready(function() {
-    var localStorageKey = "HotkeyMessage";
-    var HotkeyMessage = localStorage.getItem(localStorageKey) === "true";
+ //by Orve, mention author if used etc etc tec
+ $(document).ready(function () {
+  var localStorageKey = "HotkeyMessage";
+  var HotkeyMessage = localStorage.getItem(localStorageKey) === "true";
 
-    // main func
-    function displayMessage() {
-        if (!HotkeyMessage) {
-            var message = $("<p>").text("Вы можете использовать горячие клавиши (как в Word) на нашем форуме! Для справки нажмите Ctrl + /").css({
-                color: "#704a18",
-                fontSize: "13px",
-                marginLeft: "8px"
-            });
-            $("#main-reply").before(message);
-        }
-    }
-
-    function markMessageAsSent() {
-        localStorage.setItem(localStorageKey, "true");
-    }
-    
-    displayMessage();
-
-    // AJAX listener
-    $(document).ajaxComplete(function(event, xhr, settings) {
-        if (settings.url.includes($("#post").attr("action"))) {
-            // update localstorage (garbage methods yay)
-            if (!HotkeyMessage) {
-                markMessageAsSent();
-                HotkeyMessage = true; 
-            }
-        }
+  // main func
+  function displayMessage() {
+   if (!HotkeyMessage) {
+    var message = $("<p>").text("Вы можете использовать горячие клавиши (как в Word) на нашем форуме! Для справки нажмите Ctrl + /").css({
+     color: "#704a18",
+     fontSize: "13px",
+     marginLeft: "8px"
     });
-});
+    $("#main-reply").before(message);
+   }
+  }
+
+  function markMessageAsSent() {
+   localStorage.setItem(localStorageKey, "true");
+  }
+
+  displayMessage();
+
+  // AJAX listener
+  $(document).ajaxComplete(function (event, xhr, settings) {
+   if (settings.url.includes($("#post").attr("action"))) {
+    // update localstorage (garbage methods yay)
+    if (!HotkeyMessage) {
+     markMessageAsSent();
+     HotkeyMessage = true;
+    }
+   }
+  });
+ });
 </script>
 
 <!-- BB-цитирование © Alex_63, 2024 -->
@@ -44,128 +44,139 @@ $(document).ready(function() {
 <!-- Мгновенный предпросмотр © Alex_63 -->
 
 <script type="text/javascript">
-var PPREV = {};
-PPREV.position = 0; //Положение окна Предпросмотра: 0 — над полем ввода, 1 — под полем ввода, 2 — справа
-PPREV.quote_cite = 'Написал(а):'; //Надпись в окне цитаты
+ var PPREV = {};
+ PPREV.position = 0; //Положение окна Предпросмотра: 0 — над полем ввода, 1 — под полем ввода, 2 — справа
+ PPREV.quote_cite = 'Написал(а):'; //Надпись в окне цитаты
 </script>
-<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/10524.js"></script> 
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/10524.js"></script>
 
 <!-- Кнопка отключения мгновенного предпросмотра -->
 <script type="text/javascript">(function () {
-		var a = 'Включить быстрый предпросмотр';
-		var b = 'Отключить быстрый предпросмотр';
-		var d = '_PreviewToggle';
-		setCookiePPrev = function (a, b, c) { if (c) { var d = new Date(); d.setTime(d.getTime() + c); } if (a && b) document.cookie = a + '=' + b + (c ? '; expires=' + d.toUTCString() : ''); else return false; }
-		getCookiePPrev = function (a) { var b = new RegExp(a + '=([^;]){1,}'); var c = b.exec(document.cookie); if (c) c = c[0].split('='); else return false; return c[1] ? c[1] : false; }
-		$('<small id="togglePreview"><input type="button" class="button" value="' + b + '" onclick="togglePreview(this)"/></small>').insertAfter('#post fieldset:last legend');
-		var x = ParseContent;
-		window.togglePreview = function (sel) {//alert(sel.value);
-			if (sel.value == a) { sel.value = b; setCookiePPrev(d, '0', -1000); ParseContent = x; ParseContent(); $('#post-preview').show(); return }
-			if (sel.value == b) { sel.value = a; setCookiePPrev(d, 'OFF', 30 * 3600 * 24 * 30 * 1000); if ($('#pun-viewtopic').length) { $('#post-preview').hide() } ParseContent = function () { return }; return }
-		}; if (getCookiePPrev(d) == 'OFF') { $('#togglePreview>.button').click() };
-	}())
+  var a = 'Включить быстрый предпросмотр';
+  var b = 'Отключить быстрый предпросмотр';
+  var d = '_PreviewToggle';
+  setCookiePPrev = function (a, b, c) { if (c) { var d = new Date(); d.setTime(d.getTime() + c); } if (a && b) document.cookie = a + '=' + b + (c ? '; expires=' + d.toUTCString() : ''); else return false; }
+  getCookiePPrev = function (a) { var b = new RegExp(a + '=([^;]){1,}'); var c = b.exec(document.cookie); if (c) c = c[0].split('='); else return false; return c[1] ? c[1] : false; }
+  $('<small id="togglePreview"><input type="button" class="button" value="' + b + '" onclick="togglePreview(this)"/></small>').insertAfter('#post fieldset:last legend');
+  var x = ParseContent;
+  window.togglePreview = function (sel) {//alert(sel.value);
+   if (sel.value == a) { sel.value = b; setCookiePPrev(d, '0', -1000); ParseContent = x; ParseContent(); $('#post-preview').show(); return }
+   if (sel.value == b) { sel.value = a; setCookiePPrev(d, 'OFF', 30 * 3600 * 24 * 30 * 1000); if ($('#pun-viewtopic').length) { $('#post-preview').hide() } ParseContent = function () { return }; return }
+  }; if (getCookiePPrev(d) == 'OFF') { $('#togglePreview>.button').click() };
+ }())
 </script>
 <script type="text/javascript">
- $(function(){ $('#togglePreview').appendTo($('#post-form .formsubmit'));});
+ $(function () { $('#togglePreview').appendTo($('#post-form .formsubmit')); });
 </script>
 
 <!--  Расширенная палитра цветов -->
 
 <style type="text/css">
-    input[type=color]::-webkit-color-swatch {background-color: transparent !important; border:none;}
-    input[type=color]::-moz-color-swatch {background-color: transparent !important; border:none;}
-    #litr {background: url(https://forumstatic.ru/files/001b/d9/4a/62530.png) no-repeat scroll 2px 4px / cover; background-size: 19px;}
-    </style>
-    
+ input[type=color]::-webkit-color-swatch {
+  background-color: transparent !important;
+  border: none;
+ }
+
+ input[type=color]::-moz-color-swatch {
+  background-color: transparent !important;
+  border: none;
+ }
+
+ #litr {
+  background: url(https://forumstatic.ru/files/001b/d9/4a/62530.png) no-repeat scroll 2px 4px / cover;
+  background-size: 19px;
+ }
+</style>
+
 <script type="text/javascript">
-    $('#color-area tr').append('<td><input type="color" id="litr" style="cursor:pointer;padding:0;width:22px;" title="Показать всю палитру" value="#ffa500"></td>');$('#litr').change(function(){bbcode('[color='+this.value+']','[/color]');});
-    </script>
-    
+ $('#color-area tr').append('<td><input type="color" id="litr" style="cursor:pointer;padding:0;width:22px;" title="Показать всю палитру" value="#ffa500"></td>'); $('#litr').change(function () { bbcode('[color=' + this.value + ']', '[/color]'); });
+</script>
+
 <!-- Стикеры -->
-    
+
 <script src="https://forumstatic.ru/files/0017/95/29/40399.js"></script>
-        
+
 <script>
-$(document).ready(function() {
+ $(document).ready(function () {
   hvStickerPack.init("https://forumstatic.ru/files/001c/16/c4/11751.txt?v=10");
-});
+ });
 </script>
 
 <!-- Размер стикеров -->
 
 <script type="text/javascript">
-function getStoredMaxHeight() {
-    var storedHeight = localStorage.getItem('maxHeightValue');
-    return storedHeight ? parseInt(storedHeight, 10) : 128;
-}
+ function getStoredMaxHeight() {
+  var storedHeight = localStorage.getItem('maxHeightValue');
+  return storedHeight ? parseInt(storedHeight, 10) : 128;
+ }
 
-function storeMaxHeight(value) {
-    localStorage.setItem('maxHeightValue', value);
-}
+ function storeMaxHeight(value) {
+  localStorage.setItem('maxHeightValue', value);
+ }
 
-var maxHeightValue = getStoredMaxHeight();
+ var maxHeightValue = getStoredMaxHeight();
 
-function setImageMaxHeight(selector, wordInSrc) {
-    var $images = $(selector).find('img[src*="' + wordInSrc + '"]');
-    if ($images.length > 0) {
-        $images.css('max-height', maxHeightValue + 'px');
-    }
-}
+ function setImageMaxHeight(selector, wordInSrc) {
+  var $images = $(selector).find('img[src*="' + wordInSrc + '"]');
+  if ($images.length > 0) {
+   $images.css('max-height', maxHeightValue + 'px');
+  }
+ }
 
-setImageMaxHeight('.post', 'vkklub');
+ setImageMaxHeight('.post', 'vkklub');
 
-$(document).on('pun_main_ready pun_post pun_edit pun_preview', function () {
+ $(document).on('pun_main_ready pun_post pun_edit pun_preview', function () {
+  setImageMaxHeight('.post', 'vkklub');
+ });
+
+ var inputAppended = false;
+
+ function appendInputToStickerModal() {
+  var $stickerModal = $('.hvStickerPackModal');
+  if ($stickerModal.length > 0 && !inputAppended) {
+   var $inputContainer = $('<div class="maxHeightInputContainer"></div>');
+   var $inputField = $('<input type="range" id="maxHeightInput" value="' + maxHeightValue + '" min="40" max="140" step="10" title="Размер стикеров">');
+   $inputContainer.append($inputField);
+   $stickerModal.append($inputContainer);
+
+   $inputField.on('input', function () {
+    maxHeightValue = parseInt($(this).val(), 10);
+    storeMaxHeight(maxHeightValue);
     setImageMaxHeight('.post', 'vkklub');
-});
+   });
 
-var inputAppended = false;
+   inputAppended = true;
+  }
+ }
 
-function appendInputToStickerModal() {
-    var $stickerModal = $('.hvStickerPackModal');
-    if ($stickerModal.length > 0 && !inputAppended) {
-        var $inputContainer = $('<div class="maxHeightInputContainer"></div>');
-        var $inputField = $('<input type="range" id="maxHeightInput" value="' + maxHeightValue + '" min="40" max="140" step="10" title="Размер стикеров">');
-        $inputContainer.append($inputField);
-        $stickerModal.append($inputContainer);
-
-        $inputField.on('input', function () {
-            maxHeightValue = parseInt($(this).val(), 10);
-            storeMaxHeight(maxHeightValue);
-            setImageMaxHeight('.post', 'vkklub');
-        });
-
-        inputAppended = true;
-    }
-}
-
-$(document).ready(function () {
-    $('#button-sticker').click(function () {
-        setTimeout(appendInputToStickerModal, 100);
-    });
-});
+ $(document).ready(function () {
+  $('#button-sticker').click(function () {
+   setTimeout(appendInputToStickerModal, 100);
+  });
+ });
 </script>
 
-    
+
 <!-- Cчетчик символов by Orve -->
 
 <script>
-    const epl = $("#main-reply");
-    const str = '<small id="plng">Написано символов: <b>00</b> </small>';
-    epl.parents("fieldset").find("legend").prepend(str);
+ const epl = $("#main-reply");
+ const str = '<small id="plng">Написано символов: <b>00</b> </small>';
+ epl.parents("fieldset").find("legend").prepend(str);
 
-    const updateCounter = () => {
-        const charCount = epl.val().length;
-        const formattedCount = charCount > 9 ? charCount : `0${charCount}`;
-        $("#plng b").text(formattedCount);
-    };
+ const updateCounter = () => {
+  const charCount = epl.val().length;
+  const formattedCount = charCount > 9 ? charCount : `0${charCount}`;
+  $("#plng b").text(formattedCount);
+ };
 
-    updateCounter();
+ updateCounter();
 
-    $(".pl-quote").click(() => {
-        setTimeout(updateCounter, 100);
-    });
+ $(".pl-quote").click(() => {
+  setTimeout(updateCounter, 100);
+ });
 
-    epl.on('input mouseout mousemove', updateCounter);
+ epl.on('input mouseout mousemove', updateCounter);
 </script>
 
 <!-- hotkeys -->
@@ -175,142 +186,137 @@ $(document).ready(function () {
 <!--Дайсы-->
 
 <script type="text/javascript">
-//dice button
-if(form=document.getElementById("form-buttons"))
-{
-   var buttonCell = form.getElementsByTagName("tr")[0].insertCell(19);
-   buttonCell.id = "button-dice";
-   buttonCell.title = "Кубики";
-   buttonCell.innerHTML='<img src="/i/blank.gif">';
-}
+ //dice button
+ if (form = document.getElementById("form-buttons")) {
+  var buttonCell = form.getElementsByTagName("tr")[0].insertCell(19);
+  buttonCell.id = "button-dice";
+  buttonCell.title = "Кубики";
+  buttonCell.innerHTML = '<img src="/i/blank.gif">';
+ }
 </script>
 
 <div id="diceModal" class="modal">
-        <div class="modal-content">
-        <h3>Кубики</h3>
-        <input type="number" id="diceCount" placeholder="Количество кубиков" min="1" max="9">
-        <input type="number" id="diceSides" placeholder="Сколько граней у кубика?" min="1" max="20">
-        <span class='button' id="rollDiceBtn">Кинуть</span>
-    </div>
+ <div class="modal-content">
+  <h3>Кубики</h3>
+  <input type="number" id="diceCount" placeholder="Количество кубиков" min="1" max="9">
+  <input type="number" id="diceSides" placeholder="Сколько граней у кубика?" min="1" max="20">
+  <span class='button' id="rollDiceBtn">Кинуть</span>
+ </div>
 </div>
 
 <script>
-// Modal functionality
-var modal = document.getElementById("diceModal");
-var btn = document.getElementById("button-dice");;
+ // Modal functionality
+ var modal = document.getElementById("diceModal");
+ var btn = document.getElementById("button-dice");;
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+ btn.onclick = function () {
+  modal.style.display = "block";
+ }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+ window.onclick = function (event) {
+  if (event.target == modal) {
+   modal.style.display = "none";
+  }
+ }
 
 
-document.getElementById("rollDiceBtn").onclick = function() {
-    dice();
-    modal.style.display = "none"; 
-}
+ document.getElementById("rollDiceBtn").onclick = function () {
+  dice();
+  modal.style.display = "none";
+ }
 </script>
 
 <script>
-    // Dice rolling logic
-function dice() {
-    var CountCube = document.getElementById("diceCount").value;
-    var SideCube = document.getElementById("diceSides").value;
-    var FoundErrors = '';
-    var diceRes = "";
+ // Dice rolling logic
+ function dice() {
+  var CountCube = document.getElementById("diceCount").value;
+  var SideCube = document.getElementById("diceSides").value;
+  var FoundErrors = '';
+  var diceRes = "";
 
-    // Validation
-    if (CountCube > 9) {
-        alert("У ГМа не хватает кубов");
-        return false;
-    }
-    if (SideCube > 20) {
-        alert("Мы играем в D20...");
-        return false;
-    }
-    if (!CountCube || !SideCube) {
-        return false;
-    }
+  // Validation
+  if (CountCube > 9) {
+   alert("У ГМа не хватает кубов");
+   return false;
+  }
+  if (SideCube > 20) {
+   alert("Мы играем в D20...");
+   return false;
+  }
+  if (!CountCube || !SideCube) {
+   return false;
+  }
 
-    // Rolling dice
-    for (i = 0; i < CountCube; i++) {
-        var dice = Math.round(Math.random() * SideCube);
-        if (dice == 0) dice = 1;
-        diceRes += dice * 1936 + "-";
-    }
+  // Rolling dice
+  for (i = 0; i < CountCube; i++) {
+   var dice = Math.round(Math.random() * SideCube);
+   if (dice == 0) dice = 1;
+   diceRes += dice * 1936 + "-";
+  }
 
-        smile('[dice='+diceRes+CountCube+':'+SideCube+
-              ':0:]');
-}
+  smile('[dice=' + diceRes + CountCube + ':' + SideCube +
+   ':0:]');
+ }
 </script>
 
 
 
 <script type="text/javascript">
-function unhtml(s)
-{ return s.replace(/&/g,"&").replace(/</g,"<").replace(/>/g,">"); }
-function numword(s,one,two,many)
-{ return(((s%100>=10 && s%100<=20) || s%10>=5) ? many : 
-          (s%10==1 ? one : two)); }
+ function unhtml(s) { return s.replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">"); }
+ function numword(s, one, two, many) {
+  return (((s % 100 >= 10 && s % 100 <= 20) || s % 10 >= 5) ? many :
+   (s % 10 == 1 ? one : two));
+ }
 
-function addDice(post,from,internal)
-{
-  var str=post.innerHTML, num=-1, date=-1, a, fCanRandomise=0, u=""; 
-  while(post=post.parentNode) 
-    if(post.className=="container")
-      if(post=post.parentNode)
-      {
-        if(a=post.innerHTML.match(
-          /class[^<>]+permalink[^<>]+#p(\d+)[^<>]*>[^<>]*(\d+):(\d+)[^<>]*<\/a>/i))
-            { num=a[1]; date=a[4]; 
-              fCanRandomise=1; break; }
-      }
-  var ran=parseInt(num+date);
-  return str.replace(
-     /\[dice=((?:\d+-)*)(?:(\d)(\d+)|(\d+)(:)(\d+)(?::(-?\d+):([^\]]*))?)]/g,
-  function(a,dice,diceC,diceS,adieC,fNewScheme,adieS,adieB,adieR) 
-  {
-    diceC=parseInt(fNewScheme ? adieC : diceC);
-    diceS=parseInt(fNewScheme ? adieS : diceS);
-    adieB=parseInt(adieB ? adieB : 0);
-    if(adieB>0) adieB='+'+adieB;
-    if(!fCanRandomise && fNewScheme)
-      return '<div class="quote-box"><blockquote><p><b>СБОЙ ДАЙСОМЕТАЛКИ - СООБЩИТЕ АДМИНАМ</b></p></blockquote></div> ';
-    var i,diceR=0,
-        s='<div class="quote-box"><blockquote '+  
-          'style="text-align:left"><p>'+
-           '<b>Игрок кинул '
-           +diceC+numword(diceC,' куб с ',' куба с ',' кубов с ')
-           +diceS+numword(diceS,' гранью',' гранями',' гранями')
-           +(adieB ? (adieB>0 ? ' и бонусом ' : ' и пенальти ')+adieB : '')+
-           (adieR ? ', моделируя событие:</b><br><i>'+adieR+'</i><b>' : '')
-           +'<br /><br />Результаты броска '+
-           (fNewScheme ? '' : '(старая схема)')+'</b>: (';
-    dice=dice.split("-"); 
-    for(i=0; i<dice.length-1; ++i)
-    {
-       var d=parseInt(dice[i]/1936); 
-       date=((date>>1)+((date&1)<<21))&0x3fffff;
-       num=((num>>1)+((num&1)<<22))&0x7fffff;
-       if(fNewScheme) d=(ran=(((ran>>1)+(((ran&1) ? 0 : 1)<<23)+d+date)^num)&0xffffff)%diceS +1;
-       diceR+=d;
-       s+= (i?' + ':'') + d;
+ function addDice(post, from, internal) {
+  var str = post.innerHTML, num = -1, date = -1, a, fCanRandomise = 0, u = "";
+  while (post = post.parentNode)
+   if (post.className == "container")
+    if (post = post.parentNode) {
+     if (a = post.innerHTML.match(
+      /class[^<>]+permalink[^<>]+#p(\d+)[^<>]*>[^<>]*(\d+):(\d+)[^<>]*<\/a>/i)) {
+      num = a[1]; date = a[4];
+      fCanRandomise = 1; break;
+     }
     }
-    if(adieB) diceR+=parseInt(adieB);
-    return(s+ (adieB ? ')'+adieB : ')')+ 
-           '=' + diceR + '</p></blockquote></div>');
-  });
-}
-if(document.URL.indexOf("viewtopic.php")!=-1)
-{
-  elm=document.getElementById("pun-main").getElementsByTagName("div");
-  for(x=0; x<elm.length; ++x) 
-    if(elm[x].className=="post-content")
-      elm[x].innerHTML=addDice(elm[x]); 
-}
+  var ran = parseInt(num + date);
+  return str.replace(
+   /\[dice=((?:\d+-)*)(?:(\d)(\d+)|(\d+)(:)(\d+)(?::(-?\d+):([^\]]*))?)]/g,
+   function (a, dice, diceC, diceS, adieC, fNewScheme, adieS, adieB, adieR) {
+    diceC = parseInt(fNewScheme ? adieC : diceC);
+    diceS = parseInt(fNewScheme ? adieS : diceS);
+    adieB = parseInt(adieB ? adieB : 0);
+    if (adieB > 0) adieB = '+' + adieB;
+    if (!fCanRandomise && fNewScheme)
+     return '<div class="quote-box"><blockquote><p><b>СБОЙ ДАЙСОМЕТАЛКИ - СООБЩИТЕ АДМИНАМ</b></p></blockquote></div> ';
+    var i, diceR = 0,
+     s = '<div class="quote-box"><blockquote ' +
+      'style="text-align:left"><p>' +
+      '<b>Игрок кинул '
+      + diceC + numword(diceC, ' куб с ', ' куба с ', ' кубов с ')
+      + diceS + numword(diceS, ' гранью', ' гранями', ' гранями')
+      + (adieB ? (adieB > 0 ? ' и бонусом ' : ' и пенальти ') + adieB : '') +
+      (adieR ? ', моделируя событие:</b><br><i>' + adieR + '</i><b>' : '')
+      + '<br /><br />Результаты броска ' +
+      (fNewScheme ? '' : '(старая схема)') + '</b>: (';
+    dice = dice.split("-");
+    for (i = 0; i < dice.length - 1; ++i) {
+     var d = parseInt(dice[i] / 1936);
+     date = ((date >> 1) + ((date & 1) << 21)) & 0x3fffff;
+     num = ((num >> 1) + ((num & 1) << 22)) & 0x7fffff;
+     if (fNewScheme) d = (ran = (((ran >> 1) + (((ran & 1) ? 0 : 1) << 23) + d + date) ^ num) & 0xffffff) % diceS + 1;
+     diceR += d;
+     s += (i ? ' + ' : '') + d;
+    }
+    if (adieB) diceR += parseInt(adieB);
+    return (s + (adieB ? ')' + adieB : ')') +
+     '=' + diceR + '</p></blockquote></div>');
+   });
+ }
+ if (document.URL.indexOf("viewtopic.php") != -1) {
+  elm = document.getElementById("pun-main").getElementsByTagName("div");
+  for (x = 0; x < elm.length; ++x)
+   if (elm[x].className == "post-content")
+    elm[x].innerHTML = addDice(elm[x]);
+ }
 </script>

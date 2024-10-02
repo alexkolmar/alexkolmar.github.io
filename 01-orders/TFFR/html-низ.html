@@ -1,3 +1,56 @@
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var lastNavItem = document.querySelector('#pun-navlinks ul li:last-child');
+		var ulinks = document.getElementById('pun-ulinks');
+		lastNavItem.insertAdjacentElement('afterend', ulinks);
+	});
+</script>
+
+<script>
+	$(document).ready(function () {
+		function checkScreenWidth() {
+			return $(window).width() < 540;
+		}
+
+		function toggleLzContainer() {
+			$('.post-author .pa-fld1 .fld-name').on('click', function (e) {
+				if (checkScreenWidth()) {
+					e.stopPropagation();
+					$(this).closest('.pa-fld1').find('.lz-container').toggle();
+				}
+			});
+
+			$(document).on('click', function (e) {
+				if (checkScreenWidth() && !$(e.target).closest('.pa-fld1').length) {
+					$('.lz-container').hide();
+				}
+			});
+		}
+
+		toggleLzContainer();
+
+		$(window).resize(function () {
+			if (checkScreenWidth()) {
+				toggleLzContainer();
+			} else {
+				$('.lz-container').hide();
+				$('.post-author .pa-fld1 .fld-name').off('click');
+			}
+		});
+	});
+</script>
+
+<script>
+	$(document).ready(function () {
+		$('.punbb .post-author .pa-fld1 .fld-name').each(function () {
+			var ageContent = $(this).closest('.pa-fld1').find('#lz_age a').text().trim();
+			var alignment = ageContent.split(',')[1]?.trim();
+			$(this).text(alignment);
+		});
+	});
+
+</script>
+
 <!-- БАННЕРЫ -->
 
 <div class="banners">
@@ -28,34 +81,35 @@
 
 
 <script>
-hvScriptSet.addMask({
-    defaultAvatar: ['https://forumstatic.ru/files/001c/16/c4/92352.png'],
-    guestAccess: ['Бесконченые хроники'],
-    forumAccessExtended: {
-        'Настоящее': ['Игроки'],
-        'Прошлое': ['Игроки'],
-        'Недостижимая даль': [ 'Игроки'],
-        'Бесконченые хроники': ['Игроки'],
-        'Беседка под тисом': ['Новоприбывшие', 'Игроки'],
-        'Записки между строк': ['Игроки']
-    },
-    changeList: {
-        'pafld1': {
-            title: 'ЛЗ',
-            description: 'Личное звание',
-            tag: 'lzv',
-            class: 'pa-fld1',
-            defaultCode: '<div class="lz-container"><div class="lz_age"><a>Возраст,мировоззрение</a></div><div class="lz_desc">Описание персонажа маски</div></div>',
-            type: 'html'
-        }
-    },
-    userFields: ['pa-author', 'pa-title', 'pa-avatar', 'pa-fld1', 'pa-posts', 'pa-respect', 'pa-online']
-});
+	hvScriptSet.addMask({
+		defaultAvatar: ['https://forumstatic.ru/files/001c/16/c4/92352.png'],
+		guestAccess: ['Бесконченые хроники'],
+		forumAccessExtended: {
+			'Настоящее': ['Игроки'],
+			'Прошлое': ['Игроки'],
+			'Недостижимая даль': ['Игроки'],
+			'Бесконченые хроники': ['Игроки'],
+			'Беседка под тисом': ['Новоприбывшие', 'Игроки'],
+			'Записки между строк': ['Игроки']
+		},
+		changeList: {
+			'pafld1': {
+				title: 'ЛЗ',
+				description: 'Личное звание',
+				tag: 'lzv',
+				class: 'pa-fld1',
+				defaultCode: '<div class="lz-container"><div class="lz_age"><a>Возраст,мировоззрение</a></div><div class="lz_desc">Описание персонажа маски</div></div>',
+				type: 'html'
+			}
+		},
+		userFields: ['pa-author', 'pa-title', 'pa-avatar', 'pa-fld1', 'pa-posts', 'pa-respect', 'pa-online']
+	});
 </script>
 
 
 <!-- Кнопка новые сообщения -->
-<script type="text/javascript">$('#pun-ulinks ul').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>');</script>
+<script
+	type="text/javascript">$('#pun-ulinks ul').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>');</script>
 
 
 
@@ -179,9 +233,9 @@ hvScriptSet.addMask({
 		cursor: pointer;
 		transition: all .3s
 	}
-	
+
 	#area_AutoBorder p:hover {
-		  color: var(--font-accent-color);
+		color: var(--font-accent-color);
 	}
 
 
@@ -286,16 +340,16 @@ hvScriptSet.addMask({
 	ChitatNik = "Seer";
 	ChitatPas = "897SeeYourMom";
 	var L = "<div id=\"CH_loginDiv\" style=\"display:none;\">\
-<form id=\"form_login\" name=\"login\" method=\"post\" action=\"login.php?action=in\" onsubmit=\"return check_form()\">\
-<fieldset>\
-<input type=\"hidden\" name=\"form_sent\" value=\"1\"/>\
-<input type=\"text\" id=\"fld1\" name=\"req_username\" size=\"21\" maxlength=\"25\"/>\
-<input type=\"text\" id=\"fld2\" name=\"req_password\" size=\"7\" maxlength=\"16\"/>\
-<input type=\"submit\" class=\"button\" name=\"login\"/>\
-</fieldset>\
-</form>\
-</div>\
-<li id=\"navchitat\"><a href=\"#\" onclick=\"ChitatIn();return false\"><span>Чтец 18+</span></a></li>";
+	<form id=\"form_login\" name=\"login\" method=\"post\" action=\"login.php?action=in\" onsubmit=\"return check_form()\">\
+	<fieldset>\
+	<input type=\"hidden\" name=\"form_sent\" value=\"1\"/>\
+	<input type=\"text\" id=\"fld1\" name=\"req_username\" size=\"21\" maxlength=\"25\"/>\
+	<input type=\"text\" id=\"fld2\" name=\"req_password\" size=\"7\" maxlength=\"16\"/>\
+	<input type=\"submit\" class=\"button\" name=\"login\"/>\
+	</fieldset>\
+	</form>\
+	</div>\
+	<li id=\"navchitat\"><a href=\"#\" onclick=\"ChitatIn();return false\"><span>Чтец 18+</span></a></li>";
 	if ($("#navlogin").html() != null) {
 		$("#navlogin").after(L) //navlogin
 		$("#CH_loginDiv #fld1").val(ChitatNik)
@@ -343,7 +397,7 @@ hvScriptSet.addMask({
 
 <!-- Тег абзаца + ajax-->
 <script type="text/javascript">
-    //IIFE
+	//IIFE
 	(function () {
 		var b = '[indent]';
 		var indent = '<span style="display: inline-block; margin-left: 2.2em;"></span>';
@@ -384,77 +438,77 @@ hvScriptSet.addMask({
 </script>
 
 <!-- Кликабельность ника для гостей, Alex, Teswa -->
-    
-<script>$(".post[data-group-id=3]").find(".pa-author").html(function(){return this.innerHTML.replace(/(<.+>)(.+)$/,'$1<a href="javascript:to(\'$2\')">$2</a>')});</script>
 
-<script>$('.pa-author a').each((i,a) => $(a).attr('href', "javascript:to('" + a.innerHTML.replace("'", "\\'") + "')"));</script>
+<script>$(".post[data-group-id=3]").find(".pa-author").html(function () { return this.innerHTML.replace(/(<.+>)(.+)$/, '$1<a href="javascript:to(\'$2\')">$2</a>') });</script>
+
+<script>$('.pa-author a').each((i, a) => $(a).attr('href', "javascript:to('" + a.innerHTML.replace("'", "\\'") + "')"));</script>
 
 
 <!-- Пагинатор -->
 
 <script>
-    $(document).ready(function() {
-    if ($('#pun-viewtopic, #pun-viewforum, #messages, #pun-respect, #pun-positive, #userlist').length &&
-        $('.pagelink a').length) {
-        initPaginator();
+	$(document).ready(function () {
+		if ($('#pun-viewtopic, #pun-viewforum, #messages, #pun-respect, #pun-positive, #userlist').length &&
+			$('.pagelink a').length) {
+			initPaginator();
 
 
-        $('.pagelink').on('mouseenter', function() {
-            $(this).find('#pagenav').show();
-        }).on('mouseleave', function() {
-            $(this).find('#pagenav').hide();
-        });
+			$('.pagelink').on('mouseenter', function () {
+				$(this).find('#pagenav').show();
+			}).on('mouseleave', function () {
+				$(this).find('#pagenav').hide();
+			});
 
-        $('#pagenav').on('mousemove touchmove', function(e) {
-            var offset = $(this).offset();
-            var currentY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
-            var y = parseInt(currentY - offset.top);
-            togglePageVisibility(y);
-        });
-    }
+			$('#pagenav').on('mousemove touchmove', function (e) {
+				var offset = $(this).offset();
+				var currentY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
+				var y = parseInt(currentY - offset.top);
+				togglePageVisibility(y);
+			});
+		}
 
-    function initPaginator() {
-        var maxPages = getMaxPages();
-        if (!maxPages || maxPages <= 4) return; // hide if fewer than 4 pages
+		function initPaginator() {
+			var maxPages = getMaxPages();
+			if (!maxPages || maxPages <= 4) return; // hide if fewer than 4 pages
 
-        var paginatorHTML = createPaginatorHTML(maxPages);
-        var bgColor = $('.crumbs:first').css('background-color');
-        var borderColor = $('.crumbs:first').css('border-bottom-color');
+			var paginatorHTML = createPaginatorHTML(maxPages);
+			var bgColor = $('.crumbs:first').css('background-color');
+			var borderColor = $('.crumbs:first').css('border-bottom-color');
 
-        $('.pagelink').append(paginatorHTML);
-        $('#pagenav').css({
-            'border-color': borderColor,
-            'background-color': bgColor
-        });
-    }
+			$('.pagelink').append(paginatorHTML);
+			$('#pagenav').css({
+				'border-color': borderColor,
+				'background-color': bgColor
+			});
+		}
 
-    function getMaxPages() {
-        var lastPage = parseInt($('.pagelink a:not(.next):last').html(), 10);
-        var currentPage = parseInt($('.pagelink strong').html(), 10);
-        return Math.max(lastPage, currentPage);
-    }
+		function getMaxPages() {
+			var lastPage = parseInt($('.pagelink a:not(.next):last').html(), 10);
+			var currentPage = parseInt($('.pagelink strong').html(), 10);
+			return Math.max(lastPage, currentPage);
+		}
 
-    function createPaginatorHTML(maxPages) {
-        var linkBase = $('.pagelink a:first').attr('href').replace(/&.+$/, '');
-        var paginator = '<div id="pagenav" style="display:none;position:relative;overflow:auto;"><div id="paginator">';
+		function createPaginatorHTML(maxPages) {
+			var linkBase = $('.pagelink a:first').attr('href').replace(/&.+$/, '');
+			var paginator = '<div id="pagenav" style="display:none;position:relative;overflow:auto;"><div id="paginator">';
 
-        for (var p = 1; p <= maxPages; p++) {
-            var cssClass = p.toString().length >= 3 ? 'second' : 'first';
-            paginator += '<a class="' + cssClass + '" href="' + linkBase + '&p=' + p + '">' + p + '</a>';
-        }
+			for (var p = 1; p <= maxPages; p++) {
+				var cssClass = p.toString().length >= 3 ? 'second' : 'first';
+				paginator += '<a class="' + cssClass + '" href="' + linkBase + '&p=' + p + '">' + p + '</a>';
+			}
 
-        paginator += '</div></div>';
-        return paginator;
-    }
+			paginator += '</div></div>';
+			return paginator;
+		}
 
-    function togglePageVisibility(cursorY) {
-        if (cursorY > 90) {
-            $('.second').fadeIn(200);
-        } else {
-            $('.second').fadeOut(200);
-        }
-    }
-});
+		function togglePageVisibility(cursorY) {
+			if (cursorY > 90) {
+				$('.second').fadeIn(200);
+			} else {
+				$('.second').fadeOut(200);
+			}
+		}
+	});
 </script>
 
 <!-- Копирование кода со сменой стиля блока + ajax © ForumD.ru, Gerda -->

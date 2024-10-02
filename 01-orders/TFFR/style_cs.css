@@ -230,7 +230,7 @@ body::before {
   margin: 0 auto 20px;
   padding-bottom: 75px;
   width: 1062px;
-  background: url(https://forumstatic.ru/files/001c/16/c4/75515.webp) no-repeat top center, url(https://i.vgy.me/9jyKo6.png) no-repeat bottom center, url(https://i.vgy.me/ocSxEK.png) repeat-y top center;
+  background:  url(https://forumstatic.ru/files/001c/16/c4/75515.webp) no-repeat top center, url(https://i.vgy.me/9jyKo6.png) no-repeat bottom center, url(https://i.vgy.me/ocSxEK.png) repeat-y top center;
   border-width: 0 2px 2px 2px;
   border-style: solid;
   border-color: #7d641e;
@@ -473,6 +473,14 @@ td.tcr {
 .punbb td .user-avatar .avatar-image {
   opacity: 0.85;
   transition: opacity .7s;
+}
+
+.punbb td .user-avatar.no-avatar .avatar-image {
+  background: url(https://forumstatic.ru/files/001c/16/c4/92352.png) no-repeat top center/cover !important;
+}
+
+.punbb .tcr .user-avatar .isonline {
+  background: #898fe2 !important;
 }
 
 /* Иконки */
@@ -747,7 +755,7 @@ li#onlinelist {
 }
 
 .forum_name::before {
-    content: 'tales form the forgotten realms';
+    content: 'tales from the forgotten realms';
 }
 
 .tab_inner {
@@ -1064,6 +1072,19 @@ li.pa-title {
   margin: auto;
 }
 
+.post .post-author.no-avatar .pa-title::after {
+  content: '';
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://forumstatic.ru/files/001c/16/c4/92352.png);
+  width: 180px;
+  height: 270px;
+  border: 1px solid var(--font-accent-color);
+  margin: 8px auto 8px;
+}
+
  .punbb .post-author .pa-fld1 .fld-name, .punbb .post-author .pa-fld1 > br {display: none;}
 
 .lz-container {
@@ -1357,6 +1378,8 @@ fieldset legend span {
   display: none;
   font-weight: bold;
 }
+
+div.resizable-textarea > span  .grippie {display: none;}
 
 fieldset fieldset {
   border: none;

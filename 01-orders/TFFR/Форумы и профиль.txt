@@ -1,0 +1,14 @@
+Оформление форумов:
+<div class="under_forum">
+<a class="button" href="https://forgotten-realms.ru/viewtopic.php?id=2">Гостевая</a>
+<a class="button" href="https://forgotten-realms.ru/viewtopic.php?id=7">Правила</a>
+<a class="button" href="https://forgotten-realms.ru/viewtopic.php?id=6">Роли</a>
+<a class="button" href="https://forgotten-realms.ru/viewtopic.php?id=8">FAQ</a>
+<a class="button" href="https://forgotten-realms.ru/viewtopic.php?id=5">Сюжет</a>
+<a class="button" href="https://forgotten-realms.ru/viewtopic.php?id=3">Хочу к вам</a>
+</div>
+
+Профиль
+
+.pa-fld1 - Поле личного звания
+<div class="lz-container"><div id="lz_age"><a href="https://forgotten-realms.ru/viewtopic.php?id=47">???, CN</a></div><div id="lz_desc">Эльф, плут-дуэлянт, герой Врат Балдура, наёмница</div><div id="lz_quote">Turn around and swim back to your shore, sailor<br> Float away forevermore</div></div>

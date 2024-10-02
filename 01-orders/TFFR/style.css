@@ -5,7 +5,7 @@
 
 
 /* Font Awesome */
-@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+@import url('https://forumstatic.ru/files/001a/e1/7e/82877.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -233,6 +233,7 @@
   --base-font: 'EB Garamond';
   --base-font-two: 'Verdana';
   --base-font-accent: 'Coco';
+  --fa: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'Font Awesome 5 Pro', 'Font Awesome 5 Brands';
   --pwidth: 248px;
   --padding: 10px 70px;
   --mpad: 5px 10px;
@@ -798,6 +799,7 @@
     min-height: 100px;
     box-sizing: border-box;
     background: url(https://forumupload.ru/uploads/001c/16/c4/6/222222.png) repeat bottom left, url(https://i.vgy.me/Hg3bcd.png) repeat top center;
+    height: auto;
   }
 
 #pun-searchposts .post-author {
@@ -809,6 +811,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: auto;
   }
   
   /* Скрыть поля профиля */
@@ -836,6 +839,17 @@
     max-height: 75px;
     max-width: 75px;
   }
+
+  .post .post-author.no-avatar .pa-title::after {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    max-height: 75px;
+    max-width: 75px;
+    background-position: top center;
+    box-sizing: border-box;
+    margin: 9px 0;
+  }
   
   /* Ник и статус */
   .punbb .post-author .pa-author, .punbb .post-author .pa-title {
@@ -859,15 +873,16 @@
   
   /* Доп. поле 1 (лз) */
   .punbb .post-author .pa-fld1 {
-    height: auto;
     order: 1;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     margin-left: auto;
-    right: 10px;
-    bottom: 10px;
     width: calc(100% - 80px);
     pointer-events: none;
+    top: -70px;
+    height: auto;
+    padding: 0;
+    margin-bottom: -27%;
   }
 
   .punbb .post-author .pa-fld1 .fld-name {
@@ -888,14 +903,15 @@
   height: 30px;
 }
 
-  .post-author .pa-fld1 .lz-container {
+ .post-author .pa-fld1 .lz-container {
     display: none;
-    width: calc(100% - 55px);
-    position: absolute;
-    top: -71px;
-    right: 34px;
+    width: calc(100% - 35px);
+    position: relative;
     max-width: 395px;
     pointer-events: all;
+    margin: 0;
+    top: -34px;
+    height: auto;
   }
 
   .lz-container {width: 100%;}
@@ -945,34 +961,53 @@
   }
   
   .punbb .post-links ul {
+    margin: 5px 0 10px;
     padding: 0 10px;
-    margin: 5px 0 0;
+    height: 30px;
   }
 
   .punbb .post-links ul li {
     padding: 0;
     line-height: initial !important;
+    width: 30px;
+  }
+
+  .punbb .post-links ul li:not(:last-of-type) {
+    margin: 0 6px 0 0;
   }
 
   .punbb .post-links li a {
     font-size: 0;
   }
   
-  .punbb .post-links ul .pl-email, .punbb .post-links ul pl-website {
+  .punbb .post-links ul li.pl-email, li.punbb .post-links ul li.pl-website {
     float: left !important;
-    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
   }
   
   .punbb .post-links li a::before {
     content: "";
-    font-size: 24px;
-    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    font-family: var(--fa);
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+    background: var(--font-color-base);
+    align-items: center;
+    justify-content: center;
+    color: var(--pun-color);
+    border-radius: 4px;
+    transition: all .2s linear 0s;
+  }
+
+  .punbb .post-links li a:hover:before {
+      background: var(--font-accent-color);
   }
   
   .punbb .post-links li.profile a:before {content: "\f2bb";}
   .punbb .post-links li.pm a:before {content: "\f0e0";}
   .punbb .post-links li.email a:before {content: "\f1fa";}
-  .punbb .post-links li.pl-delete a:before {content: "\f1f8";}
+  .punbb .post-links li.pl-delete a:before {content: "\f2ed";}
   .punbb .post-links li.pl-edit a:before {content: "\f044";}
   .punbb .post-links li.pl-quote a:before {content: "\f10e";}
   .punbb .post-links li.pl-reports a:before {content: "\f071";}
