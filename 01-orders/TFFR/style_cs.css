@@ -158,6 +158,8 @@ input[type="submit"] {
   text-transform: uppercase;
   cursor: pointer;
   transition: all .2s linear 0s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 input.button:hover,
