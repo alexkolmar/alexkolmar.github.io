@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>таблица</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.tablica {
+			margin: 160px;
+			auto 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="tablica">
+		<div class="tab_inner">
+			<marquee onmouseout="this.start()" onmouseover="this.stop()" scrollamount="3">
+				<em>#АКЦИИ СВЕЖИЕ, ОХУЕННЫЕ, ПРИДИ ПО АКЦИЯМ</em>
+				<em>#адам, дай еве развод, м%$#к</em>
+				<em>#спасибо, что обратились в наш bdsm-клуб, мы с вами свяжемся;</em>
+				<em>#СОРТИРОВКА ПОРОДИСТЫХ СОБАК;</em>
+				<em>#ВЫБОР ФОТОРОБОТА ГОДА;</em>
+				<em>#МЕСТО ДЛЯ ВАШЕГО ОБЪЯВЛЕНИЯ</em>
+			</marquee>
+			<div class="tab_content">
+				<div class="tab_left">
+					<div class="tab_lefttop"></div>
+					<div class="tab_leftbottom"></div>
+				</div>
+				<div class="tab_right">
+					<div class="tab_righttop"></div>
+					<div class="tab_rightbottom"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header-item music-wrap">
+		<div class="music_wrapper">
+			<div class="header-music">
+				<div class="music-container" onclick="toggleAudio()">
+					<audio controls controlslist="nodownload" id="personal_track">
+						<!-- ССЫЛКА НА МУЗЫКУ -->
+						<source src="https://forumstatic.ru/files/001c/19/84/94953.mp3" type="audio/mpeg">
+						<!-- ССЫЛКА НА МУЗЫКУ -->
+						Your browser does not support the audio tag.
+					</audio>
+					<div class="play-button"></div>
+					<!-- НАЗВАНИЕ И АВТОР -->
+					<div class="trackname" title=""><b>opr</b>
+						gesaffelstein</div>
+					<!-- НАЗВАНИЕ И АВТОР -->
+				</div>
+			</div>
+		</div>
+		<a href="https://poisondrop.rusff.me/viewtopic.php?id=29#p171">заказать трек</a>
+	</div>
+
+
+	<script>
+		pauseAudio = (event) => {
+			let audio = document.querySelector('#personal_track');
+			audio.pause();
+		}
+
+		var isPlaying;
+
+		toggleAudio = (event) => {
+			let audio = document.querySelector('#personal_track');
+
+			var container = document.querySelector('.music-container');
+			var playButton = document.querySelector('.play-button');
+
+			if (isPlaying) {
+				audio.pause()
+				isPlaying = false
+				playButton.classList.remove('playing')
+			} else {
+				audio.play()
+				isPlaying = true
+				playButton.classList.add('playing')
+			}
+
+		}
+	</script>
+
+</body>
+
+</html>
