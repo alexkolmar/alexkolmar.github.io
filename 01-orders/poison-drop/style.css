@@ -10,6 +10,9 @@
 /* Rubik */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* basis33 */
+@import url('https://alexkolmar.github.io/fonts/basis33/basis33/stylesheet.css');
+
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
 
@@ -82,7 +85,7 @@
   --font3: "Dela Gothic One", sans-serif;
   --font4: "TT Trailers Trial Variable", sans-serif;
   --font5: "Saint", sans-serif;
-  --font6: "overdoze sans", sans-serif;
+  --font6: "basis33", sans-serif;
   --fa: 'Font Awesome 6 Pro', 'Font Awesome 6 Brands';
   --branch: url(https://forumstatic.ru/files/0012/0b/b4/99690.svg);
   --author-bg: url(https://forumstatic.ru/files/0012/0b/b4/30836.svg) no-repeat top center/100%, url(https://forumstatic.ru/files/0012/0b/b4/74346.svg) no-repeat bottom center/100%;
@@ -198,7 +201,7 @@ em {
 .editBookmark,
 .inner.popup_graffiti,
 .pun-modal .modal-inner {
-  background: var(--gray-200);
+  background: var(--gray-300);
 }
 
 #tags .container {
@@ -2121,11 +2124,11 @@ li#onlinelist a {
 }
 
 
-#pun-searchposts .post-author::before, #pun-searchposts .post-author::after {
+#pun-searchposts .post-author::before, #pun-searchposts .post-author::after, #pun-multimove .post-author::before {
   display: none;
 }
 
-#pun-searchposts .post-author ul {
+#pun-searchposts .post-author ul, #pun-multimove .post-author ul {
   min-height: unset;
   padding-bottom: 20px;
 }
@@ -2809,6 +2812,8 @@ width: 26px;
 height: 26px;
 }
 
+#form-buttons td#button-smile {display: none;}
+
 .punbb #form-buttons td img {
 width: 26px;
 height: 26px;
@@ -2860,7 +2865,6 @@ td#button-quote:before {content: "\f086";}
 td#button-code:before {content: "\f121";}
 td#button-color:before {content: "\f53f";}
 td#button-table:before {content: "\f0ce";}
-td#button-smile:before {content: "\f59a";}
 td#button-keyboard:before {content: "\f11c";}
 td#button-addition:before {content: "\f0fe";}
 td#button-files_rusff:before {content: "\f07b";}
@@ -2883,7 +2887,7 @@ td#button-styles:before {content: "\f1de";} /* дополнительные ст
 td#floatbut:before {content: "\f1ea";} /* тег обтекания изображения от Romych */
 td#button-justify:before {content: "\f039";} /* тег выравнивания по ширине */
 td#button-mask:before {content: "\f630";} /* тег для скрипта ролевой маски от человека-шамана */
-td#button-sticker:before {content: "\f1b0";} /* тег для дополнительных смайлов от человека-шамана */
+td#button-sticker:before {content: "\f59a";} /* тег для дополнительных смайлов от человека-шамана */
 
 #plng {
   border-radius: 10px;
@@ -4409,8 +4413,8 @@ img.avatardemo {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .tab-awards img {
@@ -4419,6 +4423,93 @@ img.avatardemo {
   flex-shrink: 0;
 }
 
+.punbb .post-content .about-achieves {
+  font-family: var(--font6);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+  margin-bottom: 10px;
+  padding: 0 0 10px 0 !important;
+  border-bottom: 1px solid #d9d9d9;
+  line-height: initial;
+}
+
+.about-achieves i {
+  color: var(--violet-300);
+  font-style: normal;
+}
+
+.achieve-rules {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.achieve-tabs {
+  position: relative;
+  width: 620px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.achieve-achieve-tab, .achieve-tab-title {
+  display: inline-block;
+}
+
+.achieve-tab input[type="radio"] {
+  display: none;
+}
+
+.achieve-tab-title {
+  padding: 5px 10px;
+  width: 180px;
+  height: 22px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: var(--white);
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black);
+}
+
+.achieve-tab-content {
+  position: absolute;
+  margin-top: 10px;
+  padding: 10px;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  display: none;
+  box-sizing: border-box;
+}
+
+.achieve-tab :checked + .achieve-tab-title {
+  position: relative;
+  background: var(--black);
+  color: var(--gray-100);
+  z-index: 1;
+}
+
+.achieve-tab :checked ~ .achieve-tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.achieve-tab-content img {
+  max-width: 80px;
+  max-height: 110px;
+}
 
 /* Additional menus © max, the murderer! */
 
@@ -4501,6 +4592,74 @@ img.avatardemo {
   transform: scaleX(1) !important;
 }
 
+/* стилизация стикеров */
+
+.hvStickerPackModalContainer .hvStickerPackModal {
+  background: var(--gray-300);
+  border: none;
+}
+
+.hvStickerPackModalContainer .hvStickerPackModalContent {
+  background: var(--gray-100);
+  border: none;
+}
+
+.hvStickerPackModalContainer .hvStickerPackModalTabs {
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.hvStickerPackModalContainer .hvStickerPackModalTab {
+  margin: 0;
+  border-radius: 1000px;
+  padding: 5px 10px;
+  border: none;
+  background: var(--violet-400);
+  cursor: pointer;
+  transition: all .2s linear 0s;
+  box-sizing: border-box;
+  min-width: 21px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gray-100);
+}
+
+.hvStickerPackModalContainer .hvStickerPackModalTab.active {
+  background: var(--gray-600);
+  color: var(--gray-100);
+}
+
+.hvStickerPackModalContainer .hvStickerPackModalAddButton {
+  line-height: initial;
+  padding: 1px 5px;
+  font-size: 16px;
+}
+
+/* маска профиля */
+
+.punbb #mask_dialog .inner {
+  background: var(--gray-200);
+  border-radius: 10px;
+}
+
+.punbb #mask_dialog .hv-mask-dialog-title {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: initial;
+}
+
+.punbb #mask_dialog .hv-add-template {
+  border-radius: 1000px;
+  padding: 5px 10px;
+  background: var(--gray-300);
+  font-weight: 600;
+}
 
 @media screen and (max-width: 1100px) {
 
