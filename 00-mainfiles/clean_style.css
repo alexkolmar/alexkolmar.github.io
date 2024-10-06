@@ -784,6 +784,10 @@ textarea,
   flex-shrink: 0;
 }
 
+#profile-right li strong {
+  font-weight: normal;
+}
+
 img.avatardemo {
   float: right;
   margin: 0 0 8px 18px;

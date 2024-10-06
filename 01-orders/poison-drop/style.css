@@ -2484,7 +2484,7 @@ del:hover, s:hover {
 }
 
 .quote-box, .code-box {
-  margin: 5px 0 10px;
+  margin: 20px 0;
   padding: 0;
 }
 
@@ -4230,6 +4230,195 @@ img.avatardemo {
   max-width: 139px;
   max-height: 208px;
 }
+
+/* Банк */
+
+.bank {
+  border-radius: 10px;
+  width: 710px;
+  height: 692px;
+  background: var(--black);
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.tabs {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background: var(--gray-200);
+  border-radius: 10px 10px 0 0;
+}
+
+.tab {
+  width: calc(100% / 3);
+}
+
+.tab, .tab-title {
+  display: inline-block;
+}
+
+.tab input[type="radio"] {
+  display: none;
+}
+
+.tab-title {
+  background: var(--white);
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: justify;
+  color: var(--gray-600);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 15px;
+  height: 32px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.tab:first-of-type .tab-title {
+  border-radius: 10px 0 0 0;
+}
+
+.tab:last-of-type .tab-title {
+  border-radius: 0 10px 0 0;
+}
+
+.tab-content {
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  width: 100%;
+  height: 660px;
+  display: none;
+  box-sizing: border-box;
+  background: var(--black);
+  border-radius: 0 0 10px 10px;
+}
+
+.tab :checked + .tab-title {
+  position: relative;
+  background: var(--black);
+  color: var(--gray-100);
+  z-index: 1;
+}
+
+.tab :checked ~ .tab-content {
+  display: block;
+}
+
+.tab-head {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.tab-head span {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: justify;
+  color: var(--gray-100);
+}
+
+.tab-inner-wrap {
+  padding: 15px 10px 15px 20px;
+  width: 670px;
+  height: 600px;
+  background: var(--gray-100);
+}
+
+.tab-inner {
+  width: 640px;
+  height: 570px;
+  overflow: auto;
+  padding-right: 15px;
+  scrollbar-color: var(--gray-600) var(--gray-200);
+}
+
+.tab-inner h3 {
+  margin-bottom: 10px;
+  padding: 2px 5px;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--black);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tab-inner h3:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.tab-inner h3 small {
+  font-size: 9px;
+}
+
+.tab-bank p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 !important;
+  margin-bottom: 10px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #323232;
+  border-bottom: 1px dashed #323232;
+  box-sizing: border-box;
+}
+
+.tab-bank p span {
+  background: var(--gray-100);
+  display: block;
+  margin-bottom: -1px;
+  padding-right: 5px;
+}
+
+.tab-bank p b {
+  font-weight: 600;
+  background: var(--gray-100);
+  display: block;
+  margin-bottom: -1px;
+  padding-left: 5px;
+}
+
+.tab-awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tab-awards img {
+  max-width: 140px;
+  max-height: 140px;
+  flex-shrink: 0;
+}
+
 
 /* Additional menus © max, the murderer! */
 
