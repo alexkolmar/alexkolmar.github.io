@@ -342,8 +342,7 @@ input[type="checkbox"] {
 ------------------------------------------*/
 
 html {
-  background: url(https://forumstatic.ru/files/0012/0b/b4/57418.jpg) repeat top center var(--gray-600);
-  min-width: 1200px;
+  background: url(https://forumstatic.ru/files/001c/19/84/90929.png) repeat top center var(--gray-600);
 }
 
 body::before {
@@ -357,7 +356,7 @@ body::before {
   min-width: 100vw;
   min-height: 100vh;
   z-index: -10;
-  background: var(--gray-600) url(https://forumstatic.ru/files/0012/0b/b4/57418.jpg) repeat top center;
+  background: var(--gray-600) url(https://forumstatic.ru/files/001c/19/84/90929.png) repeat top center;
 }
 
 #pun {
@@ -415,7 +414,7 @@ pun-navlinks:after {
   left: 85px;
 }
 
-#pun-navlinks ul {
+#pun-navlinks > ul {
   position: relative;
   border-radius: 2100px;
   padding: 2px 0;
@@ -449,11 +448,26 @@ pun-navlinks:after {
   color: var(--gray-300);
 }
 
+#pun-navlinks li#navpm, #pun-navlinks li#navlogout {
+  display: flex;
+  gap: 10px;
+}
+
 #pun-navlinks li a:before {
   content: "";
   font-family: var(--fa);
   color: #ddd;
 }
+
+#pun-navlinks li#navpm .num_msg {
+  position: static;
+  margin-top: 0;
+  margin-left: 0 !important;
+}
+
+#pun-navlinks li#navlogin {height: 11px;}
+
+#pun-navlinks li#navpm span.num_msg::before {display: none;}
 
 #pun-navlinks li#navindex a:before {content: "\f015";}
 #pun-navlinks li#navuserlist a:before {content: "\f500";}
@@ -505,6 +519,16 @@ pun-navlinks:after {
 
 #pun-ulinks li a:hover {
     color: var(--gray-300);
+}
+
+#pun-ulinks li#notify-link a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#pun-ulinks #notify-link .unreads, #navpm .unreads {
+  position: static;
 }
 
 /* Статус */
@@ -887,7 +911,7 @@ tr.iclosed div.icon {
   font-weight: 800;
   font-size: 10px;
   text-transform: uppercase;
-  text-align: justify;
+  text-align: left;
   color: var(--gray-600);
 }
 
@@ -1220,7 +1244,7 @@ li#onlinelist a {
   bottom: 0;
   width: 100%;
   height: 50px;
-  background: url(https://forumstatic.ru/files/0012/0b/b4/57418.jpg) repeat top center var(--gray-600);
+  background: url(https://forumstatic.ru/files/001c/19/84/90929.png) repeat top center var(--gray-600);
 }
 
 .blur1 {
@@ -1506,6 +1530,14 @@ li#onlinelist a {
   background: rgba(255, 255, 255, 0.1) url(https://forumstatic.ru/files/0012/0b/b4/94418.svg) no-repeat right 10px center;
 }
 
+.bestquote img {
+  border-radius: 1000px;
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .bestquote p {
   color: var(--gray-300);
 }
@@ -1517,7 +1549,7 @@ li#onlinelist a {
 
 .nav_button {
   border-radius: 1000px;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 18px;
   width: 155px;
   height: 21px;
   background: url(https://forumstatic.ru/files/0012/0b/b4/43584.svg) no-repeat right 18px center var(--violet-400);
@@ -1674,8 +1706,7 @@ li#onlinelist a {
 
 .header-music {
   border-radius: 15px 15px 0 0;
-  padding: 5px 10px;
-  width: 280px;
+  padding: 5px 90px 5px 10px;
   height: 25px;
   backdrop-filter: blur(34px);
   background: rgba(255, 255, 255, 0.1);
@@ -1689,6 +1720,7 @@ li#onlinelist a {
   gap: 5px;
   align-items: center;
   cursor: pointer;
+  max-width: 300px;
 }
 
 .play-button {
@@ -1795,7 +1827,7 @@ li#onlinelist a {
 
 @keyframes shaking {
   0% {
-    width: 51%; /* ЗНАЧЕНИЕ В ПРОЦЕНТАХ */
+    width: 21%; /* ЗНАЧЕНИЕ В ПРОЦЕНТАХ */
   }
   15% {
     width: 40%;
@@ -1813,7 +1845,7 @@ li#onlinelist a {
     width: 50%;
   }
   100% {
-    width: 78%;/* ЗНАЧЕНИЕ В ПРОЦЕНТАХ */
+    width: 51%;/* ЗНАЧЕНИЕ В ПРОЦЕНТАХ */
   }
 }
 
@@ -2028,7 +2060,7 @@ li#onlinelist a {
 
 .post {
   margin-top: 10px;
-  scroll-margin-top: 30px;
+  scroll-margin-top: 40px;
 }
 
 .punbb .post .container {
@@ -2097,6 +2129,38 @@ li#onlinelist a {
   background: url(https://forumstatic.ru/files/0012/0b/b4/19340.png) no-repeat top 50px center, var(--author-bg);
 }
 
+#pun-viewtopic .post[data-user-id="2"] .post-author {
+  background: url(https://i.imgur.com/o5KdaVk.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="5"] .post-author {
+  background: url(https://i.imgur.com/qcQ1RI6.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="64"] .post-author {
+  background: url(https://i.imgur.com/1G7Xpy5.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="6"] .post-author {
+  background: url(https://i.imgur.com/2ujF4xf.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="7"] .post-author {
+  background: url(https://i.imgur.com/oURNasD.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="49"] .post-author {
+  background: url(https://i.imgur.com/UvAYznq.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="149"] .post-author {
+  background: url(https://i.imgur.com/vFlV0Wn.png) no-repeat top 50px center, var(--author-bg);
+}
+
+#pun-viewtopic .post[data-user-id="58"] .post-author {
+  background: url(https://i.imgur.com/1PVmJxc.png) no-repeat top 50px center, var(--author-bg);
+}
+
 .post-author::before {
   content: "";
   background: url(https://forumstatic.ru/files/0012/0b/b4/86827.svg) no-repeat left center;
@@ -2110,21 +2174,7 @@ li#onlinelist a {
   pointer-events: none;
 }
 
-.post-author::after {
-  content: "";
-  background: url(https://forumstatic.ru/files/0012/0b/b4/54270.svg) no-repeat right center;
-  width: 64px;
-  height: 384px;
-  display: block;
-  position: absolute;
-  right: -26px;
-  top: 120px;
-  pointer-events: none;
-  display: none;
-}
-
-
-#pun-searchposts .post-author::before, #pun-searchposts .post-author::after, #pun-multimove .post-author::before {
+#pun-searchposts .post-author::before, #pun-multimove .post-author::before {
   display: none;
 }
 
@@ -2189,13 +2239,19 @@ li#onlinelist a {
   margin-bottom: 5px;
 }
 
+li.pa-avatar {text-align: center;}
+
 .pa-avatar img, #pa-avatar img {
   max-width: 180px;
   max-height: 180px;
 }
 
-.pa-fld2 {
-  margin: -20px auto 5px;
+.post-author ul li.pa-fld2 {
+  height: 26px;
+  display: flex;
+  align-items: flex-end;
+  margin: -5px auto 5px;
+  padding: 0;
 }
 
 .post-author ul li.pa-fld5 {
@@ -2395,6 +2451,8 @@ li#onlinelist a {
   display: inline;
 }
 
+.post-links li.pl-share {display: none;}
+
 .post-links li:not(:first-of-type) {
   padding-left: 2px;
 }
@@ -2432,6 +2490,7 @@ li#onlinelist a {
 
 .punbb .post-content {
   max-width: 960px;
+  text-transform: none;
 }
 
 .punbb .post td {
@@ -2446,8 +2505,13 @@ pre {
   font-style: italic;
 }
 
-.post .post-content td {
+.post .post-content td, .punbb .post-content td {
   border-width: 0px !important;
+}
+
+.post-content hr {
+  height: 1px;
+  background: var(--gray-400);
 }
 
 .post-content em.bbuline {
@@ -2517,6 +2581,8 @@ del:hover, s:hover {
   padding: 10px 0 0;
 }
 
+.post-content .spoiler-box > blockquote.visible {border:none;}
+
 .quote-box cite, .code-box strong.legend {
   padding: 0 5px;
   font-family: var(--font-family);
@@ -2527,6 +2593,8 @@ del:hover, s:hover {
   text-align: justify;
   color: var(--black);
   font-style: normal;
+  position: relative;
+  z-index: 2;
 }
 
 .quote-box:not(.spoiler-box) blockquote, .code-box .blockcode {
@@ -2549,9 +2617,11 @@ del:hover, s:hover {
   z-index: -1;
 }
 
-blockquote blockquote {
+blockquote blockquote, blockquote .quote-box.spoiler-box {
   border: 1px solid var(--gray-200);
 }
+
+.spoiler-box blockquote blockquote {padding: 10px;}
 
 .post-sig dt {
   border-bottom: 1px solid #ccc;
@@ -2773,6 +2843,10 @@ textarea,
   text-align: center;
   color: var(--black);
   border: none;
+}
+
+#post-form {
+  position: relative;
 }
 
 
@@ -3896,6 +3970,7 @@ img.avatardemo {
   flex-direction: column;
   box-sizing: border-box;
   backdrop-filter: blur(34px);
+  -webkit-backdrop-filter: blur(34px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 0px 5px;
@@ -4012,6 +4087,7 @@ img.avatardemo {
   padding: 20px;
   width: 500px;
   backdrop-filter: blur(34px);
+  -webkit-backdrop-filter: blur(34px);
   background: rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
   top: 163px;
@@ -4114,6 +4190,7 @@ img.avatardemo {
 
 .drops-container {
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(34px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 10px;
@@ -4189,6 +4266,7 @@ img.avatardemo {
   width: 100%;
   box-sizing: border-box;
   backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(34px);
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -4661,21 +4739,703 @@ img.avatardemo {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1100px) {
+/************************* 
+Стиль для Быстрой смены аккаунтов 
+Deff 
+*************************/ 
 
-#title-logo-table::before,
-#title-logo-table::after, 
-#undertitle,
-#pun-stats::before,
-#pun-stats::after {
+/*Cкрытие формы входа без клика*/ 
+
+#pun-navlinks a:not(.NextShow)+span.odd{ 
+display:none!important; 
+}
+
+#pun-navlinks #New-exit img { 
+display: none;
+}
+
+#pun-navlinks #form-login input {
+  text-rendering: auto;
+  margin-top: 4px !important;
+  text-transform: none;
+  text-shadow: none;
+  display: inline-block !important;
+  text-align: center;
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: none;
+}
+
+#pun-navlinks #form-login input[type="submit"]{ 
+  margin-top:10px!important;
+} 
+
+/*Стиль формы входа*/ 
+#pun-navlinks #form-login {
+  display: block;
+  left:0px; 
+  z-index:100000!important; 
+  text-align: center; 
+  top: 20px;
+  position: absolute;
+  background: var(--gray-200);
+  padding: 10px 15px;
+  border-radius: 0 8px 8px 8px;
+  font-family: var(--second-family);
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+/*Стиль ссылок в форме "Не зарегистрированы" и "Забыли пароль" */ 
+#pun-navlinks #form-login input[value="Войти"]+p{ 
+margin-bottom: 11px; 
+margin-top: 11px; 
+} 
+
+.punbb #pun-navlinks #form-login a.Rega, 
+.punbb #pun-navlinks #form-login a.Forgot{ 
+position:relative;
+text-transform: none!important; 
+z-index:20;
+color: #EFF4F2!important;
+cursor:pointer; 
+}
+
+.punbb #pun-navlinks #form-login a.Rega:before, 
+.punbb #pun-navlinks #form-login a.Forgot:before{
+  content:none;
+}
+
+/* Помечаем красным незаполненные поля!*/ 
+#form-login input.none{ 
+outline:red dashed 2px!important; 
+} 
+
+/*Форма слево(с Никами) */ 
+#List-UserNames {
+  position: absolute;
+  min-height: 90px;
+  width: 220px;
+  right: 100%;
+  padding: 10px 15px;
+  background: var(--gray-300);
+  border-radius: 8px 0 0 8px;
+  text-align: center;
+  top: 0;
+}
+
+#form-login > span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#pun-navlinks #form-login input.button {
+  text-transform: lowercase;
+}
+
+/*Стиль контейнера под список Ников*/ 
+#List-UserNames ul{
+padding:0;
+overflow:hidden; 
+overflow-y:auto; 
+min-height:36px; 
+max-height:72px;/*Видимое число Ников без прокрутки! сейчас - 4*/ 
+} 
+
+#List-UserNames li {
+  display: block !important;
+  background: var(--black);
+  text-align: left;
+  margin: 1px auto !important;
+  transition: .33s;
+  font-family: var(--font-family);
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 5px;
+  text-transform: none;
+}
+
+#List-UserNames li:hover{ 
+opacity:.84; 
+/*background:#546a6b!important;*/
+} 
+
+/*Стиль Ников*/ 
+#List-UserNames li>b{ 
+cursor: pointer;
+opacity: .9;
+color: #FFFFFF;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.31);
+} 
+
+#List-UserNames li>b:hover{ 
+opacity:.93; 
+text-shadow:1px 1px 1px rgba(0,0,0,.6); 
+} 
+
+/*Скролл контейнера с никами*/ 
+#List-UserNames ul::-webkit-scrollbar { 
+width: 7px; 
+height: 5px; 
+} 
+
+#List-UserNames ul::-webkit-scrollbar-track { 
+background-color: #919190; 
+border: 1px solid #919190; 
+box-shadow: none; 
+} 
+
+#List-UserNames ul::-webkit-scrollbar-thumb { 
+background-color: #bdbdbc; 
+border: 2px solid #888887; 
+box-shadow: none; 
+} 
+
+/*Кнопки Удалить (правее ников)*/ 
+#List-UserNames ul li>span { 
+display:inline-block; 
+padding:0 3px; 
+position:absolute; 
+opacity:.88; 
+cursor:pointer; 
+top:0;bottom:0; 
+right:2px; 
+color:#fff; 
+font: normal normal 700 10.56px/normal Verdana; 
+text-shadow:1px 1px 1px rgba(0,0,0,.6); 
+} 
+
+/*Текст при отсутствии запомненных Ников!*/ 
+#List-UserNames ul:empty:before{ 
+display:inline-block; 
+content: "У Вас нет запомненных ников, введенных через форму справо, или через перенос ниже!"; 
+} 
+
+/*Кнопка выход-2*/ 
+#navlogin #exit-2 { 
+display:none; 
+} 
+
+#navlogin #form-login, 
+#navlogout .Rega, 
+#navlogout .Forgot { 
+background-image:none!important;
+color: var(--violet-400);
+text-align: center;
+} 
+
+#navlogout .Rega:hover, 
+#navlogout .Forgot:hover { 
+  color: var(--gray-600);
+}
+
+#navlogout .Rega:before, 
+#navlogout .Forgot:before {
   display: none;
-  width: 0;
 }
 
-.go-up,
-.go-down {
-  margin-left: 0 !important;
-  right: 20px;
+/*Стиль блока с инпутом для переноса и вставки запомненных Аккаунтов*/ 
+#List-UserNames ul+span{ 
+display:inline-block; 
+padding:6px 0 8px 0; 
+text-align:left; 
+font: normal normal 400 10.56px/normal Verdana;
+} 
+
+/*Сам инпут*/ 
+#List-UserNames input#Paste-And-Copy { 
+  width: 100% !important;
+  box-sizing: border-box;
+} 
+
+/*Стрелочки к инпуту*/ 
+#List-UserNames ul+span b{ 
+font: normal normal 400 13px/normal Verdana; 
+padding:0 3px; 
+color: #E7EAF0;
+} 
+
+/*Кликалка слево, чуть выше инпута*/ 
+#List-UserNames .a1-copy{ 
+display:inline-block!important; 
+cursor:pointer; 
+float:left; 
+} 
+
+/*Кликалка справо*/ 
+#List-UserNames .a1-paste{ 
+cursor:pointer; 
+display:inline-block!important; 
+float:right; 
+} 
+
+/*Подсказки на кликалках*/ 
+.tipsy.a11 { 
+font: normal normal 400 11px/normal Tahoma!important; 
+margin-top:-22px!important; 
+margin-left: 148px!important; 
+max-width:170px; 
+} 
+
+/************************* 
+//Конец Стиля для Быстрой смены аккаунтов 
+*************************/
+
+
+/* фикс отступов для старых хтмл */
+.punbb .priem_anket, .punbb .priem_anket *, #googleme, #googleme * {box-sizing: content-box;}
+
+/* А ХУЙ ЗНАЕТ СРАБОТАЕТ ИЛИ ДОЛОМАЕТСЯ ПО ХУЯМ ВООБЩЕ */
+#html_wrapper.html-materiel {
+  width: auto;
+  height: 205px;
+  flex-direction: row;
+  font-family: rubik;
+  align-items: flex-start;
+  gap: 2px;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden
 }
 
+.materiel_button {
+  border: 1px solid var(--text1);
+  border-radius: 12px 12px 0 0;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  height: 21px;
+  align-items: center;
+  display: flex;
+  transition: left 1s cubic-bezier(.64, .51, .55, 1.16) 0s;
+  cursor: pointer
+}
+
+.material_active {
+  background: var(--text1);
+  color: var(--pun)
+}
+
+.materiel_button-container {
+  position: absolute;
+  top: 20px;
+  background: var(--pun);
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--text1);
+  border-radius: 0 12px 12px 12px;
+  padding: 20px;
+  left: -100%;
+  height: calc(100% - 20px);
+  transition: left 1s cubic-bezier(.64, .51, .55, 1.16) 0s;
+}
+
+.showme {
+  left: 0
+}
+
+.materiel_button-scrolling {
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 10px;
+}
+
+.materiel_button-container p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font: 400 12px rubik !important;
+}
+.materiel_button-container p + p {
+  margin-top: 15px !important;
+}
+
+#html_wrapper.html-chat {
+  margin: 0 auto;
+  width: 375px;
+  height: 500px;
+  flex-direction: column;
+  font-family: rubik;
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+  border-radius: 16px;
+  color: var(--gray-100);
+}
+
+.html-chat-header {
+  padding: 8px 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  text-treansform: lowercase;
+}
+
+.html-chat-header-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.chat-avtr {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.html-chat-header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  justify-content: center;
+  line-height: 100%
+}
+
+.chat-header-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chat-header-time {
+  color: #A3A3A3;
+  font-size: 10px;
+}
+
+.html-chat-header-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.html-chat-container {
+  height: 100%;
+  position: relative;
+  padding: 12px 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.html-chat-container .chat-bg {
+  width: 375px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.html-chat-scrollbox {
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 355px;
+}
+
+.html-chat-scrollbox p {
+  padding: 0 !important;
+  margin: 0 !important;
+  font: normal 13px/120% rubik;
+  color: var(--gray-100);
+}
+
+.html-chat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.html-chat-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
+  background: linear-gradient(180deg, #323232 0%, #1f1f1f 100%);
+  border-radius: 12px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.bubble-nickname {
+  color: #B69AFF;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.html-chat-item:nth-child(even) {
+  align-items: flex-end
+}
+
+.html-chat-item:nth-child(even) .html-chat-bubble {
+  background: linear-gradient(180deg, #5d3bb3 0%, #9574e9 100%);
+}
+
+.html-chat-footer {
+  padding: 12px 16px 16px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.chat-input {
+  flex: 1;
+  background: #575757;
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  color: #8D8D8D
+}
+
+#html_wrapper.html-chat-post {
+  color: var(--gray-100);
+  padding: 12px;
+}
+
+#html_wrapper.html-chat-post p {
+  padding: 0 !important;
+  margin: 0 !important;
+  font: normal 13px/120% rubik;
+  color: var(--gray-100);
+}
+
+#html_wrapper.html-twitter {
+  width: 500px;
+  margin: 15px auto;
+  border: 1px solid var(--gray-400);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  font-family: rubik;
+}
+
+.html-twitter-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.html-twitter-user {
+    display: grid; 
+  grid-template-columns: 40px max-content; 
+  grid-template-rows: 40px minmax; 
+  gap: 2px 8px; 
+  grid-template-areas: 
+    "ava name"
+    "ava login";
+}
+
+.twitter-avtr { 
+  grid-area: ava; 
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.html-twitter-name {
+  align-self: end; 
+  grid-area: name; 
+  justify-self: stretch; 
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.html-twitter-login {
+  align-self: start; 
+  grid-area: login; 
+  justify-self: stretch;
+  white-space: nowrap;
+  color: #838383;
+  font-size: 12px;
+}
+
+.html-twitter-button {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--violet-400);
+  border: 1px solid var(--violet-200);
+  border-radius: 50px;
+  padding: 8px 12px;
+}
+
+.html-twitter-content {
+  font-size: 20px;
+  line-height: 130%
+}
+
+.html-twitter-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.html-twitter-data {
+  font-size: 12px;
+  color: #838383;
+}
+
+.html-twitter-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.html-twitter-icons-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.html-twitter-icons-item:nth-child(2) {
+  color: #DD255F;
+}
+
+#html_wrapper.html-news {
+  width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  font-family: rubik;
+	line-height: 140%
+}
+
+.html-news-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.html-news-header-title {
+  font-size: 14px;
+  font-weight: 700
+}
+
+.html-news-header-date {
+ color: #838383;
+ font-size: 14px;
+}
+
+.html-news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.html-news-content-header {
+  font-size: 16px;
+  font-weight: 700
+}
+
+.html-news-content-text {
+  font-size: 12px;
+}
+
+.html-news-footer {
+  margin-top: 4px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px
+}
+
+#html_wrapper.html-insta {
+  width: 375px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 0px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  font-family: rubik;
+}
+
+.html-insta-header {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.insta-avtr {
+  width: 29px;
+  height: 28px;
+  border-radius: 100%;
+}
+
+.html-insta-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.html-insta-header img:last-child {
+  margin-left: auto;
+}
+
+.html-insta-img img {
+  width: 100%;
+}
+
+.insta-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.insta-footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.insta-footer-icons-item:last-child {
+  margin-left: auto
+}
+
+.insta-footer-likes-numb {
+  font-size: 12px;
+  font-weight: 600
+}
+
+.insta-footer-text {
+  font-size: 12px;
+  line-height: 120%
+}
+
+#pun-break3 {
+	display: none
 }
