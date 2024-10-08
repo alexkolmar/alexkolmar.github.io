@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Arsenica Trial';
+    src: url('https://alexkolmar.github.io/fonts/Arsenica/ArsenicaTrial-Light.eot');
+    src: url('https://alexkolmar.github.io/fonts/Arsenica/ArsenicaTrial-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Arsenica/ArsenicaTrial-Light.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Arsenica/ArsenicaTrial-Light.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Arsenica/ArsenicaTrial-Light.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Arsenica/ArsenicaTrial-Light.svg#ArsenicaTrial-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
