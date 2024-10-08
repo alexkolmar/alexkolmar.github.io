@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Lighthaus';
+    src: url('https://alexkolmar.github.io/fonts/Lighthaus/Lighthaus.eot');
+    src: url('https://alexkolmar.github.io/fonts/Lighthaus/Lighthaus.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Lighthaus/Lighthaus.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Lighthaus/Lighthaus.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Lighthaus/Lighthaus.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Lighthaus/Lighthaus.svg#Lighthaus') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
