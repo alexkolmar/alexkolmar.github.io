@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'beer money';
+    src: url('https://alexkolmar.github.io/fonts/Beer_money/beermoney.eot');
+    src: url('https://alexkolmar.github.io/fonts/Beer_money/beermoney.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Beer_money/beermoney.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Beer_money/beermoney.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Beer_money/beermoney.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Beer_money/beermoney.svg#beermoney') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
