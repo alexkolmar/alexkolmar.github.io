@@ -324,13 +324,13 @@ body::before {
   color: var(--link2);
   font-size: 12px;
   font-family: var(--cal);
-  font-weight: normal;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 #pun-navlinks li a:hover {
-  color: #b36868;
+  color: #961a01;
 }
 
 /* Пользовательские ссылки */
@@ -389,6 +389,7 @@ body::before {
 
 .crumbs.container {
   text-transform: lowercase;
+  font-weight: bold;
 }
 
 /* Копирайт */
@@ -424,7 +425,7 @@ body::before {
   text-transform: lowercase;
   font-size: 11px;
   letter-spacing: 1px;
-  font-weight: normal;
+  font-weight: bold;
   font-family: var(--cal);
 }
 
@@ -709,9 +710,9 @@ tr.iclosed div.icon {
 
 #pun-stats .container {
   text-transform: lowercase;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 1px;
-  font-weight: normal;
+  font-weight: bold;
   font-family: var(--cal);
 }
 
@@ -805,10 +806,6 @@ li#onlinelist {
   object-position: center;
   border-radius: 50%;
   mix-blend-mode: multiply;
-}
-
-.wanted a:hover img, .actives a:hover img {
-  mix-blend-mode: normal;
 }
 
 .bestep {
@@ -1535,6 +1532,7 @@ img.avatardemo {
 .go-up:hover {
   opacity: 1;
 }
+
 
 /* Гостевая */
 
