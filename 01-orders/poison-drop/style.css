@@ -2150,7 +2150,7 @@ li#onlinelist a {
 }
 
 #pun-viewtopic .post[data-user-id="49"] .post-author {
-  background: url(https://i.imgur.com/UvAYznq.png) no-repeat top 50px center, var(--author-bg);
+  background: url(https://i.imgur.com/zmmmmbC.png) no-repeat top 50px center, var(--author-bg);
 }
 
 #pun-viewtopic .post[data-user-id="149"] .post-author {
@@ -2528,6 +2528,10 @@ del, s {
 del:hover, s:hover {
   filter: initial;
   transition: .63s;
+}
+
+.post-content abbr {
+  text-decoration: underline dotted;
 }
 
 .post-content p {
@@ -5438,4 +5442,28 @@ max-width:170px;
 
 #pun-break3 {
 	display: none
+}
+
+
+@media screen and (max-width: 1100px) {
+
+#pun-title {
+  overflowx: hidden;
+}
+
+#title-logo-table::before,
+#title-logo-table::after, 
+#undertitle,
+#pun-stats::before,
+#pun-stats::after {
+  display: none;
+  width: 0;
+}
+
+.punbb .go-up,
+.punbb .go-down {
+  margin-left: 0 !important;
+  right: 20px;
+}
+
 }
