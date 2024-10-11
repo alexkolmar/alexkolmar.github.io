@@ -1,0 +1,38 @@
+.slider-container {
+ position: relative;
+ width: 680px;
+ height: 283px;
+ margin: 0 auto;
+ overflow: hidden;
+ display: flex;
+ align-items: center;
+ gap: 5px;
+}
+
+.slider {
+ display: flex;
+ transition: transform 0.5s ease-in-out;
+}
+
+.slider .page {
+    width: 640px;
+    height: 283px;
+    display: block;
+}
+
+.prev-button, .next-button {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+    border: 1px solid rgb(218, 217, 217);
+    border-radius: 50%;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1), 0px 0px 4.75px 0.25px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

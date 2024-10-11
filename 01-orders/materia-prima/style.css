@@ -87,13 +87,13 @@
   
   /* Порядок основных блоков */
   
-  #html-header {order: initial;}
-  #pun-title {order: initial;}
-  #pun-navlinks {order: initial;}
-  #pun-ulinks {order: initial;}
-  #pun-status {order: initial;}
-  #pun-crumbs1 {order: initial;}
+  #html-header {order:-2;}
+  #pun-title {order:-2;}
+  #pun-navlinks {order: -3;}
+  #pun-ulinks {order: -1;}
   #pun-announcement {order: initial;}
+  #pun-status {order: -1;}
+  #pun-crumbs1 {order: initial;}
   #pun-main {order: initial;}
   #pun-stats {order: initial;}
   #pun-crumbs2 {order: initial;}
@@ -124,26 +124,30 @@
     min-height: 50px;
     width: 100%;
     position: relative;
-    background: url(https://forumstatic.ru/files/001b/ff/af/36067.png) no-repeat top 20px center/95%, url(https://forumstatic.ru/files/001b/f8/73/41803.jpg) no-repeat top center var(--green);
+    background: url(https://forumstatic.ru/files/001b/ff/af/36067.png) no-repeat center/95%, url(https://forumstatic.ru/files/001b/f8/73/41803.jpg) no-repeat top center var(--green);
+    padding-top: 40px;
+    height: 276px;
   }
   
   #html-header {
     width: 100%;
   }
 
-.tablica {
+  .tablica {
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 10px;
-    padding-bottom: 20px;
+    padding: 40px 10px 20px;
+    height: 276px;
   }
 
 .rotator, .newws, .navs {
-  display: none
+  display: none;
 }
 
 .tab_left {
+  display: none;
   height: auto;
   width: 100%;
 }
@@ -158,24 +162,40 @@
   order: -1;
 }
 
+.infa_tab {
+  font-size: 7px;
+}
+
 .tab_right {
   justify-content: center;
   align-items: center;
   padding: 0;
 }
 
+.lin_tab {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
   /* Меню навигации
   -------------------------------------------------------------*/
   
   
-  #pun-navlinks {
+ #pun-navlinks {
     top: 0;
     width: 100%;
     box-sizing: border-box;
     z-index: 110;
+    background: url(https://forumstatic.ru/files/001b/f8/73/41803.jpg) no-repeat top center var(--green);
+    position: fixed;
+    border: none;
+    box-shadow: none;
   }
   
   #pun-navlinks .container {
+    padding: 0 !important;
     height: auto;
     position: relative;
     display: flex;
@@ -183,14 +203,19 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
+    gap: 15px;
     box-sizing: border-box;
-    padding: 0 50px 0 0 !important;
+    height: 40px;
+    text-shadow: none;
   }
+
+  #pun-navlinks .container:after {display: none;}
   
   #pun-navlinks li {
     display: block;
+    padding: 0;
   }
   
   #pun-navlinks li a {
@@ -199,25 +224,31 @@
     display: flex;
     display: -webkit-flex;
     position: relative;
+    color: #afa468;
+  }
+
+  #pun-navlinks li a:hover {
+     color: #e5d584;
   }
   
-  #pun-navlinks li a:after, #pun-ulinks:after  {
+  #pun-navlinks li a:after  {
     content: "";
-    font: normal 36px/100% var(--msr);
+    font: bold 16px/100% var(--fa);
   }
   
-  #pun-navlinks li#navindex a:after {content: "\e88a";}
-  #pun-navlinks li#navuserlist a:after {content: "\f233";}
-  #pun-navlinks li#navsearch a:after {content: "\e8b6";}
-  #pun-navlinks li#navprofile a:after {content: "\e853";}
-  #pun-navlinks li#navpm a:after {content: "\e0be";}
-  #pun-navlinks li#navadmin a:after {content: "\e8b8";}
-  #pun-navlinks li#navlogout a:after {content: "\e9ba";}
-  #pun-navlinks li#navlogin a:after {content: "\ea77";}
-  #pun-navlinks li#navregister a:after {content: "\e7fe";}
-  #pun-navlinks li#navpr a:after {content: "\ef49";}
-  #pun-navlinks li#navawards a:after {content: "\ea23";}
-  #pun-navlinks li#navrules a:after {content: "\e85f";}
+  #pun-navlinks li#navindex a:after {content: "\f015";}
+  #pun-navlinks li#navuserlist a:after {content: "\f0c0";}
+  #pun-navlinks li#navsearch a:after {content: "\f002";}
+  #pun-navlinks li#navprofile a:after {content: "\f007";}
+  #pun-navlinks li#navextra1 a:after {content: "\f03a";}
+  #pun-navlinks li#navpm a:after {content: "\f0e0";}
+  #pun-navlinks li#navadmin a:after {content: "\f085";}
+  #pun-navlinks li#navlogout > a:after {content: "\f2f5";}
+  #pun-navlinks li#navlogin > a:after {content: "\f2f6";}
+  #pun-navlinks li#navregister a:after {content: "\f234";}
+  #pun-navlinks li#navpr a:after {content: "\f0a1";}
+  #pun-navlinks li#navawards a:after {content: "\f091";}
+  #pun-navlinks li#navrules a:after {content: "\f022";}
   
   #pun-navlinks li#navpm a span[data-last-unread]:after {
     content: "";
@@ -231,7 +262,7 @@
     animation: blinkColor 2s linear infinite;
     -moz-animation: blinkColor 2s linear infinite;
     -webkit-animation: blinkColor 2s linear infinite;
-    background: gainsboro;
+    background: url(https://forumstatic.ru/files/001b/f8/73/41803.jpg) no-repeat top center var(--green);
   }
   
   
@@ -241,19 +272,20 @@
   #pun-ulinks {
     display: block;
     width: 36px;
-    height: 36px;
-    margin: -36px 0 0 auto;
+    height: 40px;
+    margin: auto 0 0 0;
     border: none;
     z-index: 120;
-    top: 0;
-    right: 5px;
+    top: 40px;
+    left: 5px;
     box-shadow: none;
     background: none;
   }
   
   #pun-ulinks:after {
-    content: "\e5d2";
+    content: "\f0c9";
     position: relative;
+    font: 300 36px/40px var(--fa);
     display: block;
     width: 100%;
     height: 100%;
@@ -276,8 +308,8 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
       z-index: 100;
       position: absolute;
-      top: 36px;
-      right: 0;
+      top: 40px;
+      left: 0;
   }
   
   #pun-ulinks:hover ul, #pun-ulinks:focus ul {
@@ -309,11 +341,19 @@
   /* Статус и путь
   -------------------------------------------------------------*/
   
+  #pun-status {
+    margin: -40px 0 0 0;
+}
+
   #pun-status .container {
+    padding-left: 45px;
     width: 100%;
     text-align: right;
     justify-content: center;
     font-size: 12px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
   }
   
   .punbb .container.crumbs {display: block;}
@@ -323,6 +363,8 @@
   /* Объявление
   -------------------------------------------------------------*/
 
+ .punbb #pun-announcement {display: none;}
+
   .punbb #pun-announcement .container {padding: 20px !important;}
   
   
@@ -331,7 +373,7 @@
 
   .multipage {margin-top: 10px;}
 
-  .category {
+  .category:not(:last-of-type) {
    margin: 20px 0;
   }
   
@@ -340,6 +382,7 @@
   margin: 0;
   padding: 10px 20px !important;
   width: initial !important;
+  text-align: right;
   }
   
   .punbb h1 span, .punbb h2 span {
@@ -402,22 +445,8 @@
     position: relative;
     transform: none;
   }
-  
-  #pun-index .intd {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-  }
 
-#pun-index .intd .podfor {
-  padding: 10px 15px;
-  background-image: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg), linear-gradient(rgb(255 255 255 / 0%) 5%, rgb(210 210 200) 65%);
-  background-position: center;
-  border: 1px solid #bab9a58c;
-  box-shadow: 0px 0px 10px #caccc1;
-}
+  #pun-index .intd {margin-top: 0;}
   
   #pun-index .main .tc2:before {content: "Тем: ";}
   #pun-index .main .tc3:before {content: "Сообщений: ";}
@@ -594,7 +623,7 @@
     margin: 0;
     padding: 5px 10px;
     width: 100%;
-    min-height: 90px;
+    min-height: 115px;
     box-sizing: border-box;
   }
   
@@ -612,10 +641,10 @@
   
   /* Аватар */
   .punbb .post-author .pa-avatar {
-    width: 75px;
+    width: 100px;
     height: auto;
-    max-height: 75px;
-    max-width: 75px;
+    max-height: 100px;
+    max-width: 100px;
     display: block;
     position: absolute;
     margin: 0 0 5px; 
@@ -639,13 +668,13 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
-    max-height: 75px;
-    max-width: 75px;
+    max-height: 100px;
+    max-width: 100px;
   }
   
   /* Ник и статус */
   .punbb .post-author .pa-author, .punbb .post-author .pa-title {
-    margin-left: 85px;
+    margin-left: 105px;
     padding: 0;
     width: 100%;
     text-align: left;
@@ -656,14 +685,14 @@
   li.pa-fld2 {
     order: 1;
     width: 100%;
-    margin-left: 85px;
+    margin-left:105px;
   }
 
   .lzclan {border-bottom: none;}
   
   /* Сообщения */
   .punbb .post-author .pa-posts {
-    margin-left: 85px;
+    margin-left: 105px;
     padding-right: 10px;
   }
   
@@ -1011,5 +1040,53 @@
   -------------------------------------------------------------*/
 
   .go-up, .go-down {display: none !important;}
-  
+
+  #dice-form {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .punbb #tags #dice-form.container > div {
+    flex-direction: column;
+  }
+
+  .punbb #tags #dice-form.container > div:last-of-type label {
+    flex-direction: column;
+    display: flex;
+  }
+
+  /* быстрая смена акков
+  -------------------------------------------------------------*/
+
+#pun-navlinks li#navlogout {
+  display: flex;
+  gap: 10px;
+}
+
+#pun-navlinks .container li .odd {position: static !important;}
+
+.punbb #pun-navlinks a#New-exit {
+  margin: 0 !important;
+  position: relative;
+}
+
+.punbb #pun-navlinks a#New-exit:after {
+  content: "\f70c";
+}
+
+.punbb #pun-navlinks a#New-exit img {display: none;}
+
+.punbb #pun-navlinks li #form-login {
+  right: 0;
+  left: auto;
+  top: 40px;
+}
+
+#pun-navlinks li #form-login #List-UserNames {
+  position: relative;
+  margin: 0;
+  right: 0;
+  border: none;
+}
+
   }

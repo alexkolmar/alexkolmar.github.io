@@ -302,7 +302,7 @@ body::before {
   margin: 110px auto 30px;
   width: 1000px;
   background: var(--pun-bg) url(https://forumstatic.ru/files/0010/ed/c4/77765.png) no-repeat bottom center;
-  padding-bottom: 100px;
+  padding-bottom: 15px;
 }
 
 .punbb {
@@ -936,18 +936,15 @@ li#onlinelist {
 ------------------------------------------*/
 
 #html-footer {
-  position: absolute;
   width: 1000px;
   margin-top: 40px;
 }
 
-#html-footer .container {
+#html-footer > .container {
   padding: 0;
 }
 
 .banners {
-  position: relative;
-  right: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -2403,7 +2400,7 @@ img.avatardemo {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   scrollbar-color: var(--lt) transparent;
 }
 
@@ -2495,6 +2492,7 @@ img.avatardemo {
   border-radius: 10px;
   object-fit: cover;
   object-position: center;
+  margin-bottom: 10px;
 }
 
 .sns_voice {
@@ -2513,6 +2511,7 @@ img.avatardemo {
   border-radius: 0;
   max-width: 110px;
   filter: grayscale(1);
+  margin: 0;
 }
 
 .sns_mess details {
@@ -2523,6 +2522,7 @@ img.avatardemo {
   text-align: center;
   display: block;
   cursor: pointer;
+  font-size: 7px;
 }
 
 .sns_mess details[open] summary {

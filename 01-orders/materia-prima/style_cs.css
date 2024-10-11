@@ -1,3 +1,90 @@
+/*Общая хронология*/
+.all-chrono {padding: 24px; position: relative;}
+
+.all-chrono:before {
+    content: '';
+    height: 100%;
+    display: block;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+}
+
+.events-content {
+    position: relative;
+    width: 50%;
+}
+
+.events-content:nth-child(even) {margin-left: auto;}
+
+.events-data-title {position: relative;}
+
+.events-data-title:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    bottom: -3px;
+}
+
+.data-descr {
+    padding: 0 10px 4px 10px;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.events-decsr {padding: 20px 20px 20px 10px;}
+
+.data-numbers {
+    color: rgb(141 141 131 / 20%);
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.all-chrono .spoiler-box {
+    border: none;
+    background: none;
+}
+
+.all-chrono .spoiler-box > div {
+    background: none;
+    position: relative;
+    border: 1px solid #000;
+    padding: 3px 10px 3px 20px;
+    border-radius: 30px;
+    font-size: 9px;
+    line-height: 100%;
+}
+
+.all-chrono .spoiler-box > div.visible {background: none;}
+
+.all-chrono .spoiler-box > div:before {
+    content: "\f054";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-family: FontAwesome;
+    font-size: 9px;
+    line-height: 16px;
+    width: auto;
+    height: auto;
+    transition: all .5s ease-in-out .15s;
+    pointer-events: none;
+}
+
+.all-chrono .spoiler-box > div.visible:before {transform: rotate(90deg);}
+
+
 .topicname.imp {width: calc(100% - 20px);}
 .post-content .cnt-part p {text-align: start;}
 .ams-news blockquote {background: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg) no-repeat bottom center / cover;}
@@ -154,7 +241,7 @@ scrollbar-color: var(--color2) var(--dark);
 /* ОФОРМЛЕНИЕ КНОПОК
 ------------------------------------------*/
 
-input.button, #pun-admain input.button, #sub4, input[type="button"] {
+input.button, #pun-admain input.button, #sub4, input[type="button"], input[type="submit"] {
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
   background: #425c6c;
@@ -172,7 +259,7 @@ input.button, #pun-admain input.button, #sub4, input[type="button"] {
   letter-spacing: .5px;
 }
 
-input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="button"]:hover {
+input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="button"]:hover, input[type="submit"]:hover {
   background: #d2d2c9;
   box-shadow: 0 0 10px #c9c8c7 inset;
   color: #000;
@@ -187,6 +274,7 @@ input[type="text"], input[type="password"], textarea, select {
   background: #cfcdc8;
   border: 1px solid #a9a9a9;
   color: #000;
+  box-sizing: border-box;
 }
 
 button, input.button, input[type="text"], input[type="password"], select {
@@ -202,7 +290,7 @@ button, input.button, input[type="text"], input[type="password"], select {
 #pun {
 margin: 236px auto 80px;
 padding: 20px 0;
-max-width: 1002px;
+width: 1002px;
 background: url(https://forumstatic.ru/files/001b/f8/73/94138.jpg) no-repeat top, url(https://forumstatic.ru/files/001b/f8/73/24398.jpg) no-repeat bottom, transparent url(https://forumstatic.ru/files/001b/f8/73/56246.jpg) repeat;
 }
 
@@ -481,7 +569,7 @@ background: url(https://forumstatic.ru/files/001b/f8/73/94138.jpg) no-repeat top
   margin: 0 auto;
   width: 960px;
   top: 0;
-  z-index: 22;
+  z-index: 25;
   box-sizing: border-box;
   background: var(--body);
   box-shadow: 0px 0px 20px #c5c3b4 inset, 0px -1px #b5b59e inset;
@@ -1100,6 +1188,22 @@ top: -50px;
   border-width: 1px 0;
 }
 
+.pa-fld4 {
+  position: absolute;
+  margin: 70px 0px 0px -20px !important;
+  background: #13222a7a;
+  width: 19px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-color: transparent;
+  border-image: url(https://forumstatic.ru/files/001b/f8/73/14637.png) round 1;
+  align-items: center;
+  padding-top: 2px;
+  border-width: 1px 0;
+}
+
 .pa-author {
   font-family: 'Forum';
   font-size: 21px;
@@ -1305,7 +1409,7 @@ li.pa-title {
 }
 
 .post-author .fa-solid {
-  font-size: 14px;
+  font-size: 12px;
   color: #294455;
 }
 
@@ -1463,12 +1567,14 @@ height: 30px;
 .punbb #form-buttons td img {
 width: 30px;
 height: 30px;
+border: none;
 }
 
 #form-buttons td:before {
 content: "";
 font-family: var(--msr);
 font-size: 24px;
+font-weight: bold;
 color: #5c7c8d;
 position: absolute;
 pointer-events: none;
@@ -1758,6 +1864,269 @@ margin: 0 0 10px 0;
 .go-down img {
     transform: rotate(180deg);
 }
+
+
+/*************************
+Стиль для Быстрой смены аккаунтов
+Deff
+*************************/
+/*Cкрытие формы входа без клика*/
+#pun-navlinks a:not(.NextShow)+span.odd{
+display:none!important;
+}
+#pun-navlinks #New-exit img{
+position:absolute;
+margin: 0;
+width:16px;
+height:auto;
+opacity:.8;
+}
+#pun-navlinks #New-exit:hover{
+opacity: .4;
+}
+/*Стиль доп-иконки Выход!*/
+.punbb #pun-navlinks a#New-exit {
+  position:absolute;
+  z-index:100000!important;
+  margin-top: 6px!important;
+  margin-left: 57px!important;
+  float:none!important;
+}
+.punbb #pun-navlinks a#New-exit:before {
+    content:none;
+}
+.punbb #pun-navlinks #form-login input {
+    text-align: center;
+    border: none;
+    text-rendering: auto;
+    color: #000000!important;
+    margin-top: 4px!important;
+    border-radius: 0;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block!important;
+    text-align: center;
+    font: normal normal 400 11px/normal Arial!important;
+    background-color: rgb(215 216 208);
+    box-shadow: none;
+}
+.punbb #pun-navlinks #form-login input#Paste-And-Copy {
+  width: 100%!important;
+}
+
+.punbb #form-login #fld1, #form-login #fld2 {
+    background-color: rgb(215 216 208)!important;
+}
+.punbb #pun-navlinks #form-login input[type="submit"] {
+    background: #425c6c !IMPORTANT;
+    border: 1px solid #bab9a5 !important;
+    box-shadow: 0 0 10px #587487 inset;
+    color: #cecfbc !IMPORTANT;
+    font-family: beaufort !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    margin-top: 10px !important;
+    padding: 5px 15px 6px 15px !important;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+/*Стиль формы входа*/
+.punbb #pun-navlinks #form-login {
+    text-shadow: 1px 1px 0 rgb(0 0 0);
+    display: block;
+    font: normal normal 400 11px/normal open sans;
+    color: #cfd1c6;
+    text-transform: none;
+    position: absolute!important;
+    left: 0px;
+    top: 25px;
+    z-index: 100000!important;
+    padding: 7px 12px;
+    background: #1f2527;
+    text-align: center;
+    /* box-shadow: inset 0 0 4em rgba(23,23,13,.99); */
+    border: 1px solid #8a7756;
+}
+#pun-navlinks #navlogin #form-login {
+margin-left: 0;/*Подвижки формы влево от вход*/
+}
+#pun-navlinks #navlogout #form-login {
+margin-left: 0;/*Подвижки формы влево от выход*/
+}
+.ismoderator #pun-navlinks #navlogout #form-login {
+  margin-left: 0;/*Подвижки формы влево от выход для АМС*/
+}
+/*Стиль ссылок в форме "Не зарегистрированы" и "Забыли пароль" */
+#pun-navlinks #form-login input[value="Войти"]+p{
+margin-bottom: 11px;
+margin-top: 11px;
+}
+.punbb #pun-navlinks #form-login a.Rega,
+.punbb #pun-navlinks #form-login a.Forgot{
+position:relative;
+text-transform: none!important;
+z-index:20;
+text-shadow:none;
+cursor:pointer;
+font: normal normal 400 10px/normal Tamota!important;
+letter-spacing:0.5!important;
+color: var(--color2);
+}
+.punbb #pun-navlinks #form-login a.Rega:before,
+.punbb #pun-navlinks #form-login a.Forgot:before{
+  content:none;
+}
+/* Помечаем красным незаполненные поля!*/
+#form-login input.none{
+outline:red dashed 2px!important;
+}
+/*Форма слево(с Никами) */
+#List-UserNames {
+    position: absolute;
+    margin-top: -8px;
+    min-height: 90px;
+    width: 220px;
+    right: 100%;
+    padding: 12px 19px 12px 17px;
+    border-style: solid;
+    border-width: 1px 2px 2px 2px;
+    border-radius: 0 0 0px 6px;
+    text-align: center;
+    border: 1px solid #8a7756;
+    color: #cfd1c6;
+    background: #1f2527;
+}
+/*Стиль контейнера под список Ников*/
+.punbb #List-UserNames ul{
+padding:0;
+overflow:hidden;
+overflow-y:auto;
+min-height:36px; 
+max-height:72px;/*Видимое число Ников без прокрутки! сейчас - 4*/ 
+}
+.punbb #List-UserNames li {
+    display: block!important;
+    position: relative;
+    background: #2d4859;
+    text-align: left;
+    box-shadow: none;
+    padding-left: 5px!important;
+    margin: 1px auto!important;
+    padding: 2px 0;
+    transition: .33s;
+}
+.punbb #List-UserNames li:hover{
+opacity:.84;
+/*background:#546a6b!important;*/
+}
+/*Стиль Ников*/
+.punbb #List-UserNames li>b {
+    cursor: pointer;
+    opacity: 1;
+    color: #d7d8d0;
+}
+.punbb #List-UserNames li>b:hover{
+opacity:.93;
+text-shadow:1px 1px 1px rgba(0,0,0,.6);
+}
+/*Скролл контейнера с никами*/
+#List-UserNames ul::-webkit-scrollbar {
+width: 7px;
+height: 5px;
+}
+#List-UserNames ul::-webkit-scrollbar-track {
+background-color: #3e2a24;
+    border: 1px solid #6a524b;
+    box-shadow: none;
+}
+#List-UserNames ul::-webkit-scrollbar-thumb {
+background-color: #40302a;
+    border: 1px solid #89766f;
+    box-shadow: none;
+}
+/*Кнопки Удалить (правее ников)*/
+#List-UserNames ul li>span {
+display: inline-block;
+    padding: 0 3px;
+    position: absolute;
+    opacity: .88;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 2px;
+    font: normal normal 700 10.56px/normal Verdana;
+    color: #a38379;
+    text-shadow: 1px 1px 1px rgb(0 0 0);
+}
+/*Текст при отсутствии запомненных Ников!*/
+#List-UserNames ul:empty:before{
+display:inline-block;
+content: "У Вас нет запомненных ников, введенных через форму справа, или через перенос ниже!";
+}
+/*Кнопка выход-2*/
+#navlogin #exit-2 {
+display:none;
+}
+#navlogout .Rega,
+#navlogout .Forgot {
+display:none;
+}
+/*Стиль блока с инпутом для переноса и вставки запомненных Аккаунтов*/
+#List-UserNames ul+span{
+display:inline-block;
+padding:6px 0 8px 0;
+text-align:left;
+font: normal normal 400 10.56px/normal Verdana;
+}
+/*Сам инпут*/
+.punbb #List-UserNames input {
+    background: rgb(42 26 21);
+    border: 2px inset rgb(62 42 36)!important;
+    border-radius: 6pximportant;
+    text-shadow: none!important;
+    color: #3e2a24!important;
+    background-color: #342a23;
+    font: normal normal 400 11px/normal Arial!important;
+    box-shadow: inset 0px 0px 3px rgb(18 9 6);
+    margin-top: 9px;
+    padding: 2px !important;
+    vertical-align: middle;
+}
+/*Стрелочки к инпуту*/
+#List-UserNames ul+span b{
+font: normal normal 400 13px/normal Verdana;
+padding:0 3px;
+color: #877D73;
+}
+/*Кликалка слево, чуть выше инпута*/
+#List-UserNames .a1-copy{
+display:inline-block!important;
+cursor:pointer;
+float:left;
+}
+/*Кликалка справо*/
+#List-UserNames .a1-paste{
+cursor:pointer;
+display:inline-block!important;
+float:right;
+}
+/*Подсказки на кликалках*/
+.tipsy.a11 {
+font: normal normal 400 11px/normal Tahoma!important;
+margin-top:-22px!important;
+margin-left: 148px!important;
+max-width:170px;
+}
+/*************************
+//Конец Стиля для Быстрой смены аккаунтов
+*************************/
+
 
 /* ================== */
 
@@ -2205,7 +2574,7 @@ margin: 0 0 10px 0;
 
 
 /* Убираем паддинги */
-.guestbook .header-h1 p, .guest-occupied .occupied-item p, .post-content .shtitle p, .post-content .comand-check p, .post-content .custom_tag_float p, .lore .sh-item p, .sh-container .active-ep p, .sh-container .noactive-ep p, .sh-container .ep-descr p, .sh-container .episode-title p, .sh-container .title-cart p, .fraction .fr-title p, .fraction .fr-desc p {padding: 0;}
+.guestbook .header-h1 p, .guest-occupied .occupied-item p, .post-content .shtitle p, .post-content .comand-check p, .post-content .custom_tag_float p, .lore .sh-item p, .sh-container .active-ep p, .sh-container .noactive-ep p, .sh-container .ep-descr p, .sh-container .episode-title p, .sh-container .title-cart p, .fraction .fr-title p, .fraction .fr-desc p, .all-chrono .data-descr p {padding: 0;}
 
 .guestbook .header-h1 p {line-height: normal;}
 .custom_tag_float img.postimg, .post-content .title-cart img {margin: 0;}
@@ -2463,8 +2832,9 @@ transition: all 0.8s;
 .rhino-bullets {
     margin: 0;
     padding: 0 0 0 230px;
-    width: calc(100% - 225px);
     text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 .punbb .rhino-bullets li {
 line-height: 36px;
@@ -2596,8 +2966,33 @@ td#button-addition {background:url('/i/form_buttons.3.png') no-repeat 50% -515px
 #addition-area div {height:24px; vertical-align:middle}
 #font-area img {width:100%; margin-top:-15px}
 #size-area img {width:100%; margin-top:-24px}
-#keyboard-span {text-align:center; padding-bottom:10px; width:auto}
-#keyboard-span input {font-family:Arial, Helvetica, sans-serif; font-weight:300; font-size:13px; color:#666; background-color:#fff; margin:1px 1px 0 0; border:1px solid #ddd; cursor:pointer; height:25px; min-width:30px}
+
+#keyboard-span {
+  text-align: center;
+  padding-bottom: 10px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#keyboard-span input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  margin: 1px;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  min-width: 30px;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 3px;
+}
+
 #imageup-area input {font-size:0.8em}
 #imageup-area p {padding:0; margin:0}
 #imageup-title {margin-bottom:10px !important}
