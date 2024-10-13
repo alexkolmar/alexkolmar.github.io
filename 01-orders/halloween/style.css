@@ -1,3 +1,6 @@
+/* Font Awesome */
+@import url('https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css');
+
 @import url(style_cs.css);
 
 /* uicons */
@@ -26,6 +29,11 @@
 
 /* Cuprum */
 @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Welona */
+@import url('https://alexkolmar.github.io/fonts/Welona/stylesheet.css');
+
+@import url('https://alexkolmar.github.io/fonts/fa/all.css');
 
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
@@ -1276,6 +1284,9 @@ pre {
   border-bottom: 1px solid var(--quote-bor);
 }
 
+.code-box strong.legend a {color: var(--link2-hover);}
+.code-box strong.legend a:hover {color: var(--lt);}
+
 .quote-box blockquote, .code-box .blockcode {
   padding: 15px 30px;
 }
@@ -1551,7 +1562,24 @@ img.avatardemo {
 }
 
 
+/* Счётчик символов
+-------------------------------------------------------*/
+
+#plng {
+  border: 1px solid var(--quote-bor);
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+/* Сокрытие профиля
+-------------------------------------------------------*/
+
 .hideprofile .post-body, .hideprofile .post-links, .hideprofile .post-links ul, .post.hideprofile h3 > span {width: 100%;}
+
+
+/* хтмлки
+-------------------------------------------------------*/
 
 /* Гостевая */
 
@@ -2527,4 +2555,95 @@ img.avatardemo {
 
 .sns_mess details[open] summary {
   margin-bottom: 10px;
+}
+
+/* Диспатч */
+
+.dispatch {
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 670px;
+  background: #000;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border: 1px solid #868787;
+}
+
+.dis_ava {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.dis_ava img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.dis_inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+.dis_info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dis_name {
+  font-size: 16px;
+  font-family: "Arial";
+}
+
+.fa-badge-check {
+  color: #de5d0d;
+}
+
+.dis_nick, .dis_time {
+  font-family: "Arial";
+  font-size: 13px;
+  color: #667886;
+}
+
+.fa-chevron-down {
+  margin-left: auto;
+  color: #b29e8d;
+}
+
+.dis_text {
+  font-size: 10px;
+  font-family: "Arial";
+  color: #fff;
+  line-height: 13px;
+}
+
+.dis_img {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e6ecf0;
+  border-radius: 14px;
+  display: block;
+  margin: 10px 0;
+}
+
+.dis_links {
+  color: #657785;
+  font-size: 16px;
+  font-family: "Arial";
+  display: flex;
+  gap: 60px;
+}
+
+.dis_links i {
+  color: #fffff0;
+  margin-right: 10px;
 }
