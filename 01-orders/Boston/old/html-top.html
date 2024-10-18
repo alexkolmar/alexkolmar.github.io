@@ -1,0 +1,811 @@
+<!-- Профилактика -->
+<div id="resplash" style="display: none;">
+    <div class='formal'
+      style='height:200px; width:200px; margin:auto; margin-top:200px; font-family:tahoma; font-size:10px;'>
+      <form id='login' class='container' method='post' action='login.php?action=in' onsubmit='return my_form(this)'>
+        <fieldset><span>Форум на профилактике</span>
+          <div class='fs-box inline'> <input type='hidden' name='form_sent' value='0' /><input type='hidden'
+              name='redirect_url' value='/' />
+            <p class='inputfield required'> <label for='fld1'>Имя <em>(Обязательно)</em></label><br /> <span
+                class='input'> <input type='text' id='fld1' name='req_username' size='25' maxlength='25' /></span></p>
+            <p class='inputfield required'> <label for='fld2'>Пароль <em>(Обязательно)</em></label><br /> <span
+                class='input'> <input type='password' id='fld2' name='req_password' size='25' maxlength='25' /></span></p>
+          </div>
+        </fieldset>
+        <center>
+          <p class='formsubmit'> <input type='submit' class='button' id='customebutton' name='login'
+              value='Войти как Администратор' /></p>
+        </center>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+        var active = 0; //Cвитч включения: 1 — включено!; 0 — выключено
+      if (GroupID != 1 && active == 1) {
+          e10 = document.createElement('div')
+          e10.innerHTML = document.getElementById("resplash").innerHTML;
+          document.getElementsByTagName('body')[0].insertBefore(e10, document.getElementById('pun_wrap'))
+          document.write("<style type=\"text/css\">html, body {background: #fff;} #customebutton {margin: auto;} #pun {display: none;}</style>");
+          document.title = 'Мы обязательно вернемся. следите за нами в вк https://vk.com/tabloid_horror - ' + document.title;
+      }
+  </script>
+  
+  <!----- СМЕНА СТИЛЯ ----->
+  <script type="text/javascript">
+  var styleList = [{
+      class: 'day',
+      name: 'Day'
+  }, {
+      class: 'night',
+      name: 'Night'
+  }];
+  
+  function getCookie(a){return(a=document.cookie.match(new RegExp("(?:^|; )"+a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,"\\$1")+"=([^;]*)")))?decodeURIComponent(a[1]):void 0}function setStyle(a){$("body").attr("class",a);$("#stylelist li").removeClass("active");$('#stylelist li[data="'+a+'"]').addClass("active");selStyle=a;document.cookie="selStyle="+a+"; max-age=2592000"}var selStyle=getCookie("selStyle");selStyle&&setStyle(selStyle);
+  $(document).ready(function(){$("#stylelist").length||$("body").prepend('<ul id="stylelist"></ul>');for(i=0;i<styleList.length;i++)$("#stylelist").append('<li data="'+styleList[i]["class"]+'"'+(selStyle==styleList[i]["class"]?' class="active"':"")+'><a href="/" onclick="setStyle($(this.parentNode).attr(\'data\'));return false">'+styleList[i].name+"</a></li>")});
+  </script>
+  <!----- Смена стиля - END ----->
+  
+  
+  
+  <!-- Cчётчик Игровых постов -->
+  <script type="text/javascript">
+    /*delete localStorage.alertsAMS_onCountCode;*/
+    /***************************
+            Настройки!
+    ***************************/
+    FORUM._NUMpa_fld = 3;		// Номер.Доп.поля,
+    FORUM._color_fld = "var(--accent3)";	// Цвет шрифта,
+    FORUM.includeFirstPost = 0;	// 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
+    FORUM.AddOrSlash = 0;		// 0 - Поле отдельно, 1 - через слешь c общ. числом сообщений,
+    FORUM.Number_winners = [7, [2, 31, 18]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
+    FORUM.Subscription_Code = "226e9e0530bdf3c4e4945779a39964a665c4c8c6";	//Код подписки!!;
+  
+    function ad_() {/*!~!FORUM.ForArrAy = {
+         //Форум  //Темы (включаемые, или исключаемые)
+         f18	:+[743],	//Тестовая тема...
+         f17	:-[0],  //Все темы(без исключений)
+         f14	:-[0],  //Все темы(без исключений)
+         f15	:-[0],  //Все темы(без исключений)
+         f16	:-[0]	//Все темы(без исключений)//Последний элемент без запятой!
+         }
+         !~!*/} ad_ = ad_.toString().split('!~!')[1];//alert(ad_);
+  </script>
+  <script type="text/javascript" src="//forumstatic.ru/files/0013/44/56/77707.js"></script>
+  <!-- END//Cчётчик Игровых постов -->
+  
+  <!-- Слухи -->
+  <div class="rumors">
+    <div class="content">
+      <span>Ходят слухи...</span>
+      <script type="text/javascript">
+        var links = [
+          '<p class="splet">бостонская полиция вышла на первое место по раскрываемости преступлений. Местные копы гордятся своими полицейскими ищейками. Но самого главного детектива еще никто не видел… трезвым.</p>',
+          '<p class="splet">некий британский джентльмен привез из Японии ритуальный самурайский меч, в котором поселился самый настоящий Шоджо, алкогольный дух-проказник. Меч можно арендовать за умеренную плату и ящик виски.</p>',
+          '<p class="splet">в знаменитом БДСМ-клубе чучела единорогов используются для ВИП-клиентов совсем не в качестве антуража. Дескать, именно поэтому они потеряли свой изначально белоснежный цвет.</p>',
+          '<p class="splet">фирма Boston Dynamics приостановила выпуск знаменитых роботособак BigDog из-за того, что в одну собаку вселился злой дух. </p>',
+          '<p class="splet">по ночным улицам Саут-Энда катается чертово такси. Тот, кто садится внутрь, уже никогда не приедет на свою остановку.</p>',
+          '<p class="splet">в бостонском анатомическом музее Уоррена есть закрытая секция, где выставлен труп настоящего оборотня-волка. Или волчицы.</p>',
+          '<p class="splet">в Чайна-тауне в канун Китайского нового года, если достаточно долго ждать, можно разглядеть в небе силуэт настоящего дракона.</p>',
+          '<p class="splet">говорят, по ночным улицам Саут-Энда катается чертово такси. Тот, кто садится внутрь, уже никогда не приедет на свою остановку.</p>',
+          '<p class="splet">фильм «Отступники» решили снять в Нью-Йорке, а не в Бостоне, хотя события и разворачиваются там по сюжету, вовсе не из-за финансовых соображений. Все дело в том, что на отснятых пленках постоянно встречались актеры массовки в неподходящих антуражу костюмах, которых никто не нанимал и вообще никогда не видел на площадке.</p>',
+          '<p class="splet">туннели бостонского метро были созданы много тысячелетий назад подземным народцем.</p>',
+          '<p class="splet">каждую пятницу 13 числа в Бостонском метро можно встретить слепого карлика, торгующего камнями. Говорят, что эти камни обладают магической силой.</p>',
+          '<p class="splet">на многих записях с мест аварий присуствует неприметный мужчина в шляпе-котелке. Он всегда уходит ровно за минуту до столкновения автомобилей.</p>',
+          '<p class="splet">в окрестностях Бостона есть тюрьма без охранников. Заключенные слишком напуганы, чтобы попытаться сбежать</p>',
+          '<p class="splet">система автомагистралей между штатами США выполнена в виде огромной пентаграммы, способной призвать легион демонов в случае нападения Советского Союза.</p>',
+          '<p class="splet">существует веб-сайт, на котором продаются магические книги — настоящая, на самом деле работающая магия. Адрес постоянно меняется, потому что сайт всё время закрывают. Попробуй поискать по кодовым словам «Magnum Arcanum» и «John Doe».</p>',
+          '<p class="splet">у снежного человека есть номер социального страхования.</p>',
+          '<p class="splet">если закопать вокруг дома пустые кофейные банки одна к одной крышками вверх, то со двора никогда не увидишь Северное сияние, зато Налоговая Служба забудет о твоём существовании.</p>',
+          '<p class="splet">в ФБР есть отдел по контролю сверхъестественного.</p>',
+          '<p class="splet">в Салеме есть призрачный универмаг. Именно там закупаются призраки.</p>',
+          '<p class="splet">если всерьёз займёшься исследованием телефонных номеров, написанных на стенах общественных уборных, то обнаружишь тайную математическую формулу вселенной.</p>',
+          '<p class="splet">одна популярная радиостанция вставляет в передачи тайные инструкции для секретных армий, сражающихся за контроль над миром.</p>',
+          '<p class="splet">телефонная сеть — живая и разумная, она управляет нами — ограниченным способом — с 1943 года. Распространение Интернета окончательно закрепило её власть…</p>',
+          '<p class="splet">все до единого забыли остальные пять знаков Зодиака.</p>',
+          '<p class="splet">когда ты пьян, реальность раскрывается перед тобой - можешь войти и изменить её. Только не забудь взять с собой бумагу и карандаш, иначе не сможешь вернуться.</p>',
+          '<p class="splet">в Салеме живет ведьма, умеющая работать с глазами. Она может исправить твоё зрение. Хочешь снова видеть мир как ребёнок? Или может быть наоборот, ты не хочешь чего-то видеть?</p>',
+          '<p class="splet">в индейской резервации, проживающей на территории заповедника Blue Hill живет женщина-сова. Она может предсказать тебе будущее, если ты принесешь ей три живых мыши.</p>',
+          '<p class="splet">президент США на самом деле механический робот, контролируемый ковеном из семи подростков.</p>',
+          '<p class="splet">мороженщик на углу Девитт Драйв и Шомут-авеню хранит на дне своей тележки, под сухим льдом, говорящую человеческую голову. За серебряный доллар он позволит тебе задать ей один вопрос; голова знает всех, кто хочет твоей смерти, а также их мотивы.</p>',
+          '<p class="splet">в Бостоне существует культ, который нашёл способ объединить Вуду с Портретом Дориана Грея. Они становятся всё более прекрасными, тогда как обитатели небольшой деревеньки в Канзасе рождаются всё уродливее и уродливее.</p>',
+          '<p class="splet">в Бостоне открыта студия звукозаписи, которая создает диски с записью саундтрека к человеческой жизни. Каждый саундтрек заканчивается одной жуткой нотой, после которой настает тишина.</p>',
+          '<p class="splet">некоторые - многие? все? - домашние животные - телепаты и ведут запись того, какие люди обращались с ними хорошо, а какие нет. Однажды они отплатят за всё - и за хорошее, и за плохое.</p>',
+          '<p class="splet">все эти сообщения на тему "Сделай деньги быстро" - не спам. Каждое из них содержит в себе частичку секретного числа Зверя, и, если у тебя в ящике наберётся достаточно таких писем, ты сможешь восстановить его имя и поговорить с Врагом!</p>',
+          '<p class="splet">если ты переберёшься через старую кирпичную стену на Эвергрин Стрит в нужное время, то попадёшь в страну мёртвых.</p>',
+          '<p class="splet">если 31 января за 2 минуты до полуночи ты ступишь на Бостонский университетский мост, то попадешь в страну мертвых</p>',
+          '<p class="splet">бродяги и бездомные пропадают возле того старого, позаброшенного участка железной дороги. Считается, что они уходят прямиком в рай. Но происходит это лишь при голубой луне. В буквальном смысле</p>',
+          '<p class="splet">некрофон Томаса Едисона - для общения с мертвыми - никогда не работал. Как бы то ни было, но ему удалось создать Неофон, для разговоров с еще не родившимися.</p>',
+          '<p class="splet">в Бостонском метро живут самые настоящие гремлины. Именно поэтому вход с едой на перроны запрещен — эти маленькие твари никогда не против поживиться сначала вашей вкусняшкой, а потом и вами.</p>',
+          '<p class="splet">ни в коем случае не подбирайте на улицах монеты — они несут проклятье. Даже если у вас рассыпалась мелочь — лучше оставьте все как есть, их соберут чистильщики. Или ребята, которым жить надоело.</p>',
+          '<p class="splet">сатанисты любят месяцы, начинающиеся с воскресенья: в эти месяцы они более активны.</p>',
+          '<p class="splet">говорят, что огромная тень нависает над городом каждый третий месяц в году...</p>',
+          '<p class="splet">байкеры — это патрули демонов, которые контролируют деятельность ангелов, а также порой вступают в разборки между собой.</p>',
+          '<p class="splet">в заливе Куинси обитает злобная морская владычица, которая никогда не против утянуть на дно туристов, студентов и пьяниц (а лучше три в одном). Ей же можно сказать «спасибо» за сильные снегопады.</p>',
+          '<p class="splet">в Бостонской общественной библиотеке есть тайный раздел, где хранятся жуткие фолианты, вывезенные из Европы первыми ведьмами и переселенцами. Те самые магические книги, которые оборачивали человеческой кожей и писали кровью.</p>',
+          '<p class="splet">главная ведьма Салема — самая настоящая ведьма, живущая в этих краях больше 400 лет.</p>',
+          '<p class="splet">в отеле «Вельвет» во время медового месяца пара нашла труп в матрасе. Но поверьте, это не самое худшее, что можно там найти.</p>',
+          '<p class="splet">во многих штатах США дорожная полиция всегда имеет в патрульной машине 2 галлона Колы, чтобы смывать кровь с шоссе после аварии.</p>',
+          '<p class="splet">один из магазинчиков на главной туристической улице Салема держит настоящая Килох Вайра.</p>',
+          '<p class="splet">в заброшенной церкви в южной части города проживает призрак, некоторые видели его как Ворона, другие как Чумного Доктора, а может, и просто наркоман, черт его знает.</p>',
+          '<p class="splet">неподалеку от кладбища Салема, где растет жуткое старое дерево, можно призвать повешенных ведьм, и возможно, даже остаться в живых.</p>',
+          '<p class="splet">если пригласить на свадьбу белую Лису и дать ей как следует выпить, можно избежать попадания в статистику разводов!</p>',
+          '<p class="splet">из городских архивов известно, что одно старейших кладбищ Бостона, Гранари, основали в 1660 году. Однако первое надгробие датируется только 1667 годом. Все дело в том, что до тех пор эта земля была проклята и пожирала все, что в нее попадало. </p>',
+          '<p class="splet">на Тропе Свободы на самом деле не хватает нескольких важных точек, в которых произошли такие события, как необъяснимое исчезновение всех жителей улицы Тремонт-стрит.</p>',
+          '<p class="splet">дом, который Лавкрафт описал в рассказе «Модель для Пикмана», снесли при перестройке города лишь частично, убрав этажи, возвышавшиеся над землей. И подвал с колодцем, ведущим в саму преисподнюю, может оказаться под домом любого жителя Норт-Энда.</p>',
+          '<p class="splet">фильм «Отступники» решили снять в Нью-Йорке, а не в Бостоне, хотя события и разворачиваются там по сюжету, вовсе не из-за финансовых соображений. Все дело в том, что на отснятых пленках постоянно встречались актеры массовки в неподходящих антуражу костюмах, которых никто не нанимал и вообще никогда не видел на площадке.</p>',
+          '<p class="splet">в небе над городом видели настоящую валькирию. Она чуть не сбила самолет.</p>',
+          '<p class="splet">Ростовы являются хранителями семян цветущего папоротника.</p>'
+        ];
+        var los = Math.floor(Math.random() * links.length); document.write(links[los]);
+      </script>
+    </div>
+  </div>
+  
+  <!-- Таблица в шапке -->
+  <div class="tablica">
+    <div class="culon"></div>
+    <!-- Админы -->
+    <div class="amsblock">
+      <a class="amsbutton" href="#admins">AMS</a>
+      <div id="admins">
+        <div class="admin">
+          <a href="//bostoncrazzy.rusff.me/profile.php?id=14" class="duty">Куба<br>Сначала весело, а потом расстрел.</a>
+          <span>Charlotte Hunt</span>
+          <img src="//ipic.su/7yXzVz.gif">
+        </div>
+        <div class="admin">
+          <a href="//bostoncrazzy.rusff.me/profile.php?id=77" class="duty">Швейцария<br>Вежливый нейтралитет со стеной
+            щитов.</a>
+          <span>Astrid Ingram</span>
+          <img src="//ipic.su/7yXzVA.gif">
+        </div>
+            </div>
+      <script>
+        $('.amsbutton').click(function () {
+          $("#admins").fadeToggle(600);
+          $(this).toggleClass("active");
+          return false;
+        });
+      </script>
+    </div>
+  
+    <!-- Постописцы -->
+    <div class="writers">
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=754" title="David Drogan"> <img src="https://i.imgur.com/cTPhEP8.png"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=798" title="Kevin Morgan"> <img src="https://i.imgur.com/rGrIYCR.png"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=659" title="Tyler Webb"> <img src="https://i.imgur.com/ubWJ5UO.png"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=805" title="Abaddon"> <img src="https://i.imgur.com/Zrr4q95.png"></a></div>
+   <span>посты</span>
+    </div>
+  
+  
+    <!-- картинка-люди -->
+    <img src="https://forumstatic.ru/files/001a/e7/a4/56356.png" class="decor-img2">
+  
+    <!-- Лучший пост -->
+    <div class="bestpost">
+      <a class="hed" href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3778#p470244">Если звёзды зажигают</a>
+      <p>	
+  Она чувствовала, что эти огни имели очень важное и очень личное значение для мужчины, от этого они начинали гореть иначе. Ценность момента возрастала, ценность момента менялась и мерцала, превращая бессердечную и неуправляемую стихию в живую, а пламя — в пламя жизни. Это превращало его в драгоценность.
+  — Я всегда любила звёзды, они похожи на россыпь драгоценностей на платье какой-нибудь богини, — конечно же она знала, что Нюкта не настолько лирична и с модными тенденциями у неё всё очень своеобразно, но это не отменяло красоты звёзд. И не отменяло магии, которая творилась здесь и сейчас — её было не провести видимостью спичек. Природа этого огня была не физической, уже лишь позже он обретал своё тело и жар, когда соприкасался с фитилём. Опасная магия, опасный человек — огонь часто выжигал своих служителей, превращая в обугленный скелет если не физически, то морально. читать далее "Если звёзды зажигают"    </p>
+      <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3778#p470244" class="more">читать далее...</a>
+    </div>
+  
+    <!-- картинка-скелет -->
+    <img src="https://forumstatic.ru/files/001a/e7/a4/26720.png" class="decor-img">
+  
+    <!-- Активисты -->
+    <div class="activists">
+      <span>актив</span>
+  <div class="face"><a href=https://bostoncrazzy.rusff.me/profile.php?id=645" title="Sillariana Ailil"> <img src="https://i.imgur.com/8CABRCA.jpg"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=789" title="Alexander Piorun"> <img src="https://i.imgur.com/VY6mOum.png"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=76" title="Eric Meyer"> <img src="https://i.imgur.com/Lh3FT5U.png"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=388" title="Amos Sermen"> <img src="https://i.imgur.com/Z77LclF.jpg"></a></div>
+   </div>
+  
+    <!-- Лучший эпизод -->
+    <div class="bestep">
+          <a class="hed" href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3798">Под покровом ночи</a>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=722" title="Theodora Murray"> <img src="https://i.imgur.com/6cqqmyE.png"></a></div>
+  <div class="face"><a href="https://bostoncrazzy.rusff.me/profile.php?id=792" title="Rueridh Melville"> <img src="https://i.imgur.com/oDybtzA.png"></a></div>
+      </div>
+  
+    <!-- Переключатель тем -->
+    <!--div class="theme-switch" id="stylelist">
+      <a href="#" class="day"><img src="https://forumstatic.ru/files/001b/6e/a7/72888.png" alt=""></a>
+      <span>tabloid horror</span>
+      <a href="#" class="night"><img src="https://forumstatic.ru/files/001b/6e/a7/91386.png" alt=""></a>
+    </div-->
+    
+    <ul class="theme-switch" id="stylelist">
+      <li><span>tabloid horror</span></li>
+  </ul>
+  
+    <!-- Название -->
+    <div class="title-tablica">
+      Boston
+    </div>
+  
+    <!-- Навигация -->
+    <div class="navig">
+      <div class="navblock">
+        <!-- скрипт навигации выпадающим окном [основа скрипт вкладок https://imagiart.ru/, переработка вещего духа]
+          -->
+        <script type="text/javascript" src="//forumstatic.ru/files/001a/18/bd/96460.js"></script>
+        <div class="spirit-navigation" id="navig-batton" title="навигация для гостей">для гостей</div>
+        <div id="navigblock" style="display:none">
+          <div class="sslka">
+            <!-- важные ссылки -->
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=3190">гостевая</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=44#p94">правила</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=38#p74">F.A.Q.</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2863&p">связь с АМС</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=40">внешности</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=12#p15">нужные</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=42">хотим видеть</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=43#p79">хочу к вам</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=36">организации</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2238">расы</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=41#p233653">население</a>
+          </div>
+        </div>
+      </div>
+      <div class="navblock">
+        <!-- скрипт навигации выпадающим окном [основа скрипт вкладок https://imagiart.ru/, переработка вещего духа]
+          -->
+        <script type="text/javascript" src="https://forumstatic.ru/files/0012/0b/b4/96461.js?v=4"></script>
+        <div class="spirit-navigation1" id="navig-batton1" title="навигация для игроков">для игроков</div>
+        <div id="navigblock1" style="display:none">
+          <div class="sslka">
+            <!-- важные ссылки -->
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2359">банк</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=273">ачивки</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=51">подарки</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2819">поиск игры</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2896">отношения</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2733">отсутствия</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=2175#p287561">npc игроков</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=39">путеводитель</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=66">завершение эпизода</a>
+            <a href="//bostoncrazzy.rusff.me/viewtopic.php?id=23">графика</a>
+            <a href="//bostoncrazzy.rusff.me/viewforum.php?id=19">игры на выживание</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Сведения -->
+    <div class="aboutblock">США, Бостон, 2024 год,<br>мистика, хоррор, городские легенды</div>
+  
+    <!-- Арты -->
+    <div class="artsphere">
+      <div class="sphereglass"></div>
+      <div class="arts">
+        <style>
+          #КонтентРотатор2 p {
+            display: none
+          }
+        </style>
+        <div id="КонтентРотатор2"><!-- Ротатор произвольного контента -->
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/502989.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/281243.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/506117.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/394247.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/45884.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/828229.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/442154.png"></p>
+          <p><img src="https://forumupload.ru/uploads/001a/e7/a4/14/93267.png"></p>
+          <p><img src="https://i.imgur.com/xW4bLZE.png"></p>
+          <p><img src="https://i.imgur.com/ZoYi513.png"></p>
+          <p><img src="https://i.imgur.com/GsRDrvY.png"></p>
+          <p><img src="https://i.imgur.com/ayWF17K.png"></p>
+          <p><img src="https://i.imgur.com/9dOZPxB.png"></p>
+          <p><img src="https://i.imgur.com/InKxC5m.png"></p>
+          <p><img src="https://i.imgur.com/XUEDRti.png"></p>
+          <p><img src="https://i.imgur.com/V0TDblF.png"></p>
+  
+               </div>
+        <script type='text/javascript'>
+          function Rotator_cont(selek) {
+            var s = 360000;  // Время отображения
+            var N = $(selek).length;
+            var i = Math.round(Math.random() * (N - 1)); Rotator(i);
+  
+            function Rotator(i) {
+              $(selek).hide(); $(selek).eq(i).show(); i++;
+              if (i > N - 1) { i = 0 };
+              timerId01 = setTimeout(function () { Rotator(i) }, s); return;
+            }
+          } Rotator_cont('#КонтентРотатор2 p')
+        </script>
+      </div>
+    </div>
+    <!-- Декор -->
+    <div class="deco"><img src="https://forumstatic.ru/files/001b/6e/a7/28505.png"></div>
+     <!-- Аудио -->
+    <div class="audio-player">
+     <audio id="audio">
+        <source src="https://forumstatic.ru/files/001a/e7/a4/49869.mp3" type="audio/mp3">
+      </audio>
+  
+      <div class="player-controls">
+  
+        <button id="playAudio" onClick="togglePlay()"></button>
+  
+        <!--div id="seekObjContainer">
+        <div id="seekObj">
+          <div id="percentage"></div>
+        </div>
+      </div>
+  
+      <p><small id="currentTime">00:00</small></p-->
+  
+      </div>
+    </div>
+    
+    <script type='text/javascript'>
+        var myAudio = document.getElementById("audio");
+        var isPlaying = false;
+  
+        function togglePlay() {
+          isPlaying ? myAudio.pause() : myAudio.play();
+          var element = document.getElementById("playAudio");
+          element.classList.toggle("pause");
+        };
+  
+        myAudio.onplaying = function() {
+          isPlaying = true;
+        };
+        myAudio.onpause = function() {
+          isPlaying = false;
+        };
+    </script>   
+  
+    <!-- Нужные -->
+    <div class="wantedblock">
+      <span>мы ищем</span>
+      <div class="wantedglass"></div>
+      <div class="wanted">
+        <style>
+          #КонтентРотатор p {
+            display: none
+          }
+        </style>
+        <div id="КонтентРотатор"><!-- Ротатор произвольного контента -->
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p38462" title="Дракула ищет сына"><img
+                src="https://i.imgur.com/C9PDIac.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p38465" title="Дракула ищет дочь"><img
+                src="https://i.imgur.com/nM6Hmyq.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p38469" title="Дракула ищет дочь"><img
+                src="https://i.imgur.com/tSCxRnb.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p165269" title="Особенная ищет папеньку"><img
+                src="https://i.imgur.com/xZTo9fp.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p165294" title="Срочно нужен экзорцист"><img
+                src="https://i.imgur.com/jcNbeH1.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p207075" title="БДСМ-щик ищет семью"><img
+                src="https://i.imgur.com/76Updog.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p209720" title="Богу нужна ученица"><img
+                src="https://i.imgur.com/yqH8Jvl.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p247018" title="Заноза ищет Big Boss"><img
+                src="https://i.imgur.com/Jab4mZF.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p279359" title="Лорелея ищет демона"><img
+                src="https://i.imgur.com/iFMAX1w.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p279359"
+              title="Разыскивается живым или живым"><img src="https://i.imgur.com/CeY0iaX.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p290331"
+              title="В поисках мстительной бывшей"><img src="https://i.imgur.com/LzV6Foj.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p292129" title="Кевин ищет сестренку"><img
+                src="https://i.imgur.com/LBKrwDe.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p292133" title="Кевин ищет братишку"><img
+                src="https://i.imgur.com/TpfPTEF.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p2930519" title="Арон ищет батю"><img
+                src="https://i.imgur.com/mxoD43x.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p298104"
+              title="Разыскивается привет с того света"><img src="https://i.imgur.com/67HcGiy.png"></a></p>
+        <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p302241" title="Ковбой ищет вызов"><img
+                src="https://i.imgur.com/DfYJIgM.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p304551" title="Джейден ищет брата"><img
+                src="https://i.imgur.com/8HgXcSz.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p304551" title="Джейден ищет брата"><img
+                src="https://i.imgur.com/HQWqJtW.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p306451"
+              title="В город призывается архангел"><img src="https://i.imgur.com/DfUhBcP.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p307124" title="Милли ищт бабушку"><img
+                src="https://i.imgur.com/N4Omfqm.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p307163" title="Милли ищт дядю"><img
+                src="https://i.imgur.com/a5kNXdX.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p307590" title="Бостону нужен мозгоправ"><img
+                src="https://i.imgur.com/lHEXNGY.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p309158" title="Джейден ищет соперника"><img
+                src="https://i.imgur.com/3R1z24p.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p3102511"
+              title="В тему призывается мистер совершенство"><img src="https://i.imgur.com/wq5oxIN.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p313980" title="В поисках спасения"><img src="https://i.imgur.com/MSz7Gn3.png"></a></p>
+         <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315093" title="В поисках ученика"><img src="https://i.imgur.com/ivFp0mo.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315095" title="В поисках воспитанницы"><img src="https://i.imgur.com/TBedu2G.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315097" title="В поисках воспитанницы"><img src="https://i.imgur.com/zJbVIXd.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315098" title="В поисках воспитнника"><img src="https://i.imgur.com/1mS4nON.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315101" title="В поисках воспитнника"><img src="https://i.imgur.com/syrHiQ0.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315102" title="В поисках воспитанницы"><img src="https://i.imgur.com/eDlBFX7.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315103" title="В поисках психолога в приют"><img src="https://i.imgur.com/E4nbH8m.png"></a></p>
+          <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315104" title="В поисках любителя зеркал"><img src="https://i.imgur.com/hInbCcF.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315105" title="В поисках темного омута"><img src="https://i.imgur.com/BvABsft.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315106" title="В поисках лиса"><img src="https://i.imgur.com/yet2vkZ.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315109" title="В поисках улыбчивого хитреца"><img src="https://i.imgur.com/1wwf6Cx.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p315115" title="В поисках желающей мести"><img src="https://i.imgur.com/vt3X2hC.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p317637" title="В поисках философа"><img src="https://i.imgur.com/ZGrzKkI.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=2#p318151" title="В поисках ведьмы"><img src="https://i.imgur.com/HhNI3Fy.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p331391" title="В поисках друга детства"><img src="https://i.imgur.com/h5WX9pg.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p331391" title="В поисках подруги детства"><img src="https://i.imgur.com/c9D1DR1.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p331391" title="В поисках подруги детства"><img src="https://i.imgur.com/feVg494.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p331391" title="В поисках друга детства"><img src="https://i.imgur.com/feVg494.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p353970" title="В поисках любимой сестры"><img src="https://i.imgur.com/VxdwLFg.png"></a></p>
+  <p><a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12&p=3#p360580" title="В поисках фамильяры"><img src="https://i.imgur.com/kMeN4Uc.png"></a></p>
+        </div>
+        <script type='text/javascript'>
+          function Rotator_cont(selek) {
+            var s = 4000;  // Время отображения
+            var N = $(selek).length;
+            var i = Math.round(Math.random() * (N - 1)); Rotator(i);
+  
+            function Rotator(i) {
+              $(selek).hide(); $(selek).eq(i).show(); i++;
+              if (i > N - 1) { i = 0 };
+              timerId01 = setTimeout(function () { Rotator(i) }, s); return;
+            }
+          } Rotator_cont('#КонтентРотатор p')
+        </script>
+      </div>
+    </div>
+  
+    <!-- Новости -->
+    <div class="newsblock">
+  
+  <!--
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=9&p=10#p444823" class="news">
+        <img src="blob:https://imgur.com/c4f5a187-5839-482b-bd55-990d3299b1b2">
+        <div>
+          <p class="news__title">НОВОСТИ</p>
+          <p class="news__date">с Лисбет</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?pid=433089#p433089" class="news">
+        <img src="https://i.imgur.com/7kpwDvT.png">
+        <div>
+          <p class="news__title">НОВОСТИ</p>
+          <p class="news__date">с Астрид</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=9&p=19#p431884" class="news">
+        <img src="https://i.imgur.com/kmJafZF.png">
+        <div>
+          <p class="news__title">НОВОСТИ</p>
+          <p class="news__date">с Черри</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=568&p=2#p424910" class="news">
+        <img src="https://i.imgur.com/iMbrFZb.png">
+        <div>
+          <p class="news__title">Чистка</p>
+          <p class="news__date">близко</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2550&p=3#p413708" class="news">
+        <img src="https://i.imgur.com/cFCvjrK.png">
+        <div>
+          <p class="news__title">5 ВЕЧЕРОВ</p>
+          <p class="news__date">запись</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=107" class="news">
+        <img src="https://i.imgur.com/8tXQVFa.png">
+        <div>
+          <p class="news__title">С днем рождения,</p>
+          <p class="news__date">Эрик!</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?pid=452496#p452496" class="news">
+        <img src="https://i.imgur.com/7nT8Hex.png">
+        <div>
+          <p class="news__title">НОВОСТИ</p>
+          <p class="news__date">тёплые ♥</p>
+        </div>
+      </a>
+  -->
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?pid=471850#p471850" class="news">
+        <img src="https://i.imgur.com/VhKs5TO.png">
+        <div>
+          <p class="news__title">НОВОСТИ</p>
+          <p class="news__date">с Астрид</p>
+        </div>
+      </a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3817#p469799" class="news">
+        <img src="https://i.imgur.com/J0IwMGO.png">
+        <div>
+          <p class="news__title">Флешмоб</p>
+          <p class="news__date">сорт героина</p>
+        </div>
+      </a>
+  
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3797#p467964" class="news">
+        <img src="https://i.imgur.com/YbIY72k.png">
+        <div>
+          <p class="news__title">Дискуссия</p>
+          <p class="news__date">антагонисты</p>
+        </div>
+      </a>
+  
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3728#p457916" class="news">
+        <img src="https://i.imgur.com/Vm82yYh.png">
+        <div>
+          <p class="news__title">Сбор сердец</p>
+          <p class="news__date">ивент</p>
+        </div>
+      </a>
+  
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3705" class="news">
+        <img src="https://i.imgur.com/SqfNuQj.png">
+        <div>
+          <p class="news__title">Бинго</p>
+          <p class="news__date">Ивент</p>
+        </div>
+      </a>
+  
+          </div>
+  
+  
+    <!-- Соцсети -->
+    <div class="soc">
+      <a class="socialm tg" href="https://t.me/+PJRgXkUUGbhjZjEy" target="_blank"><img
+          src="https://forumstatic.ru/files/001b/6e/a7/56997.png"></a>
+      <a class="socialm vk" href="https://vk.com/tabloid_horror" target="_blank"><img src="https://forumstatic.ru/files/001b/6e/a7/67615.png"></a>
+      <a class="socialm ds" href="https://discord.gg/Yr5d5U2R" target="_blank"><img src="https://forumstatic.ru/files/001b/6e/a7/31427.png"></a>
+    </div>
+  
+    <!-- РПГ ТОП-->
+    <div class="top">
+      <a href="https://rpgtop.su/26306" target="_blank"><img
+          src="https://images.vfl.ru/ii/1603203161/b59c1404/32000181.gif" border="0" class="Hoverbuttons"
+          title="Рейтинг Ролевых Ресурсов - RPG TOP"></a></br>
+    </div>
+  
+  </div>
+  
+  
+  <!--Скрипты-->
+  <!--// Быстроплюсы v.2 РЕНО by Deff //-->
+  <script type="text/javascript" src="https://forumstatic.ru/files/0012/d8/04/58219.js" addComment="1"></script>
+  
+  <!--Прилипающее меню -->
+  <script type="text/javascript">
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 380) {
+        $('#pun-navlinks, #pun-ulinks').addClass('sticky')
+      } else {
+        $('#pun-navlinks, #pun-ulinks').removeClass('sticky')
+      }
+    });
+  </script>
+  <!-- конец -->
+  
+  
+  
+  <!-- Подсчет символов в постах игры -->
+  <style>
+    .send-sumb {
+      padding: 2px 7px;
+      float: right;
+      color: #800;
+      cursor: pointer;
+      border: 1px solid;
+    }
+  
+    .post.topicpost .send-sumb {
+      display: none
+    }
+  </style>
+  <script type="text/javascript">
+    if ([17, 15, 16, 14].indexOf(+FORUM.topic.forum_id) != -1) {//id Нужных форумов для подсчета
+      document.write('<script type="text/javascript" src="//forumstatic.ru/files/0014/cc/0a/36739.js?5" data="11sis"><\/script>')
+    }
+  </script>
+  
+  
+  <!--Всплывающие Подсказки при наведении-->
+  <script type="text/javascript" src="//forumstatic.ru/files/0018/1e/e2/10216.js"></script>
+  <!--//End//-Всплывающие Подсказки при наведении-->
+  
+  
+  <!--Отключить кнопку "Вложения"-->
+  <script type="text/javascript">
+    RusffCore.sets.files.button = false;
+  </script>
+  
+  
+  <!--выделить код. Alex_63 new.2019-->
+  <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+  <script>eval(select_text.toString().replace(/\}$/, 'try{document.execCommand("copy")}catch(e){}}'))</script>
+  <script type="text/javascript">select_text.linkText = 'Взять код' //текст ссылки</script>
+  <!-- конец -->
+  
+  
+  <!-- Убрать пожаловаться -->
+  <script type="text/javascript">
+    RusffCore.sets.show_reportBtn = 0;
+  </script>
+  <!-- конец -->
+  
+  
+  <!-- МАСКА ПРОФИЛЯ-->
+  <script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+  <script>
+    hvScriptSet.addMask({
+      guestAccess: ['Group a waste', 'Archive'],
+      forumAccessExtended: {
+        'Chatterboxes are here': ['Игроки'],
+        'Present': ['Игроки', 'Постобаны'],
+        'Past': ['Игроки', 'Постобаны'],
+        'Alternative': ['Игроки', 'Постобаны'],
+        'Archive': ['Игроки', 'Постобаны'],
+        'Group a waste': ['Игроки']
+      },
+      changeList: {
+        'pafld1': {
+          title: 'Личное звание',
+          description: '',
+          tag: 'zvn',
+          class: 'pa-fld4',
+          defaultCode: '<div class=lz><div class=name><a href=ссылка на анкету>ИМЯ ФАМИЛИЯ, 00 y.o.</a></div><div class=occ>Род деятельности</div><div class=about>Описание <a href=ссылка на профиль пары и т.п. target=_blank>имя пары или её описание</a>.</div></div>',
+          type: 'html'
+        }
+      },
+      userFields: ['pa-author', 'pa-avatar', 'pa-title', 'pa-fld1', 'pa-fld4', 'pa-fld3', 'pa-posts', 'pa-fld5', 'pa-respect', 'pa-fld2', 'pa-online', 'pa-awards']
+    });
+  </script>
+  
+  
+  <!-- * Новая Палитра © Deff * -->
+  <style>
+    body #post #color-area {
+      background-position: 0 !important;
+      background-size: 366px auto !important;
+      padding: 21px 30px 8px 30px !important;
+      width: 298px !important;
+    }
+  
+    #color-area table.Myp .rightMy input {
+      /*margin-left:54px*/
+    }
+  
+    #color-area table.Myp input {
+      z-index: 0 !important;
+    }
+  </style>
+  <script src="//forumstatic.ru/files/0010/b4/f8/74494.js"></script>
+  
+  
+  <style type="text/css">
+    @font-face {
+      font-family: 'JOURNALISM';
+      src: local('JOURNALISM');
+      src: url('//forumstatic.ru/files/001a/fc/36/85220.ttf') format('truetype');
+    }
+  
+    @font-face {
+      font-family: 'Roboto Condensed';
+      src: local('Roboto Condensed');
+      src: url('//forumstatic.ru/files/0019/a7/ad/41127.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  
+    @font-face {
+      font-family: 'Roboto Condensed';
+      src: local('Roboto Condensed');
+      src: url('//forumstatic.ru/files/0019/a7/ad/19457.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+    }
+  
+    @font-face {
+      font-family: 'Roboto Condensed';
+      src: local('Roboto Condensed');
+      src: url('//forumstatic.ru/files/0019/a7/ad/49785.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+  
+    @font-face {
+      font-family: 'Roboto Condensed';
+      src: local('Roboto Condensed');
+      src: url('//forumstatic.ru/files/0019/a7/ad/62075.ttf') format('truetype');
+      font-weight: bold;
+      font-style: italic;
+    }
+  
+    @font-face {
+      font-family: 'FontAwesome';
+      src: local('FontAwesome');
+      src: url('//forumstatic.ru/files/0019/a7/ad/95168.otf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  
+  
+  <!-- AGOpus Roman font -->
+  <link rel="preconnect" href="//alexkolmar.github.io">
+  <link rel="preconnect" href="//alexkolmar.github.io" crossorigin>
+  <link href="//alexkolmar.github.io/fonts/AGOpus_Roman/stylesheet.css" rel="stylesheet">
+  
+  <!-- Alumni Sans font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400&display=swap" rel="stylesheet">
+  
+  
+  <!-- Мгновенные уведомления © Alex_63, Deff 2019 -->
+  <link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/notifications.css" />
+  <script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/notifications.js"></script>
+  <script type="text/javascript">
+  notifications.token = '923c45e748d281ddb134b71752c64576d7be4332'; // Forum token
+  notifications.key = 'ckd530ajgsr7'; // Subscription key
+  RusffCore.sets.notifications = false;
+  </script>
+       
+  <!-- Мгновенные уведомления: подписки на форум/тему © Alex_63, 2019 -->
+  <script>notifications.load('subscriptions');</script>
+       
+  <!-- Мгновенные уведомления: новые посты из важных тем © Alex_63, 2019 -->
+  <script type="text/javascript">
+  notifications.load('common', {});
+  notifications.load('important', {topics: [9,568]}); // ID важных тем (через запятую)
+  </script>
+       
+  <!-- Мгновенные уведомления: комменты к репе для Rusff © Alex_63, 2019 -->
+  <script>notifications.load('reputation');</script>
+       
+  <!-- Мгновенные уведомления: упоминания © Alex_63, 2020 -->
+  <script>notifications.load('mentions');</script>
+  
+  
+  <!--Скрытие профиля в теме тегом-->
+  <style type="text/css">
+    .hideprofile .post-author,
+    .hideprofile .pl-email,
+    .hideprofile .pl-website {
+      display: none !important
+    }
+  
+    .hideprofile .post-body,
+    .hideprofile .post-links,
+    .hideprofile .post-links ul,
+    .post.hideprofile h3>span {
+      margin-left: 0 !important
+    }
+  </style>
+  <script>
+    FORUM.set('editor.addition.tags.hideprofile', { name: 'Скрыть минипрофиль', onclick: function () { insert('[hideprofile]'); } });
+    $().pun_mainReady(function () { $('.post:contains("[hideprofile]")').addClass('hideprofile').html(function () { return $(this).html().replace(/\[hideprofile\]/gim, '') }) });
+  </script>
+  <!-- Конец -->
+  
+  <script>
+  if (
+    navigator.userAgent.match(/Mobi/i) ||
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/iPhone/i)
+  ) {
+    window.alert(window.innerWidth);
+  }
+  </script>

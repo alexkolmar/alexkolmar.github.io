@@ -1,0 +1,2586 @@
+/* Гостевая
+--------------------------------------------------- */
+.guestbook {
+    background: var(--forin_bg);
+    width: 993px;
+    height: 630px;
+    margin: 60px auto 20px;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    color: var(--lighttext);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.gleft {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    background: var(--dark_bg);
+    height: 545px;
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.greetings {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#pun .guestbook .gleft p {
+    padding: 0;
+}
+
+.glinks p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0 !important;
+}
+
+.punbb .glinks p a {
+    display: inline-flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 3px 10px;
+    letter-spacing: 2px;
+    background-color: var(--light_bg);
+    color: var(--lighttext);
+    margin: 10px;
+    font-size: 10px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 23%);
+    width: 100%;
+    justify-content: center;
+    font-family: Comfortaa !important;
+}
+
+.punbb .glinks a:hover {
+    background: var(--accent2);
+    color: var(--lighttext);
+}
+
+.guestbook .hello {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.guestbook .gleft .hello p {
+    text-align: center;
+    font-size: 12px !important;
+}
+
+.guestbook .gleft .hello p span {
+    text-align: right;
+    width: 100%;
+    display: block;
+    color: var(--deep);
+}
+
+.punbb .guestbook .adminblock {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+.adminblock .admin {
+	display: flex;
+	width: 135px;
+    box-sizing: border-box;
+	position: relative;
+}
+
+.punbb .guestbook .admin span {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 115px;
+    height: 14px;
+    font: normal 12px/17px Comfortaa !important;
+    letter-spacing: .5px;
+    z-index: 1;
+    background-color: transparent;
+    top: 76px;
+    padding: 0;
+}
+
+.punbb .guestbook .admin .duty {
+    height: 109px;
+    background-color: rgb(0 0 0 / 64%);
+    width: 135px;
+}
+
+.punbb .post-content .admin img.postimg {
+    margin: 0;
+}
+
+.adminblock .admin a {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--deep);
+    background: var(--deep);
+    color: var(--base);
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: Comfortaa !important;
+}
+
+.punbb .post-content .adminblock .admin a img.postimg {
+    margin-bottom: 7px;
+}
+
+.punbb .guestbook .code-box.codeblock {
+    box-sizing: border-box;
+    flex: auto;
+}
+
+.gright {
+    position: relative;
+    width: 360px;
+    background: var(--base) url(https://forumstatic.ru/files/001b/6e/a7/56798.png) repeat top center;
+    box-shadow: 10px 0px 12px 0px rgb(0 0 0 / 59%);
+    padding: 15px;
+    box-sizing: border-box;
+    height: 545x;
+}
+
+.title-gb {
+    font: 500 83px/66px 'AGReverance' !important;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.title-gb span {
+    font: 600 26px/20px 'AGReverance' !important;
+    letter-spacing: 3px;
+    color: var(--darkaccent);
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.subtitle-gb {
+    font-size: 24px;
+    color: var(--darkaccent);
+    text-align: center;
+}
+
+.guestbook .tabs {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.guestbook .tab, .guestbook .tab-title {
+    display: inline-flex;
+}
+
+.guestbook .tab input[type="radio"] {
+	display: none;
+}
+
+.guestbook .tab-title {
+	width: 159px;
+	margin: 3px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all .2s linear 0s;
+	text-decoration: none;
+	text-transform: uppercase;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	padding: 5px;
+	letter-spacing: 1px;
+	display: flex;
+	height: 30px;
+	font-size: 10px;
+	background: var(--light_bg);
+}
+
+.guestbook .tab :checked+.tab-title,
+.guestbook .tab-title:hover {
+	position: relative;
+	z-index: 1;
+	background-color: var(--accent2);
+}
+
+.guestbook .tab-content {
+	position: absolute;
+	padding: 10px 10px;
+	left: 3px;
+	display: none;
+	top: 80px;
+	box-sizing: border-box;
+	overflow: auto;
+	border: 1px solid var(--light_bg);
+	width: calc(100% - 6px);
+	height: 363px;
+}
+
+.guestbook .tab :checked~.tab-content {
+	display: block;
+	/* Показываем активную вкладку */
+}
+
+.punbb .guestbook .tab-content p {
+	text-align: left;
+	padding: 0;
+    color: var(--base_text);
+}
+
+
+/* Вкладки */
+.punbb .guestbook .wrapper {
+    background: transparent;
+    padding: 0;
+    height: 430px;
+    grid-template-rows: auto 1fr;
+    margin: 0;
+}
+
+.punbb .guestbook .wrapper .custom_tag_verh {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+}
+
+.punbb .guestbook .wrapper .custom_tag_verh.buttons div {
+    margin: 0;
+    width: 161px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .2s linear 0s;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 1px;
+    display: flex;
+    height: 30px;
+    font-size: 10px;
+}
+
+.punbb .guestbook .wrapper .windows {
+    background: transparent;
+    color: var(--base_text);
+    padding: 5px;
+    border: 1px solid;
+    box-shadow: none;
+    margin-top: 10px;
+    max-height: 340px;
+}
+
+.punbb .guestbook .wrapper .windows p {
+    font-size: 12px !important;
+    padding-bottom: 0;
+}
+
+.punbb .guestbook .windows a {
+    color: var(--links);
+}
+
+.punbb .guestbook .windows a:hover {
+    color: var(--sp_text2);
+}
+
+.guestbook .codeblock {
+    flex: 1 0 100%;
+}
+
+.guestbook .codeblock .code-box {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.punbb .guestbook .codeblock .code-box strong.legend {
+    background: transparent;
+    width: 160px;
+    padding: 10px 3px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.punbb .guestbook .codeblock .code-box strong.legend a {
+    color: var(--lighttext);
+}
+
+.punbb .guestbook .codeblock .code-box strong.legend a:hover {
+    color: var(--accent2);
+}
+
+.guestbook .codeblock .code-box strong.legend:after {
+    display: none;
+}
+
+.guestbook .codeblock .code-box .blockcode {
+    background: var(--light_bg);
+    padding: 10px;
+    color: var(--lighttext);
+}
+
+.punbb .post-content .guestbook .scrollbox {
+    height: auto !important;
+}
+
+.gcomment {
+    position: absolute;
+    bottom: 14px;
+    color: var(--base_text);
+    width: calc(100% - 34px);
+    left: 20px;
+    padding-bottom: 0 !important;
+}
+
+.gcannon p {
+    text-align: center;
+    width: 100%;
+    background: var(--line_bg);
+    padding: 2px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Таблица ачивок
+--------------------------------------------------------------*/
+
+.achievelist, .banklist {
+    display: block;
+    height: 750px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    position: relative;
+    color: var(--lighttext);
+    background: var(--forin_bg);
+    width: 993px;
+    padding: 20px;
+}
+
+.achievelist .inner, .banklist .inner {
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.achievelist .achieveabout, .banklist .bankabout {
+    position: absolute;
+    background: var(--dark_bg);
+    padding: 10px;
+    right: 20px;
+    width: 700px;
+    display: block;
+    box-sizing: border-box;
+    top: 20px;
+    height: 125px;
+    overflow: auto;
+    z-index: 2;
+    color: var(--lighttext);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.achievelist .achieveabout p,
+.banklist .bankabout p {
+    text-indent: 30px;
+    text-align: justify;
+    padding-bottom: 3px;
+}
+
+.achievelist .tabs,
+.banklist .tabs {
+    position: relative;
+    padding-bottom: 10px;
+    width: 230px;
+    background: var(--dark_bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.achievelist span,
+.banklist span {
+    display: flex;
+    width: 180px;
+    height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 10px 0 10px;
+    font: normal 24px/30px 'AGReverance' !important;
+}
+
+.achievelist .tab,
+.achievelist .tab-title,
+.banklist .tab,
+.banklist .tab-title {
+	display: block;
+}
+
+.achievelist .tab input[type="radio"],
+.banklist .tab input[type="radio"] {
+	display: none;
+}
+
+.achievelist .tab-title,
+.banklist .tab-title {
+    display: flex;
+    width: 180px;
+    min-height: 28px;
+    letter-spacing: .5px;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 3px 2px;
+    text-align: center;
+    color: var(--lighttext);
+    transition: 0.3s;
+    align-items: center;
+    background: var(--light_bg);
+}
+
+.achievelist .tab :checked+.tab-title, .achievelist .tab-title:hover,
+.banklist .tab :checked+.tab-title, .banklist .tab-title:hover {
+    position: relative;
+    background-color: var(--accent);
+}
+
+.achievelist .tab-content {
+    position: absolute;
+    padding: 10px;
+    width: 700px;
+    display: none;
+    box-sizing: border-box;
+    top: 150px;
+    height: 560px;
+    overflow: auto;
+    left: 250px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.banklist .tab-content {
+    position: absolute;
+    padding: 10px;
+    width: 700px;
+    display: none;
+    box-sizing: border-box;
+    top: 0px;
+    height: 710px;
+    overflow: auto;
+    left: 250px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.bankinner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.achievelist .tab :checked~.tab-content,
+.banklist .tab :checked~.tab-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: baseline;
+    align-items: stretch;
+}
+
+.innertab .awac, .achievelist .awac {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 137px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.innertab .awac .head {
+    color: var(--sp_text2);
+}
+
+.achievelist .awac .descr {
+    background: var(--deep);
+    padding: 2px 3px 4px;
+    box-sizing: border-box;
+    width: 134px;
+    margin-top: 5px;
+    height: auto;
+    border: 1px solid var(--light_bg);
+}
+
+.achievelist .awac .head2 {
+	letter-spacing: 1px;
+	padding-bottom: 3px !important;
+	text-transform: uppercase;
+    text-align: center;
+}
+
+.achievelist .awac .poy {
+	color: var(--accent3);
+	line-height: 14px;
+    text-align: center;
+}
+
+.punbb .achievelist .tab-content .achieveabout,
+.punbb .banklist .tab-content .bankabout {
+    position: relative;
+    margin: 0 auto;
+    top: initial;
+    height: fit-content;
+    box-shadow: none;
+    background: var(--deep);
+    width: 100%;
+    left: 0;
+}
+
+.punbb .bankabout {
+    margin: 0 0 20px;
+    background: var(--deep);
+}
+
+.punbb .post-content .bankabout p {
+    padding: 10px;
+    text-align: center;
+}
+
+.punbb .achievelist .tab-content .achieveabout p,
+.punbb .banklist .tab-content .bankabout p {
+	padding: 0;
+	text-indent: 0px;
+	text-align: center;
+}
+
+
+.punbb #pre_placement>a {
+	top: -28px;
+	right: 55px;
+	background: url(https://forumstatic.ru/files/0012/0b/b4/36006.png) no-repeat top center !important;
+	border: none;
+	height: 20px;
+	width: 20px;
+}
+
+.punbb .Form-Table {
+    padding: 0 30px 0 15px;
+    flex: 1 0 0;
+}
+
+.punbb .table_GamePosts tbody th.aa {
+	background: url(https://i.imgur.com/NA6UICV.png) repeat-x top center !important;
+	background: url(https://i.imgur.com/NA6UICV.png) repeat-x top center !important;
+	color: var(--lighttext);
+}
+
+.punbb .table_GamePosts td {
+	border: none !important;
+}
+
+.punbb .table_GamePosts tr:nth-child(even) {
+	background: var(--lighttext);
+}
+
+.punbb .table_GamePosts tr:nth-child(odd) {
+	background: #efe9ef;
+}
+
+/* Организации */
+
+.punbb .post-content .orgbord p {
+    line-height: initial;
+    text-align: center;
+}
+
+.punbb .post-content .orgbord .orgtext p {
+    text-align: justify;
+}
+
+.punbb .post-content .orgbord {
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 59%), 0px 0px 0px 15px var(--forin_bg), 0px 0px 15px 15px rgb(0 0 0 / 59%);
+    margin: 30px;
+}
+
+.orgbord hr {    margin-top: 10px;}
+
+.orghead {
+    background: var(--dark_bg);
+    padding: 10px;
+    color: var(--lighttext);
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.orgname {
+padding: 10px;
+}
+
+.orgname p {
+    color: var(--lighttext);
+    font-family: 'Garamond', serif !important;
+    font-size: 22px !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.orgname::first-letter {
+	color: var(--sp_text2);
+}
+
+.orgim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orgim img {
+    max-width: 400px !important;
+    max-height: 200px;
+    display: inline-flex;
+}
+
+.punbb .post-content .orgcit p {
+    text-transform: lowercase;
+    margin-top: 6px;
+    color: var(--sp_text2);
+    font-size: 11px !important;
+    font: normal 11px/14px 'Comfortaa' !important;
+}
+
+.punbb .post-content .orgbord .orglinet p {
+    font-size: 12px !important;
+    line-height: 30px;
+    padding: 0 !important;
+}
+
+.orgraz p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font: normal 30px/28px 'AGReverance' !important;
+    padding: 10px 0 !important;
+}
+
+.orglinet {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0;
+    font-size: 16px;
+    text-transform: lowercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orglinet::before {
+    margin-right: 12px;
+    height: 1px;
+    content: " ";
+    text-shadow: none;
+    background-color: var(--base_text);
+    width: 30px;
+}
+
+.orglinet::after {
+    margin-left: 12px;
+    height: 1px;
+    content: " ";
+    text-shadow: none;
+    background-color: var(--base_text);
+    width: 30px;
+}
+
+.punbb .orgych {
+    width: 162px;
+    height: 180px;
+    overflow: auto;
+    text-align: center;
+    padding: 5px 2px;
+    display: inline-block;
+    color: var(--lightviolet);
+    margin: 4px 4px;
+    background: var(--dark_bg);
+}
+
+.orgych a {
+    margin-top: 17px;
+    line-height: 16px;
+}
+
+.orgych p {
+    color: var(--lighttext);
+    font: normal 11px/14px 'Comfortaa' !important;
+}
+
+.orgych p a {
+    font-size: 12px !important;
+    color: var(--accent3);
+}
+
+.orgych p strong {
+    color: var(--lighttext);
+    font-size: 11px !important;
+}
+
+.orgych img {
+  width: 120px; 
+height: 120px;
+}
+
+.orgtext p {
+    font-family: 'Comfortaa' !important;
+}
+
+/******************************************************************
+Cтиль к скрипту:
+"Всплываюшая таблица с вкладками, в топике, с инфой о персонаже"
+******************************************************************/
+
+/*Стиль иконки в мини-профиле*/
+
+img.a-info {
+	display: block !important;
+	cursor: pointer;
+	position: relative;
+	text-align: left !important;
+}
+
+/* Затемняющий фон */
+
+#pre-wrap {
+	margin: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 20000;
+	background: rgba(0, 0, 0, .65);
+}
+
+/*Подвижка иконки закрытия таблички*/
+
+.my-tabs>img.close {
+	margin: 0 !important;
+	width: 27px;
+	position: absolute;
+	right: -30px;
+	top: 5px;
+	cursor: pointer;
+}
+
+/*Подвижка иконки закрытия таблички*/
+
+.punbb .my-tabs {
+	display: flex;
+	z-index: 30000;
+	position: absolute;
+    background: var(--base) url(https://forumstatic.ru/files/001b/6e/a7/56798.png) repeat top center;
+	height: 540px;
+	width: 780px !important;
+	left: 50%;
+	transform: translate(-50%, 0);
+	box-sizing: border-box;
+	padding: 5px !important;
+}
+
+/* Стиль "Ушка" вкладок */
+
+.my-tabs>span {
+    color: var(--lighttext);
+    cursor: pointer;
+    display: inline-flex !important;
+    position: relative;
+    z-index: 12;
+    text-align: center;
+    letter-spacing: 2px;
+    height: 30px;
+    box-sizing: border-box;
+    background: var(--forin_bg);
+    width: 150px;
+    padding: 0 11px;
+    margin: 10px 10px 0 0;
+    flex-grow: 1;
+    transition: all .2s ease-in-out 0s;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cдвиг самого первого "уха" */
+
+.my-tabs>span:first-child {
+	margin-left: 10px;
+}
+
+/* активное "ушко" */
+
+.my-tabs>span.selected,
+.my-tabs>span:hover {
+    background: var(--accent2);
+    transition: 0.6s;
+}
+
+/* Стиль вкладки(LI)*/
+
+.my-tabs>.tab-a {
+	width: calc(100% - 20px);
+	height: calc(100% - 60px);
+	max-height: unset !important;
+	position: absolute;
+	z-index: 1;
+	display: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin: 50px 5px 10px;
+}
+
+/*Отступ контента вкладки сверху*/
+
+.tab-a .post-content {
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.punbb .tab-a .post-content p {
+	height: inherit;
+	padding: inherit;
+	line-height: inherit;
+}
+
+.punbb .my-tabs .post-content .html-post-box {
+	padding: 0 !important;
+	width: 100%;
+	height: 100%;
+}
+
+.punbb .post-content .innertab {
+    background: var(--forin_bg);
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: var(--lighttext);
+}
+
+.punbb .post-content .innertab p {
+	color: var(--lighttext);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.punbb .post-content .innertab .chartext p {
+    text-align: left;
+}
+
+/* вкладка "персонаж"
+--------------------------------------------------------------*/
+
+.punbb .post-content .innertab *::-webkit-scrollbar {
+	width: 7px;
+	height: 8px;
+}
+
+.chartab .leftblock,
+.chartab .rightblock {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.chartab .leftblock {
+	width: 250px;
+}
+
+.chartab .rightblock {
+	width: calc(100% - 265px);
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 190px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.character .cname {
+    display: flex;
+    width: 180px;
+    height: 24px;
+    color: var(--lighttext);
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: 'Garamond', serif !important;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.character .cname p::first-letter {
+	color: var(--sp_text2);
+}
+
+.character .cspecies {
+    margin-top: 6px;
+	color: var(--sp_text2);
+    font-size: 11px;
+}
+
+.character .cface {
+	display: block;
+	width: 180px;
+	height: 120px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.character .cface img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: top center;
+	margin: 0 !important;
+    box-shadow: inset 0px -2px 31px 0px #000000a4;
+	box-sizing: border-box;
+}
+
+.chartab .planksblock {
+	height: 270px;
+	margin-top: 15px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.innertab span {
+color: var(--accent3);
+    display: block !important;
+    position: relative;
+    z-index: 12;
+    text-align: center;
+    letter-spacing: 1px;
+    height: 24px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0px 0px 7px auto;
+    font: normal 22px/30px 'AGReverance' !important;
+}
+
+.chartab .planksblock .planks {
+    overflow-y: auto;
+    height: 210px;
+    margin: 10px 0 0 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chartab .planksblock .plank {
+	margin: 10px 0 20px;
+	max-width: 230px;
+    border: 1px solid var(--lz_border);
+    justify-content: space-evenly;
+}
+
+.chartab .dossier {
+	height: 190px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.chartab .chronicles {
+	margin-top: 15px;
+	height: 270px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.chartab .chartext {
+    overflow: auto;
+    height: 160px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.chartab .chronicles .chartext {
+	height: 210px;
+}
+
+.chartab .chartext p {
+	padding: 0 0 5px 0;
+}
+
+.chartab .dossier p {
+	text-indent: 20px;
+}
+
+.chartab .chronicles p {
+	text-align: left;
+}
+
+.chartab .chartext p a {
+	color: var(--sp_text2);
+}
+
+.chartab .chartext p a:hover {
+	color: var(--accent3);
+}
+
+/* вкладки "Награды" и "Ачивки"
+--------------------------------------------------------------*/
+
+.punbb .post-content .awardtab.innertab,
+.punbb .post-content .achievetab.innertab {
+	padding: 10px 5px;
+}
+
+.awardtab>div {
+	width: 49%;
+}
+
+.achievetab .common {
+	width: 60%;
+}
+
+.achievetab .events {
+	width: 38%;
+}
+
+.awardtab .innerblock,
+.achievetab .innerblock {
+    height: 410px;
+    border-top: none;
+    padding: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    align-content: baseline;
+    background: var(--dark_bg) url(https://forumupload.ru/uploads/001a/e7/a4/14/701735.png) repeat top center;
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.events .innerblock {
+	justify-content: center;
+}
+
+.punbb .post-content .achievetab .awac .head2 {
+    color: var(--sp_text2);
+	padding: 2px 0 !important;
+    text-align: center !important;
+}
+
+.achievetab .events .awac {
+	width: 115px;
+}
+
+.achievetab .events .awac img {
+	max-width: 80px;
+}
+
+.achievetab .awac .poy {
+	margin-bottom: 9px;
+}
+
+.desawac {
+	display: block;
+	color: var(--lighttext);
+	display: block !important;
+	position: relative;
+	z-index: 12;
+	letter-spacing: 1px;
+	height: 24px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+/* Вкладки "Бонусы" и "Информация"
+--------------------------------------------------------------*/
+
+.bonustab .innerblock,
+.infotab .innerblock {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: baseline;
+	overflow: auto;
+	height: 430px;
+	padding: 10px;background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+}
+
+.infotab .innerblock>div {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 5px;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.infotab span {
+	margin-bottom: 5px;
+}
+
+.infotab img {
+	object-fit: cover;
+	object-position: center;
+}
+
+.infotab .infoblock1 img {
+	width: calc(100% / 3);
+	margin-right: 5px;
+	height: auto;
+}
+
+.infotab .infoblock3 img {
+	max-width: 300px;
+	max-heigth: 300px;
+}
+
+.infotab p {
+	display: flex;
+	flex-grow: 1;
+	padding: 0 !important;
+	align-items: center;
+	justify-content: center;
+	width: min-content;
+}
+
+.bonn {
+    padding: 10px;
+    width: 120px;
+    height: auto;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 14px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.bonnil {
+	width: 55px;
+	position: relative;
+}
+
+.bonname {
+	font: normal 13px/15px;
+	color: var(--lighttext);
+}
+
+.uslov {
+	display: inline-block;
+	position: relative;
+}
+
+.uslov:hover::after {
+	position: absolute;
+	/* left: 20%; */
+	top: 30%;
+	z-index: 1;
+	font-family: Arial, sans-serif !important;
+	font-size: 11px;
+	padding: 5px 10px;
+}
+
+/* Меню в html теме*/
+#menu1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 100%;
+    box-sizing: border-box;
+}
+
+#menu1 span {
+    color: var(--lighttext);
+    text-transform: uppercase;
+    background-color: var(--light_bg);
+    font-size: 10px;
+    padding: 5px 16px;
+    margin: 7px 6px 0 0;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#menu1 .tabactive {
+	background: var(--accent);
+}
+
+#menu1 span:hover {
+	background: var(--accent);
+	transition: 0.6s;
+}
+
+
+#submenu {
+	height: auto;
+	text-align: center;
+	font-size: 1.0em;
+	margin-top: 10px;
+}
+
+.submenutext {
+	display: none;
+	width: 100%;
+}
+
+.true {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center !important;
+	margin-bottom: -10px;
+}
+
+/*Население*/
+
+.nasbg {
+	background: var(--forin_bg);
+	padding: 20px;
+}
+
+.natstanble {
+	padding: 10px;background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.natstanble tbody {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.natstanble tbody tr {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.nsubt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+    color: var(--sp_text2);
+    text-transform: uppercase;
+}
+
+.nsubt p {
+    font: normal 30px/33px 'AGReverance' !important;
+}
+
+/*ИМЕНА*/
+
+.submenutext {
+	display: none;
+	width: 100%;
+}
+
+.true {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center !important;
+}
+
+.ncover {
+    width: 720px;
+}
+
+.post-content #MenuTxT {
+    padding: 0 !important;
+}
+
+.Gen {
+    color: var(--lighttext);
+    width: 49%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Let {
+    color: var(--accent3);
+    width: 80%;
+    padding: 0 0 10px;
+}
+.punbb .post-content .peop {
+    color: var(--lighttext);
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.punbb .post-content .peop p {
+    font-size: 12px !important;
+    line-height: 20px !important;
+    text-align: left;
+}
+
+.punbb .post-content .peop a {
+    color: var(--sp_text2);
+}
+
+.punbb .post-content .peop a:hover {
+    color: var(--accent);
+}
+
+.punbb .post-content .peop .Let p {
+    text-align: center;
+    font: normal 25px/30px 'AGReverance' !important;
+}
+
+/* Население */
+
+.peopletable {
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.peopletable p {
+    font-size: 10px !important;
+}
+
+.naseltext {
+	text-align: left !important;
+}
+
+div#all {
+	width: 100%;
+	height: 100%;
+}
+
+.peopletable .prof p {
+    font-style: normal;
+    text-align: center;
+    color: var(--base_text);
+    line-height: 11px !important;
+    font-family: Comfortaa !important;
+}
+.punbb .vie {
+    position: relative;
+    text-align: center;
+    cursor: default;
+    margin: 6px;
+    width: 139px;
+    height: 200px;
+    box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 59%);
+    background: var(--base) url(https://forumstatic.ru/files/001b/6e/a7/56798.png) repeat top center;
+}
+
+.vie-dead img {
+    filter: grayscale(1);
+}
+
+.punbb .vie .name a {
+    text-decoration: none;
+    color: var(--base_text);
+    font-family: 'Garamond', serif !important;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.punbb .vie .name::first-letter {
+    color: var(--accent);
+}
+
+.punbb .vie .name a:hover {
+    color: var(--accent);
+}
+
+.vie .mask,
+.vie .content {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.vie img {
+	position: relative
+}
+
+.vie .hed {
+    color: var(--lighttext);
+    text-align: center;
+    position: relative;
+    padding: 3px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: -5px;
+}
+
+
+.vie .hed::first-letter {
+    color: var(--sp_text2);
+}
+
+
+.vie p {
+    position: relative;
+    text-align: center !important;
+    color: var(--lighttext);
+    padding: 0px 10px 0px !important;
+    overflow-y: auto;
+    line-height: 15px !important;
+}
+
+.vie a.info {
+	display: inline-block;
+	text-decoration: none;
+	padding: 7px 14px;
+	background: var(--deep);
+	color: var(--lighttext);
+	text-transform: uppercase;
+}
+
+.vie img {
+	transition: all 0.2s linear;
+	width: auto;
+	height: auto;
+	margin-top: 4px;
+}
+
+.vie .mask {
+    background-color: var(--deep);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    box-shadow: inset 0px -2px 31px 0px #00000082;
+}
+
+.vie .hed {
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.vie .hed p {
+    font-size: 17px !important;
+    line-height: 20px !important;
+    font-family: 'Garamond', serif !important;
+}
+
+.vie a.info {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.vie:hover .mask {
+	opacity: 1;
+}
+
+.vie:hover .hed,
+.vie:hover p,
+.vie:hover a.info {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.vie:hover p {
+	transition-delay: 0.1s;
+}
+
+.vie:hover a.info {
+	transition-delay: 0.2s;
+}
+
+/* end Население  */
+
+/* РАСЫ
+-------------------------------------------- */
+.albg {
+    padding: 20px;
+    background: var(--forin_bg);
+}
+
+.bltxt {
+    padding: 0px;
+    background: var(--base) url(https://forumstatic.ru/files/001b/6e/a7/56798.png) repeat top center;
+    box-shadow: 10px 0px 12px 0px rgb(0 0 0 / 59%);
+}
+
+.za {
+    text-align: center;
+    font-size: 20px;
+    color: var(--lighttext);
+    margin-bottom: 10px;
+    background: var(--accent) url(https://forumstatic.ru/files/001b/6e/a7/93303.png) top center;
+    font: normal 40px/50px 'AGReverance' !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.za2 {
+	font-size: 16px;
+	color: var(--sp_text2);
+}
+
+.imras {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.tex {
+	line-height: 1.5;
+}
+
+.lii {
+	color: var(--sp_text2);
+}
+
+.slall {
+    padding: 10px;
+}
+
+.slu {
+    display: block;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--dark_bg);
+    text-align: left;
+    letter-spacing: 1px;
+    font: normal 25px/30px 'AGReverance' !important;
+    background: var(--line_bg);
+    width: 100%;
+    padding: 0 20px;
+    background-image: -o-linear-gradient(60deg, var(--gloom) 0, transparent 30px), -o-linear-gradient(150deg, transparent 80%, var(--gloom) 100%), -o-linear-gradient(240deg, var(--gloom), transparent 30px), -o-linear-gradient(330deg, transparent 80%, var(--gloom));
+    background-image: linear-gradient(60deg, var(--gloom) 0, transparent 30px), linear-gradient(150deg, transparent 80%, var(--gloom) 100%), linear-gradient(240deg, var(--gloom), transparent 30px), linear-gradient(330deg, transparent 80%, var(--gloom));
+    background-size: 0px 100%, 100% 1px, 1px 100%, 100% 0px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.slu:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 20px;
+    left: -10px;
+    background: var(--darkaccent) url(https://forumstatic.ru/files/001b/6e/a7/93303.png) top center;
+}
+
+.slall .rotate {
+    display: block;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--line_bg);
+    width: 100%;
+    padding: 30px 30px 0;
+    background-image: -o-linear-gradient(60deg, var(--gloom) 0, transparent 30px), -o-linear-gradient(150deg, transparent 80%, var(--gloom) 100%), -o-linear-gradient(240deg, var(--gloom), transparent 30px), -o-linear-gradient(330deg, transparent 80%, var(--gloom));
+    background-image: linear-gradient(60deg, var(--gloom) 0, transparent 30px), linear-gradient(150deg, transparent 80%, var(--gloom) 100%), linear-gradient(240deg, var(--gloom), transparent 30px), linear-gradient(330deg, transparent 80%, var(--gloom));
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+.imop {
+	width: 250px;
+}
+
+.opis {
+	text-align: left;
+}
+
+.opis b {
+	font-size: 16px;
+	font-weight: 300;
+	color: var(--sp_text2);
+	margin-bottom: 4px;
+    display: block;
+}
+
+.punbb .post-content p.ciit {
+    text-align: center;
+    font: normal 20px/24px 'AGReverance' !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.atten {
+	padding: 5px;
+	color: var(--base_text);
+	margin-top: 10px;
+	background-color: var(--form_bg);
+	font-size: 14px;
+}
+
+/* Для маски профиля на профиль без авы */
+
+.punbb .post-author.no-avatar .hv-mask .pa-author {
+	margin-bottom: 10px;
+}
+
+.punbb .post-author.no-avatar .hv-mask .pa-author:after {
+	display: none;
+}
+
+
+#viewprofile-next.no-avatar #pa-avatar strong {
+	font-size: 0;
+	display: block;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(//forumstatic.ru/files/001b/6e/a7/19496.gif);
+	/* Адрес картинки */
+	width: 180px;
+	/* Ширина аватары */
+	height: 180px;
+	/* Высоты аватары */
+	margin: 5px auto 5px;
+	/* отступы от других полей и выравнивание по центру */
+}
+
+.avatar-image[style*="default_avatar.jpg"] {
+	background-image: url(//forumstatic.ru/files/001b/6e/a7/19496.gif) !important;
+}
+
+/* Маска профиля
+--------------------------------------------------- */
+
+#pun #mask_dialog .inner.container {
+	background: var(--lighttext);
+}
+
+#pun #mask_dialog .inner.container textarea,
+#pun #mask_dialog .inner.container input[type="text"] {
+	background: var(--form_bg);
+    border: 1px solid var(--accent2);
+}
+
+
+/* Мгновенные уведомления
+-------------------------------------------- */
+
+.pun-modal.unread-notifications .modal-inner .container {
+	padding: 0 !important;
+}
+
+#pun .pun-modal .closer {
+	position: absolute;
+	padding: 7px 10px !important;
+	margin: 0 !important;
+	top: 0;
+	right: 0;
+	display: block;
+	width: fit-content;
+	height: fit-content;    
+    font-family: 'Comfortaa' !important;
+}
+
+.punbb .pun-modal .modal-inner {
+	background: var(--lighttext);
+}
+
+/* Теги Чарли!!!
+-------------------------------------------- */
+
+/* Организационные темы (правила, фак)
+-------------------------------------------- */
+.allhead {
+	line-height: 0.75;
+	text-align: center;
+	background-image: url(http://ipic.su/7yXq33.png);
+	color: var(--sp_text2);
+	padding: 10px;
+}
+
+.line {
+	background: url(//forumstatic.ru/files/0012/0b/b4/58944.png) repeat-y top left, url(//forumstatic.ru/files/0012/0b/b4/58944.png) repeat-y top right, url(//forumstatic.ru/files/0012/0b/b4/96353.png) repeat-x bottom center, url(//forumstatic.ru/files/0012/0b/b4/96353.png) repeat-x top center rgba(56, 60, 44, .05);
+	padding: 15px;
+}
+
+.num_list {
+	font-family: AGOpus !important;
+	font-size: 16px;
+	color: #232130;
+}
+
+.podzag {
+	text-align: center;
+	font-family: AGOpus !important;
+	font-size: 24px;
+	margin-bottom: 8px;
+	color: #4a532f;
+}
+
+
+/*БыстроПлюсы для Топика!*/
+.noNull:before {
+	content: "+";
+	font-size: 9px;
+	display: inline-block;
+	margin-left: -6px;
+	margin-top: 0px;
+	position: absolute;
+}
+
+div .post-rating p>a {
+	text-align: center;
+	outline: 1px solid transparent;
+	font-weight: 700;
+	background: url(https://forumstatic.ru/files/001b/a6/d4/26514.svg) no-repeat center;
+	background-size: 38px auto;
+	position: relative;
+	padding-left: 1px;
+	z-index: 6;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	font-size: 12px !important;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 34px;
+	letter-spacing: -1px;
+	color: var(--links_main);
+}
+
+div.post-vote {
+	margin-bottom: 65px;
+}
+
+div.post-vote p>a {
+	font-size: 0 !important;
+	position: absolute;
+	cursor: pointer;
+	z-index: 6;
+	width: 24px;
+	height: 24px;
+	background: url(https://forumupload.ru/uploads/001a/e7/a4/77/750043.png) no-repeat;
+	display: block;
+	background-size: 100%;
+	margin-left: 0px;
+	margin-top: 9px;
+}
+
+.post.dark-style div.post-vote p>a {
+	background: url(https://forumstatic.ru/files/0012/d8/04/38128.png) no-repeat;
+	background-size: 100%;
+}
+
+
+/*Настройка уникального шрифта*/
+#chfont {
+	position: fixed;
+	top: 70px;
+	right: 100px;
+	text-align: center;
+	line-height: 22px;
+	z-index: 9;
+}
+
+@media screen and (max-width: 1200px){
+    #chfont {
+	top: 0px;
+	right: 0px;     
+}   
+}
+
+#chfont:hover {
+	filter: brightness(1.15);
+}
+
+#chfontbut {
+	/*иконка регулятора*/
+	width: 26px;
+	height: 26px;
+	background: url('https://forumstatic.ru/files/001b/6e/a7/72088.png') center no-repeat;
+	background-color: var(--accent2);
+	background-size: contain;
+	float: right;
+	cursor: pointer;
+	position: relative;
+	border: 2px solid var(--accent2);
+}
+
+#chfontbut::after {
+	/*крестик на иконке*/
+	display: none;
+	position: absolute;
+	content: 'x';
+	top: -5px;
+	right: -5px;
+	color: var(--links_online);
+	/*цвет крестика*/
+	line-height: 7px;
+	/*высота строки*/
+	font-size: 12px;
+	/*размер крестика*/
+}
+
+#chfont.active #chfontbut::after {
+	display: block;
+}
+
+#chfont select {
+	/*поле выбора вида шрифта*/
+	display: none;
+	background-color: var(--darkbase);
+	margin-bottom: 2px;
+	cursor: pointer;
+	color: var(--links_online);
+}
+
+#chfontsize {
+	/*индикатор размера шрифта*/
+	width: 26px;
+	/*ширина*/
+	float: right;
+	display: none;
+}
+
+#chfont.active select,
+#chfont.active #chfontsize {
+	display: block;
+}
+
+.fsizeplus,
+.fsizeminus {
+	/*кнопки плюса и минуса*/
+	background-color: var(--darkbase);
+	border: solid 2px var(--darkbase);
+	color: var(--lighttext);
+	cursor: pointer;
+}
+
+.fsizeplus::after {
+	content: '+';
+}
+
+.fsizeminus::after {
+	content: '-';
+}
+
+.fsize {
+	/*поле показывающее размер шрифта*/
+	background-color: var(--form_bg);
+	/*цвет фона*/
+	color: var(--base_text);
+	/*цвет цифр*/
+}
+
+/* СТИКЕРЫ */
+#stikery {
+	margin-bottom: -25px;
+	text-align: left;
+}
+
+#profile #stikery,
+#pun-post #stikery,
+.topic #stikery {
+	margin-bottom: 5px;
+}
+
+#pun-messages #stikery {
+	margin-bottom: -25px;
+}
+
+#stikery table td {
+	padding: 10px 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+
+#gifs-nav {
+	padding: 0;
+	width: 280px;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	flex-direction: row;
+	box-sizing: border-box;
+	margin-right: 9px;
+}
+
+#gifs-nav a {
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 150%;
+	transition: all 0.3s linear 0s;
+	padding: 3px 4px;
+	font-size: 11px;
+	font-weight: 600;
+	width: 135px;
+	box-sizing: border-box;
+	margin-right: 5px;
+}
+
+#all-gifs {
+	background: var(--deep);
+	position: relative;
+	top: -3px;
+	left: 0;
+	max-height: 233px;
+	overflow: auto;
+	scrollbar-width: thin;
+	float: right;
+	width: calc(100% - 300px);
+	padding: 5px;
+}
+
+#gifs-nav a:hover,
+#gifs-nav a.current {
+	background-color: var(--form_bg);
+	color: var(--accent);
+}
+
+.punbb-admin #pun-navlinks {
+	top: 0;
+}
+
+.punbb-admin #pun-ulinks {
+	top: 34px;
+}
+
+#pun-status p span.item1 {
+	align-self: end;
+}
+
+#pun-status p span.item2 {
+	align-self: start;
+}
+
+/* Поиск по теме */
+
+#pun #s-block {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    font-weight: bold;
+    order: 1;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    background: var(--pagi_bg);
+    height: 22px;
+}
+
+#pun #sTheme {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 22px;
+    width: 200px;
+}
+
+#pun #isk {
+    border-left: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    height: 20px;
+    width: 22px;
+}
+
+#pun #isk::before {
+    margin-top: 2px;
+}
+
+/* Спойлеры
+--------------------------------------------------------------*/
+.magic-box {
+	width: 100%;
+}
+
+.btn-spoiler {
+	border: 0px;
+	cursor: pointer;
+	padding: 8px;
+	margin: 10px 0px;
+	background: var(--accent2);
+	letter-spacing: 1px;
+	box-sizing: border-box;
+	text-align: center;
+	transition: 0.5s;
+	color: var(--lighttext);
+
+}
+
+.btn-spoiler:hover {
+	background: var(--accent);
+}
+
+.btn-spoiler:focus {
+	background: var(--accent);
+}
+
+
+.btn-spoiler:active {
+	background: var(--accent);
+}
+
+.spoiler-text {
+	display: none;
+	margin: 0;
+	padding: 10px;
+    background: var(--base);
+}
+
+.valenimg {
+	width: 32%;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.auction {
+	margin-top: 5px;
+}
+
+/* Анкета */
+
+.anketa {
+    background: var(--darkbase) url(https://forumstatic.ru/files/001b/6e/a7/93303.png) repeat top center;
+    padding: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.punbb .post-content .anketa__head {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+width: 100%;
+}
+
+.anketa__name {
+    padding: 5px 10px;
+    position:relative;
+    max-width: 53%;
+    box-sizing: border-box;
+}
+
+.anketa__name:first-of-type:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 20px;
+    border-right: 2px solid var(--lighttext);
+    top: 10px;
+    right: -1px;
+}
+
+.anketa__name::first-letter {
+    color: var(--sp_text2);
+}
+
+.punbb .post-content .anketa__head p {
+    color: var(--lighttext);
+    font-family: 'Garamond', serif !important;
+    font-size: 24px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.anketa__img {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 2px rgb(0 0 0 / 59%);
+}
+
+.punbb .post-content .anketa__img p {
+    text-align: center;
+    padding: 0;
+    color: var(--lighttext);
+    font-size: 11px !important;
+}
+
+.punbb .post-content .anketa__img img {
+    margin-right: 15px !important;
+    box-shadow: 0px 0px 11px 2px #00000082;
+}
+
+.anketa__stat {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, auto);
+}
+
+.anketa__stat>div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.anketa__stat>div p {
+    color: var(--lighttext);
+    text-align: center !important;
+    font-size: 11px !important;
+    font-family: Comfortaa !important;
+}
+
+.anketa__stat>div p strong {
+    display: block;
+    text-align: center;
+    color: var(--accent2);
+}
+
+.anketa__quote {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 2px rgb(0 0 0 / 59%);
+}
+
+.anketa__quote p {
+    padding: 0 !important;
+    color: var(--lighttext);
+    font-style: italic;
+}
+
+.anketa__main-text {
+    margin-top: 15px !important;
+    background: var(--base) url(https://forumstatic.ru/files/001b/6e/a7/56798.png) repeat top center;
+    padding: 15px;
+min-width: 735px;
+}
+
+
+.anketa__category {
+    padding: 5px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 2px rgb(0 0 0 / 59%);
+    display: flex;
+    width: 250px;
+    padding-left: 30px;
+    margin-left: -30px !important;
+    margin-bottom: 15px !important;
+    margin-left: -30px !important;
+}
+
+.anketa__category p::first-letter, .anketa__ftitle p::first-letter {
+    color: var(--sp_text2);
+    font-size: 24px !important;
+}
+
+.anketa__category p, .anketa__ftitle p {
+    color: var(--lighttext);
+    padding: 0 !important;
+    font-size: 15px !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Garamond', serif !important;
+}
+
+.anketa__ftitle {
+    display: flex;
+    margin: 10px !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.anketa__feedback p strong {
+    color: var(--sp_text2);
+}
+
+.anketa__feedback p {
+    color: var(--lighttext);
+}
+
+/***** Стиль. Вкладки в постах вв-кодами. (done by Kolobdur) *****/
+
+/* Оформление в посту */
+.punbb .wrapper {
+    display: grid;
+    grid-template:
+        ". buttop ." auto
+        "butleft windows butright" auto
+        ". butbottom ." auto / auto 1fr auto;
+    overflow: hidden;
+    margin: 10px auto;
+    background: var(--forin_bg);
+    padding: 20px;
+    justify-items: center;
+}
+
+.buttop {
+    grid-area: buttop;
+}
+
+.butleft {
+    grid-area: butleft;
+}
+
+.butright {
+    grid-area: butright;
+}
+
+.butbottom {
+    grid-area: butbottom;
+}
+
+.buttons {
+    z-index: 2;
+}
+
+.custom_tag_verh {
+    margin: 0 10px -13px;
+}
+
+.custom_tag_niz {
+    margin: -13px 10px 10px;
+}
+
+.punbb .custom_tag_pravo,
+.punbb .custom_tag_levo {
+    position: relative;
+    width: 230px;
+    background: var(--dark_bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+    padding: 20px 20px 10px;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.punbb .custom_tag_pravo {
+    margin: 0 0 0 20px;
+}
+
+.punbb .custom_tag_levo {
+    margin: 0 20px 0 0;
+}
+
+.custom_tag_pravo.buttons div,
+.custom_tag_levo.buttons div {
+    margin: 0 0 10px;
+}
+
+.custom_tag_verh.buttons div,
+.custom_tag_niz.buttons div {
+    margin: auto 4px;
+}
+
+.buttons div {
+    transition: background-color .3s;
+    text-align: center;
+    display: block;
+    letter-spacing: 1px;
+    color: var(--lighttext);
+    text-transform: uppercase;
+    background-color: var(--light_bg);
+    font-size: 10px;
+    padding: 5px 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.buttop,
+.butbottom {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+}
+
+.windows {
+    display: grid;
+    grid-area: windows;
+    color: var(--base);
+    padding: 10px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+    justify-self: normal;
+    max-height: 800px;
+}
+
+.punbb .windows a {
+    color: var(--sp_text2);
+}
+
+.punbb .windows a:hover {
+    color: var(--accent);
+}
+
+.window {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    overflow: auto;
+    line-height: 1.4em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s, transform 0.2s;
+    transition-delay: 0.4s;
+    padding: 10px;
+    z-index: 0;
+}
+
+.wrapper>br,
+.wrapper>p,
+.buttons>br,
+.buttons>p,
+.windows>br,
+.windows>p {
+    display: none;
+}
+
+.windows>div {
+    transition: transform 0.2s;
+    transform: translateX(86%);
+}
+
+.windows>.activevkladka {
+    transform: translateY(0px);
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: 1;
+}
+
+.buttons div:hover,
+.buttons>.activevkladka {
+    background: var(--accent);
+}
+
+.punbb .custom_tag_verh {
+    margin: 0 10px -50px;
+}
+
+.custom_tag_verh~.windows {
+    padding-top: 40px;
+}
+
+.punbb .custom_tag_verh,
+.punbb .custom_tag_niz {
+max-width: 100%;
+box-sizing: border-box;
+overflow: auto;
+}
+
+.punbb .custom_tag_niz {
+    margin: -50px 10px 0px;
+}
+
+.punbb .custom_tag_niz~.windows {
+    padding-bottom: 40px;
+}
+
+.punbb .main .windows table p {
+    font-size: 12px !important;
+}
+
+.punbb .main .windows td {
+    padding-left: 0 !important;
+}
+
+.punbb .main .windows table {
+    margin-bottom: 20px;
+}
+
+/* Оформление вв-кода */
+.icons-vkladka:before {
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    background: url(https://i.imgur.com/FqNhhWD.png) no-repeat top center;
+    background-size: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+#vkladka-area div {
+    cursor: pointer;
+    font-weight: normal;
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+#vkladka-area div:hover {
+    overflow: hidden;
+}
+
+.tab-list:hover {
+    transform-origin: center left;
+}
+
+#vkladka-area span {
+    display: none;
+}
+
+/* Подарки, ачивки */
+
+.gifts .windows {
+    grid-template-rows: auto;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.gifts .windows .window {
+    grid-row: 2;
+}
+
+.punbb .gifts .wrapper {
+    grid-template:
+        "butleft info windows" auto/ auto auto auto;
+}
+
+.punbb .gifts .wrapper .achieveabout {
+    grid-row: 1;
+    grid-column: 2;
+    color: var(--base);
+    padding: 10px;
+    background: var(--dark_bg);
+    box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 59%);
+    justify-self: normal;
+    margin-bottom: 20px;
+    max-height: 100px;
+    overflow: auto;
+    transform: none;
+    order: 0;
+}
+
+.punbb .gifts .custom_tag_levo {
+    grid-row: 1 / 3;
+}
+
+.punbb .gift__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.punbb .gift__list .gift__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 120px;
+    height: auto;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.punbb .gift__list .gift__item p:nth-of-type(2) {
+       text-align: center;
+    background: var(--deep);
+    padding: 2px 3px 4px;
+    box-sizing: border-box;
+    width: 120px;
+    margin-top: 5px;
+    height: auto;
+    border: 1px solid var(--light_bg);
+    color: var(--accent3);
+    font-size: 12px !important;
+}
+
+.punbb .gift__list .gift__item p:nth-of-type(2):first-line {
+    color: var(--base);
+}

@@ -1,0 +1,147 @@
+/* Сторис */
+
+.stories {
+    position: relative;
+    margin: 0 auto;
+    border: 5px solid #000;
+    background: #000;
+    border-radius: 30px;
+    width: 500px;
+    height: 776px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+}
+
+.stories img {
+margin: 0 !important;
+}
+
+.stories p {
+  padding: 0 !important;
+  line-height: unset !important;
+}
+
+.stories .main_img, .stories .main_img img {
+    position: absolute;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 25px;
+}
+
+.stories .st_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    pointer-events: none;
+    background: rgba(0,0,0,.25);
+    z-index: 2;
+}
+
+.st_top {
+    position: relative;
+    z-index: 3;
+    width: 450px;
+    margin: 20px auto 0;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+.st_ava {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.st_ava img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+}
+
+.st_text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+}
+
+.st_nick {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.st_more {
+    margin-left: auto;
+    font-size: 24px;
+}
+
+.st_bottom {
+    position: relative;
+    z-index: 3;
+    width: 450px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.st_input {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 270px;
+    height: 40px;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.st_input:focus {
+    outline: none;
+}
+
+.st_actions, .st_actions p {
+    display: flex;
+    gap: 15px;
+}
+
+.st_actions p br {
+  display: none;
+}
+
+[block=stories]
+[block=st_top]
+
+[block=st_ava][img]https://i.imgur.com/RvLLGao.jpeg[/img][/block]
+[block=st_text]
+[block=st_nick]@KazanTrend’s[/block]
+[block=st_music]♪ Алсу — Иногда[/block]
+[/block]
+[block=st_more][img]https://forumstatic.ru/files/001b/26/b3/49213.svg[/img][/block]
+[/block]
+
+[block=st_cover][/block]
+[block=main_img][img]https://forumstatic.ru/files/001b/26/b3/44094.jpg[/img][/block]
+
+[block=st_bottom]
+[block=st_input]Отправить сообщение[/block]
+[block=st_actions]
+[img]https://forumstatic.ru/files/001b/26/b3/96827.svg[/img]
+[img]https://forumstatic.ru/files/001b/26/b3/62170.svg[/img]
+[img]https://forumstatic.ru/files/001b/26/b3/44680.svg[/img]
+[/block]
+[/block]
+[/block]

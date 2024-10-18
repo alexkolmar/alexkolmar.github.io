@@ -2,38 +2,29 @@
 @import url('https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css');
 
 @import url(style_cs.css);
-
 /* uicons */
 @import url(https://forumstatic.ru/files/0010/ed/c4/24932.css?v=2);
-
-/* Calibri font */
 @import url(https://alexkolmar.github.io/fonts/Calibri/stylesheet.css);
-
-/* Segoe UI */
 @import url(https://alexkolmar.github.io/fonts/SegoeUI/stylesheet.css);
-
-/* Porter */
 @import url(https://alexkolmar.github.io/fonts/Porter/stylesheet.css);
-
-/* Samory */
 @import url(https://forumstatic.ru/files/001c/3b/8d/40980.css);
-
-/* Beer money */
 @import url(https://alexkolmar.github.io/fonts/Beer_money/stylesheet.css);
-
-/* Yeseva One */
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-
-/* Lighthaus */
 @import url('https://alexkolmar.github.io/fonts/Lighthaus/stylesheet.css');
-
-/* Cuprum */
 @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
-
-/* Welona */
 @import url('https://alexkolmar.github.io/fonts/Welona/stylesheet.css');
-
-@import url('https://alexkolmar.github.io/fonts/fa/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trochut:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
@@ -125,8 +116,6 @@
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  scrollbar-width: thin;
-  scrollbar-color: #b4a7a7 #512928;
 }
 
 *::-webkit-scrollbar {
@@ -253,10 +242,11 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-  padding: 2px 5px;
-  border: 1px solid var(--quote-bor);
-  border-radius: 10px;
-  color: var(--quote-top);
+  padding: 3px 7px;
+    border: 1px solid #c7c6c68f;
+    border-radius: 10px;
+    color: var(--quote-top);
+    box-shadow: inset 0px 0px 9px 0px rgb(0 0 0 / 10%);
 }
 
 select {
@@ -309,7 +299,7 @@ body::before {
 #pun {
   margin: 110px auto 30px;
   width: 1000px;
-  background: var(--pun-bg) url(https://forumstatic.ru/files/0010/ed/c4/77765.png) no-repeat bottom center;
+  background: #f1f1f1 url(https://forumstatic.ru/files/0010/ed/c4/77765.png) no-repeat bottom center;
   padding-bottom: 15px;
 }
 
@@ -350,11 +340,11 @@ body::before {
 
 #pun-navlinks li a {
   color: var(--link2);
-  font-size: 12px;
-  font-family: var(--cal);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Afacad Flux;
 }
 
 #pun-navlinks li a:hover {
@@ -364,7 +354,11 @@ body::before {
 /* Пользовательские ссылки */
 
 #pun-ulinks .container {
-  text-align: center;
+    text-transform: lowercase;
+    font-style: normal;
+    font-size: 8px;
+    font-family: arial;
+    text-align: center;
 }
 
 #pun-ulinks li {
@@ -450,11 +444,10 @@ body::before {
 
 .main td {
   padding: 10px;
-  text-transform: lowercase;
-  font-size: 11px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-family: var(--cal);
+    text-transform: lowercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .tcl {
@@ -493,33 +486,6 @@ body::before {
 tbody.hasicon td.tcl {
   padding-left: 30px;
 }
-
-/* Иконки */
-
-div.icon {
-  position: absolute;
-  margin-left: -30px;
-  width: 14px;
-  height: 14px;
-  background: #521e1e;
-  border-radius: 50%;
-  opacity: .5;
-}
-
-tr.inew div.icon {
-  opacity: 1;
-}
-
-tr.isticky div.icon {
-  background: #7c1515;
-  opacity: 1;
-}
-
-tr.iclosed div.icon {
-  background: #261d1d;
-  opacity: .74;
-}
-
 
 /* Пагинация (Переключаемые страницы, Новая тема + Опрос, Подписка)
 --------------------------------------------------------------------------------------------------- */
@@ -637,9 +603,6 @@ tr.iclosed div.icon {
 
 #pun-index .tc2, #pun-index .tc3 {
   color: var(--link3);
-  font-size: 14px;
-  font-weight: bold;
-  font-family: var(--cal);
 }
 
 #pun-index .hasicon td.tcl {
@@ -648,20 +611,18 @@ tr.iclosed div.icon {
 }
 
 #pun-index .tcl h3 {
-  padding: 0 40px;
-  font-size: 18px;
-  font-family: var(--cal), sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0;
+      padding: 5px 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0;
 }
 
 #pun-index .tclcon {
   font-size: 9px;
-  font-family: var(--seu);
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 1px;
+    font-family: cuprum;
+    line-height: normal;
+    text-align: center;
 }
 
 #pun-index .links {
@@ -691,16 +652,6 @@ tr.iclosed div.icon {
   display: none;
 }
 
-#pun-index .inew div.icon {
-  display: block;
-  background: url(https://forumstatic.ru/files/0010/ed/c4/97809.png) no-repeat top center;
-  width: 36px;
-  height: 27px;
-  margin: 0;
-  right: 10px;
-  top: 0;
-}
-
 #pun-index .tcr {
   font-size: 10px;
   font-family: var(--cal);
@@ -710,13 +661,10 @@ tr.iclosed div.icon {
 }
 
 #pun-index .lastpost-link {
-  font-size: 12px;
-  font-family: var(--cal);
-  color: var(--link3);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: .75px;
+    font-size: 12px;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family: 'Cuprum';
 }
 
 #pun-index tr .user-avatar {
@@ -730,18 +678,14 @@ tr.iclosed div.icon {
   mix-blend-mode: multiply;
 }
 
-#pun-index tr .user-avatar:hover .avatar-image {
-  mix-blend-mode: normal;
-}
-
 /* Статистика */
 
 #pun-stats .container {
   text-transform: lowercase;
-  font-size: 11px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-family: var(--cal);
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: 'Cuprum';
 }
 
 #pun-stats h2 span {
@@ -757,11 +701,13 @@ tr.iclosed div.icon {
 #pun-stats li.item2 {
   float: left;
   clear: both;
+ line-height: 150%;
 }
 
 #pun-stats li.item3,
 #pun-stats li.item4 {
   text-align: right;
+line-height: 150%;
 }
 
 li#onlinelist {
@@ -838,7 +784,7 @@ li#onlinelist {
 
 .bestep {
   width: 224px;
-  font-family: var(--cal);
+  font-family: arial;
   font-size: 9px;
   letter-spacing: 4px;
   text-align: center;
@@ -850,35 +796,35 @@ li#onlinelist {
 
 .bestquote span {
   font-size: 10px;
-  font-family: var(--cal);
-  text-transform: uppercase;
-  letter-spacing: 5.5px;
-  transform: translatey(5px);
-  display: block;
-  padding-left: 20px;
+    font-family: arial;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    transform: translatey(5px);
+    display: block;
+    padding-left: 20px;
 }
 
 .bestquote p {
-  font-size: 8px;
-  font-family: var(--seu);
-  line-height: 1.2;
-  letter-spacing: 4.5px;
-  text-align: justify;
-  background: rgba(82, 35, 23, .3);
-  padding: 5px 10px 10px;
+    font-size: 8px;
+    font-family: arial;
+    line-height: 1.2;
+    letter-spacing: 2.5px;
+    text-align: justify;
+    background: rgb(91 50 45 / 49%);
+    padding: 10px 10px 10px;
+    border-radius: 15px;
 }
 
 .bestquote a {
-  font-size: 7px;
-  font-family: var(--cal);
-  color: #f9e5de;
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: 5.5px;
-  transform: translatey(-3px);
-  display: block;
-  margin: 0 10px 0 auto;
-  width: fit-content;
+      font-size: 7px;
+    font-family: arial;
+    color: #f9e5de;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 3.5px;
+    display: block;
+    margin: -4px 22px 0 auto;
+    width: fit-content;
 }
 
 .tab_right {
@@ -892,7 +838,7 @@ li#onlinelist {
 
 .admins, .tab_links {
   font-size: 9px;
-  font-family: var(--cal);
+  font-family: arial;
   line-height: 16px;
   text-align: center;
   letter-spacing: 4px;
@@ -972,11 +918,6 @@ li#onlinelist {
 }
 
 
-/* Список тем
-------------------------------------------*/
-
-
-
 /* Топик
 ------------------------------------------*/
 
@@ -1020,15 +961,7 @@ li#onlinelist {
   text-align: center;
   border-radius: 8px;
   background: var(--pun-bg);
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-#pun-viewtopic .post[data-user-id="2"] .post-author {
-  background: var(--pun-bg) url(https://forumstatic.ru/files/0010/ed/c4/70132.jpg) no-repeat bottom center;
-}
-
-#pun-viewtopic .post[data-user-id="7"] .post-author {
-  background: var(--pun-bg) url(https://forumupload.ru/uploads/001c/3b/8d/3/220683.png) no-repeat bottom center;
+  box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 10%);
 }
 
 .post-author ul {
@@ -1044,16 +977,12 @@ li#onlinelist {
 
 .pa-author {
   margin-bottom: 10px;
-  font-size: 14px;
-  font-family: var(--por), var(--cal) sans-serif;
+  font-size: 12px;
+  font-family: Afacad Flux;
   font-weight: bold;
   line-height: 1.2;
   text-transform: uppercase;
 }
-
-.pa-author a {}
-
-.pa-title {}
 
 .pa-avatar img {
   border-radius: 8px;
@@ -1061,22 +990,22 @@ li#onlinelist {
 
 .post-author ul li.pa-fld5 {
   position: absolute;
-  transform: rotate(-90deg) translatex(-110%);
-  transform-origin: bottom left;
-  background: transparent;
-  font-size: 14px;
-  font-family: var(--por),var(--cal) , sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--link3);
-  z-index: 1;
-  padding: 0;
-  left: 4px;
-  max-width: calc(100% - 20px);
-  height: 15px;
-  line-height: 15px;
-  overflow: hidden;
-  top: -2%;
+    transform: rotate(-90deg) translatex(-110%);
+    transform-origin: bottom left;
+    background: transparent;
+    font-size: 16px;
+    font-family: Afacad Flux;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--link3);
+    z-index: 1;
+    padding: 0;
+    left: 4px;
+    max-width: calc(100% - 20px);
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    top: -2%;
 }
 
 .post-author ul li.pa-fld5:after {
@@ -1102,7 +1031,7 @@ li#onlinelist {
 .lz .name {
   margin-bottom: 5px;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
@@ -1113,14 +1042,17 @@ li#onlinelist {
 
 .post-author ul li.pa-fld2 {
   padding: 0;
+  z-index: 3;
 }
 
 .addflds {
+  position: relative;
   margin: 15px auto;
   width: 160px;
   background: var(--pun-bg);
   padding: 2px 0;
   border-radius: 8px;
+  z-index: 3;
 }
 
 .post-author ul .addflds li {
@@ -1142,12 +1074,12 @@ li#onlinelist {
 }
 
 .pa-respect .fld-name a:before, .gid3 .pa-respect .fld-name a:before {
-  content: "\e83c";
-  font-size: 12px;
-  font-family: var(--uicons);
+  content: "\f004";
+    font-size: 12px;
+    font-family: 'Font Awesome 6 Pro';
 }
 
-.pa-online, .pa-last-visit {
+.post-author ul li.pa-online, .post-author ul li.pa-last-visit {
   font-size: 10px;
   font-family: "Calibri";
   line-height: 11px;
@@ -1158,10 +1090,23 @@ li#onlinelist {
   width: fit-content;
   margin: 0 auto;
   border-radius: 4px;
+  position: relative;
+  z-index: 3;
 }
 
 .pa-online strong {
   font-weight: normal;
+}
+
+.post-author ul li.pa-fld6 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+}
+
+.post-author ul li.pa-fld6 img {
+  border-radius: 0 0 8px 8px;
 }
 
 
@@ -1226,7 +1171,9 @@ li#onlinelist {
 }
 
 pre {
-  font: 12px/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace;
+  font: 10px / 120% cuprum;
+    color: #979797;
+    letter-spacing: 1px;
 }
 
 .post-content em {
@@ -1262,33 +1209,32 @@ pre {
 }
 
 .quote-box, .code-box {
-  margin: 4px 10px 10px;
-  padding: 0;
-  border: 1px solid var(--quote-bor);
-  border-radius: 13px;
-  background: var(--quote-bg);
+    margin: 4px 10px 10px;
+    padding: 0;
+    border-radius: 13px;
+    background: #f1f1f1;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 8%);
 }
 
 .quote-box cite, .code-box strong.legend {
   display: block;
-  padding: 5px 30px;
-  font-style: normal;
-  font-size: 10px;
-  font-family: var(--cal);
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: var(--quote-top);
-  border-radius: 13px 13px 0 0;
-  border-bottom: 1px solid var(--quote-bor);
+    padding: 8px 30px;
+    font-style: normal;
+    font-size: 8px;
+    font-family: var(--cal);
+    color: #ffffff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--quote-top);
+    border-radius: 13px 13px 0 0;
 }
 
 .code-box strong.legend a {color: var(--link2-hover);}
 .code-box strong.legend a:hover {color: var(--lt);}
 
 .quote-box blockquote, .code-box .blockcode {
-  padding: 15px 30px;
+  padding: 15px 20px;
 }
 
 .punbb .post-content .spoiler-box > div {
@@ -1315,6 +1261,10 @@ pre {
   border-bottom: 1px solid #ccc;
   width: 300px;
   margin: 10px auto;
+}
+
+.post-rating .container a {
+  font-size: 11px !important;
 }
 
 /* Форма ответа */
@@ -1452,7 +1402,8 @@ textarea,
 }
 
 #profilenav li {
-  padding: 0 0 5px;
+  padding: 0 0 7px;
+    font-weight: bold;
 }
 
 #viewprofile li {
@@ -1697,8 +1648,6 @@ img.avatardemo {
 .g_faces_inner > div {
   max-height: 138px;
   overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--quote-bor) transparent;
 }
 
 .g_faces_inner b {
@@ -1875,8 +1824,6 @@ img.avatardemo {
   padding-right: 5px;
   max-height: 180px;
   overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--darkred) #bb8383;
 }
 
 .n_text p {
@@ -2632,7 +2579,7 @@ img.avatardemo {
   border: 1px solid #e6ecf0;
   border-radius: 14px;
   display: block;
-  margin: 10px 0;
+  margin: 0 0 10px;
 }
 
 .dis_links {
@@ -2646,4 +2593,10 @@ img.avatardemo {
 .dis_links i {
   color: #fffff0;
   margin-right: 10px;
+}
+
+.punbb .user-avatar .isonline {
+width: 6px !important;
+    height: 6px !important;
+background: #d0967f !important;
 }

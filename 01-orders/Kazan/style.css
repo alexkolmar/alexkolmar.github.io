@@ -1,3 +1,5 @@
+@import url("https://alexkolmar.github.io/fonts/fa/all.css");
+
 /* Мини-профиль с информацией ч3
 -------------------------------------------------------------*/
 
@@ -280,4 +282,114 @@
 
 #character #lz_text {
   text-align: center;
+}
+
+/* Сторис */
+
+.stories {
+    position: relative;
+    margin: 0 auto;
+    border: 5px solid #000;
+    background: #000;
+    border-radius: 30px;
+    width: 500px;
+    height: 776px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+}
+
+.stories .main_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 25px;
+}
+
+.stories .st_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    pointer-events: none;
+    background: rgba(0,0,0,.25);
+    z-index: 2;
+}
+
+.st_top {
+    position: relative;
+    z-index: 3;
+    width: 450px;
+    margin: 20px auto 0;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+.st_ava {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.st_ava img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+}
+
+.st_text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+}
+
+.st_nick {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.st_more {
+    margin-left: auto;
+    font-size: 24px;
+}
+
+.st_bottom {
+    position: relative;
+    z-index: 3;
+    width: 450px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.st_input {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 270px;
+    height: 40px;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.st_input:focus {
+    outline: none;
+}
+
+.st_actions {
+    display: flex;
+    gap: 15px;
 }

@@ -10,9 +10,18 @@
   top: 0;
   left: 0; 
 }
+.reveal-modal *::-webkit-scrollbar {
+  width: 5px; 
+}
 
-.reveal-modal * {
-  scrollbar-color: var(--quote-bor) transparent;
+.reveal-modal *::-webkit-scrollbar-track {
+  background: #b6b5b5; 
+}
+
+.reveal-modal *::-webkit-scrollbar-thumb {
+  background-color: #dddbdb;
+  border-radius: 5px; 
+  border: 3px solid #dddbdb; 
 }
 
 .reveal-modal {
@@ -131,7 +140,7 @@
   background: #ededed;
   box-shadow: inset 0px 0px 10px 0px rgba(144, 136, 133, 0.3);
   width: 172px;
-  height: 72px;
+  height: 76px;
   box-sizing: border-box;
   padding: 5px;
   position: relative;
@@ -439,6 +448,75 @@
     content: '\f755' !important;
 }
 
-#form-buttons-button:before {
+#button-files_rusff:before {
     content: '\f07c' !important;
+}
+
+#button-graffiti_rusff:before {
+    content: '\f618' !important;
+}
+
+/* ИКОНКА СТАРЫХ СООБЩЕНИЙ НА ГЛАВНОЙ СТРАНИЦЕ
+-------------------------------------------------------------*/
+#pun-index table Div.icon {
+        background-image: url(https://i.ibb.co/59gFrhJ/mish.png);
+    background-repeat: no-repeat;
+    border-style: none;
+    display: block;
+    height: 29px;
+    margin-left: 65px;
+    margin-top: -3px;
+    position: absolute;
+    width: 40px;
+    z-index: 1;
+    opacity: 0.5;
+    transform: rotate(343deg);
+}
+
+/* ИКОКА НОВЫХ НА ГЛАВНОЙ СТРАНИЦЕ
+-------------------------------------------------------------*/
+#pun-index TR.inew Div.icon {
+    background-image: url(https://i.ibb.co/59gFrhJ/mish.png);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+/* ИКОКА СТАРЫХ ВНУТРИ ПОДФОРУМА
+-------------------------------------------------------------*/
+#pun-viewforum table Div.icon, #pun-messages table Div.icon, #pun-searchtopics table Div.icon {
+   position: absolute;
+    margin-left: -23px;
+    width: 10px;
+    height: 10px;
+    background: #521e1e;
+    border-radius: 50%;
+    opacity: .5;
+    margin-top: 2px;
+}
+
+/* ИКОКА НОВЫХ ВНУТРИ ПОДФОРУМА
+-------------------------------------------------------------*/
+#pun-viewforum TR.inew Div.icon, #pun-messages TR.inew Div.icon, #pun-searchtopics TR.inew Div.icon {
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+}
+
+
+/* ИКОКА ВАЖНЫХ ВНУТРИ ПОДФОРУМА
+-------------------------------------------------------------*/
+#pun-viewforum TR.isticky Div.icon, #pun-messages TR.isticky Div.icon, #pun-searchtopics TR.isticky Div.icon {
+    width: 14px;
+    height: 14px;
+    background: #7c1515;
+  opacity: 1;
+}
+
+/* ИКОКА ЗАКРЫТЫХ ВНУТРИ ПОДФОРУМА
+-------------------------------------------------------------*/
+#pun-viewforum TR.iclosed Div.icon, #pun-messages TR.iclosed Div.icon, #pun-searchtopics TR.iclosed Div.icon {
+    width: 14px;
+    height: 14px;
+   background: #261d1d;
+  opacity: .74;
 }
