@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
 </head>
+
 <body>
-    
+
+ <script>
+  $(".post-author").each(function () {
+   $(this).find('.pa-fld5, .pa-author, .pa-avatar, .pa-title, .pa-fld3').wrapAll("<div class='author-top'>");
+   $(this).find('.pa-fld2, .pa-fld1, .pa-online, .pa-last-visit, .pa-posts, .pa-fld4, .pa-respect').wrapAll("<div class='author-bottom'>");
+  });
+ </script>
+
+<div class="lz">
+ <div class="lz_links">
+  <a href="" class="name">jaden lowe</a>
+  <a id="sadhaka" class="modal-link pp" href="#" data-reveal-id="character">
+   <img src="https://forumstatic.ru/files/0012/0b/b4/81358.svg" alt="">
+  </a>
+ </div>
+ <p>и тот кто любил, но любить перестал, видимо, себя обратив в клинок, и себя же назвав праведным, пойдет, смерть неся
+  тем, кто остался невидимым, кто будет забыт и проглочен в порыве жадности.</p>
+</div>
+
 </body>
+
 </html>
