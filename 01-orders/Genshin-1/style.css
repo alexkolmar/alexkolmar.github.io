@@ -195,7 +195,15 @@ em {
 #MyBookmarks,
 .inner.popup_graffiti,
 .pun-modal .modal-inner {
-  background: var(--sec-bg);
+  padding: 10px 15px;
+  backdrop-filter: blur(25px);
+  background: rgba(196, 201, 207, 0.6);
+  border-radius: 12px;
+  border-top: var(--border1);
+  border-bottom: var(--border2);
+  border-left: var(--border1);
+  border-right: var(--border2);
+  box-sizing: border-box;
 }
 
 #tags .container {
@@ -562,25 +570,20 @@ tr.iclosed div.icon {
   margin-top: 10px;
 }
 
-.linkst {
+.linkst, .linksb {
+  text-transform: lowercase;
   position: relative;
   padding: var(--tpad);
   display: flex;
   justify-content: space-between;
 }
-
-.linkst .pagelink {}
 
 .linkst .postlink {
   text-align: right;
 }
 
 .linksb {
-  position: relative;
-  padding: var(--tpad);
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .linksb .pagelink {
@@ -606,6 +609,7 @@ tr.iclosed div.icon {
 .modmenu .container {
   padding: var(--tpad);
   text-align: right;
+  text-transform: lowercase;
 }
 
 .modmenu .container strong {
