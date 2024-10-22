@@ -1,0 +1,157 @@
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/001b/6e/a7/29490.png"></div>
+<div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/001b/6e/a7/16127.png"></div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
+</script>
+
+
+<!-- Перенос Колонок тем и сообщений под Описание Форума / Deff, Alex_63 -->
+    <script type="text/javascript">
+    (function(){
+       $.catch = function(a,f){$(function(){var t,i=0;function s(){i++;if(i>120)return;t=setTimeout(function(){if(!$(a).length){s();return};f()},100);}s();});}
+       function appendTopicS(){
+         $('.category td.tcl h3,#f-subforums td.tcl h3').each(function() {
+           var L=$(this).parents('tr:first');
+           var str='<br><div class="Add"><div class="themes" title="тем"><span class="left"><img src="https://forumstatic.ru/files/001b/6e/a7/57446.svg"></span><span class="right">'+L.find('td.tc2').text()+'</span></div>\
+           <div class="messages" title="сообщений"><span class="left"><img src="https://forumstatic.ru/files/001b/6e/a7/31352.svg"></span><span class="right">'+L.find('td.tc3').text()+'</span></div>\
+           </div>';$(str).appendTo(this);
+         });
+       }
+       if($('#pun-index').length){appendTopicS ();}
+       if($('#pun-viewforum').length){
+         var summ=$('.main table[summary]').attr('summary').split(': ')[1].substr(0,1);
+         if(summ=='#'||summ==String.fromCharCode(173))$.catch('#f-subforums',function(){appendTopicS()});
+       }
+    }());
+    </script>
+
+
+<!-- Баннеры -->
+<div class="banners_bottom"><div>
+
+<a target="_blank" href="http://illyon.rusff.me/"><img src="https://forumstatic.ru/files/001b/13/57/78392.jpg"></a>
+<a href="//mirine.rusff.me" target="_blank"><img src="https://i.imgur.com/pybe8ll.gif"></a>
+ 
+<a href="https://exlibrisforlife.ru" target="_blank" style="cursor: pointer;"><img src="https://i.imgur.com/QLFSD0Q.png" alt="ex libris"></a>
+  
+<a href="https://dis.f-rpg.me/" target="_&quot;blank&quot;"><img src="https://forumstatic.ru/files/001a/e7/ed/65531.jpg" alt="DIS" border="0" style="cursor: pointer;"></a>
+      
+<a href="//barcross.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001b/2c/35/8/473722.gif" alt="bar"></a>
+
+<a href="https://soullove.ru" target="_blank"> <img src="https://forumstatic.ru/files/000e/5d/50/10990.gif" border="0" alt="soul love"></a>
+  
+<a href="//itisanewworld.rusff.me/"><img src="https://i.imgur.com/8urfbim.png" border="0"></a>
+   
+<a href="https://thedome.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001b/60/aa/48/821676.png"></a>
+
+<a href="https://arhi.rusff.me/" target="_blank" style="cursor: pointer;"><img src="https://forumstatic.ru/files/001b/8c/87/29818.png" width="88" height="31"></a>
+
+<a href="http://darkmatter.rusff.me/" target="_blank"><img src="https://i.imgur.com/sWcM3uJ.gif"></a> 
+
+<a href="https://verbaveritatis.rusff.me" style="cursor: pointer;"><img src="https://forumupload.ru/uploads/001b/aa/c9/4/12634.gif"></a>
+
+<a href="https://dos.f-rpg.me/" target="_blank"><img src="https://i.imgur.com/BQboz9c.png"></a>
+
+<a href="https://mistoua.f-rpg.me/">
+<img src="https://i.imgur.com/wau1bxf.jpg" border="1" width="88" height="31"></a>
+
+<a href="https://eatcake.rusff.me" target="_blank"> <img src="https://i.imgur.com/TUWB8Fj.gif" border="0" alt="Cake"></a>
+
+<a href="https://nightcity.rusff.me/" target="_blank"> <img src="https://i.imgur.com/LVEIYSX.gif" border="0" alt="NIGHT CITY VIBE"></a>
+
+<a href="http://foreveryoung.rolbb.me/"><img src="https://forumupload.ru/uploads/001a/fb/6a/2/804702.jpg" border="0"></a>
+
+<a href="https://miamiclub.ru" target="_blank"> <img src="https://forumstatic.ru/files/001b/fb/fb/50003.gif" border="0" alt="MIAMI CLUB"></a>
+
+<a target="_blank" href="https://arkcity.rusff.me/"><img src="https://forumstatic.ru/files/0019/eb/83/77713.gif" width="88px" border="0"></a>
+
+<a href="https://labardon.rusff.me" target="_blank"><img src="https://i.ibb.co/7vC8mL2/image.gif" border="0" alt="labardon" width="88" height="31"></a>
+
+<a href="https://faceinless.ru" target="_blank"><img src="https://forumupload.ru/uploads/001b/dc/dc/65/139328.png"></a>
+
+<a href="https://thehaze.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001b/d4/18/241/249471.gif"></a>
+
+<a href="https://oldshadows.rusff.me/" target="blank"><img src="https://forumupload.ru/uploads/001c/03/d9/2/629753.png"></a>
+
+<a href="https://prophecy.rolbb.me"><img alt=" Magic War. Prophecy" src="https://forumupload.ru/uploads/001b/e6/91/6/157746.gif" border=""></a>
+
+<a href="https://kicks-and-giggles.ru/" target="_blank"><img src="https://forumstatic.ru/files/0019/e7/0f/61714.jpg" width="88" height="31" border="0"></a>
+
+<a href="https://karma.f-rpg.me/" target="_blank"><img src="https://forumupload.ru/uploads/001c/14/5b/245/266488.png" border="0" width="88" height="31"></a>
+
+<a href="https://crossfeeling.rusff.me/" target="_blank">
+<img src="https://forumupload.ru/uploads/0015/e5/b7/3090/557165.gif" border="1" width="88" height="31"></a>
+
+<a href="https://dilemma.rusff.me/" target="_blank"><img src="https://forumstatic.ru/files/001c/3d/92/59996.png" alt="DILEMMA"></a>
+
+<a href="https://theraven.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001c/00/4d/5/220581.gif"></a>
+
+<a href="https://wolfauf.rusff.me/" target="_blank"><img src="https://i.imgur.com/lCYion2.gif" alt="Execute" width="88" height="31"></a>
+
+<a href="http://aluvio.rusff.me/" target="_blank"> <img src="https://forumstatic.ru/files/001b/9d/5d/35687.png"></a>
+
+<a href="https://toeden.rusff.me" target="_blank"><img src="https://i.imgur.com/ZFiLFxE.gif" alt="Return to eden"></a>
+
+<a href="https://morsmordremortis.rusff.me" target="_blank"> <img src="https://forumupload.ru/uploads/001b/b9/c5/4/184058.gif" border="0" alt="MORSMORDRE: MORTIS REQUIEM"></a>
+
+<a href="https://onlinecross.ru/" target="_blank"><img src="https://forumupload.ru/uploads/001b/1a/5a/29/959285.gif" border="0" width="88" height="31"></a>
+
+<a href="https://tmsqr.ru/" target="_blank"><img src="https://i.imgur.com/q4P8TKn.gif"></a>
+
+<a href="https://memlane.rusff.me" target="_blank"><img src="https://forumstatic.ru/files/0019/9e/ef/99042.gif" width="88" height="31" border="0"></a>
+
+<a href="http://greenlake.rusff.me/" target="_blank"> <img src="https://forumstatic.ru/files/001c/2a/1e/75738.png" border="0" alt="https://greenlake.rusff.me/" width="88" height="31"></a>
+
+<a href="https://nyc.f-rpg.me/"><img src="https://forumstatic.ru/files/001c/1a/2f/97282.png" alt="New York City: город, где сбываются мечты"></a>
+
+<a href="https://crossinsomnia.rusff.me" target="_blank"> <img src="https://forumupload.ru/uploads/001c/31/d4/2/147362.jpg"></a>
+
+<a href="https://ritual.rusff.me/" target="_blank"> <img src="https://forumstatic.ru/files/001c/32/c1/60658.gif"></a>
+
+<a href="https://wayward.rusff.me/"><img src="https://forumupload.ru/uploads/001c/32/58/2/651193.png"></a>  
+
+<a href="https://genshinmemories.rusff.me/" target="_blank"><img src="https://forumstatic.ru/files/0017/4a/e0/13035.gif"></a>
+
+<a href="https://godstrust.rusff.me//" target="_blank"><img src="https://forumupload.ru/uploads/001c/38/7d/8/134741.png"></a>
+
+<a href="http://adarktwilight.rusff.me/"><img src="https://forumstatic.ru/files/0012/77/75/84192.jpg?v=1" border="0" alt="twilight: a dark lullaby" width="88" height="31"></a>
+
+<a href="https://rift.rolka.me/" target="_blank"> <img src="https://forumupload.ru/uploads/001b/d9/4a/2/708598.png" border="0" alt="Сказания Разлома"></a>
+
+<a href="https://epitaphium.rusff.me/" target="_blank"> <img src="https://forumupload.ru/uploads/0013/26/8a/4/453227.png"></a>
+
+<a href="https://space51.rusff.me"><img src="https://forumupload.ru/uploads/001c/31/55/2/958897.gif"></a>
+
+<a href="https://secretsofmermaids.rusff.me/" target="_blank"><img src="https://i.imgur.com/uKH5gzO.png"></a>
+
+<a href="https://inspiration.f-rpg.me/" target="_blank"><img src="https://forumupload.ru/uploads/001c/38/b6/4/420928.gif" width="88" height="31" border="0"></a>
+
+<a href="https://thegoodplace.rusff.me/" target="_blank"><img src="https://i.ibb.co/p4Kn1Pj/image.jpg" good="" place="" визардинг="" ворлд="" без="" постирония“=""></a>
+
+<a href="https://trt.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001c/2b/59/2/96823.jpg" width="88px" height="31px"></a>
+
+
+<a href="https://aspect.rusff.me/" target="_blank"> <img src="https://forumstatic.ru/files/001c/3f/af/11376.gif" border="0" alt="ASPECT"></a>
+
+<a href="https://tothegrave.rusff.me/" target="_blank"><img src="https://i.imgur.com/p54yyso.gif" border="0" width="88" height="31"></a>
+
+<a href="https://oddinar.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001c/38/af/3/526919.gif" border="0" alt="oddinary"></a>
+
+ <a href="https://poisondrop.rusff.me/" target="_blank"><img src="https://forumupload.ru/uploads/001c/19/84/5/89441.gif" width="88" height="31" border="0"></a>
+
+
+</div></div>

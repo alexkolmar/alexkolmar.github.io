@@ -142,6 +142,7 @@
 ::selection {
   background: #94a4e3;
   color: #302f30;
+  text-shadow: none;
 }
 
 a,
@@ -520,6 +521,7 @@ body::before {
 #pun-searchtopics .tc2 {
   text-align: center;
   width: 20%;
+  text-transform: lowercase;
 }
 
 #pun-debug table .tcl {
@@ -546,6 +548,7 @@ body::before {
 .forum .hasicon {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   width: 100%;
 }
 
@@ -683,6 +686,7 @@ tr.iclosed div.icon {
   padding: var(--tpad);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .linkst .postlink {
@@ -1157,8 +1161,328 @@ li#onlinelist {
   position: absolute;
 }
 
-.tablica {}
+#pun-announcement {
+  position: absolute;
+  top: 60px;
+  width: 1000px;
+  height: 280px;
+}
 
+.punbb #pun-announcement .container {padding: 0;}
+
+#pun-announcement h2 {display: none;}
+
+.tablica {
+  display: block;
+  width: 1000px;
+  height: 280px;
+  border-radius: 20px;
+  padding: 62px 55px 0 55px;
+  box-sizing: border-box;
+}
+
+.t_logo {
+  position: absolute;
+  top: 40px;
+  left: 29px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 19px;
+  text-transform: lowercase;
+  color: #bfc3c8;
+  text-shadow: var(--tshad);
+}
+
+.music-container audio {
+  display: none;
+}
+
+.music-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 12px;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(25px);
+  background: radial-gradient(123.11% 70.71% at 50% 50%, rgb(156, 159, 172, 12%) 0%, rgb(34, 93, 212, 12%) 100%);
+  box-sizing: border-box;
+  border-top: var(--border3);
+  border-left: var(--border3);
+  border-bottom: var(--border4);
+  border-right: var(--border4);
+}
+
+.play-button {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button .fa-play, .play-button .fa-pause {
+  color: #919498;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25), 1px 1px 10px #010101;  
+}
+
+.play-button .fa-play, .play-button.playing .fa-pause {
+  display: block;
+}
+
+.play-button .fa-pause, .play-button.playing .fa-play {
+  display: none;
+}
+
+.tab_top {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.tab_top span {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  display: block;
+  width: fit-content;
+  transform: translateY(-70%);
+  font-family: var(--third-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  color: rgba(191, 195, 200, .4);
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.25), 1px 1px 10px #010101;
+  background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%) text;
+  -webkit-background-clip: text;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tab_news {
+  width: 270px;
+  position: relative;
+}
+
+.tab_news::after {
+  content: "";
+  border-radius: 100%;
+  background: rgba(229, 214, 192, 0.35);
+  filter: blur(34px);
+  width: 170px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translatex(-50%);
+  pointer-events: none;
+}
+
+.news_block {
+  padding: 15px;
+  width: 270px;
+  height: 130px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: var(--grad1);
+  border-top: var(--border3);
+  border-right: var(--border3);
+  border-bottom: var(--border4);
+  border-left: var(--border4);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.news_inner {
+  width: 240px;
+  height: 100px;
+  overflow: auto;
+  margin-right: -10px;
+  padding-right: 10px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: #bfc3c8;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  scrollbar-color: var(--violet-2) transparent;
+}
+
+.news_inner h5 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: lowercase;
+}
+
+.tab_need {
+  position: relative;
+  height: 130px;
+  width: 360px;
+}
+
+.need_block {
+  height: 130px;
+  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tab_need a {
+  position: relative;
+  padding: 8px 10px;
+  width: 178px;
+  height: 40px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: var(--grad1);
+  border-top: var(--border3);
+  border-right: var(--border3);
+  border-bottom: var(--border4);
+  border-left: var(--border4);
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab_need a::after {
+  content: "";
+  background: url(https://forumstatic.ru/files/0012/0b/b4/58061.png) no-repeat center;
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  opacity: .6;
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.tab_need a img {
+  position: absolute;
+  right: 0;
+  border-radius: 0 12px 12px 0;
+  -webkit-mask: linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 50%) 30%, rgba(0,0,0,0) 100%);
+  width: 70px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.need_text {
+  text-transform: lowercase;
+  color: #bfc3c8;
+  text-shadow: var(--tshad);
+  width: 100%;
+}
+
+.need_text h6 {
+  color: #bfc3c8;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.need_text p {
+  color: #bfc3c8;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 8px;
+}
+
+.need_text p.empty {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 8px;
+  text-align: center;
+  color: #898a8c;
+}
+
+.tab_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.fastlinks {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+  text-align: right;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: lowercase;
+  color: #a1a5af;
+  text-shadow: var(--tshad);
+}
+
+.fastlinks a {
+  color: #a1a5af;
+}
+
+.events {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.events a {
+  display: flex;
+  padding: 8px 12px;
+  width: fit-content;
+  height: 31px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: lowercase;
+  color: #bfc3c8;
+  text-shadow: var(--tshad);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: var(--grad1);
+  border-left: var(--border4);
+  border-top: var(--border3);
+  border-right: var(--border4);
+  border-radius: 12px 12px 0 0;
+}
+
+.events a:hover {
+  transform: translateY(-10px);
+  height: 41px;
+}
+
+.events a::after {
+  content: "";
+  position: absolute;
+  background: url(https://forumstatic.ru/files/0012/0b/b4/29339.png) no-repeat center;
+  width: 150px;
+  height: 104px;
+  pointer-events: none;
+}
+
+.events a img {
+  max-width: 15px;
+  max-height: 15px;
+}
+
+.events a p {
+  white-space: nowrap;
+}
 
 /* Футер
 ------------------------------------------*/
@@ -1184,7 +1508,7 @@ li#onlinelist {
   border-left: var(--border4);
 }
 
-.banners::before {
+.banners::before, .tab_news::before {
   content: "";
   display: block;
   width: 128px;
