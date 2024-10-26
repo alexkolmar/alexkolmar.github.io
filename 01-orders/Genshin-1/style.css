@@ -63,11 +63,6 @@
 ------------------------------------------*/
 
 :root {
-  --body-bg: Burlywood;
-  --pun-bg: ivory;
-  --sec-bg: cornsilk;
-  --link: darkgoldenrod;
-  --link-hover: goldenrod;
   --pwidth: 240px;
   --padding: 10px 60px;
   --tpad: 10px 0;
@@ -98,7 +93,7 @@
   --grad1: radial-gradient(123.11% 70.71% at 50% 50%, rgb(156, 159, 172, 12%) 0%, rgb(34, 93, 212, 12%) 100%);
   --bg1: rgba(196, 201, 207, 0.6);
   --tshad: 0 1px 3px rgba(0, 0, 0, 0.25);
-  --tshad2: var(--tshad2);
+  --tshad2: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
 
 /* Global
@@ -496,6 +491,7 @@ body::before {
 
 .main td {
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .tcl {
@@ -511,6 +507,10 @@ body::before {
 
 .tcr {
   width: 30%;
+}
+
+#pun-searchtopics thead, #pun-viewforum thead {
+  display: none;
 }
 
 #pun-searchtopics .tcl,
@@ -588,7 +588,7 @@ body::before {
 
 .closedatafield, .stickytext, .forum thead {display: none;}
 
-#pun-viewforum .tc3::after {
+#pun-viewforum tbody .tc3::after {
   content: "\e367";
   font-family: var(--fa);
   font-weight: 300;
@@ -631,7 +631,7 @@ div.icon {
   flex-shrink: 0;
 }
 
-#pun-index div.icon {
+#pun-index div.icon, .isub div.icon {
   position: absolute;
   margin: 0;
   width: 51px;
@@ -645,7 +645,7 @@ tr.inew div.icon {
   background: url(https://forumstatic.ru/files/0012/0b/b4/68683.svg) no-repeat top center;
 }
 
-#pun-index tr.inew div.icon {
+#pun-index tr.inew div.icon, tr.inew.isub div.icon {
   width: 60px;
   background: url(https://forumstatic.ru/files/0012/0b/b4/85864.svg);
   display: flex;
@@ -753,12 +753,12 @@ tr.iclosed div.icon {
   display: none;
 }
 
-.punbb .category .container {
+#pun-index .category .container {
   position: relative;
   padding: 40px 20px 30px !important;
 }
 
-.category tr {
+.category tbody tr {
   margin-bottom: 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -774,7 +774,7 @@ tr.iclosed div.icon {
   box-sizing: border-box;
 }
 
-.category tr::before {
+.category tbody tr::before {
   content: "";
   position: absolute;
   left: 0;
@@ -788,7 +788,7 @@ tr.iclosed div.icon {
   pointer-events: none;
 }
 
-/* .category tr::after {
+/* .category tbody tr::after {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -894,7 +894,7 @@ tr.iclosed div.icon {
   color: #5f6b93;
 }
 
-#pun-index .tc2, #pun-index .tc3, #pun-searchtopics .tc3, #pun-viewforum .tc2, #pun-viewforum .tc3 {
+#pun-index .tc2, #pun-index .tc3, #pun-searchtopics tbody .tc3, #pun-viewforum tbody .tc2, #pun-viewforum tbody .tc3 {
   position: relative;
   border-radius: 12px;
   padding: 10px 15px !important;
@@ -918,7 +918,7 @@ tr.iclosed div.icon {
   box-sizing: border-box;
 }
 
-#pun-index .tc2::before, #pun-index .tc3::before, #pun-searchtopics .tc3::before, #pun-viewforum .tc2::before, #pun-viewforum .tc3::before {
+#pun-index .tc2::before, #pun-index .tc3::before, #pun-searchtopics tbody .tc3::before, #pun-viewforum tbody .tc2::before, #pun-viewforum tbody .tc3::before {
   content: "";
   border-radius: 100%;
   background: rgba(255, 237, 209, 0.54);
@@ -930,14 +930,14 @@ tr.iclosed div.icon {
   bottom: 0;
 }
 
-#pun-index .tc2:after {
+#pun-index .tc2:after, #pun-viewforum .isub .tc2:after {
   content: "тем";
   font-weight: 400;
   font-size: 10px;
   color: #565c63;
 }
 
-#pun-index .tc3:after, #pun-searchtopics .tc3::after, #pun-viewforum .tc2::after {
+#pun-index tbody .tc3:after, #pun-searchtopics tbody .tc3::after, #pun-viewforum tbody .tc2::after, #pun-viewforum .isub .tc3:after {
   content: "соо";
   font-weight: 400;
   font-size: 10px;
@@ -1484,6 +1484,7 @@ li#onlinelist {
   white-space: nowrap;
 }
 
+
 /* Футер
 ------------------------------------------*/
 
@@ -1508,7 +1509,7 @@ li#onlinelist {
   border-left: var(--border4);
 }
 
-.banners::before, .tab_news::before {
+.banners::before {
   content: "";
   display: block;
   width: 128px;
@@ -1885,6 +1886,10 @@ li#onlinelist {
 
 .pa-online:hover strong, .pa-offline:hover .pa-last-visit {
   opacity: 1;
+}
+
+.pa-replies {
+  margin-bottom: 10px;
 }
 
 
@@ -2796,4 +2801,210 @@ img.avatardemo {
 .go-down:hover,
 .go-up:hover {
   opacity: 1;
+}
+
+/* Регулировка размера шрифта в постах */
+.FNTslider {
+  border-radius: 4px;
+  position: relative;
+  z-index: 1000;
+  background: var(--violet-2);
+  width: 110px;
+  height: 5px;
+  margin: 10px 7% 9px 5px;
+  border: none;
+  float: right;
+}
+
+.FNTslider .before {
+  height: 6px;
+  border: solid 0px transparent;
+  border-right: none 0;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  background: var(--violet-1);
+  margin-top: -1px;
+  box-shadow: 0px 0px 2px 0px rgb(203, 176, 120) inset;
+}
+.FNTslider .thumb {
+  width: 8px;
+  height: 13px;
+  border-radius: 3px;
+  position: relative;
+  top: -4px;
+  background: var(--gray-2);
+  cursor: pointer;
+}
+
+
+/* Гостевая */
+
+.guestbook {
+  margin: 0 auto;
+  padding: 6px 20px;
+  background: url(https://forumstatic.ru/files/0012/0b/b4/96150.png) no-repeat top center;
+  width: 720px;
+  height: 508px;
+  box-sizing: border-box;
+}
+
+.guestbook h1 {
+  font-family: var(--third-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 72px;
+  color: rgba(191, 195, 200, 0.8);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  text-shadow: 0 0 54px #6173ac, 0 0 4px #1f222c;
+  text-transform: lowercase;
+  line-height: 55px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+  background: url(https://forumstatic.ru/files/0012/0b/b4/18856.png) no-repeat top center;
+  height: 49px;
+}
+
+.g_inner p {
+  padding: 0 !important;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: justify;
+  color: #302f30;
+}
+
+.g_inner {
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  padding: 25px;
+  width: 680px;
+  backdrop-filter: blur(25px);
+  background: #c4c9cf;
+  box-sizing: border-box;
+  border-top: var(--border1);
+  border-right: var(--border1);
+  border-bottom: var(--border2);
+  border-left: var(--border2);
+}
+
+.g_info {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.g_links {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: flex-start;
+  gap: 5px;
+}
+
+.g_links a {
+  display: block;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 5px 10px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(165, 182, 226, 15%) 0%, rgba(97, 114, 148, 15%) 100%);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: lowercase;
+  color: var(--gray-4);
+  text-shadow: var(--tshad2);
+  box-sizing: border-box;
+  border-top: var(--border1);
+  border-bottom: var(--border2);
+}
+
+.g_links a:hover {
+  color: #5f6b93;
+}
+
+.g_about {
+  padding: 0 !important;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #302f30;
+}
+
+.g_about li {
+  margin: 0 !important;
+}
+
+.g_claimblock {
+  display: flex;
+  gap: 20px;
+}
+
+.g_claim span {
+  margin-bottom: -10px;
+  display: block;
+  width: fit-content;
+  border-radius: 12px 12px 0 0;
+  padding: 5px 10px 15px 10px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: var(--grad1);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: lowercase;
+  color: #bfc3c8;
+  text-shadow: var(--tshad);
+  border-top: var(--border3);
+  border-left: var(--border4);
+  border-right: var(--border4);
+}
+
+.claim_inner {
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 330px;
+  height: 106px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: var(--grad1);
+  border-top: var(--border3);
+  border-right: var(--border3);
+  border-bottom: var(--border4);
+  border-left: var(--border4);
+}
+
+.claim_scroll {
+  width: 300px;
+  height: 86px;
+  overflow: auto;
+  scrollbar-color: var(--violet-2) transparent;
+}
+
+.g_claim p {
+  padding: 0 !important;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #c4c9cf;
+}
+
+.g_claim::after {
+  content: "";
+  background: url(https://forumstatic.ru/files/0012/0b/b4/28638.png) no-repeat top center;
+  width: 330px;
+  height: 40px;
+  display: block;
 }

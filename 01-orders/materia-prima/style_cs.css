@@ -1,97 +1,3 @@
-/*Общая хронология*/
-.all-chrono {padding: 24px; position: relative;}
-
-.all-chrono:before {
-    content: '';
-    height: 100%;
-    display: block;
-    width: 1px;
-    background: #000;
-    position: absolute;
-    left: 50%;
-}
-
-.events-content {
-    position: relative;
-    width: 50%;
-}
-
-.events-content:nth-child(even) {margin-left: auto;}
-
-.events-data-title {position: relative;}
-
-.events-data-title:after {
-    content: '';
-    width: 7px;
-    height: 7px;
-    display: block;
-    background: #000;
-    border-radius: 50%;
-    position: absolute;
-    right: -4px;
-    bottom: -3px;
-}
-
-.data-descr {
-    padding: 0 10px 4px 10px;
-    border-bottom: 1px solid #000;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.events-decsr {padding: 20px 20px 20px 10px;}
-
-.data-numbers {
-    color: rgb(141 141 131 / 20%);
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    left: 30px;
-}
-
-.all-chrono .spoiler-box {
-    border: none;
-    background: none;
-}
-
-.all-chrono .spoiler-box > div {
-    background: none;
-    position: relative;
-    border: 1px solid #000;
-    padding: 3px 10px 3px 20px;
-    border-radius: 30px;
-    font-size: 9px;
-    line-height: 100%;
-}
-
-.all-chrono .spoiler-box > div.visible {background: none;}
-
-.all-chrono .spoiler-box > div:before {
-    content: "\f054";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    font-family: FontAwesome;
-    font-size: 9px;
-    line-height: 16px;
-    width: auto;
-    height: auto;
-    transition: all .5s ease-in-out .15s;
-    pointer-events: none;
-}
-
-.all-chrono .spoiler-box > div.visible:before {transform: rotate(90deg);}
-
-
-.topicname.imp {width: calc(100% - 20px);}
-.post-content .cnt-part p {text-align: start;}
-.ams-news blockquote {background: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg) no-repeat bottom center / cover;}
-
-
-
-
 /********** Чистый стандартный стиль для MyBB ***********/
 /******** Cпециально для ForumD.ru © Gerda, 2023 ********/
 /**************************************************
@@ -1397,7 +1303,7 @@ li.pa-title {
 .pa-posts, .pa-respect, .pa-fld5 {
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   padding: 0px 4px !important;
   margin: 10px 4px 0;
   width: fit-content;
@@ -1540,10 +1446,15 @@ pre {
     justify-content: flex-end;
 }
 
+#dice-form {
+    align-items: center;
+}
+
 /* Иконки в форме ответа 
 -------------------------------------------------------------*/
 
 .punbb #main-reply {box-sizing: border-box;}
+#form-buttons {margin-top: 10px;}
 .punbb #form-buttons table {width: 100%;}
 
 .punbb #form-buttons tr {
@@ -1560,27 +1471,27 @@ width: 100%;
 background-image: none !important;
 position: relative;
 display: inline-block;
-width: 30px;
-height: 30px;
+width: 26px;
+height: 26px;
 }
 
 .punbb #form-buttons td img {
-width: 30px;
-height: 30px;
+width: 26px;
+height: 26px;
 border: none;
 }
 
 #form-buttons td:before {
 content: "";
-font-family: var(--msr);
-font-size: 24px;
-font-weight: bold;
+font-family: var(--mi);
+font-size: 20px;
+font-weight: normal;
 color: #5c7c8d;
 position: absolute;
 pointer-events: none;
 transition: all .5s linear 0s;
-width: 30px;
-height: 30px;
+width: 26px;
+height: 26px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -1593,7 +1504,7 @@ top: 0;
 /* Стандартные кнопки */
 
 td#button-font:before {content: "\e167";}
-td#button-size:before {content: "\e262";}
+td#button-size:before {content: "\e245";}
 td#button-bold:before {content: "\e238";}
 td#button-italic:before {content: "\e23f";}
 td#button-underline:before {content: "\e249";}
@@ -1602,19 +1513,17 @@ td#button-left:before {content: "\e236";}
 td#button-center:before {content: "\e234";}
 td#button-right:before {content: "\e237";}
 td#button-link:before {content: "\e157";}
-td#button-spoiler:before {content: "\e8f5";}
-td#button-spoiler:hover:before {content: "\e8f4";}
+td#button-spoiler:before {content: "\ea19";}
 td#button-image:before {content: "\e43e";}
-td#button-video:before {content: "\e070";}
+td#button-video:before {content: "\e63a";}
 td#button-hide:before {content: "\e898";}
-td#button-hide:hover:before {content: "\e897";}
-td#button-quote:before {content: "\e8af";}
+td#button-quote:before {content: "\e244";}
 td#button-code:before {content: "\e86f";}
 td#button-color:before {content: "\e40a";}
-td#button-table:before {content: "\e3ec";}
-td#button-smile:before {content: "\ea22";}
-td#button-keyboard:before {content: "\f028";}
-td#button-addition:before {content: "\ea20";}
+td#button-table:before {content: "\f1be";}
+td#button-smile:before {content: "\e7f2";}
+td#button-keyboard:before {content: "\e312";}
+td#button-addition:before {content: "\e02e";}
 td#button-files_rusff:before {content: "\e2c7";}
 td#button-files_rusff:hover:before {content: "\e2c8";}
 td#button-graffiti_rusff:before {content: "\e3ae";}
@@ -1808,61 +1717,44 @@ margin: 0 0 10px 0;
   padding: 0 20px 0 200px;
 }
 
-/* Up & Down Arrows © max, the murderer!
------------------------------------------------------------------- */
+
+/* Кнопки вверх-вниз
+-------------------------------------------------------*/
 
 .go-up,
 .go-down {
-    display: none;
-    position: fixed;
-    right: 0;
-    z-index: 0;
-    cursor: pointer;
-    width: 100px;
-    height: 50%;
-    box-sizing: border-box;
-    z-index: 1;
+  cursor: pointer;
+  opacity: .5;
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  right: 30px !important;
+  box-sizing: border-box;
+  transition: all .3s linear 0s;
+  color: #425c6c;
+  font-size: 50px;
 }
 
 .go-up {
-    top: 0;
+  top: 260px;
 }
 
 .go-down {
-    bottom: 0;
+  top: 320px;
 }
 
-.go-up .inside,
-.go-down .inside {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    opacity: .6;
-    transition: opacity .1s ease;
+.go-down:hover,
+.go-up:hover {
+  opacity: 1;
 }
 
-.go-up .inside {
-    align-items: flex-start;
-    background: linear-gradient(to bottom, rgb(255 255 255 / .12) 0%, rgb(255 255 255 / 0) 100%);
-}
-
-.go-down .inside {
-    align-items: flex-end;
-    background: linear-gradient(to top, rgb(255 255 255 / .12) 0%, rgb(255 255 255 / 0) 100%);
-}
-
-.go-up .inside:hover,
-.go-down .inside:hover {
-    opacity: 1;
-}
-
-.go-up img,
-.go-down img {
-    padding: 20px 0;
-}
-
-.go-down img {
-    transform: rotate(180deg);
+#plng {
+  border: 1px solid #bab9a5 !important;
+  padding: 5px 10px !IMPORTANT;
+  margin: 0 20px 0 10px !important;
+  background: #d0d2c7;
+  font-family: 'Lora';
+  font-size: 11px;
 }
 
 
@@ -2277,10 +2169,11 @@ max-width:170px;
 }
 
 .letter {
-    background: url(https://forumstatic.ru/files/001b/6f/93/31361.jpg) top left no-repeat;
+    background: url(https://forumstatic.ru/files/001b/6f/93/31361.jpg) center no-repeat;
     box-shadow: 0 1px 4px rgb(0 0 0 / 10%), -20px 0 20px -23px rgb(0 0 0 / 20%), 20px 0 20px -23px rgb(0 0 0 / 20%), 0px 0px 0px 1px #9f9f965c inset;
     transform: rotate(0.4deg);
     padding: 12px 20px;
+    background-size: cover;
 }
 
 .letter-text {
@@ -2460,6 +2353,19 @@ max-width:170px;
     text-shadow: 1px 1px #000, 0px 0px 5px #b9b9b14d;
 }
 
+.sh-item.dark-spoiler .spoiler-box > div {
+    background: #1d1d1d;
+    border: 1px solid #8b7d4b;
+    text-shadow: 1px 1px #000, 0px 0px 5px #ffffff3b;
+    color: #b5aa6d;
+    padding-left: 0;
+}
+
+.sh-item .kelendar .spoiler-box {
+    border: none;
+    background: transparent;
+}
+
 
 /*Хронология*/
 .shtitle.chrono {padding: 10px 20px;}
@@ -2548,6 +2454,99 @@ max-width:170px;
 }
 
 .sh-item.anketa-head br {display: none;}
+
+/*Общая хронология*/
+.all-chrono {padding: 24px; position: relative;}
+
+.all-chrono:before {
+    content: '';
+    height: 100%;
+    display: block;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+}
+
+.events-content {
+    position: relative;
+    width: 50%;
+}
+
+.events-content:nth-child(even) {margin-left: auto;}
+
+.events-data-title {position: relative;}
+
+.events-data-title:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    bottom: -3px;
+}
+
+.data-descr {
+    padding: 0 10px 4px 10px;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.events-decsr {padding: 20px 20px 20px 10px;}
+
+.data-numbers {
+    color: rgb(141 141 131 / 20%);
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.all-chrono .spoiler-box {
+    border: none;
+    background: none;
+}
+
+.all-chrono .spoiler-box > div {
+    background: none;
+    position: relative;
+    border: 1px solid #000;
+    padding: 3px 10px 3px 20px;
+    border-radius: 30px;
+    font-size: 9px;
+    line-height: 100%;
+}
+
+.all-chrono .spoiler-box > div.visible {background: none;}
+
+.all-chrono .spoiler-box > div:before {
+    content: "\f054";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-family: FontAwesome;
+    font-size: 9px;
+    line-height: 16px;
+    width: auto;
+    height: auto;
+    transition: all .5s ease-in-out .15s;
+    pointer-events: none;
+}
+
+.all-chrono .spoiler-box > div.visible:before {transform: rotate(90deg);}
+
+
+.topicname.imp {width: calc(100% - 20px);}
+.post-content .cnt-part p {text-align: start;}
+.ams-news blockquote {background: url(https://forumstatic.ru/files/001b/f8/73/13159.jpg) no-repeat bottom center / cover;}
+
+.right-evblock .events-data-title:after {left: -3px;}
 
 
 

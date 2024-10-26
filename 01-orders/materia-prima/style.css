@@ -4,6 +4,7 @@
 
 /* Иконический шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&family=Roboto:wght@100;300;400;500;700&display=swap');
@@ -27,6 +28,7 @@
   --bea: 'beaufort';
   --fa: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'Font Awesome 5 Pro', 'Font Awesome 5 Brands';
   --msr: Material Symbols Rounded;
+  --mi: 'Material Icons';
 }
 
 
@@ -142,8 +144,21 @@
     height: 276px;
   }
 
-.rotator, .newws, .navs {
+.rotator, .navs {
   display: none;
+}
+
+.newws {
+  position: absolute;
+  top: 300px;
+  color: var(--bg);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.newws z, .newws a {
+  color: #587487;
 }
 
 .tab_left {
@@ -160,6 +175,7 @@
   padding: 0;
   text-align: center;
   order: -1;
+  position: relative;
 }
 
 .infa_tab {
@@ -291,6 +307,7 @@
     height: 100%;
     text-align: center;
     cursor: pointer;
+    color: #294455;
   }
   
   #pun-ulinks .container {
@@ -358,7 +375,9 @@
   
   .punbb .container.crumbs {display: block;}
 
-  #pun-crumbs1 .container.crumbs {margin-top: 10px;}
+  #pun-crumbs1 .container.crumbs {
+   margin-top: 110px;
+  }
 
   /* Объявление
   -------------------------------------------------------------*/
@@ -372,10 +391,6 @@
   -------------------------------------------------------------*/
 
   .multipage {margin-top: 10px;}
-
-  .category:not(:last-of-type) {
-   margin: 20px 0;
-  }
   
   /* Заголовки */
   .punbb h1, .punbb h2 {
@@ -389,6 +404,10 @@
     font-size: 20px;
     line-height: 120%;
   }
+
+.category {
+  margin: 20px 0;
+}
   
  .category h2 q, .punbb thead {display: none;}
   
@@ -980,7 +999,8 @@
   
   .punbb-admin #pun-adnav {margin: 0;}
   
-  .punbb-admin #pun-admain {padding: 0;}
+  .punbb-admin #pun-admain, .punbb-admin #pun-admain .adcontainer
+ {padding: 0 !important;}
   
   .punbb-admin #pun-adnav ul {
     display: flex;
@@ -1054,6 +1074,7 @@
     flex-direction: column;
     display: flex;
   }
+
 
   /* быстрая смена акков
   -------------------------------------------------------------*/

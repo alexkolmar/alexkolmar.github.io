@@ -1,0 +1,62 @@
+/* Смена стиля
+-------------------------------------------------------------*/
+
+#stylelist {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+
+#stylelist li, #display_switch, #toggle_tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0f0c0a;
+  border: 1px solid var(--bd2);
+  box-shadow: inset 0 0 10px 0 #201c18;
+  font-size: 20px;
+}
+
+#stylelist li a {
+   color: var(--tx2);
+}
+
+#stylelist li.active a {
+   color: var(--link);
+}
+
+.night {
+--pun-bg: #1b1a19;
+--sec-bg: #131211;
+--pun-bd: #0b0b0b;
+--bd1: #2b2a29;
+--tx: #a9a399;
+}
+
+.night #pun {
+  box-shadow: inset 0 0 0 1px var(--pun-bd), inset 0 0 0 2px #303030, inset 0 0 13px 4px rgba(0,0,0, .3);
+}
+
+.night input.button, .night #pun-admain input.button, .night #sub4, .night input[type="button"], .night input[type="submit"] {
+  color: var(--ltx);
+}
+
+.night input.button:hover, .night #pun-admain input.button:hover, .night #sub4:hover, .night input[type="button"]:hover, .night input[type="submit"]:hover {
+  color: var(--bd1);
+}
+
+.night .quote-box cite, .night .code-box strong.legend, .night .category h2 .catright, .night #pun-stats h2::after, .night .onlinelist::before {
+  background: var(--sec-bg);
+}
+
+.night .quote-box:not(.spoiler-box) > blockquote, .night .quote-box.answer-box > blockquote, .night .code-box .blockcode, .night .quote-box.spoiler-box {
+  border: 1px solid var(--sec-bg);
+  background: var(--bd1);
+}
+
+.night .punbb .post-content .spoiler-box > div, .night .punbb .post-content .spoiler-box > div.visible, .night .punbb .post-content .spoiler-box > div::before {
+  background: var(--sec-bg);
+}
