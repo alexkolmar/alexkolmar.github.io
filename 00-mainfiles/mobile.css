@@ -27,7 +27,6 @@
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
-    font: 100%/150% sans-serif;
   }
 
   /* Порядок основных блоков */
@@ -625,6 +624,10 @@
     min-height: 90px;
     box-sizing: border-box;
     background: rgba(0, 0, 0, .1);
+  }
+
+  #pun-searchposts .post .post-author {
+    min-height: unset;
   }
 
   .punbb .post .post-author ul {
