@@ -4,9 +4,6 @@
   $(this).find('.pa-author, .pa-title').wrapAll("<div class='pa-top'>");
   $(this).find('.pa-posts, .pa-respect, .pa-fld2, .pa-fld5').wrapAll('<div class="pa-bottom">');
   });
-  $('#pun-status').each(function () {
-   $(this).find('.item1, .item2, .item3, .item4').wrapAll('<div class="status_wrap">');
-  });
   $('.pa-last-visit').wrap('<div class="pa-offline">');
   $(document).ready(function() {
     $("#float").prependTo($("#post-form #tags"));
@@ -17,15 +14,23 @@
   <! -- стиль для липкой навигации --> 
   <script type="text/javascript">
   function myFunction() {
-    if (window.pageYOffset >= 435) {
-      $("#pun-navlinks, #pun-ulinks, #chfont").addClass("fixed");
+    if (window.innerWidth < 540) {
+      if (window.pageYOffset >= 185) {
+        $("#pun-navlinks, #pun-ulinks, #chfont").addClass("fixed");
+      } else {
+        $("#pun-navlinks, #pun-ulinks, #chfont").removeClass("fixed");
+      }
     } else {
-      $("#pun-navlinks, #pun-ulinks, #chfont").removeClass("fixed");
+      if (window.pageYOffset >= 435) {
+        $("#pun-navlinks, #pun-ulinks, #chfont").addClass("fixed");
+      } else {
+        $("#pun-navlinks, #pun-ulinks, #chfont").removeClass("fixed");
+      }
     }
   };
   window.onscroll = function() {myFunction()};
   if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-      myFunction()
+    myFunction();
   }
   </script>
   
@@ -420,7 +425,7 @@
   <!-- ЧТОБЫ НЕ ПРОПАДАЛИ ПОСТЫ V.2-->
   <script src="//hostjs-mybb2011.narod.ru/js/functio_Cookie33.js"></script>
   <script>
-   var Knopa2 = '<span style="position:absolute;right:0px;top:-25px;z-index:200;cursor:pointer;"><img id="Knopa2-2" src="https://forumstatic.ru/files/001b/50/4c/12191.svg" title="Вставка запомненного при последней Отправке"/></span>'; if (getCookie33('main-reply')) { $("#main-reply").before(Knopa2); }
+   var Knopa2 = '<span style="position:absolute;right:0px;top:-25px;z-index:200;cursor:pointer;"><i class="fa-regular fa-file-import" id="Knopa2-2" title="Вставка запомненного при последней Отправке"></i></span>'; if (getCookie33('main-reply')) { $("#main-reply").before(Knopa2); }
    $(".formsubmit input[type='submit']").click(function () {
     var Ll = $("#main-reply").val(); Ll = Ll.substring(0, 1000); setCookie33('main-reply', Ll, 8 * 60 * 1000);
    });

@@ -184,10 +184,11 @@ em {
   font-style: normal;
 }
 
-.modlist,
+.category .tclcon .modlist,
 .lastedit,
 .punbb div#pun-live-rusff,
-.punbb .topic a.sharelink {
+.punbb .topic a.sharelink,
+.post-links li.pl-share {
   display: none;
 }
 
@@ -631,7 +632,7 @@ div.icon {
   flex-shrink: 0;
 }
 
-#pun-index div.icon, .isub div.icon {
+#pun-index div.icon, #pun-viewforum .isub div.icon {
   position: absolute;
   margin: 0;
   width: 51px;
@@ -645,7 +646,7 @@ tr.inew div.icon {
   background: url(https://forumstatic.ru/files/0012/0b/b4/68683.svg) no-repeat top center;
 }
 
-#pun-index tr.inew div.icon, tr.inew.isub div.icon {
+#pun-index tr.inew div.icon, #pun-viewforum tr.inew.isub div.icon {
   width: 60px;
   background: url(https://forumstatic.ru/files/0012/0b/b4/85864.svg);
   display: flex;
@@ -803,7 +804,7 @@ tr.iclosed div.icon {
   mask-composite: exclude;
 }*/
 
-.category h2, #pun-stats h2 {
+.category h2 {
   padding: 0;
   background: url(https://forumstatic.ru/files/0012/0b/b4/18856.png) no-repeat top center;
   height: 49px;
@@ -892,6 +893,10 @@ tr.iclosed div.icon {
 
 .category .tclcon span a:hover {
   color: #5f6b93;
+}
+
+#pun-index .subforums {
+  margin-bottom: 10px;
 }
 
 #pun-index .tc2, #pun-index .tc3, #pun-searchtopics tbody .tc3, #pun-viewforum tbody .tc2, #pun-viewforum tbody .tc3 {
@@ -990,7 +995,12 @@ tr.iclosed div.icon {
 /* Статистика */
 
 #pun-stats {
-  background: url(https://forumstatic.ru/files/0012/0b/b4/48908.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/0012/0b/b4/79584.png) no-repeat top center;
+}
+
+#pun-stats h2 {
+  padding: 0;
+  height: 49px;
 }
 
 #pun-stats a {
@@ -1034,14 +1044,13 @@ tr.iclosed div.icon {
   text-transform: lowercase;
   text-shadow: var(--tshad);
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 1fr 1fr; 
-  grid-template-rows: 0.5fr 0.5fr 0.5fr; 
+  grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 5px 5px;
   grid-auto-flow: row;
   grid-template-areas:
-    "item1 item2 onlinelist users_24h"
-    "item3 item4 onlinelist users_24h"
-    "statistics statistics statistics statistics";
+"item1 item2 onlinelist users_24h" 
+"item3 item4 onlinelist users_24h";
 }
 
 #pun-stats .item1 { grid-area: item1; }
@@ -1978,6 +1987,21 @@ pre {
   text-decoration: underline;
 }
 
+s, del {
+  text-decoration: none;
+  filter: blur(3px);
+  transition: all .3s linear 0s;
+}
+
+s:hover, del:hover {
+  filter: none;
+}
+
+.post-content abbr {
+  cursor: help !important;
+  text-decoration: underline dotted currentColor;
+}
+
 .post-content p {
   margin: 0;
   padding: 0 0 12px 0;
@@ -2807,7 +2831,7 @@ img.avatardemo {
 .FNTslider {
   border-radius: 4px;
   position: relative;
-  z-index: 1000;
+  z-index: 100;
   background: var(--violet-2);
   width: 110px;
   height: 5px;
@@ -2854,13 +2878,11 @@ img.avatardemo {
   font-weight: 400;
   font-size: 72px;
   color: rgba(191, 195, 200, 0.8);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
   text-shadow: 0 0 54px #6173ac, 0 0 4px #1f222c;
   text-transform: lowercase;
   line-height: 55px;
   display: block;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   background: url(https://forumstatic.ru/files/0012/0b/b4/18856.png) no-repeat top center;
@@ -3007,4 +3029,22 @@ img.avatardemo {
   width: 330px;
   height: 40px;
   display: block;
+}
+
+
+/* TITLE, TOOLTIP / NOTIFICATIONS
+--------------------------------------------------------------------------------------------------------------------------*/
+#tooltip {
+  position: absolute;
+  max-width: 200px;
+  display: none;
+  z-index: 999999;
+  border-radius: 0px !important;
+  padding: 3px 7px;
+  font-family: var(--second-family);
+  color: var(--gray-3);
+  background: var(--dark-400);
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.5px;
 }

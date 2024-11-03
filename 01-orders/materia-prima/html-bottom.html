@@ -2,10 +2,42 @@
 <script type="text/javascript" src="https://forumstatic.ru/files/001a/08/74/57494.js"></script>
 
 
+<script type="text/javascript">
+<!-- Кастомные разделители в дополнительных тегах // Fumuse -->
+let customHr = [
+    {'title': 'Разделитель (анимированная)', 'param': 'animw'},
+    {'title': 'Разделитель (теневая)', 'param': 'shadoww'},
+    {'title': 'Разделитель (скобочки)', 'param': 'venzel'},
+    {'title': 'Разделитель (знак)', 'param': 'znak'},
+    {'title': 'Разделитель (гриф)', 'param': 'grif'},
+    {'title': 'Разделитель (голубое)', 'param': 'blu'},
+    {'title': 'Разделитель (город?)', 'param': 'citty'},
+    {'title': 'Разделитель (хзчто?)', 'param': 'patte'},
+];
+let additionalArea = document.getElementById('addition-area');
+if (!!additionalArea) {
+	let editor = FORUM.get('editor');
+	editor.addition.tags.customHr = {};
+	editor.addition.tags.customHr.onclick = function (param) {
+    insert("[hr=" + param + "]\n");
+	};
+
+	for (let i = 0; i < customHr.length; i++) {
+    let newHR = document.createElement('div');
+    newHR.addEventListener('click', function () {
+    	editor.addition.tags.customHr.onclick(customHr[i].param);
+    });
+    newHR.innerHTML = '<span>' + customHr[i].title + '</span>';
+    additionalArea.append(newHR);
+	}
+}
+</script>
+
+
 <!-- Ивент-календарь, вкладки и слайдеры в постах © ForumD.ru | Gerda -->
 <script>
 //скорость анимации слайдера
-var fdksTime = '800';
+var fdksTime = '300';
 
 //кнопки слайдера
 var fdksArrows = 'always'; //стрелки (always - показывать, never - скрыть)
@@ -24,27 +56,298 @@ var fdksNext = 'toLeft'; //следующий
 var fdksPrev = 'toRight'; //предыдущий
 
 </script>
-<script type="text/javascript" src="https://forumstatic.ru/files/001b/de/5c/19321.js"></script>
+<script type="text/javascript" src="https://forumstatic.ru/files/001b/de/5c/57204.js"></script>
 
 
-<!-- Кнопки вверх-вниз © Домовой -->
-<div class="go-up" id='ToTop'><div class="inside"><img src="/files/001a/fc/45/61081.svg"></div></div>
-<div class="go-down" id='OnBottom'><div class="inside"><img src="/files/001a/fc/45/61081.svg"></div></div>
+
+
 <script type="text/javascript">
-$(function(){
-if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("fast")
-$(window).scroll(function(){
-  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("fast")
-  else $("#ToTop").fadeIn("fast")
-});
-if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("fast")
-$(window).scroll(function(){
-  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("fast")
-  else $("#OnBottom").fadeIn("fast")
-});
-$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"fast")})
-$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"fast")})
-});
+/*
+* Hide blocks for groups
+* Copying prohibited!
+* Developer: Fumuse (https://forumd.ru/profile.php?id=7907 | https://fumuse.ru/)
+*/
+class HideBlock {
+	userGroup = 3;
+	groupLists = [
+    {"id": 3, "name": "Гость"},
+    {"id": 7, "name": "Игроки до 18+"},
+    {"id": 5, "name": "Новые пользователи"},
+    {"id": 6, "name": "Реклама"},
+	];
+	blockList = [];
+
+	constructor() {
+    this.blockList = document.querySelectorAll('.hideblock');
+    this.userGroup = window["GroupID"] || 3; //current user group
+    this.hideBlock();
+    this.bbButton();
+	}
+
+	hideBlock() {
+    if (this.blockList.length <= 0) return;
+
+    this.blockList.forEach((block, index) => {
+    	this.blockChangeDom(block);
+    	let groups = this.parseGroups(block.dataset.group);
+
+    	//hide from guests
+    	if (groups.length === 0) groups = [3];
+    	let hasAccess = this.checkUserAccess(groups);
+
+    	if (!hasAccess) {
+        this.hiddenBlockContent(block);
+    	}
+    })
+	}
+
+	/**
+	 * Изменение вёрстки блока для большей схожести с блоком скрытого текста
+	 * @param block
+	 */
+	blockChangeDom(block) {
+    let html = block.innerHTML;
+    block.innerHTML = "<cite>Скрытый текст:</cite><blockquote>" + html + "</blockquote>";
+	}
+
+	/**
+	 * Разбор строки-настроек в блоке со скрытым текстом
+	 * @param groups
+	 * @returns {*[]|*|string[]}
+	 */
+	parseGroups(groups) {
+    if (!groups) return [];
+    groups = groups.split(",");
+    if (groups.length > 0) {
+    	groups.forEach((group, index) => {
+        groups[index] = Number(group);
+    	});
+
+    	return groups;
+    }
+
+    return [];
+	}
+
+	/**
+	 * Проверка доступа к блоку со скрытым текстом
+	 * @param groups
+	 * @returns {*}
+	 */
+	checkUserAccess(groups) {
+    return !groups.includes(this.userGroup);
+	}
+
+	/**
+	 * Скрытие блока от групп, которые не могут видеть этот блок
+	 * @param block
+	 */
+	hiddenBlockContent(block) {
+    block.querySelector("blockquote").innerHTML = "<p>Этот текст доступен для просмотра только определённым группам.</p>";
+	}
+
+	/**
+	 * Кнопка группового скрытия на панели бб-кодов
+	 */
+	bbButton() {
+    let buttonPanelHide = document.getElementById('button-hide');
+    if (!buttonPanelHide) return;
+
+    this.bbButtonPanel();
+
+    let newButton = document.createElement('td');
+    newButton.id = 'button-grouphide';
+    newButton.innerHTML = '<img onclick="FORUM.get(\'editor.grouphide.onclick()\')" src="/i/blank.gif">';
+
+    buttonPanelHide.parentElement.insertBefore(newButton, buttonPanelHide);
+	}
+
+	/**
+	 * Открывающийся блок после нажатия на кнопку на бб-панели
+	 */
+	bbButtonPanel() {
+    let __this = this;
+    let editor = FORUM.get('editor');
+    editor.grouphide = {
+    	name: "Скрытый текст для групп",
+    	onclick: () => {
+        __this.panelToggle("grouphide-area");
+    	},
+    };
+
+    let tagsContainer = document.getElementById('tags');
+    let container = document.createElement('div');
+    container.id = "grouphide-area";
+    container.classList.add("container");
+    container.style.display = 'none';
+
+    tagsContainer.append(container);
+    this.bbButtonPanelGroupsList(container);
+    this.bbButtonPanelEndButton(container);
+	}
+
+	/**
+	 * Отрисовка списка групп на открывающейся бб-панели
+	 * @param container
+	 */
+	bbButtonPanelGroupsList(container) {
+    this.groupLists.forEach(group => {
+    	let element = document.createElement('label');
+    	element.innerHTML = '<input type="checkbox" value="' + group.id + '" /> ' + group.name;
+
+    	container.append(element);
+    });
+	}
+
+	/**
+	 * Итоговая кнопка на бб-панели
+	 * @param container
+	 */
+	bbButtonPanelEndButton(container) {
+    let __this = this;
+    let button = document.createElement('input');
+    button.type = 'button';
+    button.classList.add('button');
+    button.value = 'Скрыть текст для выделенных групп';
+
+    button.addEventListener('click', function () {
+    	let parent = this.closest('#grouphide-area');
+    	let linked = [];
+    	let inputs = parent.querySelectorAll('input[type="checkbox"]');
+    	inputs.forEach(input => {
+        if (!input.checked) return;
+        linked.push(input.value);
+        input.checked = false;
+    	});
+
+    	if (linked.length <= 0) bbcode('[ghide]', '[/ghide]');
+    	else {
+        bbcode('[ghide=' + linked.join(',') + ']', '[/ghide]');
+    	}
+
+    	__this.panelToggle("grouphide-area");
+    });
+
+    container.append(button);
+	}
+
+	/**
+	 * Открытие панели с выбором групп
+	 * @param e
+	 */
+	panelToggle(e) {
+    let t = document.getElementById(e);
+    null != t && void 0 !== t && ("none" == t.style.display ? $(t).show() : $(t).hide())
+	}
+}
+
+const hideBlock = new HideBlock();
+</script>
+
+
+<!-- Dice Roller BEGIN (c) Spiritus Tergi, ч2 в хтмл-низ -->
+<template id="dice-box-template">
+	<div class="dice-box">
+    <p>
+    	<span class="roll-dice"></span>
+    	<span class="roll-value"></span>
+    </p>
+    <p class="roll-reason"></p>
+    <p class="roll-result"></p>
+	</div>
+</template>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
+<script>
+	diceResults = [
+    {'max' : 16,    'result' : 'неудача, тяжелые травмы.'},
+    {'max' : 29,    'result' : 'неудача, персонаж зарабатывает легкие ушибы.'},
+    {'max' : 49,    'result' : 'неудача, но без увечий и травм.'},
+    {'max' : 60,    'result' : 'удача с большим трудом и возможными тяжелыми увечьями.'},
+    {'max' : 90,    'result' : 'удача, с легкими ранениями.'},
+    {'max' : 1000,    'result' : 'удача  без единой травмы или увечья.'}
+	]
+
+	isTagged = (document.querySelector('#pun').innerHTML.indexOf('[dice]') >= 0)
+
+
+	if (isTagged) {
+    diceRoller = new DiceRoller(diceResults)
+    diceRoller.initDiceBoxes()
+	}
+</script>
+<!-- Dice Roller END -->
+
+<!-- Dice Roller Form BEGIN -->
+<script type="text/javascript">
+ $(function(){ $('#dice-form').prependTo($('#tags'));});
+</script>
+<form id="dice-form" class="hidden container" autocomplete="off">
+	<div>
+    <label><span>#Кубиков</span>	<input type="text" name="count" maxlength="3" value="1"></label>
+    <label><span>#Граней</span>    <input type="text" name="sides" maxlength="3" value="100"></label>
+    <label><span>Бонус</span>    <input type="text" name="bonus" maxlength="3" value="0"></label>
+	</div>
+	<div>
+    <label><span>Действие</span>    <textarea name="reason" cols="10" rows="5"></textarea></label>
+	</div>
+	<button type="submit">Вставить</button>
+</form>
+
+<script>
+	replyForm = document.getElementById('post')
+	diceForm = document.getElementById('dice-form')
+	diceButtonString = '<td id="button-dice" title="Форма Кубиков" class="hidden"><img src="/i/blank.gif"></td>'
+
+	function handleDiceFormSubmit(event) {
+    event.preventDefault()
+    let tagArguments = []
+
+    for(let control of event.target.elements)
+    	if (control.tagName != 'BUTTON')
+        tagArguments.push(control.name + ' = ' + control.value)
+
+    replyForm['main-reply'].value += '\n[dice]' + tagArguments.join(' | ') + '[/dice]'
+	}
+
+	function handleDiceButtonClick(event) {
+    diceForm.classList.toggle('hidden')
+	}
+
+
+	if (replyForm != null) {
+    replyForm.querySelector('.fs-box.hashelp').insertAdjacentElement('beforeend', diceForm)
+    diceForm.addEventListener('submit', handleDiceFormSubmit)
+
+    let row = replyForm.querySelector('#form-buttons tr')
+    	row.innerHTML += diceButtonString
+
+    let diceButton = document.getElementById('button-dice')
+    	diceButton.classList.remove('hidden')
+    	diceButton.addEventListener('click', handleDiceButtonClick)
+	}
+</script>
+<!-- Dice Roller Form END --></div>
+
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх">▲</div>
+<div class="go-down" id='OnBottom' title="вниз">▼</div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
 </script>
 
 
@@ -75,10 +378,8 @@ UniverСhange("li#navlogin","Войти","вход");
 UniverСhange("li#navpm","Сообщения","Почта"); 
 UniverСhange("li#navadmin","Администрирование","Амс"); 
 
-UniverСhange('.pa-posts','Сообщений:','<i class="fa-solid fa-message" title="Сообщений"></i>'); 
-UniverСhange('.pa-respect','Уважение</a>:','<i class="fa-solid fa-star"></i></a>'); 
-UniverСhange('.pa-respect','Уважение:','<i class="fa-solid fa-star""></i>'); 
-UniverСhange('.pa-fld5','посты:','<i class="fa-solid fa-feather" title="Посты"></i>'); 
+UniverСhange('.pa-posts','Сообщений:','<i class="fa-solid fa-envelope" title="Сообщений"></i>'); 
+UniverСhange('.pa-fld5','постов:','<i class="fa-solid fa-feather" title="Посты"></i>'); 
 </script>
 
 
@@ -101,8 +402,371 @@ $( "<q>семь Нельзя прожить свою жизнь для друг�
 });
   </script>
 
+<!--Плеер-->
+<script>
+(() => {
+    const selector = '.playerNode';
+    const targets = document.querySelectorAll(selector);
+targets.forEach((target) => {
+    const tracks = target.dataset.tracks?.split('<>').filter(Boolean);
+    const audio = document.createElement('audio');
+    audio.src = tracks[0];
+    let index = 0;
+    const getNext = () => {
+        index = (tracks.length - index + 1) % tracks.length;
+        return index;
+    };
+    audio.addEventListener('ended',function(){
+        audio.src = tracks[getNext()];
+        audio.pause();
+        audio.load();
+        audio.play();
+    });
+    
+    audio.addEventListener('timeupdate', function(){
+        const part = audio.currentTime / audio.duration || 0;
+         track.querySelector('.thumb').style.left = (part * 100).toFixed(2) + '%';
+    });
+    const play = document.createElement('button');
+    play.classList.add('play-pause');
+    play.classList.add('paused');
+    play.addEventListener('click', () => {
+        if(play.classList.contains('paused')){
+            audio.play();
+            play.classList.remove('paused');
+        } else {
+            audio.pause();
+            play.classList.add('paused');
+        }
+    })
+    const track = document.createElement('div');
+    const thumb = document.createElement('div');
+    track.classList.add('track');
+    thumb.classList.add('thumb');
+    track.append(thumb);
+    track.addEventListener('click', (evt) => {
+         const part = evt.offsetX / track.offsetWidth;
+         audio.currentTime = part * audio.duration;
+         thumb.style.left = (part * 100).toFixed(2) + '%';
+    })
+    
+    const volume = document.createElement('div');
+    const volumeThumb = document.createElement('div');
+    volumeThumb.classList.add('thumb');
+    volume.classList.add('volume');
+    volume.append(volumeThumb);
+    volumeThumb.style.left = 'calc(100% - 8px)';
+    volume.addEventListener('click', (evt) => {
+         const part = evt.offsetX / volume.offsetWidth;
+         audio.volume = part.toFixed(2);
+         volumeThumb.style.left = (part * 100).toFixed(2) + '%';
+    });
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('player-wrapper');
+    wrapper.append(audio, play, track, volume);
+    target.append(wrapper);
+})
+})();
+</script>
+
+
+<!-- Анкета: Добавка кнопок BB-тегов к textarea -->
+<style>
+.new[id=form-buttons] td {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+</style>
+<script type="text/javascript">
+ if(GroupID != 3)$(function() {var button_tbl = $('#post #form-buttons').clone().addClass('new');
+  button_tbl.find('#button-image>img')[0].setAttribute('onclick','bbcode(\'['+'img]\',\'[/img]\')');
+  button_tbl.find('td:not(#button-bold):not(#button-italic):not(#button-underline):not(#button-image):not(#button-strike):not(#button-left):not(#button-center):not(#button-right):not(#button-link):not(#button-spoiler):not(#button-hide):not(#button-code):not(#button-color)').remove();
+  button_tbl.insertBefore('.questionary-post textarea');
+    $('.new[id="form-buttons"]').on('mouseenter',function() {
+    var area = $(this).next('textarea');if(!area.length){area = $(this).next().find('textarea');}
+    $('.questionary-post').find('textarea').removeAttr('id');
+    if(area[0].id!='main-reply')area.attr('id','main-reply');
+     }).on('mouseleave',function(){$('.questionary-post textarea').removeAttr('id');});
+  });
+</script>
+
+<!--Всплывающие Подсказки при наведении-->
+<style>
+#tooltip {
+  position: absolute;
+  background: #000;
+  z-index: 9999;
+  max-width: 180px;
+  border: none;
+  border-radius: 2px;
+  font-family: roboto; /* шрифт */
+  font-size: 11px; /* размер текста */
+  display: none;
+  color: #b1b1a9; /* цвет текста */
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+</style>
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26671.js"></script>
+<!--//End//-Всплывающие Подсказки при наведении-->
+
+
+<!-- Аватар для гостя и по умолчанию / Deff, Alex_63 
+mod by ForumD.ru  -->
+    <script type="text/javascript">
+    var DefAvtr = 'https://forumupload.ru/uploads/001b/5e/12/2/650167.png'; //Ссылка на аватар по умолчанию
+    var GuestAvtr = 'https://forumupload.ru/uploads/001b/5e/12/2/650167.png'; //Ссылка на аватар для Гостя
+
+   $('#pun-viewtopic,#pun-messages').find('.pa-title').each(function(){
+      var b = DefAvtr;
+      if($(this).text()=='Гость'){b = GuestAvtr;}
+      var s='<li class="pa-avatar item2"><img class="defavtr" src="'+b+'" alt="Аватар"/></li>';
+      if($(this).parent().find('.pa-avatar').html()==null)$(this).after(s);
+    });
+    $('#profile-left strong:contains("Нет аватара")')
+    .parent().html('<div><img src="'+DefAvtr+'"/></div>');
+    </script>
+<!-- Конец -->
+
+
+
+
+
+
+
+<!--Выделение кода в блоке "Код" с перемещение в буфер обмена // © Damassk, версия 2019г. --> 
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'выделить [копируется сразу]' //текст ссылки</script>
+<!-- конец -->
+
+
+<!-- Восстановление последнего поста при утере by Человек-Шаман -->
+<script>
+$(document).ready(function() {
+  $('#addition-area').append(function() {
+    return $('<div>Восстановить последний пост</div>').click(restoreLastPost);
+  });
+  function restoreLastPost() {
+    $('#main-reply').val(localStorage.ReservePost);
+  };
+});
+</script>
+<!--конец-->
+
+
+
+
+<!--написано символов-->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+<!--конец -->
+
+
+<!-- Разделение тем: "Важные темы" и "Темы форума" // © Alex_63 -->
+    <style>
+    #pun-main .forum table{ table-layout: auto;}
+    #pun-main tr.tr-divider {
+      font-weight: bold;
+    }
+    </style>
+    <script type="text/javascript">if($('#pun-viewforum').length){$('tr[class$="isticky"]:first').before('<tr class="tr-divider imp"><td class="td-divider" colspan="4">Важные темы</td></tr>');$('tr[class$="isticky"]:last').next('tr').before('<tr class="tr-divider st"><td class="td-divider" colspan="4">Темы форума</td></tr>');$('.stickytext').remove()}</script>
+    <!-- //End//-Разделение тем -->
+
+
+<!--Переключение раскладки выделенного текста -->
+<style>#button-transL{background-image:url(https://uploads.ru/i/X/j/Z/XjZW7.png)}</style>
+<script type="text/javascript">S='<img src="https://forum.mybb.ru/i/blank.gif" title="Lat- Русс" onclick="bbcode(\'[Lat-Rus]\',\'[/Rus-Lat]\');LatRus();"/>';
+$("#button-font").after('<td id=button-transL>'+S+'</td>');var TxtTrans1='lat';
+function LatRus(){if(TxtTrans1=='lat'){TxtTrans1='rus'}else{TxtTrans1='lat'};
+lat0='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~[].'.split('');
+lat='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~'.split('');
+lat.push('\\[');lat.push('\\]');lat.push('\\.');
+rus=('йцукенгшщзфывапролджэячсмитьбЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёЁхъю').split('');
+function transF(p){ar1=lat;ar2=rus;if(TxtTrans1=='lat'){ar2=lat0;ar1=rus}for(var i=0; i<ar1.length; i++){trans='/'+ar1[i]+'/g';p=p.replace(eval(trans), ar2[i])}return p;}L=$('#main-reply').val();L=L.replace(/\[Lat-Rus\]([\s\S]*)\[\/Rus-Lat\]/mg,function(a,b,c){return transF(b);});$('#main-reply').val(L);}
+</script>
+<!-- Конец -->
+
+
+<!--------------------------- Кнопка: Свернуть спойлер ------------------------------------>
+
+<script type="text/javascript">
+function clickSP(i) {setTimeout("$('#spoiler"+i+"').click()",100);}
+$('.quote-box.spoiler-box > div').each(function(i) {
+$(this).attr('id','spoiler'+i).append('<a name="220_'+i+'" style="position:absolute;margin-top:-200px"></a>');
+$(this).next('blockquote').append('<a href="#220_'+i+'" onclick="clickSP('+i+')" style="float:right">Свернуть спойлер</a>');
+});
+</script>
+<!--- конец --->
+
+
+
+
+<!-- Кликабельность ника в постах Гостя -->
+<script>$(".post[data-group-id=3]").find(".pa-author").html(function(){return this.innerHTML.replace(/(<.+>)(.+)$/,'$1<a href="javascript:to(\'$2\')">$2</a>')});</script>
+<!-- Конец -->
+
+
+<!-- запятая после ника -->
+<script type="text/javascript">
+function to(username)
+{insert('[b]' + username + '[/b]' + ', ');}
+</script>
+<!--конец-->
+
+
+<!-- Разделение ников пользователей в теме запятой -->
+<script>$('#topic-users-in a').prev('a').after(',');</script>
+<!--конец-->
+
+
 
 <!--Отключить функцию "Поделиться"-->
 <script type="text/javascript">
 RusffCore.sets.share = false;
 </script>
+
+
+<!--Всплывающие Подсказки при наведении-->
+<script type="text/javascript" src="https://forumstatic.ru/files/001b/2c/35/26675.js" data-old="https://forumstatic.ru/files/0015/c4/3f/26671.js"></script>
+<!--//End//-Всплывающие Подсказки при наведении-->
+
+
+
+
+<!--Отключить функцию "Поделиться"-->
+<script type="text/javascript">
+RusffCore.sets.share = false;
+</script>
+
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+hvScriptSet.addMask({
+    guestAccess: ['FORGOTTEN', 'IMPASSE', 'NOTHING', 'СЕЙЧАС И НЫНЕ', 'БЕЗВРЕМЕНЬЕ',  'АРКА 1. ДА БУДЕТ ПЛАМЯ',   'Закрытые эпизоды'],
+    forumAccessExtended: {
+        'СЕЙЧАС И НЫНЕ': ['Пользователи'],
+        'БЕЗВРЕМЕНЬЕ': ['Пользователи'],
+        'ЕЩЕ НЕ НАПИСАННО': ['Пользователи'],
+        'НЕВОЗМОЖНОЕ': ['Пользователи'],
+        'EVERYDAYNESS': ['Пользователи'],
+        'IMAGINATION': ['Пользователи'],
+        'FORGOTTEN': ['Пользователи'],
+        'MANIFESTATION': ['Пользователи']
+    },
+    changeList: {
+        'pafld1': {
+            title: 'значок',
+            description: '',
+            tag: 'zn',
+            class: 'pa-fld4',
+            defaultCode: '<img src="сюда изображение">',
+            type: 'html'
+        },
+        'pafld2': {
+            title: 'лз',
+            description: '',
+            tag: 'lzv',
+            class: 'pa-fld2',
+            defaultCode: '<div class="lzname"> <a href="ссылка на анкету">Имя персонажа</a>, возраст</div> <div class="lzclan"><a href="ссылка на клан">клан</a></div> <div class="lzinfo">Свободный текст лз <a href="ссылка на видео\песню">название</a></div> <div class="lzsoc">соц положение</div>',
+            type: 'html'
+        }
+    },
+    userFields: ['pa-fld4', 'pa-author', 'pa-title', 'pa-avatar', 'pa-fld2', 'pa-fld3', 'pa-posts', 'pa-respect', 'pa-online']
+});
+</script>
+
+
+
+
+<!--Отключить кнопку "Вложения"-->
+<script type="text/javascript">
+RusffCore.sets.files.button = false;
+</script>
+
+<!-- Отключение сокращения ссылки-->
+<script type="text/javascript">
+FORUM.set("editor.link.short_url", function() { return false; });
+</script>
+
+<script>
+RusffCore.sets.graffiti = false; /*Граффити*/
+</script>
+
+
+
+
+
+
+<div id="character" class="reveal-modal xlarge main container">
+<div class='modal_wrap'></div>
+<a class="close-reveal-modal">×</a>
+</div>
+
+<script type="text/javascript">
+function showTab(elem){
+    $(".menu span").removeClass("tabactive");
+    $(elem).addClass("tabactive");
+    $("div.submenutext").hide();
+    var activeDiv = $(elem).attr("alt");
+    $("div."+activeDiv).fadeIn();
+    return false;
+}
+$(".modal-link").click(function() {
+        var modId = $(this).attr('id');
+$('.modal_wrap').html('');
+$.get('pages/'+modId, function (data){
+    $('.modal_wrap').html($(data).find('.character').html());
+});
+$(".submenutext").hide();
+$(".submenutext:first").show();
+});
+</script>
+
+<!-- Регулировка размера шрифта в постах © Alex_63 -->
+<style>
+.FNTslider {
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    background: #878b8d33;
+    border: 1px solid #08070830;
+    width: 110px;
+    height: 5.5px;
+    margin: 3px 5px;
+    float: right;
+    margin-top: 5px;
+    margin-left: 120px;
+}
+.FNTslider .before {
+   border-radius: 5px;
+    height: 5.5px;
+    position: absolute;
+    background: #747171;
+    margin-top: -1px;
+    margin-left: -1px;
+    border: 1px solid #08070838;
+}
+.FNTslider .thumb {
+    width: 5.5px;
+    height: 5.5px;
+    position: relative;
+    border: 1px solid #08070838;
+    background: #4b4848;
+    margin-left: -1px;
+}
+</style>
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+<!-- Конец -->
+
+
+<!--Баннеры-->
+<div id="counters" class="banners">
+<a href="https://ameno.rusff.me/" target="_blank"><img src="https://i.imgur.com/MvoeNwX.jpg" alt="ameno"></a>
+<a href="https://magia-frpg.ru/" target="_blank"><img src="https://forumupload.ru/uploads/001a/fa/19/2/153026.gif" title="MAGIA" border="0" width="88" height="31"></a>
+<a href="http://intertwinedfate.rusff.me/" title="Genshin Impact: Intertwined Fate" target="_blank"><img src="https://i.imgur.com/fmGvDYo.gif" border="0" width="88" height="31"></a>
+<a href="http://parograd.f-rpg.me/post.php?fid=9" target="_blank"title="ПАРОГРАД"><img src="https://forumupload.ru/uploads/001b/ed/70/2/231531.gif"></a>
+<a href="https://cwnazare.mybb.ru" target="_blank"><img src="https://forumupload.ru/uploads/001a/f4/24/616/950110.gif" title="Коты-воители: На заре племен" border="0" width="88" height="31"></a> <a href="http://sayron.rolka.me/"><img src="https://forumstatic.ru/files/001c/33/49/89323.png" alt="Сайрон: Эпоха Рассвета"></a>
+
+</div>
