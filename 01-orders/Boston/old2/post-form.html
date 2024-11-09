@@ -1,0 +1,180 @@
+<!--доп.смайлы-->
+<div id="stikery">
+    <script type="text/javascript" src="https://static.staticsave.com/bostonforum/move.js"></script>
+     <input type="Button" value="Мувы" id="move#1" onclick = "hvStickerPack2.handleTdClick(event, 'https://static.staticsave.com/bostonforum/moves-list-full.txt')">
+    <script>
+      $(document).ready(function () {
+          debugger;
+        hvStickerPack2.init("");
+      });
+    </script>
+    </div>
+    
+    
+    <script>
+    function showhide(b){
+    id=b.id;
+    table = document.getElementById('list-'+id);
+    
+    if (b.className == "active") {
+    b.classList.remove("active");
+    table.style.display="none";}
+    else {
+    allp = b.parentNode.getElementsByTagName("table");
+    alli = b.parentNode.getElementsByTagName("input");
+    
+    for (var i = 0; i < allp.length; i++) {
+     allp[i].style.display="none";
+     }
+     for (var i = 0; i < alli.length; i++) {
+     alli[i].classList.remove("active");
+     }
+    b.classList.add("active");
+    table.style.display="block";}
+    }
+    </script>
+    
+    
+    <span class="item1" style="padding-left:0"><script type="text/javascript">
+    RusffCore.sets.share = false;
+    RusffCore.init();
+    </script>
+     
+     <!-- BB-цитатa (NEW) --><script>
+     var BBQuote = {};
+     BBQuote.mode= 1; // BB-цитирование: 0 - по стандартной кнопке цитаты, 1 - со вставкой новой кнопки;
+     BBQuote.text= 'BB-цитата'; // Надпись на кнопке BB-цитирования
+     </script>
+     <script type="text/javascript" src="//forumstatic.ru/files/0015/c4/3f/62091.js"></script>
+    
+    <style>
+     #button-smile {
+    display:none !important;
+     }
+    </style>
+    
+    <!--Кубики-->
+    <input type="button" class="button-dice" onclick="dice()" value="Кинуть Дайс" />
+    <script type="text/javascript"> 
+     
+    function unhtml(s)
+    { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+     
+    function numword(s,one,two,many)
+    { return(((s%100>=10 && s%100<=20) || s%10>=5) ? many : 
+     (s%10==1 ? one : two)); }
+     
+    function dice()
+    {
+     var FoundErrors = '';
+     var diceRes=""
+     var CountCube = prompt("Количество кубиков", "1");
+     if(CountCube>100 || CountCube<=0) {
+     alert("Нельзя бросать столько кубиков"); return false;}
+     var SideCube = prompt("Сколько граней у кубика?", "10");
+     if(SideCube>1000 || SideCube<=0){
+     alert("Не бывает таких кубиков");return false;}
+     var BonusCube = parseInt(prompt("Какой бонус прибавляем?", "+0"));
+     var ReasonCube = unhtml(prompt("По какому поводу бросок?", "").
+     replace(/\s+/g," ").replace("]"," "));
+     
+     for(i=0; i<CountCube;i++)
+     {
+     var dice = (Math.round(Math.random()*SideCube));
+     if(dice==0) dice=1;
+     diceRes += dice*1936+"-";
+     }
+     smile('[dice='+diceRes+CountCube+':'+SideCube+
+     ':'+BonusCube+':'+ReasonCube+']');
+    }
+     
+    function addDice(post,from,internal)
+    {
+     var str=post.innerHTML, num=-1, date=-1, a, fCanRandomise=0, u=""; 
+     while(post=post.parentNode) 
+     if(post.className=="container")
+    if(post=post.parentNode)
+    {
+     if(a=post.innerHTML.match(
+     /class[^<>]+permalink[^<>]+#p(\d+)[^<>]*>[^<>]*(\d+):(\d+):(\d+)[^<>]*<\/a>/i))
+    { num=a[1]; date=a[4]; 
+     fCanRandomise=1; break; }
+    }
+     
+     var ran=parseInt(num+date);
+     return str.replace(
+     /\[dice=((?:\d+-)*)(?:(\d)(\d+)|(\d+)(:)(\d+)(?::(-?\d+):([^\]]*))?)]/g,
+     function(a,dice,diceC,diceS,adieC,fNewScheme,adieS,adieB,adieR) 
+     {
+     diceC=parseInt(fNewScheme ? adieC : diceC);
+     diceS=parseInt(fNewScheme ? adieS : diceS);
+     adieB=parseInt(adieB ? adieB : 0);
+     if(adieB>0) adieB='+'+adieB;
+     if(!fCanRandomise && fNewScheme)
+    return '<div class="quote-box"><blockquote><p><b>СБОЙ ДАЙСОМЕТАЛКИ - СООБЩИТЕ МАСТЕРАМ</b></p></blockquote></div> ';
+     
+     var i,diceR=0,
+     s='<div class="quote-box"><blockquote '+ 
+     'style="text-align:left"><p>'+
+     '<b>Игрок кинул '
+     +diceC+numword(diceC,' куб с ',' куба с ',' кубов с ')
+     +diceS+numword(diceS,' гранью',' гранями',' гранями')
+     +(adieB ? (adieB>0 ? ' и бонусом ' : ' и пенальти ')+adieB : '')+
+     (adieR ? ', моделируя событие:</b><br><i>'+adieR+'</i><b>' : '')
+     +'<br /><br />Результаты броска '+
+     (fNewScheme ? '' : '(старая схема)')+'</b>: (';
+     
+     dice=dice.split("-"); 
+     for(i=0; i<dice.length-1; ++i)
+     {
+     var d=parseInt(dice[i]/1936); 
+     date=((date>>1)+((date&1)<<21))&0x3fffff;
+     num=((num>>1)+((num&1)<<22))&0x7fffff;
+     if(fNewScheme) d=(ran=(((ran>>1)+(((ran&1) ? 0 : 1)<<23)+d+date)^num)&0xffffff)%diceS +1;
+     diceR+=d;
+     s+= (i?' + ':'') + d;
+     } 
+     
+     if(adieB) diceR+=parseInt(adieB);
+     return(s+ (adieB ? ')'+adieB : ')')+ 
+     '=' + diceR + '</p></blockquote></div>');
+     });
+    }
+    if(document.URL.indexOf("viewtopic.php")!=-1)
+    {
+     elm=document.getElementById("pun-main").getElementsByTagName("div");
+     for(x=0; x<elm.length; ++x) 
+     if(elm[x].className=="post-content")
+    elm[x].innerHTML=addDice(elm[x]); 
+    }
+    </script>
+    <!--ENDкубиков-->
+    
+    <!--Переключение раскладки выделенного текста-->
+    <script type="text/javascript">S='<img src="//forum.mybb.ru/i/blank.gif" title="Lat↔ Русс" onclick="bbcode(\'[Lat-Rus]\',\'[/Rus-Lat]\');LatRus();"/>';
+    $("#button-font").after('<td id=button-transL>'+S+'</td>');var TxtTrans1='lat';
+    function LatRus(){if(TxtTrans1=='lat'){TxtTrans1='rus'}else{TxtTrans1='lat'};
+    lat0='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~[].'.split('');
+    lat='qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~'.split('');
+    lat.push('\\[');lat.push('\\]');lat.push('\\.');
+    rus=('йцукенгшщзфывапролджэячсмитьбЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёЁхъю').split('');
+    function transF(p){ar1=lat;ar2=rus;if(TxtTrans1=='lat'){ar2=lat0;ar1=rus}for(var i=0; i<ar1.length; i++){trans='/'+ar1[i]+'/g';p=p.replace(eval(trans), ar2[i])}return p;}L=$('#main-reply').val();L=L.replace(/\[Lat-Rus\]([\s\S]*)\[\/Rus-Lat\]/mg,function(a,b,c){return transF(b);});$('#main-reply').val(L);}
+    </script>
+    
+    <!-- Восстановить последний отправленный пост -->
+    <script src="//forumstatic.ru/files/0016/a4/af/77386.js"></script>
+    <!-- Восстановить последний отправленный пост -->
+    
+    <!-- Скрываем профиль в постах © Deff -->
+    <script type="text/javascript">
+    if(GroupID<3)FORUM.set('editor.addition.tags.hide_provil', {name:'скрытие Профиля',onclick:function(){smile('[im'+'g=hide-autor]//is.gd/ekiTPp['+'/img]');}});
+    $().pun_mainReady(function() {
+    function addStyle() { /*==123==;
+    <style type="text/css">#### .post-author,#### .post-sig,#### .pl-email,#### .pl-website{display:none !important}#### .post-body,#### .post-links,#### .post-links ul,#### h3>span{margin-left:0 !important}</style>
+    ==123==;*/
+    } addStyle = addStyle.toString().split('==123==;')[1];
+    $('.post .post-content img[alt="hide-autor"]').each(function(){
+    var id = $(this).parents('.post').prop('id');
+    $(addStyle.replace(/####/gim,'#'+id)).insertBefore($(this));
+    });});
+    </script>

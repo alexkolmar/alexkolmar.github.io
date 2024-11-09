@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('CenturyGothic-Bold.eot');
+    src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('CenturyGothic.eot');
+    src: local('Century Gothic'), local('CenturyGothic'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Century_Gothic/CenturyGothic.svg#CenturyGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

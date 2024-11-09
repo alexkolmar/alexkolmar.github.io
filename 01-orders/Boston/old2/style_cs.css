@@ -4951,7 +4951,7 @@ height: 120px;
 -------------------------------------------------------------*/
 
 html .hvStickerPackModalContainer {
-  z-index: 160;
+  z-index: 200;
 }
 
 html .hvStickerPackModal {

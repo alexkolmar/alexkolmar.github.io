@@ -157,7 +157,8 @@ em {
 .post_reputation,
 #MyBookmarks,
 .inner.popup_graffiti,
-.pun-modal .modal-inner {
+.pun-modal .modal-inner,
+.punbb-admin #pun-admin-award-form .inner {
   background: var(--sec-bg);
 }
 

@@ -4,8 +4,8 @@
   $(this).find('.pa-author, .pa-title').wrapAll("<div class='pa-top'>");
   $(this).find('.pa-posts, .pa-respect, .pa-fld2, .pa-fld5').wrapAll('<div class="pa-bottom">');
   });
-  $('#pun-status').each(function () {
-   $(this).find('.item1, .item2, .item3, .item4').wrapAll('<div class="status_wrap">');
+  $('.post-box').each(function(){
+  $(this).find('.post-rating, .post-vote').wrapAll('<div class="rate_post">');
   });
   $('.pa-last-visit').wrap('<div class="pa-offline">');
   $(document).ready(function() {
@@ -13,21 +13,28 @@
   });
   </script>
   
-  
-  <! -- стиль для липкой навигации --> 
-  <script type="text/javascript">
-  function myFunction() {
-    if (window.pageYOffset >= 435) {
-      $("#pun-navlinks, #pun-ulinks, #chfont").addClass("fixed");
-    } else {
-      $("#pun-navlinks, #pun-ulinks, #chfont").removeClass("fixed");
+    <! -- стиль для липкой навигации --> 
+    <script type="text/javascript">
+    function myFunction() {
+      if (window.innerWidth < 540) {
+        if (window.pageYOffset >= 290) {
+          $("#pun-navlinks, #pun-ulinks").addClass("fixed");
+        } else {
+          $("#pun-navlinks, #pun-ulinks").removeClass("fixed");
+        }
+      } else {
+        if (window.pageYOffset >= 435) {
+          $("#pun-navlinks, #pun-ulinks, #chfont").addClass("fixed");
+        } else {
+          $("#pun-navlinks, #pun-ulinks, #chfont").removeClass("fixed");
+        }
+      }
+    };
+    window.onscroll = function() {myFunction()};
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+      myFunction();
     }
-  };
-  window.onscroll = function() {myFunction()};
-  if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-      myFunction()
-  }
-  </script>
+    </script>
   
   
   <! -- скрипт навигации от духа --> 
@@ -35,8 +42,8 @@
   
   
   <!--Кнопки вверх вниз-->
-  <div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/001b/6e/a7/29490.png"></div>
-  <div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/001b/6e/a7/16127.png"></div>
+  <div class="go-up" id='ToTop'><img src="https://forumstatic.ru/files/001b/6e/a7/29490.png"></div>
+  <div class="go-down" id='OnBottom'><img src="https://forumstatic.ru/files/001b/6e/a7/16127.png"></div>
   <script type="text/javascript">
    $(function () {
     if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
@@ -252,7 +259,7 @@
   </script>
   
   <!-- Всплывающая таблица с вкладками, в топике, с инфой о персонаже -->
-  <script img-data="//sa.uploads.ru/SoT3N.png" src="https://forumstatic.ru/files/0013/44/56/57946.js" forum="52"></script>
+  <script img-data="//sa.uploads.ru/SoT3N.png" src="https://forumstatic.ru/files/0013/44/56/57946.js" forum="53"></script>
   <!--//End//Всплывающая таблица с вкладками, в топике, с инфой о персонаже// -->
   
   <!-- Включаем HTML в Постах в Вспл.табличке-->
@@ -420,7 +427,7 @@
   <!-- ЧТОБЫ НЕ ПРОПАДАЛИ ПОСТЫ V.2-->
   <script src="//hostjs-mybb2011.narod.ru/js/functio_Cookie33.js"></script>
   <script>
-   var Knopa2 = '<span style="position:absolute;right:0px;top:-25px;z-index:200;cursor:pointer;"><img id="Knopa2-2" src="https://forumstatic.ru/files/001b/50/4c/12191.svg" title="Вставка запомненного при последней Отправке"/></span>'; if (getCookie33('main-reply')) { $("#main-reply").before(Knopa2); }
+   var Knopa2 = '<span style="position:absolute;right:0px;top:-25px;z-index:200;cursor:pointer;"><i class="fa-regular fa-file-import" id="Knopa2-2" title="Вставка запомненного при последней Отправке"></i></span>'; if (getCookie33('main-reply')) { $("#main-reply").before(Knopa2); }
    $(".formsubmit input[type='submit']").click(function () {
     var Ll = $("#main-reply").val(); Ll = Ll.substring(0, 1000); setCookie33('main-reply', Ll, 8 * 60 * 1000);
    });

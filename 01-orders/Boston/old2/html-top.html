@@ -1,0 +1,505 @@
+<!-- Профилактика -->
+<div id="resplash" style="display: none;">
+    <div class='formal'
+      style='height:200px; width:200px; margin:auto; margin-top:200px; font-family:tahoma; font-size:10px;'>
+      <form id='login' class='container' method='post' action='login.php?action=in' onsubmit='return my_form(this)'>
+        <fieldset><span>Форум на профилактике</span>
+          <div class='fs-box inline'> <input type='hidden' name='form_sent' value='0' /><input type='hidden'
+              name='redirect_url' value='/' />
+            <p class='inputfield required'> <label for='fld1'>Имя <em>(Обязательно)</em></label><br /> <span
+                class='input'> <input type='text' id='fld1' name='req_username' size='25' maxlength='25' /></span></p>
+            <p class='inputfield required'> <label for='fld2'>Пароль <em>(Обязательно)</em></label><br /> <span
+                class='input'> <input type='password' id='fld2' name='req_password' size='25' maxlength='25' /></span></p>
+          </div>
+        </fieldset>
+        <center>
+          <p class='formsubmit'> <input type='submit' class='button' id='customebutton' name='login'
+              value='Войти как Администратор' /></p>
+        </center>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+        var active = 1; //Cвитч включения: 1 — включено!; 0 — выключено
+      if (GroupID != 1 && active == 1) {
+          e10 = document.createElement('div')
+          e10.innerHTML = document.getElementById("resplash").innerHTML;
+          document.getElementsByTagName('body')[0].insertBefore(e10, document.getElementById('pun_wrap'))
+          document.write("<style type=\"text/css\">html, body {background: #fff;} #customebutton {margin: auto;} #pun {display: none;}</style>");
+          document.title = 'Мы обязательно вернемся. следите за нами в вк https://vk.com/tabloid_horror - ' + document.title;
+      }
+  </script>
+  <!-- Cчётчик Игровых постов -->
+  <script type="text/javascript">
+    /*delete localStorage.alertsAMS_onCountCode;*/
+    /***************************
+            Настройки!
+    ***************************/
+    FORUM._NUMpa_fld = 3;		// Номер.Доп.поля,
+    FORUM._color_fld = "var(--accent3)";	// Цвет шрифта,
+    FORUM.includeFirstPost = 0;	// 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
+    FORUM.AddOrSlash = 0;		// 0 - Поле отдельно, 1 - через слеш c общ. числом сообщений,
+    FORUM.Number_winners = [7, [2, 31, 18]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
+    FORUM.Subscription_Code = "226e9e0530bdf3c4e4945779a39964a665c4c8c6";	//Код подписки!!;
+  
+    function ad_() {/*!~!FORUM.ForArrAy = {
+         //Форум  //Темы (включаемые, или исключаемые)
+         f18	:+[743],	//Тестовая тема...
+         f17	:-[0],  //Все темы(без исключений)
+         f14	:-[0],  //Все темы(без исключений)
+         f15	:-[0],  //Все темы(без исключений)
+         f16	:-[0]	//Все темы(без исключений)//Последний элемент без запятой!
+         }
+         !~!*/} ad_ = ad_.toString().split('!~!')[1];//alert(ad_);
+  </script>
+  <script type="text/javascript" src="//forumstatic.ru/files/0013/44/56/77707.js"></script>
+  <!-- END//Cчётчик Игровых постов -->
+  
+  <div id="header_wrapper">
+  <div class="header-nohover"></div>
+  <div class="header-hover">
+  <div class="persons_wrap">
+  <div class="persons"><span>активисты</span>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=915" title="Ashley Parker"><div><img src="https://forumupload.ru/uploads/000f/09/5e/1018/888995.png"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=858" title="Adrian Prince"><div><img src="https://i.imgur.com/ux8G3wL.jpeg"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=837" title="Sebastian Renfield"><div><img src="https://i.imgur.com/4zPqQAf.jpeg"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=1037" title="Jackie Cox"><div><img src="https://forumupload.ru/uploads/000f/09/5e/1018/217283.png"></div></a>
+  
+  </div>
+  <div class="persons"><span>постописцы</span>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=1007" title="Rachel Marx"><div><img src="https://forumupload.ru/uploads/000f/09/5e/1018/563944.png"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=781" title="Maeve Silver"><div><img src="https://i.imgur.com/al8XErk.png"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=701" title="Hollyday Parker"><div><img src="https://forumupload.ru/uploads/001a/e7/a4/781/976031.jpg"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=1018" title="Harvey Murdock"><div><img src="https://forumupload.ru/uploads/000f/09/5e/1018/400740.png"></div></a>
+  
+  </div>
+  </div>
+  
+  <div class="ams_wrap">
+  <div class="ams"><span class="heading">Администрация</span>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=14"><span class="tooltip">Charlotte<em>Куба<br>Сначала весело, а потом расстрел.</em></span></a> • 
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=77"><span class="tooltip">Astrid<em>Швейцария<br>Вежливый нейтралитет со стеной щитов.</em></span></a> • 
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=750"><span class="tooltip">
+  Lisbeth<em>Германия<br>Любит порядок и чистоту.</em></span></a>
+  </div>
+  <div class="rpg-top">
+  <a href="https://rpgtop.su/26306" target="_blank" title="Рейтинг Ролевых Ресурсов - RPG TOP">RPG TOP</a>
+  <a href="https://sul.su/cGuY" target="_blank" title="RPG-HIT">RPG HIT</a>
+  </div>
+  </div>
+  
+  <!--Лучший пост-->
+  <div class="right_block">
+  <div class="right_block-item1">
+  <div class="bestpost">
+  <span class="heading">Пост недели от <a href="https://bostoncrazzy.rusff.me/profile.php?id=77">Astrid Ingram</a></span>
+  <div>
+  — Ты не должен был... Будить меня, — хрипло выдохнула Сиф, прижимаясь к его груди и слыша голос, который слышал и Лестер. Её гончая. Игрушка на службе у Смерти, — Будить чудовище, — она дышала часто и тяжело, слепо больше не видя совсем ничего, только чувствуя бьющееся сердце в его груди. Этот стук, так поразительно похожий на пульсацию самой души, сводил с ума. Еле подавляя желание впиться острыми когтями и клыками горгульи в плоть и вырвать, забрать себе эту душу, проглотить её как ужасающий волк Сколль должен пожрать Солнце.<a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2805&p=7#p584602">читать далее</a>
+  </div>
+  </div>
+  
+  <!--Лучший эпизод-->
+  <div class="best-ep">
+  <div class="persons">
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=16" title="Kang Soo Jin"><div><img src="https://i.imgur.com/IHoFNon.jpg"></div></a>
+  <a href="https://bostoncrazzy.rusff.me/profile.php?id=756" title="Aiji"><div><img src="https://i.imgur.com/unui0zS.png"></div></a>
+  </div>
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=4254">Между верностью и смертью</a>
+  </div>
+  </div>
+  
+  <!--Новости-->
+  <div class="right_block-item2">
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=9&p=24#p587296"><div class="news_flag"><img src="https://i.imgur.com/YpY6m0L.png"><p>Новости</p><em>Бостонские</em></div></a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=4919#p587302"><div class="news_flag"><img src="http://images.vfl.ru/ii/1640193985/1a86d915/37225281.png"><p>Конкурс</p><em>Герои Бостона</em></div></a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=4909#p586491"><div class="news_flag"><img src="https://i.imgur.com/oQ4mDYj.png"><p>Котосенний-челлендж</p><em>ивент-календарь</em></div></a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=51"><div class="news_flag"><img src="https://i.imgur.com/PtcEMBx.png"><p>Хэллоуинские</p><em>подарки</em></div></a>
+  
+  <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=4878"><div class="news_flag"><img src="https://i3.imageban.ru/out/2021/01/01/bada824f94796e9f025c8ef37c72c984.png"><p>Конкурс</p><em>с участием AI</em></div></a>
+  
+  
+  <!--<a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3681"><div class="news_flag"><img src="https://i.imgur.com/Sgm9pXN.png"><p>Новые пазлы</p><em>от Эрика</em></div></a>
+  <a href="ссылка"><div class="news_flag"><img src="https://forumstatic.ru/files/001b/50/4c/41691.png"><p>Похоронная служба</p><em>удаления</em></div></a>
+  <a href="ссылка"><div class="news_flag"><img src="https://forumstatic.ru/files/001b/50/4c/41691.png"><p>Свидание</p><em>угадайка</em></div></a> -->
+  
+  </div>
+  </div>
+  
+  <div class="nav_wrap">
+           <div class="slide_button"><img src="https://forumstatic.ru/files/001b/50/4c/49554.svg"><span>навигация для гостей</span></div>
+  <!-- полезные ссылки -->
+           <div class="slide_block">
+              <div class="link">
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=38#p74">FAQ</a>
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=32#p50">о мире</a>
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=40">внешности</a>
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=41">персонажи</a>
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=32#p440907">сюжет</a>
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=12#p15">нужные</a>
+                 <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3190">гостевая</a>
+              </div>
+           </div>
+  <!-- полезные ссылки -->
+        </div>
+  
+  <div class="nav_wrap for-players">
+           <div class="slide_button"><img src="https://forumstatic.ru/files/001b/50/4c/49554.svg"><span>навигация для игроков</span></div>
+  <!-- полезные ссылки -->
+           <div class="slide_block">
+              <div class="link">
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2359">банк</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=273">ачивки</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=51">подарки</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2819">поиск игры</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2896">отношения</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2733">отсутствия</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3557">запись на сюжеты</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=66">завершение эпизода</a>
+            <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=23">графика</a>
+            <a href="https://bostoncrazzy.rusff.me/viewforum.php?id=19">игры на выживание</a>
+              </div>
+           </div>
+  <!-- полезные ссылки -->
+        </div>
+  
+  </div>
+  
+  <div class="header-music">
+                       <div class="music-container" onclick="toggleAudio()">
+                    <audio controls controlslist="nodownload" id="personal_track">
+                       <source src="https://forumstatic.ru/files/001a/e7/a4/40049.mp3" type="audio/mpeg">
+                       Your browser does not support the audio tag.
+                    </audio>
+                    <div class="play-button"></div>
+                 </div>
+     </div>
+  </div>
+  
+  <div class="header_mobile">
+  <div class="forum_logo">
+  <div class="forum_logo-item1">tabloid horror</div>
+  <div class="forum_logo-item2"></div>
+  </div>
+  </div>
+  
+  <ul id="stylelist"></ul>
+  
+  <div class="bg_decor"><div></div><div></div><div></div><d_line></d_line></div>
+  
+  <div class="forum_logo">
+  <div class="forum_logo-item1">tabloid horror</div>
+  <div class="forum_logo-item2"></div>
+  </div>
+  
+  <script>
+  pauseAudio = (event) => {
+      let audio = document.querySelector('#personal_track');
+      audio.pause();
+  }
+  
+  var isPlaying;
+  
+  toggleAudio = (event) => {
+  let audio = document.querySelector('#personal_track');
+  
+  var container = document.querySelector('.music-container');
+  var playButton = document.querySelector('.play-button');
+  
+      if (isPlaying) {
+          audio.pause()
+          isPlaying = false
+          playButton.classList.remove('playing')
+      } else {
+          audio.play()
+          isPlaying = true
+          playButton.classList.add('playing')
+      }
+  
+  }
+  </script>
+  
+  <!-- Смена стиля, (с) ForumD.ru, satsana-->
+  <script type="text/javascript">
+  var styleList = [{
+      class: 'day',
+      name: 'Дневной'
+  }, {
+      class: 'night',
+      name: 'Ночной'
+  }];
+  
+  function getCookie(a){return(a=document.cookie.match(new RegExp("(?:^|; )"+a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,"\\$1")+"=([^;]*)")))?decodeURIComponent(a[1]):void 0}function setStyle(a){$("body").attr("class",a);$("#stylelist li").removeClass("active");$('#stylelist li[data="'+a+'"]').addClass("active");selStyle=a;document.cookie="selStyle="+a+"; max-age=2592000"}var selStyle=getCookie("selStyle");selStyle&&setStyle(selStyle);
+  $(document).pun_mainReady(function(){$("#stylelist").length||$("body").prepend('<ul id="stylelist"></ul>');for(i=0;i<styleList.length;i++)$("#stylelist").append('<li data="'+styleList[i]["class"]+'"'+(selStyle==styleList[i]["class"]?' class="active"':"")+'><a href="/" onclick="setStyle($(this.parentNode).attr(\'data\'));return false">'+styleList[i].name+"</a></li>")});
+  </script> <!-- Смена стиля - END -->
+  
+  <!---------------------------- Пиар-вход ---------------------------->
+  <script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+  <script type="text/javascript">
+  PR.nick = 'PR'; //Ник PR-аккаунта
+  PR.pass = '1111'; //Пароль PR-аккаунта
+  PR.btn_text = 'PR'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+  PR.set();</script>
+  
+  <!--Скрипты-->
+  <!--// Быстроплюсы v.2 РЕНО by Deff //-->
+  <script type="text/javascript" src="https://forumstatic.ru/files/0012/d8/04/58219.js" addComment="1"></script>
+  
+  <script>$(function (){ 
+  $('#pun-stats li.item1, #pun-stats li.item2, #pun-stats li.item3, #pun-stats li.item4').wrapAll('<div class="ststitems"></div>');
+  });
+  </script>
+  
+  <!--Всплывающие Подсказки при наведении-->
+  <style>
+  #tooltip {
+    position: absolute;
+    background: rgba(0,0,0,.85);
+    z-index: 999;
+    max-width: 180px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 0px 1px rgba(0,0,0,.05) inset;
+    font-size: 10px; /* размер текста */
+    font-family: ibm plex sans;
+    display: none;
+    color: #d9d8d1; /* цвет текста */
+    text-align: center;
+    padding: 5px;
+    letter-spacing: .5px;
+    font-weight: 500;
+  }
+  </style>
+  <script type="text/javascript" src="https://forumstatic.ru/files/001a/fa/d0/26671.js"></script>
+  <!--//End//-Всплывающие Подсказки при наведении-->
+  
+  <!--выделить код. Alex_63 new.2019-->
+  <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+  <script>eval(select_text.toString().replace(/\}$/, 'try{document.execCommand("copy")}catch(e){}}'))</script>
+  <script type="text/javascript">select_text.linkText = 'Взять код' //текст ссылки</script>
+  <!-- конец -->
+  
+  
+  <!--Отключить кнопку "Вложения", пожаловаться-->
+  <script type="text/javascript">
+  RusffCore.sets.files.button = false;
+  RusffCore.sets.show_reportBtn = 0;
+  </script>
+  
+  <!-- Отключение сокращения ссылки-->
+  <script type="text/javascript">
+  FORUM.set("editor.link.short_url", function() { return false; });
+  </script>
+  
+  <script>
+  RusffCore.sets.graffiti = false; /*Граффити*/
+  </script>
+  
+  
+  <!-- Отключение реакций-->
+  <script>
+  ReactionsPlugin.setConfig({
+    disable: true
+  });
+  </script>
+  
+  <!-- Скрываем профиль в постах © Deff -->
+  <style>img[src*="is.gd/ekiTPp"]{ display:none}</style>
+  <style>img[alt*="hide-autor2"]{ display:none}</style>
+  <script type="text/javascript">
+  FORUM.set('editor.addition.tags.hide_provil', {name:'Cкрытие профиля',onclick:function(){smile('[im'+'g=hide-autor]https://is.gd/ekiTPp['+'/img]');}});
+  $().ready(function() {
+  function addStyle() { /*==123==;
+  <style type="text/css">#### .post-author,#### .post-sig,#### .pl-email,#### .pl-website{display:none !important}#### .post-body,#### .post-links,#### .post-links ul,#### h3>span{margin-left:0 !important}</style>
+  ==123==;*/
+  } addStyle = addStyle.toString().split('==123==;')[1];
+  $('.post .post-content img[alt="hide-autor"]').each(function(){
+     var id = $(this).parents('.post').prop('id');
+     $(addStyle.replace(/####/gim,'#'+id)).insertBefore($(this));
+  });});
+  </script>
+  
+  
+  <!-- html-верх - Cпойлер для cкрытия полей мини-профиля в топиках, (с) ForumD.ru, satsana, 2021 -->
+  <script type="text/javascript" src="https://forumstatic.ru/files/0017/b3/fc/83644.js"></script>
+  <script type="text/javascript">
+  // satMSP.vertical = 1; // вертикальный спойлер (кнопки расположены в столбик, вкладка открывается под кнопкой); по умолчанию кнопки расположены в одну строку над вкладками
+  satMSP.nofold = 1; // не закрывать открытые ранее вкладки при открытии новой; по умолчанию закрываются
+  //  satMSP.showtab = 2; // номер отображаемой при загрузке вкладки; по умолчанию все вкладки свёрнуты
+  //  satMSP.showbut = 1; // 1 - показывать все кнопки; по умолчанию копки пустых вкладок не отображаются
+  //  satMSP.speed = 600; // время сворачивания-разворачивания вкладок в мс (1 секунда = 1000мс), 0 - мгновенно, значение по умолчанию 400.
+    satMSP.fields = [
+      { // Список полей перед спойлером
+        flist: [
+  "pa-author",	// Ник
+  "pa-title",	// Статус
+  "pa-avatar",	// Аватар
+  "pa-fld1",	// Доп.поле1
+  "pa-fld4",	// Доп.поле4
+  "pa-fld6",	// Доп.поле5
+  "pa-fld3",	// Доп.поле3
+  "pa-sex",	// Пол
+  "pa-age",	// Возраст
+  "pa-from",	// Откуда
+  "pa-invites",	// Приглашений
+  "pa-posts",	// Сообщений
+  "pa-respect",	// Уважение
+  "pa-positive",	// Позитив
+  "pa-social",	// Контакты (скайп и т.п.)
+  "pa-reg",	// Зарегистрирован
+  "pa-time-visit",// Провёл на форуме
+  "pa-last-visit",// Последний визит
+  "pa-online",	// Онлайн
+  "pa-ip",	// IP
+  "pa-fld2",	// Доп.поле2
+  "pa-fld5",	// Доп.поле5
+        ""] // Конец списка полей перед спойлером
+      },
+      { // Третья вкладка
+        name: "Награды и подарки",
+        img: "",
+        flist: [
+  "award",	// Награды rusff
+  "gift",	// Подарки rusff
+        ""]
+      }, // Конец третьей вкладки
+      {} // Конец списка вкладок
+    ];
+  </script><!-- Cпойлер cкрытия полей мини-профиля - КОНЕЦ -->
+  
+  <!-- Регулятор вида и размера шрифта (с) satsana, forumd.ru -->
+  <div id="chfont" title="Шрифт в постах">
+  <div id="chfontbut"></div>
+  <select id="chfontfam" name="chfontfam">
+  <option value="0">по умолчанию</option>
+  <option value="'Book Antiqua', 'Palatino Linotype', Palatino, serif" style="font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif">Book Antiqua</option>
+  <option value="Georgia, serif" style="font-family: Georgia, serif">Georgia</option>
+  <option value="'Times New Roman', Times, serif" style="font-family: 'Times New Roman', Times, serif">Times New Roman</option>
+  <option value="'IBM Plex Sans', serif" style="font-family: 'IBM Plex Sans', serif">IBM Plex Sans</option>
+  <option value="'Arsenal', serif" style="font-family: 'Arsenal', serif">Arsenal</option>
+  </select>
+  <div id="chfontsize">
+  <div class="fsizeplus"></div>
+  <div class="fsize"></div>
+  <div class="fsizeminus"></div>
+  </div>
+  </div>
+  
+  <script type="text/javascript">
+  var chfsize,chffam;if(!localStorage.fontsize)localStorage.setItem("fontsize",13);if(!localStorage.fontfam)localStorage.setItem("fontfam","0");chfsize=+localStorage.getItem("fontsize");chffam=localStorage.getItem("fontfam");function setfsize(f){localStorage.setItem("fontsize",f);$(".fsize").text(f);$(".post-content p, textarea").css("font-size",f+"px")}
+  function setffam(f){localStorage.setItem("fontfam",f);$("#chfontfam option").removeAttr("selected");$('#chfontfam option[value="'+f+'"]').attr("selected","selected");if(f!="0")$(".post-content p").css("font-family",f);else $(".post-content p").css("font-family","")}$(".fsizeplus").on("click",function(){chfsize+=1;if(chfsize>72)chfsize=72;setfsize(chfsize)});$(".fsizeminus").on("click",function(){chfsize-=1;if(chfsize<6)chfsize=6;setfsize(chfsize)});$("#chfontbut").on("click",function(){$("#chfont").toggleClass("active")});
+  $("#chfontfam").on("change",function(){chffam=$(this).val();setffam(chffam)});$(document).pun_mainReady(function(){setfsize(chfsize);setffam(chffam)});
+  </script><!-- Регулятор вида и размера шрифта (с) satsana, forumd.ru (конец) -->
+  
+  <!-- МАСКА ПРОФИЛЯ-->
+  <script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+  <script>
+    hvScriptSet.addMask({
+      guestAccess: ['Group a waste', 'Archive'],
+      forumAccessExtended: {
+        'Chatterboxes are here': ['Игроки'],
+        'Present': ['Игроки', 'Постобаны'],
+        'Past': ['Игроки', 'Постобаны'],
+        'Alternative': ['Игроки', 'Постобаны'],
+        'Archive': ['Игроки', 'Постобаны'],
+        'Memories': ['Игроки', 'Постобаны'],
+        'Quest': ['Игроки', 'Постобаны'],
+        'Alternative memories': ['Игроки', 'Постобаны'],
+        'Forgotten stories': ['Игроки', 'Постобаны'],
+        'Group a waste': ['Игроки']
+      },
+      changeList: {
+        'pafld1': {
+          title: 'Личное звание',
+          description: '',
+          tag: 'zvn',
+          class: 'pa-fld4',
+          defaultCode: '<div class=lz><div class=name><a href=ссылка на анкету>ИМЯ ФАМИЛИЯ, 00 y.o.</a></div><div class=occ>Род деятельности</div><div class=about>Описание <a href=ссылка на профиль пары и т.п. target=_blank>имя пары или её описание</a>.</div></div>',
+          type: 'html'
+        }
+      },
+      userFields: ['pa-author', 'pa-avatar', 'pa-title', 'pa-fld1', 'pa-fld4', 'pa-fld3', 'pa-posts', 'pa-fld5', 'pa-respect', 'pa-fld2', 'pa-online', 'pa-awards']
+    });
+  </script>
+  
+  
+  <!-- * Новая Палитра © Deff * -->
+  <style>
+    body #post #color-area {
+      background-position: 0 !important;
+      background-size: 366px auto !important;
+      padding: 21px 30px 8px 30px !important;
+      width: 298px !important;
+    }
+  
+    #color-area table.Myp .rightMy input {
+      /*margin-left:54px*/
+    }
+  
+    #color-area table.Myp input {
+      z-index: 0 !important;
+    }
+  </style>
+  <script src="//forumstatic.ru/files/0010/b4/f8/74494.js"></script>
+  
+  <!--Смайлы-->
+  <script type="text/javascript" src="https://forumstatic.ru/files/001a/e7/a4/30177.js?v=6"></script>
+  <script>
+    $(document).ready(function () {
+      hvStickerPack.init("//forumstatic.ru/files/001a/e7/a4/57193.txt?v=11");
+    });
+  </script>
+  
+  <!-- Мгновенные уведомления © Alex_63, Deff 2019 -->
+  <link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/notifications.css" />
+  <script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/notifications.js"></script>
+  <script type="text/javascript">
+  notifications.token = '923c45e748d281ddb134b71752c64576d7be4332'; // Forum token
+  notifications.key = 'ckd530ajgsr7'; // Subscription key
+  RusffCore.sets.notifications = false;
+  </script>
+       
+  <!-- Мгновенные уведомления: подписки на форум/тему © Alex_63, 2019 -->
+  <script>notifications.load('subscriptions');</script>
+       
+  <!-- Мгновенные уведомления: новые посты из важных тем © Alex_63, 2019 -->
+  <script type="text/javascript">
+  notifications.load('common', {});
+  notifications.load('important', {topics: [9,568]}); // ID важных тем (через запятую)
+  </script>
+       
+  <!-- Мгновенные уведомления: комменты к репе для Rusff © Alex_63, 2019 -->
+  <script>notifications.load('reputation');</script>
+       
+  <!-- Мгновенные уведомления: упоминания © Alex_63, 2020 -->
+  <script>notifications.load('mentions');</script>
+  
+  <!-- Мгновенные уведомления: отправка в Telegram [beta] © Alex_63, 2024 -->
+  <script>notifications.load('tgbot')</script>
+  
+  <!--Скрытие профиля в теме тегом-->
+  <style type="text/css">
+    .hideprofile .post-author,
+    .hideprofile .pl-email,
+    .hideprofile .pl-website {
+      display: none !important
+    }
+  
+    .hideprofile .post-body,
+    .hideprofile .post-links,
+    .hideprofile .post-links ul,
+    .post.hideprofile h3>span {
+      margin-left: 0 !important
+    }
+  </style>
+  <script>
+    FORUM.set('editor.addition.tags.hideprofile', { name: 'Скрыть минипрофиль', onclick: function () { insert('[hideprofile]'); } });
+    $().pun_mainReady(function () { $('.post:contains("[hideprofile]")').addClass('hideprofile').html(function () { return $(this).html().replace(/\[hideprofile\]/gim, '') }) });
+  </script>
+  <!-- Конец -->
+  
+  <!-- Переключение мобильного стиля -->
+  <script src="https://static.staticsave.com/bostonforum/script-no-mobile.js"></script>
+  <span id="display_switch" onclick = "FORUM.mobile_switch()">SWITCH</span>

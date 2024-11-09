@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <div id="pun">
+  <div class="punbb">
+   <div id="pun-title"></div>
+
+   <div id="pun-announcement">
+    <div class="container">
+
+<div class="tablica">
+ <div class="newspart">
+  <div class="news news1">
+   <div class="news_inner news-big">
+
+   </div>
+  </div>
+  <div class="news news2">
+   <div class="news_inner news-small">
+
+   </div>
+  </div>
+ </div>
+ <div class="rightpart">
+  <div class="info-wanted">
+   <div class="wanted-item">
+    <a href="https://newadventure.rusff.me/viewtopic.php?id=21#p82946">
+     <img class="info-want-avatars" src="https://i.ibb.co/hs5GCbJ/image.jpg" title="Венти и Сяо ищут Чжун Ли">
+    </a>
+   </div>
+   <div class="wanted-item">
+    <a href="https://newadventure.rusff.me/viewtopic.php?pid=76566#p76566">
+     <img class="info-want-avatars" src="https://i.ibb.co/GvBjhgb/image.png" title="Мондштадт ищет Альбедо">
+    </a>
+   </div>
+   <div class="wanted-item">
+    <a href="https://newadventure.rusff.me/viewtopic.php?pid=77345#p77345">
+     <img class="info-want-avatars" src="https://i.ibb.co/PDHf8dN/image.png" title="Сайно ищет Сетоса">
+    </a>
+   </div>
+   <div class="wanted-item">
+    <a href="https://newadventure.rusff.me/viewtopic.php?id=21#p83063">
+     <img class="info-want-avatars" src="https://i.ibb.co/xYndp3X/image.jpg" title="Натлан ждет Оророна">
+    </a>
+   </div>
+  </div>
+  <nav class="nav">
+   <a href="" class="nav-item">гостевая</a>
+   <a href="" class="nav-item">сюжет</a>
+   <a href="" class="nav-item">правила</a>
+   <a href="" class="nav-item">квесты</a>
+   <a href="" class="nav-item">роли</a>
+   <a href="" class="nav-item">хронка</a>
+   <a href="" class="nav-item">амс</a>
+   <a href="" class="nav-item">магазин</a>
+  </nav>
+ </div>
+</div>
+
+    </div>
+   </div>
+
+   <!-- Ротатор постов из топика © ForumD.ru, Gerda -->
+   <script>
+    function fetchAndDisplayNews(newsContainer, newsLimit, newsId, newsRotator, showTime, fadeTime) {
+     $.getJSON('/api.php?method=post.get&topic_id=' + newsId + '&limit=' + newsLimit + '&sort_dir=desc&fields=message', function (data) {
+      var rotatorBlock = $(newsContainer);
+
+      if (data.response && data.response.length > 0) {
+       if (newsRotator === 0) {
+        var randomIndex = Math.floor(Math.random() * data.response.length);
+        var randomPost = data.response[randomIndex].message;
+        rotatorBlock.append('<div class="post-content">' + randomPost + '</div>');
+       } else if (newsRotator === 1) {
+        var currentIndex = 0;
+
+        function rotatePost() {
+         var currentPost = data.response[currentIndex].message;
+         var postElement = $('<div class="post-content">' + currentPost + '</div>').hide();
+
+         rotatorBlock.empty().append(postElement);
+         postElement.fadeIn(fadeTime);
+
+         currentIndex = (currentIndex + 1) % data.response.length;
+
+         setTimeout(rotatePost, showTime);
+        }
+
+        rotatePost();
+       }
+      }
+     });
+    }
+
+    // Новости большие
+    var newsContainer1 = '.news-big';  // селектор блока для импорта сообщений
+    var newsLimit1 = 1; // количество отображаемых последних сообщений из темы
+    var newsId1 = 813;
+    var newsRotator1 = 0; // 0 - ротатор случайного поста, 1 - ротатор постов по кругу
+    var showTime1 = 2000; // Время отображения поста (в мс)
+    var fadeTime1 = 1500; // Плавность анимации появления поста
+
+    fetchAndDisplayNews(newsContainer1, newsLimit1, newsId1, newsRotator1, showTime1, fadeTime1);
+
+    // Новости малые
+    var newsContainer2 = '.news-small'; // селектор блока для импорта сообщений
+    var newsLimit2 = 1; // количество отображаемых последних сообщений из темы
+    var newsId2 = 654; // id темы из которой выводим посты
+    var newsRotator2 = 0; // 0 - ротатор случайного поста, 1 - ротатор постов по кругу
+    var showTime2 = 3000; // Время отображения поста (в мс)
+    var fadeTime2 = 1000; // Плавность анимации появления поста
+
+    fetchAndDisplayNews(newsContainer2, newsLimit2, newsId2, newsRotator2, showTime2, fadeTime2);
+
+   </script>
+
+  </div>
+ </div>
+
+</body>
+
+</html>
