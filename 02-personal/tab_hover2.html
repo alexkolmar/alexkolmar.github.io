@@ -1,0 +1,39 @@
+<div class="tab_hover">
+    Рандомный блок, <a href="">рандомная ссылка</a>
+</div>
+<button id="toggle_tab">Кнопка</button>
+
+<script>const tabHover = document.getElementsByClassName("tab_hover")[0];
+
+    const toggleTab = document.getElementById("toggle_tab");
+
+    function saveData() {
+        const isActive = toggleTab.classList.contains("active");
+        localStorage.setItem("isActive", isActive ? "true" : "false");
+        const visibility = tabHover.style.visibility;
+        localStorage.setItem("visibility", visibility);
+    }
+
+    function loadData() {
+        if (localStorage.getItem("isActive") === "true") {
+            toggleTab.classList.add("active");
+        } else {
+            toggleTab.classList.remove("active");
+        }
+        if (localStorage.getItem("visibility") !== null) {
+            tabHover.style.visibility = localStorage.getItem("visibility");
+        }
+    }
+
+    toggleTab.addEventListener("click", function () {
+        if (toggleTab.classList.contains("active")) {
+            toggleTab.classList.remove("active");
+            tabHover.style.visibility = "hidden";
+        } else {
+            toggleTab.classList.add("active");
+            tabHover.style.visibility = "visible";
+        }
+        saveData();
+    });
+
+    loadData();</script>
