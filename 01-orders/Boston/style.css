@@ -449,7 +449,7 @@
   #pun-title {
     min-height: 50px;
     background: url(https://forumstatic.ru/files/001b/6e/a7/27400.png) no-repeat top center, url(https://forumstatic.ru/files/001b/6e/a7/14871.jpg) repeat top left var(--body-bg);
-    height: 290px;
+    height: 300px;
   }
 
 #html-header {
@@ -492,7 +492,7 @@
 
   .forum_info {
     position: absolute;
-    top: 80px;
+    top: 90px;
     background: none;
     border: none;
     box-shadow: none;
@@ -614,7 +614,7 @@
     border: 1px solid var(--bd2);
     box-shadow: inset 0 0 10px 0 #201c18;
     font-size: 20px;
-    z-index: 110;
+    z-index: 121;
   }
 
   #pun-ulinks.fixed {
@@ -740,6 +740,7 @@
   left: 0;
   width: 100%;
   color: var(--pun-bg);
+  line-height: 150%;
 }
 
   #pun-status .container {
@@ -748,6 +749,12 @@
     color: #e1ddd8;
     font-weight: 600;
   }
+
+/* Аватар у приветствия */
+.status_userava > img {
+  width: 25px;
+  border: 1px solid var(--link);
+}
 
   #pun-status .container strong {
     font-weight: 700;
@@ -1208,6 +1215,8 @@
     width: 100%;
     min-height: 90px;
     box-sizing: border-box;
+    position: relative;
+    top: 0;
   }
   
   .punbb .post .post-author ul {

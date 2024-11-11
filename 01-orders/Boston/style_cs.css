@@ -97,6 +97,14 @@ em {
   display: none;
 }
 
+.punbb #pun-report .bg, .punbb #pun-reputation .bg, .punbb #pun-admin-award-form .bg {
+  z-index: 101;
+}
+
+.punbb #pun-report .inner, .punbb #pun-reputation .inner, .punbb #pun-admin-award-form .inner {
+  z-index: 102;
+}
+
 #tags .container,
 .post_report,
 .post_reputation,
@@ -1375,8 +1383,8 @@ li#onlinelist {
 /* Автор */
 
 .post-author {
-  margin-bottom: 20px;
-  position: relative;
+  margin-bottom: 30px;
+  position: sticky;
   width: var(--pwidth);
   border-radius: 10px;
   background: var(--body-bg);
@@ -1385,6 +1393,7 @@ li#onlinelist {
   font-size: 12px;
   font-family: var(--mul);
   line-height: 14px;
+  top: 80px;
 }
 
 .post-author ul {
@@ -2020,10 +2029,18 @@ div.post-rating .container a {
     display: none;
 }
 
-.post_buttons {
+/*.post_buttons {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}*/
+
+#stikery {
+  display: inline-block;
+}
+
+.button-dice {
+  float: right;
 }
 
 
@@ -4951,7 +4968,7 @@ height: 120px;
 -------------------------------------------------------------*/
 
 html .hvStickerPackModalContainer {
-  z-index: 160;
+  z-index: 200;
 }
 
 html .hvStickerPackModal {
@@ -5069,6 +5086,16 @@ html .hvStickerPackModalAddButton {
 
 .punbb .Form-Table .table_GamePosts, .punbb .Form-Table .table_GamePosts tr:nth-child(2n+1) {
   background: transparent;
+}
+
+/* Аватар у приветствия */
+.status_userava > img {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+  border: 2px solid var(--link);
+  margin: -.6em 0;
 }
 
 /* Смена стиля
