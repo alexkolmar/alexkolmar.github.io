@@ -1,0 +1,1798 @@
+/* Global
+------------------------------------------*/
+
+/* Применяется ко всем элементам */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 4px !important;
+  height: 4px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--dark);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ccaf9a;
+  border-radius: 2px;
+}
+
+:focus {
+  outline: none;
+}
+
+a,
+.punbb #pun-admain a {
+  text-decoration: none;
+  color: var(--link);
+  transition: all .2s linear 0s;
+}
+
+a:hover,
+.punbb #pun-admain a:hover {
+  color: var(--link-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre {
+  margin: 0;
+}
+
+h1,
+h2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--font1);
+  color: var(--link);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul,
+dl,
+li,
+dd,
+dt {
+  list-style: none;
+}
+
+address,
+em {
+  font-style: normal;
+}
+
+hr {
+  height: 1px;
+  background: var(--bd2);
+  margin: 5px;
+}
+
+.modlist,
+.lastedit,
+.punbb div#pun-live-rusff,
+.punbb .topic a.sharelink {
+  display: none;
+}
+
+#tags .container,
+.post_report,
+.post_reputation,
+#pun-admin-award-form .inner,
+#MyBookmarks,
+.inner.popup_graffiti,
+.pun-modal .modal-inner {
+  background: var(--sec-bg);
+}
+
+#tags .container {
+  padding: var(--mpad) !important;
+  top: 0 !important;
+  max-height: 350px;
+  overflow: auto;
+}
+
+/* ОФОРМЛЕНИЕ КНОПОК
+------------------------------------------*/
+
+input.button,
+#pun-admain input.button,
+#sub4,
+input[type="button"],
+input[type="submit"] {
+  padding: 2px 10px;
+  border: 1px solid var(--bd);
+  border-radius: 5px;
+  background: var(--sec-bg);
+  font-family: var(--font1);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .2s linear 0s;
+}
+
+input.button:hover,
+#pun-admain input.button:hover,
+#sub4:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  border: 1px solid rgba(27, 28, 36, .8);
+  background: var(--nav);
+}
+
+/* ОФОРМЛЕНИЕ ПОЛЕЙ ВВОДА
+------------------------------------------*/
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  padding: 2px 5px;
+  border: 1px solid var(--bd);
+  background: var(--bg3);
+  border-radius: 5px;
+}
+
+
+/* Админка
+------------------------------------------*/
+
+.punbb-admin .adminmain {
+  padding: 0 40px 0 220px;
+}
+
+.punbb-admin .adcontainer,
+.punbb-admin .adformal {
+  border: none;
+}
+
+#pun-admain a#award-create {
+  color: var(--pun-bg);
+}
+
+#pun-admain a#award-create:hover {
+  color: var(--sec-bg);
+}
+
+
+/* Тело форума
+------------------------------------------*/
+
+html {
+  background: var(--bd3) url() no-repeat top center;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -10;
+  background: var(--bd3) url(https://forumstatic.ru/files/001c/09/2b/80995.jpg) no-repeat top center/cover;
+}
+
+#pun {
+  margin: 30px auto;
+  width: 1094px;
+  background: url(https://forumstatic.ru/files/001c/09/2b/22656.png) no-repeat top center, url(https://forumstatic.ru/files/001c/09/2b/27258.png) no-repeat bottom center, url(https://forumstatic.ru/files/001c/09/2b/70627.png) repeat-y top center;
+  border-radius: 52px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .7);
+}
+
+.punbb {
+  font: 12px Verdana, Arial, sans-serif;
+  color: var(--tx);
+}
+
+.punbb>div .container {
+  padding: var(--padding);
+}
+
+
+/* Навигационные ссылки */
+
+#pun-navlinks {
+  margin-top: 10px;
+}
+
+#pun-navlinks .container {
+  text-align: center;
+}
+
+#pun-navlinks li {
+  padding: 0 5px;
+  display: inline;
+  font-size: 18px;
+  font-family: var(--font1);
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+#display_switch {
+  position: relative;
+  cursor: pointer;
+}
+
+.style_mobile-off::after {
+  content: "\2044";
+  position: absolute;
+  font-size: 30px;
+  width: 20px;
+  line-height: 20px;
+  left: -3px;
+  top: 0;
+}
+
+/* Пользовательские ссылки */
+
+#pun-ulinks {
+  margin-bottom: 10px;
+}
+
+#pun-ulinks .container {
+  text-align: center;
+  padding: 5px 70px;
+}
+
+#pun-ulinks li {
+  padding: 0 5px;
+  display: inline;
+  font-size: 12px;
+  font-family: var(--font1);
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+
+/* Статус */
+
+#pun-status span {
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+/* Копирайт */
+#pun-about {}
+
+#pun-about .container {
+  text-align: center;
+}
+
+
+/* Главная форумная таблица
+------------------------------------------*/
+
+.main table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.main th {
+  padding: 5px 10px;
+}
+
+.main td {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tcl {
+  width: 50%;
+}
+
+.tc2,
+.tc3,
+.tcmod {
+  text-align: center;
+  width: 10%;
+}
+
+.tcr {
+  width: 30%;
+}
+
+.punbb td .user-avatar,
+#pun-index td .user-avatar {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bd4);
+  border-radius: 50%;
+}
+
+.punbb td .user-avatar .avatar-image {
+  width: 46px;
+  height: 46px;
+}
+
+.forum thead {
+  display: none;
+}
+
+.forum tbody {
+  display: block;
+  background: var(--sec-bg);
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--bd);
+  box-sizing: border-box;
+}
+
+.forum tr {
+  display: flex;
+  width: 100%;
+}
+
+.forum tr:not(:last-of-type) {
+  border-bottom: 1px solid var(--bd2);
+}
+
+.forum td,
+.forum .intd {
+  display: flex;
+  align-items: center;
+}
+
+.forum .intd a {
+  color: var(--link2);
+  font-size: 16px;
+  font-family: var(--font1);
+  font-weight: bold;
+}
+
+.forum .intd a:hover {
+  color: var(--link-hover);
+}
+
+.forum .tc2,
+.forum .tc3 {
+  justify-content: center;
+}
+
+.forum .tc3:before,
+#pun-viewforum .tc2:before {
+  content: "";
+  font-family: var(--fa);
+  margin-right: 5px;
+}
+
+.forum .tcr {
+  width: 40%;
+}
+
+#pun-searchtopics .tc3:before,
+#pun-viewforum .tc2:before {
+  content: "\f4ad";
+}
+
+#pun-viewforum .tc3:before {
+  content: "\f06e";
+}
+
+#pun-searchtopics .tcl,
+#pun-modviewforum .tcl {
+  width: 40%
+}
+
+#pun-searchtopics .tc2 {
+  text-align: left;
+  width: 20%;
+}
+
+#pun-debug table .tcl {
+  width: 15%;
+}
+
+#pun-debug .tcr {
+  width: 90%;
+}
+
+tbody:not(#awards-content).hasicon td.tcl {
+  padding-left: 35px;
+  width: 40%;
+}
+
+#pun-index tbody.hasicon td.tcl {
+  padding-left: 20px;
+  width: 65%;
+}
+
+#pun-index td.tcr {
+  width: 35%;
+}
+
+.stickytext,
+.closedatafield,
+.polltext {
+  display: none;
+}
+
+/* Иконки */
+
+div.icon {
+  position: absolute;
+  margin-left: -36px;
+  width: 24px;
+  height: 24px;
+  background: url(https://forumstatic.ru/files/001c/09/2b/61054.png) no-repeat top center/cover;
+  opacity: .7;
+}
+
+#pun-index div.icon {
+  margin: -2px 0 0;
+}
+
+tr.inew div.icon {
+  background: url(https://forumstatic.ru/files/001c/09/2b/27139.png) no-repeat top center/cover;
+  opacity: 1;
+}
+
+tr.isticky div.icon {
+  background: url(https://forumstatic.ru/files/001c/09/2b/72467.png) no-repeat top center/cover;
+  opacity: 1;
+}
+
+tr.iclosed div.icon {
+  background: url(https://forumstatic.ru/files/001c/09/2b/61054.png) no-repeat top center/cover;
+  opacity: 1;
+}
+
+
+/* Пагинация (Переключаемые страницы, Новая тема + Опрос, Подписка)
+--------------------------------------------------------------------------------------------------- */
+
+.multipage {
+  margin-top: 10px;
+}
+
+.linkst {
+  position: relative;
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkst .pagelink {}
+
+.linkst .postlink {
+  text-align: right;
+}
+
+.linksb {
+  position: relative;
+  padding: var(--padding);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.linksb .pagelink {
+  order: -1;
+}
+
+.subscribelink {
+  width: 100%;
+  text-align: right;
+}
+
+.linksb noindex {
+  order: 1;
+}
+
+.linksb .postlink {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Модераторское меню, RSS, Atom */
+
+.modmenu .container {
+  padding: var(--mpad);
+  text-align: right;
+}
+
+.modmenu .container strong {
+  float: left;
+}
+
+.modmenu input {
+  margin-left: 10px;
+}
+
+/* Главная
+------------------------------------------*/
+
+/* Категории */
+
+#pun-index thead,
+#pun-index .tc2,
+#pun-index .tc3 {
+  display: none;
+}
+
+#pun-index .category h2,
+#pun-stats h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#pun-index .category h2 .catleft {
+  background: url(https://forumstatic.ru/files/001c/09/2b/54564.png) no-repeat center right/contain;
+  height: 12px;
+  width: 300px;
+}
+
+#pun-index .category h2 .catright {
+  background: url(https://forumstatic.ru/files/001c/09/2b/97994.png) no-repeat center left/contain;
+  height: 12px;
+  width: 300px;
+}
+
+#pun-index .category .hasicon {
+  background: var(--sec-bg);
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  display: block;
+  box-sizing: border-box;
+}
+
+#pun-index .category .hasicon tr {
+  width: 100%;
+  display: flex;
+  position: relative;
+  min-height: 100px;
+}
+
+#pun-index .category tr:not(:last-child)::after {
+  content: "";
+  width: 932px;
+  height: 1px;
+  background: var(--bd);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#pun-index .category .hasicon td {
+  padding: 20px;
+}
+
+#pun-index .category h3 {
+  font-size: 18px;
+  font-family: var(--font1);
+  font-weight: bold;
+  line-height: 1.2;
+  border-bottom: 1px solid var(--bd2);
+  padding: 0 0 5px 30px;
+}
+
+.forum-nav {
+  margin-bottom: 10px;
+  display: flex;
+  display: -webkit-flex;
+  gap: 10px;
+}
+
+.forum-nav-item {
+  background: var(--nav);
+  border: 1px solid var(--bd2);
+  box-shadow: 1px 1px 0 #e1d5cf, inset 0 0 4px var(--bd2);
+  border-radius: 0 0 10px 10px;
+  padding: 1px 10px 2px;
+  white-space: nowrap;
+  transition: all .2s linear 0s;
+}
+
+.forum-nav-item:hover {
+  background: var(--nav-hover);
+}
+
+.forum-nav-item a {
+  font-size: 11px;
+  color: #433838;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.forum-description {
+  margin-top: 5px;
+}
+
+.Add {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--bd2);
+}
+
+.Add>div {
+  display: flex;
+  display: -webkit-flex;
+  gap: 5px;
+}
+
+/* Статистика */
+
+#pun-stats h2:before {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/09/2b/54564.png) no-repeat center right/contain;
+  height: 12px;
+  width: 300px;
+}
+
+#pun-stats h2:after {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/09/2b/97994.png) no-repeat center left/contain;
+  height: 12px;
+  width: 300px;
+}
+
+#pun-stats .statscon {
+  padding: var(--padding);
+}
+
+#pun-stats .container {
+  background: var(--sec-bg);
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+#pun-stats li.item1,
+#pun-stats li.item2 {
+  float: left;
+  clear: both;
+}
+
+#pun-stats li.item3,
+#pun-stats li.item4 {
+  text-align: right;
+}
+
+li#onlinelist {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/* Шапка
+------------------------------------------*/
+
+#pun-title {
+  height: 340px;
+  width: 1094px;
+}
+
+#pun-title .title-logo,
+#pun-announcement h2 {
+  display: none;
+}
+
+#pun-announcement {
+  height: 340px;
+  width: 1094px;
+  position: absolute;
+  top: 30px;
+}
+
+#pun-announcement .container {
+  padding: 20px 40px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.tablica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.tablica .logo {
+  display: none;
+}
+
+.newspart {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.news {
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  background: rgba(19, 21, 26, 85%);
+  width: 362px;
+  height: 118px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.news_inner {
+  width: 340px;
+  height: 96px;
+  overflow: auto;
+  color: #ecc9af;
+  font-size: 11px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.news_inner a {
+  color: #e7ba85;
+}
+
+.news_inner a:hover {
+  color: var(--link-hover);
+}
+
+.rightpart {
+  width: 154px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.info-wanted {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.wanted-item {
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background-color: rgb(19, 21, 26);
+  width: 72px;
+  height: 54px;
+  box-sizing: border-box;
+}
+
+.info-want-avatars {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.info-want-avatars:hover {
+  opacity: 1;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background-color: rgb(19, 21, 26);
+  width: 72px;
+  height: 30px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: var(--font1);
+  color: #e7ba85;
+  line-height: 1.2;
+}
+
+/* Футер
+------------------------------------------*/
+
+#html-footer .container {
+  padding: 0;
+}
+
+.footer-banners {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background: rgba(25, 27, 32, 0.6);
+  width: 1000px;
+  margin: 0 auto 10px;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.footer-banners>div {
+  height: 35px;
+  overflow: auto;
+  scrollbar-color: var(--link) transparent;
+}
+
+.footer-banners a {
+  opacity: .5;
+}
+
+.footer-banners a:hover {
+  opacity: 1;
+}
+
+.copyright {
+  color: var(--bd2);
+  text-align: right;
+  position: relative;
+  margin-right: 90px;
+  bottom: 5px;
+  opacity: .5;
+}
+
+.copyright a {
+  color: var(--sec-bg);
+}
+
+.copyright a:hover {
+  color: var(--link-hover);
+}
+
+
+/* Топик
+------------------------------------------*/
+
+#poll-special table h1 {
+  padding: 0;
+  background: var(--bd2);
+  box-sizing: border-box;
+}
+
+.post {
+  margin-top: 10px;
+}
+
+.toppost,
+.topicpost {
+  margin-top: 0;
+}
+
+.punbb .post>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  padding: 0;
+  margin: 0 60px 5px;
+  gap: 4px;
+}
+
+.post h3 {
+  margin: 5px 60px 3px;
+}
+
+.post h3 span {
+  display: block;
+  background: var(--sec-bg);
+  padding: 5px 15px;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid var(--bd);
+  box-sizing: border-box;
+}
+
+.post h3 strong {
+  float: right;
+  text-align: right;
+  font-weight: normal;
+}
+
+/* Автор */
+
+.post-author {
+  position: relative;
+  width: var(--pwidth);
+  text-align: center;
+  background: var(--sec-bg);
+  border: 1px solid var(--bd);
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+}
+
+.post-author ul {
+  padding: 5px 5px 10px;
+}
+
+.pa-author {
+  font-size: 20px;
+  font-family: var(--font1);
+  color: #1a1a23;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.pa-author a {
+  color: #1a1a23;
+}
+
+.pa-author a:hover {
+  color: var(--link-hover);
+}
+
+.pa-title {
+  margin-bottom: 10px;
+  color: #1b191e;
+  font-size: 12px;
+  font-family: var(--font1);
+  line-height: 1.2;
+}
+
+.pa-avatar img {
+  border: 2px solid var(--bd3);
+  border-radius: 20px;
+  max-width: 180px;
+  max-height: 180px;
+}
+
+.pa-fld1 {
+  background: rgba(222, 209, 205, 80%);
+  width: 184px;
+  margin: 5px auto;
+  border: 2px solid rgba(53, 51, 56, 50%);
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 10px;
+  min-height: 76px;
+  text-align: center;
+}
+
+.pa-fld1 a {
+  font-weight: bold;
+}
+
+.pa-posts,
+.pa-respect,
+.pa-fld4,
+.pa-awards {
+  margin: 5px;
+  display: inline-block;
+  width: fit-content;
+  font-size: 11px;
+  max-width: 45px;
+  white-space: nowrap;
+}
+
+.pa-awards {
+  color: transparent;
+}
+
+.pa-awards span {
+  color: var(--tx);
+}
+
+.pa-respect .fld-name,
+.pa-respect .fld-name a,
+.pa-awards a {
+  font-size: 0;
+  color: var(--link);
+}
+
+.pa-respect .fld-name a:hover,
+.pa-awards a:hover {
+  color: var(--link-hover);
+}
+
+.gid3 .pa-respect .fld-name:before,
+.pa-respect .fld-name a:before {
+  content: '\f004';
+  font-family: var(--fa);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pa-awards a:before {
+  content: '\f091';
+  font-family: var(--fa);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pa-online {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(138, 193, 118, 70%);
+  cursor: pointer;
+  border-radius: 50%;
+  right: 36px;
+  margin-top: 10px;
+}
+
+.pa-online strong {
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  padding: 5px 10px;
+  left: 50%;
+  opacity: 0;
+  bottom: 15px;
+  background: rgba(0, 0, 0, .8);
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: opacity .2s linear 0s;
+  pointer-events: none;
+  color: var(--pun-bg);
+}
+
+.pa-online strong::after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  border: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: -10px;
+  left: 50%;
+  border-top: 10px solid rgba(0, 0, 0, .8);
+  bottom: -10px;
+}
+
+.pa-online:hover strong {
+  opacity: 1;
+}
+
+
+/* Тело поста */
+
+.post-body {
+  padding-bottom: 15px;
+  width: calc(100% - var(--pwidth) - 4px);
+  background: var(--sec-bg);
+  border: 1px solid var(--bd);
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+  align-self: normal;
+}
+
+.post-box {
+  padding: 10px 20px;
+}
+
+.post-links {
+  width: 100%;
+  border-bottom: 1px solid var(--bd3);
+}
+
+.post-links ul {
+  padding: 5px 15px;
+  text-align: right;
+}
+
+.post-links li {
+  display: inline;
+}
+
+.post-links li:not(:first-of-type) {
+  padding-left: 10px;
+}
+
+.pl-email,
+.pl-website {
+  float: left;
+}
+
+.clearer {
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
+
+/* Контент поста - цитата, спойлер, таблицы и т.п. */
+
+.punbb .post td {
+  border: 0px transparent !important;
+}
+
+pre {
+  font: 12px/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace;
+}
+
+.post-content em {
+  font-style: italic;
+}
+
+.post .post-content td {
+  border-width: 0px !important;
+}
+
+.post-content em.bbuline {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.post-content abbr {
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+  text-decoration: underline dotted 1px;
+  cursor: help !important;
+}
+
+s,
+del {
+  text-decoration: none;
+  filter: blur(3px);
+  transition: all .3s linear 0s;
+}
+
+s:hover,
+del:hover {
+  filter: none;
+}
+
+.post-content p {
+  margin: 0;
+  padding: 0 0 12px 0;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.post-content a {
+  font-weight: bold;
+}
+
+.post-content img {
+  vertical-align: middle;
+}
+
+.scrollbox {
+  width: 100%;
+  overflow: auto;
+  max-height: 200px;
+}
+
+.quote-box,
+.code-box {
+  margin: 4px 0 10px;
+  padding: 10px 20px;
+  border: 1px solid rgba(27, 28, 36, .8);
+  border-radius: 19px;
+  background-color: rgba(222, 209, 205, .8);
+}
+
+.quote-box cite,
+.code-box strong.legend {
+  display: block;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: var(--font1);
+  font-size: 14px;
+  color: var(--bd2);
+}
+
+.quote-box.answer-box .qc-post-link img {
+  max-width: 12px;
+  margin: 0 0 -10px 5px;
+}
+
+.post-content .spoiler-box>div {
+  font-family: var(--font1);
+  font-size: 12px;
+  color: var(--tx);
+}
+
+.post-sig dt {
+  width: 100%;
+  margin: 10px auto;
+  background: url(https://forumstatic.ru/files/001c/09/2b/92649.png) no-repeat top center;
+  height: 11px;
+}
+
+.punbb .reactions-root {
+  padding: 0 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.punbb .reaction-picker-panel {
+  transform: translate(-90%, 28px);
+}
+
+/* Форма ответа */
+
+#tags {
+  position: relative;
+}
+
+/* Form Buttons © max, the murderer!
+----------------------------------------------------------------------- */
+
+/* General */
+
+#form-buttons table {
+  width: 100% !important;
+}
+
+#form-buttons table tr {
+  display: flex;
+  justify-content: space-between;
+  /* выравнивание кнопок в ряду */
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+#form-buttons td {
+  position: relative;
+  background: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  /* ширина кнопки */
+  height: 24px;
+  /* высота кнопки */
+  margin-bottom: 4px;
+}
+
+#form-buttons td::before {
+  font-family: 'Font Awesome 6 Pro';
+  font-size: 16px;
+  /* размер иконки */
+  font-weight: 400;
+  /* стиль иконки */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  color: var(--link);
+}
+
+#form-buttons td:hover::before {
+  color: var(--link-hover);
+  /* цвет при наведении */
+}
+
+
+/* Icons */
+
+#button-font::before {
+  content: '\f031';
+}
+
+#button-size::before {
+  content: '\f894';
+}
+
+#button-bold::before {
+  content: '\f032';
+}
+
+#button-italic::before {
+  content: '\f033';
+}
+
+#button-underline::before {
+  content: '\f0cd';
+}
+
+#button-strike::before {
+  content: '\f0cc';
+}
+
+#button-left::before {
+  content: '\f036';
+}
+
+#button-right::before {
+  content: '\f038';
+}
+
+#button-center::before {
+  content: '\f037';
+}
+
+#button-link::before {
+  content: '\f0c1';
+}
+
+#button-spoiler::before {
+  content: '\f518';
+}
+
+#button-image::before {
+  content: '\f302';
+}
+
+#button-video::before {
+  content: '\f144';
+}
+
+td#button-hide:before {
+  content: "\f13e";
+}
+
+td#button-hide:hover:before {
+  content: "\f023";
+}
+
+#button-quote::before {
+  content: '\f27a';
+}
+
+#button-code::before {
+  content: '\f121';
+}
+
+#button-color::before {
+  content: '\f53f';
+}
+
+#button-table::before {
+  content: '\f009';
+}
+
+#button-smile::before {
+  content: '\f118';
+}
+
+#button-keyboard::before {
+  content: '\f11c';
+}
+
+#button-addition::before {
+  content: '\f0d7';
+}
+
+td#button-files_rusff:before {
+  content: "\f07b";
+}
+
+td#button-files_rusff:hover:before {
+  content: "\f07c";
+}
+
+td#button-graffiti_rusff:before {
+  content: "\f5bd";
+}
+
+/* Дополнительные кнопки */
+
+/* вставить картинку */
+td#button-oldimg::before {
+  content: "\f1c5";
+}
+
+/* тег абзаца */
+td#button-indent:before {
+  content: "\f03c";
+}
+
+/* дополнительные стили */
+td#button-styles:before {
+  content: "\f1de";
+}
+
+/* тег обтекания изображения от Romych */
+td#floatbut:before {
+  content: "\f1ea";
+}
+
+/* тег выравнивания по ширине */
+td#button-justify:before {
+  content: "\f039";
+}
+
+/* тег для скрипта ролевой маски от человека-шамана */
+td#button-mask:before {
+  content: "\f630";
+}
+
+/* тег для дополнительных смайлов от человека-шамана */
+td#button-sticker:before {
+  content: "\f1b0";
+}
+
+/* Музыка */
+td#button-music:before {
+  content: "\f001";
+}
+
+/* дайсы */
+td#dice-button:before {
+  content: "\f522";
+}
+
+/* Формы
+------------------------------------------- */
+
+.checkfield input[type="checkbox"],
+.radiofield input[type="radio"] {
+  margin: 0 3px;
+}
+
+p[class="checkfield"] *,
+div[class="checkfield"] *,
+fieldset[class="radiofield"] * {
+  height: 20px;
+  vertical-align: middle;
+}
+
+textarea,
+input,
+select,
+optgroup {
+  font-size: 14px;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+.formal .container {
+  padding: var(--padding);
+}
+
+.formsubmit {
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.formsubmit input,
+.formsubmit a,
+.formsubmit span {
+  margin: 0 6px 0 0;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-weight: normal;
+}
+
+fieldset fieldset {
+  border: none;
+  margin: 0;
+  padding: 0 0 8px 0
+}
+
+.fs-box {
+  padding: 5px 0;
+}
+
+.fs-box p,
+.fs-box fieldset {
+  padding: 0 0 8px 0;
+}
+
+.inline .inputfield,
+.inline .selectfield,
+.inline .passfield {
+  float: left;
+  margin-right: 1em;
+}
+
+.inline .infofield {
+  clear: both
+}
+
+.datafield br {
+  display: none
+}
+
+.required label,
+.datafield span.input {
+  font-size: 10px;
+}
+
+textarea,
+.longinput input {
+  width: 64%;
+  margin: 0;
+}
+
+#main-reply {
+  box-sizing: border-box;
+  border: 1px solid rgba(27, 28, 36, .8);
+  border-radius: 19px;
+  padding: 10px 15px;
+}
+
+.hashelp {
+  position: relative;
+}
+
+
+/* Профиль + ЛС
+------------------------------------------*/
+
+#profile .container {
+  padding-left: 220px;
+  min-height: 100px;
+}
+
+#profilenav {
+  float: left;
+  width: 160px;
+  margin-left: -160px;
+}
+
+#viewprofile h2,
+#profilenav h2 {
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+#profilenav h2:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+#profilenav li {
+  padding: 0 0 5px;
+}
+
+#profilenav li.isactive a {
+  font-weight: bold;
+}
+
+#viewprofile li {
+  padding: 5px 0;
+}
+
+#profile-right li {
+  display: flex;
+}
+
+#profile-right li span {
+  width: 180px;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+#profile-right li strong {
+  font-weight: normal;
+}
+
+img.avatardemo {
+  float: right;
+  margin: 0 0 8px 18px;
+}
+
+#pun-messages .pmtc22 {
+  text-align: left;
+}
+
+#pun-messages .post h3 {
+  margin: 5px 0 3px;
+}
+
+#pun-messages .post-author ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#pun-messages .linksb {
+  padding: 0;
+  align-items: center;
+}
+
+#pun-messages .clearer {
+  display: none;
+}
+
+/* Прочие страницы
+------------------------------------------*/
+
+/* Список пользователей */
+
+#pun-userlist .formal,
+#pun-userlist .formal .container {
+  margin-bottom: 0;
+}
+
+#pun-userlist .tc2 {
+  text-align: left;
+  width: 20%;
+}
+
+#pun-userlist .tcl {
+  width: 40%
+}
+
+/* Награды */
+
+.mod-awards .category h2 {
+  position: relative;
+}
+
+.mod-awards .category h2 .fr {
+  position: absolute;
+  right: 60px;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+/* Собщения об ошибках */
+
+.info .container {
+  padding: var(--mpad);
+}
+
+.info .container .backlink {
+  padding-top: 8px;
+}
+
+/* Регистрация */
+
+.info-box {
+  margin: 0 0 10px 0;
+}
+
+.info-box * {
+  padding: 0 0 5px 0;
+}
+
+.info-box .legend {
+  font-weight: bold;
+}
+
+
+/* Кнопки вверх-вниз
+-------------------------------------------------------*/
+
+.go-up,
+.go-down {
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  margin-left: 1100px;
+  box-sizing: border-box;
+  transition: all .3s linear 0s;
+  width: 97px;
+  text-align: center;
+}
+
+.go-up img,
+.go-down img {
+  object-fit: contain;
+}
+
+.go-up {
+  top: 230px;
+}
+
+.go-down {
+  top: 330px;
+}
+
+/* Обтекание изображения
+-------------------------------------------------------*/
+
+#float {
+  background: var(--pun-bg);
+  border: 1px solid var(--bd);
+  width: auto;
+  padding: 8px;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 280px;
+  z-index: 20;
+  display: none;
+}
+
+#plng {
+  background: var(--bd);
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 8px;
+}
+
+/* Cтикеры и маска профиля
+-------------------------------------------------------*/
+
+body div.hvStickerPackModal,
+body #mask_dialog .inner {
+  background: var(--pun-bg);
+  border-radius: 19px;
+}
+
+body div.hvStickerPackModal .hvStickerPackModalContent {
+  border: solid 1px var(--nav);
+  border-radius: 10px;
+}
+
+.hvStickerPackModal .hvStickerPackModalTab {
+  padding: 2px 10px;
+  border: 1px solid var(--bd);
+  border-radius: 5px;
+  background: var(--sec-bg);
+  font-family: var(--font1);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .2s linear 0s;
+}
+
+.hvStickerPackModal .hvStickerPackModalTab.active {
+  border: 1px solid rgba(27, 28, 36, .8);
+  background: var(--nav);
+}
+
+/* Ползунок размера шрифта в постах
+-------------------------------------------------------*/
+
+.FNTslider {
+  border-radius: 4px;
+  position: relative;
+  z-index: 100;
+  background: var(--pun-bg);
+  width: 110px;
+  height: 7px;
+  margin: 5px 7% 3px 5px;
+  border: 1px solid var(--bd2);
+  float: right;
+  box-sizing: border-box;
+}
+
+.FNTslider .before {
+  height: 6px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+}
+
+.FNTslider .thumb {
+  width: 7px;
+  height: 11px;
+  border-radius: 3px;
+  position: relative;
+  top: -3px;
+  background: var(--link);
+  cursor: pointer;
+}
+
+.my-tabs>img.close {
+  cursor: pointer;
+}

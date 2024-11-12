@@ -1,0 +1,131 @@
+<!-- Пиар-вход v.2 -->
+<script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+<script type="text/javascript">
+ PR.nick = 'Companion'; //Ник PR-аккаунта
+ PR.pass = '1111'; //Пароль PR-аккаунта
+ PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+ PR.set();</script>
+
+<script type="text/javascript">
+ PR.nick = 'Reader'; //Ник PR-аккаунта
+ PR.pass = '1111'; //Пароль PR-аккаунта
+ PR.btn_text = 'Читать'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+ PR.set();</script>
+
+
+<!-- Музыка в постах и подписях (c) Emerael, Часть 1 в ХТМЛ-Верх -->
+<script>
+ FORUM.set('editor.music', {
+  name: 'Аудио',
+  audio_url: function () {
+   return prompt("Поместите ссылку на трек", "https://")
+  },
+  audio_title: function () {
+   return prompt("Введите название трека", "Трек")
+  },
+  onclick: function () {
+   const link = FORUM.get('editor.music.audio_url()');
+   if (!link || link === "https://" || $.trim(link) === "") return false;
+
+   const title = FORUM.get('editor.music.audio_title()');
+   document.querySelector("#main-reply").value += `[audio=${link}]${title || 'Песня'}[/audio]`;
+  }
+ })
+</script>
+
+
+<script
+ type="text/javascript">$('#ChangeStyle td').each(function (i) { $(this).attr("alt", i) }); function setcookie(a, b, c) { if (c) { var d = new Date(); d.setDate(d.getDate() + c) } if (a && b) document.cookie = a + '=' + b + (c ? '; expires=' + d.toUTCString() : ''); else return false } function getcookie(a) { var b = new RegExp(a + '=([^;]){1,}'); var c = b.exec(document.cookie); if (c) c = c[0].split('='); else return false; return c[1] ? c[1] : false } function clearSet(L) { if (L) { setcookie("#ChangeStyle", L, 30); $("span.StyleChang").html('<style>' + $("#ChangeStyle td[alt='" + L + "']").find("i").html() + '</style>') } }; $('#ChangeStyle td').click(function () { clearSet($(this).attr("alt")) }); var Lmem = getcookie("#ChangeStyle"); clearSet(Lmem);</script>
+
+
+<!-- Отключение скриптов русфф -->
+<script type="text/javascript">
+ RusffCore.sets.tags = false; //теги (не работает)
+ RusffCore.sets.graffiti = false; //графити (не работает)
+ ReactionsPlugin.setConfig({ disable: true });  //реакции (глючат)
+ RusffCore.sets.tags = false; //теги
+ RusffCore.sets.show_reportBtn = 0; //жалобы
+</script>
+
+
+<!-- Скрываем профиль в постах © Deff -->
+<script type="text/javascript">
+ FORUM.set('editor.addition.tags.hide_provil', { name: 'скрытие Профиля', onclick: function () { smile('[im' + 'g=hide-autor]https://is.gd/ekiTPp[' + '/img]'); } });
+ $().pun_mainReady(function () {
+  function addStyle() { /*==123==;
+<style type="text/css">#### .post-author,#### .post-sig,#### .pl-email,#### .pl-website{display:none !important}#### .post-body,#### .post-links,#### .post-links ul,#### h3>span{margin-left:0 !important}</style>
+==123==;*/
+  } addStyle = addStyle.toString().split('==123==;')[1];
+  $('.post .post-content img[alt="hide-autor"]').each(function () {
+   var id = $(this).parents('.post').prop('id');
+   $(addStyle.replace(/####/gim, '#' + id)).insertBefore($(this));
+  });
+ });
+</script>
+
+
+<!--выделить код-->
+<script type="text/javascript" src="http://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+<script>eval(select_text.toString().replace(/\}$/, 'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'выделить [копируется сразу]' //текст ссылки</script>
+<!-- конец -->
+
+
+<!----------— Защита от отключения JS ------------->
+<noscript>
+ <link rel="stylesheet" href="//forumstatic.ru/files/0016/0b/c8/13249.css" />
+</noscript>
+
+
+<!----- ФИЛЬТР ЗАЯВОК by Человек-Шаман ----->
+<script src="https://forumstatic.ru/files/0017/95/29/89461.js"></script>
+<script>
+ hvWantedFilters.init(21, 241, 41, 7, 12, 30, 113, 241, 163);
+ hvWantedFilters.callback(function () {
+  // html в постах
+  document.querySelectorAll('.hvFilteredList .post').forEach(HTMLinPost.parseTags);
+
+  // отступы
+  (function () {
+   var indent = '<span style="display:inline-block;margin:1em 2.1em;"></span>';
+   $('.hvFilteredList .post-content p:contains("[indent]")').each(function () { $(this).html($(this).html().replace(/\[indent\]/gm, indent)); });
+  }());
+
+  // обтекание
+  (function () {
+   $('.hvFilteredList .post-content').each(function () {
+    var post = this.innerHTML;
+    if (post.indexOf("[/float]") != -1) {
+     var floats = /\[float=(.*?)\]([^\[]{1,11000})\[\/float\]/gi;
+     this.innerHTML = this.innerHTML.replace(floats, "<span style='float: $1; margin: 15px; text-align: $1;'>$2</span>")
+    }
+   });
+  }());
+ });
+</script>
+
+
+<!--// Быстроплюсы v.2 РЕНО by Deff //-->
+<script type="text/javascript" src="https://forumstatic.ru/files/0012/d8/04/58219.js" addComment="1"></script>
+
+
+<!--Всплывающие Подсказки при наведении-->
+<style>
+ #tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, .85);
+  z-index: 999;
+  max-width: 180px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, .05) inset;
+  font-size: 11px;
+  font-family: verdana;
+  display: none;
+  color: var(--pun-bg);
+  text-align: center;
+  padding: 5px;
+ }
+</style>
+<script type="text/javascript" src="https://forumstatic.ru/files/001a/fa/d0/26671.js"></script>
+<!--//End//-Всплывающие Подсказки при наведении-->

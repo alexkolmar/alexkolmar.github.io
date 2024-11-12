@@ -12,9 +12,7 @@
   /* Основа и тело форума
   -------------------------------------------------------------*/
 
-
   * {
-    float: none !important;
     box-sizing: border-box;
   }
 
@@ -351,7 +349,7 @@
   }
 
   .punbb .main .hasicon tr:not(:last-of-type) {
-    box-shadow: 0 1px rgba(0, 0, 0, .3), 0 2px rgba(255, 255, 255, .75);
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
   }
 
   .punbb .main td {
@@ -428,6 +426,9 @@
 
   .punbb .main .tcr {
     position: relative;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
   }
 
   .punbb .tcr .user-avatar {
@@ -442,8 +443,9 @@
   .punbb .tcr>a,
   .punbb .tcr .lastpost,
   .punbb .tcr>.byuser {
-    width: calc(100% - 46px);
+    width: fit-content;
     text-align: right;
+    margin-right: 46px;
   }
 
   .punbb .user-avatar .avatar-image {
@@ -581,7 +583,6 @@
 
   /* Дата поста */
   .punbb .post h3 {
-    box-shadow: 0 1px 2px rgba(255, 255, 255, .3) inset;
     background: rgba(0, 0, 0, .1);
   }
 
@@ -829,12 +830,17 @@
     left: 0;
     display: flex;
     gap: 5px 10px;
+    margin-bottom: 10px;
   }
 
   #post-form #tags #font-area {
     padding-bottom: 15px !important;
   }
 
+  #post-form #table-area tr {
+    flex-wrap: nowrap;
+    padding: 0;
+  }
 
   /* Поиск сообщений
   -------------------------------------------------------------*/
@@ -894,7 +900,7 @@
   #viewprofile #profile-left {
     text-align: center;
     padding-bottom: 10px !important;
-    box-shadow: 0 1px rgba(0, 0, 0, .3), 0 2px rgba(255, 255, 255, .75);
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
   }
 
   #viewprofile #profile-left li#pa-avatar {
@@ -992,15 +998,7 @@
 
   .punbb .main #profile #messages .hasicon tr {
     justify-content: space-between;
-    box-shadow: 0 -1px rgba(0, 0, 0, .3), 0 1px rgba(255, 255, 255, .75);
-  }
-
-  .punbb .main #profile #messages .hasicon tr:first-of-type {
-    box-shadow: 0 -1px rgba(255, 255, 255, .9), 0 -2px rgba(0, 0, 0, .3), 0 1px rgba(255, 255, 255, .9);
-  }
-
-  .punbb .main #profile #messages .hasicon tr:last-of-type {
-    box-shadow: 0 -1px rgba(0, 0, 0, .3), 0 1px rgba(0, 0, 0, .4), 0 2px rgba(255, 255, 255, .9);
+    box-shadow: 1px solid rgba(0, 0, 0, .3);
   }
 
   .punbb .main #profile #messages .hasicon .tcl {
@@ -1045,7 +1043,6 @@
     width: 100% !important;
     display: block;
   }
-
 
   /* Уважение и позитив
   -------------------------------------------------------------*/
@@ -1109,6 +1106,7 @@
     text-align: left;
   }
 
+
   /* Загрузка файлов
   -------------------------------------------------------------*/
 
@@ -1151,6 +1149,7 @@
 
   .punbb-admin #pun-adnav {
     margin: 0;
+    float: none;
   }
 
   .punbb-admin #pun-admain {
@@ -1275,6 +1274,87 @@
   #pun-admin_logs #pun-admain .adcontainer td {
     width: 100% !important;
     text-align: left !important;
+  }
+
+  /* Награды
+  -------------------------------------------------------------*/
+
+  .mod-awards .category h2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .mod-awards .category h2 .fr {
+    position: relative;
+    right: unset;
+    font-size: 12px;
+  }
+
+  #awards-content {
+    padding: 0;
+  }
+
+  #awards-content td {
+    width: 100%;
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .mod-awards-user #awards-content td:nth-child(3),
+  .mod-awards-user #awards-content td:nth-child(4) {
+    display: flex;
+    gap: 5px;
+  }
+
+  #awards-content td:before {
+    content: "";
+    width: 100px;
+    font-weight: bold;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .mod-awards-list #awards-content td:nth-child(1)::before,
+  .mod-awards-user #awards-content td:nth-child(1)::before {
+    content: "Название:";
+  }
+
+  .mod-awards-list #awards-content td:nth-child(2)::before,
+  .mod-awards-user #awards-content td:nth-child(2)::before {
+    content: "Иконка:";
+  }
+
+  .mod-awards-list #awards-content td:nth-child(3)::before {
+    content: "Описание:";
+  }
+
+  .mod-awards-list #awards-content td:nth-child(4)::before {
+    content: "Лауреаты:";
+  }
+
+  .mod-awards-user #awards-content td:nth-child(3)::before {
+    content: "За заслуги:";
+  }
+
+  .mod-awards-user #awards-content td:nth-child(4)::before {
+    content: "Вручена:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(1)::before {
+    content: "Пользователь:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(2)::before {
+    content: "Кол-во наград:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(3)::before {
+    content: "Награды:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(4)::before {
+    content: "Детали:";
   }
 
 
