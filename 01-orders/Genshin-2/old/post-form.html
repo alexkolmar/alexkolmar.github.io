@@ -1,0 +1,163 @@
+<script>
+    var oldIMG="<td id=\"button-image\" title=\"Вставить картинку\"><img onclick=\"bbcode('[img]','[/img]')\" src=\"/i/blank.gif\"/><b><p style=\"z-index:20;position:absolute;height14px;margin:-15px 0 0 22px;\">2</p></b></td>"
+    $("#button-image").after(oldIMG);
+    </script>
+    
+    <!--обтекание изображения 2.4.4-->
+    <script language="javascript">
+    $(function(){
+    $('td#button-link').before('<td id="floatbut" style=\'background-image:url("http://forumstatic.ru/files/0014/ed/19/43324.png")\'></td>');
+    $('#floatbut, .vibor').click(function(){
+    $('div#float').toggle();});
+      });
+    elm=document.getElementsByTagName("div")
+    for(x in elm) if(elm[x].className=="post-content") 
+    {
+    post = elm[x].innerHTML;
+    if(post.indexOf("[/float]") != -1) {
+    floats = /\[float=(.*?)\]([^\[]{1,11000})\[\/float\]/gi
+    elm[x].innerHTML = elm[x].innerHTML.replace(floats, "<span style='float: $1; margin: 15px; text-align: $1;'>$2</span>")
+    }}
+    </script>
+    <div id="float" style="display:none;background:#FFFFCC;border:1px solid black; width:auto; padding:8px; position:absolute; margin-top:-32%; margin-left:35%; z-index:20">
+    <div><strong>Направление обтекания</strong></div><br>
+    <div align="center">
+    <img class="vibor" src="http://forumstatic.ru/files/0014/ed/19/43324.png" title="left" onclick="bbcode('[float=left]', '[/float]')" />
+    <img class="vibor" src="http://forumstatic.ru/files/0014/ed/19/87268.png" title="right" onclick="bbcode('[float=right]', '[/float]')" />
+    </div></div>
+    
+    
+    
+    <!-- Мгновенный предпросмотр сообщения © Alex_63 -->
+    <script type="text/javascript">
+    var PPREV = {};
+    PPREV.position = 0; //Положение окна Предпросмотра: 0 - над полем ввода, 1 - под полем ввода, 2 - справа
+    PPREV.quote_cite = 'написал(а):'; //Надпись в окне цитаты
+    </script>
+    <script type="text/javascript" src="http://forumstatic.ru/files/0015/c4/3f/10524.js"></script>
+    <!-- Кнопка отключения мгновенного предпросмотра -->
+    <style>#togglePreview{float: right; margin-top: -17px; margin-right: 21px}</style>
+    <script type="text/javascript">(function (){
+      var a='Включить предпросмотр';
+      var b='Отключить предпросмотр';
+      var d='_PreviewToggle';
+      setCookiePPrev=function(a,b,c){if(c){var d=new Date();d.setTime(d.getTime()+c);}if(a && b)document.cookie=a+'='+b+(c ? '; expires='+d.toUTCString() : '');else return false;}
+      getCookiePPrev=function(a){var b=new RegExp(a+'=([^;]){1,}');var c=b.exec(document.cookie);if(c)c=c[0].split('=');else return false;return c[1] ? c[1] : false;}
+      $('<small id="togglePreview"><input type="button" class="button" value="'+ b +'" onclick="togglePreview(this)"/></small>').insertAfter('#post fieldset:last legend');
+      var x = ParseContent;
+      window.togglePreview = function(sel){//alert(sel.value);
+        if(sel.value==a){sel.value=b;setCookiePPrev(d,'0',-1000);ParseContent=x;ParseContent();$('#post-preview').show(); return}
+        if(sel.value==b){sel.value=a;setCookiePPrev(d,'OFF',30*3600*24*30*1000);if($('#pun-viewtopic').length){$('#post-preview').hide()}ParseContent=function(){return};return}
+      }; if(getCookiePPrev(d)=='OFF'){$('#togglePreview>.button').click()};
+    }())
+    </script>
+    
+    <!-- BB-цитатa (NEW) --><script>
+    var BBQuote = {};
+    BBQuote.mode   = 1; // BB-цитирование: 0 - по стандартной кнопке цитаты, 1 - со вставкой новой кнопки;
+    BBQuote.text   = 'BB-цитата'; // Надпись на кнопке BB-цитирования
+    </script>
+    <script type="text/javascript" src="http://forumstatic.ru/files/0015/c4/3f/62091.js"></script>
+    
+    
+    <!---дайсометалка---->
+        <script type="text/javascript">
+         
+        if(form=document.getElementById("form-buttons"))
+        form.getElementsByTagName("tr")[0].insertCell(0).innerHTML="<img src='http://forumstatic.ru/files/0019/da/11/53373.png' title='Бросить дайс' id='button-dice' onclick=\"dice();\"/>"
+        </script>
+         
+        <script type="text/javascript"> 
+         
+        function unhtml(s)
+        { return s.replace(/&/g,"&").replace(/</g,"<").replace(/>/g,">"); }
+         
+        function numword(s,one,two,many)
+        { return(((s%100>=10 && s%100<=20) || s%10>=5) ? many : 
+                  (s%10==1 ? one : two)); }
+         
+        function dice()
+        {
+                var FoundErrors = '';
+                var diceRes=""
+                var CountCube = prompt("Количество кубиков", "1");
+                if(CountCube>100 || CountCube<=0) {
+                alert("Нельзя бросать столько кубиков");  return false;}
+                var SideCube = prompt("Сколько граней у кубика?", "9");
+                if(SideCube>1000 || SideCube<=0){
+                alert("Не бывает таких кубиков");         return false;}
+                var BonusCube = 0;
+                var ReasonCube = "";
+                
+                for(i=0; i<CountCube;i++)
+                {
+                  var dice = (Math.round(Math.random()*SideCube));
+                  if(dice==0) dice=1;
+                  diceRes += dice*1936+"-";
+                }
+                smile('[dice='+diceRes+CountCube+':'+SideCube+
+                      ':'+BonusCube+':'+ReasonCube+']');
+        }
+         
+        function addDice(post,from,internal)
+        {
+          var str=post.innerHTML, num=-1, date=-1, a, fCanRandomise=0, u=""; 
+          while(post=post.parentNode) 
+            if(post.className=="container")
+              if(post=post.parentNode)
+              {
+                if(a=post.innerHTML.match(
+                  /class[^<>]+permalink[^<>]+#p(\d+)[^<>]*>[^<>]*(\d+):(\d+):(\d+)[^<>]*<\/a>/i))
+                    { num=a[1]; date=a[4]; 
+                      fCanRandomise=1; break; }
+              }
+         
+          var ran=parseInt(num+date);
+          return str.replace(
+             /\[dice=((?:\d+[-—])*)(?:(\d)(\d+)|(\d+)(:)(\d+)(?::([-—]?\d+):([^\]]*))?)]/g,
+          function(a,dice,diceC,diceS,adieC,fNewScheme,adieS,adieB,adieR) 
+          {
+            dice  = dice.replace(/[-—]/g, '-');
+            adieB = adieB.replace(/[-—]/g, '-');
+            diceC=parseInt(fNewScheme ? adieC : diceC);
+            diceS=parseInt(fNewScheme ? adieS : diceS);
+            adieB=parseInt(adieB ? adieB : 0);
+            if(adieB>0) adieB='+'+adieB;
+            if(!fCanRandomise && fNewScheme)
+              return '<div class="quote-box"><blockquote><p><b>СБОЙ ДАЙСОМЕТАЛКИ - СООБЩИТЕ МАСТЕРАМ</b></p></blockquote></div> ';
+         
+            var i,diceR=0,
+                s='<div class="quote-box"><blockquote '+  
+                  'style="text-align:left"><p>'+
+                   '<b>Игрок кинул '
+                   +diceC+numword(diceC,' куб с ',' куба с ',' кубов с ')
+                   +diceS+numword(diceS,' гранью',' гранями',' гранями')
+                   +(adieB ? (adieB>0 ? ' и бонусом ' : ' и пенальти ')+adieB : '')+
+                   (adieR ? ', моделируя событие:</b><br><i>'+adieR+'</i><b>' : '')
+                   +'<br /><br />Результаты броска '+
+                   (fNewScheme ? '' : '(старая схема)')+'</b>: (';
+         
+            dice=dice.split("-"); 
+            for(i=0; i<dice.length-1; ++i)
+            {
+               var d=parseInt(dice[i]/1936); 
+               date=((date>>1)+((date&1)<<21))&0x3fffff;
+               num=((num>>1)+((num&1)<<22))&0x7fffff;
+               if(fNewScheme) d=(ran=(((ran>>1)+(((ran&1) ? 0 : 1)<<23)+d+date)^num)&0xffffff)%diceS +1;
+               diceR+=d;
+               s+= (i?' + ':'') + d;
+            } 
+         
+            if(adieB) diceR+=parseInt(adieB);
+            return(s+ (adieB ? ')'+adieB : ')')+ 
+                   '=' + diceR + '</p></blockquote></div>');
+          });
+        }
+        if(document.URL.indexOf("viewtopic.php")!=-1)
+        {
+          elm=document.getElementById("pun-main").getElementsByTagName("div");
+          for(x=0; x<elm.length; ++x) 
+            if(elm[x].className=="post-content")
+              elm[x].innerHTML=addDice(elm[x]); 
+        }
+        </script>

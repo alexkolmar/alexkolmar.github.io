@@ -1,0 +1,127 @@
+<!--  Премодерация Тем и Сообщений - Ч.1 в начало HTML верх-->
+<style type="text/css">
+    .post .premod{background: url("https://forumstatic.ru/files/0013/61/e9/51464.png") no-repeat;}
+    </style>
+    <script type="text/javascript" src="https://forumstatic.ru/files/0013/61/e9/80906.js"></script>
+    <!-- //END  - Ч.1 в начало HTML  верх Премодерация Тем и Сообщений -->
+
+
+
+
+<!-- HTML верх -Cпойлер cкрытия Инфы под N-кнопок в Профиле Топика -->
+<style>img.post-img-Sp {margin:1px 5px;}
+div.tipsy.tipsy-s.Sp-imgSp-img .tipsy-inner{font-size:11px;letter-spacing:1px;}
+</style>
+<script type="text/javascript" src="https://forumstatic.ru/files/0010/b4/f8/57844.js"></script>
+
+
+
+<!-- Пиар-вход v.2 -->
+    <script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+    <script type="text/javascript">
+    PR.nick = 'PR-agent'; //Ник PR-аккаунта
+    PR.pass = '112233'; //Пароль PR-аккаунта
+    PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+    PR.set();</script>
+<style>#navpr_1 a{
+  background: url(https://forumstatic.ru/files/0019/ab/91/37356.png) 50% 0% no-repeat transparent!important;
+       margin-top: -80px; 
+      position: absolute;
+      margin-left: 668px;
+}
+</style>
+
+
+<script type="text/javascript">
+    function Transform_Code_Box_in_HTML(aX){
+    var TemLnk=aX.replace(/^(.*viewtopic\.php\?id=\d*).*$/ig,"$1");
+    var PstId=aX.replace(/^.*viewtopic\.php\?id=.*(#p\d+)$/ig,"$1");
+    var L=document.URL.replace(TemLnk,'');
+    if(L!=document.URL&&(L.slice(0,1)).search(/\d/ig)==-1 ){
+    L=$("div.topic "+PstId);
+    if(L.length==1){
+    var Lhtm=L.find(".post-content .code-box:first .scrollbox pre").text();
+    L.find(".post-content .code-box:first").replaceWith(Lhtm)
+    }}}
+    function Demo_HTML(Ts){var Ll=Ts.parents(".htmldemo").find(".code-box .scrollbox pre").text();
+    Ts.parents(".htmldemo").after('<div class="demHtml">'+Ll+'</div>');Ts.replaceWith(DemoButt0);
+    }
+    $(document).ready(function() {
+    $("#pun-viewtopic .post .code-box").each(function(){
+    if($(this).text().indexOf('<!--HTML-->')!=-1){
+    $(this).wrap('<div class="htmldemo"></div>')
+    $(this).replaceWith($('.htmldemo').text().split('<!--HTML-->')[1]);
+    }
+    });
+    });
+    </script>
+<style>
+.post-author ul li.pa-avatar img{
+    background:transparent none!important;
+max-width:180px;
+height:auto;
+margin:0px;
+    width:auto!important;
+    background:transparent none!important;
+    border-radius:0px;
+    -webkit-border-radius:0px;
+    -khtml-border-radius:0px;
+    -moz-border-radius:0px;
+    -o-border-radius:0px;
+ 
+    box-shadow: 0px 0px 4px #B8A37D;
+    -webkit-box-shadow:0px 0px 4px #B8A37D;
+    -khtml-box-shadow:0px 0px 4px #B8A37D;
+    -moz-box-shadow:0px 0px 4px #B8A37D;
+ }
+.post-author ul li.pa-avatar{
+    margin:8px;
+}
+</style>
+
+
+
+
+<style type="text/css">
+li#navawards {display: none;}
+</style>
+
+<style type="text/css">
+.pa-fld3 .fld-name {display: none;}
+</style>
+
+<style>
+.lastedit {display:none;}
+</style>
+
+
+
+<!-- Запрет изменения профиля нек-рым никам--><script type="text/javascript">
+var NoChangeProfile = 'PR-agent'; //Ники юзеров с запретом изменения профиля, через запятую
+</script><script type="text/javascript">
+if($('#pun-profile').length&&GroupID!=3)$().pun_mainReady(function(){
+  var arr = NoChangeProfile.split(/\s*,\s*/);if($.inArray(UserLogin,arr)==-1)return;
+  $('#profilenav .item4,.inputfield+.datafield').remove();  $('#profile').find('input[type="text"],textarea').attr('readonly','readonly');
+  $('#profile').find('select,input[type="radio"],input[type="checkbox"]').attr('disabled','disabled');
+  $('#profile').find('.formsubmit,p[style^="padding-bottom"]').text('Вам запрещено редактировать профиль.');
+  if(!$('#profile4').length && !$('#pun-upavatar').length)return;var message = 'Вы не имеете прав для доступа к этой странице.';
+  var title = $('#pun-title h1 > span').text();document.title = title; $('.punbb').attr('id','#pun-message');
+  var crumbs = '<strong>Вы здесь</strong> »&nbsp;<a href="/">'+title+'</a> »&nbsp;Информация';
+  $('#pun-crumbs1 .crumbs').html(crumbs); $().pun_aboutReady(function(){$('#pun-crumbs2 .crumbs').html(crumbs);});
+  $('#pun-main').html('<h1><span>Информация</span></h1><div class=info><div class=container>'+message+'</div></div>');
+});
+</script>
+
+
+
+<noscript><link rel="stylesheet" href="https://forumstatic.ru/files/0016/0b/c8/13249.css" /></noscript>
+
+
+
+<!--Скрытие профиля в теме тегом-->
+<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+.hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+<script>
+FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+$().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+</script>

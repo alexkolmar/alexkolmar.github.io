@@ -559,6 +559,10 @@
     padding-bottom: 15px;
   }
 
+  #pun-index .category .hasicon tr {
+    padding-bottom: 15px;
+  }
+
   .punbb .main td {
     padding: 5px 10px;
   }
@@ -973,6 +977,11 @@
     width: 100%;
     order: 1;
     min-height: unset;
+    font-size: 0;
+  }
+
+  .punbb .post-author .pa-fld1 a:first-of-type {
+    font-size: 12px;
   }
 
   /* Онлайн */
@@ -1000,8 +1009,16 @@
   }
 
   /* Таблицы в постах */
+  .post .post-content tr {
+    display: table-row;
+  }
+
   .post .post-content td {
-    width: 100% !important;
+    display: table-cell;
+  }
+
+  .post .post-content .tabsy td {
+    width: 50% !important;
   }
 
   /* Цитата, спойлер и код */
@@ -1657,6 +1674,7 @@
     display: inline-block;
   }
 
+  .mod-awards-user #awards-content td:nth-child(3),
   .mod-awards-user #awards-content td:nth-child(4) {
     display: flex;
     gap: 5px;
@@ -1667,6 +1685,7 @@
     width: 100px;
     font-weight: bold;
     display: inline-block;
+    flex-shrink: 0;
   }
 
   .mod-awards-list #awards-content td:nth-child(1)::before,

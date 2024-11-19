@@ -1,0 +1,166 @@
+<!--  Parallax стрелка  © ForumD.ru, Gerda -->
+<div class="mouse-parallax">
+    <div class="mouse-parallax-bg"><img src="http://forumstatic.ru/files/001c/11/bb/26199.png"></div>
+</div>
+<script>
+let bg = document.querySelector('.mouse-parallax-bg');
+let rotationSpeed = 0.01; // скорость вращения
+
+function updateRotation(e) {
+    //let rotate = Math.atan2(e.clientX - window.innerWidth / 2, window.innerHeight / 2 - e.clientY) * (180 / Math.PI);
+    let rotate = ((e.clientX - window.innerWidth / 2)/window.innerWidth) * (360 / Math.PI);
+
+    // rotate = Math.max(Math.min(rotate, 45), -45); // органичение градуса вращения
+
+    let currentRotation = parseFloat(bg.style.transform.replace('rotate(', '').replace('deg)', '')) || 0;
+    //let targetRotation = rotate;
+    //let deltaRotation = (targetRotation - currentRotation) * rotationSpeed;
+    
+
+    //bg.style.transform = 'rotate(' + (currentRotation + deltaRotation) + 'deg)';
+    bg.style.transform = 'rotate(' + (rotate) + 'deg)';
+}
+
+window.addEventListener('mousemove', updateRotation);
+</script>
+
+<!-- Таблица нужных-->
+<div class="info-wanted">
+    
+<div class="wanted-item"><a href="https://newadventure.rusff.me/viewtopic.php?id=21#p82946"><img class="info-want-avatars" src="https://i.ibb.co/hs5GCbJ/image.jpg" title="Венти и Сяо ищут Чжун Ли"></a>
+</div>
+<div class="wanted-item"><a href="https://newadventure.rusff.me/viewtopic.php?pid=76566#p76566"><img class="info-want-avatars" src="https://i.ibb.co/GvBjhgb/image.png" title="Мондштадт ищет Альбедо"></a>
+</div>
+<div class="wanted-item">
+    <a href="https://newadventure.rusff.me/viewtopic.php?pid=77345#p77345"><img class="info-want-avatars" src="https://i.ibb.co/PDHf8dN/image.png" title="Сайно ищет Сетоса"></a>
+    </div>
+<div class="wanted-item"><a href="https://newadventure.rusff.me/viewtopic.php?id=21#p83063"><img class="info-want-avatars" src="https://i.ibb.co/xYndp3X/image.jpg" title="Натлан ждет Оророна"></a>
+</div>
+
+</div>
+
+<!-- О ролевой-->
+<div class="about-roleplay">добро пожаловать в наш цирк с пухленями, 18+</div>
+
+<!-- Фейерверк 
+<div class="fire"><img class="firework" src="http://forumstatic.ru/files/001b/df/32/93196.png" title="Ура!!!"></a></div> -->
+
+<!-- Навигация-->
+<div class="nav-left-link">
+<div class="nav-item"><a href="https://newadventure.rusff.me/viewtopic.php?id=798">Правила</a></div>
+<div class="nav-item"><a href="http://newadventure.rusff.me/viewtopic.php?id=573">Сюжет</a></div>
+<div class="nav-item"><a href="http://newadventure.rusff.me/viewtopic.php?id=5#p5">Роли</a></div>
+</div>
+
+<div class="nav-right-link">
+<div class="nav-item"><a href="https://newadventure.rusff.me/viewtopic.php?id=731">Хронология</a></div>
+<div class="nav-item"><a href="https://newadventure.rusff.me/viewtopic.php?id=880#p80061">Квесты</a></div>
+<div class="nav-item"><a href="https://newadventure.rusff.me/viewtopic.php?id=830">Связь с АМС</a></div>
+<!-- <div class="nav-item"><a href="http://newadventure.rusff.me/viewtopic.php?id=454">Магазин</a></div> -->
+</div>
+
+<!-- Очередность в квестах-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $("#navig-batton1").click(function(e){
+        e.stopPropagation();
+        $("#navigblock1").fadeToggle();
+        $(this).toggleClass('spirit-navigation_hover');
+    });
+
+    $(document).click(function(e){
+        if (!$(e.target).closest('#navigblock1').length && !$(e.target).is('#navig-batton1')) {
+            $("#navigblock1").fadeOut();
+            $("#navig-batton1").removeClass('spirit-navigation_hover');
+        }
+    });
+
+});
+
+</script>
+
+<div class="spirit-navigation1" id="navig-batton1"><img src="https://forumstatic.ru/files/001c/11/bb/53398.png"></div>
+<div id="navigblock1" style="display:none"><div class="sslka">
+<!-- очередь в квестах -->
+<div class="quest-item">
+<a href="https://newadventure.rusff.me/viewtopic.php?id=810">Флуд</a>
+активен до конца темы
+</div>
+<!-- <div class="quest-item">
+ <a href="http://newadventure.rusff.me/viewtopic.php?id=801#p74471">Отзыв на дизайн</a>
+активен до 5.06.24
+</div> -->
+<div class="quest-item">
+<a href="https://newadventure.rusff.me/viewtopic.php?id=654">Записать эфир на радио!</a>
+активен всегда
+</div>
+</div></div>
+
+<!-- Администрация -->
+<!-- <div class="ams-container"> 
+<!-- <div class="ams-item"> -->
+<!--<a href="https://newadventure.rusff.me/viewtopic.php?id=875#p79852"><img src="https://i.ibb.co/PxgdQt6/4.png" title="А это че ваще)" alt="Самоуправление"></a>
+</div>
+</div> -->
+
+<!-- Новости большие-->
+<div class="news-big"></div>
+
+<!-- Новости малые-->
+<div class="news-small"></div>
+
+
+<!-- Ротатор постов из топика © ForumD.ru, Gerda -->
+<script>
+function fetchAndDisplayNews(newsContainer, newsLimit, newsId, newsRotator, showTime, fadeTime) {
+    $.getJSON('/api.php?method=post.get&topic_id=' + newsId + '&limit=' + newsLimit + '&sort_dir=desc&fields=message', function(data) {
+        var rotatorBlock = $(newsContainer);
+
+        if (data.response && data.response.length > 0) {
+            if (newsRotator === 0) {
+                var randomIndex = Math.floor(Math.random() * data.response.length);
+                var randomPost = data.response[randomIndex].message;
+                rotatorBlock.append('<div class="post-content">' + randomPost + '</div>');
+            } else if (newsRotator === 1) {
+                var currentIndex = 0;
+
+                function rotatePost() {
+                    var currentPost = data.response[currentIndex].message;
+                    var postElement = $('<div class="post-content">' + currentPost + '</div>').hide();
+                    
+                    rotatorBlock.empty().append(postElement);
+                    postElement.fadeIn(fadeTime);
+
+                    currentIndex = (currentIndex + 1) % data.response.length;
+
+                    setTimeout(rotatePost, showTime);
+                }
+
+                rotatePost();
+            }
+        }
+    });
+}
+
+// Новости большие
+var newsContainer1 = '.news-big';  // селектор блока для импорта сообщений
+var newsLimit1 = 1; // количество отображаемых последних сообщений из темы
+var newsId1 = 813;
+var newsRotator1 = 0; // 0 - ротатор случайного поста, 1 - ротатор постов по кругу
+var showTime1 = 2000; // Время отображения поста (в мс)
+var fadeTime1 = 1500; // Плавность анимации появления поста
+
+fetchAndDisplayNews(newsContainer1, newsLimit1, newsId1, newsRotator1, showTime1, fadeTime1);
+
+// Новости малые
+var newsContainer2 = '.news-small'; // селектор блока для импорта сообщений
+var newsLimit2 = 1; // количество отображаемых последних сообщений из темы
+var newsId2 = 654; // id темы из которой выводим посты
+var newsRotator2 = 0; // 0 - ротатор случайного поста, 1 - ротатор постов по кругу
+var showTime2 = 3000; // Время отображения поста (в мс)
+var fadeTime2 = 1000; // Плавность анимации появления поста
+
+fetchAndDisplayNews(newsContainer2, newsLimit2, newsId2, newsRotator2, showTime2, fadeTime2);
+
+</script>

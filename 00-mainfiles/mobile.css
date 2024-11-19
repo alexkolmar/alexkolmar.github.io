@@ -513,7 +513,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-size: initial;
   }
 
   .linksb .pagelink {
@@ -1062,6 +1061,10 @@
     width: 100% !important;
     font-size: 12px !important;
     line-height: 1.2;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   #pun-respect td::before,
@@ -1070,6 +1073,7 @@
     width: 100px;
     display: inline-block;
     font-weight: bold;
+    flex-shrink: 0;
   }
 
   #pun-respect td.tcl::before,
@@ -1104,6 +1108,7 @@
   #pun-positive .tcr a {
     width: auto;
     text-align: left;
+    margin: 0;
   }
 
 

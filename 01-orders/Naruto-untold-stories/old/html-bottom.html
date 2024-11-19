@@ -1,0 +1,376 @@
+<div class="knopki" style="margin-top: -65px;margin-left: 10px; opacity: 1;">
+    <center></center>
+    </div>
+    
+    
+    
+    <script>
+    ReactionsPlugin.setConfig({
+      disable: true
+    });
+    </script>
+    
+    
+    
+    <!-- Cкрытие формы ответа при числе постов в теме более заданной: -->
+    <script type="text/javascript">
+    (function(){
+    var Num_Hide = 1000; //Число постов, после которого Cкрытие формы ответа.
+    var a = $('.topic>h2>span.item2');
+    if(a.length)a=parseInt(a.text().replace(/.*из (\d+)/,'$1'));
+    if(a>=Num_Hide)$('.postlink a[href*="/post.php?tid"],#post').hide();
+    }());
+    </script>
+    
+    
+    
+    <!--Скрыть модеров-->
+    <script>
+        var supermod = new Array("Nara Shikamaru")
+    
+        var mod=document.getElementsByTagName("span")
+        var str
+        for(x in mod) if(mod[x].className=="modlist"){
+        for(y in supermod)
+            if((pos=mod[x].innerHTML.indexOf(supermod[y]))!=-1)
+                mod[x].innerHTML=remName(mod[x].innerHTML,pos)
+        }
+    
+        function remName(str,pos){
+        var pos1=str.indexOf("<A href"),pos2=str.indexOf("<A href",pos1+1)
+        if(pos2==-1) return("")
+    
+        while(pos>pos2 && pos2!=-1){
+            pos1=pos2
+            pos2=str.indexOf("<A href",pos1+1)
+        }
+        if(pos2==-1){
+            pos2=str.length-1
+            pos1-=2
+        }
+        return (str.substring(0,pos1)+str.substring(pos2,str.length))
+        }
+        </script>
+    <!-- конец -->
+    
+    
+    
+    
+    
+    
+    
+    <!-- Аватар по умолчанию + Спец Аватарки Некоторым никам -->
+    <script type="text/javascript">
+    var NickAva = {
+    //Ник    //Ccылка на картинку
+    "Ringo Ameyuri [2]":"http://s9.uploads.ru/olVX8.png",
+    "Onikyodai 1": "https://files.catbox.moe/m8jakw.png",
+    "Ringo Ameyuri 2": "https://files.catbox.moe/pcrt0b.png",
+    "Uzumaki Naruto 2": "https://files.catbox.moe/r00kg4.png",
+    "Sakurai Akein": "https://files.catbox.moe/ggemm4.jpg",
+    "Hatake Kakashi 2": "https://files.catbox.moe/he2eco.png",
+    "Terumi Mei 1": "https://files.catbox.moe/bw7xy6.png",
+    "Utakata 1": "https://files.catbox.moe/k3w4sk.jpg",
+    "Orochimaru 1": "https://files.catbox.moe/l8dtok.png",
+    "Tsuchigumo Hotaru 1": "https://files.catbox.moe/n0eofn.jpg",
+    "Tenten 1": "https://files.catbox.moe/exx166.png",
+    "Inuzuka Shisen": "https://forumstatic.ru/files/0019/76/ba/26206.png",
+    "Deidara 2": "https://forumstatic.ru/files/0019/76/ba/27411.png",
+    "Sai 1": "https://forumstatic.ru/files/0019/76/ba/33251.png",
+    "Hyuga Hinata 1": "https://forumstatic.ru/files/0019/76/ba/52942.png",
+    "Shiranui Genma 1": "https://forumstatic.ru/files/0019/76/ba/80742.png",
+    "Yamanaka Ino 1": "https://forumstatic.ru/files/0019/76/ba/42836.png",
+    "Orochimaru 3": "https://files.catbox.moe/er60sf.jpg",
+    "Haysaki Rumokito": "http://forumavatars.ru/img/avatars/0019/76/ba/544-1603701226.jpg",
+    "Haku": "https://files.catbox.moe/39y8fr.png",
+    "Yondaime Raikage 1": "https://files.catbox.moe/437nhd.jpg",
+    "Choujuro 1": "https://files.catbox.moe/6xqtlh.png",
+    "ник": "__" //Последний элемент без запятой
+    }
+    $("div.post-author").each(function(){
+    var avalink = "http://forumavatars.ru/img/avatars/0019/ab/91/2-1528749686.jpg";  //аватар по умолчанию
+    var a = $(this).find("li.pa-author").clone();a.find('span.acchide').remove();
+    var nick = a.text(); var tstNick = NickAva[nick]; if(tstNick!=undefined)avalink=tstNick;
+    if(!$(this).find("li.pa-avatar").length) $(this).find("li.pa-title").after("<li class='pa-avatar item2'><img src='" + avalink + "' title='" + nick + "' /></li>");});
+    </script>
+    
+    
+    
+    
+    
+    <script src="https://forumstatic.ru/files/0019/76/ba/58146.js"></script>
+    <script>
+    hvScriptSet.addMask({
+        forumAccessExtended: {
+            'Кладовка': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Архив неигровых тем': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Архив игровых тем': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Развлечения': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Общение': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Конкурсы': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Преканон': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Альтернативный постканон': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Другие альтернативы': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Основные эпизоды': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Дополнительные эпизоды': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Флешбэки': ['Игроки', 'Гости форума', 'Выбывшие из игры'],
+            'Завершенные эпизоды': ['Игроки', 'Гости форума', 'Выбывшие из игры']
+        },
+        userFields: ['pa-author', 'pa-title', 'pa-avatar', 'pa-posts', 'pa-respect', 'pa-fld2', 'pa-fld1', 'pa-online', 'pa-ip']
+    });
+    </script>
+    
+    
+    
+    
+    <script type="text/javascript">
+    var A=[1]
+    $(".post .post-author li").each(function (){
+    for(var i=0; i<A.length;i++){if($(this).hasClass("pa-fld"+A[i])){
+    $(this).html($(this).html().replace(/^[^:]*:/,''));}};});
+    </script>
+    
+    
+    
+    <style type="text/css">.mini_awards_label, .mini_awards {display: none;} #awrdbut * {cursor: pointer; }</style>
+      <script>
+    (function () {
+          var awards_button = "<img src='https://forumstatic.ru/files/0019/76/ba/69888.png' title='Показать/скрыть награды'>";
+    
+          function awards_spoiler() {
+              $(".pa-awards").prepend("<span id='awrdbut'>"+awards_button+"</span>");
+              $("#awrdbut > *").click(function(){$(this).parents(".pa-awards").find(".mini_awards_label, .mini_awards").toggle("slow");});
+          }
+          var t=0;  var time_func = setInterval(function(){ t++;
+              if (t>100) { clearInterval(time_func); return; } 
+              if ($(".pa-awards").length) { clearInterval(time_func); awards_spoiler() }
+          },100);
+    }())
+      </script>
+    
+    
+    
+    <script type="text/javascript">
+    var smileDiv = document.getElementById("smilies-block");
+    if(smileDiv)
+    {var smilei = new Array();
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351154-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351186-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351196-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351206-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351218-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351229-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351239-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351251-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351265-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351285-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351298-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351314-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351328-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351358-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351368-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351405-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348351424-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348352007-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348352018-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348352091-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348352108-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-01-15/1358196278-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-01-15/1358196200-711.jpg');
+    smilei.push('http://imgs.su/tmp/2012-09-23/1348352372-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-01-15/1358196366-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847603-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847635-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847653-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847670-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847755-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847764-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359847783-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359848523-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359848532-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359848553-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-02-03/1359848563-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-01-15/1358196152-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367244749-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367244760-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367244771-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367245170-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367245183-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367245200-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367245451-711.jpg');
+    smilei.push('http://imgs.su/tmp/2013-04-29/1367245481-711.jpg');
+    smilei.push('http://s7.uploads.ru/Y7OHR.gif');
+    
+    for (i=0; i<smilei.length; i++){
+    smileDiv.innerHTML+='<img src="'+smilei[i]+'" onclick="smile(\'[img]'+smilei[i]+'[/img]\')" />';}}
+    </script>
+    
+    
+    <!-- счетчик сообщений -->
+    <script type="text/javascript">
+    if ((document.URL.indexOf("viewtopic.php") != -1) || (document.URL.indexOf("post.php") != -1) || (document.URL.indexOf("edit.php") != -1)) {
+    var repl = document.getElementById("main-reply");
+    var submit = document.getElementsByTagName("p")
+    for (var i=0; i<submit.length; i++){
+    if (submit[i].className == "formsubmit")
+    submit[i].innerHTML = "<span id=\"plng\" style=\"border: 1px solid #b95c3b; padding: 2px 3px;\">Написано символов: <b>0</b></span>" + submit[i].innerHTML;
+    }
+    repl.onkeyup = repl.onkeydown = repl.onfocus = repl.onblur = function(){
+    document.getElementById("plng").innerHTML ="Написано символов: <b>" + (repl.value.length) + "</b>";
+    }}
+    </script>
+    
+    
+    
+    
+    <!-- Выделение кода в блоке "Код" // © Alex_63, версия 2017г. -->
+    <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+    <script type="text/javascript">select_text.linkText = 'Выделить код' //текст ссылки</script>
+    
+    <script type="text/javascript">
+    var DefAvtr="http://forumavatars.ru/img/avatars/0019/ab/91/2-1528749686.jpg";
+    var GuestAvtr="http://forumavatars.ru/img/avatars/0019/ab/91/2-1528749686.jpg";//Для Гостя
+    var s='<li class="pa-avatar item2"><img class="defavtr" src="'+DefAvtr+'" alt="Аватар"/></li>';$("li.pa-title").each(function(){if (($(this).parent("ul").find("li.pa-avatar").html())==null){$(this).after(s);};});
+    </script>
+    
+    
+    
+    
+    <!--кнопки вверх вниз-->
+    <div class="go-up" id='ToTop'><img src="https://forumstatic.ru/files/0019/76/ba/64878.png" border="0" /></div>
+    <div class="go-down" id='OnBottom'><img src="https://forumstatic.ru/files/0019/76/ba/80634.png" border="0" /></div>
+    <style>
+    .go-up,.go-down {
+    display:none;
+    position:fixed; /*позиционируем*/
+    right: 20px; /*указываем положение, если слева - left*/
+    z-index:9999; /*показываем поверх все элементов на странице*/
+    cursor:pointer;
+    opacity:.7; /*прозрачность*/
+    margin-bottom:50px; /*отступ снизу (можно не указывать)*/
+    width:80px; /*ширина кнопки*/
+    height:80px; /*высота кнопки*/
+    }
+    .go-up {
+    bottom:130px; /*положение от низа окна браузера верхняя кнопка*/
+    }
+    .go-down {
+    bottom:50px; /*положение от низа окна браузера нижняя кнопка кнопка*/
+    }
+    .go-down:hover,.go-up:hover {
+    opacity:1;
+    }
+    </style>
+    
+    
+    <!--кнопки вверх вниз-->
+    <script type="text/javascript">
+    $(function(){
+    if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+    $(window).scroll(function(){
+      if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+      else $("#ToTop").fadeIn("slow")
+    });
+    if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+      else $("#OnBottom").fadeIn("slow")
+    });
+    $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+    $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+    });
+    </script>
+    
+    
+    
+    
+    <script type="text/javascript">
+    if (document.URL.indexOf("viewforum")!=-1)
+    {var trs=document.getElementById('pun-main').getElementsByTagName("table")[0].rows
+    var io=1
+    for (io=1; io<=(trs.length-1); io++)
+    {if ((trs[io].className.indexOf("isticky")!=-1)&&(io==1))
+    {var portant=document.getElementById('pun-main').getElementsByTagName("table")[0].insertRow(1)
+    var im=portant.insertCell(0)
+    im.innerHTML="Важные темы"
+    im.style.color="#700000"
+    im.style.backgroundColor=""
+    im.colSpan="4"}
+    else if ((trs[io].className.indexOf("isticky")!=-1)&&(trs[io+1].className.indexOf('isticky')==-1))
+    {var normal=document.getElementById('pun-main').getElementsByTagName("table")[0].insertRow(io+1)
+    var normal1=normal.insertCell(0)
+    normal1.innerHTML="Темы форума"
+    normal1.style.color="#6f4e34"
+    normal1.style.backgroundColor=""
+    normal1.colSpan="4"
+    }}}
+    </script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $("td.#MenuTxT div.submenutext").hide();
+    <!--$(".tabs span:first").addClass("active").show(); -->
+    $("td.#MenuTxT div.submenutext:first").show();
+    $("div.#menu span").click(function() {
+        $("div.#menu span").removeClass("tabactive");
+        $(this).addClass("tabactive");
+        $("td.#MenuTxT div.submenutext").hide();
+        var activeDiv = $(this).attr("alt");
+        $("div."+activeDiv).fadeIn();
+        return false; });
+    });
+    </script>
+    
+    
+    
+    <!------ аватар по-умолчанию ------>
+    <script type="text/javascript">
+    var DefAvtr="http://forumavatars.ru/img/avatars/0019/ab/91/2-1528749686.jpg"; //Для Игрока
+    var GuestAvtr="http://forumavatars.ru/img/avatars/0019/ab/91/2-1528749686.jpg";//Для Гостя
+    $("li.pa-title").each(function(){
+    var b = DefAvtr;if($(this).text()=='Гость')b = GuestAvtr;
+    var s='<li class="pa-avatar item2"><img class="defavtr" src="'+b+'" alt="Аватар"/></li>';
+    if (($(this).parent("ul").find("li.pa-avatar").html())==null){$(this).after(s);};});
+    </script>
+    
+    
+    
+    <!-- Регулировка размера шрифта в постах © Alex_63 -->
+    <style>
+    .FNTslider {
+      border-radius: 4px;
+      position:relative;z-index:1000;
+      background: #E0E0E0;
+      width: 110px;
+      height: 5px;
+      margin: 3px 5px;
+      border: solid 1px #ccc;
+      float: right;
+      margin-right: 7%;
+    }
+    .FNTslider .before {
+      height: 5px;
+      border: solid 1px transparent;
+      border-right: none 0;
+      border-radius: 4px 0 0 4px;
+      position: absolute;
+      background: #661e00;
+      margin-top: -1px;
+    }
+    .FNTslider .thumb {
+      width: 8px;
+      height: 13px;
+      border-radius: 3px;
+      position: relative;
+      top: -4px;
+      background: #bb3c07;
+      cursor: pointer;
+    }
+    </style>
+    <script type="text/javascript" src="https://forumstatic.ru/files/0016/0b/c8/31011.js"></script>
+    
+    
+    <script type="text/javascript">
+    var li = document.getElementById('pun-stats').getElementsByTagName('li')[2];
+    li.childNodes[1].innerHTML = parseInt(li.childNodes[1].innerHTML) + 582;
+    </script>

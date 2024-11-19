@@ -223,7 +223,7 @@ body::before {
 
 #pun-navlinks li {
   padding: 0 5px;
-  display: inline;
+  display: inline-block;
   font-size: 18px;
   font-family: var(--font1);
   font-weight: bold;
@@ -327,6 +327,10 @@ body::before {
 .punbb td .user-avatar .avatar-image {
   width: 46px;
   height: 46px;
+}
+
+#pun-viewforum #subforums.container {
+  padding: var(--padding);
 }
 
 .forum thead {
@@ -640,6 +644,12 @@ tr.iclosed div.icon {
   display: flex;
   display: -webkit-flex;
   gap: 5px;
+}
+
+#pun-index .subforums {
+    border-bottom: 1px solid var(--bd2);
+    line-height: 20px;
+    display: none;
 }
 
 /* Статистика */
@@ -987,8 +997,11 @@ li#onlinelist {
   display: inline-block;
   width: fit-content;
   font-size: 11px;
-  max-width: 45px;
   white-space: nowrap;
+}
+
+.pa-respect .fld-name, .pa-awards a {
+  font-size: 0;
 }
 
 .pa-awards {
@@ -997,6 +1010,7 @@ li#onlinelist {
 
 .pa-awards span {
   color: var(--tx);
+  margin-left: -10px;
 }
 
 .pa-respect .fld-name,
@@ -1019,11 +1033,12 @@ li#onlinelist {
   font-weight: 700;
 }
 
-.pa-awards a:before {
+.pa-awards a::before {
   content: '\f091';
   font-family: var(--fa);
   font-size: 12px;
   font-weight: 700;
+  display: block;
 }
 
 .pa-online {
@@ -1162,7 +1177,7 @@ del:hover {
   filter: none;
 }
 
-.post-content p {
+.post-content p, .post-content p span {
   margin: 0;
   padding: 0 0 12px 0;
   line-height: 150%;
@@ -1795,4 +1810,18 @@ body div.hvStickerPackModal .hvStickerPackModalContent {
 
 .my-tabs>img.close {
   cursor: pointer;
+}
+
+/*Стиль к фильтру заявок Человека-шамана*/
+.post.topicpost .charlist  .charlist_title {
+text-transform: uppercase;
+font-weight: bold;
+font-family: auto;
+font-size: 14px;
+}
+.fd, .nm {
+display:none!important;
+}
+.post.topicpost .charlist .charlist_item {
+font-size: 12px;
 }
