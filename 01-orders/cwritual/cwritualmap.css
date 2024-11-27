@@ -35,9 +35,14 @@
 
 .map .area_wrap {
     display: block;
-    width: fit-content;
     position: absolute;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.map .area_wrap.wrap_right {
+    align-items: flex-end;
 }
 
 .area {
@@ -92,6 +97,11 @@
     left: 20px;
     border-bottom: 10px solid #fff;
     top: -9px;
+}
+
+.wrap_right .description:before {
+    left: unset;
+    right: 20px;
 }
 
 .description h3 {
@@ -219,45 +229,45 @@ button.close:hover {
 
 #spiky_clumps {
     top: 110px;
-    right: 235px;
+    left: 565px;
 }
 
 #dead_marshes {
     top: 70px;
-    right: 130px;
+    left: 675px;
 }
 
 #raven_hollow {
-    right: -100px;
+    right: 95px;
     top: 50px;
 }
 
 #shady_forest {
-    right: -140px;
+    right: 70px;
     top: 160px;
 }
 
 #stone_circle {
-    right: 40px;
+    left: 765px;
     top: 170px;
 }
 
 #dark_river {
-    right: 150px;
+    left: 645px;
     top: 240px;
 }
 
 #night_tribe_camp {
-    right: 20px;
+    left: 780px;
     top: 250px;
 }
 
 #snake_mound {
-    right: -160px;
+    right: 40px;
     top: 240px;
 }
 
 #misty_swamps {
-    right: -90px;
+    right: 115px;
     top: 370px;
 }
