@@ -56,11 +56,11 @@
 }
 
 .punbb .b_theme br {
-  margin: 0;
+  margin-bottom: 0;
 }
 
-.punbb .b_theme p br {
-  margin-bottom: 10px;
+.punbb .b_theme_header br {
+  margin: 0;
 }
 
 .punbb .b_theme_header small {
@@ -71,6 +71,54 @@
 .punbb .b_theme_header span {
   font-weight: 500;
   font-size: 11px;
+}
+
+.punbb .b_theme ul li {
+  list-style: none;
+}
+
+.punbb .b_theme .spoiler-box {
+  margin: 10px 0 20px;
+  padding: 0 10px;
+  display: block;
+  background: var(--color11);
+  border-block: 2px solid var(--color10);
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-inline: none;
+  width: 100%;
+}
+
+.punbb .post .post-content .b_theme .spoiler-box > blockquote.visible {
+  padding: 10px;
+}
+
+.punbb .b_theme  .spoiler-box > div {
+  background: url(https://forumstatic.ru/files/0012/14/e8/39060.svg) no-repeat left 10px center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 40px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color1);
+}
+
+.punbb .b_theme .spoiler-box > div.visible {
+  background: url(https://forumstatic.ru/files/0012/14/e8/39078.svg) no-repeat left 10px center;
+}
+
+.punbb .b_theme blockquote.visible p {
+  width: 100%;
+  min-height: unset;
+  left: 0;
+  box-sizing: border-box;
+  padding-bottom: 10px !important;
+}
+
+.punbb .b_theme .code-box {
+  margin: 10px 0 15px;
 }
 
 .punbb .b_theme_header {
@@ -84,6 +132,7 @@
   text-align: center;
   text-shadow: 1px 1px #000;
   color: var(--color8);
+  border-radius: 20px 20px 0 0;
 }
 
 .punbb .b_theme_header1 {
@@ -92,6 +141,10 @@
 
 .punbb .b_theme_header2 {
   background: url(https://forumstatic.ru/files/0012/14/e8/37062.png) no-repeat top center;
+}
+
+.punbb .b_theme_header3 {
+  background: url(https://forumstatic.ru/files/0012/14/e8/68156.png) no-repeat top center;
 }
 
 .punbb .b_chapter_header {
@@ -309,4 +362,109 @@
   font-size: 14px;
   line-height: 20px;
   color: var(--color1);
+}
+
+/* Рекламная тема */
+
+.punbb .b_advert {
+  background: var(--color5);
+  border: 1px solid var(--color9);
+}
+
+.punbb .b_advert_main {
+  margin: 20px;
+}
+
+/* Шаблон анкеты */
+
+.punbb .b_quenta {
+  background: var(--color5);
+  border: 1px solid var(--color9);
+}
+
+.punbb .b_quenta_main {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.punbb .b_quenta img {
+  border-radius: 10px;
+}
+
+/* Шапка темы шаблона анкеты */
+
+.punbb .b_quentap {
+  background: var(--color5);
+  border: 1px solid var(--color9);
+  width: 760px;
+}
+
+.punbb .b_quentap_main {
+  margin: 20px;
+}
+
+.punbb .b_quentap .b_quenta {
+  text-align: center;
+}
+
+.punbb .b_quentap .b_chapter_header {
+  width: 100%;
+}
+
+/* Шапка темы эпизоды */
+
+.punbb .b_ep {
+  background: var(--color5);
+  border: 1px solid var(--color9);
+}
+
+.punbb .b_ep img {
+  border-radius: 10px;
+}
+
+.punbb .b_ep_main {
+  margin: 20px;
+}
+
+.punbb .b_ep_main > p {
+  padding-bottom: 10px !important;
+}
+
+.punbb .b_ep_info {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px 20px;
+}
+
+.punbb .b_ep_players {
+  width: 100%;
+  text-align: center;
+}
+
+.punbb .b_ep_time, .punbb .b_ep_place {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.punbb .b_ep_time:before, .punbb .b_ep_place:before {
+  content: "";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color10);
+}
+
+.punbb .b_ep_time:before {
+  content: "\e29e";
+}
+
+.punbb .b_ep_place:before {
+  content: "\f5a0";
 }

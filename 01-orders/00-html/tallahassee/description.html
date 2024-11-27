@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>jQuery Toggle</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <style>
+  .description {
+   display: none;
+   border: 1px solid #ddd;
+   padding: 10px;
+   margin-top: 10px;
+  }
+
+  .area.active {
+   font-weight: bold;
+   color: blue;
+  }
+ </style>
+</head>
+
+<body>
+
+ <div class="area" data-id="1">Area 1</div>
+ <div class="description" id="description-1">
+  <p>Description for Area 1</p>
+  <button class="close">Close</button>
+ </div>
+
+ <div class="area" data-id="2">Area 2</div>
+ <div class="description" id="description-2">
+  <p>Description for Area 2</p>
+  <button class="close">Close</button>
+ </div>
+
+ <script>
+  $(document).ready(function () {
+   $(".area").on("click", function () {
+    var id = $(this).data("id");
+    var targetDescription = $("#description-" + id);
+    var targetArea = $(this);
+
+    // Закрываем все открытые описания и снимаем класс active с area
+    $(".description").not(targetDescription).fadeOut(600);
+    $(".area").not(targetArea).removeClass("active");
+
+    // Переключаем текущее описание
+    if (targetDescription.is(":visible")) {
+     targetDescription.fadeOut(600);
+     targetArea.removeClass("active");
+    } else {
+     targetDescription.fadeIn(600);
+     targetArea.addClass("active");
+    }
+   });
+
+   // Закрытие по кнопке "Close"
+   $(".description .close").on("click", function () {
+    var targetDescription = $(this).closest(".description");
+    var id = targetDescription.attr("id").split("-")[1];
+    var targetArea = $(".area[data-id='" + id + "']");
+
+    targetDescription.fadeOut(600);
+    targetArea.removeClass("active");
+   });
+  });
+ </script>
+
+</body>
+
+</html>

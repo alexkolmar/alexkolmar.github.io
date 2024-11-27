@@ -1,0 +1,26 @@
+ <div class="area_wrap" id="">
+  <div class="area" data-id="">название</div>
+  <div class="description" id="description-">
+   <h3><a href="">название</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>

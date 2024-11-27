@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Карта Ритуала</title>
+ <link rel="stylesheet" href="cwritualmap.css">
+ <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<div class="map">
+
+ <div class="area_wrap" id="fox_grove">
+  <div class="area" data-id="1">лисья дубрава</div>
+  <div class="description" id="description-1">
+   <h3><a href="">лисья дубрава</a></h3>
+   <span>дичь и хищники: лесные грызуны, лесные птицы // совы.</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>паутина, плющ, мох, мышиная желчь, черемша</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>белладонна, дубовые листья, паутина, плющ, сныть, чистотел, мох, мышиная желчь, фиалка</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>белладонна, дождевик, дубовые листья, ежевика, крапива, паутина, плющ, сныть, тысячелистник, чистотел, мох, мышиная желчь, васильки, пижма, ракитник, фиалка, ястребинка</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>белладонна, дождевик, дубовые листья, ежевика, крапива, паутина, плющ, тысячелистник, мох, мышиная желчь, пижма, ракитник, черемша</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="white_grove">
+  <div class="area" data-id="2">белая роща</div>
+  <div class="description" id="description-2">
+   <h3><a href="">белая роща</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="iris_meadow">
+  <div class="area" data-id="3">ирисовая поляна</div>
+  <div class="description" id="description-3">
+   <h3><a href="">ирисовая поляна</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="singing_lake">
+  <div class="area" data-id="4">певчее озеро</div>
+  <div class="description" id="description-4">
+   <h3><a href="">певчее озеро</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="heaven_tribe_camp">
+  <div class="area" data-id="5">лагерь племени небес</div>
+  <div class="description" id="description-5">
+   <h3><a href="">лагерь племени небес</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="crimson_edge">
+  <div class="area" data-id="6">малиновая опушка</div>
+  <div class="description" id="description-6">
+   <h3><a href="">малиновая опушка</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="shining_copse">
+  <div class="area" data-id="7">сияющий пролесок</div>
+  <div class="description" id="description-7">
+   <h3><a href="">сияющий пролесок</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="forest_path">
+  <div class="area" data-id="8">лесная тропа</div>
+  <div class="description" id="description-8">
+   <h3><a href="">лесная тропа</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="emerald_forest">
+  <div class="area" data-id="9">изумрудный лес</div>
+  <div class="description" id="description-9">
+   <h3><a href="">изумрудный лес</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="spiky_clumps">
+  <div class="area" data-id="10">шипастые заросли</div>
+  <div class="description" id="description-10">
+   <h3><a href="">шипастые заросли</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="dead_marshes">
+  <div class="area" data-id="11">мёртвые топи</div>
+  <div class="description" id="description-11">
+   <h3><a href="">мёртвые топи</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="raven_hollow">
+  <div class="area" data-id="12">воронья лощина</div>
+  <div class="description" id="description-12">
+   <h3><a href="">воронья лощина</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="shady_forest">
+  <div class="area" data-id="13">тенистая пуща</div>
+  <div class="description" id="description-13">
+   <h3><a href="">тенистая пуща</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="stone_circle">
+  <div class="area" data-id="14">каменный круг</div>
+  <div class="description" id="description-14">
+   <h3><a href="">каменный круг</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="dark_river">
+  <div class="area" data-id="15">тёмная река</div>
+  <div class="description" id="description-15">
+   <h3><a href="">тёмная река</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="night_tribe_camp">
+  <div class="area" data-id="16">лагерь племени ночи</div>
+  <div class="description" id="description-16">
+   <h3><a href="">лагерь племени ночи</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="snake_mound">
+  <div class="area" data-id="17">змеиный курган</div>
+  <div class="description" id="description-17">
+   <h3><a href="">змеиный курган</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+ <div class="area_wrap" id="misty_swamps">
+  <div class="area" data-id="18">мглистые болота</div>
+  <div class="description" id="description-18">
+   <h3><a href="">мглистые болота</a></h3>
+   <span>животные</span>
+   <div class="seasons">
+    <div class="season winter">
+     <p class="ico">&#10052;</p>
+     <p>описание</p>
+    </div>
+    <div class="season spring">
+     <p class="ico">&#127807;</p>
+     <p>описание</p>
+    </div>
+    <div class="season summer">
+     <p class="ico">&#127802;</p>
+     <p>описание</p>
+    </div>
+    <div class="season fall">
+     <p class="ico">&#127810;</p>
+     <p>описание</p>
+    </div>
+   </div>
+   <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+ </div>
+
+</div>
+
+<script>
+ $(document).ready(function () {
+  $(".area").on("click", function () {
+   var id = $(this).data("id");
+   var targetDescription = $("#description-" + id);
+   var targetArea = $(this);
+
+   // Закрываем все открытые описания и снимаем класс active с area
+   $(".description").not(targetDescription).fadeOut(600);
+   $(".area").not(targetArea).removeClass("active");
+
+   // Переключаем текущее описание
+   if (targetDescription.is(":visible")) {
+    targetDescription.fadeOut(600);
+    targetArea.removeClass("active");
+   } else {
+    targetDescription.fadeIn(600);
+    targetArea.addClass("active");
+   }
+  });
+
+  // Закрытие по кнопке "Close"
+  $(".description .close").on("click", function () {
+   var targetDescription = $(this).closest(".description");
+   var id = targetDescription.attr("id").split("-")[1];
+   var targetArea = $(".area[data-id='" + id + "']");
+
+   targetDescription.fadeOut(600);
+   targetArea.removeClass("active");
+  });
+ });
+</script>
+
+</body>
+
+</html>
