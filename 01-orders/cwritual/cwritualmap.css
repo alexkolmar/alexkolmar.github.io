@@ -50,6 +50,10 @@
     align-items: flex-end;
 }
 
+.map .area_wrap.wrap_bottom {
+    flex-direction: column-reverse;
+}
+
 .area {
     width: fit-content;
     text-align: center;
@@ -111,6 +115,17 @@
 .wrap_right .description:before {
     left: unset;
     right: 30px;
+}
+
+.wrap_bottom .description {
+    margin: 0 0 10px;
+}
+
+.wrap_bottom .description:before {
+    border-bottom: none;
+    border-top: 10px solid #fff;
+    top: unset;
+    bottom: -9px;
 }
 
 .description h3 {
@@ -274,82 +289,82 @@ button.close:hover {
 }
 
 #secret_path {
-    top: 520px;
+    bottom: 280px;
     left: 320px;
 }
 
 #grey_cave {
-    top: 570px;
+    bottom: 230px;
     left: 355px;
 }
 
 #foggy_bay {
-    top: 560px;
+    bottom: 240px;
     left: 160px;
 }
 
 #chalky_shoal {
-    top: 560px;
+    bottom: 250px;
     left: 35px;
 }
 
 #melting_island {
-    top: 645px;
+    bottom: 150px;
     left: 90px;
 }
 
 #storm_tribe_camp {
-    top: 635px;
+    bottom: 150px;
     left: 240px;
 }
 
 #crying_cape {
-    top: 700px;
+    bottom: 70px;
     left: 365px;
 }
 
 #rabbit_mountain {
     right: 50px;
-    top: 520px;
+    bottom: 300px;
 }
 
 #red-hot_stream {
-    top: 520px;
+    bottom: 275px;
     right: 210px;
 }
 
 #black_mouth {
-    top: 490px;
+    bottom: 310px;
     left: 640px;
 }
 
 #briar_meadow {
-    top: 560px;
+    bottom: 240px;
     left: 670px;
 }
 
 #fire_tribe_camp {
     left: 785px;
-    top: 610px;
+    bottom: 180px;
 }
 
 #golden_wasteland {
-    top: 630px;
+    bottom: 170px;
     right: 40px;
 }
 
 #thunder_hills {
-    top: 760px;
+    bottom: 60px;
     right: 90px;
 }
 
 #honey_fields {
-    top: 750px;
+    bottom: 70px;
     left: 600px;
 }
 
 #stone_steppe {
-    top: 630px;
+    bottom: 170px;
     left: 540px;
 }
 
@@ -385,7 +400,7 @@ button.close:hover {
 
 #tree_crossing {
     left: 470px;
-    top: 515px;
+    bottom: 285px;
 }
 
 #white_grove .area,
@@ -412,7 +427,6 @@ button.close:hover {
 #chalky_shoal .area,
 #melting_island .area,
 #crying_cape .area,
-#red-hot_stream .area,
 #briar_meadow .area,
 #golden_wasteland .area,
 #stone_steppe .area,
@@ -427,7 +441,8 @@ button.close:hover {
     width: 120px;
 }
 
-#ancient_oak .area {
+#ancient_oak .area,
+#red-hot_stream .area {
     width: 130px;
 }
 
