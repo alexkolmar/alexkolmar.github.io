@@ -90,6 +90,7 @@
     color: var(--main-text);
     pointer-events: all;
     box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    border-radius: 8px;
 }
 
 .description:before {
@@ -153,7 +154,7 @@ button.close {
     top: 5px;
     right: 10px;
     transition: all .2s linear 0s;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 button.close:hover {
@@ -182,17 +183,9 @@ button.close:hover {
     top: 50px;
 }
 
-#white_grove .area {
-    width: 70px;
-}
-
 #iris_meadow {
     top: 140px;
     left: 40px;
-}
-
-#iris_meadow .area {
-    width: 90px;
 }
 
 #singing_lake {
@@ -205,25 +198,9 @@ button.close:hover {
     left: 205px;
 }
 
-#heaven_tribe_camp .area, #night_tribe_camp .area {
-    width: 150px;
-}
-
 #crimson_edge {
     top: 230px;
     left: 50px;
-}
-
-#crimson_edge .area,
-#shining_copse .area,
-#spiky_clumps .area,
-#raven_hollow .area,
-#shady_forest .area,
-#stone_circle .area,
-#dark_river .area,
-#snake_mound .area,
-#misty_swamps .area {
-    width: 100px;
 }
 
 #shining_copse {
@@ -284,4 +261,179 @@ button.close:hover {
 #misty_swamps {
     right: 115px;
     top: 370px;
+}
+
+#toothy_mountain {
+    top: 460px;
+    left: 60px;
+}
+
+#crimson_undergrowth {
+    top: 480px;
+    left: 200px;
+}
+
+#secret_path {
+    top: 520px;
+    left: 320px;
+}
+
+#grey_cave {
+    top: 570px;
+    left: 355px;
+}
+
+#foggy_bay {
+    top: 560px;
+    left: 160px;
+}
+
+#chalky_shoal {
+    top: 560px;
+    left: 35px;
+}
+
+#melting_island {
+    top: 645px;
+    left: 90px;
+}
+
+#storm_tribe_camp {
+    top: 635px;
+    left: 240px;
+}
+
+#crying_cape {
+    top: 700px;
+    left: 365px;
+}
+
+#rabbit_mountain {
+    right: 50px;
+    top: 520px;
+}
+
+#red-hot_stream {
+    top: 520px;
+    right: 210px;
+}
+
+#black_mouth {
+    top: 490px;
+    left: 640px;
+}
+
+#briar_meadow {
+    top: 560px;
+    left: 670px;
+}
+
+#fire_tribe_camp {
+    left: 785px;
+    top: 610px;
+}
+
+#golden_wasteland {
+    top: 630px;
+    right: 40px;
+}
+
+#thunder_hills {
+    top: 760px;
+    right: 90px;
+}
+
+#honey_fields {
+    top: 750px;
+    left: 600px;
+}
+
+#stone_steppe {
+    top: 630px;
+    left: 540px;
+}
+
+#azure_spring {
+    left: 460px;
+    top: 40px;
+}
+
+#lonely_rock {
+    left: 360px;
+    top: 75px;
+}
+
+#owl_tree {
+    left: 425px;
+    top: 175px;
+}
+
+#primal_stream {
+    left: 500px;
+    top: 230px;
+}
+
+#ancient_oak {
+    left: 440px;
+    top: 400px;
+}
+
+#poppy_field {
+    left: 380px;
+    top: 465px;
+}
+
+#tree_crossing {
+    left: 470px;
+    top: 515px;
+}
+
+#white_grove .area,
+#grey_cave .area,
+#black_mouth .area {
+    width: 70px;
+}
+
+#iris_meadow .area, #poppy_field .area {
+    width: 90px;
+}
+
+#crimson_edge .area,
+#shining_copse .area,
+#spiky_clumps .area,
+#raven_hollow .area,
+#shady_forest .area,
+#stone_circle .area,
+#dark_river .area,
+#snake_mound .area,
+#misty_swamps .area,
+#secret_path .area,
+#foggy_bay .area,
+#chalky_shoal .area,
+#melting_island .area,
+#crying_cape .area,
+#red-hot_stream .area,
+#briar_meadow .area,
+#golden_wasteland .area,
+#stone_steppe .area,
+#azure_spring .area,
+#lonely_rock .area,
+#owl_tree .area,
+#tree_crossing .area {
+    width: 100px;
+}
+
+#primal_stream .area {
+    width: 120px;
+}
+
+#ancient_oak .area {
+    width: 130px;
+}
+
+#heaven_tribe_camp .area,
+#night_tribe_camp .area,
+#storm_tribe_camp .area,
+#fire_tribe_camp .area {
+    width: 150px;
 }
