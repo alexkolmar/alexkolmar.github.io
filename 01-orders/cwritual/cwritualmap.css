@@ -403,6 +403,29 @@ button.close:hover {
     bottom: 285px;
 }
 
+#copyright {
+    bottom: 10px;
+    right: 20px;
+}
+
+#copyright .area {
+    font-family: var(--font-main);
+    color: var(--main-text);
+    text-shadow: none;
+}
+
+#copyright .description {
+    margin-right: -20px;
+}
+
+#copyright .description:before {
+    right: 20px;
+}
+
+#copyright .description p {
+    font-size: 12px;
+}
+
 #white_grove .area,
 #grey_cave .area,
 #black_mouth .area {
