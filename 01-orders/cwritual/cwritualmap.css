@@ -403,6 +403,11 @@ button.close:hover {
     bottom: 285px;
 }
 
+#silver_gorge {
+    top: 370px;
+    left: 30px;
+}
+
 #copyright {
     bottom: 10px;
     right: 20px;
@@ -456,7 +461,8 @@ button.close:hover {
 #azure_spring .area,
 #lonely_rock .area,
 #owl_tree .area,
-#tree_crossing .area {
+#tree_crossing .area,
+#silver_gorge .area {
     width: 100px;
 }
 

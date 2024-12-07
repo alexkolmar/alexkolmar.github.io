@@ -510,6 +510,7 @@ li#onlinelist {
 .post-author {
   width: var(--pwidth);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .post-author ul {
