@@ -844,6 +844,10 @@ img.avatardemo {
   font-weight: bold;
 }
 
+.jGrowl-notification .jGrowl-close {
+  position: relative;
+  right: 6px;
+}
 
 /* Кнопки вверх-вниз
 -------------------------------------------------------*/
