@@ -468,3 +468,117 @@
 .punbb .b_ep_place:before {
   content: "\f5a0";
 }
+
+/* Новогодний адвент-календарь */
+
+.punbb .ny_advent {
+  width: 760px;
+  background: var(--color5);
+  border: 1px solid var(--color9);
+  min-height: 500px;
+}
+
+.punbb .ny_header {
+  background: url(https://forumstatic.ru/files/0012/14/e8/91951.png) no-repeat top center;
+  text-transform: uppercase;
+}
+
+.punbb .ny_main {
+  padding: 20px 30px;
+}
+
+.punbb .ny_greeting {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.punbb .ny_count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color8);
+}
+
+.punbb .ny_count span {
+  font-size: 20px;
+}
+
+.punbb .ny_count h4 {
+  font-size: 40px;
+}
+
+.punbb .ny_count h4 em {
+  color: #ab1c1c;
+  font-style: normal;
+}
+
+.punbb .ny_calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.punbb .ny_day {
+  border: 2px solid var(--color9);
+  border-radius: 8px;
+  width: 130px;
+  height: 130px;
+  box-sizing: border-box;
+  background: url(https://forumstatic.ru/files/0012/14/e8/29750.svg) no-repeat top 52px center;
+}
+
+.punbb .ny_date {
+  background: var(--color9);
+  border-radius: 2px 2px 0 0;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.punbb .ny_day.opened {
+  border: 2px solid var(--color10);
+}
+
+.punbb .day1.opened {
+  background: url(https://forumstatic.ru/files/0012/14/e8/46887.jpg) no-repeat center/cover;
+}
+
+.punbb .opened .ny_date {
+  color: var(--color8);
+  text-shadow: 1px 1px #000;
+  background: var(--color10);
+}
+
+.punbb .ny_task {
+  width: 126px;
+  height: 98px;
+  background: rgba(0,0,0,.65);
+  border-radius: 0 0 5px 5px;
+  display: none;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--color8);
+  text-shadow: 1px 1px #000;
+}
+
+.punbb .opened .ny_task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
