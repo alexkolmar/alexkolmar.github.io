@@ -72,12 +72,11 @@
   --brown2: #3a2512;
   --gold: #81532a;
   --cover: rgba(173, 166, 153, 35%);
+  --cover2: rgba(251, 240, 220, 35%);
   --text-bg: #fbf0dc;
-  --padding: 10px 47px;
-  --bigpad: 10px 67px;
+  --bigpad: 10px 60px;
   --midpad: 10px 37px;
-  --tpad: 5px 20px;
-  --mpad: 5px 10px;
+  --pad: 5px 10px;
   --ktp: 'Kingthings Petrock';
   --abd: 'Abaddon';
   --obl: 'Oblivion';
@@ -99,13 +98,13 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scrollbar-width: thin;
-  scrollbar-color: var() var();
+  scrollbar-color: var(--gold) var(--brown2);
 }
 
 *::-webkit-scrollbar {width: 7px; height: 7px;}
-*::-webkit-scrollbar-track {background-color: var();}
-*::-webkit-scrollbar-thumb {background-color: var();}
-*::-webkit-scrollbar-thumb:active {background: var();}
+*::-webkit-scrollbar-track {background-color: var(--brown2);}
+*::-webkit-scrollbar-thumb {background-color: var(--gold);}
+*::-webkit-scrollbar-thumb:active {background: var(--text-bg);}
 
 :focus {outline: none;}
 
@@ -139,12 +138,16 @@ address, em {font-style: normal;}
 
 .modlist, .lastedit, .punbb div#pun-live-rusff, .punbb .topic a.sharelink {display: none;}
 
-#tags .container, .post_report, .post_reputation, #MyBookmarks {
-  background: var(--pun-bg);
+#tags .container, .post_report, .post_reputation, #MyBookmarks, .pun-modal .modal-inner {
+  background: url(https://forumstatic.ru/files/0011/c0/7c/98424.jpg) repeat top center var(--pun-bg);
+}
+
+.pun-modal .closer {
+  font-family: tahoma;
 }
 
 #tags .container {
-  padding: var(--mpad) !important;
+  padding: var(--pad) !important;
   border: 1px solid var(--gold);
   top: 0 !important;
   max-height: 300px;
@@ -156,13 +159,20 @@ address, em {font-style: normal;}
 
 input.button, #pun-admain input.button, #sub4, input[type="button"] {
   padding: 2px 10px;
-  border: 1px solid currentColor;
+  background: var(--pun-bg);
+  border: 1px solid var(--gold);
   cursor: pointer;
   transition: all .2s linear 0s;
+  box-shadow: 2px 2px 1px var(--brown);
+  color: var(--link);
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 input.button:hover, #pun-admain input.button:hover, #sub4:hover, input[type="button"]:hover {
-
+  background: var(--text-bg);
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 
 /* ОФОРМЛЕНИЕ ПОЛЕЙ ВВОДА
@@ -194,8 +204,12 @@ html {
 #pun {
   margin: 30px auto;
   padding: 37px 0;
-  width: 1000px;
-  background: url(https://forumstatic.ru/files/0011/c0/7c/86132.png) no-repeat top left, url(https://forumstatic.ru/files/0011/c0/7c/26435.png) no-repeat top right, url(https://forumstatic.ru/files/0011/c0/7c/17606.png) no-repeat bottom right, url(https://forumstatic.ru/files/0011/c0/7c/34219.png) no-repeat bottom left, url(https://forumstatic.ru/files/0011/c0/7c/51879.png) repeat-x top left 37px, url(https://forumstatic.ru/files/0011/c0/7c/10144.png) repeat-y top 37px right, url(https://forumstatic.ru/files/0011/c0/7c/99504.png) repeat-x bottom left 37px, url(https://forumstatic.ru/files/0011/c0/7c/27340.png) repeat-y top 37px left, url(https://forumstatic.ru/files/0011/c0/7c/98424.jpg) repeat top center var(--pun-bg);
+  width: 1100px;
+  background: url(https://forumstatic.ru/files/0011/c0/7c/98424.jpg) repeat top center var(--pun-bg);
+  border-image: url(https://forumstatic.ru/files/0011/c0/7c/98443.png) 37/37px repeat;
+  -moz-border-image: url(https://forumstatic.ru/files/0011/c0/7c/98443.png) 37/37px repeat;
+  -webkit-border-image: url(https://forumstatic.ru/files/0011/c0/7c/98443.png) 37/37px repeat;
+  -o-border-image: url(https://forumstatic.ru/files/0011/c0/7c/98443.png) 37/37px repeat;
   box-sizing: border-box;
   box-shadow: 0 0 15px rgba(0,0,0,.5);
 }
@@ -205,7 +219,7 @@ html {
   letter-spacing: .5px;
 }
 
-.punbb > div .container {padding: var(--padding);}
+.punbb > div .container {padding: var(--bigpad);}
 
 
 /* Навигационные ссылки */
@@ -255,7 +269,7 @@ html {
 /* Статус */
 
 #pun-status .container {
-  padding: var(--padding);
+  padding: var(--bigpad);
 }
 
 #pun-status span {
@@ -264,7 +278,7 @@ html {
 }
 
 .punbb .container.crumbs {
-  padding: var(--padding);
+  padding: var(--bigpad);
 }
 
 /* Копирайт */
@@ -277,7 +291,7 @@ html {
 ------------------------------------------*/
 
 .punbb .forum .container {
-  padding: var(--padding);
+  padding: var(--bigpad);
 }
 
 .main table {
@@ -362,7 +376,7 @@ tr.iclosed div.icon {
 
 .linkst {
   position: relative;
-  padding: var(--padding);
+  padding: var(--bigpad);
   display: flex;
   justify-content: space-between;
 }
@@ -375,7 +389,7 @@ tr.iclosed div.icon {
 
 .linksb {
   position: relative;
-  padding: var(--padding);
+  padding: var(--bigpad);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -402,7 +416,7 @@ tr.iclosed div.icon {
 /* Модераторское меню, RSS, Atom */
 
 .punbb .modmenu .container {
-  padding: var(--padding);
+  padding: var(--bigpad);
   text-align: right;
 }
 
@@ -419,33 +433,29 @@ tr.iclosed div.icon {
 
 /* Категории */
 
+#pun-index .category tr {
+  margin-bottom: 10px;
+  padding: 15px;
+  background: var(--cover);
+  display: flex;
+}
+
 #pun-index thead, #pun-index .tc2, #pun-index .tc3 {display: none;}
 
 #pun-index tbody.hasicon td.tcl {
-  padding: 10px 60px 10px 0;
   position: relative;
   display: block;
   width: 500px;
 }
 
 #pun-index .category .container {
-  padding: var(--padding);
+  padding: var(--bigpad);
 }
 
 #pun-index .intd {
-  padding: 40px 30px 30px;
-  width: 465px;
-  height: 199px;
-  background: url(https://forumstatic.ru/files/0011/c0/7c/65325.png) no-repeat top center;
   box-sizing: border-box;
   color: var(--brown);
   text-align: justify;
-}
-
-#pun-index div.icon {
-  margin: 0;
-  right: 20px;
-  top: 15px;
 }
 
 #pun-index .tclcon h3 {
@@ -482,8 +492,13 @@ tr.iclosed div.icon {
 
 /* Статистика */
 
+#pun-stats .statscon {
+  padding: var(--bigpad);
+}
+
 #pun-stats .container {
-  padding: var(--padding);
+  padding: 20px 25px;
+  background: var(--cover);
 }
 
 #pun-stats a {
@@ -520,9 +535,9 @@ li#onlinelist {
 #pun-title .title-logo {display: none;}
 
 #pun-title table {
-  background: url(https://forumstatic.ru/files/0011/c0/7c/21888.jpg) no-repeat top center;
+  background: url(https://forumstatic.ru/files/0011/c0/7c/17623.jpg) no-repeat top center;
   height: 300px;
-  width: 926px;
+  width: 1026px;
   margin: 0 auto;
 }
 
@@ -532,10 +547,14 @@ li#onlinelist {
 
 .tablica {
   position: absolute;
-  width: 926px;
+  width: 1026px;
   height: 300px;
   margin: 0 37px;
   z-index: 1;
+}
+
+.tablica_under {
+  height: 300px;
 }
 
 .forum_name {
@@ -564,58 +583,114 @@ li#onlinelist {
   color: var(--brown);
 }
 
-.nav{
-  position: relative;
-  height: 30px;
-  width: 250px;
-}
-
-/* КОД ССЫЛОК НАВИГАЦИИ ОТ ВЕЩЕГО ДУХА */
-/* настройка кнопки, может быть текстом */
-.spirit-navigation {
-  height: 30px;
-  width: 250px;
-  display: flex;
-  cursor: pointer;
+.tablica_over {
+  height: 300px;
   position: absolute;
-  transition: all 0.3s ease-in-out 0s;
-  align-items: center;
+  width: 1026px;
+  opacity: 0;
+  transition: opacity .3s linear 0s;
+  backdrop-filter: blur(5px);
+  background: var(--cover);
+}
+
+.tablica_over:hover {
+  opacity: 1;
+}
+
+.hotlinks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: fit-content;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  height: 120px;
+}
+
+.hotlinks a {
+  background: var(--cover2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  line-height: 20px;
+  width: 170px;
+  text-align: center;
+}
+
+.tab_bests {
+  height: 300px;
+  width: 360px;
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 10px;
 }
 
-/* вид кнопки после клика по ней */
-.spirit-navigation.spirit-navigation_hover{
-
+.tab_bests span {
+  font-family: var(--ktp);
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  line-height: 20px;
 }
 
-/* настройка позиции выпадающего по клику окна и его ширина */
-#navigblock {width: 200px;
-position: absolute;
-top: 30px;
-z-index: 999;
+.tab_faces {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* настройка блока ссылок, цвет фона, тени, прозрачность, отступы */
-.sslka {
-display: block;
-padding: 5px;
+.faces_inner {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* настройка вида самой ссылки, ширина, цвет, фон, шрифты и так далее */
-#pun .sslka a {
-white-space: nowrap;
-margin: 5px auto;
-text-align: center;
-transition: all 0.3s linear 0s;
-display: block;
-padding: 4px;
-text-transform: uppercase;
+.faces_inner a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: var(--cover2);
+  filter: sepia(1) brightness(120%) contrast(70%);
 }
 
-/* ссылка при наведении */
-#pun .sslka a:hover {
-
+.faces_inner a:hover {
+  filter: none;
 }
+
+.faces_inner a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tab_news {
+  background: var(--cover2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.news_inner {
+  padding-right: 10px;
+  height: 80px;
+  overflow: auto;
+  scrollbar-color: var(--gold) var(--text-bg);
+}
+
+.news_inner p {
+  padding-bottom: 5px;
+  font-size: 11px;
+}
+
 
 /* Футер
 ------------------------------------------*/
@@ -664,7 +739,7 @@ text-transform: uppercase;
 
 .post h3 span {
   display: block;
-  padding: var(--mpad);
+  padding: var(--pad);
   background: var(--cover);
 }
 
@@ -842,8 +917,9 @@ pre {font: 11px monaco;}
 
 .quote-box, .code-box {
   margin: 4px 10px 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  border: 1px solid var(--cover);
+  background: var(--cover2);
 }
 
 .quote-box cite {
@@ -881,7 +957,7 @@ p[class="checkfield"] *, div[class="checkfield"] *, fieldset[class="radiofield"]
 textarea, input, select, optgroup {font-size: 14px;}
 optgroup {font-weight: bold;}
 
-.formal .container {padding: var(--padding);}
+.formal .container {padding: var(--bigpad);}
 
 .formsubmit {
   padding: 0;
@@ -993,7 +1069,7 @@ img.avatardemo {
 
 #pun-userlist .formal, #pun-userlist .formal .container {margin-bottom: 0;}
 
-#pun-userlist .formal .container {padding: var(--padding);}
+#pun-userlist .formal .container {padding: var(--bigpad);}
 
 #pun-userlist .tc2 {
   text-align: left;
@@ -1006,7 +1082,7 @@ img.avatardemo {
 
 /* Собщения об ошибках */
 
-.info .container {padding: var(--mpad);}
+.info .container {padding: var(--pad);}
 .info .container .backlink {padding-top: 8px;}
 
 /* Регистрация */
@@ -1028,7 +1104,7 @@ img.avatardemo {
   z-index: 9999;
   display: none;
   position: fixed;
-  margin-left: 980px !important;
+  margin-left: 1120px !important;
   box-sizing: border-box;
   font-family: var(--abd);
   transition: all .3s linear 0s;
@@ -1094,6 +1170,15 @@ align-items: center;
 justify-content: center;
 left: 0;
 top: 0;
+}
+
+.punbb-admin #form-buttons td:before {
+  font-family: var(--fa);
+  font-weight: 400;
+}
+
+.punbb-admin #form-buttons td:after {
+  display: none;
 }
 
 #form-buttons td:hover:before {color: var(--link-hover);}
