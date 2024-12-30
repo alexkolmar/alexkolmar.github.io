@@ -3,6 +3,11 @@
 /* Иконический шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
 
+
+/****************************************
+Чистый стиль by Alex Kolmar (бродяга)
+****************************************/
+
 /* Полезные сервисные настройки
 -------------------------------------------------------------*/
 
@@ -454,6 +459,16 @@ body::before {
 
 tbody.hasicon td.tcl {
   padding-left: 40px;
+}
+
+/* аватар */
+
+.punbb td .user-avatar, #pun-index td .user-avatar {
+
+}
+
+.punbb td .user-avatar .avatar-image {
+
 }
 
 /* Иконки */
