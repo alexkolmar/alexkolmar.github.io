@@ -618,6 +618,18 @@ li#onlinelist {
 .tablica {}
 
 
+/* Объявление
+------------------------------------------*/
+
+#pun-announcement {}
+
+/* скрываем слово "объявление" */
+
+#pun-announcement h2 {
+  display: none;
+}
+
+
 /* Футер
 ------------------------------------------*/
 
@@ -791,7 +803,8 @@ pre {
 .code-box {
   margin: 4px 10px 10px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--link-hover);
+  background: var(--sec-bg);
 }
 
 .quote-box cite {
@@ -809,7 +822,7 @@ pre {
 }
 
 .post-sig dt {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--link-hover);
   width: 300px;
   margin: 10px auto;
 }
