@@ -45,11 +45,16 @@
 
 .portfolio a {
     text-decoration: none;
+    color: var(--violet3);
 }
 
 .portfolio button, .portfolio a {
     transition: all .2s linear 0s;
     cursor: pointer;
+}
+
+.portfolio a:hover {
+    color: var(--violet4)
 }
 
 .p_header {
@@ -372,4 +377,45 @@
 
 .p_descr .close:hover {
     color: var(--violet4);
+}
+
+.p_descr {
+    font-size: 16px;
+}
+
+.portfolio ul li {
+    list-style: none;
+}
+
+.my_contacts ul {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.my_contacts li {
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.my_contacts li i {
+    font-size: 30px;
+    width: 30px;
+}
+
+.fa-envelope {
+    color: #acacac;
+}
+
+.fa-telegram {
+    color: #24a1de;
+}
+
+.fa-vk {
+    color: #0077ff;
+}
+
+.fa-discord {
+    color: #5661ea;
 }

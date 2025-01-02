@@ -82,7 +82,15 @@
  <!-- всплывашки -->
  <div class="p_descr my_contacts" id="descr-1">
   <a class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></a>
-  <p>какая-то инфа</p>
+  <ul>
+   <li><i class="fa-solid fa-envelope"></i> <p>личные сообщения на форуме</p></li>
+   <li><i class="fa-brands fa-telegram"></i> <p><a href="https://t.me/AlexKolmar">мой телеграм</a>, <a href="https://t.me/byalexkolmar">мой канал в телеграме</a></p></li>
+   <li><i class="fa-brands fa-vk"></i> <p><a href="https://vk.com/darth_kolmar">я в вк</a>, <a href="https://vk.com/byalexkolmar">мой канал в вк</a></p></li>
+   <li><i class="fa-brands fa-discord"></i> <p>AlexKolmar</p></li>
+   <li><a href="https://boosty.to/byalexkolmar">boosty</a></li>
+   <li><a href="https://hipolink.me/alexkolmar">hipolink</a></li>
+   <li></li>
+  </ul>
  </div>
 
  <div class="p_descr my_skills_descr" id="descr-2">
@@ -94,34 +102,34 @@
 
 <script>
  $(document).ready(function () {
-     $(".portfolio button").on("click", function () {
-         var id = $(this).data("id");
-         var targetDescription = $("#descr-" + id);
-         var targetArea = $(this);
+  $(".portfolio button").on("click", function () {
+   var id = $(this).data("id");
+   var targetDescription = $("#descr-" + id);
+   var targetArea = $(this);
 
-         // Закрываем все открытые описания и снимаем класс active с area
-         $(".p_descr").not(targetDescription).fadeOut(600);
-         $(".portfolio button").not(targetArea).removeClass("active");
+   // Закрываем все открытые описания и снимаем класс active с area
+   $(".p_descr").not(targetDescription).fadeOut(600);
+   $(".portfolio button").not(targetArea).removeClass("active");
 
-         // Переключаем текущее описание
-         if (targetDescription.is(":visible")) {
-             targetDescription.fadeOut(600);
-             targetArea.removeClass("active");
-         } else {
-             targetDescription.fadeIn(600);
-             targetArea.addClass("active");
-         }
-     });
+   // Переключаем текущее описание
+   if (targetDescription.is(":visible")) {
+    targetDescription.fadeOut(600);
+    targetArea.removeClass("active");
+   } else {
+    targetDescription.fadeIn(600);
+    targetArea.addClass("active");
+   }
+  });
 
-     // Закрытие по кнопке "Close"
-     $(".p_descr .close").on("click", function () {
-         var targetDescription = $(this).closest(".p_descr");
-         var id = targetDescription.attr("id").split("-")[1];
-         var targetArea = $(".portfolio button[data-id='" + id + "']");
+  // Закрытие по кнопке "Close"
+  $(".p_descr .close").on("click", function () {
+   var targetDescription = $(this).closest(".p_descr");
+   var id = targetDescription.attr("id").split("-")[1];
+   var targetArea = $(".portfolio button[data-id='" + id + "']");
 
-         targetDescription.fadeOut(600);
-         targetArea.removeClass("active");
-     });
+   targetDescription.fadeOut(600);
+   targetArea.removeClass("active");
+  });
  });
 </script>
 
