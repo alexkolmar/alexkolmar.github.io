@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Увеличение картинки в отдельном блоке</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Стиль для контейнера модального окна */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* Прозрачность изначально */
+      pointer-events: none; /* Блокируем взаимодействие */
+      transition: opacity 0.5s ease; /* Плавное изменение прозрачности */
+    }
+
+    .modal.show {
+      opacity: 1; /* Полностью видимое */
+      pointer-events: auto; /* Разрешаем взаимодействие */
+    }
+
+    .modal img {
+        width: unset;
+        height: unset;
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Кликни на изображение для увеличения</h1>
+  <img src="https://i.imgur.com/Z1F51ri.jpeg" alt="Preview Image" id="preview-image">
+
+  <!-- Контейнер модального окна -->
+  <div class="modal" id="image-modal">
+    <img src="https://i.imgur.com/Z1F51ri.jpeg" alt="Enlarged Image">
+  </div>
+
+  <script>
+    const previewImage = document.getElementById('preview-image');
+    const modal = document.getElementById('image-modal');
+
+    // Открытие увеличенного изображения
+    previewImage.addEventListener('click', () => {
+      modal.classList.add('show'); // Добавляем класс "show"
+    });
+
+    // Закрытие модального окна при клике на него или вне изображения
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal || event.target.tagName === 'IMG') {
+        modal.classList.remove('show'); // Убираем класс "show"
+      }
+    });
+  </script>
+</body>
+</html>

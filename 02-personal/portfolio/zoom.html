@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Увеличение картинки по клику</title>
+  <style>
+    img {
+      width: 300px;
+      height: auto;
+      transition: all 0.3s linear 0s; /* Плавная анимация увеличения */
+      cursor: pointer;
+    }
+
+    img.zoomed {
+      transform: scale(2) translateX(-50%); /* Увеличение в 2 раза */
+      transform-origin: top left;
+      transition: all 0.3s linear 0s;
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Кликни на изображение</h1>
+  <img src="https://i.imgur.com/Z1F51ri.jpeg" alt="Sample Image" id="image">
+
+  <script>
+    const image = document.getElementById('image');
+
+    image.addEventListener('click', () => {
+      image.classList.toggle('zoomed'); // Переключение класса "zoomed"
+    });
+  </script>
+</body>
+</html>

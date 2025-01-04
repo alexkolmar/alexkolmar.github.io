@@ -2,420 +2,547 @@
 @import url('https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css');
 
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
 }
 
 :root {
-	--violet1: #422e88;
-	--violet2: #715190;
-	--violet3: #504693;
-	--violet4: #8655c0;
-    --violet5: #cfc5d4;
-    --white: #fff;
-    --box-shadow: 5px 10px 15px 0 rgba(0, 0, 0, 0.33), inset -3px -3px 5px 0 rgba(66, 46, 136, 0.7), inset 3px 3px 5px 0 rgba(255,255,255,.7), 2px 2px 0 var(--violet1), 2px -2px 0 var(--violet4), -2px -2px 0 var(--violet4), -2px 2px 0 var(--violet4);
-    --box-shadow2: inset -4px -4px 2px 0 rgba(0, 0, 0, 0.25), inset 4px 4px 2px 0 rgba(207, 197, 212, 0.5);
-    --box-shadow2-hover: rgba(0, 0, 0, 0.25) -4px -4px 2px 0px inset, rgba(207, 197, 212, 0.25) 4px 4px 2px 0px inset, rgba(134, 85, 192, 0.3) 0px 0px 8px 5px;
-    --box-shadow2-hover2:  rgba(0, 0, 0, 0.25) -4px -4px 2px 0px inset, rgba(207, 197, 212, 0.25) 4px 4px 2px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 5px 3px;
-    --font-family: "Raleway", sans-serif;
-    --second-family: "Open Sans", sans-serif;
-    --third-family: "Cairo", sans-serif;
+  --violet1: #422e88;
+  --violet2: #715190;
+  --violet3: #504693;
+  --violet4: #8655c0;
+  --violet5: #cfc5d4;
+  --white: #fff;
+  --box-shadow: 5px 10px 15px 0 rgba(0, 0, 0, 0.33), inset -3px -3px 5px 0 rgba(66, 46, 136, 0.7), inset 3px 3px 5px 0 rgba(255, 255, 255, .7), 2px 2px 0 var(--violet1), 2px -2px 0 var(--violet4), -2px -2px 0 var(--violet4), -2px 2px 0 var(--violet4);
+  --box-shadow2: inset -4px -4px 2px 0 rgba(0, 0, 0, 0.25), inset 4px 4px 2px 0 rgba(207, 197, 212, 0.5);
+  --box-shadow2-hover: rgba(0, 0, 0, 0.25) -4px -4px 2px 0px inset, rgba(207, 197, 212, 0.25) 4px 4px 2px 0px inset, rgba(134, 85, 192, 0.3) 0px 0px 8px 5px;
+  --box-shadow2-hover2: rgba(0, 0, 0, 0.25) -4px -4px 2px 0px inset, rgba(207, 197, 212, 0.25) 4px 4px 2px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 5px 3px;
+  --font-family: "Raleway", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Cairo", sans-serif;
+  --font3: "Arimo", sans-serif;
 }
 
 .portfolio {
-    position: relative;
-    margin: 0 auto;
-    border: 2px solid var(--violet1);
-    border-radius: 20px;
-    width: 1000px;
-    height: 960px;
-    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
-    background: url(https://forumstatic.ru/files/0018/1e/e2/40358.png) no-repeat top 175px left 40px, linear-gradient(135deg, #fff 30%, var(--violet5) 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: flex-end;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    color: #000;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid var(--violet1);
+  border-radius: 20px;
+  width: 1000px;
+  height: 960px;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+  background: url(https://forumstatic.ru/files/0018/1e/e2/40358.png) no-repeat top 175px left 40px, linear-gradient(135deg, #fff 30%, var(--violet5) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-end;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
 }
 
 .portfolio a {
-    text-decoration: none;
-    color: var(--violet3);
+  text-decoration: none;
+  color: var(--violet3);
 }
 
-.portfolio button, .portfolio a {
-    transition: all .2s linear 0s;
-    cursor: pointer;
+.portfolio button,
+.portfolio a {
+  transition: all .2s linear 0s;
+  cursor: pointer;
 }
 
 .portfolio a:hover {
-    color: var(--violet4)
+  color: var(--violet4)
 }
 
 .p_header {
-    border-bottom: 2px solid var(--violet1);
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    height: 110px;
-    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.25);
-    background: linear-gradient(90deg, #fff 30%, var(--violet5) 100%);
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    gap: 30px;
-  }
+  border-bottom: 2px solid var(--violet1);
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 110px;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #fff 30%, var(--violet5) 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 30px;
+}
 
 .p_header img {
-    border-radius: 100%;
-    border: 1px solid var(--violet1);
-    width: 80px;
-    height: 80px;
+  border-radius: 100%;
+  border: 1px solid var(--violet1);
+  width: 80px;
+  height: 80px;
 }
 
 .portfolio h1 {
-    font-family: var(--third-family);
-    font-weight: 700;
-    font-size: 48px;
-    color: var(--violet1);
-    flex-grow: 1;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--violet1);
+  flex-grow: 1;
+}
+
+.portfolio h2 {
+  font-family: var(--font3);
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: var(--violet1);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .portfolio h3 {
-    margin-bottom: 10px;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 36px;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 0 1px 1px #000;
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
 }
 
 .portfolio h4 {
-    margin-bottom: 15px;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: var(--violet1);
-    text-shadow: 0 1px 1px #fff;
-    text-align: center;
+  margin-bottom: 15px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--violet1);
+  text-shadow: 0 1px 1px #fff;
+  text-align: center;
 }
 
 .portfolio .h4_white {
-    text-shadow: 0 1px 1px #000;
-    color: var(--white);
+  text-shadow: 0 1px 1px #000;
+  color: var(--white);
 }
 
 .portfolio p {
-    padding: 0 !important;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
+  padding: 0 !important;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.portfolio s {
+  text-decoration: none;
+  color: transparent;
+  background: var(--violet5);
+  cursor: pointer;
+  transition: all .2s linear 0s;
+}
+
+.portfolio s:hover {
+  color: currentColor;
+  background: transparent;
 }
 
 .p_header .p_contacts {
-    border-radius: 25px;
-    padding: 11px 34px;
-    width: 200px;
-    height: 50px;
-    box-shadow: var(--box-shadow2);
-    background: linear-gradient(90deg, #504693 0%, #422e88 100%);
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #fff;
+  border-radius: 25px;
+  padding: 11px 34px;
+  width: 200px;
+  height: 50px;
+  box-shadow: var(--box-shadow2);
+  background: linear-gradient(90deg, #504693 0%, #422e88 100%);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.p_header .p_contacts:hover, .p_header .p_contacts.active {
-    box-shadow: var(--box-shadow2-hover);
-    text-shadow: 0 1px 1px #000, 0 0 5px #cfc5d4;
+.p_header .p_contacts:hover,
+.p_header .p_contacts.active {
+  box-shadow: var(--box-shadow2-hover);
+  text-shadow: 0 1px 1px #000, 0 0 5px #cfc5d4;
 }
 
 .p_inner {
-    margin-right: 40px;
-    width: 830px;
-    height: 770px;
-    display: flex;
-    gap: 40px;
+  margin-right: 40px;
+  width: 830px;
+  height: 770px;
+  display: flex;
+  gap: 40px;
 }
 
 .left_side {
-    display: grid;
-    grid-template-columns: 230px 230px;
-    grid-template-rows: 230px 230px 230px;
-    gap: 40px 40px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "about_me about_me"
-      "my_skills my_service"
-      "styduing my_service";
-  }
+  display: grid;
+  grid-template-columns: 230px 230px;
+  grid-template-rows: 230px 230px 230px;
+  gap: 40px 40px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about_me about_me"
+    "my_skills my_service"
+    "styduing my_service";
+}
 
 .right_side {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 770px;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 770px;
+  flex-grow: 1;
 }
 
 .p_block {
-    position: relative;
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
-}
-  
-.about_me {
-    padding: 20px 30px;
-    grid-area: about_me;
-    background: linear-gradient(165deg, rgba(66, 46, 136, 0.7) 0%, rgba(207, 197, 212, 0.5) 100%), url("https://forumstatic.ru/files/0018/1e/e2/66607.jpg") no-repeat top center/cover;
-}
-  
-.my_skills {
-    padding: 15px 20px;
-    grid-area: my_skills;
-    background: linear-gradient(180deg, #fff 25%, rgba(80, 70, 147, .5) 100%), linear-gradient(135deg, rgba(255, 255, 255, 0.5) 35%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(255, 255, 255, 0.5) 35%, rgba(80, 70, 147, 0.5) 100%);
+  position: relative;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
 }
 
-.my_skills svg {
-    margin: 0 auto 25px;
-    display: block;
+.about_me {
+  padding: 20px 30px;
+  grid-area: about_me;
+  background: linear-gradient(165deg, rgba(66, 46, 136, 0.7) 0%, rgba(207, 197, 212, 0.5) 100%), url("https://forumstatic.ru/files/0018/1e/e2/19738.jpg") no-repeat top center/cover;
+}
+
+.my_skills {
+  padding: 15px 20px;
+  grid-area: my_skills;
+  background: linear-gradient(180deg, #fff 25%, rgba(80, 70, 147, .5) 100%), linear-gradient(135deg, rgba(255, 255, 255, 0.5) 35%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(255, 255, 255, 0.5) 35%, rgba(80, 70, 147, 0.5) 100%);
+}
+
+.skills_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .b_more {
-    border: 1px solid var(--violet1);
-    border-radius: 25px;
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #8655c0 0%, #715190 100%);
-    box-shadow: var(--box-shadow2);
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff;
-    display: block;
-    line-height: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 25px;
+  border: 1px solid var(--violet1);
+  border-radius: 25px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #8655c0 0%, #715190 100%);
+  box-shadow: var(--box-shadow2);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  line-height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
 }
 
 .b_more:hover {
-    box-shadow: var(--box-shadow2-hover2);
-    text-shadow: 0 1px 1px #000, 0 0 5px #cfc5d4;
+  box-shadow: var(--box-shadow2-hover2);
+  text-shadow: 0 1px 1px #000, 0 0 5px #cfc5d4;
 }
-  
+
 .styduing {
-    padding: 15px 25px;
-    grid-area: styduing;
-    background: linear-gradient(180deg, #504693 0%, #8655c0 75.33%), linear-gradient(135deg, rgba(66, 46, 136, 0.5) 35.43%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(80, 70, 147, 0.5) 0%, rgba(235, 103, 189, 0.5) 49.67%, rgba(255, 255, 255, 0.5) 100%);
+  padding: 15px 25px;
+  grid-area: styduing;
+  background: linear-gradient(180deg, #504693 0%, #8655c0 75.33%), linear-gradient(135deg, rgba(66, 46, 136, 0.5) 35.43%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(80, 70, 147, 0.5) 0%, rgba(235, 103, 189, 0.5) 49.67%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .styduing p {
-    margin-bottom: 25px;
-    font-size: 18px;
+  margin-bottom: 25px;
+  font-size: 18px;
 }
-  
+
 .my_service {
-    grid-area: my_service;
-    background: linear-gradient(180deg, rgba(255, 255, 255,.5) 30%, rgba(207, 197, 212, .5) 100%), url(https://forumstatic.ru/files/0018/1e/e2/66026.webp) no-repeat top center/cover;
+  grid-area: my_service;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .5) 30%, rgba(207, 197, 212, .5) 100%), url("https://forumstatic.ru/files/0018/1e/e2/66026.webp") no-repeat top center/cover;
 }
 
 .my_works {
-    width: 100%;
-    height: 420px;
-    background: linear-gradient(180deg, rgba(80, 70, 147, 50%) 0%, #fff 75.33%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%), url("https://forumstatic.ru/files/0018/1e/e2/10181.jpg") no-repeat top center/cover;
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(180deg, rgba(80, 70, 147, 50%) 0%, #fff 75.33%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%), url("https://forumstatic.ru/files/0018/1e/e2/70540.jpg") no-repeat top center/cover;
 }
 
 .feedback {
-    width: 100%;
-    height: 310px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 35%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(255, 255, 255, 0.5) 35%, rgba(80, 70, 147, 0.5) 100%);
+  width: 100%;
+  height: 310px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 35%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(255, 255, 255, 0.5) 35%, rgba(80, 70, 147, 0.5) 100%);
 }
 
 .p_block_header {
-    margin-bottom: 30px;
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    height: 60px;
-    border-bottom: 2px solid var(--violet1);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25), inset 3px 3px 5px 0 var(--white), inset -3px 0 3px rgba(66, 46, 136, .7);
-    background: linear-gradient(304deg, var(--violet5) 0%, var(--white) 70%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: var(--violet1);
+  margin-bottom: 30px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid var(--violet1);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25), inset 3px 3px 5px 0 var(--white), inset -3px 0 3px rgba(66, 46, 136, .7);
+  background: linear-gradient(304deg, var(--violet5) 0%, var(--white) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--violet1);
 }
 
 .p_block_header2 {
-    margin-bottom: 30px;
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    height: 60px;
-    border-bottom: 2px solid var(--violet1);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25), inset 3px 3px 5px 0 rgba(255, 255, 255, 0.5), inset -3px 0 3px var(--violet1);
-    background: linear-gradient(180deg, #422e88 30%, #8655c0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: var(--white);
-    text-shadow: 0 1px 1px #000;
+  margin-bottom: 30px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid var(--violet1);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25), inset 3px 3px 5px 0 rgba(255, 255, 255, 0.5), inset -3px 0 3px var(--violet1);
+  background: linear-gradient(180deg, #422e88 30%, #8655c0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0 1px 1px #000;
 }
 
 .b_item {
-    border-radius: 25px;
-    padding: 10px 20px;
-    background: var(--violet1);
-    box-shadow: var(--box-shadow2);
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #fff;
-    width: calc(100% - 50px);
-    display: block;
-    margin: 20px auto;
-  }
+  border-radius: 25px;
+  padding: 10px 20px;
+  background: var(--violet1);
+  box-shadow: var(--box-shadow2);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  width: calc(100% - 50px);
+  display: block;
+  margin: 20px auto;
+}
 
 .b_item:hover {
-    box-shadow: var(--box-shadow2-hover);
+  box-shadow: var(--box-shadow2-hover);
 }
 
 .b_grad1 {
-    background: linear-gradient(0deg, var(--violet3) 0%, var(--violet1) 100%);
+  background: linear-gradient(0deg, var(--violet3) 0%, var(--violet1) 100%);
 }
 
 .b_grad2 {
-    background: linear-gradient(0deg, var(--violet2) 0%, var(--violet3) 100%);
+  background: linear-gradient(0deg, var(--violet2) 0%, var(--violet3) 100%);
 }
 
 .b_grad3 {
-    background: linear-gradient(0deg, var(--violet4) 0%, var(--violet2) 100%);
+  background: linear-gradient(0deg, var(--violet4) 0%, var(--violet2) 100%);
 }
 
 .b_grad4 {
-    background: linear-gradient(0deg, var(--violet5) 0%, var(--violet4) 100%);
+  background: linear-gradient(0deg, var(--violet5) 0%, var(--violet4) 100%);
 }
 
 .b_grad5 {
-    background: linear-gradient(0deg, var(--white) 0%, var(--violet5) 100%);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(0deg, var(--white) 0%, var(--violet5) 100%);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .p_feed {
-    display: flex;
-    width: calc(100% - 50px);
-    margin: 0 auto;
-    gap: 10px 20px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  gap: 10px 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.p_feed img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    border: 1px solid var(--violet1);
+.feedback_descr .p_feed {
+  width: 100%;
+}
+
+.p_feed .feed_ava {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 1px solid var(--violet1);
 }
 
 .p_name {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: var(--violet1);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--violet1);
 }
 
 .p_name:hover {
-    color: var(--violet2);
+  color: var(--violet2);
 }
 
-.p_feed p, .p_descr p {
-    text-shadow: none;
-    color: #000;
+.p_feed p,
+.p_descr p {
+  text-shadow: none;
+  color: #000;
 }
 
 .p_descr {
-    display: none;
-    position: absolute;
-    top: 110px;
-    width: 100%;
-    height: 846px;
-    background: var(--white);
-    border-radius: 0 0 20px 20px;
-    background: linear-gradient(135deg, #fff 30%, var(--violet5) 100%);
-    box-shadow: inset 0 8px 15px 0 rgba(0, 0, 0, 0.25);
-    padding: 30px 40px;
+  display: none;
+  position: absolute;
+  top: 110px;
+  width: 100%;
+  height: 846px;
+  background: var(--white);
+  border-radius: 0 0 20px 20px;
+  background: linear-gradient(135deg, #fff 30%, var(--violet5) 100%);
+  box-shadow: inset 0 8px 15px 0 rgba(0, 0, 0, 0.25);
+  padding: 30px 40px;
 }
 
 .p_descr .close {
-    position: absolute;
-    right: 20px;
-    font-size: 30px;
-    top: 15px;
-    line-height: 30px;
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  top: 15px;
+  line-height: 30px;
 }
 
 .p_descr .close:hover {
-    color: var(--violet4);
+  color: var(--violet4);
 }
 
-.p_descr {
-    font-size: 16px;
+.p_descr_inner {
+  max-height: 730px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--violet5) transparent;
+  margin-right: -10px;
+  padding-right: 20px;
+}
+
+.p_descr p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.p_descr ul {
+  margin-bottom: 20px;
 }
 
 .portfolio ul li {
-    list-style: none;
+  list-style: none;
+  font-size: 16px;
 }
 
 .my_contacts ul {
-    width: fit-content;
-    margin: 0 auto;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .my_contacts li {
-    display: flex;
-    align-items: center;
-    gap: 10px 20px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.my_contacts li p {
+  margin: 0;
 }
 
 .my_contacts li i {
-    font-size: 30px;
-    width: 30px;
+  font-size: 30px;
+  width: 30px;
 }
 
 .fa-envelope {
-    color: #acacac;
+  color: #acacac;
 }
 
 .fa-telegram {
-    color: #24a1de;
+  color: #24a1de;
 }
 
 .fa-vk {
-    color: #0077ff;
+  color: #0077ff;
 }
 
 .fa-discord {
-    color: #5661ea;
+  color: #5661ea;
+}
+
+.p_feed p {
+  margin: 0;
+}
+
+.p_descr .p_feed {
+  margin-bottom: 20px;
+}
+
+.p_descr .p_feed:not(:last-of-type):after {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  background: var(--violet5);
+  margin: 10px auto;
+}
+
+.my_works_inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+.gallery-image {
+  width: 280px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+/* Стиль для модального окна */
+.modal {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: 847px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  border-radius: 0 0 18px 18px;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal img {
+  position: relative;
+  width: unset;
+  height: unset;
+  display: block;
+  margin: 0 auto;
+  max-width: 95%;
+  max-height: 95%;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 5px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
