@@ -47,6 +47,7 @@
 .portfolio a {
   text-decoration: none;
   color: var(--violet3);
+  font-weight: bold;
 }
 
 .portfolio button,
@@ -77,12 +78,15 @@
   border: 1px solid var(--violet1);
   width: 80px;
   height: 80px;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .portfolio h1 {
   font-family: var(--third-family);
   font-weight: 700;
   font-size: 48px;
+  line-height: 60px;
   color: var(--violet1);
   flex-grow: 1;
 }
@@ -158,9 +162,18 @@
   text-transform: uppercase;
   color: #fff;
 }
+.p_rules {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: var(--box-shadow2);
+  background: var(--violet4);
+  font-size: 24px;
+  color: var(--white);
+}
 
-.p_header .p_contacts:hover,
-.p_header .p_contacts.active {
+.p_header .p_contacts:hover, .p_rules:hover,
+.p_header .p_contacts.active, .p_rules.active {
   box-shadow: var(--box-shadow2-hover);
   text-shadow: 0 1px 1px #000, 0 0 5px #cfc5d4;
 }
@@ -262,13 +275,13 @@
 
 .my_works {
   width: 100%;
-  height: 420px;
+  height: 450px;
   background: linear-gradient(180deg, rgba(80, 70, 147, 50%) 0%, #fff 75.33%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%), url("https://forumstatic.ru/files/0018/1e/e2/70540.jpg") no-repeat top center/cover;
 }
 
 .feedback {
   width: 100%;
-  height: 310px;
+  height: 280px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 35%, rgba(134, 85, 192, 0.5) 100%), linear-gradient(225deg, rgba(255, 255, 255, 0.5) 35%, rgba(80, 70, 147, 0.5) 100%);
 }
 
@@ -352,14 +365,22 @@
 .p_feed {
   display: flex;
   width: calc(100% - 50px);
-  margin: 0 auto;
+  margin: 0 auto 20px;
   gap: 10px 20px;
   align-items: center;
   flex-wrap: wrap;
 }
 
+.portfolio .feedback_stars {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--violet2);
+}
+
 .feedback_descr .p_feed {
   width: 100%;
+  margin: 0;
 }
 
 .p_feed .feed_ava {
@@ -369,6 +390,7 @@
   object-position: center;
   border-radius: 50%;
   border: 1px solid var(--violet1);
+  background: var(--violet5);
 }
 
 .p_name {
@@ -429,8 +451,19 @@
   text-align: justify;
 }
 
+.p_descr ol {
+  padding-left: 25px;
+  text-align: justify;
+}
+
+.p_descr ol li {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
 .p_descr ul {
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .portfolio ul li {
@@ -483,7 +516,7 @@
   margin-bottom: 20px;
 }
 
-.p_descr .p_feed:not(:last-of-type):after {
+.p_descr .p_feed:not(:last-of-type):after, .p_mygood:not(:last-of-type):after {
   content: "";
   display: block;
   width: 600px;
@@ -542,7 +575,117 @@
   max-width: 95%;
   max-height: 95%;
   overflow: auto;
-  box-sizing: border-box;
-  border: 5px solid white;
+  background: white;
+  padding: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.p_mygood {
+  margin-bottom: 20px;
+}
+
+.good_img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+@media screen and (max-width: 540px) {
+
+  .portfolio {
+    width: 100%;
+    background: linear-gradient(135deg, #fff 30%, var(--violet5) 100%);
+    height: 900px;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .p_header {
+    padding: 20px;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px 30px;
+  }
+
+  .p_header h1 {
+    font-size: 36px;
+    width: 100%;
+    line-height: 46px;
+  }
+
+  .p_inner {
+    width: 100%;
+    margin: 0;
+    height: 800px;
+    overflow: auto;
+    flex-wrap: wrap;
+    padding: 2px 20px 30px;
+  }
+
+  .left_side, .right_side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .p_block {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .p_block h4, .about_me h3, .styduing p, .p_block_header {
+    margin: 0;
+  }
+
+  .b_more {
+    position: relative;
+    transform: none;
+    margin: 0 auto;
+    left: 0;
+    bottom: unset;
+  }
+
+  .b_item {
+    margin: 0 auto;
+  }
+
+  .p_feed {
+    margin: 0 auto;
+  }
+
+  .p_descr {
+    top: 0;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .portfolio .p_descr h2 {
+    font-size: 24px;
+  }
+
+  .portfolio h4 {
+    font-size: 18px;
+  }
+
+  .p_descr_inner {
+    max-height: 780px;
+  }
+
+  .p_descr .p_feed:not(:last-of-type)::after, .p_mygood:not(:last-of-type)::after {
+    width: 90%;
+  }
+
+  .my_works_inner {
+    justify-content: center;
+  }
+
 }
