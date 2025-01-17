@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Black mild';
+    src: url('https://alexkolmar.github.io/fonts/Blackmild/Blackmild.eot');
+    src: local('Black mild Regular'), local('Blackmild-Regular'),
+        url('https://alexkolmar.github.io/fonts/Blackmild/Blackmild.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Blackmild/Blackmild.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Blackmild/Blackmild.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Blackmil.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Blackmild/Blackmild.svg#Blackmild') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
