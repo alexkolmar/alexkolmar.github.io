@@ -2,11 +2,11 @@
     font-family: 'Melon honey';
     src: url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney.eot');
     src: local('Melon honey Regular'), local('Melonhoney-Regular'),
-        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney-Regular.eot?#iefix') format('embedded-opentype'),
-        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney-Regular.woff2') format('woff2'),
-        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney-Regular.woff') format('woff'),
-        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney-Regular.ttf') format('truetype'),
-        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney-Regular.svg#Melonhoney') format('svg');
+        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Melonhoney/Melonhoney.svg#Melonhoney') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
