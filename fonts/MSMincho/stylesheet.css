@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'MS Mincho';
+    src: url('https://alexkolmar.github.io/fonts/MSMincho/MS-Mincho.eot');
+    src: local('MS Mincho'), local('MS-Mincho'),
+        url('https://alexkolmar.github.io/fonts/MSMincho/MS-Mincho.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/MSMincho/MS-Mincho.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/MSMincho/MS-Mincho.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/MSMincho/MS-Mincho.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/MSMincho/MS-Mincho.svg#MS-Mincho') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
