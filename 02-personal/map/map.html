@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Map</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+ <div class="map">
+
+  <div class="area_wrap" id="area_name">
+   <div class="area" data-id="1">локация</div>
+   <div class="description" id="description-1">
+    <h3><a href="">название локации</a></h3>
+    <button class="close" title="закрыть"><i class="fa-solid fa-xmark"></i></button>
+   </div>
+  </div>
+
+ </div>
+
+ <script>
+  $(document).ready(function () {
+   $(".area").on("click", function () {
+    var id = $(this).data("id");
+    var targetDescription = $("#description-" + id);
+    var targetArea = $(this);
+
+    // Закрываем все открытые описания и снимаем класс active с area
+    $(".description").not(targetDescription).fadeOut(600);
+    $(".area").not(targetArea).removeClass("active");
+
+    // Переключаем текущее описание
+    if (targetDescription.is(":visible")) {
+     targetDescription.fadeOut(600);
+     targetArea.removeClass("active");
+    } else {
+     targetDescription.fadeIn(600);
+     targetArea.addClass("active");
+    }
+   });
+
+   // Закрытие по кнопке "Close"
+   $(".description .close").on("click", function () {
+    var targetDescription = $(this).closest(".description");
+    var id = targetDescription.attr("id").split("-")[1];
+    var targetArea = $(".area[data-id='" + id + "']");
+
+    targetDescription.fadeOut(600);
+    targetArea.removeClass("active");
+   });
+  });
+ </script>
+
+</body>
+
+</html>

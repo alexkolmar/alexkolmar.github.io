@@ -1,0 +1,111 @@
+@import url('https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.map {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 1000px;
+    height: 715px;
+    background: url(img/map.jpg) no-repeat top center/cover;
+}
+
+.map .area_wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    pointer-events: none;
+}
+
+.area {
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: bold;
+    color: #fff;
+    transition: all .2s linear 0s;
+    pointer-events: all;
+}
+
+.area.active,
+.area:hover {
+    text-decoration: underline dotted;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 2px;
+}
+
+.description:before {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    left: 30px;
+    border-bottom: 10px solid #fff;
+    top: -9px;
+}
+
+.description {
+    position: relative;
+    display: none;
+    z-index: 10;
+    margin-top: 10px;
+    left: 0;
+    width: 300px;
+    height: auto;
+    background: #fff;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-family: arial;
+    font-size: 10px;
+    color: #000;
+    pointer-events: all;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+}
+
+.description .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    cursor: pointer;
+}
+
+#jade_sea {
+    top: 170px;
+    left: 60px;
+}
+
+#jade_sea .area, #luceras .area {
+    width: 150px;
+    height: 40px;
+}
+
+#luceras {
+    top: 280px;
+    left: 210px;
+}
+
+#monserrat {
+    top: 270px;
+    left: 470px;
+}
+
+#monserrat .area {
+    width: 100px;
+    height: 40px;
+}
