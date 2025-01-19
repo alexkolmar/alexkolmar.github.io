@@ -871,18 +871,24 @@ li#onlinelist {
     font-weight: bold;
 }
 
+.tab_genre {
+    border-bottom: 1px solid var(--link);
+    padding-bottom: 10px;
+}
+
 .tab_logo {
     align-self: flex-start;
 }
 
 .logo_top {
     font-size: 60px;
+    line-height: 75px;
     font-family: "Sawarabi Mincho", serif;
     text-transform: uppercase;
 }
 
 .logo_bottom {
-    font-size: 26px;
+    font-size: 28px;
     font-family: "Perpetua Titling MT";
 }
 

@@ -15,6 +15,10 @@
     background: url(img/map.jpg) no-repeat top center/cover;
 }
 
+.map a {
+    text-decoration: none;
+}
+
 .map .area_wrap {
     position: absolute;
     display: flex;
@@ -31,7 +35,7 @@
     font-size: 12px;
     line-height: 100%;
     font-weight: bold;
-    color: #fff;
+    color: transparent;
     transition: all .2s linear 0s;
     pointer-events: all;
 }
@@ -53,7 +57,7 @@
     border: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    left: 30px;
+    left: 20px;
     border-bottom: 10px solid #fff;
     top: -9px;
 }
@@ -102,10 +106,271 @@
 
 #monserrat {
     top: 270px;
-    left: 470px;
+    left: 490px;
 }
 
-#monserrat .area {
+#monserrat .area, #navarra .area {
+    width: 80px;
+    height: 40px;
+}
+
+#signisen .area {
     width: 100px;
+    height: 40px;
+}
+
+#signisen {
+    left: 550px;
+    top: 220px;
+}
+
+#morraine {
+    left: 380px;
+    top: 340px;
+}
+
+#jacobos {
+    left: 355px;
+    top: 290px;
+}
+
+#jacobos .area, #esben_mountains .area {
+    width: 30px;
+    height: 75px;
+}
+
+#navarra {
+    top: 280px;
+    left: 420px;
+}
+
+#esben_mountains {
+    left: 575px;
+    top: 280px;
+}
+
+#valley {
+    top: 370px;
+    left: 300px;
+}
+
+#basgiat {
+    top: 370px;
+    left: 360px;
+}
+
+#elsum {
+    top: 360px;
+    left: 410px;
+}
+
+#elsum .area {
+    width: 100px;
+    height: 30px;
+}
+
+#chakir {
+    top: 365px;
+    left: 540px;
+}
+
+#chakir .area {
+    width: 80px;
+}
+
+#dannes {
+    top: 300px;
+    left: 690px;
+}
+
+#dannes .area {
+    width: 70px;
+    height: 60px;
+}
+
+#bryevik {
+    top: 385px;
+    left: 640px;
+}
+
+#bryevik .area {
+    width: 80px;
+    height: 30px;
+}
+
+#anka {
+    left: 620px;
+    top: 435px;
+}
+
+#anka .area {
+    width: 60px;
+}
+
+#zolia {
+    top: 450px;
+    left: 660px;
+}
+
+#samarra {
+    top: 410px;
+    left: 530px;
+}
+
+#samarra .area {
+    width: 60px;
+    height: 20px;
+}
+
+#sumerton {
+    top: 460px;
+    left: 500px;
+}
+
+#stonewater {
+    top: 450px;
+    left: 610px;
+}
+
+#stonewater .area {
+    width: 50px;
+    height: 30px;
+}
+
+#deaconshire {
+    top: 410px;
+    left: 335px;
+}
+
+#calldear {
+    left: 210px;
+    top: 395px;
+}
+
+#calldear .area {
+    width: 60px;
+}
+
+#p_calldear {
+    left: 180px;
+    top: 415px;
+}
+
+#tirrendor {
+    top: 485px;
+    left: 225px;
+}
+
+#levellin {
+    top: 500px;
+  left: 210px;
+}
+
+#aretia {
+    top: 510px;
+    left: 320px;
+}
+
+#aretia .area {
+    width: 55px;
+}
+
+#dralore {
+    top: 530px;
+    left: 335px;
+}
+
+#dralore .area, #medaro .area {
+    width: 70px;
+}
+
+#medaro {
+    top: 525px;
+    left: 425px;
+}
+
+#draytus {
+    top: 555px;
+    left: 440px;
+}
+
+#draytus .area {
+    width: 60px;
+}
+
+#aldibann {
+    left: 490px;
+    top: 500px;
+}
+
+#aldibann .area {
+    width: 80px;
+}
+
+#resson {
+    left: 500px;
+    top: 520px;
+}
+
+#resson .area {
+    width: 60px;
+}
+
+#pavis {
+    top: 565px;
+    left: 535px;
+}
+
+#pavis .area {
+    width: 50px;
+}
+
+#crovla {
+    top: 585px;
+    left: 535px;
+}
+
+#cordin {
+    top: 630px;
+    left: 550px;
+}
+
+#cordin .area {
+    width: 60px;
+    height: 30px;
+}
+
+#maleka {
+    top: 525px;
+    left: 675px;
+}
+
+#maleka .area {
+    width: 50px;
+    height: 30px;
+}
+
+#poromiel {
+    top: 530px;
+    left: 560px;
+}
+
+#poromiel .area, #hollows .area {
+    width: 100px;
+    height: 30px;
+}
+
+#hollows {
+    top: 500px;
+    left: 750px;
+}
+
+#arctile {
+    top: 640px;
+    left: 300px;
+}
+
+#arctile .area {
+    width: 130px;
     height: 40px;
 }
