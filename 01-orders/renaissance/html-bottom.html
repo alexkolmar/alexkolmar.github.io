@@ -1,0 +1,168 @@
+<!-- Анти-в-строчку для Сообщений и Репутации © deff -->
+<script type="text/javascript">
+ function changeS(sc, ch, st) { $(sc).parent().each(function () { $(this).html($(this).html().replace(ch, st)); }); }
+ changeS('.pa-posts', 'Сообщений:', 'Сообщений');
+ changeS('.pa-respect', 'Уважение</a>:', 'Уважение</a>');
+ changeS('.pa-respect', 'Уважение:', 'Уважение');
+</script>
+
+<!-- всплывающие подсказки в профиле -->
+<script type="text/javascript">
+ $('.pa-posts .fld-name').attr('title', 'Сообщения');
+ $('.pa-fld2 .fld-name').attr('title', 'Банк');
+ $('.pa-respect .fld-name').attr('title', 'Репутация');
+</script>
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><img src="https://forumstatic.ru/files/0010/ed/c4/41868.png"></div>
+<div class="go-down" id='OnBottom' title="вниз"><img src="https://forumstatic.ru/files/0010/ed/c4/42664.png"></div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
+</script>
+
+
+<!-- Регулировка размера шрифта в постах © Alex_63 -->
+<style>
+ .FNTslider {
+  border-radius: 4px;
+  position: relative;
+  z-index: 1000;
+  background: var(--pale);
+  width: 110px;
+  height: 5px;
+  margin: 3px 5px;
+  border: solid 0px #;
+  float: right;
+  margin-top: 5px;
+  margin-right: 7%;
+ }
+
+ .FNTslider .before {
+  height: 6px;
+  border: solid 0px transparent;
+  border-right: none 0;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  background: var(--pun-bg);
+  margin-top: -1px;
+  box-shadow: 0px 0px 2px 0px rgb(203, 176, 120) inset;
+ }
+
+ .FNTslider .thumb {
+  width: 8px;
+  height: 13px;
+  border-radius: 3px;
+  position: relative;
+  top: -4px;
+  background: var(--mtx);
+  cursor: pointer;
+ }
+</style>
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+<!-- Конец -->
+
+
+<!-- запятая после ника -->
+<script type="text/javascript">
+ function to(username) { insert('[b]' + username + '[/b]' + ', '); }
+</script>
+<!--конец-->
+
+
+<!-- счетчик символов -->
+<script>var a, L, epl = $("#main-reply"), str = '<small id="plng" style="border:1px solid;padding:2px 3px;margin:0 20px 0 10px;">Написано символов: <b>00</b> </small>'; epl.parents("fieldset").find("legend").prepend(str); function epl3() { a = epl.val().length; if (a > 9) { L = '' } else { L = '0' }; $("#plng b").text(L + a) }; epl3(); $(".pl-quote").click(function () { setTimeout('epl3()', 100) }); epl.bind('mouseout mousemove keydown keypress keyup', function (e) { epl3() });</script>
+
+
+<!--замена тире -->
+<script type="text/javascript">
+ $('.post-content p').each(function () {
+  function replacer(str) { return str.replace(/-\s|–\s/gm, '— '); }
+  var a = $(this).clone().wrap('<div></div>').parent().html();
+  var b = a.replace(/>[^<>]+</gim, replacer);
+  if (a != b) $(this).replaceWith(b)
+ });
+</script>
+
+
+<!-- тег абзаца -->
+<style>
+ #button-indent {
+  background: url(http://s7.uploads.ru/t/mnkgq.png) no-repeat center 6px !important;
+ }
+</style>
+<script type="text/javascript">(function () {
+  var b = '[indent]';
+  $("#button-strike").after('<td id="button-indent" title="отступы"><img src="/i/blank.gif"  onclick="insert(\'' + b + '\')"></td>');
+  var indent = '<span style="display: inline-block; margin: 1em 2.1em;"></span>';
+  $('.post-content p:contains("' + b + '")').each(function () { $(this).html($(this).html().replace(/\[indent\]/gm, indent)); });
+ }());
+</script>
+
+
+<!-- Рестор ссылки "НОВЫЕ СООБЩЕНИЯ" -->
+<script type="text/javascript">
+ if (GroupID != 3) { $('#pun-ulinks .container').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>'); }
+</script>
+
+
+<!-- маска от человека-шамана -->
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+ hvScriptSet.addMask({
+  forumAccessExtended: {
+   '1562 г. и другие вехи': ['Пользователи', 'NC-18'],
+   'Общение': ['Пользователи', 'NC-18'],
+   'Дневники': ['Пользователи', 'NC-18']
+  }
+ });
+</script>
+
+
+<!-- баннеры -->
+<div class="banners">
+ <div class="container">
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+ </div>
+</div>

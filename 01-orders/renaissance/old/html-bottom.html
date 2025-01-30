@@ -1,0 +1,83 @@
+<!--кнопки вверх вниз-->
+<div class="go-up" id='ToTop' style="       color: rgb(170 189 222); font-size: 22px!important; text-shadow: 0px 0px 5px  #000000!important;
+  letter-spacing: 2px!important; font-family: Playfair Display !important; text-align: center;">UP</div>
+<div class="go-down" id="OnBottom" style="        color: rgb(170 189 222); font-size: 22px!important; text-shadow: 0px 0px 5px  #000000!important;
+  letter-spacing: 2px!important; font-family: Playfair Display !important; text-align: center;display: block;">DOWN</div>
+<style>
+.go-up,.go-down {
+display:none;
+position:fixed; /*позиционируем*/
+center:0px; /*указываем положение, если слева - left*/
+margin-left: 1050px;
+z-index:9999; /*показываем поверх все элементов на странице*/
+cursor:pointer;
+opacity:.7; /*прозрачность*/
+margin-bottom:40px; /*отступ снизу (можно не указывать)*/
+width:50px; /*ширина кнопки*/
+height:15px; /*высота кнопки*/
+}
+.go-up {
+bottom:280px; /*положение от низа окна браузера верхняя кнопка*/
+}
+.go-down {
+bottom:250px; /*положение от низа окна браузера нижняя кнопка кнопка*/
+}
+.go-down:hover,.go-up:hover {
+opacity:1;
+}
+</style>
+<!--кнопки вверх вниз-->
+<script type="text/javascript">
+$(function(){
+if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+  else $("#ToTop").fadeIn("slow")
+});
+if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+$(window).scroll(function(){
+  if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+  else $("#OnBottom").fadeIn("slow")
+});
+$("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+$("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+});
+</script>
+
+<!-- счетчик символов -->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng" style="border:1px solid;padding:2px 3px;margin:0 20px 0 10px;">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+
+<!--замена тире -->
+<script type="text/javascript">
+$('.post-content p').each(function(){
+  function replacer(str){return str.replace(/-\s|–\s/gm,'— ');}
+  var a = $(this).clone().wrap('<div></div>').parent().html();
+  var b = a.replace(/>[^<>]+</gim,replacer);
+  if(a!=b)$(this).replaceWith(b)
+});
+</script>
+
+<!-- тег абзаца -->
+<style>#button-indent {background: url(http://s7.uploads.ru/t/mnkgq.png) no-repeat center 6px!important;}</style>
+<script type="text/javascript">(function()
+{var b = '[indent]'; 
+$("#button-strike").after('<td id="button-indent" title="отступы"><img src="/i/blank.gif"  onclick="insert(\''+b+'\')"></td>');
+var indent = '<span style="display: inline-block; margin: 1em 2.1em;"></span>'; 
+$('.post-content p:contains("'+b+'")').each(function(){ $(this).html( $(this).html().replace(/\[indent\]/gm,indent));});}());
+</script>
+
+    <!-- Рестор ссылки "НОВЫЕ СООБЩЕНИЯ" --><script type="text/javascript">
+    if(GroupID != 3) { $('#pun-ulinks .container').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>'); }
+    </script>
+    
+     <!-- маска от человека-шамана -->
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+hvScriptSet.addMask({
+    forumAccessExtended: {
+        '1562 г. и другие вехи': ['Пользователи', 'NC-18'],
+        'Общение': ['Пользователи', 'NC-18'],
+        'Дневники': ['Пользователи', 'NC-18']
+    }
+});
+</script>

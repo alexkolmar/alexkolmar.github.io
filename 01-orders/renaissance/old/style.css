@@ -1,0 +1,1583 @@
+/*************************************************************
+A - SETUP
+**************************************************************/
+
+/* A1 Import the colour scheme
+-------------------------------------------------------------*/
+
+/* A1.1 */
+@import url(style_cs.css);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);
+@import url(https://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(https://fonts.googleapis.com/css?family=Oranienbaum);
+@import url(https://fonts.googleapis.com/css?family=Allerta+Stencil);
+@import url(https://fonts.googleapis.com/css?family=Spectral);
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=UnifrakturMaguntia);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash);
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+@import url('https://fonts.googleapis.com/css?family=Kristi');
+@import url(http://allfont.ru/allfont.css?fonts=franklin-gothic-medium);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@font-face {font-family: Deutsch Gothic; 
+src: local("Deutsch Gothic"), url(https://forumstatic.ru/files/0019/69/9c/76856.ttf);}
+@font-face {font-family: Schwabacher; 
+src: local("Schwabacher"), url(https://forumstatic.ru/files/0016/1a/7c/11027.ttf);}
+@font-face {font-family: Devitos; 
+src: local("Devitos"), url(https://forumstatic.ru/files/001a/d9/a5/51081.otf);}
+@font-face {font-family: Beckett-KanzleiCYRegular; 
+src: local("Beckett-KanzleiCYRegular"), url(https://forumstatic.ru/files/001a/fb/46/16469.ttf);}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@font-face {font-family: Chomsky; 
+src: local("Chomsky"), url(https://forumstatic.ru/files/001b/02/8d/38659.otf);}
+
+
+
+
+/* A2 Deal with browser defaults and wonkiness
+-------------------------------------------------------------*/
+
+/* A2.1 */
+html, body {margin: 0; padding: 0}
+
+/* A2.2 */
+.punbb * {
+  margin: 0
+  }
+
+/* A2.3 */
+.punbb ul, .punbb dl, .punbb li, .punbb dd, .punbb dt {
+  padding: 0;
+  list-style: none;
+  }
+
+/* A2.4 */
+.punbb img {
+  border:none
+  }
+
+/* A2.5 */
+.punbb .main table {
+  table-layout: fixed;
+  width: 100%;
+  }
+
+/* A2.6 */
+.checkfield input[type="checkbox"], .radiofield input[type="radio"] {margin: 0 0.3em;}
+
+/* A2.7 */
+p[class="checkfield"] *,
+div[class="checkfield"] *,
+fieldset[class="radiofield"] * {
+  height: 1.8em;
+  vertical-align: middle
+  }
+
+
+ /* A3 Text setup
+-------------------------------------------------------------*/
+
+/* A3.1 */
+body {
+font-size: 11px;
+}
+
+/* A3.2 */
+.punbb {
+font: normal 100% verdana, arial, helvetica, sans-serif;
+}
+
+/* A3.3 */
+.punbb textarea, .punbb input, .punbb select, .punbb optgroup {
+font: 1em verdana, arial, helvetica, sans-serif
+}
+
+/* A3.4 */
+.punbb h1, .punbb h2, .punbb h3, .punbb h4, .punbb table, .punbb th {
+font-size: 1em;
+font-weight: normal;
+}
+
+/* A3.5 */
+.punbb h1 span, .punbb legend span {
+    font-size: 0px;
+}
+
+/* A3.6 */
+.punbb pre {
+font: 1.1em/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace
+}
+
+/* A3.7 */
+.punbb address, .punbb em {
+font-style: normal
+}
+
+/* A3.8 */
+.punbb .post-content em {
+font-style: italic
+}
+
+
+/* A3.9 */
+.punbb .post-content em.bbuline {
+  font-style: normal;
+  text-decoration: underline;
+  }
+
+/* A3.10 */
+.punbb a {
+text-decoration: none;
+}
+
+/* A3.11 */
+.punbb optgroup {
+font-weight: normal;
+}
+
+
+/* A4 Float clearing and hidden items
+-------------------------------------------------------------*/
+
+/* A4.1 */
+#pun:after,
+.punbb .container:after,
+.punbb .post-links ul:after,
+.punbb .main div.inline:after,
+.punbb .post-box:after,
+.punbb .linksb:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow:hidden;
+  line-height: 0.0;
+  font-size: 0;
+  }
+
+/* A4.2 */
+.acchide,
+#pun-index #pun-main h1,
+#pun-navlinks h2,
+#pun-pagelinks h2,
+#pun-status h2,
+#pun-ulinks h2,
+.punbb .forum h2,
+.punbb .multipage .topic h2,
+.punbb dl.post-sig dt span,
+.punbb p.crumbs strong,
+.punbb .divider hr,
+.punbb .required label em,
+.punbb .formsubmit label,
+.punbb .submitfield label,
+.punbb .modmenu label,
+#pun-userlist .main h2 {
+  font-size: 0;
+  height: 0;
+  width: 0;
+  line-height: 0.0;
+  position:absolute;
+  left: -9999px;
+  overflow: hidden
+  }
+
+
+/* A5 Basic page layout and borders
+-------------------------------------------------------------*/
+
+/* A5.1 */
+#pun {
+margin: auto 100px auto 100px;
+width : 960px;
+padding: 0px 0px 0px 0px;
+margin: 80px auto 100px auto;
+  float: center;
+
+}
+
+
+/* A5.2 */
+.punbb {
+  float: center;
+  height: auto;
+  padding-left: 10px;
+width : 950px;
+  }
+
+
+/* A5.3 */
+#pun-redirect, #pun-maint {
+  margin: 50px 20% 12px 20%;
+  width: auto;
+  float: none;
+  }
+
+/* A5.4 */
+.punbb .section, .punbb .main {
+  margin-bottom: 1em;
+  }
+
+/* A5.5 */
+.punbb .category, .punbb .post {
+  margin-top: 0,4em;
+  }
+
+/* A5.6 */
+.punbb #pun-category1, .punbb .toppost, .punbb .topicpost {
+  margin-top: 0;
+  }
+
+/* 5.7 */
+#pun-post .topic {
+  margin-top: 1em;
+  }
+
+/* A5.8 */
+.punbb .section, .punbb .forum, .punbb .formal, .punbb .modmenu, .punbb .info,
+.punbb .category, .punbb .post {
+  border-style: none none solid none;
+  border-width: 0px 0px 2px 0px
+  }
+
+/* A5.9 */
+.punbb .container {
+  border-style: solid;
+  border-width: 1px;
+  }
+
+/* A5.10 */
+.punbb .section h2, #pun-main h1, #pun-main h2, #pun-stats h2, #pun-debug h2 {
+  padding: 0.5em 1em;
+  border-style: none solid solid none;
+  border-width: 0 1px 1px 0;
+  text-align: center;
+  font-family: Playfair Display;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  color: #5f6147;
+  }
+
+
+/*************************************************************
+B - MAIN CONTENT - GENERAL
+**************************************************************/
+
+/* B1 Parsed Content, Signatures and Scroll Boxes
+-------------------------------------------------------------*/
+
+/* B1.1 */
+.punbb .post-content {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  }
+
+/* B1.2 */
+.punbb .post-sig dt {
+  display: block;
+  border-top: 1px solid #a09b9bbf;
+  width: 750px;
+  margin: 5px 0;
+  }
+
+/* B1.3 */
+.punbb .post-content p {
+  margin: 0;
+  padding: 0 1em 1em 0em;
+  line-height: 150%;
+    text-align: justify;
+  }
+
+
+/* B1.4 */
+.punbb .post-content img {
+  vertical-align: text-bottom
+  }
+
+/* B1.5 */
+.punbb .post-content img.postimg {
+  vertical-align: middle;
+  }
+
+/* B1.6 */
+.punbb .post-content .blockcode, .punbb .post-content blockquote {
+  width: 100%;
+  overflow: hidden;
+  }
+
+/* B1.7 */
+.punbb .post-content .scrollbox {
+  width: 100%;
+  overflow: auto;
+  }
+
+/* B1.8 */
+.punbb .post-content .quote-box, .punbb .post-content .code-box {
+  margin: 1.0em 1.8em 1.4em 1.8em;
+  padding: 1em 1em 0.5em 1em;
+background-color: #c8cbc4 !important;
+  }
+
+
+
+/* B1.9 */
+.punbb .quote-box cite, .punbb .code-box strong.legend {
+  display: block;
+color: #999b96 !important;
+background-color: #2f322e;
+padding: 2px 4px 2px 2px;
+font-family: Arial;
+letter-spacing: 0.8px;
+font-size: 8px;
+text-align: left;
+margin-top: 0px;
+text-transform: uppercase;
+width: max-content;
+margin-bottom: 7px;
+  }
+
+
+  .punbb .quote-box cite, .punbb .code-box strong.legend a {color: #bfc3ba !important;}
+
+
+
+/* B2 Information boxes
+-------------------------------------------------------------*/
+
+/* B2.1 */
+.punbb .info-box {
+  padding: 1.1em 1.7em 1em 1.7em;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0 0 1.1em 0;
+  }
+
+/* B2.2 */
+.punbb .info-box * {
+  padding: 0 0 0.7em 0;
+  }
+
+/* B2.3 */
+.punbb #pun-main .info-box .legend {
+  font-size: 1.1em;
+  font-weight: bold;
+  }
+
+
+/* B3 Pagination and posting links
+-------------------------------------------------------------*/
+
+/* B3.1 */
+.punbb .linkst {
+  float: left;
+  position: relative;
+  width: 100%;
+  font-size: 1.1em;
+  height: 0;
+  }
+
+/* B3.2 */
+.multipage {
+  margin-top: 3em;
+  }
+
+/* B3.3 */
+.linkst .pagelink {
+  position: absolute;
+  top: -4em;
+  left: 1em;
+  width: 24em;
+  }
+
+/* B3.4 */
+.linkst .postlink {
+  position: absolute;
+  top: -4em;
+  right: 1em;
+  width: 16em;
+  text-align: right;
+  font-weight: bold;
+  }
+
+/* B3.5 */
+.punbb .linksb {
+  text-align: right;
+  padding: 0.4em 1em 0.5em 1em;
+  font-size: 1.1em;
+  }
+
+/* B3.6 */
+.linksb .pagelink {
+  float: left;
+  width: 24em;
+  text-align: left;
+  }
+
+/* B3.7 */
+.linksb .postlink {
+  float: right;
+  width: 16em;
+  font-weight: bold
+  }
+
+/* B3.8 */
+.subscribelink {
+  clear:both;
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
+  }
+
+
+/*************************************************************
+C - MAIN CONTENT - SPECIFIC
+**************************************************************/
+
+/* C1 Form layout
+-------------------------------------------------------------*/
+
+/* C1.1 */
+.punbb .formal .container {
+  padding: 1.7em 2.3em 1.1em 2.3em;
+  }
+
+/* C1.2 */
+.punbb .formsubmit {
+  padding: 0 0 0 1.7em;
+  margin: 1em 0 0 0;
+  }
+
+/* C1.3 */
+.punbb .formsubmit input, .punbb .formsubmit a, .punbb .formsubmit span {
+  margin: 0 0.6em 0 0
+  }
+
+/* C1.4 */
+.punbb fieldset {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0 18px 0 18px;
+  margin: 0 0 1em 0
+  }
+
+/* C1.5 */
+.punbb fieldset legend {
+  padding: 0;
+  margin: 0 0 0 11px;
+  font-size: 1.1em
+  }
+
+
+/* C1.6 */
+.punbb fieldset legend span {
+    padding: 0 5px;
+    margin: 0 0 0 0px!important;
+    font-size: 11px;
+    font-family: Playfair Display;
+}
+
+/* C1.7 */
+.punbb fieldset fieldset {
+  border-style: none;
+  margin: 0;
+  padding: 0 0 8px 0
+  }
+
+/* C1.8 */
+.punbb .fs-box {
+  padding: 1em 0 0.8em 0;
+  }
+
+/* C1.9 */
+.punbb .fs-box p, .punbb .fs-box fieldset {
+  padding: 0 0 0.8em 0
+  }
+
+/* C1.10 */
+.punbb .inline .inputfield, .punbb .inline .selectfield, .punbb .inline .passfield {
+  float: left;
+  margin-right: 1em;
+  }
+
+/* C1.11 */
+.punbb .inline .infofield {
+  clear:both
+  }
+
+/* C1.12 */
+.punbb .datafield br {
+  display: none
+  }
+
+/* C1.13 */
+.punbb .required label, .punbb .datafield span.input {
+  font-weight: bold
+  }
+
+/* C1.14 */
+.punbb .datafield span.input a {
+  font-weight: normal;
+  }
+
+/* C1.15 */
+.punbb .areafield span.input, .punbb p.longinput span.input {
+  display: block;
+  padding: 0 12em 0 0;
+  height: 100%; /* For IE */
+  }
+
+/* C1.16 */
+.punbb textarea, .punbb .longinput input {
+  width: 64%;
+  margin: 0;
+  }
+
+/* C1.17 */
+.punbb .hashelp {
+  position: relative;
+  }
+
+/* C1.18 */
+.punbb .helplinks {
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 0;
+  font-weight: normal;
+  width: 36%;
+  }
+
+/* c1.19 */
+.punbb #profile .helplinks {
+  top: 1.5em;
+  }
+
+/* C1.20 */
+.punbb .helplinks span {
+  display: block;
+  padding-bottom: 0.2em;
+  }
+
+/* C1.21 */
+#pun-post .formal .info-box li {
+  padding-left: 4px;
+  list-style-type: square;
+  list-style-position: inside;
+  line-height: 1.5;
+  margin: 0;
+  }
+
+
+/* C2 Table layout
+-------------------------------------------------------------*/
+
+/* C2.1 */
+.punbb .main .tcl {
+  overflow: hidden;
+  text-align: left;
+  width: 50%;
+  }
+
+/* C2.2 */
+.punbb .main .tc2, .punbb .main .tc3, .punbb .main .tcmod {
+  text-align: center;
+  width: 10%;
+  }
+
+/* C2.3 */
+.punbb .main .tcr {
+  overflow: hidden;
+  text-align: left;
+  width: 30%;
+  }
+
+/* C2.4 */
+#pun-userlist .main .tcl,
+#pun-searchtopics .main .tcl,
+#pun-modviewforum .main .tcl {
+  width: 40%
+  }
+
+/* C2.5 */
+#pun-userlist .main .tc2,
+#pun-searchtopics .main .tc2 {
+  text-align: left;
+  width: 20%;
+  }
+
+/* C1.6 */
+.punbb fieldset legend span {
+    padding: 0 5px;
+    margin: 0 0 0 -15px;
+    font-size: 11px;
+    font-family: Playfair Display;
+}
+
+/* C2.7 */
+#pun-debug .tcr {
+  width: 90%;
+  white-space: normal;
+  }
+
+
+/* C2.8 */
+#pun-index .tcl h3 {
+font-size: 1.5em;
+width: auto;
+text-align: left;
+  padding-bottom: 10px;
+  margin-right: 5px;
+  height: 10px;
+    font-size: 14px;
+  letter-spacing: 1px;
+font-family: Roboto;
+text-transform: uppercase;
+font-weight: bold; }
+
+/* C2.9 */
+.punbb td span.youposted {
+  font-weight: bold;
+  margin-left: -1em;
+  position: absolute;
+  }
+
+/* C2.10 */
+.punbb td .modlist {
+  display: block;
+  padding-top: 0.3em
+  }
+
+/* C2.11 */
+.punbb .main td {
+  border-style: solid none none solid;
+  border-width: 1px 0 0 1px;
+  padding: 0.8em 1em;
+  }
+
+/* C2.12 */
+.punbb .main th {
+  border-style: none none none solid;
+  border-width: 0 0 0 1px;
+  padding: 0.4em 1em 0.4em 1em;
+  }
+
+/* C2.13 */
+.punbb .main .tcl {
+  border-left-style: none;
+  border-left-width: 0
+  }
+
+/* C2.14 */
+.punbb td div.tclcon {
+  margin-left: 10px;
+ text-align: justify;
+ padding: 9px;
+  font-family: Roboto;
+  font-size: 11px;
+text-transform: lowercase;
+  line-height: 130%;
+}
+
+/* C2.15 */
+.punbb div.icon {
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  height: 7px;
+  line-height: 0.0;
+  margin-top:0.6em;
+  margin-left: -5px!important;
+  width: 7px;
+  }
+
+/* C2.16 */
+.punbb  table div.icon {
+  font-size: 1.05em;
+  position: absolute;
+  margin-left: -2.0em;
+  }
+
+ /* C3 Topics
+-------------------------------------------------------------*/
+
+/* C3.1 */
+.punbb .post .container {
+  border-style: none solid solid solid;
+  border-width: 1px;
+  margin-top: -1px;
+  padding-bottom: 1px;
+  }
+
+/* C3.2 */
+.punbb .post h3 {
+  border-style: solid solid none solid;
+  border-width: 1px;
+  }
+
+/* C3.3 */
+.punbb .post h3 span {
+  padding: 0.5em 1em;
+  display: block;
+  margin-left: 0em;
+  border-left-style: solid;
+  border-left-width: 1px
+  }
+
+/* C3.4 */
+.punbb .post h3 strong {
+  float: right;
+  width: 5em;
+  text-align: right;
+  font-weight: normal;
+  color: #000000 !important;
+  }
+
+  #pun-viewtopic .post h3 {
+    height: 15px;
+    width: 930px;
+  background-color : #c8cbc4 !important;
+  font-size: 11px;
+  letter-spacing: 0px;
+font-family: Roboto;
+text-transform: lowercase;
+line-height: 30%;
+}
+
+
+#pun-viewtopic .post h3 a { color: #000000 !important;}
+
+strong.fnt img {width: 5px!important}
+
+/* C3.5 */
+.punbb .post .post-author {
+  float: left;
+  width: 200px;
+  margin-top: 10px;
+  margin-left: -1px;
+  overflow: hidden;
+  text-align: center;
+color: #000000;
+font-family: Roboto;
+text-transform: lowercase;
+font-size: 10px;
+letter-spacing: 0px;
+  }
+
+  .punbb .post .post-author a {color: #000000;}
+
+/* C3.6 */
+.punbb .post .post-author ul, .punbb .post .post-author p {
+  padding: 0em 0em 1em 0em;
+  line-height: 120%;
+  }
+
+/* C3.7 */
+.pa-author {
+  font-size: 17px;
+margin-top: 15px;
+  font-family: Yeseva One;
+  text-transform: lowercase;
+  letter-spacing: 0px;
+
+  }
+
+/* C3.8 */
+.pa-author a {
+  text-decoration: none;
+  color: #8b3a2d !important;
+  }
+
+
+    .pa-avatar img {border: 1px solid #1c1916;
+    outline: 1px solid #decaca21;
+    outline-offset: 4px;
+        margin-top: 5px!important;}
+
+/* C3.9 */
+li.pa-title {
+  margin-top: 8px;
+  background-color: #502922;
+  border-top: 1px solid #decaca12;
+    border-bottom: 1px solid #decaca12;
+    margin-bottom: 5px;
+    font-size: 7px;
+    letter-spacing: 1px;
+    color: #dcd7d5;
+    font-family: Playfair Display;
+    text-transform: uppercase;
+  }
+
+li.pa-online {
+  line-height: 0.8em;
+  border-left-style: solid;
+  margin-top: 0.7em;
+  }
+
+
+/* C3.11 */
+.punbb .post-body {
+    margin: 0px 0px 0 200px;
+    padding: 10px;
+  }
+
+/* C3.12 */
+.punbb .post-box {
+padding: 10px;
+    text-align: justify;
+width: 97%;
+  }
+
+/*C3.13 */
+.punbb fieldset .post-box {
+  margin-bottom: 0.8em
+  }
+
+/* C3.14 */
+.punbb .post-links {
+  margin-left: 19em;
+  border-left-style: solid;
+  border-left-width: 1px;
+  }
+
+/* C3.15 */
+.punbb .post-links ul {
+  padding: 0 1em 0 1em;
+  height: 2em;
+  line-height: 2em;
+  margin-left: -21em;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  background: transparent;
+  text-align: right;
+  font-size: 11px;
+  letter-spacing: 0px;
+font-family: Roboto;
+text-transform: lowercase;
+margin-bottom: 10px;
+  }
+
+
+/* C3.16 */
+.punbb .post-links li {
+  display: inline;
+  padding-left: 1em;
+  }
+
+/* C3.17 */
+.pl-email, .pl-website {
+  float: left;
+  }
+
+/* C3.18 */
+.punbb .clearer {
+  clear: both;
+  height: 0;
+  font-size: 0;
+  }
+
+
+/* C4 Moderator menu
+-------------------------------------------------------------*/
+
+/* C4.1 */
+.punbb .modmenu .container {
+  padding: 0.5em 1em;
+  text-align: right;
+  }
+
+/* C4.2 */
+.punbb .modmenu strong, .punbb .modmenu a {
+  height: 1.8em;
+  line-height: 1.8em;
+  }
+
+/* C4.3 */
+.punbb .modmenu .container strong {
+  float: left;
+  }
+
+/* C4.4 */
+.punbb .modmenu input {
+  margin-left: 1em;
+  }
+
+
+/* C5 Message boxes
+-------------------------------------------------------------*/
+
+/* C5.1 */
+.punbb .info .container {
+  padding: 0.8em 1em
+  }
+
+/* C5.2 */
+.punbb .info .container .backlink {
+  padding-top: 0.8em;
+  }
+
+
+/* C6 Profile
+-------------------------------------------------------------*/
+
+/* C6.1 */
+#profile .container {
+  padding-left: 18.6em;
+  }
+
+/* C6.2 */
+#profilenav {
+  float: left;
+  width: 14em;
+  margin-left: -16.3em;
+  display: inline;
+  }
+
+/* C6.3 */
+#profilenav li {
+  padding-bottom: 0.8em;
+  font-weight: bold;
+  }
+
+/* C6.4 */
+#viewprofile ul, #profilenav ul {
+  border-style: solid;
+  border-width: 1px;
+  padding: 1.5em 18px 0.8em 18px;
+  margin: 0 0 1em 0;
+  }
+
+/* C6.5 */
+#viewprofile h2, #profilenav h2 {
+  background: transparent;
+  border: none;
+  padding: 0 0 0 0;
+  margin: 0 14px -0.6em 14px;
+  }
+
+/* C6.6 */
+#viewprofile h2 span, #profilenav h2 span {
+  padding: 0 5px;
+  position: relative;
+  }
+
+/* C6.7 */
+#viewprofile li, #setmods dl {
+  padding: 0 0 0 16em;
+  margin-bottom: 0.2em;
+  }
+
+/* C6.8 */
+#viewprofile li span {
+  float: left;
+  width: 14em;
+  margin-left: -16em;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  }
+
+/*C6.9 */
+#setmods dt {
+  float: left;
+  width: 14em;
+  margin-left: -16em;
+  padding: 0.8em 1em;
+  font-weight: bold;
+  display: inline;
+  }
+
+/* C6.10 */
+#viewprofile li strong, #viewprofile li div, #setmods dd {
+  display: block;
+  padding: 0.5em 1em;
+  font-weight: normal;
+  }
+
+/* C6.11 */
+.punbb img.avatardemo {
+  float: right;
+  margin: 0 0 0.8em 1.8em
+  }
+
+
+/* C7 User list
+-------------------------------------------------------------*/
+
+/* C7.1 */
+#pun-userlist .formal, #pun-userlist .formal .container {
+  border-bottom: none;
+  margin-bottom: 0;
+  }
+
+/* C7.2 */
+#pun-userlist .usertable .container {
+  padding: 0 2.3em 2.3em 2.3em;
+  border-top: none;
+  }
+
+/* C7.3 */
+#pun-userlist .usertable table {
+  border-style: solid;
+  border-width: 1px;
+  }
+
+
+/*************************************************************
+D - PUNBB SECTIONS OTHER THAN MAIN CONTENT
+**************************************************************/
+
+/* D1.1 */
+#pun-title {
+  margin: 0!important;
+  border-style: solid solid none solid!important;
+  border-width: 1px 1px 0 1px!important;
+  }
+
+
+/* D1.2 */
+#pun-title h1 {
+  display : block!important;
+  padding: 0em 0em 0 0em!important;
+margin-top: -85px!important;
+ margin-left: -25px!important;
+ width: 1000px!important;
+  text-align: center!important; 
+  position: absolute!important;
+  z-index: -2999;
+  }
+
+/* D1.3 */
+#pun-title .container {
+  border-style: none solid none solid!important;
+  }
+
+/* D1.4 */
+#pun-title h1 span  {
+ font-size: 70px!important;
+ color: #763125 !important;
+ letter-spacing: 3px;
+ font-family: Yeseva One;
+font-weight: normal;
+text-shadow: 0 0 2px #000000;
+opacity: 0.6;
+  }
+
+
+/* D2 Page navigation
+-------------------------------------------------------------*/
+
+/* D2.1 */
+#pun-pagelinks {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 100%;
+  }
+
+/* D2.2 */
+#pun-pagelinks .container {
+  background: transparent;
+  border: none;
+  padding: 0}
+
+/* D2.3 */
+#pun-pagelinks .container li {
+  display: inline
+  }
+
+/* D2.4 */
+#pun-pagelinks li a, #pun-pagelinks a:link, #pun-pagelinks a:hover {
+  height: 2em;
+  line-height: 2em;
+  padding: 0;
+  font-size: 1.2em;
+  margin-left: -9999px;
+  display: block;
+  float:left;
+  width: 100%;
+  }
+
+/* D2.5 */
+#pun-pagelinks a:active, #pun-pagelinks a:focus {
+  position:relative;
+  margin: 0;
+  }
+
+#pun-pagelinks li a span {
+  display:block;
+  margin: 0 1em
+  }
+
+/* D3 Forum navigation
+-------------------------------------------------------------*/
+
+/* D3.1 */
+#pun-navlinks, #pun-navlinks .container {
+  border-style: none;
+  border-width: 0;
+  margin: 0;
+width: 1000px!important;
+  }
+
+/* D3.2 */
+#pun-navlinks .container {
+  padding: 0.7em 0em;
+    font-family: Yeseva One;
+  text-transform: lowercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 120px;
+  position: absolute;
+  }
+
+
+/* D3.3 */
+#pun-navlinks li {
+  display: inline;
+  padding-right: 1em;
+  }
+
+/* D3.4 */
+#pun-navlinks li a {
+  font-size: 1.1em;
+  }
+
+ #pun-navlinks li img {opacity: 0.8;
+  transition: 0.5s ease, color 0.5s linear;
+  width: 18px;
+  filter: blur(0.5px);
+  }
+
+   #pun-navlinks li img:hover {opacity: 1;
+     filter: blur(0px);}
+
+/* D4 User links
+-------------------------------------------------------------*/
+
+/* D4.1 */
+#pun-ulinks  {
+  margin-top: 0;
+  }
+
+
+/* D4.2 */
+#pun-ulinks .container {
+  border-top: none;
+  padding: 0em 0em;
+ margin-top: 145px;
+    text-transform: lowercase;
+    font-size: 11px; 
+    font-family: Roboto;
+    letter-spacing: 0px;
+    width: 1000px;
+    text-align: center;
+    position: absolute;
+  }
+
+#pun-ulinks .container a {color: #000000d6;}
+
+
+/* D4.3 */
+#pun-ulinks li, #pun-ulinks li a {
+  display: inline;
+  white-space: nowrap;
+  }
+
+/* D4.4 */
+#pun-ulinks li a {
+  padding: 0 0.3em 0 0.6em
+  }
+
+/* D4.5 */
+#pun-ulinks li.item1, #pun-ulinks li.item1 a {
+  border-left-style: none;
+  border-left-width: 0;
+  padding-left: 0
+  }
+
+/* D5 Welcome box and Top Breadcrumbs
+-------------------------------------------------------------*/
+
+/* D5.1 */
+#pun-status, #pun-status .container {
+  border-bottom: none;
+  margin-bottom: 0;
+  }
+
+
+/* D5.2 */
+#pun-status .container {
+  padding: 0px 0px 0px 10px;
+text-align: center;
+  text-transform: uppercase;
+  font-size:8px;
+margin-top: 100px!important;
+width: 950px;
+ font-family: Roboto;
+  letter-spacing: 1px;
+position: absolute;
+ color: #6d6e6a !important;
+  margin-left: -10px;
+     position: absolute;
+z-index: 2;
+
+  }
+
+  #pun-status .container a {     color: #797a76 !important; text-shadow: 0 0 2px #000000; }
+
+
+/* D5.3 */
+#pun-status span {
+  white-space: nowrap;
+  margin-right: 0.5em;
+  }
+
+/* D5.4 */
+#pun-crumbs1 {
+  font-weight: bold;
+  overflow: hidden;
+  margin-top: 0;
+  }
+
+/* D5.5 */
+#pun-crumbs1 p.container {
+  border-top: none;
+  padding: 1em 1em 0,2em 1em;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+font-family: Roboto;
+text-transform: uppercase;
+margin-top: 150px;
+margin-left: -15px;
+  }
+
+/* D5.6 */
+#pun-break1 {
+  margin: 0 1em;
+  border-style: solid none;
+  border-width: 1px 0;
+  height: 0;
+  margin: -2px 1em;
+  position: relative;
+  z-index: 1;
+  }
+
+/* D6 Announcement
+-------------------------------------------------------------*/
+
+/* D6.1 */
+#pun-announcement h2 {
+  padding: 0;
+  margin: 0 1em -3.5em 1em;
+  border-style: none none solid none;
+  border-width: 0 0 1px 0;
+  position: relative;
+  font-weight: bold;
+  }
+
+/* D6.2 */
+#pun-announcement h2 span {
+  display: block;
+  padding: 1em 0 0.8em 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  }
+
+/* D6.3 */
+#pun-announcement .container {
+  padding: 4.3em 1em 1em 1em;
+  }
+
+/* D7 Statistics
+-------------------------------------------------------------*/
+
+/* D7.1 */
+#pun-stats .container {
+  padding: 0.8em 1em
+  }
+
+   #pun-stats .container strong {
+ color: #000000;
+  }
+
+   #pun-stats .container a {
+ color: #191919;
+  }
+
+      #pun-stats .container a:hover {
+ color: #000000;
+  }
+
+
+/* D7.2 */
+#pun-stats li.item1, #pun-stats li.item2 {
+    clear: both;
+    font-family: Roboto;
+    font-size: 10px;
+    text-transform: lowercase;
+    letter-spacing: 0px;
+   color: #000000;
+}
+
+
+/* D7.3 */
+#pun-stats li.item3, #pun-stats li.item4 {
+    clear: both;
+    font-family: Roboto;
+    font-size: 10px;
+    text-transform: lowercase;
+    letter-spacing: 0px;
+  color: #080808;
+}
+
+
+
+/* D7.4 */
+li#onlinelist {
+  margin-top: 1em;
+  border-top-style: solid;
+  border-top-width: 1px;
+  float: left;
+  width: 100%;
+  line-height: 130%;
+  }
+
+/* D7.5 */
+li#onlinelist div {
+  border-top-style: solid;
+   width: 920px;
+  margin-left: -15px;
+  border-top-width: 1px;
+  padding: 0px 10px 0px 10px;
+  FONT-FAMILY: Roboto; 
+font-size: 11px; 
+  letter-spacing: 0px;
+    color: #3e564c;
+  text-align: justify;
+  }
+
+/* D8 Quick Jump - About - Bottom Breadcrumbs
+-------------------------------------------------------------*/
+
+/* D8.1 */
+#pun-qjump {
+  margin: 0;
+  border: none;
+  width: 50%;
+  position: relative;
+  float: left;
+  }
+
+/* D8.2 */
+#pun-qjump .container {
+  border: none;
+  background: transparent;
+  padding: 0.8em 1em;
+  }
+
+/* D8.3 */
+#pun-about {
+  margin-top: 0;
+  }
+
+/* D8.4 */
+#pun-about .container {
+  border-top-style: none;
+  text-align: right;
+  line-height: 150%;
+  padding: 0.8em 1em;
+  }
+
+/* D8.5 */
+#pun-about p span {
+  display:block;
+  padding-left: 50%;
+  }
+
+/* D8.6 */
+#pun-crumbs2 {
+  font-weight: bold;
+  overflow: hidden;
+  margin-bottom: 0;
+  border-bottom: none;
+  }
+
+
+/* D8.7 */
+#pun-crumbs2 .container {
+  border-top: none;
+  padding: 1em 1em 0.8em 1em;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+font-family: Roboto;
+text-transform: uppercase;
+  }
+
+
+/* D8.8 */
+#pun-break4 {
+  margin: -2px 1em;
+  border-style: solid none;
+  border-width: 1px 0;
+  position: relative;
+  height: 0;
+  z-index: 1;
+  }
+
+/* D8.9 */
+div.punbb-admin #pun-about .container {
+  border-top-style: solid;
+  border-top-width: 1px;
+  }
+
+
+/* D9 Help file
+-------------------------------------------------------------*/
+
+/* D9.1 */
+#pun-help .formal .info-box h3.legend {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 0;
+  margin-bottom: 0.8em;
+  }
+
+/* D9.2 */
+#pun-help .formal .info-box h3.legend span {
+  padding-bottom: 0.6em;
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-size: 1.1em;
+  }
+
+/* D9.3 */
+#pun-help .formal p, #pun-help .formal dd {
+  margin-bottom: 1em
+  }
+
+/* D9.4 */
+#pun-help .formal ul, #pun-help .formal dl {
+  padding: 0 0 0 1em
+  }
+
+/* D9.5 */
+#pun-help .formal li {
+  padding: 0;
+  line-height: 130%
+  }
+
+/* D9.6 */
+#pun-help .formal li * {
+  vertical-align: text-top
+  }
+
+/* D9.7 */
+#pun-help .formal dt span {
+  font: 1.4em/120% monaco, "bitstream vera sans mono", "courier new", courier, monospace
+  }
+
+/* D9.8 */
+#pun-help .formal .parsedmsg, #pun-help .formal .parsedmsg .incode {
+  padding-bottom: 0;
+  }
+
+
+
+#pun-stats .item1 {
+    display: inline-block;
+    text-align: center;
+        width: 150px;
+        margin-left: 10px;
+          background-color: #c2c5bd;
+}
+#pun-stats .item2 {
+    display: inline-block;
+    text-align: center;
+      width: 150px;
+        background-color: #c2c5bd;
+}
+#pun-stats .item3 {
+    display: inline-block;
+    text-align: center;
+    margin-left: 1px;
+    width: 250px;
+      background-color: #c2c5bd;
+}
+#pun-stats .item4 {
+    display: inline-block;
+    text-align: center;
+    width: 330px;
+    position: absolute;
+    background-color: #c2c5bd;
+    margin-left: 5px;
+}
+
+
+
+.post-content .spoiler-box > div {background:url('https://i.ibb.co/Bt24CCQ/image.png') no-repeat left center !important}
+.post-content .spoiler-box > div.visible {background-image:url('https://i.ibb.co/ZKS3C7h/image.png') !important;}
+
+
+
+.punbb textarea {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.punbb .formal fieldset
+#font-area  {position:absolute; right:6px; top:36px; height:150px; overflow:auto;  
+background-color: #c8cbc4 !important; 
+  border: 1px solid #767676 !important; 
+color: #000000;}
+
+
+#size-area.container, #spoiler-area.container, #keyboard-area.container, #addition-area.container, #image-area.container, #video-area.container,  #smilies-block
+ {background-color: #c8cbc4 !important; 
+  border: 1px solid #767676 !important; 
+color: #000000 !important;}
+
+
+
+.pa-respect img {width: 6px}
+
+
+#navpiar {left: 40px!important;
+}
+
+
+#pun-status .item4 {
+   display:none;
+}
+
+
+
+
+::-webkit-scrollbar {
+width: 6px;
+height:6px;
+background-color: rgb(20 23 20);
+border-radius: 10px !important;}
+::-webkit-scrollbar-thumb {
+  background-color:#5a5a55;
+  width:6px !important;
+  box-shadow: 0 0 0 1px rgba(20, 18, 15,0.1) inset;
+border-radius: 1px !important;
+}
+
+.stickytext, .closedatafield, #pun-live-rusff, .pl-reports  {display: none}
+
+/* Скрыть "отредактировано" и "награды" */
+li#navawards, .lastedit {display: none;}
