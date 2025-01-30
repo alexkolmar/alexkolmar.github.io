@@ -69,6 +69,9 @@
   --link-hover: #cf6969;
   --ltx: #cec6c6;
   --ltx2: #f8f5f5;
+  --gray: #bdbdbd;
+  --dark: #141414;
+  --dark2: #2f2f2f;
   --navl: #cbc3c3;
   --pwidth: 282px;
   --pad1: 10px 35px;
@@ -718,7 +721,7 @@ tr.iclosed div.icon {
 
 #pun-index .tcl .links {
   border-radius: 5px;
-  background: #2f2f2f;
+  background: var(--dark2);
   padding: 2px 10px 4px;
   margin-top: 10px;
   text-align: center;
@@ -888,7 +891,7 @@ li#onlinelist {
     height: 155px;
     overflow: auto;
     scrollbar-width: thin;
-    scrollbar-color: #bdbdbd transparent;
+    scrollbar-color: var(--gray) transparent;
     letter-spacing: 1px;
 }
 
@@ -927,7 +930,7 @@ li#onlinelist {
 
 .tab_quote {
     position: relative;
-    background: #141414;
+    background: var(--dark);
     width: 560px;
     height: 40px;
     border-radius: 5px 50px 5px 5px;
@@ -994,12 +997,12 @@ li#onlinelist {
 }
 
 .tab_links a {
-  background: #2f2f2f;
+  background: var(--dark2);
   width: 255px;
   height: 35px;
   border-radius: 5px;
   font-size: 16px;
-  color: #bdbdbd;
+  color: var(--gray);
   line-height: 1.2;
   text-align: center;
   display: flex;
@@ -1066,7 +1069,7 @@ li#onlinelist {
 .rumors_inner {
   height: 50px;
   overflow: auto;
-  scrollbar-color: #bdbdbd transparent;
+  scrollbar-color: var(--gray) transparent;
   color: #cec6c6;
   line-height: 1.2;
   padding: 0 10px;
@@ -1089,7 +1092,7 @@ li#onlinelist {
   display: flex;
   flex-wrap: wrap;
   gap: 5px 10px;
-  scrollbar-color: #bdbdbd transparent;
+  scrollbar-color: var(--gray) transparent;
 }
 
 .banners a {
@@ -1177,7 +1180,7 @@ li#onlinelist {
 
 .pa-author {
   border-radius: 5px;
-  background: #141414;
+  background: var(--dark);
   width: 212px;
   min-height: 54px;
   margin: -12px auto 5px;
