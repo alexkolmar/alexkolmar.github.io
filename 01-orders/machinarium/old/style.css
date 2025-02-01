@@ -1,0 +1,384 @@
+/********************  luverance & badkarma ***********************/
+
+@import url(style_cs.css);
+@font-face { font-family: "Material Icons";
+  font-style: normal; font-weight: normal;
+  src: local("Material Icons"), url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2"); }
+@font-face { font-family: 'jost'; 
+src: local("jost"), url(https://forumstatic.ru/files/001c/47/24/87792.ttf); }
+@font-face { font-family: 'beron'; 
+src: local("beron"), url(https://forumstatic.ru/files/001c/47/24/25363.ttf); }
+@font-face { font-family: 'inter';
+src: local("inter"), url(https://forumstatic.ru/files/001c/3f/af/56893.ttf);}
+
+:root {
+  --bg: url(https://forumstatic.ru/files/001c/47/24/90409.png) fixed; /*фон*/
+  --tab: url(https://forumstatic.ru/files/001c/47/24/53783.png) rgba(0, 0, 0, 0); /*шапка*/
+  --pn: #ebeaea; /*тело*/
+  --bot: url(https://forumstatic.ru/files/001c/47/24/28951.png) no-repeat center; /*футер*/
+  --cl0: #fff; /*чистый белый*/
+  --cl: #c7c7c7; /*серо-белый*/
+  --cl2: #4e4d4d; /*цвет дежурного текста*/
+  --cl3: #b1968f; /*нежно-розовый*/
+  --cl4: #954740; /*красный*/
+  --cl5: #0b0701; /*черный*/
+  --2ft: 'beron'; /*акцентный шрифт*/
+  --3ft: 'jost'; /*основной шрифт*/
+  --4ft: 'inter'; /*основной шрифт*/
+  --bg-cat: #000; /*категории*/
+  --bg-prof: url(https://forumstatic.ru/files/001c/47/24/18889.png); /*подложка профиля*/
+  --wh: 983px; /*ширина тела*/
+  --wh1: 983px; /*ширина шапки, футера*/
+  --hg1: 320px; /*высота шапки*/
+  --hg2: 104px; /*высота футера*/
+}
+
+/**************************************************************/
+html, body { margin: 0; padding: 0 }
+* { margin: 0 }
+.punbb ul, .punbb dl, .punbb li, .punbb dd, .punbb dt { padding: 0; list-style: none; }
+.punbb img { margin-top: 0px; }
+.punbb .main table { table-layout: fixed; width: 100%; }
+.checkfield input[type="checkbox"], .radiofield input[type="radio"] {margin: 0 0.3em;}
+p[class="checkfield"] *, div[class="checkfield"] *, fieldset[class="radiofield"] * { height: 1.8em; vertical-align: middle }
+
+/**************************************************************/
+body { font-size: 100.01%; overflow-x: hidden }
+.punbb { font: normal 11px inter, verdana, arial, montserrat, sans-serif, arsenicatrial-regular; }
+.punbb textarea, .punbb input, .punbb select, .punbb optgroup { font: 1em verdana, arial, montserrat, sans-serif; }
+.punbb h1, .punbb h2, .punbb h3, .punbb h4, .punbb table, .punbb th { font-size: 11px; letter-spacing: 0px; padding-top: 0px; font-weight: normal; border-color: transparent; }
+.punbb h1 span, .punbb h2 span, .punbb legend span { font-size: 1.1em; }
+.punbb pre { font: 1.1em/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace }
+.punbb address, .punbb em { font-style: normal }
+.punbb .post-content em { font-style: italic }
+.punbb .post-content em.bbuline { font-style: normal; text-decoration: underline; }
+.punbb a { text-decoration: underline }
+.punbb optgroup { font-weight: bold; }
+
+/**************************************************************/
+#pun { position: relative; width: 980px; margin: 310px auto 15px; background: var(--pn); padding-top: 4px; background-position: center top; background-repeat: repeat-y; }
+.punbb { height: auto; margin: 0 auto; width: 980px; }
+
+.punbb .section, .punbb .main { margin-bottom: 1em; }
+.punbb .category, .punbb .post { margin-top: 0.4em; }
+.punbb #pun-category1, .punbb .toppost, .punbb .topicpost { margin-top: 0; }
+#pun-post .topic { margin-top: 1em; }
+.punbb .section, .punbb .forum, .punbb .formal, .punbb .modmenu, .punbb .info,
+.punbb .category, .punbb .post { border-style: none none solid none; border-width: 0px 0px 2px 0px }
+.punbb .section h2, #pun-main h1, #pun-main h2, #pun-stats h2, #pun-debug h2 {  padding: 0px 1em 0px 1em; border-style: solid solid none solid; border-width: 1px 1px 0px 1px; }
+
+/**************************************************************/
+#pun-navlinks { border: none; margin: 0;}
+#pun-navlinks li { display: inline; padding-right: 0em; }
+#pun-navlinks .container {position: absolute;width: var(--wh);font-weight: normal;text-align: center;top: -51px;left: 0px;}
+#pun-navlinks li a { color: var(--cl3); display: inline-block; padding: 1px 15px 1px 0px !important; font-family: var(--2ft), var(--3ft); font-size: 15px !important; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+#pun-navlinks li a:hover { color: var(--cl4); }
+#navawards, #navawards a span { display:none!important; }
+#pun-messages .pa-posts { display: none; }
+
+/**************************************************************/
+#pun-ulinks .container { position: absolute; display: inline; width: 980px; padding: 0 !important; top: -76px; font-weight: normal; text-align: center; }
+#pun-ulinks li, #pun-ulinks li a {display: inline;white-space: nowrap;}
+#pun-ulinks a { font-size: 10px !important; letter-spacing: 0.7px; font-weight: 100; font-family: var(--3ft) !important; text-transform: lowercase; padding: 0px 15px 0px 5px !important; color: var(--cl); }
+#pun-ulinks a:hover { color: var(--cl0); }
+
+/**************************************************************/
+#pun-status, #pun-status .container { border-bottom: none; margin-bottom: 0; }
+#pun-status span { white-space: nowrap; margin-right: 0.5em; }
+#pun-status .container { position: absolute; display: inline-flex; width: 180px; line-height: 11px; font-weight: 100; font-family: var(--3ft); font-size: 10px; color: var(--cl3); text-transform: lowercase; left: 8px; top: -109px; flex-direction: column; align-content: flex-start; flex-wrap: wrap; }
+#pun-status .container a { color: var(--cl3); text-transform:  lowercase;font-family: var(--3ft); font-size: 10px!important; }
+#pun-status .container strong { font-weight: 100!important; }
+#pun-status .container .item4  { display: none; }
+
+/**************************************************************/
+#pun-crumbs1 { overflow: hidden; margin: 20px 0px 0px; }
+#pun-crumbs2 { overflow: hidden; margin-bottom: 0; border-bottom: none; }
+#pun-crumbs2 {  margin-bottom: 10px !important;}
+#pun-crumbs1 p.container { border-top: none; padding: 0px; font-size: 10px; text-transform:uppercase; color: var(--cl5); }
+#pun-crumbs2 .container { border-bottom: none; padding: 0px; color: var(--cl5); font-size: 10px; text-transform:uppercase; }
+#pun-crumbs1, #pun-crumbs2 { text-align: center; font-family: var(--3ft) !important; font-weight: normal; }
+#pun-crumbs2 a, #pun-crumbs1 a { text-transform: uppercase; font-size: 10px; color: var(--cl3) !important; font-family: var(--3ft) !important; font-weight: 600; }
+#pun-crumbs1 a:hover, #pun-crumbs2 a:hover { color:  var(--cl5)!important; }
+#pun-break1, #pun-break4 {  position: relative; z-index: 1; }
+
+/**************************************************************/
+#pun-stats .container { margin: 0px 20px 10px 20px; background: #e2e1e1; position: relative; top: 15px; padding: 25px 0px 0px 0px; z-index: 9; }
+#pun-stats .container strong {  font-weight: normal;  }
+#pun-stats .container a {font-size: 11px;}
+
+.statscon li.item1, .statscon li.item2, .statscon li.item3, .statscon li.item4 { position: absolute; margin-top: -15px; font-size: 11px !important; letter-spacing: 0.7px; font-weight: 100; color: var(--cl5) !important; background: #b1968f4f; display: block; width: 330px; text-align: center !important; margin-left: -83px; font-family: var(--3ft) !important; text-transform: lowercase; }
+.statscon li.item1, .statscon li.item2  { width: 110px; padding: 0px 20px; }
+.statscon li.item1 {left: 114px;}
+.statscon li.item2 {left: 277px;}
+.statscon li.item3 {left: 441px;width: 200px;}
+.statscon li.item3 strong { var(--cl) }
+.statscon li.item4 {right: 31px;gap: 5px;padding: 0px 5px;display: flex;z-index: 1;justify-content: center;}
+.statscon li.item4  a {color: var(--cl5) !important;letter-spacing: 0.7px !important;font: 10px var(--3ft) !important;}
+.statscon li.item4  a:hover { color: var(--cl4) !important; }
+.statscon li.item5 { display: block; width: 880px!important; margin: 0px 31px 0px; text-align: justify!important; }
+.statscon li.item5.users_24h {min-height: 50px;}
+
+li#onlinelist {margin-top: 10px;border-top-style: solid;border-top-width: 1px;float: left;line-height: 130%;}
+li#onlinelist div {border-top-style: solid;border-top-width: 1px;color: var(--cl5);padding: 0px 0px 0px 0px;font-family: var(--3ft);text-transform: lowercase;font-size: 11px;text-align: justify;}
+
+/**************************************************************/
+.punbb .main .tc2, .punbb .main .tc3, .punbb .main .tcmod { text-align: center; width: 10%; }
+#pun-userlist .main .tcl, #pun-searchtopics .main .tcl,#pun-modviewforum .main .tcl { width: 40% }
+#pun-userlist .main .tc2, #pun-searchtopics .main .tc2 { text-align: left; width: 20%; }
+#pun-debug table .tcl { width: 15%; white-space:normal; }
+#pun-debug .tcr { width: 90%; white-space: normal; }
+.punbb td span.youposted { font-weight: bold; margin-left: -1em; position: absolute; }
+.punbb td .modlist { display: block; padding-top: 0.3em }
+.punbb .main td { border-style: solid none none solid; border-width: 1px 0 0 1px; padding: 10px 20px 20px 20px; }
+.punbb .main th { border-style: none none none solid; border-width: 0 0 0 1px; padding: 0.4em 1em 0.4em 1em; }
+.punbb .main .tcl { border-left-style: none; border-left-width: 0 }
+.punbb .main .tcl { text-align: left; width: 60%; }
+.punbb .main .tcr {position: relative; overflow: hidden; text-align: right; width: 35%; padding-right: 0px; padding-top: 24px;}
+
+.punbb .user-avatar .avatar-image {     float: right !important; height: 30px !important; width: 30px !important; opacity: 0.55 !important; border-radius: 0px !important; outline-offset: 0px; background-position: center center; background-size: cover; background-repeat: no-repeat; filter: grayscale(1); transition: all 0.3s linear 0s; }
+.punbb .user-avatar { float: right!important; position: relative; height: 36px; width: 36px; margin: -1px 10px 2px 2px !important; }
+.punbb .user-avatar .avatar-image:hover { filter: grayscale(0); opacity: 0.85!important; scale: 1.09 !important;}
+.punbb .user-avatar .isonline { display: block; position: absolute; width: 6px!important; height: 6px!important; border-radius: 0%!important; top: -2px !important; right: -2px !important; background: var(--cl4) !important; z-index: 100; }
+
+/**************************************************************/
+.punbb .post .container { border-style: none solid solid solid; border-width: 1px; margin-top: -1px; padding-bottom: 1px; }
+.punbb .post h3 {margin: 0px 9px 0px;display: block;background: var(--pn);height: 13px;}
+.punbb .post h3 span { display: block; margin: 15px 0px 0px; }
+
+.punbb .post h3 span a {color: var(--cl5);padding: 2px 10px;text-transform: uppercase;font-family: var(--3ft);top: 5px;left: 230px;position: relative;font-size: 10px;}
+.punbb .post h3 strong {right: 3px;margin-top: 5px;color: var(--cl5);text-transform: uppercase;padding: 0px 10px;position: absolute;font-weight: 500;width: auto;font-size: 10px;font-family: var(--3ft);text-align: right !important;}
+h3 strong::before { content: "#"; margin-right: 5px; font-size: 11px; }
+
+#pun-messages .post h3 span { }
+.punbb#pun-searchposts .post h3 span a { position: relative !important; top: 2px; left: 0px; font-size: 11px; }
+.punbb#pun-searchposts  em { display: none; }
+.punbb#pun-searchposts .post h3 span a:before {content: "«"; padding: 0px 2px; }
+.punbb#pun-searchposts .pa-author strong { font-weight: normal!important; }
+.punbb#pun-searchposts .pa-replies { color: var(--cl); font-size: 11px; font-family: var(--3ft); margin: 8px 0px 5px;}
+
+/**************************************************************/
+.punbb .post-content { width: 100%; text-align: justify; }
+.punbb .post-sig dt { display: block; border-top: 1px dashed; width: 250px; height: 0px; margin: 15px 0; }
+.punbb .post-content p { margin: 0; padding: 0 0 5px 0; }
+
+.post-content {margin: -10px 0px 0px 0px !important;}
+.punbb .post-content img { vertical-align: text-bottom }
+.punbb .post-content img.postimg { vertical-align: middle; }
+.punbb .post-content .blockcode, .punbb .post-content blockquote { width: 100%; overflow: hidden; }
+.punbb .post-content .scrollbox { width: 100%; height: 2.5em!important; overflow: auto; }
+
+/**************************************************************/
+.punbb .linkst { float: left; position: relative; width: 100%; font-size: 1.1em; height: 0; }
+.multipage { margin-top: 3em; }
+
+.linkst .pagelink { margin-top: -25px; word-spacing: 3px; color: var(--cl5); margin-left: 17px; }
+.linksb .pagelink { float: left; margin: 0px -11px; width: 24em; color: var(--cl5); word-spacing: 3px; text-align: left; }
+.linksb .postlink { float: right; width: 16em; margin-top: 0px; margin-right: 10px; }
+.punbb .linksb { text-align: right; padding: 0px 0px 0px 25px; }
+.linkst .postlink { position: absolute; top: -22px; right: -6px; text-align: right; padding-right: 17px; }
+.subscribelink { clear: both; padding-top: 0.3em; margin-right: 10px; padding-bottom: 0.5em; }
+
+.pagelink a {padding: 0px 5px 0px;font: var(--3ft)!important;background: #e2e1e1;color: var(--cl5)!important;}
+.pagelink a:hover {background: var(--cl3);}
+.pagelink strong {padding: 0px 5px 0px;font-weight: 500;background: #e2e1e1;-webkit-transition: 0.15s linear;-moz-transition: 0.15s linear;-o-transition: 0.15s linear;transition: 0.15s linear;}
+
+/**************************************************************/
+.punbb .post .post-author ul, .punbb .post .post-author p {line-height: 140%;}
+.punbb .post .post-author { float: left; width: 230px; height: auto; margin-top: 0px; margin-left: 8px; overflow: hidden; background: var(--bg-prof); }
+
+.pa-avatar { max-width: 180px; max-height: 180px; margin: 0px 25px 0px !important; text-align: center; z-index: 2; position: relative; }
+.pa-avatar img { max-width: 180px; max-height: 180px; border-radius: 0px; padding: 0px; z-index: 9; position: relative; margin-top: 0px; }
+
+.pa-author { text-align: center; padding: 5px 0px 1px 0px !important; width: inherit; font-family: var(--3ft); font-size: 13px; color: var(--cl0) !important; margin: 10px 5px 0px; }
+.pa-author a { position: relative; z-index: 9999; font-family: var(--3ft) !important; text-transform: uppercase !important;  font-size: 14px !important; color: var(--cl0) !important; transition: all .2s linear 0s !important; }
+.pa-author a:hover { color: var(--cl3) !important; }
+
+li.pa-title { position: relative; height: 14px; width: 180px; margin: 5px 25px 5px; font-size: 8px; background: var(--cl5); letter-spacing: 0.7px; color: var(--cl); font-family: var(--3ft); text-transform: uppercase; text-align: center; }
+.pa-posts, .pa-respect, .pa-fld2 { color: #cecece; width: 70px; gap: 4px; display: inline-flex; margin: 7px 0px 4px; text-transform: uppercase; font-size: 8px; text-align: center; height: 14px; font-family: var(--3ft); flex-direction: row; justify-content: center; align-items: center; }
+.pa-respect a:link, .pa-respect a:visited { color: var(--cl); text-transform: uppercase; font-size: 8px; }
+.pa-fld1 { position: relative; width: 180px !important; letter-spacing: 0.5px; background: #2a2a2a; margin: 4px 25px 0px; text-align: center; font-size: 8px; color: var(--cl); font-family: var(--3ft); text-transform: uppercase; }
+.pa-online { background: var(--cl4); font-size: 10px; text-transform: lowercase; font-family: var(--3ft); color: var(--cl0); }
+.pa-online strong { font-weight: 500 !important; }
+
+.pa-reg, .pa-fld1 .fld-name, li.pa-awards .fld-name, li.pa-ip, .pa-author img, .pa-gifts {  display: none; }
+.punbb .post-body { margin-left: 22em; margin-right: 6px; border-left-style: solid; border-left-width: 1px; padding: 0px 0 1px 0; }
+.punbb .post-box { padding: 20px 15px 0px; background: #e2e1e1; margin: 10px 3px 15px 3px !important; }
+.punbb fieldset .post-box { margin-bottom: 0.8em }
+.punbb .post-links { margin-left: 19em; border-left-style: solid; border-left-width: 1px; }
+.punbb .post-links ul { height: auto; line-height: 1em; margin-left: -202px; font-size: 10px; text-transform: lowercase; background: transparent; text-align: right; margin-right: 0px; }
+.punbb .post-links li { display: inline; text-align: center; margin: 0px 2px; padding: 0px 5px 1px 5px; transition: all 0.5s ease 0s;}
+.pl-email, .pl-website { float: left; }
+.punbb .clearer { clear: both; height: 0; font-size: 0; }
+.topic a.sharelink { display: none; }
+
+/**************************************************************/
+.punbb .formal .container { padding: 0em 1.3em 0em 1.3em; }
+.punbb .formsubmit { padding: 0 0 0 1.7em; text-align: center; margin: 1em 0 0 0;  }
+.punbb .formsubmit input, .punbb .formsubmit a, .punbb .formsubmit span { margin: 0 0.6em 0 0 }
+.punbb fieldset { border-style: solid; border-width: 1px; padding: 0px 2px 0px 0px; margin: 0 0 1px 0; }
+.punbb fieldset fieldset { border-style: none; margin: 0; padding: 0 0 8px 0 }
+.punbb .fs-box { padding: 1em 0 0.8em 0; }
+.punbb .fs-box p, .punbb .fs-box fieldset  { padding: 0px 0 0.8em 0; }
+.punbb .inline .inputfield, .punbb .inline .selectfield, .punbb .inline .passfield { float: left;  margin-right: 1em; }
+.fs-box p.inputfield label, .fs-box p.selectfield label {   }
+.punbb .datafield br { display: none }
+.punbb .required label, .punbb .datafield span.input {  }
+.punbb .datafield span.input a { font-weight: normal; }
+.punbb .areafield span.input, .punbb p.longinput span.input { display: block; padding: 0 12em 0 0; height: 100%; /* For IE */ }
+.punbb textarea, .punbb .longinput input { width: 64%; margin: 0; }
+.punbb .hashelp { position: relative; }
+.punbb .helplinks { display: block; position: absolute; top: 1em; right: 0; font-weight: normal; width: 36%; }
+.punbb #profile .helplinks { top: 1.5em; }
+.punbb .helplinks span { display: block; padding-bottom: 0.2em; }
+#pun-post .formal .info-box li { padding-left: 4px; list-style-type: square; list-style-position: inside; line-height: 1.5; margin: 0; }
+.punbb .helplinks span INPUT { margin-right: 2px; margin-bottom: 2px; }
+.punbb fieldset legend { padding: 0; margin: 0px 0px 0px 11px; font-size: 11px; }
+.punbb fieldset legend span { padding: 0 5px; margin: 0 0 0 10px; }
+.punbb .inline .infofield { text-transform: lowercase; font-size: 9px; text-align: justify; }
+
+/**************************************************************/
+#profile .container { padding-left: 15.6em; }
+#profilenav { float: left; width: 14em; margin-left: -16.3em; display: inline; }
+#profilenav li { padding-bottom: 0.8em; word-spacing: 3px; font-weight: normal; }
+#profile-signature ul { border-style: dashed; border-width: 1px 0 0 0; margin: 0; background: none; box-shadow: none; padding: 1em 1em 0 1em; }
+#viewprofile h2, #profilenav h2 { background: transparent; border: none; padding: 0 0 0 0; margin: 0 14px -0.6em 14px; }
+#viewprofile h2 span, #profilenav h2 span { padding: 0 5px; position: relative; }
+#viewprofile li, #setmods dl { padding: 0px 0 0 19em; margin-left: 20px; margin-bottom: 3px; }
+#setmods dt { float: left; width: 14em; margin-left: -16em; padding: 0.8em 1em; font-weight: bold; display: inline; }
+#profile-left li, #profile-left li * { padding-left: 0; margin-left: 0; border-radius: 0px; }
+.punbb img.avatardemo { float: right; margin: 0 0 0.8em 1.8em }
+#profile #form-buttons tr { width: 799px; position: relative; left: -15px; }
+#viewprofile ul { margin: 0px 20px 10px 20px; background: #e2e1e1; display: block;}
+#profilenav ul { padding: 10px 0px 3px 19px; border-radius: 0px; margin: 9px 0 5px 3px; }
+#viewprofile li span { float: left; width: 150px; text-transform: lowercase; margin-left: -212px; padding: 7px 30px; }
+#viewprofile li strong, #viewprofile li div, #setmods dd { display: block; padding: 0.5em 1em; text-transform: lowercase; font-weight: normal; font-size: 11px; }
+
+div#profile-gifts, #profile-left li#profile-title, #profile-right li#pa-invites, #profile-right li#pa-fld5, #profile-right li#pa-fld1, #profile-right li#pa-gifts { display: none; }
+
+#profile-left { width: 250px!important; display: inline-flex; padding-top: 0 !important; justify-content: center; flex-direction: column;align-items: center; align-content: center; flex-wrap: wrap; }
+#profile-left #pa-avatar div { width: 180px; height: 180px; padding: 5px; border-radius: 0px; display: flex; justify-content: center; align-items: center; margin: 0px 55px; }
+.punbb h1 { display: none;}
+
+/**************************************************************/
+#pun-userlist .formal, #pun-userlist .formal .container { border-bottom: none; margin-bottom: 0; }
+#pun-userlist .usertable .container { padding: 0 2.3em 2.3em 2.3em; border-top: none; }
+#pun-userlist .usertable table { border-style: solid; border-width: 1px; }
+* html .tclcon {height: 1px}
+
+/**************************************************************/
+.punbb .info-box { padding: 1.1em 1.7em 1em 1.7em; border-style: solid; border-width: 1px; margin: 0 0 1.1em 0; }
+.punbb .info-box * { padding: 0 0 0.7em 0;}
+.punbb #pun-main .info-box .legend { font-size: 1.1em; font-weight: bold; }
+
+/**************************************************************/
+.punbb .modmenu .container { padding: 1.5em 1em; text-align: right; }
+.punbb .modmenu strong, .punbb .modmenu a { height: 1.8em; line-height: 1.8em; }
+.punbb .modmenu .container strong { float: left; }
+.punbb .modmenu input { margin-left: 1em; }
+.punbb .info .container { padding: 0.8em 1em }
+.punbb .info .container .backlink { padding-top: 0.8em; }
+
+/**************************************************************/
+#pun-title { margin: 0; border-style: none none none none; border-width: 1px 1px 0 1px; }
+#pun-title h1 { display : block; height : 40px; padding: 2em 1em 0 1em; }
+#pun-title .container { border-style: none solid none solid; }
+#pun-title h1 span  { font-size: 0em; }
+#pun-title TD.title-logo-tdl { border: none; width: 100%;}
+#pun-title TD.title-logo-tdr { border: none; width: 420px; }
+
+/**************************************************************/
+#pun-pagelinks { position: absolute; top: -15px; left: 0; margin: 0; border: none; padding: 0; width: 100%; }
+#pun-pagelinks .container { background: transparent; border: none; padding: 0}
+#pun-pagelinks .container li { display: inline }
+#pun-pagelinks li a, #pun-pagelinks a:link, #pun-pagelinks a:hover { height: 2em; line-height: 2em; padding: 0; font-size: 1.2em; margin-left: -9999px; display: block; float:left; width: 100%; }
+#pun-pagelinks a:active, #pun-pagelinks a:focus { position:relative; margin: 0; }
+#pun-pagelinks li a span { display:block; margin: 0 1em }
+
+/**************************************************************/
+#pun-announcement h2 { padding: 0; margin: 0 15px -3.5em 1em; border-style: none none solid none; border-width: 0 0 1px 0; position: relative; display:none; }
+#pun-announcement h2 span { display: block; padding: 1em 0 0.8em 0; border-bottom-style: solid; border-bottom-width: 1px; }
+#pun-announcement .container { padding: 0.6em 0.5em 1em 1em; margin-bottom: -54px; margin-top: 45px; text-align: center;}
+
+/**************************************************************/
+#pun-qjump { margin: 0; border: none; width: 50%; position: relative; float: left; }
+#pun-qjump .container { border: none; background: transparent; padding: 0.8em 1em; }
+#pun-about { margin-top: 0; }
+/* #pun-about .container {  border-top-style: none; text-align: right; line-height: 150%; padding: 1px 1em; } */
+#pun-about p span { display:block; padding-left: 50%; }
+div.punbb-admin #pun-about .container { border-top-style: solid; border-top-width: 1px; }
+#pun-help .formal .info-box h3.legend { border-bottom-style: solid; border-bottom-width: 1px; padding-bottom: 0; margin-bottom: 0.8em; }
+#pun-help .formal .info-box h3.legend span { padding-bottom: 0.6em; display: block; border-bottom-style: solid; border-bottom-width: 1px; font-size: 1.1em; }
+#pun-help .formal p, #pun-help .formal dd { margin-bottom: 1em }
+#pun-help .formal ul, #pun-help .formal dl { padding: 0 0 0 1em }
+#pun-help .formal li { padding: 0; line-height: 130% }
+#pun-help .formal li * { vertical-align: text-top }
+#pun-help .formal dt span { font: 1.4em/120% monaco, "bitstream vera sans mono", "courier new", courier, monospace }
+#pun-help .formal .parsedmsg, #pun-help .formal .parsedmsg .incode { padding-bottom: 0; }
+.punbb .container, .punbb .post-body, .post h3, #pun-title, .punbb .section, .punbb .forum, .punbb .formal, .punbb .modmenu, .punbb .info, .punbb .category, .punbb .post, #pun-stats h2, .punbb .main h1, .punbb .main h2, #pun-debug h2, .punbb-admin #pun-admain h2, .punbb td, .punbb fieldset, #viewprofile ul, #profilenav ul, .punbb .post .post-body, .punbb .post h3 span, .post-links ul, .post-links, .usertable table, #pun-ulinks li, #pun-announcement h2 span, li#onlinelist, #pun-help .formal .info-box h3.legend span, #pun-ulinks li a, #pun-announcement h2, li#onlinelist div, #pun-help .formal .info-box h3.legend, .punbb .divider, .punbb .quote-box, .punbb .code-box, .punbb th, .punbb .formal fieldset .post-box, .punbb .info-box, li.pa-online, .punbb .post-sig dt {border-color: transparent;}
+#pun-main .post-author ul { text-align: center; }
+.punbb .section, .punbb .forum, .punbb .formal, .punbb .modmenu, .punbb .info, .punbb .category, .punbb .post { border-color: transparent; text-align: justify; }
+#post-form h2 span {display: none; }
+#pun-index h2 {box-shadow: none}
+#pun-main div.catleft, #pun-main div.catright { display: none; }
+.punbb th {font-size: 0!important;}
+#pun-title {border: none}
+.punbb .section h2, #pun-main h1, #pun-stats h2, #pun-main h2, #pun-debug h2 { font-size: 19px!important; text-align: center; color: #404b60; text-transform: uppercase; }
+
+/**************************************************************/
+#pun:after, .punbb .container:after, .punbb .post-links ul:after, .punbb .main div.inline:after, .punbb .post-box:after, .punbb .linksb:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; overflow:hidden; line-height: 0.0; font-size: 0; }
+.acchide, #pun-index #pun-main h1, #pun-navlinks h2, #pun-pagelinks h2, #pun-status h2, #pun-ulinks h2, .punbb .forum h2, .punbb .multipage .topic h2, .punbb dl.post-sig dt span, .punbb p.crumbs strong, .punbb .divider hr, .punbb .required label em, .punbb .formsubmit label, .punbb .submitfield label, .punbb .modmenu label, #pun-userlist .main h2 {
+  font-size: 0; height: 0; width: 0; line-height: 0.0; position:absolute; left: -9999px; overflow: hidden }
+
+/*===========================================*/
+.punbb #move_posts_form .formal>form.container { width: 100%!important; background: #d9d9d9!important; position: relative; border: none!important; padding-left: 0!important; padding-right: 0!important; }
+#pun-admain h1 span, #pun-admain h2 span, #pun-admain legend span, #pun-admain .adformal h3 span, #pun-admain .adcontainer .tcl, #pun-admain .adcontainer td { font-size: 12px!important; }
+.adformal h2, #pun-adnav h2 { background-color: #dedfdf !important; color: #454545!important; }
+.admin-advert-block .admin-advert-block-buttons .button-vk, .admin-advert-block .admin-advert-block-buttons .button-telegram, .admin-advert-block .admin-advert-block-buttons .button-twitter { padding: 10px 57px!important;  }
+#pun-adnav h2 { margin-left: 2px!important; }
+#pun-admain textarea {width: 94%!important;}
+
+/*===========================================*/
+span.num_msg { margin-top: -11px !important; margin-left: -16px !important; font-size: 8px !important; font: 500 10px/1.6 Tahoma; text-align: center!important; background: var(--cl4) !important; padding: 0px 7px 1px 7px!important; height: 11px !important; width: auto!important; border-radius: 0px!important; color: var( --cl)!important; }
+span.num_msg:before { top: 10px !important; background: var(--cl4) !important; margin-left: 0px !important; }
+
+/*===========================================*/
+.bubble { background: var(--cl4) !important; right: 5px!important; top: -12px!important; border-radius: 0px!important; color: var(--cl)!important; }
+.bubble:after { border-color: var(--cl4) transparent!important; }
+
+
+/*===========================================*/
+#pun-report .inner, #pun-reputation .inner, #pun-admin-award-form .inner 
+{ background: var(--cl) !important;  border-radius: 0px; z-index: 9999!important; }
+.punbb .longinput input { font-size: 12px!important; }
+.punbb textarea { font-size: 12px!important; }
+
+/*===========================================*/
+@media screen and (max-device-width: 480px) {
+html {-webkit-text-size-adjust: 100%;}}
+
+
+/*===========================================*/
+#tooltip { position:absolute; font-size: 10px !important; background: var(--cl4); color: var(--cl); text-transform: uppercase; border-radius: 0px!important; font-family: var(--3ft) !important; border-radius: 0px!important; margin: 0 0 0 0; padding: 5px; font-weight:normal; display:none; z-index: 99999999; }
+
+/*===========================================*/
+.pun-modal .modal-inner { background: rgb(223 226 235)!important; }
+
+/*===========================================*/
+.noNull:before { content: "+"; font-size: 13px; display: inline-block; margin-left: -8px; margin-top: 6px; position: absolute; }
+
+div .post-rating p>a { text-align: center; outline: 1px solid transparent; font-weight: 500 !important; background: none; background-size: 38px auto; position: relative; padding-left: 1px; z-index: 100; width: 38px; height: 38px; text-align: center; font-size: 12px !important; display: inline-block; vertical-align: middle; line-height: 34px; letter-spacing: -1px; color: #919191; }
+div .post-rating p>a:after {content:'favorite';position: relative;font-size: 18px;font-family: 'Material Icons';color: var(--cl3);left: 3px;top: 5px;}
+div .post-rating p>a:hover:after, div.post-vote p>a:hover:after  { color: var(--cl4);}
+
+div.post-vote { margin-bottom: 65px; }
+div.post-vote p>a { font-size: 0 !important; position: absolute; cursor: pointer; z-index: 200; width: 23px; height: 23px; background: none; display: block; background-size: 100%; margin-left: 29px; margin-top: 42px; }
+div.post-vote p>a:after {content:'question_answer';position: relative;font-family: 'Material Icons';color: #919191;top: 3px;left: 10px;font-size: 18px !important;}
+
+/***********************/
+/* Change on hover     */
+.custom_tag_changeonhover {display: inline-block;}
+.custom_tag_changeonhover img~img {display: none;}
+.custom_tag_changeonhover:hover img:first-child {display: none;}
+.custom_tag_changeonhover:hover img~img {display: block;}
+/* end Change on hover */
+/***********************/

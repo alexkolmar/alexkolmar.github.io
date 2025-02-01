@@ -1,0 +1,120 @@
+<!=================================================================
+                                                            ЗАПОЛНЕНИЕ ШАПКИ
+==================================================================>
+
+<!----------------------------------------------- О ФОРУМЕ --------------------------------------------------------><infotext>m<buk>a</buk>chinarium</infotext>
+<infotext2>техно-фэнтези - 531-й год - тест</infotext2>
+
+<!-------------------------------------------- ТЕКСТ В  ШАПКЕ --------------------------------------------------->
+<txt-sh>
+„Он не участвовал в нашем веселье, разве что его лицо, обезображенное чумой, и его глаза, в которых смерть погасила пламя болезни лишь наполовину, казалось, выражали то особое любопытство, какое только умершие способны проявить к забавам обреченных на смерть“
+</txt-sh>
+
+<!----------------------------------------------- ПЛАШКИ---------------------------------------><div id="plash">
+<!---------------- 1 ---------------->
+<div class="plaha">
+<a href="https://machinarium.rolka.me/viewtopic.php?id=9"><text>путеводитель</text></a>
+</div>
+<!---------------- 2 ---------------->
+<div class="plaha">
+<a href="https://machinarium.rolka.me/viewtopic.php?id=8"><text>энциклопедия</text></a>
+</div>
+<!---------------- 3 ---------------->
+<div class="plaha">
+<a href="https://machinarium.rolka.me/viewtopic.php?id=10"><text>гостевая</text></a>
+</div>
+<!---------------- 4 ---------------->
+<div class="plaha">
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"><text>ништяк</text></a>
+</div>
+
+
+</div>
+<!=================================================================
+                                                                     КОНЕЦ
+==================================================================>
+
+
+
+<!---------------------------------------- ВСПЛЫВАЮЩИЕ ПОДСКАЗКИ ----------------------------------------->
+<script src="https://forumstatic.ru/files/0012/9a/62/92819.js"></script>
+<script>
+$(function(){
+$('*[title]').quicktip({
+speed:700 //Скорость появления подсказки
+});
+});
+</script>
+
+<!-------------------------------------------------- ЧЕРНАЯ ПОДСКАЗКА ---------------------------------------->
+<script>
+$(document).ready(function(){$('*[title]').not('*[title] *[title]').tipsy({gravity:$.fn.tipsy.autoNS})});
+$.catch = function(a,f){$(function(){var t,i=0;function s(){i++;if(i>120)return;t=setTimeout(function(){if(!$(a).length){s();return};f()},100);}s();});}
+$.catch('.pa-awards img[title]',function(){$('.punbb li.pa-awards img[title]').tipsy({fade:true,gravity:'s award'});});
+</script>
+
+<!------------------------------------------ ОТКЛЮЧЕНИЕ ФУНКЦИЙ И КНОПОК ------------------------------->
+<!--Отключить кнопку "Жалоба" -->
+<script type="text/javascript">
+RusffCore.sets.show_reportBtn = 0;
+</script>
+<!--Отключить функцию "Поделиться" -->
+<script type="text/javascript">
+RusffCore.sets.share = false;
+</script>
+<!--Отключить функцию "Вложения" -->
+<script type="text/javascript">
+RusffCore.sets.files.button = false;
+</script>
+<!--Отключить функцию "Это интересно" -->
+<script type="text/javascript">
+rusffLive.enable = false;
+</script>
+<!--Отключить функцию "Реакция" -->
+<script>
+ReactionsPlugin.setConfig({
+  disable: true
+});
+</script>
+<!--Список просматривающих тему -->
+<script>
+RusffCore.sets.realtimeTopicReaders = false
+</script>
+
+<!---------------------- ВЫДЕЛИТЬ КОД с перемещением в буфер обмена © Damassk, 2019 -------------->
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'скопировать код' //текст ссылки</script>
+
+<!-- Пиар-вход v.2 -->
+<script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+<script type="text/javascript">
+PR.nick = 'PR'; //Ник PR-аккаунта
+PR.pass = '1111'; //Пароль PR-аккаунта
+PR.btn_text = 'PR'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+PR.set();</script>
+
+<!--------------------- Выделение кода в блоке "Код" © Alex_63 --------------------->
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'выделить код [копируется сразу]'</script>
+
+<!-- Скрытие профиля в теме тегом © Alex_63 -->
+<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+.hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+<script>
+FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+$().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+</script>
+
+<!-- Мгновенные уведомления © Alex_63, 2024 -->
+<link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/notifications.css" />
+<script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/notifications.js"></script>
+<!-- Мгновенные уведомления: упоминания © Alex_63, 2020 -->
+<script>notifications.load('mentions');</script>
+<!-- Мгновенные уведомления: подписки на форум/тему © Alex_63, 2019 -->
+<script>notifications.load('subscriptions');</script>
+<!-- Мгновенные уведомления: комментарии к репутации без переадресации © Alex_63, 2019 -->
+<script>notifications.load('reputation');</script>
+<!-- Мгновенные уведомления: регистрация новых участников © Alex_63 -->
+<script>notifications.load('new_user')</script>

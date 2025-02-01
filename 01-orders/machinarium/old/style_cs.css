@@ -1,0 +1,173 @@
+/**************************************************************/
+body { background: var(--bg); background-color: #ffffff; background-attachment: fixed; background-size: cover; }
+#pun-title table { background: var(--tab); border: none; height: var(--hg1); margin-left: -2px; margin-bottom: -47px; width: var(--wh1); margin-top: -320px; position: inherit; }
+#pun-about p.container {  background: var(--bot); height: var(--hg2); width: var(--wh1); margin-top: 14px; margin-left: -2px; position: absolute; }
+
+/**************************************************************/
+#pun-about .container .item1 {position: relative;font-size: 8px;top: 18px;text-align: center;}
+#pun-about .container .item1 a { font-size: 11px!important; }
+#profilenav h2 { text-align: left !important; }
+
+/**************************************************************/
+#pun-post .pa-author { padding: 0px; margin-top: 20px; text-align: center; margin-left: 0px; }
+
+/**************************************************************/
+.punbb .section .container, .punbb .post-body, .punbb .post-links, .punbb td.tc2, .punbb td.tc3, .punbb .formal fieldset .post-box, #viewprofile li strong, #viewprofile li div, #setmods dd, .punbb .info-box, .punbb #pun-main .info-box .legend, .punbb .main .container, .punbb .post .container, .punbb .post h3, .punbb-admin #pun-admain .adcontainer, #pun-title, #pun-title .container, .punbb .modmenu .container, .punbb legend span, #viewprofile h2 span, #profilenav h2 span, .punbb-admin #pun-admain legend span, .punbb .post h3 span, .punbb th, #viewprofile li, #setmods dl { border-color: transparent;
+    color: var(--cl5); }
+
+.linkst .pagelink, .linksb .postlink, .linkst .postlink, .punbb .post-links ul, .punbb .modmenu .container, .punbb .modmenu .container, .subscribelink, .punbb fieldset legend span, .punbb .linksb, .linksb .pagelink {
+    text-transform: lowercase; color: var(--cl5); font-size: 11px; }
+
+/**************************************************************/
+.punbb a, .punbb a:link, .punbb a:visited, .punbb-admin #pun-admain a, .punbb-admin #pun-admain a:link, .punbb-admin #punbb-admain a:visited, .punbb li.isactive a, .punbb li.isactive a:link, .punbb li.isactive a:visited {
+    border: none; text-decoration: none; transition: all 0s ease-in-out; box-shadow: none;
+    font-size: 13px; color: var(--cl4); font-family: var(--3ft); }
+
+.punbb a:hover, .punbb a:focus, .punbb a:active, .punbb-admin #pun-admain .nodefault, .punbb-admin #punbb-admain a:hover, .punbb-admin #punbb-admain a:focus, .punbb-admin #punbb-admain a:active {
+   text-decoration: none; color: var(--cl5); }
+
+ .lastedit {display: none;}
+
+/**************************************************************/
+#pun-index .tclcon { width: 530px; font-size: 11px; text-transform: lowercase; background: none; font-family: var(--3ft); text-align: justify; margin-top: 0px; }
+#pun-index .tcl h3 {width: 240px;height: 27px;text-align: center;font-weight: normal !important;right: 0px;position: relative;top: 0px;}
+#pun-index .tclcon h3 a { position: relative; display: flex; width: 232px; height: 26px; color: var(--cl4); top: 0px; text-transform: uppercase; font-family: var(--3ft); font-size: 18px; padding: 0px 0px 0 0px; align-items: center; justify-content: flex-start; }
+#pun-index .tclcon h3 a:hover { color: var(--cl5); }
+
+.podf-text { padding: 0px 0px 0px 0px; color: var(--cl5); top: 0px; font-family: var(--4ft); line-height: 13px; text-transform: lowercase; width: 495px; left: 0px; z-index: 1; position: relative; display: inline-block; text-align: left; font-size: 10px; }
+
+#pun-index .tcr a { font-size: 11px;  text-transform: uppercase; }
+span.lastpost {text-transform: lowercase;}
+
+#pun-index .tc2, #pun-index .tc3 { width: 5%;  font-weight: 700; font-size: 11px; }
+#pun-index .tcl { width: 20%; }
+.category thead{ display: none; }
+.category tr{ display: flex; }
+.category tr .tcl{ flex-basis: 70%; }
+.category .forum-title { float: left; width: 30% }
+.category .subforums { float: left; width: 100% }
+.topics-and-posts {display: none;}
+
+/**************************************************************/
+.forlinks { position: relative; width: 408px; padding: 1px 0px 1px; top: 3px !important; display: flex; justify-content: flex-start; }
+
+.navsi {display: flex;text-align: center;padding: 0px 10px 0px 0px;box-sizing: border-box;transition: .5s;}
+.navsi a {  font-size: 12px !important; letter-spacing: 0.7px;  font-weight: 400; font-family: var(--3ft) !important; text-transform: lowercase; padding: 0px; }
+
+/**************************************************************/
+#pun-index #pun-main .category .container { margin: 15px 20px 10px; background: #e2e1e1; }
+#pun-index .category tr {  margin: 0px 30px 5px; display: block; }
+
+/**************************************************************/
+#pun-index .category h2, #pun-stats.section h2 { margin: 0; background: var(--bg-cat); width: 940px; text-align: center; }
+#pun-index .category h2 span, #pun-stats.section h2 span { font-family: var(--2ft) !important; width: 381px; left: 141px; top: 2px; font-weight: 600; text-align: left; text-transform: uppercase; color: var(--cl3); font-size: 23px; letter-spacing: 1px !important; display: flex; padding-left: 400px; padding-right: 28px; position: relative; z-index: 1; align-items: center; justify-content: flex-end; }
+.section h2 span {  }
+
+/**************************************************************/
+.punbb textarea { background: #e2e1e1; outline: 0px solid #fff0; color: var(--cl2); border: 1px solid #d7d7d7; padding: 18px 20px !important; width: 96% !important; }
+
+.punbb select, input { color: var(--cl5); background: #e2e1e1; border: 1px solid #d7d7d7; padding: 3px !important; margin-left: 3px; outline: 0px solid #fff0; font-size: 11px !important; font-family: var(--4ft) !important; }
+
+.punbb #pun-main table .quote-box, .punbb #pun-main table .code-box { margin: 5px 1px 15px }
+
+.punbb .post-content .quote-box, .punbb .post-content .code-box { position: relative; overflow: hidden; background: #e8e7e7; border: 1px solid #cbc8c8; padding: 10px 15px 5px 15px !important; }
+
+.punbb .quote-box cite, .punbb .code-box strong.legend a, .post-content .spoiler-box > div { display: block; padding-bottom: 5px; font-weight: 600; font-style: normal; border-bottom: 1px solid #b9b8b8; margin: 0px 0px 4px; font-family: var(--4ft); letter-spacing: 0px; font-size: 10px; text-transform: lowercase; }
+
+.post-content .spoiler-box > div { border-bottom: none; }
+.punbb .quote-box cite, .punbb .code-box strong.legend, .punbb .code-box strong.legend a, .post-content .spoiler-box > div { color: var(--cl4); border-radius: 0px; }
+.punbb .code-box strong.legend a:hover { color: var(--cl5);}
+.post-content .spoiler-box > blockquote { padding-top: 0.4em!important; }
+.code-box strong.legend a:before { content: '\e86f'; }
+.quote-box cite:before { content: '\e244'; }
+.post-content .spoiler-box > div:before { content: '\e5cf'; }
+.post-content .spoiler-box > div.visible:before { content: '\e5ce'; }
+.code-box strong.legend a:before, .quote-box cite:before, .post-content .spoiler-box > div:before, .post-content .spoiler-box > div.visible:before
+ { position: relative;font-size: 13px;font-family: 'Material Icons';padding: 0px 4px;top: 3px; }
+
+.punbb .post-content .quote-box, .punbb .post-content .code-box { margin: 10px 5px 10px 5px; padding: 0px; }
+.post-content .spoiler-box > div { background: none!important; cursor: pointer; padding-left: 0px!important; }
+.post-content .spoiler-box > div.visible { margin-left: 0px!important; background-image: none!important; }
+#pun-main .code-box .scrollbox pre { font-size: 11px;  font-family: var(--4ft); }
+
+/**************************************************************/
+#font-area, .popup_graffiti, #size-area, #spoiler-sels, #image-area, #color-area, #addition-area, #video-area, .inner .popup_graffiti, #table-area, #keyboard-area { padding: 10px 10px 10px 10px !important; color: var(--cl5); font-family: var(--3ft); font-size: 11px; background: #f1f1f1; border: none !important; border-radius: 0px; box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%); }
+#tags .container { position: absolute; right: 5px!important; top: 60px!important; z-index: 2; }
+
+#font-area {  display: flex; height: 196px; overflow-y: hidden; text-align: left; width: 917px; flex-wrap: wrap;  flex-direction: column; }
+#size-area { display: flex; text-align: center;  gap: 18px; width: 370px; align-items: baseline; flex-wrap: wrap; justify-content: center; }
+
+/**************************************************************/
+#plng { width: 165px; padding: 1px 0px 0px;  text-align: center; margin-right: 5px; margin-left: 4px; background: var(--cl4); z-index: 99; float: left; letter-spacing: 0.7px; color: var(--cl); font-family: var(--3ft); text-transform: uppercase; font-size: 10px; }
+#plng b {font-size: 10px;font-weight: 100;color: var(--cl);}
+#plng { display: inline; }
+
+/**************************************************************/
+.punbb .post-content del { text-decoration: none; filter: blur(2px); }
+.punbb .post-content del:hover { filter: blur(0px); }
+
+/**************************************************************/
+.uploadProgressBar {  background: var(--cl4)!important; }
+
+
+/**************************************************************/
+input.button, #post fieldset .hashelp div input, .button, #pun-admain input { text-transform: uppercase;  transition: all 0.5s ease 0s; font-size: 10px !important; color: var(--cl) !important; border: 1px solid var(--cl4);  background: var(--cl4); letter-spacing: 0.7px; font-family: var(--3ft) !important; font-weight: 500 !important; padding: 1px 5px 0px 5px !important; cursor: pointer !important; }
+
+input.button:hover, #post fieldset .hashelp div input:hover, .button:hover { color: var(--cl0) !important; background: var(--cl5); border: 1px solid var(--cl5); cursor: pointer !important; }
+
+
+/**************************************************************/
+#pun-index table Div.icon { background: none; height: 73px; width: 42px; margin: -58px -70px; display: block; position: absolute; z-index: 99; opacity: 1; }
+
+#pun-index TR.inew Div.icon { height: 14px; width: 22px; background: var(--cl4); margin: 5px -35px; display: block; position: absolute; z-index: 99; opacity: 1; animation: blinkColor .9s linear infinite; -moz-animation: blinkColor .9s linear infinite; -webkit-animation: blinkColor .9s linear infinite; }
+.icon[data-new-topics]:before, .subforums span[data-new-topics]:before { display: none; }
+
+/**************************************************************/
+#pun-viewforum table Div.icon, #pun-messages table Div.icon, #pun-searchtopics table Div.icon,
+#pun-viewforum TR.inew Div.icon, #pun-messages TR.inew Div.icon, #pun-searchtopics TR.inew Div.icon,
+#pun-viewforum TR.isticky Div.icon, #pun-messages TR.isticky Div.icon, #pun-searchtopics TR.isticky Div.icon, 
+#pun-viewforum TR.iclosed Div.icon, #pun-messages TR.iclosed Div.icon, #pun-searchtopics TR.iclosed Div.icon  { float: left; display: block; border-radius: 0%; height: 4px; width: 14px; margin-left: 0px; margin-right: 5px; margin-top: 7px; z-index: 99; }
+
+#pun-viewforum table Div.icon, #pun-messages table Div.icon, #pun-searchtopics table Div.icon { background: var(--cl3); border: 2px solid var(--cl3); opacity: 0.5; }
+
+#pun-viewforum TR.inew Div.icon, #pun-messages TR.inew Div.icon, #pun-searchtopics TR.inew Div.icon 
+{ background: var(--cl4); border: 2px solid var(--cl4); opacity: 1; }
+
+#pun-viewforum TR.isticky Div.icon, #pun-messages TR.isticky Div.icon, #pun-searchtopics TR.isticky Div.icon {  background: var(--cl5); border: 2px solid var(--cl5); opacity: 1; }
+
+#pun-viewforum TR.iclosed Div.icon, #pun-messages TR.iclosed Div.icon, #pun-searchtopics TR.iclosed Div.icon { background: var(--cl5); border: 2px solid var(--cl5); opacity: 0.4; }
+
+.closedatafield { display: none; }
+.stickytext { display: none; }
+
+/**************************************************************/
+::selection {background: var(--cl4);color: #ffffff;}
+
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-thumb {background: var(--cl4);}
+::-webkit-scrollbar-track {background: var(--cl);}
+
+body {overflow-x: hidden}
+
+.go-up, .go-down {  cursor: pointer; width: 25px; height: 25px; display: none; position: fixed; opacity: 0.6; z-index: 9999; }
+.go-up {top: 450px;} .go-down {top: 500px;} 
+.go-up {background: var(--cl4);margin-left: 995px !important;} .go-down {background: var(--cl3);margin-left: 995px !important;}
+.go-up:hover, .go-down:hover {  opacity: 1;}  
+
+/**************************************************************/
+#html-header infotext {position: absolute;left: 358px;top: -217px;width: 345px;letter-spacing: 3.5px;font-family: var(--2ft);word-spacing: 2px;text-transform: uppercase;color: var(--cl3);font-size: 42px;text-align: center;}
+#html-header infotext buk { color: var(--cl4)!important;}
+#html-header infotext2 {position: absolute;right: 322px;top: -177px;width: 260px;letter-spacing: 0.5px;font-family: var(--3ft);word-spacing: 1px;text-transform: lowercase;color: #a37573;font-size: 11px;text-align: right;}
+
+#html-header txt-sh {position: absolute;z-index: 999;color: var(--cl3);letter-spacing: 0.5px;text-transform: lowercase;font-family: var(--3ft);font-size: 10px;}
+#html-header txt-sh {top: -216px;text-align: justify;display: block;line-height: 12px;left: 680px;width: 261px;}
+
+#plash {position: absolute;display: flex;scrollbar-width: none;width: 405px;gap: 0px 22px;height: 47px;text-align: left;overflow: hidden;top: -141px;right: 108px;flex-wrap: wrap;}
+.plaha { display: inline-block;  width: 190px; height: 18px; background: #b1968f42; transition: all .5s linear 0s !important; }
+.plaha:hover {  background: var(--cl4); }
+.plaha text { position: relative; display: inline-block; top: -2px; text-transform: lowercase; font-size: 11px; font-family: var(--3ft); color: var(--cl); margin: 0px 10px; width: 170px; text-align: center; }
+
+/**************************************************************/
+#html-footer copy { position: absolute; width: var(--wh); margin: 50px 0px 0px; letter-spacing: 1px; text-transform: lowercase; text-align: center; font-size: 10px; }
+#html-footer copy a {font-size: 10px;text-transform: uppercase;opacity: .5;font-family: var(--3ft);color: var(--cl);}
+#html-footer copy a:hover {opacity: 1}

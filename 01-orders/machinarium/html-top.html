@@ -1,3 +1,6 @@
+<!--------------------------------------------------------------------------------------------------------------------
+                                                                    ШАПКА
+---------------------------------------------------------------------------------------------------------------------->
 <div class="tablica">
  <div class="tab_logo">Machinarium</div>
  <div class="tab_inner">
@@ -46,3 +49,82 @@
  PR.pass = '1111'; //Пароль PR-аккаунта
  PR.btn_text = 'PR'; //Надпись на кнопке PR-входа(или ссылка на картинку);
  PR.set();</script>
+
+
+<!------------------------------------------ ОТКЛЮЧЕНИЕ ФУНКЦИЙ И КНОПОК ------------------------------->
+<!--Отключить кнопку "Жалоба" -->
+<script type="text/javascript">
+ RusffCore.sets.show_reportBtn = 0;
+</script>
+<!--Отключить функцию "Поделиться" -->
+<script type="text/javascript">
+ RusffCore.sets.share = false;
+</script>
+<!--Отключить функцию "Вложения" -->
+<script type="text/javascript">
+ RusffCore.sets.files.button = false;
+</script>
+<!--Отключить функцию "Это интересно" -->
+<script type="text/javascript">
+ rusffLive.enable = false;
+</script>
+<!--Отключить функцию "Реакция" -->
+<script>
+ ReactionsPlugin.setConfig({
+  disable: true
+ });
+</script>
+<!--Список просматривающих тему -->
+<script>
+ RusffCore.sets.realtimeTopicReaders = false
+</script>
+
+<!---------------------- ВЫДЕЛИТЬ КОД с перемещением в буфер обмена © Damassk, 2019 -------------->
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/, 'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'скопировать код' //текст ссылки</script>
+
+<!-- Пиар-вход v.2 -->
+<script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+<script type="text/javascript">
+ PR.nick = 'PR'; //Ник PR-аккаунта
+ PR.pass = '1111'; //Пароль PR-аккаунта
+ PR.btn_text = 'PR'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+ PR.set();</script>
+
+<!--------------------- Выделение кода в блоке "Код" © Alex_63 --------------------->
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+<script>eval(select_text.toString().replace(/\}$/, 'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'выделить код [копируется сразу]'</script>
+
+<!-- Скрытие профиля в теме тегом © Alex_63 -->
+<style type="text/css">
+ .hideprofile .post-author,
+ .hideprofile .pl-email,
+ .hideprofile .pl-website {
+  display: none !important
+ }
+
+ .hideprofile .post-body,
+ .hideprofile .post-links,
+ .hideprofile .post-links ul,
+ .post.hideprofile h3>span {
+  margin-left: 0 !important
+ }
+</style>
+<script>
+ FORUM.set('editor.addition.tags.hideprofile', { name: 'Скрыть минипрофиль', onclick: function () { insert('[hideprofile]'); } });
+ $().pun_mainReady(function () { $('.post:contains("[hideprofile]")').addClass('hideprofile').html(function () { return $(this).html().replace(/\[hideprofile\]/gim, '') }) });
+</script>
+
+<!-- Мгновенные уведомления © Alex_63, 2024 -->
+<link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/notifications.css" />
+<script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/notifications.js"></script>
+<!-- Мгновенные уведомления: упоминания © Alex_63, 2020 -->
+<script>notifications.load('mentions');</script>
+<!-- Мгновенные уведомления: подписки на форум/тему © Alex_63, 2019 -->
+<script>notifications.load('subscriptions');</script>
+<!-- Мгновенные уведомления: комментарии к репутации без переадресации © Alex_63, 2019 -->
+<script>notifications.load('reputation');</script>
+<!-- Мгновенные уведомления: регистрация новых участников © Alex_63 -->
+<script>notifications.load('new_user')</script>

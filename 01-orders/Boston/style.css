@@ -569,6 +569,7 @@
   #pun-navlinks li#navregister a:after {content: "\f067";}
   #pun-navlinks li#navpr_1 a:after {content: "\f0f3";}
   #pun-navlinks li#navawards a:after {content: "\f091";}
+  #pun-navlinks li#navrules a:after {content: "\f03a";}
   
   #pun-navlinks li#navpm a span[data-last-unread]:after {
     content: "";
@@ -1127,12 +1128,14 @@
   border-bottom: 1px solid var(--pun-bd);
 }
 
-#pun-respect td, #pun-positive td {
-  width: 100% !important;
-  font-size: 12px;
-  display: inline-flex;
-  flex-direction: row;
-}
+  #pun-respect td, #pun-positive td {
+    width: 100% !important;
+    font-size: 12px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
 
   #pun-respect td::before, #pun-positive td::before {
     content: "";
@@ -1140,6 +1143,7 @@
     display: inline-flex;
     font-weight: bold;
    justify-content: flex-start;
+   flex-shrink: 0;
   }
 
   #pun-respect td.tcl::before, #pun-positive td.tcl::before {
@@ -1164,6 +1168,7 @@
 #pun-respect .tcr a, #pun-positive .tcr a {
   width: auto;
   text-align: left;
+  margin: 0;
 }
   
   
@@ -1664,6 +1669,91 @@
     width: 100% !important;
     display: block;
   }
+
+  /* Награды
+  -------------------------------------------------------------*/
+
+.mod-awards .category h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mod-awards .category h2 .fr {
+  position: relative;
+  right: unset;
+  font-size: 12px;
+}
+
+#awards-content  {
+  padding: 0;
+}
+
+  #awards-content tr {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+  #awards-content td {
+    width: 100%;
+    font-size: 12px;
+    display: inline-block;
+    text-align: left !important;
+  }
+
+  .mod-awards-user #awards-content td:nth-child(3),.mod-awards-user #awards-content td:nth-child(4) {
+    display: flex;
+    gap: 5px;
+  }
+
+  #awards-content td:before {
+    content: "";
+    width: 100px;
+    font-weight: bold;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .mod-awards-list #awards-content td:nth-child(1)::before, .mod-awards-user #awards-content td:nth-child(1)::before {
+     content: "Название:";
+  }
+
+  .mod-awards-list #awards-content td:nth-child(2)::before, .mod-awards-user #awards-content td:nth-child(2)::before {
+     content: "Иконка:";
+  }
+
+  .mod-awards-list #awards-content td:nth-child(3)::before {
+     content: "Описание:";
+  }
+
+  .mod-awards-list #awards-content td:nth-child(4)::before {
+     content: "Лауреаты:";
+  }
+
+  .mod-awards-user #awards-content td:nth-child(3)::before {
+     content: "За заслуги:";
+  }
+
+  .mod-awards-user #awards-content td:nth-child(4)::before {
+     content: "Вручена:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(1)::before {
+     content: "Пользователь:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(2)::before {
+     content: "Кол-во наград:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(3)::before {
+     content: "Награды:";
+  }
+
+  .mod-awards-users #awards-content td:nth-child(4)::before {
+     content: "Детали:";
+  }
+
   
   /* Загрузка файлов
   -------------------------------------------------------------*/
@@ -1713,7 +1803,10 @@
     max-width: 100%;
    }
   
-  .punbb-admin #pun-adnav {margin: 0;}
+  .punbb-admin #pun-adnav {
+    margin: 0;
+    float: none;
+  }
   
   .punbb-admin #pun-admain {padding: 0;}
   
@@ -1865,6 +1958,10 @@
 		padding-left: 20px !important;
 	}
 
+.guestbook ul.slide-list {
+  height: 482px;
+}
+
 	.awards-theme{
 		background: red;
 		height: 1000px !important;
@@ -1946,6 +2043,41 @@
   width: 100% !important;
 }
 
+/* Банк */
+
+.bank_list li {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.bank_list li.bank_list_thead {
+  display: none;
+}
+
+.bank_list li .b1, .bank_list li .b2, .bank_list li .b3 {
+  width: 100%;
+}
+
+.bank_list li > div:before {
+  content: "";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  opacity: .45;
+  margin-right: 10px;
+}
+
+.bank_list li .b1:before {
+  content: "услуга:";
+}
+
+.bank_list li .b2:before {
+  content: "примечание:";
+}
+
+.bank_list li .b3:before {
+  content: "цена:";
+}
 
 /* Кнопки вверх-вниз */
 

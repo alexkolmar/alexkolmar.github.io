@@ -1,3 +1,13 @@
+<!---------------------------------------- ВЕРНУТЬ "НОВЫЕ СООБЩЕНИЯ" ------------------------------------->
+<script type="text/javascript">
+ function show_new() {
+  if (GroupID == 3) return;
+  $('#pun-ulinks ul').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>');
+ }
+ show_new();
+</script>
+
+
 <script src='//forumstatic.ru/files/0012/9a/62/92819.js'></script>
 <script>
  $(function () {
@@ -19,6 +29,10 @@
  changeS('#navlogout', 'Выход', 'logout');
  changeS('#navlogin', 'Войти', 'login');
  changeS('#navregister', 'Регистрация', 'registr.');
+ changeS('#pun-stats .item1 span', 'Всего тем:', 'Тем:');
+ changeS('#pun-stats .item2 span', 'Всего сообщений', 'Сообщений:');
+ changeS('#pun-stats .item3 span', 'Зарегистрированных пользователей:', 'Пользователей:');
+ changeS('#pun-stats .item4 span', 'Последним зарегистрировался:', 'Приветствуем:');
 </script>
 
 
@@ -101,6 +115,179 @@
 <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
 <!-- Конец -->
 
+
+<!-------------------- УДАЛЯЕМ ЛИШНИЕ СТРОКИ ПОСЛЕ ЦИТАТЫ И КОДА © Alex_63 v.3 ----------------->
+<script type="text/javascript">
+ $('.post-content').each(function () {
+  var CNT = $(this).html();
+  CNT = CNT.replace(/<p><br><\/p>/img, '');
+  CNT = CNT.replace(/<p><br><br>(.*?)<\/p>/img, '<p>$1</p>');
+  CNT = CNT.replace(/<p><br>(.*?)<\/p>/img, '<p>$1</p>');
+  $(this).html(CNT);
+ });
+</script>
+
+
+<!------------------------------------------------- ЗАМЕНА ТИРЕ -------------------------------------------------->
+<script type="text/javascript">
+ $('.post-content p').each(function () {
+  function replacer(str) { return str.replace(/-\s|–\s/gm, '— '); }
+  var a = $(this).clone().wrap('<div></div>').parent().html();
+  var b = a.replace(/>[^<>]+</gim, replacer);
+  if (a != b) $(this).replaceWith(b)
+ });
+</script>
+
+
+<!-- Замена дефисов на тире © Deff -->
+<script>$('.post-content p').html(function () { return this.innerHTML.replace(/(\s|&nbsp;)?-(\s|&nbsp;)/g, '$1&mdash;$2') })</script>
+
+
+<!-- Замена двойных кавычек на парные угловые скобки («») в постах © Deff -->
+<script type="text/javascript">
+  (function () {
+   function rep(str, p1, offset, s) {
+    return '>' + p1.replace(/"([^ "][^"]+?)"/gm, '«$1»') + '<';
+   }
+   $('.post-content p').each(function () {
+    $(this).html(('</>' + $(this).html() + '</>').replace(/>([^<>]+)</gm, rep));
+   });
+  }());
+</script>
+
+
+<!---------------------------------------------------------------------
+                      СКРИПТЫ ДЛЯ ФОРМы ОТВЕТА
+----------------------------------------------------------------------->
+
+<!----------------------------------------- ОБТЕКАНИЕ ИЗОБРАЖЕНИЯ 2.4.4 ----------------------------------->
+<script language="javascript">
+ $(function () {
+  $('td#button-link').before('<td id="floatbut" title="Обтекание изображения" style=\'background-image:url("https://forumstatic.ru/files/0015/dd/40/15488.gif")\'></td>');
+  $('#floatbut, .vibor').click(function () {
+   $('div#float').toggle();
+  });
+ });
+ elm = document.getElementsByTagName("div")
+ for (x in elm) if (elm[x].className == "post-content") {
+  post = elm[x].innerHTML;
+  if (post.indexOf("[/float]") != -1) {
+   floats = /\[float=(.*?)\]([^\[]*)\[\/float\]/gi
+   elm[x].innerHTML = elm[x].innerHTML.replace(floats, "<span style='float: $1; margin: 15px; text-align: $1;'>$2</span>")
+  }
+ }
+</script>
+<div id="float" class="container">
+ <div><strong>Направление обтекания</strong></div><br>
+ <div align="center">
+  <img class="vibor" src="https://forumstatic.ru/files/0015/dd/40/52315.png" title="left"
+   onclick="bbcode('[float=left]', '[/float]')" />
+  <img class="vibor" src="https://forumstatic.ru/files/0015/dd/40/32241.png" title="right"
+   onclick="bbcode('[float=right]', '[/float]')" />
+ </div>
+</div>
+<!-- вставка окошка float в один ряд с остальными тегами -->
+<script>
+ $(document).ready(function () {
+  $("#float").prependTo($("#post-form #tags"));
+ });
+</script>
+<!-- Конец перестановок -->
+
+
+<!---------------------------------------------- ВСТАВИТЬ КАРТИНКУ -------------------------------------------->
+<script>
+ var oldIMG = "<td id=\"button-image2\" title=\"Вставить картинку\"><img onclick=\"bbcode('[img]','[/img]')\" src=\"/i/blank.gif\"/></td>"
+ $("#button-image").after(oldIMG);
+</script>
+
+<!------------------------------------------ ВЫРАВНИВАНИЕ ПО ШИРИНЕ --------------------------------------->
+<script type="text/javascript">
+ $(document).ready(function () {
+  $("#post #button-center").after('<td id=button-justify align=center valign=center><img onclick="bbcode(\'[align=justify]\',\'[/align]\')" src="/i/blank.gif"/></td>');
+ }); 
+</script>
+
+<!------------------------------------------- КНОПКА АБЗАЦА - [indent] ----------------------------------------->
+<style>
+ #button-indent {
+  background: url(https://s7.uploads.ru/t/mnkgq.png) no-repeat center 6px !important;
+ }
+</style>
+<script type="text/javascript">(function () {
+  var b = '[indent]';
+  $("#button-strike").after('<td id="button-indent" title="Отступы"><img src="/i/blank.gif"  onclick="insert(\'' + b + '\')"></td>');
+  var indent = '<span style="display: inline-block; margin: 1em 2.1em;"></span>';
+  $('.post-content p:contains("' + b + '")').each(function () { $(this).html($(this).html().replace(/\[indent\]/gm, indent)); });
+ }());
+</script>
+
+<!------------------------------- ПЕРЕКЛЮЧЕНИЕ РАСКЛАДКИ ВЫДЕЛЕННОГО ТЕКСТА ---------------------->
+<style>
+ #button-transL {
+  background-image: url(http://uploads.ru/i/X/j/Z/XjZW7.png)
+ }
+</style>
+<script type="text/javascript">S = '<img src="http://forum.mybb.ru/i/blank.gif" title="Lat- Русс" onclick="bbcode(\'[Lat-Rus]\',\'[/Rus-Lat]\');LatRus();"/>';
+ $("#button-font").after('<td id=button-transL>' + S + '</td>'); var TxtTrans1 = 'lat';
+ function LatRus() {
+  if (TxtTrans1 == 'lat') { TxtTrans1 = 'rus' } else { TxtTrans1 = 'lat' };
+  lat0 = 'qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~[].'.split('');
+  lat = 'qwertyuiopasdfghjkl;\'zxcvbnm\,QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>`~'.split('');
+  lat.push('\\['); lat.push('\\]'); lat.push('\\.');
+  rus = ('йцукенгшщзфывапролджэячсмитьбЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёЁхъю').split('');
+  function transF(p) { ar1 = lat; ar2 = rus; if (TxtTrans1 == 'lat') { ar2 = lat0; ar1 = rus } for (var i = 0; i < ar1.length; i++) { trans = '/' + ar1[i] + '/g'; p = p.replace(eval(trans), ar2[i]) } return p; } L = $('#main-reply').val(); L = L.replace(/\[Lat-Rus\]([\s\S]*)\[\/Rus-Lat\]/mg, function (a, b, c) { return transF(b); }); $('#main-reply').val(L);
+ }
+</script>
+
+<!------------------------------------ СЧЕТЧИК СИМВОЛОВ В ФОРМЕ ОТВЕТА --------------------------------->
+<script>var a, L, epl = $("#main-reply"), str = '<small id="plng">написано <b>00</b> символов </small>'; epl.parents("fieldset").find("legend").prepend(str); function epl3() { a = epl.val().length; if (a > 9) { L = '' } else { L = '0' }; $("#plng b").text(L + a) }; epl3(); $(".pl-quote").click(function () { setTimeout('epl3()', 100) }); epl.bind('mouseout mousemove keydown keypress keyup', function (e) { epl3() });</script>
+
+<!------------------------------------------------------------------
+                               КОНЕЦ
+--------------------------------------------------------------------->
+
+
+<!-- Отключение сокращения ссылок -->
+<script type="text/javascript"> FORUM.set("editor.link.short_url", function () { return false; }); </script>
+
+
+<!-- Запятая после ника в посте -->
+<script type="text/javascript">
+ function to(username) { insert('[b]' + username + '[/b]' + ', '); }
+</script>
+
+
+<!-- Маска от Человека-Шамана -->
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+ hvScriptSet.addMask({
+  guestAccess: ['Архив'],
+  forumAccessExtended: {
+   'админка': ['Пользователи', 'тест'],
+   'игра': ['Пользователи'],
+   'настоящее': ['Пользователи'],
+   'прошлое': ['Пользователи'],
+   'альтернатива': ['Пользователи'],
+   'Архив': ['Пользователи'],
+   'флуд': ['Пользователи']
+  }
+ });
+</script>
+
+
+<!----- Дополнительные смайлы by Человек-Шаман ----->
+<script src="https://forumstatic.ru/files/0017/95/29/40399.js"></script>
+<script>
+ $(document).ready(function () {
+  hvStickerPack.init("https://forumstatic.ru/files/001c/5a/2f/14428.txt?v=1");
+ });
+</script>
+
+
+<!----------------------------------------------------------------------
+                                   ФУТЕР
+  ----------------------------------------------------------------------->
 
 <div class="footer_wrapper">
 
