@@ -1,0 +1,244 @@
+:root {
+    --mainBG: #F4F4F4;
+    --secBG: #fff;
+    
+    --mainBGimg: url(https://forumstatic.ru/files/001c/63/20/29405.webp) top center no-repeat fixed;
+    
+    --textMain: #333;
+    --accLilac: #B9BAD0;
+    --accDarkLilac: #5B5B62;
+    --accBrightLilac: #716abe;
+    --accWhite: #fff;
+    --accGrey: #C9C6C680;
+    }
+    
+    .night {
+    --mainBG: #E4E4E4;
+    --secBG: #F2F2F2;
+    }
+    
+    
+    /* Disabling unnecessary
+    -------------------------------------------------------------*/
+    li#navawards, div#pun-live-rusff, .topic a.sharelink, div#post-form h2, .punbb .post-links li.pl-email.email, li.pl-reports, .punbb .modmenu .container span, #pun-viewtopic #post-form fieldset legend span, #pun-status span.item4.status-right, span.item3.status-right, .go-up img, .go-down img, td#button-files_rusff, td#button-graffiti_rusff, td#button-smile, #pun-index thead, #pun-crumbs1 em, #pun-crumbs2 em, #pun-index #pun-crumbs1, #pun-index #pun-crumbs2, td#profile-right li#pa-email span, td#profile-right li#pa-email a.sendemail, div#viewprofile td#profile-right li#pa-fld2 span, li#pa-invites, div#viewprofile td#profile-right li#pa-fld6 span, div#viewprofile td#profile-right li#pa-fld6 img, div#pun-profile small#plng, div#pun-profile td#button-mask, div#pun-messages small#plng, span.num_msg:before, div#pun-messages li.pl-email, div#pun-messages td#button-mask, p.lastedit, li.pl-share, #pun-index .subforums, span.closedatafield, .post-content .fd,  .post-content .nm
+    
+    {display: none !important; clear: both;  height: 0; visibility: hidden; overflow: hidden; line-height: 0.0; font-size: 0;}
+    
+    
+    /* CS1 Background and text colours
+    -------------------------------------------------------------*/
+    
+    /* CS1.1 */
+    .punbb .section .container, .punbb .post-body, .punbb .post-links, .punbb td.tc2, .punbb td.tc3,
+    .punbb .formal fieldset .post-box, #viewprofile li strong, #viewprofile li div, #setmods dd,
+    .punbb .info-box, .punbb #pun-main .info-box .legend {
+    
+      }
+    
+    /* CS1.2 */
+    .punbb .main .container, .punbb .post .container, .punbb .post h3, .punbb-admin #pun-admain .adcontainer {
+    
+      }
+    
+    /* CS1.4 */
+    #pun-title, #pun-title .container, .punbb .modmenu .container {
+    
+      }
+    
+    /* CS1.5 */
+    .punbb legend span, #viewprofile h2 span, #profilenav h2 span, .punbb-admin #pun-admain legend span {
+    
+      }
+    
+    /* CS1.6 */
+    .punbb .post h3 span, .punbb th, #viewprofile li, #setmods dl  {
+    
+      }
+    
+    /* CS1.7 */
+    .punbb .quote-box, .punbb .code-box {
+    
+      }
+    
+    .offline li.pa-online strong {
+      font-weight: normal
+      }
+    
+    
+    /* CS3 Links
+    -------------------------------------------------------------*/
+    
+    /* CS3.1 */
+    .punbb a, .punbb a:link, .punbb a:visited,
+    .punbb-admin #pun-admain a, .punbb-admin #pun-admain a:link, .punbb-admin #punbb-admain a:visited {
+      color: #878898;
+      text-decoration: none;
+      transition: all .3s linear 0s;
+      }
+    
+    .punbb li.isactive a, .punbb li.isactive a:link, .punbb li.isactive a:visited {
+      color: #333;
+      }
+    
+    /* CS3.2 */
+    .punbb a:hover, .punbb a:focus, .punbb a:active,  .punbb-admin #pun-admain .nodefault,
+    .punbb-admin #punbb-admain a:hover, .punbb-admin #punbb-admain a:focus, .punbb-admin #punbb-admain a:active {
+      color: #333;
+      }
+    
+    /* CS3.3 */
+    #pun-navlinks a {
+        background: var(--accLilac);
+        display: flex;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        line-height: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #pun-navlinks a span {transition: all .3s linear 0s;}
+    
+    #pun-navlinks a:hover span {
+    filter: opacity(0.5);
+    }
+    
+    #pun-navlinks a:hover, #pun-navlinks a:focus, #pun-navlinks a:active {
+    
+      }
+    
+    #pun-navlinks a span {
+        display: flex;
+        width: 18px;
+        height: 18px;
+        background-size: auto;
+        align-items: center;
+        justify-content: center;
+        font-size: 0;
+    }
+    
+    #pun-navlinks li#navindex a span {background: url(https://forumstatic.ru/files/001c/63/20/15828.svg) center 5px no-repeat;}
+    
+    
+    #pun-navlinks a span:before {
+        font-family: "Font Awesome 6 Pro";
+        color: #fff;
+        font-size: 13px;
+        font-weight: 300;
+        margin: 0 0 0 0;
+    }
+    
+    #pun-navlinks li#navuserlist a span:before {
+        content: "\f0c0";
+    }
+    
+    #pun-navlinks li#navsearch a span:before {
+        content: "\f002";
+        font-size: 11px;
+    }
+    
+    #pun-navlinks li#navprofile a span:before {
+        content: "\f2bd";
+    }
+    
+    #pun-navlinks li#navpm a span:before {
+        content: "\f4b0";
+    }
+    
+    #pun-navlinks li#navadmin a span:before {
+        content: "\f013";
+    }
+    
+    #pun-navlinks li#navlogout a span:before {
+        content: "\f2f5";
+        margin: 0 0 0 2px;
+    }
+    
+    #pun-navlinks li#navregister a span:before {
+        content: "\f234";
+        font-size: 11px;
+        margin: 0 0 0 2px;
+    }
+    
+    #pun-navlinks li#navlogin a span:before {
+        content: "\f2f6";
+    }
+    
+    #pun-navlinks li#navpr_1 a span:before {
+        content: "\f0a1";
+    }
+    
+    /* CS3.4 */
+    
+    #pun-pagelinks a:active, #pun-pagelinks a:focus {
+    
+      }
+    
+    /* CS4 Post status icons
+     -------------------------------------------------------------*/
+    
+    div.icon {border-color: #E6E6E6 #DEDEDE #DADADA #E2E2E2}
+    tr.iredirect div.icon {border-color: #F7F7F7 #F7F7F7 #F7F7F7 #f7f7f7}
+    div.inew {border-color: #0080D7 #0065C0 #0058B3 #0072CA}
+    
+    #pun-main div.catleft, #pun-main div.catright {display: none}
+    
+    
+    /* ÁûñòðîÏëþñû äëÿ Òîïèêà 
+     -------------------------------------------------------------*/
+    .noNull:before {}
+    
+    div .post-rating p>a {
+        outline: none;
+        position: relative;
+        z-index: 100;
+        width: 38px;
+        height: 38px;
+        font-size: 10px !important;
+        display: flex;
+        letter-spacing: -1px;
+        color: var(--accWhite);
+        border-radius: 10px;
+        line-height: 0;
+        align-items: center;
+        padding: 0 !important;
+        justify-content: center;
+    }
+    
+    div .post-rating p>a:before {
+        content: '\f004';
+        font-family: "Font Awesome 6 Pro";
+        color: var(--accLilac);
+        font-weight: 800;
+        font-size: 29px;
+        position: absolute;
+        left: 5px;
+        top: 19px;
+        z-index: -1;
+        display: flex !important;
+        margin: 0 !important;
+    }
+    
+    div.dark-style .post-rating p>a {
+      color: #6BC8AF !important;
+    }
+    div.post-vote {
+        margin-bottom: 65px;
+    }
+    
+    div.post-vote p>a {
+        font-size: 0 !important;
+        position: absolute;
+        cursor: pointer;
+        z-index: 200;
+        width: 25px;
+        height: 25px;
+        display: block;
+        margin-left: -10px;
+        margin-top: 8px;
+        background-color: var(--accLilac);
+        -webkit-mask-image: url(https://forumstatic.ru/files/001c/63/20/30747.svg);
+        mask-image: url(https://forumstatic.ru/files/001c/63/20/30747.svg);
+    }

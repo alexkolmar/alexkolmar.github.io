@@ -43,12 +43,10 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
   background: var(--light1);
-  border-bottom: 1px solid var(--silver);
   box-sizing: border-box;
   font: normal 20px/150% var(--aot);
-  z-index: 100;
+  z-index: 1001;
 }
 
 #pun-navlinks .container, #pun-ulinks .container {
@@ -74,6 +72,8 @@ body::before {
 /* Пользовательские ссылки */
 
 #pun-ulinks {
+  background: var(--light1);
+  border-bottom: 1px solid var(--silver);
   position: fixed;
   top: 35px;
   left: 0;
@@ -805,7 +805,7 @@ details > summary::marker, details > summary::-webkit-details-marker {
     display: none; /* Больше никаких стрелок, проблема решена! */
 }
 
-.extralinks {
+.post-author ul .extralinks {
   padding: 10px;
   text-align: left;
 }
@@ -1508,7 +1508,6 @@ td#button-sticker:before {content: "\e91d";} /* тег для дополните
 
 .bio p {
   text-indent: 30px;
-  font-size: 12px;
 }
 
 /* Занятые внешности */

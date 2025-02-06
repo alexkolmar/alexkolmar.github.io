@@ -1,0 +1,322 @@
+<!-- Восстановление последнего поста при утере by Человек-Шаман -->
+<script>
+ $(document).ready(function () {
+  $('#addition-area').append(function () {
+   return $('<div>Восстановить последний пост</div>').click(restoreLastPost);
+  });
+  function restoreLastPost() {
+   $('#main-reply').val(localStorage.ReservePost);
+  };
+ });
+</script>
+
+<!----- ФИЛЬТР ЗАЯВОК by Человек-Шаман ----->
+<script src="https://forumstatic.ru/files/0017/95/29/51757.js"></script>
+<script>
+ hvWantedFilters.init(7, 8);
+</script>
+
+
+
+<!------------------------------------------------------------------------ ПРИСВОЕНИЕ TITLE ---->
+<script type="text/javascript">
+ $('.pa-fld4 .fld-name').attr('title', 'посты');
+ $('.pa-respect .fld-name').attr('title', 'репутация');
+ $('.pa-fld3 .fld-name').attr('title', 'деньги');
+</script>
+
+
+<!------------------------------------------------------------------------------------------------------- КОПИРАЙТ НЕ УДАЛЯТЬ --->
+<a href="https://imagiart.ru/viewtopic.php?id=18488#p1222865" target="_blank" class="copy">copyright<span>judascare
+  &amp; blanche</span></a>
+
+
+<!------------------------------------------------------------ ССЫЛКА НА АВТОРСКИЙ ПОСТ В ЦИТАТЕ V.3 © Alex_63 ---->
+<script type="text/javascript">
+ var quote_img = 'https://forumstatic.ru/files/0015/ec/20/41408.png'; //Кнопка "Перейти к сообщению" в цитате
+ $('.quote-box>cite:not(:contains("Скрытый текст:"))').each(function () {
+  var cntq = $(this).text(), sp0 = '<span class="qcn">Сообщение от</span> ',
+   sp1 = '<span class="qc-uname">###</span>';
+  if (cntq.indexOf('#p') != -1) {
+   var pid = cntq.split(',')[0], autq = cntq.split(',')[1].split(' написал')[0],
+   lnkq = '<a class="qc-post-link" href="', imgq = '<img src="' + quote_img + '" title="Перейти к сообщению"/>',
+   sp2 = '&nbsp;<span class="qc-post-link">' + lnkq; sp1 = sp1.replace('###', autq);
+   if ($('.post' + pid).length) { $(this).html(sp0 + sp1 + sp2 + pid + '">' + imgq + '</a></span>'); } else { $(this).html(sp0 + sp1 + sp2 + '/viewtopic.php?pid=' + pid.split('#p')[1] + pid + '">' + imgq + '</a></span>'); }
+  } else { var autq = cntq.split(' написал')[0]; sp1 = sp1.replace('###', autq); $(this).html(sp0 + sp1); }
+ }); $('#pun-viewtopic .pl-quote>a').each(function () {
+  $(this).attr('href', $(this).attr('href').replace('(\'', '(\'#' + $(this).parents('.post').attr('id') + ','));
+ });
+</script>
+
+
+<!----------------------------------------------------------------------------------------------- АВАТАРЫ © Deff, Alex_63 ---->
+<style>
+ .avatar-image[style*="default_avatar.jpg"] {
+  background-image: url(https://forumstatic.ru/files/001c/57/23/38683.png) !important;
+ }
+</style>
+<script type="text/javascript">
+ var DefAvtr = 'https://forumstatic.ru/files/001c/57/23/38683.png'; //Ссылка на аватар по умолчанию
+ var GuestAvtr = 'https://forumstatic.ru/files/001c/57/23/38683.png'; //Ссылка на аватар для Гостя
+
+ $('#pun-viewtopic,#pun-messages').find('.pa-title').each(function () {
+  var b = DefAvtr;
+  if ($(this).text() == 'Гость') { b = GuestAvtr; }
+  var s = '<li class="pa-avatar item2"><img class="defavtr" src="' + b + '" alt="Аватар"/></li>';
+  if ($(this).parent().find('.pa-avatar').html() == null) $(this).after(s);
+ });
+ $('#profile-left strong:contains("Нет аватара")')
+  .parent().html('<div><img class="defavtr" src="' + DefAvtr + '"/></div>');
+</script>
+
+
+
+<!--------------------------------------------------------------------------------------------- НОВЫЕ СООБЩЕНИЯ ---->
+<script type="text/javascript">
+ if (GroupID != 3) {
+  $('#pun-ulinks .container').prepend(
+   '<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>');
+ }
+</script>
+
+
+
+<!-------------------------------------------------------------------------------------------- РАЗМЕР ШРИФТА © Alex_63 ---->
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+
+
+
+<!-------------------------------------------------------------------------------------------- КЛИКАБЕЛЬНЫЙ НИК ГОСТЯ ---->
+<script>$(".post[data-group-id=3]").find(".pa-author").html(function () { return this.innerHTML.replace(/(<.+>)(.+)$/, '$1<a href="javascript:to(\'$2\')">$2</a>') });</script>
+
+
+
+
+<!-------------------------------------------------------------------------------------------------- ЗАПЯТАЯ ПОСЛЕ НИКА ---->
+<script type="text/javascript">
+ function to(username) { insert('[b]' + username + '[/b]' + ', '); }
+</script>
+
+
+
+<!------------------------------------------------------------------------------------------------------ ОНЛАЙН © Alex_63 ---->
+<script type="text/javascript">
+ $('.post-author:not(.online)').find('.pa-author>a').addClass('offline');
+ $('.post-author.online').find('.pa-author>a').addClass('online');
+ $('.post').each(function () {
+  var PostAuthorLogin = $(this).find('li.pa-author>a').text();
+  var activeTime = $(this).find('.pa-online').text().split('Активен')[1];
+  var offTime = $(this).find('.pa-last-visit').text().split('Последний визит:')[1];
+  $(this).find('.pa-author>a.online').after('<span class="indOnline" title="онлайн ' + activeTime + '" /></span>');
+  $(this).find('.pa-author>a.offline').after('<span class="indOffline" title="последний визит: ' + offTime + '" /></span>');
+ });
+</script>
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------- ТИТЛ ---->
+<script type="text/javascript" src="https://forumstatic.ru/files/001a/01/8e/61341.js"></script>
+<script>
+ $(document).ready(function () {
+  $('a [title]').quicktip({ speed: 700 });
+  $('img [title]').quicktip({ speed: 700 });
+  $('div [title]').quicktip({ speed: 700 });
+  $('span [title]').quicktip({ speed: 700 });
+ }); 
+</script>
+
+
+
+
+<!---------------------------------------------------------------------------------------- УНИВЕРСАЛЬНАЯ ЗАМЕНА © Deff ---->
+<script>function UniverСhange(selektor, changed, substitute) {
+  $(selektor).each(function () {
+   if ($(this).parent().html() != null) {
+    if ($(this).parent().html().indexOf(changed) != -1) {
+     $(this).parent().html($(this).parent().html().replace(changed, substitute));
+    };
+   };
+  });
+ }
+
+ UniverСhange("#pun-stats h2 span", "Статистика форума", "statistics");
+
+</script>
+
+
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+ hvScriptSet.addMask({
+  guestAccess: ['#недоигранные_эпизоды'],
+  forumAccess: {
+   '#сюжетное': ['гость', 'непринятые', 'принятые'],
+   '#альтернатива': ['гость', 'непринятые', 'принятые'],
+   '#законченное': ['гость', 'непринятые', 'принятые'],
+   '#акции': ['гость', 'непринятые', 'принятые'],
+   '#регистрация': ['гость', 'непринятые', 'принятые'],
+   '#принятые_анкеты': ['гость', 'непринятые', 'принятые'],
+   '#артбук': ['гость', 'непринятые', 'принятые'],
+   '#флуд': ['гость', 'непринятые', 'принятые']
+  },
+  forumAccessExtended: {
+   '#сюжетное': ['гость', 'непринятые', 'принятые'],
+   '#альтернатива': ['гость', 'непринятые', 'принятые'],
+   '#законченное': ['гость', 'непринятые', 'принятые'],
+   '#акции': ['гость', 'непринятые', 'принятые'],
+   '#регистрация': ['гость', 'непринятые', 'принятые'],
+   '#принятые_анкеты': ['гость', 'непринятые', 'принятые'],
+   '#артбук': ['гость', 'непринятые', 'принятые'],
+   '#флуд': ['гость', 'непринятые', 'принятые']
+  },
+  changeList: {
+   'pafld1': {
+    title: 'фандом',
+    description: '',
+    tag: 'fd',
+    class: 'pa-fld1',
+    defaultCode: 'текст',
+    type: 'text'
+   },
+   'pafld2': {
+    title: 'лз и ссылка на дневник',
+    description: '',
+    tag: 'lz',
+    class: 'pa-fld2',
+    defaultCode: '<a href="ссылка на профиль">пара</a>, само лз текстом,  <a href="ссылка на дневник" class="lzdnev"></a>',
+    type: 'html'
+   }
+  },
+  userFields: ['pa-fld1', 'pa-title', 'pa-avatar', 'pa-author', 'pa-fld2', 'pa-fld5', 'pa-fld3', 'pa-respect', 'pa-fld4', 'pa-online', 'pa-gifts']
+ });
+</script>
+
+
+
+
+<!---------------------------------------------------------- БАННЕРЫ (ВНИЗУ ДЛЯ ПРОГРУЗКИ) ---->
+<div class="banners">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <a href="https://billboard.rusff.me/" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001a/f6/b2/2/659057.gif"></a><a href="https://foreveryoung.rolbb.me/"
+  style="display: inline;"><img src="https://forumstatic.ru/files/001b/b8/74/32367.jpg" border="0"></a><a
+  href="https://trt.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001c/18/b8/3/932665.png" width="88px" height="31px"></a><a
+  href="https://moonsonata.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://forumstatic.ru/files/001c/25/98/62146.png"></a><a href="https://sinistrum.f-rpg.me" target="_blank"
+  style="display: inline;"><img src="https://forumstatic.ru/files/001b/ea/09/91190.png" alt="sinistrum"></a><a
+  href="https://itisanewworld.rusff.me/" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/0019/7e/db/2/163253.gif" border="0"></a><a href="https://burndown.rusff.me/"
+  target="_blank" style="display: inline;"><img src="https://i.imgur.com/gWfGU5z.gif" width="88" height="31"
+   border="0"></a><a href="https://nycity.fun/" style="display: inline;"><img
+   src="https://forumstatic.ru/files/001c/1a/2f/97282.png" alt="New York City: город, где сбываются мечты"></a><a
+  href="https://thewaffle.ru/" target="_blank" style="display: inline;"> <img
+   src="https://forumupload.ru/uploads/001c/46/0f/3/519671.gif" border="0" alt="WAFFLE"></a><a
+  href="https://godstrust.rusff.me//" target="_blank" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001c/38/7d/8/134741.png"></a><a href="https://thedome.rusff.me/" target="_blank"
+  style="display: inline;"><img src="https://forumstatic.ru/files/001b/e7/0b/28425.gif"></a><a
+  href="https://crossinsomnia.rusff.me" target="_blank" style="display: inline;"> <img
+   src="https://forumupload.ru/uploads/001c/31/d4/14/971026.gif"></a><a href="https://comanox.rusff.me/" target="_blank"
+  style="display: inline;"> <img src="https://forumupload.ru/uploads/001c/5f/81/2/634718.png" border="0"
+   alt="COMA NOX"></a><a href="https://eatcake.rusff.me" target="_blank" style="display: inline;"> <img
+   src="https://i.imgur.com/TUWB8Fj.gif" border="0" alt="Cake"></a><a href="https://heartsclub.rusff.me/"
+  target="_blank" style="display: inline;"><img src="https://forumupload.ru/uploads/0010/0a/59/12/860193.png" border="0"
+   width="88" height="31"></a><a href="https://wolfauf.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://i.imgur.com/lCYion2.gif" alt="Execute" width="88" height="31"></a><a href="https://meethope.ru/"
+  style="display: inline;"><img src="https://forumstatic.ru/files/001c/42/be/39857.gif"></a><a
+  href="https://thegoodplace.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://i.imgur.com/ziAEvwz.png" good="" place="" визардинг="" ворлд="" без="" постирония&#8220;=""></a><a
+  href="https://crossfeeling.rusff.me/" target="_blank" style="display: inline;"> <img
+   src="https://forumupload.ru/uploads/0015/e5/b7/3090/763030.png" border="1" width="88" height="31"></a><a
+  href="//urgestalt.rusff.me/" target="_blank" style="display: inline;"> <img
+   src="https://forumstatic.ru/files/001c/29/61/82388.jpg" width="88" height="31" border="0"
+   alt="close ur gestalt"></a><a href="https://sideffect.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://i.imgur.com/F521zKD.gif"></a><a href="https://oddinar.rusff.me/" target="_blank"
+  style="display: inline;"><img src="https://forumupload.ru/uploads/001c/38/af/3/497233.gif" border="0"
+   alt="oddinary"></a><a href="https://historycross.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001b/67/7a/2/84020.jpg"></a><a href="https://circuscross.rusff.me"
+  target="_blank" style="display: inline;"><img src="https://forumstatic.ru/files/001c/55/c1/14805.png"></a><a
+  href="https://thenextdoor.rusff.me//" target="_blank" style="display: inline;"><img
+   src="https://i.imgur.com/fwCXRSb.png"></a><a href="https://inspiration.f-rpg.me/" target="_blank"
+  style="display: inline;"><img src="https://forumupload.ru/uploads/001c/38/b6/4/420928.gif" width="88" height="31"
+   border="0"></a><a href="https://why.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001c/61/20/17/606277.png" border="0" width="88" height="31"></a><a
+  href="https://29th.rusff.me/" style="display: inline;"><img
+   src="https://forumstatic.ru/files/001c/30/63/92567.png"></a><a href="https://prophecy.rolbb.me"
+  style="display: inline;"><img alt=" Magic War. Prophecy" src="https://forumupload.ru/uploads/001b/e6/91/6/157746.gif"
+   border=""></a><a href="https://angelparty.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001c/2e/f1/3/491054.png"></a><a href="https://everspace.mybb.ru/" target="_blank"
+  style="display: inline;"><img src="https://forumupload.ru/uploads/001b/f2/fa/7/578135.gif" width="88" height="31"
+   border="0" alt="Everspace"></a><a href="https://miamiclub.ru" target="_blank" style="display: inline;"> <img
+   src="https://forumstatic.ru/files/001b/c7/a6/71089.gif" border="0" alt="MIAMI CLUB"></a><a
+  href="https://tothegrave.rusff.me/" target="_blank" style="display: inline;"><img
+   src="https://forumstatic.ru/files/001c/38/5d/74557.png" border="0" width="88" height="31"></a><a
+  href="https://cwnazare.mybb.ru" target="_blank" style="display: inline;"><img
+   src="https://forumupload.ru/uploads/001a/f4/24/10/883350.jpg" border="0" width="88" height="31"></a><a
+  href="https://wondersofworld.rusff.me" target="_blank" style="display: inline;"><img
+   src="https://forumstatic.ru/files/001c/38/38/70929.png" alt="wonders of the world ✦ genshin impact" width="88"
+   height="31"></a><a href="https://randomcross.f-rpg.me/" target="_blank" style="display: inline;"><img
+   src="https://i.imgur.com/ddSNFKZ.png" border="0" width="88" height="31"></a><a href="https://honkaistarrail.rusff.me"
+  target="_blank" style="display: inline;"><img src="https://forumupload.ru/uploads/001c/60/8c/2/t479705.gif"></a>
+</div><!-- конец баннеров -->
+
+<!-- Перемешать баннеры при перезагрузке © TheBanana, max, the murderer! 2022 -->
+<script>
+ $(document).ready(function () {
+  $('.banners').each(function () {
+   var block = $(this);
+   var banners = (block).children('a').not('.static');
+   $(banners).sort(function (a, b) {
+    return (-1 + Math.random() * 2);
+   })
+    .appendTo(block).show();
+  });
+ });
+</script>
+
+<!--замена тире -->
+<script type="text/javascript">
+ $('.post-content p').each(function () {
+  function replacer(str) { return str.replace(/-\s|&#8211;\s/gm, '— '); }
+  var a = $(this).clone().wrap('<div></div>').parent().html();
+  var b = a.replace(/>[^<>]+</gim, replacer);
+  if (a != b) $(this).replaceWith(b)
+ });
+</script>
