@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Tickerpixel';
+    src: local('Tickerpixel mono italic'), local('Tickerpixel-monoitalic'),
+        url('https://alexkolmar.github.io/fonts/Tickerpixel/Tickerpixel.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/TickerpixelTickerpixel.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
