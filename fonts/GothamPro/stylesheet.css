@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('GothamPro-Black'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Black.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('GothamPro-Light'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Light.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('GothamPro-Medium'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Medium.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('GothamPro-Bold'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('GothamPro'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/GothamPro/GothamPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

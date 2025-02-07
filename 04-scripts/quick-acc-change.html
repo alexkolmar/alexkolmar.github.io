@@ -1,0 +1,309 @@
+<!---------- Быстрая смена аккаунта для https://keenperseption.rolka.me/ ---------->
+<script type="text/javascript">
+ New_EXiT = 'http://forumstatic.ru/files/001c/1f/15/59496.png'; //Дополнительная Иконка выход;
+</script>
+<script data="2977b0" src="//forumstatic.ru/files/0014/cc/0a/93129.js"></script>
+
+<style>
+ /************************* 
+Стиль для Быстрой смены аккаунтов 
+Deff 
+*************************/
+ /*Cкрытие формы входа без клика*/
+ #pun-navlinks a:not(.NextShow)+span.odd {
+  display: none !important;
+ }
+
+ #pun-navlinks #New-exit img {
+  position: absolute;
+  margin: 0;
+  width: 20px;
+  height: auto;
+  opacity: .79;
+ }
+
+ #pun-navlinks #New-exit:hover {
+  opacity: .4;
+ }
+
+ /*Стиль доп-иконки Выход!*/
+ .punbb #pun-navlinks a#New-exit {
+  position: absolute;
+  z-index: 100000 !important;
+  margin-top: 1px !important;
+  margin-left: 39px !important;
+  float: none !important;
+ }
+
+ .punbb #pun-navlinks a#New-exit:before {
+  content: none;
+ }
+
+ .punbb #pun-navlinks #form-login input {
+  text-align: center;
+  border: 2px inset rgba(197, 195, 195, .8);
+  text-rendering: auto;
+  color: #000000 !important;
+  margin-top: 4px !important;
+  border-radius: 5px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block !important;
+  text-align: center;
+  font: normal normal 400 11px/normal Arial !important;
+  rgb(250, 255, 189) background-color: rgb(250, 255, 189);
+ }
+
+ .punbb #form-login #fld1,
+ #form-login #fld2 {
+  background-color: rgb(250, 255, 189);
+ }
+
+ .punbb #pun-navlinks #form-login input[type="submit"] {
+  border: 2px outset #A29489 !important;
+  color: #526F81 !important;
+  cursor: pointer;
+  font-weight: 400 !important;
+  margin-top: 10px !important;
+ }
+
+ /*Стиль формы входа*/
+ .punbb #pun-navlinks #form-login {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.24);
+  display: block;
+  font: normal normal 400 11px/normal Tahoma;
+  color: #E7EAF0;
+  text-transform: none;
+  position: absolute !important;
+  left: 0px;
+  top: 15px;
+  /*Подвижки формы от низа кнопки вход/выход*/
+  z-index: 100000 !important;
+  padding: 7px 12px;
+  background: rgba(74, 108, 95, 0.93) no-repeat 50% 138px;
+  background-size: 36px auto;
+  border-color: #545567;
+  /* Цвет границы */
+  border-style: solid;
+  /* Стиль границы */
+  border-width: 1px 1px 1px 1px;
+  /* Толщина границы */
+  border-radius: 0 0 6px 6px;
+  text-align: center;
+  /* box-shadow:inset 0 0 4em rgba(23,23,13,.99); */
+ }
+
+ #pun-navlinks #navlogin #form-login {
+  margin-left: -21px;
+  /*Подвижки формы влево от вход*/
+ }
+
+ #pun-navlinks #navlogout #form-login {
+  margin-left: -21px;
+  /*Подвижки формы влево от выход*/
+ }
+
+ .ismoderator #pun-navlinks #navlogout #form-login {
+  margin-left: -21px !important;
+  /*Подвижки формы влево от выход для АМС*/
+ }
+
+ /*Стиль ссылок в форме "Не зарегистрированы" и "Забыли пароль" */
+ #pun-navlinks #form-login input[value="Войти"]+p {
+  margin-bottom: 11px;
+  margin-top: 11px;
+ }
+
+ .punbb #pun-navlinks #form-login a.Rega,
+ .punbb #pun-navlinks #form-login a.Forgot {
+  position: relative;
+  text-transform: none !important;
+  z-index: 20;
+  /*text-shadow:none;*/
+  color: #EFF4F2 !important;
+  cursor: pointer;
+  font: normal normal 400 9.5px/normal Tahoma !important;
+  letter-spacing: .5px !important;
+ }
+
+ .punbb #pun-navlinks #form-login a.Rega:before,
+ .punbb #pun-navlinks #form-login a.Forgot:before {
+  content: none;
+ }
+
+ /* Помечаем красным незаполненные поля!*/
+ #form-login input.none {
+  outline: red dashed 2px !important;
+ }
+
+ /*Форма слево(с Никами) */
+ #List-UserNames {
+  position: absolute;
+  margin-top: -8px;
+  min-height: 90px;
+  width: 220px;
+  right: 100%;
+  padding: 12px 19px 12px 17px;
+  background: rgba(74, 108, 95, 0.93);
+  border-color: #545567;
+  /* Цвет границы */
+  border-style: solid;
+  /* Стиль границы */
+  border-width: 1px 1px 1px 1px;
+  /* Толщина границы */
+  border-radius: 0 0 0px 6px;
+  text-align: center;
+  /*box-shadow:inset 0.23em 0 3.4em rgba(20,20,11,.99);*/
+ }
+
+ /*Стиль контейнера под список Ников*/
+ .punbb #List-UserNames ul {
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  min-height: 36px;
+  max-height: 72px;
+  /*Видимое число Ников без прокрутки! сейчас - 4*/
+ }
+
+ .punbb #List-UserNames li {
+  display: block !important;
+  position: relative;
+  background: #2C4F41;
+  text-align: left;
+  box-shadow: 2px 2px 1px rgba(84, 106, 107, .7);
+  padding-left: 5px !important;
+  font: normal normal 700 11px/normal Verdana !important;
+  margin: 1px auto !important;
+  padding: 2px 0;
+  transition: .33s;
+ }
+
+ .punbb #List-UserNames li:hover {
+  opacity: .84;
+  /*background:#546a6b!important;*/
+ }
+
+ /*Стиль Ников*/
+ .punbb #List-UserNames li>b {
+  cursor: pointer;
+  opacity: .9;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.31);
+ }
+
+ .punbb #List-UserNames li>b:hover {
+  opacity: .93;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+ }
+
+ /*Скролл контейнера с никами*/
+ #List-UserNames ul::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+ }
+
+ #List-UserNames ul::-webkit-scrollbar-track {
+  background-color: #919190;
+  border: 1px solid #919190;
+  box-shadow: none;
+ }
+
+ #List-UserNames ul::-webkit-scrollbar-thumb {
+  background-color: #bdbdbc;
+  border: 2px solid #888887;
+  box-shadow: none;
+ }
+
+ /*Кнопки Удалить (правее ников)*/
+ #List-UserNames ul li>span {
+  display: inline-block;
+  padding: 0 3px;
+  position: absolute;
+  opacity: .88;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  color: #fff;
+  font: normal normal 700 10.56px/normal Verdana;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+ }
+
+ /*Текст при отсутствии запомненных Ников!*/
+ #List-UserNames ul:empty:before {
+  display: inline-block;
+  content: "У Вас нет запомненных ников, введенных через форму справо, или через перенос ниже!";
+ }
+
+ /*Кнопка выход-2*/
+ #navlogin #exit-2 {
+  display: none;
+ }
+
+ #navlogin #form-login,
+ #navlogout .Rega,
+ #navlogout .Forgot {
+  background-image: none !important;
+  display: none;
+ }
+
+ /*Стиль блока с инпутом для переноса и вставки запомненных Аккаунтов*/
+ #List-UserNames ul+span {
+  display: inline-block;
+  padding: 6px 0 8px 0;
+  text-align: left;
+  font: normal normal 400 10.56px/normal Verdana;
+ }
+
+ /*Сам инпут*/
+ .punbb #List-UserNames input {
+  background: rgb(250, 255, 189);
+  border: 2px inset rgba(250, 219, 111, .853) !important;
+  border-radius: 6px;
+  text-shadow: none !important;
+  color: #282828 !important;
+  background-color: #C5C3C3;
+  font: normal normal 400 11px/normal Arial !important;
+  /* box-shadow: inset 0px 0px 3px rgba(100,102,80,.97); */
+  margin-top: 9px;
+  padding: 2px !important;
+  vertical-align: middle;
+ }
+
+ /*Стрелочки к инпуту*/
+ #List-UserNames ul+span b {
+  font: normal normal 400 13px/normal Verdana;
+  padding: 0 3px;
+  color: #E7EAF0;
+ }
+
+ /*Кликалка слево, чуть выше инпута*/
+ #List-UserNames .a1-copy {
+  display: inline-block !important;
+  cursor: pointer;
+  float: left;
+ }
+
+ /*Кликалка справо*/
+ #List-UserNames .a1-paste {
+  cursor: pointer;
+  display: inline-block !important;
+  float: right;
+ }
+
+ /*Подсказки на кликалках*/
+ .tipsy.a11 {
+  font: normal normal 400 11px/normal Tahoma !important;
+  margin-top: -22px !important;
+  margin-left: 148px !important;
+  max-width: 170px;
+ }
+
+ /************************* 
+//Конец Стиля для Быстрой смены аккаунтов 
+*************************/
+</style>
