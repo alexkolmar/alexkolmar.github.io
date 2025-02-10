@@ -23,8 +23,8 @@ Deff
  .punbb #pun-navlinks a#New-exit {
   position: absolute;
   z-index: 100000 !important;
-  margin-top: 1px !important;
-  margin-left: 39px !important;
+  margin-top: 6px !important;
+  margin-left: 15px !important;
   float: none !important;
  }
 
@@ -147,6 +147,7 @@ Deff
   margin: 1px auto !important;
   padding: 2px 0 2px 5px;
   transition: .33s;
+  border-radius: 5px;
 }
 
  .punbb #List-UserNames li:hover {
@@ -265,3 +266,72 @@ Deff
  /************************* 
 //Конец Стиля для Быстрой смены аккаунтов 
 *************************/
+
+
+/* Fast reputation */
+
+body div.post-rating,
+body div.post-vote {
+    float: right;
+    position: relative;
+    line-height: initial;
+    margin-left: var(--8);
+}
+body div.post-rating p,
+body div.post-vote p {
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+div .post-rating p > a {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  color: var(--link-hover);
+  font-weight: 400;
+  font-size: 11px !important;
+}
+div.post-vote p > a {
+    font-size: 0 !important;
+}
+div .post-rating p::before, div .post-vote p a::before {
+  content: '\f004';
+  font-family: var(--fa);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--link);
+  transition: all .2s linear 0s;
+}
+div .post-vote p a::before {
+  content: '';
+  background: url(https://forumstatic.ru/files/0016/01/4e/34044.svg) no-repeat center/20px;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+div .post-rating p:hover:before,
+div .post-vote p:hover a:before {
+   font-weight: 700;
+}
+div .post-rating p:hover > a,
+div .mylike .post-rating p > a {
+    color: #fff;
+}
+div .mylike .post-rating p::before {
+  color: var(--link);
+  font-weight: 700;
+}
+.post[data-group-id="3"] .post-rating {
+    display: none;
+}
+.isguest .post .post-rating {
+    pointer-events: none;
+}
