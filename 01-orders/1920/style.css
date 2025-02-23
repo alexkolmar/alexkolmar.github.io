@@ -488,10 +488,14 @@ body::before {
   padding: 0 5px;
   display: inline;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: lowercase;
 }
+
+/*#pun-ulinks li#h-unanswered {
+  display: none;
+} */
 
 /* Статус */
 
@@ -499,6 +503,7 @@ body::before {
 
 #pun-status .container {
   font-size: 14px;
+  line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: lowercase;
   text-align: center;
@@ -539,6 +544,7 @@ body::before {
   line-height: 20px;
   text-align: center;
   color: var(--beige3);
+  padding: 0;
 }
 
 
@@ -615,7 +621,7 @@ tbody.hasicon td.tcl {
 /* аватар */
 
 .punbb td .user-avatar, #pun-index td .user-avatar {
-
+  margin-bottom: 20px;
 }
 
 .punbb td .user-avatar .avatar-image {
@@ -787,6 +793,7 @@ tr.isticky div.icon {
   align-items: flex-start;
   gap: 10px 20px;
   text-align: center;
+  width: 100%;
 }
 
 #pun-index .subforums {
@@ -812,6 +819,7 @@ tr.isticky div.icon {
   font-weight: 600;
   font-size: 18px;
   box-sizing: border-box;
+  text-align: left;
 }
 
 #pun-index .Add {
@@ -828,6 +836,10 @@ tr.isticky div.icon {
 
 #pun-index .Add .left {
   margin-right: 2px;
+}
+
+.fordescr {
+  width: 100%;
 }
 
 /* Статистика */
@@ -1130,6 +1142,11 @@ li#onlinelist {
   padding: var(--pad2);
   line-height: 100%;
   text-align: center;
+  color: #72695E;
+}
+
+.copyright a {
+  color: #72695E;
 }
 
 
@@ -1489,9 +1506,14 @@ s:hover, del:hover {
   color: var(--brown);
 }
 
-.post-content .spoiler-box > div {
+.punbb .post-content .spoiler-box > div {
   font-weight: 500;
   font-size: 14px;
+  background: url(https://forumstatic.ru/files/0012/0b/b4/92493.svg) no-repeat left center/12px;
+}
+
+.punbb .post-content .spoiler-box > div.visible {
+  background: url(https://forumstatic.ru/files/0012/0b/b4/27037.svg) no-repeat left center/12px;
 }
 
 .post-sig dt {
@@ -1515,6 +1537,14 @@ s:hover, del:hover {
   top: 0 !important;
   max-height: 300px;
   overflow: auto;
+}
+
+.underpost {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+  margin: 0 0 0 auto;
+  align-items: center;
 }
 
 
@@ -1570,6 +1600,10 @@ img.avatardemo {
 
 /* Прочие страницы
 ------------------------------------------*/
+
+#pun-redirect.punbb {
+  padding-top: 10px;
+}
 
 /* Награды */
 
@@ -1680,5 +1714,4 @@ img.avatardemo {
   text-transform: uppercase;
   text-align: center;
   color: var(--darktxt1);
-}
 }
