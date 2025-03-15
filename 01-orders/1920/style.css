@@ -59,10 +59,6 @@
 ------------------------------------------*/
 
 :root {
-  --pun-bg: ivory;
-  --sec-bg: cornsilk;
-  --link: cadetblue;
-  --link-hover: mediumseagreen;
   --dark1: #0e0e0e;
   --dark2: #1c1c1c;
   --darktxt1: #2b2b2b;
@@ -125,8 +121,8 @@
 /* выделение текста */
 
 ::selection {
-  background: var(--link);
-  color: var(--pun-bg);
+  background: var(--gold);
+  color: var(--light);
 }
 
 :focus {

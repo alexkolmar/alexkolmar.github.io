@@ -1,0 +1,399 @@
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+<style>
+ .ship7 {
+  --shtxt: #11001a;
+  /* текст в заголовках*/
+  --shbg: #fdfbf9;
+  /* фон в заголовках */
+  --shbrd: #11001a;
+  /* границы заголовка и картинки */
+  --shots: 14px;
+  /* отступы эпизодов друг от друга */
+  --shotg: 16px;
+  /* отступ текста от картинки */
+  --shotz: auto auto 16px -40px;
+  /* отступ заголовка */
+  --shgrad: linear-gradient(90deg, transparent 10%, #11001a 50%, transparent 90%);
+ }
+
+ .ship7 {
+  max-width: 700px;
+  /* ограничиваем ширину блока*/
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 120px auto;
+  align-items: start;
+  margin: 8px auto auto 2em;
+ }
+
+ .ship7 * {
+  box-sizing: border-box;
+ }
+
+ .ship7 *::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.05);
+ }
+
+ .ship7 *::-webkit-scrollbar-thumb {
+  background: var(--shbg);
+ }
+
+ .ship7 *::-webkit-scrollbar-corner {
+  background: transparent;
+ }
+
+ .ship7 .sh1 {
+  display: block;
+  min-height: 100px;
+  height: 100%;
+  padding: 0px !important;
+  background: var(--shbg) 50% 0% repeat;
+  border: 1px solid var(--shbrd);
+ }
+
+ /* shipovnik */
+ .ship7 .sh2 {
+  display: block;
+  height: 100%;
+  width: auto;
+  padding: 20px 6px 14px var(--shotg);
+ }
+
+ .ship7 .sh3 {
+  display: block;
+  margin-top: 34px;
+ }
+
+ .ship7 .sh3:nth-child(1) {
+  margin-top: 0px;
+ }
+
+ .ship7 h7 {
+  font-family: 'Cuprum', Georgia, serif;
+  font-size: 18px;
+  display: block;
+  background: var(--shbg);
+  color: var(--shtxt);
+  padding: 8px 14px 7px;
+  width: 85%;
+  margin: var(--shotz);
+  border: 1px solid var(--shbrd);
+ }
+
+ .ship7 p.sh5 {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding-right: 8px;
+  max-height: 60px;
+ }
+
+ .ship7 .sh4 {
+  position: relative;
+  padding: 0 !important;
+  margin-bottom: var(--shots);
+  text-align: justify;
+  font-size: 11px;
+  line-height: 120%;
+ }
+
+ .ship7 .sh4:last-child {
+  margin-bottom: 0px;
+ }
+
+ .ship7 .sh4::after {
+  display: block;
+  content: "";
+  width: auto;
+  height: 1px;
+  background: var(--shgrad);
+  margin-top: var(--shots);
+ }
+
+ .ship7 .sh4:last-child::after {
+  display: none;
+ }
+
+ .ship7 a.epss {
+  font-family: 'Oswald', Tahoma, sans-serif;
+  font-size: 15px;
+  display: block;
+  width: max-content;
+ }
+
+ .ship7 .pers {
+  font-size: 10px;
+  font-family: Tahoma, sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: normal !important;
+  display: block;
+  width: max-content;
+  margin: 3px auto 5px 0px;
+ }
+</style>
+<div class="ship7"><!-- START -->
+
+ <div class="sh1"
+  style="background:url(https://forumupload.ru/uploads/001a/e7/a4/493/952940.png) repeat-y top right/120px;"></div>
+ <div class="sh2">
+
+  <!-------- 2017 -------->
+  <div class="sh3">
+   <h7>2017</h7>
+
+   <!-- Эпизод_1 -->
+   <div class="sh4">
+    <b>13.10.2017</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2625" class="epss">Welcome to the Royal
+     Academy</a>
+    <em class="pers">Jaden Lowe & Elizabeth Brooks</em>
+    <p class="sh5">
+     Спустя некоторое время после трагической смерти лучшего друга Джейден возвращается к учёбе в Королевской Академии и
+     знакомится с Элизабет Брукс - студенткой, которая впоследствии становится его девушкой.
+    </p>
+   </div>
+
+   <!-- Эпизод_2 -->
+   <div class="sh4">
+    <b>24-27.12.2017</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2719" class="epss">Merry Christmas</a>
+    <em class="pers">Jaden Lowe & Elizabeth Brooks</em>
+    <p class="sh5">
+     В канун Рождества Джей решает познакомить Элизабет со своей семьёй и впервые признаётся ей в любви.
+    </p>
+   </div>
+
+  </div><!-- КОНЕЦ ГОДА -->
+
+  <!-------- 2021 -------->
+  <div class="sh3">
+   <h7>2021</h7>
+
+   <!-- Эпизод_1 -->
+   <div class="sh4">
+    <b>13.03.2021</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2269" class="epss">We are no saints</a>
+    <em class="pers">Sadrick Martel & Jaden Lowe</em>
+    <p class="sh5">
+     На афтерпати после концерта-презентации нового альбома Джейден знакомится со странным человеком по имени Седрик
+     Мартел. Их философский разговор о вере Джей запоминает надолго.
+    </p>
+   </div>
+
+  </div><!-- КОНЕЦ ГОДА -->
+
+  <!-------- 2022 -------->
+  <div class="sh3">
+   <h7>2022</h7>
+
+   <!-- Эпизод_1 -->
+   <div class="sh4">
+    <b>24.07.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2247" class="epss">Put you in place</a>
+    <em class="pers">Kevin Morgan & Jaden Lowe</em>
+    <p class="sh5">
+     Во время конфликта в ночном клубе, переросшего в драку, у Джея впервые открывается способность перемещаться на
+     другой план. Также он впервые знакомится с магической стороной мира.
+    </p>
+   </div>
+
+   <!-- Эпизод_2 -->
+   <div class="sh4">
+    <b>28.07-01.08.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2374" class="epss">alarm bell</a>
+    <em class="pers">Jaden Lowe & Mona Ternier</em>
+    <p class="sh5">
+     Во время изучения Джеем книги о магических существах, одно из таких существ вырывается в реальный мир и устраивает
+     пожар в квартире Джея. Джейден вызывает спасателей, а некоторое время спустя знакомится с оператором службы
+     спасения, принявшей его звонок. Девушка помогает ему найти новое жилище.
+    </p>
+   </div>
+
+   <!-- Эпизод_3 -->
+   <div class="sh4">
+    <b>04.08.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2319" class="epss">Focus on music</a>
+    <em class="pers">Aurora Eckhart & Jaden Lowe</em>
+    <p class="sh5">
+     Во время одного из вечеров в музыкальном клубе Джей знакомится с Авророй - девушкой, в чьих глаза читается глубокая
+     печаль. Разговор с ней заставляет Джея задуматься о том, что его исцеление зависит от того, насколько он сам этого
+     хочет.
+    </p>
+   </div>
+
+   <!-- Эпизод_4 -->
+   <div class="sh4">
+    <b>03.09.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2314" class="epss">Horse whisperer</a>
+    <em class="pers">Carter Slade & Jaden Lowe</em>
+    <p class="sh5">
+     По рекомендации своего лечащего врача Джей едет в небольшой городок близ Бостона на ранчо для иппотерапии. Там он
+     знакомится с Картером Слэйдом, который оказывается проклятым духом, вернувшимся прямиком из Ада. Джейден узнаёт
+     больше про Ад и понимает, что душа его покойного друга, скорее всего, находится там.
+    </p>
+   </div>
+
+   <!-- Эпизод_5 -->
+   <div class="sh4">
+    <b>16.09.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2397" class="epss">Spirited away</a>
+    <em class="pers">Milly Allford & Jaden Lowe</em>
+    <p class="sh5">
+     Покойный лучший друг Джея, Оуэн, является юной банши по имени Милли и просит её помочь ему связаться с Джейденом.
+     Девушка помогает друзья установить контакт. Оуэн передаёт Джею песню, которую он написал, будучи уже на том свете.
+     Выясняется, что Оуэн, действительно, находится в Аду.
+    </p>
+   </div>
+
+   <!-- Эпизод_6 -->
+   <div class="sh4">
+    <b>05.10.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2430" class="epss">Ты хочешь S.T.A.R.S? Я
+     подарю тебе звезды!</a>
+    <em class="pers">Jaden Lowe & Candy Fox</em>
+    <p class="sh5">
+     Во время своего пребывания в одном из баров случается странное: Джей и девушка-бармен по имени Кэнди попадают в мир
+     компьютерной игры "Обитель зла" и для того, чтобы выбраться, им приходится выполнить опасную миссию.
+    </p>
+   </div>
+
+   <!-- Эпизод_7 -->
+   <div class="sh4">
+    <b>16.10.2022</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2572" class="epss">Curse or cure?</a>
+    <em class="pers">Miroslava Vyazemskaya, Jaden Lowe & Carter Slade</em>
+    <p class="sh5">
+     Приехав вновь на ранчо Картера, Джейден знакомится с русской ведьмой Мирой - приёмной дочерью Слэйда. Женщина
+     убеждает Джея в том, что сможет вылечить его.
+    </p>
+   </div>
+
+   <!-- Эпизод_7 -->
+   <div class="sh4">
+    <b>~ 30.10.2022 — 16.01.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2654" class="epss">Medicine for health</a>
+    <em class="pers">Jaden Lowe & Miroslava Vyazemskaya</em>
+    <p class="sh5">
+     В назначенный день Джейден приезжает в дом Мирославы и под руководством ведьмы начинает свой путь к исцелению.
+    </p>
+   </div>
+
+  </div><!-- КОНЕЦ ГОДА -->
+
+
+  <!-------- 2023 -------->
+  <div class="sh3">
+   <h7>2023</h7>
+
+   <!-- Эпизод_1 -->
+   <div class="sh4">
+    <b>15.02.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2748" class="epss">Что мы знаем о справедливости?</a>
+    <em class="pers">Jaden Lowe & Alastor Grant</em>
+    <p class="sh5">
+     Во время стычки в баре Джейден знакомится с мужчиной по имени Аластор, который существом, умеющим исполнять
+     желания. Джей задумывается о том, чтобы воскресить лучшего друга, но, взвесив все "за" и "против" всё же
+     отказывается от заманчивого предложения.
+    </p>
+   </div>
+
+   <!-- Эпизод_2 -->
+   <div class="sh4">
+    <b>19.02.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2783" class="epss">The book of my life that’s risin’ again
+     tonight</a>
+    <em class="pers">Jaden Lowe & Elizabeth Brooks</em>
+    <p class="sh5">
+     Неожиданно на пороге дома Джейдена появляется его бывшая девушка - Элизабет. После продолжительной беседы они
+     мирятся.
+    </p>
+   </div>
+
+   <!-- Эпизод_3 -->
+   <div class="sh4">
+    <b>21.02.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=2802" class="epss">Trapped in memories</a>
+    <em class="pers">Sillariana Ailil & Jaden Lowe</em>
+    <p class="sh5">
+     Во время прогулки по парку у Джейдена неожиданно активируется его способность и он оказывается в лабиринте
+     загадочного мира под названием "Грёза". Там он знакомится к фейри по имени Лара, которая помогает ему разобраться
+     собственными страхами и выбраться из лабиринта.
+    </p>
+   </div>
+
+   <!-- Эпизод_4 -->
+   <div class="sh4">
+    <b>09.06.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3217" class="epss">Playing with bad luck</a>
+    <em class="pers">Sillariana Ailil & Jaden Lowe</em>
+    <p class="sh5">
+     Во время одного из своих пребываний в Грёзе Джейден знакомится с леди Айсвуд. Коварная фейри решает заманить
+     музыканта в ловушку, из которой только благодаря своей силе воли он вырывается живым.
+    </p>
+   </div>
+
+   <!-- Эпизод_5 -->
+   <div class="sh4">
+    <b>24.08.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3472" class="epss">Another you, another me</a>
+    <em class="pers">David Drogan & Jaden Lowe</em>
+    <p class="sh5">
+     Джей знакомится с королём Грёзы Макдарой Белериандом и они вместе оказываются в параллельном мире - сначала в
+     параллельной Грёзе, затем в параллельном мире Осени, где знакомятся со своими двойниками. После того, как Макдара
+     решает проблему со своим двойником, они оба возвращаются в свои миры.
+    </p>
+   </div>
+
+   <!-- Эпизод_6 -->
+   <div class="sh4">
+    <b>09.11.2023</b>
+    <a href="https://bostoncrazzy.rusff.me/viewtopic.php?id=3754" class="epss">Свидание поневоле</a>
+    <em class="pers">Lenore Rasmussen (as Valerie Cohle) & Jaden Lowe</em>
+    <p class="sh5">
+     Вскоре после своего дня рождения Джейден получает предложение, от которого нельзя отказаться: пойти на свидание с
+     Валери Коул - взбалмошной и капризной дочерью владельца лейбла. Во время свидания девушка не раз заставляет Джея
+     понервничать, но в итоге они всё же находят общий язык.
+    </p>
+   </div>
+
+  </div><!-- КОНЕЦ ГОДА -->
+
+  <!-------- 2024 -------->
+  <div class="sh3">
+   <h7>2024</h7>
+
+   <!-- Эпизод_1 -->
+   <div class="sh4"><a href="#" class="epss"> Название эпизода </a>
+    <em class="pers"> Список игроков </em>
+    <p class="sh5">
+     текст-описание
+    </p>
+   </div>
+
+   <!-- Эпизод_2 -->
+   <div class="sh4"><a href="#" class="epss"> Название эпизода </a>
+    <em class="pers"> Список игроков </em>
+    <p class="sh5">
+     текст-описание
+    </p>
+   </div>
+
+   <!-- Эпизод_3 -->
+   <div class="sh4"><a href="#" class="epss"> Название эпизода </a>
+    <em class="pers"> Список игроков </em>
+    <p class="sh5">
+     текст-описание
+    </p>
+   </div>
+
+  </div><!-- КОНЕЦ ГОДА -->
+
+
+  <!-- END -->
+ </div>
+</div>
