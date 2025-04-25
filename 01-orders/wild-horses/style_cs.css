@@ -1,0 +1,65 @@
+/* Вкладки в объявлении
+-------------------------------------------------------------*/
+
+.tabs {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab, .tab-title {
+  display: inline-block;
+}
+
+.tab input[type="radio"] {
+  display: none;
+}
+
+.tab-title {
+  padding: 5px 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--link);
+}
+
+.tab-content {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  padding: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.tab :checked + .tab-title {
+  position: relative;
+  z-index: 1;
+  color: var(--link-hover);
+}
+
+.tab :checked ~ .tab-content {
+  display: block;
+}
+
+.tab_links a {
+  display: block;
+  line-height: 20px;
+}
+
+.tab_ams, .tab_pr {
+  line-height: 20px;
+}

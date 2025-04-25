@@ -1557,13 +1557,14 @@
   /* Редактирование профиля и ЛС
   -------------------------------------------------------------*/
   
-  #profile > .container {padding: 5px 20px !important;}
+  #profile > .container {padding: 5px 10px !important;}
   
   .punbb #profilenav {
     width: 100%;
     margin: 0;
     display: block;
-    padding: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
     float: none;
   }
   
@@ -1585,20 +1586,30 @@
     padding: 0;
   }
 
+  #messages fieldset legend span {padding: 0 10px;}
+
 #messages .linksb, .messages-container .post h3 {
-  width: calc(100% + 40px);
-  margin-left: -20px;
+/*  width: calc(100% + 40px);
+  margin-left: -20px; */
+}
+
+#messages .linksb, .messages-container .post h3 span {
+  padding: 0 10px;
 }
 
 .messages-container .post h3 {
-  margin-bottom: 10px;
+  margin: 0 10px 10px;
 }
 
   #messages .hasicon tr {
     justify-content: space-between;
   }
   
-  #pun-messages #notify-settings {width: 100%;}
+  #pun-messages #notify-settings {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
   
   #pun-messages #notify-settings .inp2 {
     display: flex;
@@ -1625,7 +1636,7 @@
   
   .punbb .main #profile #messages .hasicon tr:not(:last-of-type) {
   justify-content: space-between;
-  box-shadow: 0 1px var(--bd1);
+  border-bottom: 1px solid var(--bd1);
   }
   
   .punbb .main #profile #messages .hasicon .tcl {width: 100% !important;}
@@ -1654,6 +1665,19 @@
 }
 
 #profilenav li.profile-item-awards {display: none;}
+
+#pun-messages #profile .messenger-processed:not(.view-dialog) fieldset .fs-box .container, #pun-messages .messages-container fieldset legend strong, #pun-messages #profile .messenger-processed.view-search {
+  padding: 0 10px !important;
+}
+
+#pun-messages #profile .messenger-processed.view-bookmarks fieldset .fs-box > .container, 
+#pun-messages #profile .messenger-processed.view-search fieldset .fs-box > .container {
+  padding: 0 !important;
+}
+
+#pun-messages .post .container {
+  padding: 0 10px 10px !important;
+}
   
   
   /* Активные пользователи
@@ -2043,7 +2067,8 @@
   width: 100% !important;
 }
 
-/* Банк */
+
+/* Банк (новый) */
 
 .bank_list li {
   flex-wrap: wrap;
@@ -2058,26 +2083,10 @@
   width: 100%;
 }
 
-.bank_list li > div:before {
-  content: "";
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 11px;
-  opacity: .45;
-  margin-right: 10px;
+.bank_list li > div span {
+  display: inline-block;
 }
 
-.bank_list li .b1:before {
-  content: "услуга:";
-}
-
-.bank_list li .b2:before {
-  content: "примечание:";
-}
-
-.bank_list li .b3:before {
-  content: "цена:";
-}
 
 /* Кнопки вверх-вниз */
 
@@ -2160,10 +2169,18 @@
   padding: 0 10px;
 }
 
+#notifications-wrap tr, #notifications-wrap tr {
+  border: none !important;
+}
+
+#notifications-wrap td.notification-item:before {
+  display: none !important;
+}
+
 .punbb .unread-notifications .notification-item, #pun-index .unread-notifications .notification-item {
     padding: 0 !important;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     gap: 10px;
     border-bottom: 1px solid var(--sec-bg);
   }
@@ -2188,6 +2205,86 @@
 
 .punbb #navprofile .notify-link .unreads, .punbb #navpm .notify-link .unreads {
   font-size: 12px;
+}
+
+/* Диалоги как в вк
+-------------------------------------------------------------*/
+
+.punbb .view-dialog .post h3 .bookmarklink {
+  margin: 0 10px 0 auto;
+}
+
+#pun-messages #messages table .dialog .tclcon, #pun-messages #messages .dialog-avatar + .tclcon {
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+#pun-messages .dialogs-list .fs-box > .container, #pun-messages .view-dialog #post-form {
+  padding: 0 10px !important;
+}
+
+#pun-messages .view-dialog .post h3 {
+  margin: 0 0 10px !important;
+}
+
+#pun-messages .view-dialog .post .container {
+  padding: 0 !important;
+}
+
+#pun-messages .view-dialog .fs-box > .container {
+  padding: 0 20px 0 10px !important;
+}
+
+#pun-messages .dialog .intd {
+  gap: 5px;
+}
+
+#pun-messages .dialogs-list .dialog-message {
+  margin-right: 0;
+}
+
+.punbb .dialog-time-ago {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.punbb .dialog .dialog-delete {
+  margin: 0;
+  order: 1;
+}
+
+  .punbb .view-dialog .post .post-author {
+    padding: 10px;
+    text-align: left;
+    min-height: unset;
+    height: 60px;
+    width: 100%;
+    max-width: unset;
+  }
+
+.punbb .view-dialog .post .post-author .pa-author {
+  box-shadow: none;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.punbb .view-dialog .post .post-author .pa-avatar {
+  position: absolute;
+  width: fit-content;
+}
+
+    .punbb .view-dialog .post .post-author .pa-avatar img {
+        border-radius: 50%;
+        height: 40px;
+        box-sizing: border-box;
+        width: 40px;
+        object-fit: cover;
+    }
+
+#pun-messages .view-dialog .post-body {width: 100%;}
+
+#pun-messages .view-dialog .post .post-box {
+  padding: 10px 0;
 }
   
   /* Дополнительно

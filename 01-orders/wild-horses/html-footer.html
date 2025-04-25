@@ -1,0 +1,88 @@
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"></div>
+<div class="go-down" id='OnBottom' title="вниз"></div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
+</script>
+
+
+<script><!--Своя картинка или Слово в Панель навигации -->
+    var Img_Word=1;   //0-Картинка;1-Cлово /Ставим картинку или Слово ?
+       navlinks=new Array(
+      "navindex","Love Stories",   // Форум
+      "navuserlist","Персонажи",// Участники
+      "navrules","Правила",   // Правила
+      "navsearch","Проводник",  // Поиск
+      "navprofile","Данные", // Профиль
+      "navadmin","Администрирование",   // Администрирование
+      "navregister","Регистрация",// Регистрация
+      "navlogin","Войти",   // Войти
+      "navlogout","Выход"   // Выход - !ПОСЛЕДНИЙ элемент без запятой
+    )
+    var s,i;for (i=0; i < navlinks.length; i++){s=navlinks[i+1];
+       if(!Img_Word){s='<img class="navlinks" src="'+s+'" border="0" />'}
+       $("#"+navlinks[i]+" a").html("<span>"+s+"</span>");i++;}
+    </script>
+
+    <script>var a,L,epl=$("#main-reply"),str='<small id="plng" style="padding: 2px 5px; margin: 0 10px 0 0px; border: 1px solid var(--body-bg); color: var(--link);">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+
+    <!-- Выделение кода в блоке "Код" // © Alex_63, версия 2017г. -->
+        <script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+        <script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+        <script type="text/javascript">select_text.linkText = 'Выделить' //текст ссылки</script>
+
+
+<script type="text/javascript"> 
+if(GroupID != 3)$('#pun-ulinks ul').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>'); 
+</script>
+
+<!-- Кликабельность ника в постах Гостя -->
+        <script>$(".post[data-group-id=3]").find(".pa-author").html(function(){return this.innerHTML.replace(/(<.+>)(.+)$/,'$1<a href="javascript:to(\'$2\')">$2</a>')});</script>
+
+<script src="https://forumstatic.ru/files/0017/95/29/40399.js"></script>
+<script>
+$(document).ready(function() {
+  hvStickerPack.init("https://forumstatic.ru/files/001c/14/5b/64862.txt?v=2");
+});
+</script>
+
+
+<!-- баннеры -->
+<div class="banners">
+ <details>
+  <summary>Баннеры</summary>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+ </details>
+</div>
