@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Quisas SVG';
+    src: url('QuisasSVG-Regular.eot');
+    src: local('Quisas SVG Regular'), local('QuisasSVG-Regular'),
+        url('https://alexkolmar.github.io/fonts/QuisasSVG/QuisasSVG.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/QuisasSVG/QuisasSVG.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/QuisasSVG/QuisasSVG.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/QuisasSVG/QuisasSVG.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/QuisasSVG/QuisasSVG.svg#QuisasSVG') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
