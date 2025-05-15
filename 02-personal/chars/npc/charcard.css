@@ -12,6 +12,7 @@
     font-family: "Mulish", sans-serif;
     font-size: 12px;
     box-sizing: border-box;
+    color: #ABABAB;
 }
 
 .npc_card a {
@@ -20,7 +21,6 @@
 }
 
 .npc_card b {
-    color: #ABABAB;
     font-weight: 600;
 }
 
