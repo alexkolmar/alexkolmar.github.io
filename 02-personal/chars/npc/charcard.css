@@ -104,6 +104,10 @@
   max-width: 300px;
 }
 
+.npc_card .avatar.dead>img {
+  filter: grayscale(1);
+}
+
 .npc_card .faceclaim {
   color: #ECECEC;
   font-size: 11px;
