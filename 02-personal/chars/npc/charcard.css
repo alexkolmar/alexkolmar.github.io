@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
+  margin: 0 auto;
 }
 
 .npc_card {
