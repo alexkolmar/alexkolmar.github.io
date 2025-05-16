@@ -31,6 +31,8 @@
   width: 100%;
   padding: 10px 20px;
   text-align: left;
+  box-sizing: border-box;
+  height: 43px;
 }
 
 .npc_card a {
@@ -63,6 +65,7 @@
 }
 
 .npc_card .avatar {
+  margin-top: -43px;
   width: 30%;
   background-color: #111;
   display: flex;
@@ -178,6 +181,10 @@
   .npc_card h2 {
     margin: 0;
     text-align: center;
+  }
+
+  .npc_card .avatar {
+    margin: 0;
   }
 
   .npc_card .avatar>img {
