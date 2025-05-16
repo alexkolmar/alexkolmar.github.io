@@ -157,7 +157,7 @@
 .npc_card .desc_inner {
   max-height: 80px;
   overflow: auto;
-  padding-right: 15px;
+  padding-right: 5px;
   margin-right: -10px;
   text-align: justify;
   scrollbar-gutter: stable;
