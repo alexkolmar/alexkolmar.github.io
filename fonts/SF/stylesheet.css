@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.eot');
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.svg#SFProDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.svg#SFProDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
