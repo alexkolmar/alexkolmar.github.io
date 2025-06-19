@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:root {
+  --white: #fff;
+  --gray: #ccc;
+  --violet: #669;
+  --color: #9CF;
+}
+
+.atabs {
+  position: relative;
+  background: url("https://i.ibb.co/rGzhjmnC/11317-3.jpg") no-repeat top center;
+  width: 936px;
+  height: 382px;
+  margin: 0 0 0 -36px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 20px 50px 142px 64px;
+  box-sizing: border-box;
+}
+
+.atab, .atab-title {
+  display: inline-block;
+}
+
+.atab input[type="radio"] {
+  display: none;
+}
+
+.atab-title {
+  padding: 5px 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  color: #976C3E;
+  box-shadow: inset 0 0 0 1px #3A2A16;
+  border: 1px solid rgba(71, 35, 31, 0.553);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-family: "Book Antiqua", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 33px;
+  height: 37px;
+  width: 135px;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000000;
+  background: #232222;
+  background: -moz-linear-gradient(top, #232222 0%, #23221e 50%, #161412 51%, #0e0c0a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#232222), color-stop(50%,#23221e), color-stop(51%,#161412), color-stop(100%,#0e0c0a));
+  background: -webkit-linear-gradient(top, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  background: -o-linear-gradient(top, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  background: -ms-linear-gradient(top, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  background: linear-gradient(to bottom, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232222', endColorstr='#0e0c0a',GradientType=0 );
+  opacity: 0.8;
+}
+
+.atab-content {
+  position: absolute;
+  margin-top: 20px;
+  padding: 10px;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  display: none;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.atab-title span {
+    widht: 100%;
+    height: 100%;
+    display: block;
+}
+
+.atab :checked + .atab-title span, .atab-title span:hover {
+  position: relative;
+  background: url("https://i.ibb.co/Nd6by9dM/52449.png") 98% 50% no-repeat transparent;
+  z-index: 1;
+}
+
+.atab :checked ~ .atab-content {
+  display: block;
+}
