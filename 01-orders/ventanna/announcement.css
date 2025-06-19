@@ -66,14 +66,16 @@
 
 .atab-content {
   position: absolute;
-  margin-top: 20px;
-  padding: 10px;
-  left: 0;
-  width: 100%;
+  padding: 0;
+  right: 60px;
+  width: 595px;
   height: 450px;
   display: none;
   box-sizing: border-box;
   background: transparent;
+  top: 20px;
+  color: #836955;
+  text-shadow: 0px 0px 2px #2B1810;
 }
 
 .atab-title span {
@@ -90,4 +92,13 @@
 
 .atab :checked ~ .atab-content {
   display: block;
+}
+
+.atab-content a {
+  color: #976C3E !important;
+  opacity: 0.8;
+}
+
+.atab-content a:hover {
+  opacity: 1;
 }

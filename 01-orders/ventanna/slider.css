@@ -1,0 +1,76 @@
+﻿/****************
+    Cлайдер 
+**************/
+
+
+/* Oбщие настройки */
+.slider,
+.slider * {
+  margin:0;
+  padding:0;
+}
+.slider {
+  overflow:hidden;
+  border:none 0 transparent!important;
+  border-collapse:collapse;
+  /*outline:solid red 2px;*/
+  /*position:relative;z-index:1000;*/
+}
+.button-left.hide,.button-right.hide{
+  display:none;
+}
+.slider img.button-left,
+.slider img.button-right{
+  cursor:pointer;
+}
+div.Wrap-slids {
+  text-align:left;
+  overflow:hidden;
+  position:relative;
+}
+div.train {
+  text-align:left;
+  overflow:hidden;
+  white-space:nowrap;
+  position:absolute;
+}
+
+.slider-content{
+  margin:0;padding:0;
+  white-space: normal;/* Поменял с nowrap; и добавка ниже*/
+  word-break: normal;
+  text-align:center;
+  overflow-y:auto;
+  overflow-x:auto;
+  display:none;
+  /*outline:solid red 1px;*/
+}
+
+.slider-content.active {
+   display:block;
+}
+/* End Cлайдер */
+
+
+/****************
+    Индикатор 
+**************/
+
+#indexActive{ /*Задаём Позицию индикаторов*/
+  position:absolute;
+  z-index:1000;
+  margin-left: 580px;
+  margin-top: -6px;
+}
+
+span[id^="active_Ind"]{ /*Фон и размеры индикатор*/
+  display:inline-block;
+  cursor:pointer;
+  float:right;
+  background:transparent url(http://s3.uploads.ru/geZ4A.png) no-repeat center top;
+  /*border:solid 2px blue!important;*/
+  height:11px;
+  width:10px;
+  padding:0 1px 0 1px;
+  margin:10px 6px;
+}
