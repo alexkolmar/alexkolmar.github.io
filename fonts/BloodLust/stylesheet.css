@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Blood Lust';
+    src: url('https://alexkolmar.github.io/fonts/BloodLust/BloodLust.eot');
+    src: local('Blood Lust'), local('BloodLust'),
+        url('https://alexkolmar.github.io/fonts/BloodLust/BloodLust.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/BloodLust/BloodLust.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/BloodLust/BloodLust.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/BloodLust/BloodLust.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/BloodLust/BloodLust.svg#BloodLust') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
