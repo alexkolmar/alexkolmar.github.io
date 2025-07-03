@@ -1,3 +1,1262 @@
+/* A3.5 */
+.punbb h1 span, .punbb h2 span, .punbb legend span {
+  font-size: 1em;
+  }
+.punbb h1 span {
+color: #630B07;
+background: url("https://i.ibb.co/39Yz8w31/39322.png") 50% 100% no-repeat transparent;
+display: inline-block;
+font: 700 14px "Palatino Linotype", "Georgia", "Garamond", "Times New Roman", "times", sans-serif;
+min-width: 166px;
+padding-bottom: 12px;
+text-transform: uppercase;
+}
+/* A3.6 */
+.punbb pre {
+  font: 1.1em/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace
+  }
+
+/* A3.7 */
+.punbb address, .punbb em {
+  font-style: normal
+  }
+
+/* A3.8 */
+.punbb .post-content em {
+  font-style: italic
+  }
+
+/* A3.9 */
+.punbb .post-content em.bbuline {
+  font-style: normal;
+  text-decoration: underline;
+  }
+
+/* A3.10 */
+.punbb a {
+  text-decoration: none;
+  }
+
+/* A3.11 */
+.punbb optgroup {
+  font-weight: bold;
+  }
+
+
+/* A4 Float clearing and hidden items
+-------------------------------------------------------------*/
+
+/* A4.1 */
+#pun:after,
+.punbb .container:after,
+.punbb .post-links ul:after,
+.punbb .main div.inline:after,
+.punbb .post-box:after,
+.punbb .linksb:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow:hidden;
+  line-height: 0.0;
+  font-size: 0;
+  }
+
+/* A4.2 */
+.acchide,
+#pun-index #pun-main h1,
+#pun-navlinks h2,
+#pun-pagelinks h2,
+#pun-status h2,
+#pun-ulinks h2,
+.punbb .forum h2,
+.punbb .multipage .topic h2,
+.punbb dl.post-sig dt span,
+.punbb p.crumbs strong,
+.punbb .divider hr,
+.punbb .required label em,
+.punbb .formsubmit label,
+.punbb .submitfield label,
+.punbb .modmenu label,
+#pun-userlist .main h2 {
+  font-size: 0;
+  height: 0;
+  width: 0;
+  line-height: 0.0;
+  position:absolute;
+  left: -9999px;
+  overflow: hidden
+  }
+
+
+/* A5 Basic page layout and borders
+-------------------------------------------------------------*/
+
+/* A5.1 */
+#pun {
+  position: relative;
+
+  }
+
+/* A5.2 */
+.punbb {
+  width: 890px;
+  height: auto;
+  margin:  0 auto;
+  }
+
+.punbb .main {
+width: 890px;
+margin: 20px auto;
+padding: 0px 0px 0px;
+}
+
+#pun-stats, #pun-crumbs1, #pun-status, #pun-crumbs2 {
+margin: 16px 34px;
+}
+
+/* A5.3 */
+#pun-redirect, #pun-maint {
+  margin: 50px auto 12px;
+width: 870px;
+  float: none;
+  }
+
+/* A5.4 */
+.punbb .section, .punbb .main {
+  }
+
+/* A5.5 */
+.punbb .category, .punbb .post {
+  margin-top: 10px;
+  }
+
+/* A5.6 */
+.punbb #pun-category1, .punbb .toppost, .punbb .topicpost {
+  margin-top: 10px;
+  }
+
+/* 5.7 */
+#pun-post .topic {
+  margin-top: 1em;
+  }
+
+/* A5.8 */
+.punbb .section, .punbb .forum, .punbb .formal, .punbb .modmenu, .punbb .info,
+.punbb .category, .punbb .post {
+  }
+
+/* A5.9 */
+.punbb .container {
+  }
+
+/* A5.10 */
+.punbb .section h2, #pun-main h1, #pun-main h2, #pun-stats h2, #pun-debug h2 {
+padding: 20px 1.5em 0px;
+  }
+
+
+/*************************************************************
+B - MAIN CONTENT - GENERAL
+**************************************************************/
+
+/* B1 Parsed Content, Signatures and Scroll Boxes
+-------------------------------------------------------------*/
+
+/* B1.1 */
+.punbb .post-content {
+  padding: 2px;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  }
+
+/* B1.2 */
+.punbb .post-sig dt {
+background: url(https://i.ibb.co/39Yz8w31/39322.png) 50% 0; 
+  display: block;
+  width: 166px;
+height: 8px;
+  margin: 5px auto;
+  }
+
+. post-sig {opacity: 0.7;}
+
+/* B1.3 */
+.punbb .post-content p {
+font-size: 100%;
+line-height: 150%;
+margin: 0px;
+padding: 4px 4px;
+text-align: justify;
+color: #44352c;
+  }
+
+/* B1.4 */
+.punbb .post-content img {
+  vertical-align: text-bottom
+  }
+
+/* B1.5 */
+.punbb .post-content span img.postimg {
+  vertical-align: middle;
+    padding: 5px;
+    background: #633f2b1a;
+    border-color: #58312296;
+    border-style: double;
+    box-shadow: 0 0 0px 4px #44221db3;
+    webkit-box-shadow: -3px 3px 4px 0px rgb(68 34 29 / 70%);
+    -moz-box-shadow: -3px 3px 4px 0px rgb(68 34 29 / 70%);
+    border-width: 4px;
+  }
+
+/* B1.6 */
+.punbb .post-content .blockcode, .punbb .post-content blockquote {
+  width: 100%;
+  overflow: hidden;
+  }
+
+/* B1.7 */
+.punbb .post-content .scrollbox {
+  width: 100%;
+  overflow: auto;
+  }
+
+/* B1.8 */
+.punbb .post-content .quote-box, .punbb .post-content .code-box {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 0.5em;
+  }
+  
+.post-content .spoiler-box {
+    margin: 0.1em 0.1em 0.1em 0.1em;
+    padding: 0.5em;
+}
+  
+
+/* B1.9 */
+.punbb .quote-box cite, .punbb .code-box strong.legend {
+  display: block;
+  padding-bottom: 0.3em;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: normal;
+  margin: 0;
+  border-bottom: 1px dashed #5d3a386e !important;
+  }
+
+/* B2 Information boxes
+-------------------------------------------------------------*/
+
+/* B2.1 */
+.punbb .info-box {
+  padding: 1.1em 1.7em 1em 1.7em;
+  margin: 0 0 1.1em 0;
+  }
+
+/* B2.2 */
+.punbb .info-box * {
+  padding: 0 0 0.7em 0;
+  }
+
+/* B2.3 */
+.punbb #pun-main .info-box .legend {
+  font-size: 1.1em;
+  font-weight: bold;
+  }
+
+
+/* B3 Pagination and posting links
+-------------------------------------------------------------*/
+
+/* B3.1 */
+.punbb .linkst {
+  float: left;
+  position: relative;
+  width: 100%;
+  font-size: 1.1em;
+  height: 0;
+  }
+
+/* B3.2 */
+.multipage {
+  margin-top: 3em;
+  }
+
+/* B3.3 */
+.linkst .pagelink {
+left: 10px;
+padding: 4px;
+position: absolute;
+top: -22px;
+width: 24em;
+  }
+
+/* B3.4 */
+.linkst .postlink {
+  position: absolute;
+  right: 2em;
+  width: 16em;
+  text-align: right;
+  font-weight: bold;
+padding: 4px;
+top: -22px;
+
+  }
+
+/* B3.5 */
+.punbb .linksb {
+  text-align: right;
+  padding: 0.4em 1em 0.5em 1em;
+  font-size: 1.1em;
+  }
+
+/* B3.6 */
+.linksb .pagelink {
+  float: left;
+  width: 24em;
+  text-align: left;
+  }
+
+/* B3.7 */
+.linksb .postlink {
+  float: right;
+  width: 16em;
+  font-weight: bold
+  }
+
+/* B3.8 */
+.subscribelink {
+  clear:both;
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
+  }
+
+
+/*************************************************************
+C - MAIN CONTENT - SPECIFIC
+**************************************************************/
+
+/* C1 Form layout
+-------------------------------------------------------------*/
+
+/* C1.1 */
+.punbb .formal .container {
+  padding: 0em 2.3em 1.1em 2.3em;
+  }
+
+/* C1.2 */
+.punbb .formsubmit {
+  padding: 0 0 0 1.7em;
+  margin: 1em 0 0 0;
+  }
+
+/* C1.3 */
+.punbb .formsubmit input, .punbb .formsubmit a, .punbb .formsubmit span {
+  margin: 0 0.6em 0 0
+  }
+
+/* C1.4 */
+.punbb fieldset {
+  padding: 0 18px 0 18px;
+  margin: 0 0 1em 0;
+border: none !important;
+  }
+
+/* C1.5 */
+.punbb fieldset legend {
+  padding: 0;
+  margin: 0 0 0 11px;
+  font-size: 1.1em;
+display: inline-block;
+  }
+
+/* C1.6 */
+.punbb fieldset legend span {
+  padding: 0 5px;
+  margin: 10px 0 0 -15px;
+display: inline-block;
+  }
+
+/* C1.7 */
+.punbb fieldset fieldset {
+  border-style: none;
+  margin: 0;
+  padding: 0 0 8px 0
+  }
+
+/* C1.8 */
+.punbb .fs-box {
+  padding: 2em 0 0.8em 0;
+  }
+
+/* C1.9 */
+.punbb .fs-box p, .punbb .fs-box fieldset {
+  padding: 0 0 0.8em 0
+  }
+
+/* C1.10 */
+.punbb .inline .inputfield, .punbb .inline .selectfield, .punbb .inline .passfield {
+  float: left;
+  margin-right: 1em;
+  }
+
+/* C1.11 */
+.punbb .inline .infofield {
+  clear:both
+  }
+
+/* C1.12 */
+.punbb .datafield br {
+  display: none
+  }
+
+/* C1.13 */
+.punbb .required label, .punbb .datafield span.input {
+  font-weight: bold
+  }
+
+/* C1.14 */
+.punbb .datafield span.input a {
+  font-weight: normal;
+  }
+
+/* C1.15 */
+.punbb .areafield span.input, .punbb p.longinput span.input {
+  display: block;
+  padding: 0 12em 0 0;
+  height: 100%; /* For IE */
+  }
+
+/* C1.16 */
+.punbb textarea, .punbb .longinput input {
+  width: 64%;
+  margin: 0;
+  }
+
+/* C1.17 */
+.punbb .hashelp {
+  position: relative;
+  }
+
+/* C1.18 */
+.punbb .helplinks {
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 0;
+  font-weight: normal;
+  width: 36%;
+  }
+
+/* c1.19 */
+.punbb #profile .helplinks {
+  top: 1.5em;
+  }
+
+/* C1.20 */
+.punbb .helplinks span {
+  display: block;
+  padding-bottom: 0.2em;
+  }
+
+/* C1.21 */
+#pun-post .formal .info-box li {
+  padding-left: 4px;
+  list-style-type: square;
+  list-style-position: inside;
+  line-height: 1.5;
+  margin: 0;
+  }
+
+
+/* C2 Table layout
+-------------------------------------------------------------*/
+
+/* C2.1 */
+.punbb .main .tcl {
+  overflow: hidden;
+  text-align: left;
+  width: 50%;
+  }
+.punbb .main .tcl a {
+font-size: 12px;
+font-weight: 700;
+}
+/* C2.2 */
+.punbb .main .tc2, .punbb .main .tc3, .punbb .main .tcmod {
+  text-align: center;
+  width: 10%;
+  }
+
+/* C2.3 */
+.punbb .main .tcr {
+  overflow: hidden;
+  text-align: left;
+  width: 30%;
+  padding-left: 8%;
+  }
+
+/* C2.4 */
+#pun-userlist .main .tcl,
+#pun-searchtopics .main .tcl,
+#pun-modviewforum .main .tcl {
+  width: 40%
+  }
+
+/* C2.5 */
+#pun-userlist .main .tc2,
+#pun-searchtopics .main .tc2 {
+  text-align: left;
+  width: 20%;
+  }
+
+/* C2.6 */
+#pun-debug table .tcl {
+  width: 15%;
+  white-space:normal;
+  }
+
+/* C2.7 */
+#pun-debug .tcr {
+  width: 90%;
+  white-space: normal;
+  }
+
+/* C2.8 */
+#pun-index .tcl h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #aa8f77;
+  margin: -1px -20px 5px -25px;
+  box-shadow: -3px 3px 4px 0px rgb(68 34 29 / 70%);
+  border-radius: 3px;
+  }
+  
+#pun-index div.tclcon  {
+    background-color: #a080644a;
+    /* margin-left: 42px; */
+    box-shadow: inset 0px 0px 0px 0px rgb(68 34 29 / 70%);
+    border: 1px solid #9f806369;
+    border-radius: 3px;
+    padding: 0 15px 5px 25px;
+    text-align: justify;
+}
+
+
+/* C2.9 */
+.punbb td span.youposted {
+  font-weight: bold;
+  margin-left: -1em;
+  position: absolute;
+  }
+
+/* C2.10 */
+.punbb td .modlist {
+  display: block;
+  padding-top: 0.3em
+  }
+
+/* C2.11 */
+.punbb .main td {
+  padding: 0.8em 1em;
+  }
+
+/* C2.12 */
+.punbb .main th {
+padding: 0.4em 1em 0.4em 1em;
+opacity: 0.0;
+font-size: 90%;
+color: #463A30
+  }
+
+/* C2.13 */
+.punbb .main .tcl {
+  border-left-style: none;
+  border-left-width: 0
+  }
+
+/* C2.14 */
+.punbb tbody.hasicon td.tcl {
+  padding-left: 3.2em
+  }
+
+/* C2.15 */
+.punbb div.icon {
+  height: 40px;
+  line-height: 0.0;
+  margin-top: 0.1em;
+  width: 38px;
+  }
+
+/* C2.16 */
+.punbb  table div.icon {
+float: left;
+font-size: 1.05em;
+margin-left: -0.2em;
+margin-top: -2px;
+position: relative;
+  }
+
+ /* C3 Topics
+-------------------------------------------------------------*/
+.reactions-root {display: none;}
+.post-content hr
+ {
+    opacity: 0.3;
+    border-color: #9c7e64;
+    margin-bottom: 0.8em;
+}
+
+/* C3.1 */
+.punbb .post .container {
+  margin-top: -1px;
+  padding-bottom: 1px;
+  }
+
+/* C3.2 */
+.punbb .post h3 {
+margin-left: -12px;
+width: 884px;
+  }
+
+/* C3.3 */
+.punbb .post h3 span {
+display: block;
+margin-top: 0px;
+padding: 6px 0px 6px 220px;
+  }
+
+/* C3.4 */
+.punbb .post h3 strong {
+  float: right;
+  width: 5em;
+  text-align: right;
+  font-weight: normal;
+  }
+
+/* C3.5 */
+.punbb .post .post-author {
+  float: left;
+position: relative;
+width: 198px;
+  }
+
+/* C3.6 */
+.punbb .post .post-author ul, .punbb .post .post-author p {
+    padding: 0 0 5px;
+    line-height: 140%;
+    background: url(https://i.ibb.co/6cqTkxsY/14894.jpg) 0 0 #131210;
+    text-align: center;
+    /* border-bottom: double 5px #62251c; */
+    border-radius: 5px;
+  }
+  
+
+/* C3.7 */
+.pa-author {
+  font-size: 1.1em;
+  font-weight: bold;
+    text-align: center;
+line-height: 32px;
+height: 30px;
+  }
+
+/* C3.8 */
+.pa-author a {
+  text-decoration: none
+  }
+
+/* C3.9 */
+li.pa-title {
+  font-size: 95%;
+  text-align: center;
+  }
+.pa-avatar {
+}
+/*snark*/
+li.pa-online {
+  line-height: 0.8em;
+  padding-left: 0.4em;
+  margin-top: 0.7em;
+  }
+
+/* C3.11 */
+.punbb .post-body {
+  margin-left: 210px;
+  padding: 0 0 1px 0;
+  }
+
+/* C3.12 */
+.punbb .post-box {
+  padding: 1em 1em 0;
+  }
+
+/*C3.13 */
+.punbb fieldset .post-box {
+  margin-bottom: 0.8em
+  }
+
+/* C3.14 */
+.punbb .post-links {
+  margin-left: 19em;
+  }
+
+/* C3.15 */
+.punbb .post-links ul {
+  padding: 0 1em 0 0;
+  height: 2em;
+  line-height: 2em;
+  margin-left: -19em;
+  background: transparent;
+  text-align: right;
+  }
+
+/* C3.16 */
+.punbb .post-links li {
+  display: inline;
+  padding-left: 1em;
+  }
+
+/* C3.17 */
+.pl-email, .pl-website {
+  float: left;
+  }
+
+/* C3.18 */
+.punbb .clearer {
+  clear: both;
+  height: 0;
+  font-size: 0;
+  }
+
+
+/* C4 Moderator menu
+-------------------------------------------------------------*/
+
+/* C4.1 */
+.punbb .modmenu .container {
+  padding: 0.5em 1em;
+  text-align: right;
+  }
+
+/* C4.2 */
+.punbb .modmenu strong, .punbb .modmenu a {
+  height: 1.8em;
+  line-height: 1.8em;
+  }
+
+/* C4.3 */
+.punbb .modmenu .container strong {
+  float: left;
+  }
+
+/* C4.4 */
+.punbb .modmenu input {
+  margin-left: 1em;
+  }
+
+
+/* C5 Message boxes
+-------------------------------------------------------------*/
+
+/* C5.1 */
+.punbb .info .container {
+  padding: 0.8em 1em
+  }
+
+/* C5.2 */
+.punbb .info .container .backlink {
+  padding-top: 0.8em;
+  }
+
+
+/* C6 Profile
+-------------------------------------------------------------*/
+
+/* C6.1 */
+#profile .container {
+  
+  }
+
+/* C6.2 */
+#profilenav {
+  float: left;
+  width: 14em;
+  margin-left: -16.3em;
+  display: inline;
+  }
+
+
+/* C6.3 */
+#profilenav li {
+  padding-bottom: 0.8em;
+  font-weight: bold;
+  }
+
+/* C6.4 */
+#viewprofile ul, #profilenav ul {
+  padding: 1.5em 18px 0.8em 18px;
+  margin: 0 0 1em 0;
+  }
+
+/* C6.5 */
+#viewprofile h2, #profilenav h2 {
+  border: none;
+  padding: 0 0 0 0;
+  margin: 6px 14px -0.6em 14px;
+font: 700 13px "Palatino Linotype", "Georgia", "Garamond", "Times New Roman", "times", sans-serif;
+  }
+
+/* C6.6 */
+#viewprofile h2 span, #profilenav h2 span {
+  padding: 0 5px;
+  position: relative;
+  }
+
+/* C6.7 */
+#viewprofile li, #setmods dl {
+  padding: 0 0 0 16em;
+  margin-bottom: 0.2em;
+  }
+
+/* C6.8 */
+#viewprofile li span {
+  float: left;
+  width: 14em;
+  margin-left: -16em;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  }
+
+/*C6.9 */
+#setmods dt {
+  float: left;
+  width: 14em;
+  margin-left: -16em;
+  padding: 0.8em 1em;
+  font-weight: bold;
+  display: inline;
+  }
+
+/* C6.10 */
+#viewprofile li strong, #viewprofile li div, #setmods dd {
+  display: block;
+  padding: 0.5em 1em;
+  font-weight: normal;
+  }
+
+/* C6.11 */
+.punbb img.avatardemo {
+  float: right;
+  margin: 0 0 0.8em 1.8em
+  }
+
+
+/* C7 User list
+-------------------------------------------------------------*/
+
+/* C7.1 */
+#pun-userlist .formal, #pun-userlist .formal .container {
+  border-bottom: none;
+  margin-bottom: 0;
+  }
+
+/* C7.2 */
+#pun-userlist .usertable .container {
+  padding: 0 2.3em 2.3em 2.3em;
+  border-top: none;
+  }
+
+/* C7.3 */
+#pun-userlist .usertable table {
+  }
+
+
+/*************************************************************
+D - PUNBB SECTIONS OTHER THAN MAIN CONTENT
+**************************************************************/
+
+/* D1 Logo and description
+-------------------------------------------------------------*/
+
+/* D1.1 */
+#pun-title {
+  margin: 0;
+  position: absolute;
+  }
+
+/* D1.2 */
+#pun-title h1 {
+  display : block;
+  height : 40px;
+  padding: 2em 1em 0 1em;
+  display: none;
+  }
+
+/* D1.3 */
+#pun-title .container {
+  border-style: none solid none solid;
+  }
+
+/* D1.4 */
+#pun-title h1 span  {
+  font-size: 1.5em;
+  }
+
+#pun-title table {
+	border: none;
+	height: 40px;
+	width: 100%;
+}
+
+#pun-title td.title-logo-tdl {
+height: 34px;
+left: 333px;
+position: absolute;
+top: 280px;
+width: 205px;
+}
+
+
+#pun-title td.title-logo-tdr {
+	border: none;
+	width: 468px;
+}
+
+/* D2 Page navigation
+-------------------------------------------------------------*/
+
+/* D2.1 */
+#pun-pagelinks {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 100%;
+  }
+
+/* D2.2 */
+#pun-pagelinks .container {
+  background: transparent;
+  border: none;
+  padding: 0}
+
+/* D2.3 */
+#pun-pagelinks .container li {
+  display: inline
+  }
+
+/* D2.4 */
+#pun-pagelinks li a, #pun-pagelinks a:link, #pun-pagelinks a:hover {
+  height: 2em;
+  line-height: 2em;
+  padding: 0;
+  font-size: 1.2em;
+  margin-left: -9999px;
+  display: block;
+  float:left;
+  width: 100%;
+  }
+
+/* D2.5 */
+#pun-pagelinks a:active, #pun-pagelinks a:focus {
+  position:relative;
+  margin: 0;
+  }
+
+#pun-pagelinks li a span {
+  display:block;
+  margin: 0 1em
+  }
+
+/* D3 Forum navigation
+-------------------------------------------------------------*/
+
+/* D3.1 */
+#pun-navlinks, #pun-navlinks .container {
+  margin: 0;
+padding: 276px 0px 0px;
+text-align: center;
+height: 44px;
+line-height: 38px;
+  }
+
+/* D3.2 */
+#pun-navlinks .container {
+padding: 6px 20px 6px 40px;
+  }
+
+
+/* D.3 */
+#pun-navlinks li {
+  display: inline;
+  padding-right: 20px;
+position: relative;
+  }
+
+/* D3.4 */
+#pun-navlinks li a {
+  font-size: 1.1em;
+  }
+#pun-navlinks ul {
+position: relative;}
+
+
+#navawards {display: none !important;}
+/* D4 User links
+-------------------------------------------------------------*/
+
+/* D4.1 */
+#pun-ulinks  {
+  margin-top: 0;
+text-align: center;
+font-size: 11px;
+  }
+
+/* D4.2 */
+#pun-ulinks .container {
+  padding: 6px 1em;
+margin-top: 14px;
+height: 30px;
+line-height: 29px;
+  }
+
+/* D4.3 */
+#pun-ulinks li, #pun-ulinks li a {
+  display: inline;
+  white-space: nowrap;
+  }
+
+/* D4.4 */
+#pun-ulinks li a {
+  padding: 0 0.3em 0 0.6em
+  }
+
+/* D4.5 */
+#pun-ulinks li.item1, #pun-ulinks li.item1 a {
+  border-left-style: none;
+  border-left-width: 0;
+  padding-left: 0
+  }
+
+/* D5 Welcome box and Top Breadcrumbs
+-------------------------------------------------------------*/
+
+/* D5.1 */
+#pun-status, #pun-status .container {
+  border-bottom: none;
+height: 24px;
+  margin-bottom: 0;
+  margin-top: 2px;
+  }
+
+/* D5.2 */
+#pun-status .container {
+  padding: 0.8em 1em 1em 1em;
+  }
+
+/* D5.3 */
+#pun-status span {
+  white-space: nowrap;
+  margin-right: 0.5em;
+  }
+
+/* D5.4 */
+#pun-crumbs1 {
+  font-weight: bold;
+  overflow: hidden;
+  margin-top: 0;
+  }
+
+/* D5.5 */
+#pun-crumbs1 p.container {
+  border-top: none;
+  padding: 0.8em;
+  font-size: 1.1em;
+  }
+
+/* D5.6 */
+#pun-break1 {
+display: none;
+  }
+
+/* D6 Announcement
+-------------------------------------------------------------*/
+
+/* D6.1 */
+#pun-announcement > h2 {
+display: none;
+  }
+
+/* D6.2 */
+#pun-announcement h2 span {
+  display: block;
+  padding: 1em 0 0.8em 0;
+  }
+
+/* D6.3 */
+#pun-announcement .container {
+margin: 0 0 -135px -23px;
+width: 864px;
+  }
+
+/* D7 Statistics
+-------------------------------------------------------------*/
+
+/* D7.1 */
+#pun-stats .container {
+  padding: 0.8em 1em
+  }
+
+/* D7.2 */
+#pun-stats li.item1, #pun-stats li.item2 {
+  float: left;
+  clear: both;
+  line-height: 150%;
+  }
+
+/* D7.3 */
+#pun-stats li.item3, #pun-stats li.item4 {
+  text-align: right;
+  line-height: 150%;
+  }
+
+/* D7.4 */
+li#onlinelist {
+  margin-top: 1em;
+  float: left;
+  width: 100%;
+  line-height: 130%;
+  }
+
+/* D7.5 */
+li#onlinelist div {
+  padding: 0.7em 0 0 0;
+  }
+
+/* D8 Quick Jump - About - Bottom Breadcrumbs
+-------------------------------------------------------------*/
+
+/* D8.1 */
+#pun-qjump {
+  margin: 0;
+  border: none;
+  width: 50%;
+  position: relative;
+  float: left;
+  }
+
+/* D8.2 */
+#pun-qjump .container {
+  border: none;
+  background: transparent;
+  padding: 0.8em 1em;
+  }
+
+/* D8.3 */
+#pun-about {
+  margin-top: 0;
+  }
+
+/* D8.4 */
+#pun-about .container {
+  border-top-style: none;
+  text-align: right;
+  line-height: 150%;
+  padding: 0.8em 1em 14px;
+  }
+
+/* D8.5 */
+#pun-about p span {
+  display:block;
+  padding-left: 50%;
+  }
+
+/* D8.6 */
+#pun-crumbs2 {
+margin-top: 0px;
+  font-weight: bold;
+  overflow: hidden;
+  margin-bottom: 55px;
+  border-bottom: none;
+  }
+
+/* D8.7 */
+#pun-crumbs2 .container {
+  border-bottom: none;
+  padding: 0.8em 1em 55px;
+  font-size: 1.1em;
+  }
+
+/* D8.8 */
+#pun-break4 {
+display: none;
+  }
+
+/* D8.9 */
+div.punbb-admin #pun-about .container {
+  }
+
+
+/* D9 Help file
+-------------------------------------------------------------*/
+
+/* D9.1 */
+#pun-help .formal .info-box h3.legend {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 0;
+  margin-bottom: 0.8em;
+  }
+
+/* D9.2 */
+#pun-help .formal .info-box h3.legend span {
+  padding-bottom: 0.6em;
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-size: 1.1em;
+  }
+
+/* D9.3 */
+#pun-help .formal p, #pun-help .formal dd {
+  margin-bottom: 1em
+  }
+
+/* D9.4 */
+#pun-help .formal ul, #pun-help .formal dl {
+  padding: 0 0 0 1em
+  }
+
+/* D9.5 */
+#pun-help .formal li {
+  padding: 0;
+  line-height: 130%
+  }
+
+/* D9.6 */
+#pun-help .formal li * {
+  vertical-align: text-top
+  }
+
+/* D9.7 */
+#pun-help .formal dt span {
+  font: 1.4em/120% monaco, "bitstream vera sans mono", "courier new", courier, monospace
+  }
+
+/* D9.8 */
+#pun-help .formal .parsedmsg, #pun-help .formal .parsedmsg .incode {
+  padding-bottom: 0;
+  }
+  
+
+    /*Разделение ников пользователей в теме запятой */
+#topic-users-in a:not(:last-of-type):after {content: ",";}
+
  /* CS1 Background and text colours
 -------------------------------------------------------------*/
 body {
@@ -88,7 +1347,7 @@ webkit-box-shadow: none;
 
 
 #tags .container {
-    top: 15% !important;
+    top: 20% !important;
     max-height: 180px;
     overflow: auto;
     padding-left: 20px !important;
@@ -356,7 +1615,7 @@ list-style: disc inside;
 background: rgba(128, 179, 238, 0.194);
 
 }
-.punbb .button, .tab, .anno-content li, #bannersbut {
+.punbb .button, .tab, .anno-content li, #bannersbut, #Bubble a {
 background: #232222;
 background: -moz-linear-gradient(top,  #232222 0%, #23221e 50%, #161412 51%, #0e0c0a 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#232222), color-stop(50%,#23221e), color-stop(51%,#161412), color-stop(100%,#0e0c0a));
@@ -372,6 +1631,7 @@ font-weight: 700 !important;
 opacity: 0.8;
 padding: 5px;
 text-shadow: 1px 1px 1px #000000;
+text-decoration: none;
 }
 .punbb .button:hover, .punbb .button:focus, .punbb .button:active, img.post-img-Sp:hover{
 color: #CFA77B;
@@ -425,39 +1685,101 @@ color: #976c3e !important;}
 width: auto;}
 
 .go-up, .go-down {display: none; position: fixed; z-index: 9999; cursor: pointer; opacity: 1;}
-.go-up {width: 59px; height: 64px; top: 550px; margin-left: 950px !important;}
-.go-down {width:59px; height: 64px; top: 650px; margin-left: 950px !important;}
+.go-up {width: 59px; height: 64px; top: 50%; margin-left: 950px !important;}
+.go-down {width:59px; height: 64px; top: 60%; margin-left: 950px !important;}
 .go-down:hover, .go-up:hover {opacity: 1;}
 
 
-
-#anno_N {
-background-image: url("https://i.ibb.co/rGzhjmnC/11317-3.jpg");
-background-repeat: no-repeat;
-height: 430px;
-left: -36px;
-padding-top: 10px;
-position: relative;
-top: 3px;
-width: 936px;
-z-index: 0;
-margin-bottom: -186px;
+.atabs {
+  position: relative;
+  background: url("https://i.ibb.co/rGzhjmnC/11317-3.jpg") no-repeat top center;
+  width: 936px;
+  height: 382px;
+  margin: 0 0 0 -36px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 20px 50px 142px 64px;
+  box-sizing: border-box;
 }
 
-
-.idtabs {
-left: 42px;
-position: relative;
+.atab, .atab-title {
+  display: inline-block;
 }
 
-.anno-content {
-color: #836955;
-height: 225px;
-overflow: auto;
-padding: 8px 0px 0px 52px;
-position: absolute;
-text-shadow: 0px 0px 2px #2B1810;
-width: 604px;
+.atab input[type="radio"] {
+  display: none;
+}
+
+.atab-title {
+  padding: 5px 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  color: #976C3E;
+  box-shadow: inset 0 0 0 1px #3A2A16;
+  border: 1px solid rgba(71, 35, 31, 0.553);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-family: "Book Antiqua", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 33px;
+  height: 37px;
+  width: 135px;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000000;
+  background: #232222;
+  background: -moz-linear-gradient(top, #232222 0%, #23221e 50%, #161412 51%, #0e0c0a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#232222), color-stop(50%,#23221e), color-stop(51%,#161412), color-stop(100%,#0e0c0a));
+  background: -webkit-linear-gradient(top, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  background: -o-linear-gradient(top, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  background: -ms-linear-gradient(top, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  background: linear-gradient(to bottom, #232222 0%,#23221e 50%,#161412 51%,#0e0c0a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232222', endColorstr='#0e0c0a',GradientType=0 );
+  opacity: 0.8;
+}
+
+.atab-content {
+  position: absolute;
+  padding: 0;
+  right: 60px;
+  width: 595px;
+  height: 450px;
+  display: none;
+  box-sizing: border-box;
+  background: transparent;
+  top: 20px;
+  color: #836955;
+  text-shadow: 0px 0px 2px #2B1810;
+}
+
+.atab-title span {
+    widht: 100%;
+    height: 100%;
+    display: block;
+}
+
+.atab :checked + .atab-title span, .atab-title span:hover {
+  position: relative;
+  background: url("https://i.ibb.co/Nd6by9dM/52449.png") 98% 50% no-repeat transparent;
+  z-index: 1;
+}
+
+.atab :checked ~ .atab-content {
+  display: block;
+}
+
+.atab-content a {
+  color: #976C3E !important;
+  opacity: 0.8;
+}
+
+.atab-content a:hover {
+  opacity: 1;
 }
 
 .anno-content p {
@@ -467,7 +1789,6 @@ line-height: 100%;
 
 .anno-content ul { 
 display: inline-block;
-margin: 10px;
 position: relative;
 width: 100%;
 }
@@ -488,7 +1809,6 @@ text-align: center;
 padding: 80px 0 0 20px !important;
 z-index: 10;
 }
-
 
 .tab {
 display: block;
@@ -521,6 +1841,134 @@ border: 1px solid #3A2A16;
 background: url("https://i.ibb.co/Nd6by9dM/52449.png") 98% 50% no-repeat transparent;
 }
 
+.anews_inner {
+  padding: 5px 10px 0 0;
+}
+
+.punbb .anews_top {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.punbb .anews_left_top {
+  display: flex;
+  gap: 10px 30px;
+  margin-bottom: 10px;
+}
+
+#amsimg {
+  display: flex;
+  gap: 6px;
+}
+
+.time_place {
+  text-align: center;
+}
+
+.newslist {
+  height: 90px;
+  overflow: auto;
+  font-size: 11px;
+}
+
+.anews_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.bestquotes {
+  height: 30px;
+  overflow: auto;
+  font-size: 11px;
+  text-align: justify;
+  padding: 1px 0 0 0; 
+}
+
+.amatchast_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px 0 0;
+  gap: 20px;
+}
+
+.amatchast_left {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.amatchast .hotlinks, .aguest_hotlinks, .aplayer_hotlinks {
+  display: flex;
+  gap: 10px;
+}
+
+.amatchast .hotlinks ul, .aguest_hotlinks ul, .aplayer_hotlinks ul {
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.mapimg {
+  position: relative;
+  width:230px;
+  height: 190px;
+}
+
+.mapimg a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mapimg a h3 {
+  position: absolute;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #cfa77b9e;
+  background: #26272a;
+  width: 232px;
+  z-index: 10;
+  bottom: 13px;
+  cursor: pointer;
+  padding: 2px 0px;
+}
+
+.aguest_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px 0 0;
+  gap: 10px;
+}
+
+.aguest_left {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.aguest_right span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aplayer_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px 0 0;
+  gap: 10px;
+  text-align: center;
+}
+
+.aplayer_left {
+  flex-grow: 1;
+}
+
 #pun-status, #pun-status .container, .punbb .main,  #pun-crumbs1 {
 z-index: 10;
 position: relative;
@@ -532,8 +1980,8 @@ position: relative;
 
 /* скроллбар*/
 ::-webkit-scrollbar {width: 6px; height: 5px;}  
-::-webkit-scrollbar-track {background-color: #19110f96;} 
-::-webkit-scrollbar-thumb {background-color: #7a6250d4;}
+::-webkit-scrollbar-track {background-color: #7a6250d4; box-shadow: 0 0 0 2px #19110f96 inset !important;} 
+::-webkit-scrollbar-thumb {background-color: #7a6250e0;}
 ::-webkit-scrollbar-thumb:active {background: #7d3e2f;} 
 
 
@@ -541,9 +1989,6 @@ position: relative;
 /*объява-картинки*/
 .activeimg img:hover, .activeimg img:active, .mapimg img:hover, .mapimg img:active {filter: none; opacity: 1; border: 1px solid #343c51 !important; }
 .activeimg img, .mapimg img {opacity: 0.7; transition: opacity 0.5s; -webkit-transition: opacity 0.7s; filter: grayscale(0.5); border: 1px solid #343c51 !important;}
-
-.mapimg a h3  {font-size: 10px; font-weight: bold; text-transform: uppercase;
-color: #cfa77b9e;  background: #26272a; width: 232px;  z-index: 10; bottom: 13px; left: 14px; cursor: pointer; position: relative;  padding: 2px 0px;}
 
 #amsimg img {border: 1px solid #343c51; opacity: 0.7; transition: opacity 0.5s; -webkit-transition: opacity 0.7s; filter: grayscale(0.5); margin-left: 7px;}
 #amsimg img:hover, #amsimg img:active {border: 1px solid #343c51; filter: none; opacity: 1;}
@@ -748,8 +2193,8 @@ li.pa-posts span.fld-name, li.pa-fld2 span.fld-name, li.pa-fld4 span.fld-name, l
     text-align: left;
 }
 .showcase a:hover p {
-	bottom: 10px;
-	width: 190px;
+	bottom: 15px;
+	width: 200px;
 	z-index: 25;
 	background: #26272a;
 }
@@ -759,7 +2204,8 @@ li.pa-posts span.fld-name, li.pa-fld2 span.fld-name, li.pa-fld4 span.fld-name, l
 	text-transform: uppercase;
 	color: #cfa77b9e;
 	background: #26272a;
-	width: 190px;
+	width: 200px;
+        box-sizing: border-box;
 	padding: 2px 5px;
 	margin: -1px;
 	position: absolute;
@@ -838,7 +2284,8 @@ li.pa-posts span.fld-name, li.pa-fld2 span.fld-name, li.pa-fld4 span.fld-name, l
 	bottom: -112px;
     height: 85px;
 	display: block;
-	width: 220px;
+	width: 230px;
+        box-sizing: border-box;
 	cursor: pointer;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -849,7 +2296,7 @@ li.pa-posts span.fld-name, li.pa-fld2 span.fld-name, li.pa-fld4 span.fld-name, l
 }
 .showcase2 a:hover p {
 	bottom: 10px;
-	width: 220px;
+	width: 230px;
 	z-index: 25;
 	background: #26272a;
 }
@@ -859,7 +2306,8 @@ li.pa-posts span.fld-name, li.pa-fld2 span.fld-name, li.pa-fld4 span.fld-name, l
 	text-transform: uppercase;
 	color: #cfa77b9e;
 	background: #26272a;
-	width: 220px;
+	width: 230px;
+        box-sizing: border-box;
 	padding: 2px 5px;
 	margin: -1px;
 	position: absolute;
@@ -902,8 +2350,9 @@ border: 1px solid #67423963;
 .punbb .post-content a {font-weight: bold;}
 
 /* отключение бордера в таблицах */
-.punbb .main .post table, .punbb .main .post table tr, .punbb .main .post table td, .post-content table {border: none 0 transparent; padding-right: 20px !important;}
+.punbb .main .post table, .punbb .main .post table tr, .punbb .main .post table td, .post-content table {border: none 0 transparent; /*padding-right: 20px !important;*/}
 .post-content td {border: none 0 transparent !important;}
+.post-content td p span {padding-right: 12px;}
 
 /* стиль колонок тем и сообщений (+скрипт в хтмл-низ)*/
 #pun-index .category .tc2,
@@ -1069,3 +2518,121 @@ border-top:none;
 padding:10px 12px 0px 10px;
 height:26px;
 background-color:#e9e9e9; }
+
+/*всплывающая подсказка*/
+.tipsy {height: auto; width: auto; max-width: 120px; padding: 5px;}
+.tipsy.post-voters-tip.tipsy-se{max-width: max-content;}
+
+/*поясняющий текст*/
+.post-content abbr {border-bottom: 2px dotted;}
+
+
+/*-------- СООБЩЕНИЯ-ДИАЛОГИ --------*/
+#messages .post .post-author .pa-author {
+background: none;
+height: 30px;
+padding: 0 0 0 10px;
+text-align: left;
+margin-top: -7px;
+}
+#messages .post .post-author .pa-title, #messages .post .post-author .pa-avatar {
+border: none;
+}
+
+#messages .post h3 {
+border-radius: 7px;
+margin-left: -5px;
+}
+
+#messages .post .post-author ul, #messages .post .post-author p {
+display: flex;
+flex-direction: row-reverse;
+justify-content: flex-end;
+padding: 0px;
+border-radius: 0px;
+margin-top: -31px;
+height: 28px;
+}
+
+#messages .post .post-body  {
+margin-left: 0px;
+}
+
+.punbb .formal #messages .post  .post-box {
+padding: 1em 1em 0 0;
+}
+
+.view-dialog .post .pa-avatar img, .view-search .post .pa-avatar img, .view-bookmarks .post .pa-avatar img {
+max-height: 27px !important;
+margin: -12px 0 0 -5px;
+border-radius: 5px;
+}
+
+#messages .post .post-number{
+padding-right: 1em;
+width: 2em;
+}
+
+#messages table {
+width: 100%;
+}
+
+/*-------- конец сообщения - диалоги -------*/
+
+/*-------- СООБЩЕНИЯ-СТАНДАРТ--------*/
+.formal.messages-container .post-author ul {
+background: none;
+}
+
+.formal.messages-container .post-author .pa-author {
+background: url(https://i.ibb.co/M5Ndb4bz/55323.png) 0 0px no-repeat;
+margin: 0 0 -32px -1px;
+padding-top: 20px;
+    height: 73px;
+}
+
+.formal.messages-container .pa-posts, .formal.messages-container .pa-reg  {
+display: none;
+}
+
+.formal.messages-container .pa-online  {
+    background: #131210;
+    padding: 5px !important;
+    margin-top: 0px;
+}
+/*-------- конец сообщения - стандарт-------*/
+
+/*всплывающее окно репутации*/
+#pun-report .inner, #pun-reputation .inner, #pun-admin-award-form .inner {
+background: #b19c89;
+border: solid 1px #896e5d !important;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#rep_form table {
+width: 100%;
+}
+
+/*юзерлист*/
+#pun-userlist .main .tcl.username{
+width: 20%;
+}
+
+#wysi-reply {
+    background: #beab9a;
+    border-color: #896e5d;
+}
+
+/* иконка КУБЫ*/
+#button-dice {
+background-image:url("/files/000f/3e/d5/81483.png");
+}
+
+.logo {
+  display: none;
+}
+
+span.num_msg {
+  line-height: 14px;
+}
