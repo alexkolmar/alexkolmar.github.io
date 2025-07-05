@@ -1209,8 +1209,169 @@ li#onlinelist {
 
 /* содержимое шапки в html-верх */
 
-.tablica {}
+.tablica {
+  position: absolute;
+  width: 1000px;
+  height: 430px;
+  margin-left: 1px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.tab_left, .tab_right {
+  position: relative;
+  width: 400px;
+}
+
+.hu1 {
+  position: absolute;
+  padding: 2px 5px;
+  width: 81px;
+  height: 22px;
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+  background: var(--gray-200);
+  transform: rotate(-10deg);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 7px;
+  line-height: 86%;
+  color: var(--gray-800);
+  top: 90px;
+  left: 78px;
+}
+
+.tab_writers {
+  position: absolute;
+  top: 141px;
+  left: 48px;
+  padding-top: 10px;
+}
+
+.tab_writers > img {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+.twr_inner {
+  display: flex;
+}
+
+.twr_inner a {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.twr_inner a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tab_wanted {
+  position: absolute;
+  top: 229px;
+  left: 120px;
+  width: 230px;
+  height: 100px;
+}
+
+.tab_wanted span {
+  display: block;
+  width: fit-content;
+  margin-bottom: 7px;
+  border-radius: 3px;
+  padding: 0px 5px 1px 5px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.03em;
+  color: var(--gray-200);
+}
+
+.twa_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.twa_inner a {
+  display: flex;
+  border-radius: 5px;
+  padding: 2px 5px 2px 2px;
+  width: fit-content;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--gray-200);
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.twa_inner a img {
+  flex-shrink: 0;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  background: var(--gray-600);
+}
+
+.twa_inner a p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--gray-800);
+}
+
+.tab_hotlinks {
+  position: absolute;
+  top: 356px;
+  left: 120px;
+  width: 180px;
+  height: 54px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tab_hotlinks a {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.tab_hotlinks a:hover {
+  background: var(--meat);
+}
+
+.hu2 {
+  position: absolute;
+  padding: 2px 5px;
+  width: 102px;
+  height: 22px;
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.25);
+  background: var(--gray-200);
+  transform: rotate(-5deg);
+  font-family: var(--font6);
+  font-weight: 600;
+  font-size: 7px;
+  line-height: 86%;
+  color: var(--gray-800);
+  left: 16px;
+  bottom: -10px;
+  box-sizing: border-box;
+}
 
 /* Объявление
 ------------------------------------------*/
