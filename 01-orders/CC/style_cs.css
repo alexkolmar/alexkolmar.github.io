@@ -1,0 +1,510 @@
+#form-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#plng {
+  white-space: nowrap;
+  font-family: var(--font-family);
+  color: var(--gray-800);
+  width: 60px;
+  display: block;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+#plng b {
+  font-weight: 600;
+  font-size: 10px;
+  margin-right: 2px;
+}
+
+#plng sup {
+  font-weight: 700;
+  font-size: 7px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+
+ /* Form Buttons © max, the murderer!
+----------------------------------------------------------------------- */
+
+/* General */
+
+#form-buttons table {
+    width: 100% !important;
+}
+
+#form-buttons table tr {
+    display: flex;
+    justify-content: space-between; /* выравнивание кнопок в ряду */
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+#form-buttons td {
+    position: relative;
+    background: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* ширина кнопки */
+    height: 24px; /* высота кнопки */
+    margin-bottom: 4px;
+}
+
+#form-buttons td::before {
+    font-family: 'Font Awesome 6 Pro';
+    font-size: 12px; /* размер иконки */
+    font-weight: 400; /* стиль иконки */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#form-buttons td:hover::before {
+    color: red; /* цвет при наведении */
+}
+
+
+/* Icons */
+
+#button-font::before {
+    content: '\f031';
+}
+
+#button-size::before {
+    content: '\f894';
+}
+
+#button-bold::before {
+    content: '\f032';
+}
+
+#button-italic::before {
+    content: '\f033';
+}
+
+#button-underline::before {
+    content: '\f0cd';
+}
+
+#button-strike::before {
+    content: '\f0cc';
+}
+
+#button-left::before {
+    content: '\f036';
+}
+
+#button-right::before {
+    content: '\f038';
+}
+
+#button-center::before {
+    content: '\f037';
+}
+
+#button-link::before {
+    content: '\f0c1';
+}
+
+#button-spoiler::before {
+    content: '\f518';
+}
+
+#button-image::before {
+    content: '\f302';
+}
+
+#button-video::before {
+    content: '\f144';
+}
+
+#button-hide::before {
+    content: '\f30d';
+}
+
+#button-quote::before {
+    content: '\f27a';
+}
+
+#button-code::before {
+    content: '\f121';
+}
+
+#button-color::before {
+    content: '\f53f';
+}
+
+#button-table::before {
+    content: '\f009';
+}
+
+#button-smile::before {
+    content: '\f118';
+}
+
+#button-keyboard::before {
+    content: '\f11c';
+}
+
+#button-addition::before {
+    content: '\f0d7';
+}
+
+#button-files_rusff::before {
+    content: '\f07b';
+}
+
+#button-graffiti_rusff::before {
+    content: '\f5bd';
+}
+
+
+ /************************* 
+Стиль для Быстрой смены аккаунтов 
+Deff 
+*************************/
+ /*Cкрытие формы входа без клика*/
+ #pun-navlinks a:not(.NextShow)+span.odd {
+  display: none !important;
+ }
+
+ #pun-navlinks #New-exit img {
+  position: absolute;
+  margin: 0;
+  width: 20px;
+  height: auto;
+  opacity: .79;
+ }
+
+ #pun-navlinks #New-exit:hover {
+  opacity: .4;
+ }
+
+ /*Стиль доп-иконки Выход!*/
+ .punbb #pun-navlinks a#New-exit {
+  position: absolute;
+  z-index: 100000 !important;
+  margin-top: 6px !important;
+  margin-left: 15px !important;
+  float: none !important;
+ }
+
+ .punbb #pun-navlinks a#New-exit:before {
+  content: none;
+ }
+
+.punbb #pun-navlinks #form-login input[type="submit"] {
+  text-rendering: auto;
+  color: #000000;
+  text-transform: uppercase;
+  text-shadow: none;
+  display: inline-block !important;
+  text-align: center;
+  font: normal normal 400 11px/normal var(--font-family) !important;
+  border: 1px solid var(--body-bg);
+}
+
+.punbb #pun-navlinks #form-login input[type=submit]:hover {
+  background: var(--meat);
+  color: var(--pun-bg);
+}
+
+ .punbb #pun-navlinks #form-login input[type="submit"] {
+  cursor: pointer;
+  font-weight: 400 !important;
+  margin-top: 10px !important;
+ }
+
+ /*Стиль формы входа*/
+.punbb #pun-navlinks #form-login {
+  display: block;
+  font: normal normal 400 11px/normal Tahoma;
+  color: var(--meat);
+  text-transform: none;
+  position: absolute !important;
+  left: 0px;
+  top: 15px;
+  z-index: 100000 !important;
+  padding: 7px 12px;
+  background: var(--sec-bg);
+  border: 1px solid var(--body-bg);
+  border-radius: 0 0 6px 6px;
+  text-align: center;
+}
+
+ #pun-navlinks #navlogin #form-login {
+  margin-left: -21px;
+  /*Подвижки формы влево от вход*/
+ }
+
+ #pun-navlinks #navlogout #form-login {
+  margin-left: -21px;
+  /*Подвижки формы влево от выход*/
+ }
+
+ .ismoderator #pun-navlinks #navlogout #form-login {
+  margin-left: -21px !important;
+  /*Подвижки формы влево от выход для АМС*/
+ }
+
+ /*Стиль ссылок в форме "Не зарегистрированы" и "Забыли пароль" */
+ #pun-navlinks #form-login input[value="Войти"]+p {
+  margin-bottom: 11px;
+  margin-top: 11px;
+ }
+
+ .punbb #pun-navlinks #form-login a.Rega,
+ .punbb #pun-navlinks #form-login a.Forgot {
+  position: relative;
+  text-transform: none !important;
+  z-index: 20;
+  /*text-shadow:none;*/
+  color: #EFF4F2 !important;
+  cursor: pointer;
+  font: normal normal 400 9.5px/normal Tahoma !important;
+  letter-spacing: .5px !important;
+ }
+
+ .punbb #pun-navlinks #form-login a.Rega:before,
+ .punbb #pun-navlinks #form-login a.Forgot:before {
+  content: none;
+ }
+
+ /* Помечаем красным незаполненные поля!*/
+ #form-login input.none {
+  outline: red dashed 2px !important;
+ }
+
+ /*Форма слево(с Никами) */
+#List-UserNames {
+  position: absolute;
+  margin-top: -8px;
+  min-height: 90px;
+  width: 220px;
+  right: 100%;
+  padding: 12px 19px 12px 17px;
+  background: var(--sec-bg);
+  border: 1px solid var(--body-bg);
+  border-radius: 0 0 0px 6px;
+  text-align: center;
+}
+
+ /*Стиль контейнера под список Ников*/
+ .punbb #List-UserNames ul {
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  min-height: 36px;
+  max-height: 72px;
+  /*Видимое число Ников без прокрутки! сейчас - 4*/
+ }
+
+.punbb #List-UserNames li {
+  display: block !important;
+  position: relative;
+  background: var(--salmon);
+  text-align: left;
+  font: normal normal 700 11px/normal Verdana !important;
+  margin: 1px auto !important;
+  padding: 2px 0 2px 5px;
+  transition: .33s;
+  border-radius: 5px;
+}
+
+ .punbb #List-UserNames li:hover {
+  opacity: .84;
+  /*background:#546a6b!important;*/
+ }
+
+ /*Стиль Ников*/
+ .punbb #List-UserNames li>b {
+  cursor: pointer;
+  opacity: .9;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.31);
+ }
+
+ .punbb #List-UserNames li>b:hover {
+  opacity: .93;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+ }
+
+ /*Скролл контейнера с никами*/
+ #List-UserNames ul::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+ }
+
+ #List-UserNames ul::-webkit-scrollbar-track {
+  background-color: #919190;
+  border: 1px solid #919190;
+  box-shadow: none;
+ }
+
+ #List-UserNames ul::-webkit-scrollbar-thumb {
+  background-color: #bdbdbc;
+  border: 2px solid #888887;
+  box-shadow: none;
+ }
+
+ /*Кнопки Удалить (правее ников)*/
+ #List-UserNames ul li>span {
+  display: inline-block;
+  padding: 0 3px;
+  position: absolute;
+  opacity: .88;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  color: #fff;
+  font: normal normal 700 10.56px/normal Verdana;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+ }
+
+ /*Текст при отсутствии запомненных Ников!*/
+ #List-UserNames ul:empty:before {
+  display: inline-block;
+  content: "У Вас нет запомненных ников, введенных через форму справо, или через перенос ниже!";
+ }
+
+ /*Кнопка выход-2*/
+ #navlogin #exit-2 {
+  display: none;
+ }
+
+ #navlogin #form-login,
+ #navlogout .Rega,
+ #navlogout .Forgot {
+  background-image: none !important;
+  display: none;
+ }
+
+ /*Стиль блока с инпутом для переноса и вставки запомненных Аккаунтов*/
+ #List-UserNames ul+span {
+  display: inline-block;
+  padding: 6px 0 8px 0;
+  text-align: left;
+  font: normal normal 400 10.56px/normal Verdana;
+ }
+
+ /*Сам инпут*/
+ .punbb #List-UserNames input {
+  margin-top: 9px;
+  padding: 2px !important;
+  vertical-align: middle;
+ }
+
+ /*Стрелочки к инпуту*/
+ #List-UserNames ul+span b {
+  font: normal normal 400 13px/normal Verdana;
+  padding: 0 3px;
+  color: var(--meat);
+ }
+
+ /*Кликалка слево, чуть выше инпута*/
+ #List-UserNames .a1-copy {
+  display: inline-block !important;
+  cursor: pointer;
+  float: left;
+ }
+
+ /*Кликалка справо*/
+ #List-UserNames .a1-paste {
+  cursor: pointer;
+  display: inline-block !important;
+  float: right;
+ }
+
+ /*Подсказки на кликалках*/
+ .tipsy.a11 {
+  font: normal normal 400 11px/normal Tahoma !important;
+  margin-top: -22px !important;
+  margin-left: 148px !important;
+  max-width: 170px;
+ }
+
+ /************************* 
+//Конец Стиля для Быстрой смены аккаунтов 
+*************************/
+
+
+/* Fast reputation */
+
+body div.post-rating,
+body div.post-vote {
+    float: right;
+    position: relative;
+    line-height: initial;
+    margin-left: var(--8);
+}
+body div.post-rating p,
+body div.post-vote p {
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+div .post-rating p > a {
+  top: 1px;
+  left: 0;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: 11px !important;
+  font-weight: 400;
+  line-height: 127%;
+  color: var(--gray-800);
+}
+div.post-vote p > a {
+    font-size: 0 !important;
+}
+div .post-rating p::before, div .post-vote p a::before {
+  margin-right: 5px;
+  content: '\e87d';
+  font-family: var(--msr);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: var(--gray-300);
+  transition: all .2s linear 0s;
+  cursor: pointer;
+}
+div .post-vote p a::before {
+  content: '';
+  background: url(https://forumstatic.ru/files/0016/01/4e/34044.svg) no-repeat center/20px;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+div .post-rating p:hover:before,
+div .post-vote p:hover a:before {
+   color: var(--salmon);
+}
+div .post-rating p:hover > a,
+div .mylike .post-rating p > a {
+
+}
+div .mylike .post-rating p::before {
+  color: var(--salmon);
+}
+.post[data-group-id="3"] .post-rating {
+    display: none;
+}
+.isguest .post .post-rating {
+    pointer-events: none;
+}
