@@ -4,6 +4,9 @@ A - SETUP
 /* Иконический шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
 
+/* BloodLust font */
+@import url('https://alexkolmar.github.io/fonts/BloodLust/stylesheet.css');
+
 /* A1 Import the colour scheme
 -------------------------------------------------------------*/
 
@@ -63,6 +66,7 @@ fieldset[class="radiofield"] * {
 body {
   font-size: 100.01%;
 color: #241a12;
+min-width: 950px;
 }
 
 /* A3.2 */
@@ -104,7 +108,8 @@ text-align: center;
   }
 
 body {
-  background: url("https://forumstatic.ru/files/001c/06/33/13497.jpg") no-repeat top center, url("https://forumstatic.ru/files/001c/06/33/75627.jpg") no-repeat bottom center, url("https://forumstatic.ru/files/001c/06/33/71861.jpg") repeat-y top center, url("https://i.ibb.co/DfPNjk2H/78030-3.jpg") 50% 0px #d4c5b0;
+  background: url("https://forumstatic.ru/files/001c/06/33/69731.png") no-repeat top center, url("https://forumstatic.ru/files/001c/06/33/75627.jpg") no-repeat bottom center, url("https://forumstatic.ru/files/001c/06/33/71861.jpg") repeat-y top center, url("https://i.ibb.co/DfPNjk2H/78030-3.jpg") 50% 0px #d4c5b0;
+min-width: 0 !important;
 }
 
 
@@ -283,8 +288,9 @@ margin: 0;
   -------------------------------------------------------------*/
 
   #pun-title {
-   position: relative;
-   height: 180px;
+    position: relative;
+    height: 173px;
+  background: url(https://forumstatic.ru/files/001c/06/33/15422.png) no-repeat top center/cover;
   }
 
 #pun-title td.title-logo-tdl {
@@ -292,24 +298,32 @@ margin: 0;
   width: 100%;
 }
 
-.logo {
-  display: block;
-  position: absolute;
-  top: 36px;
-  left: 10%;
-  text-align: right;
-  font-family: "Bookman Old Style";
-  color: #4f0a0a;
-  line-height: 1.2;
-  text-shadow: 0 0 3px #abd2e1, 0px 5px 9.5px rgba(0, 0, 0, 0.1)
-}
+  .logo {
+    display: block;
+    position: absolute;
+    top: 36px;
+    left: 12%;
+    text-align: right;
+    font-family: Blood Lust;
+    color: #4f0a0a;
+    line-height: 1;
+    text-shadow: 0 0 3px #abd2e1, 0px 5px 9.5px rgba(0, 0, 0, 0.1);
+    font-variant: small-caps;
+    z-index: 1;
+  }
+
+  .logo i {
+    font-style: normal;
+    transform: scaleX(-1);
+    display: inline-block;
+  }
 
 .logo h3 {
-  font-size: 5vw;
+  font-size: 6vw;
 }
 
 .logo h4 {
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 
@@ -321,8 +335,11 @@ margin: 0;
   #pun-navlinks {
     width: 100%;
     box-sizing: border-box;
-    padding: 0;
+    padding: 43px 0 0;
     z-index: 100;
+    background: url(https://forumstatic.ru/files/001c/06/33/46595.png?v=1) no-repeat top center/cover;
+    height: 80px;
+    margin-top: -43px;
   }
 
   #pun-navlinks .container {
@@ -438,7 +455,7 @@ margin: 0;
 
   #pun-ulinks {
     position: absolute;
-    top: 180px;
+    top: 174px;
     right: 0;
     display: block;
     width: 40px;
@@ -585,11 +602,20 @@ margin: 0;
     width: 100%;
     right: 0;
     top: 0;
+    background: none;
 }
 
 .atab :checked + .atab-title span, .atab-title span:hover {
   background: url(https://forumstatic.ru/files/001c/06/33/52449.png) no-repeat 95% 50%;
 }
+
+  .atab input[type="radio"]:not(:checked) + .atab-title + .atab-content {
+    display: none;
+  }
+
+  .atab input[type="radio"]:checked + .atab-title + .atab-content {
+    display: block;
+  }
 
 .punbb .atab-content > div {
   padding: 10px 0;
