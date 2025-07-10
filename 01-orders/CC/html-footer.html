@@ -1,0 +1,158 @@
+<script type="text/javascript">
+function myFunction() {
+  if (window.pageYOffset >= 90) {
+    $("#pun-navlinks, #pun-ulinks").addClass("fixed");
+  } else {
+    $("#pun-navlinks, #pun-ulinks").removeClass("fixed");
+  }
+};
+window.onscroll = function() {myFunction()};
+if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+    myFunction()
+}
+</script>
+
+<script>
+$('.punbb').each(function(){
+  var $container = $(this);
+  // Проверяем, есть ли уже .topinfo
+  if ($container.find('.topinfo').length === 0) {
+    var $targets = $container.find('#pun-status, #pun-crumbs1');
+    if ($targets.length) {
+      $targets.wrapAll('<div class="topinfo">');
+    }
+  }
+});
+</script>
+
+<script>
+$('#pun-stats .container').each(function(){
+  var $container = $(this);
+  // Проверяем, есть ли уже .stats_wrap
+  if ($container.find('.stats_wrap').length === 0) {
+    var $targets = $container.find('.item1, .item2, .item3, .item4');
+    if ($targets.length) {
+      $targets.wrapAll('<div class="stats_wrap">');
+    }
+  }
+  // Проверяем, есть ли уже .stats_wrap2
+  if ($container.find('.stats_wrap2').length === 0) {
+    var $targets = $container.find('.item5');
+    if ($targets.length) {
+      $targets.wrapAll('<div class="stats_wrap2">');
+    }
+  }
+});
+</script>
+
+<script>
+$(".post-author").each(function(){
+$(this).find('.pa-posts, .pa-fld2, .pa-respect').wrapAll("<div class='author-icons'>");
+});
+</script>
+
+
+<!----- Индикатор активности пользователя © Alex_63, мод. max, the murderer! ----->
+<script type="text/javascript">
+(function() {
+    function addOnline() {
+        $('.post').each(function(){
+            var lastVisitEl = $(this).find('.pa-last-visit').text().toLowerCase();
+            var activeTimeEl = $(this).find('.pa-online').text().toLowerCase();
+
+            var lastVisit = lastVisitEl.includes('последний визит:') 
+                ? lastVisitEl.split('последний визит:')[1].trim() 
+                : '';
+
+            var activeTime = activeTimeEl.includes('активен') 
+                ? activeTimeEl.split('активен')[1].trim() 
+                : '';
+
+            if ($(this).find('.post-author:not([data-group-id="3"])').hasClass('online')) {
+                $(this).find('.post-author').append(`<span class="indOnline" title="С нами ${activeTime}"><div><i></i> я с вами</div></span>`);
+            } else {
+                $(this).find('.post-author').append(`<span class="indOffline" title="Был(а) ${lastVisit}"><div><i></i> буду когда буду</div></span>`);
+            }
+        });
+    }
+
+    setTimeout(addOnline, 500); // Ждем загрузки классов
+    $(document).on('pun_post', addOnline); // Событие для новых постов
+})();
+</script>
+
+
+<!-- Анти-в-строчку для Сообщений и Репутации © deff -->
+<script type="text/javascript">
+function changeS(sc,ch,st){$(sc).parent().each(function(){$(this).html($(this).html().replace(ch,st));});}
+   changeS('#pun-stats .container','Активны','сейчас с нами');
+   changeS('#pun-stats .container','Посетили за сутки','были за день');
+   changeS('#pun-stats .container','Всего тем:','темы');
+   changeS('#pun-stats .container','Всего сообщений:','сообщения');
+   changeS('#pun-stats .container','Зарегистрированных пользователей:','народу');
+   changeS('#pun-stats .container','Последним зарегистрировался:','крайний');
+</script>
+
+
+<!--Выделение кода в блоке "Код" с перемещение в буфер обмена // © Damassk, версия 2019г. --> 
+<script type="text/javascript" src="https://forumstatic.ru/files/0016/4a/bf/98029.js"></script>
+<script>eval(select_text.toString().replace(/\}$/,'try{document.execCommand("copy")}catch(e){}}'))</script>
+<script type="text/javascript">select_text.linkText = 'выделить [копируется сразу]' //текст ссылки</script>
+<!-- конец -->
+
+
+<!--написано символов-->
+<script>var a, L, epl = $("#main-reply"), str = '<small id="plng"><b>00</b> <sup>sym</sup></small>'; epl.parents("#post-form").find("#form-buttons").append(str); function epl3() { a = epl.val().length; if (a > 9) { L = '' } else { L = '0' }; $("#plng b").text(L + a) }; epl3(); $(".pl-quote").click(function () { setTimeout('epl3()', 100) }); epl.bind('mouseout mousemove keydown keypress keyup', function (e) { epl3() });</script>
+<!--конец -->
+
+
+<!-- Мгновенный предпросмотр сообщения © Alex_63 -->
+    <script type="text/javascript">
+    var PPREV = {};
+    PPREV.position = 0; //Положение окна Предпросмотра: 0 - над полем ввода, 1 - под полем ввода, 2 - справа
+    PPREV.quote_cite = 'написал(а):'; //Надпись в окне цитаты
+    </script>
+<!-- обновление от 27.02.2025 с поддержкой бб-блоков, тихих цитат, бб-вкладок от kolobdur74 и медиаспойлеров © hagalnaud -->
+<script type="text/javascript" src="https://forumstatic.ru/files/001b/d5/6a/90542.js"></script>
+<!-- Дополнение: кнопка отключения мгновенного предпросмотра -->
+<script type="text/javascript">(function (){
+  var a='Включить быстрый предпросмотр';
+  var b='Отключить быстрый предпросмотр';
+  var d='_PreviewToggle';
+  setCookiePPrev=function(a,b,c){if(c){var d=new Date();d.setTime(d.getTime()+c);}if(a && b)document.cookie=a+'='+b+(c ? '; expires='+d.toUTCString() : '');else return false;}
+  getCookiePPrev=function(a){var b=new RegExp(a+'=([^;]){1,}');var c=b.exec(document.cookie);if(c)c=c[0].split('=');else return false;return c[1] ? c[1] : false;}
+  $('<small id="togglePreview"><input type="button" class="button" value="'+ b +'" onclick="togglePreview(this)"/></small>').insertAfter('#post fieldset:not(#post-preview):last legend');
+  var x = ParseContent;
+  window.togglePreview = function(sel){//alert(sel.value);
+    if(sel.value==a){sel.value=b;setCookiePPrev(d,'0',-1000);ParseContent=x;ParseContent();$('#post-preview').show(); return}
+    if(sel.value==b){sel.value=a;setCookiePPrev(d,'OFF',30*3600*24*30*1000);if($('#pun-viewtopic').length){$('#post-preview').hide()}ParseContent=function(){return};return}
+  }; if(getCookiePPrev(d)=='OFF'){$('#togglePreview>.button').click()};
+}())
+</script>
+
+
+
+<!-- баннеры -->
+<div class="banners">
+ <div class="container">
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+ </div>
+</div>
