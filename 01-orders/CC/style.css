@@ -1467,14 +1467,6 @@ li#onlinelist {
   top: -3px;
 }
 
-.mirror_container {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  right: 0;
-  perspective: 1000px;
-}
-
 button.mirror_button {
   border-radius: 3px;
   padding: 0px 5px 1px 5px;
@@ -1492,6 +1484,7 @@ button.mirror_button {
   transition: all .2s linear 0s;
   z-index: 1;
   white-space: nowrap;
+  text-transform: lowercase;
 }
 
 .mirror_button:hover, .mirror_button:active, .mirror_button:focus, .mirror_button.active {
@@ -1684,7 +1677,7 @@ button.mirror_button {
 
 .tab_flooders > img {
   display: block;
-  margin-left: auto;
+  margin: 0 10px 0 auto;
 }
 
 .tf_inner {
