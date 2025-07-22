@@ -199,11 +199,11 @@
     "pp_coupons pp_coupons";
 }
 
-.pp_property .content_inner > div {
+.content_inner > div {
   position: relative;
 }
 
-.pp_property .content_inner > div > span {
+.content_inner > div > span {
   position: absolute;
   left: 20px;
   top: 0;
@@ -362,6 +362,191 @@
   padding: 3px 10px;
   box-sizing: border-box;
 }
+
+.pp_achievements .content_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pp_events .pp_scroll {
+  white-space: nowrap;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 155px;
+}
+
+.pp_events .pp_card {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 3px;
+  width: 140px;
+  height: 140px;
+  box-shadow: inset 1px 1px 3px 0 rgba(255, 255, 255, 0.6), inset -1px -1px 2px 0 #000;
+  background: #222;
+}
+
+.pp_events .pp_card img {
+  border-radius: 18px 18px 5px 5px;
+  height: 110px;
+  width: 134px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.pp_events .pp_card::before {
+  content: "";
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 0.1) 15%, rgba(34, 34, 34, 0.7) 69.69%, rgba(34, 34, 34, 0.91) 85%, #222 100%);
+  height: 56px;
+  width: 134px;
+  position: absolute;
+  bottom: 27px;
+  pointer-events: none;
+}
+
+.pp_events .pp_card::after {
+  content: "";
+  backdrop-filter: blur(1px);
+  height: 50px;
+  width: 134px;
+  position: absolute;
+  bottom: 27px;
+  left: 3px;
+  pointer-events: none;
+}
+
+.card_text {
+  position: absolute;
+  width: 134px;
+  text-align: center;
+  bottom: 3px;
+  height: 42px;
+  z-index: 1;
+}
+
+.card_text span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 11px;
+  font-variant: all-small-caps;
+  text-align: center;
+  color: var(--gray-200);
+}
+
+.card_text p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  text-align: center;
+  color: var(--gray-550);
+}
+
+.achieves_inner .pp_scroll {
+  height: 280px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.pp_achieve {
+  position: relative;
+  display: inline-flex;
+  border-radius: 15px;
+  padding: 10px 2px 15px;
+  width: 99px;
+  height: 121px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1), 2px 3px 3px 0 rgba(0, 0, 0, 0.09), 5px 6px 4px 0 rgba(0, 0, 0, 0.05), 8px 10px 5px 0 rgba(0, 0, 0, 0.01), 13px 16px 6px 0 rgba(0, 0, 0, 0);
+  background: #d9d9d9;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pp_achieve::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/0016/01/4e/84953.png) no-repeat top center;
+  position: absolute;
+  width: 95px;
+  height: 117px;
+  top: 2px;
+  left: 2px;
+  mix-blend-mode: overlay;
+}
+
+.pp_achieve span:before {
+  content: "";
+  background: url(https://forumstatic.ru/files/0016/01/4e/39168.png) no-repeat top center;
+  position: absolute;
+  mix-blend-mode: overlay;
+  border-radius: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pp_achieve span {
+  border-radius: 100px;
+  padding: 3px;
+  box-shadow: 1px 1px 3px 0 rgba(123, 123, 123, 0.5), -1px -1px 8px 0 var(--white);
+  background: #d4d4d4;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gray-600);
+  width: 80px;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+
+.pp_achieve > div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 97px;
+  flex-shrink: 0;
+  z-index: 2;
+  margin-top: -5px;
+}
+
+.pp_achieve > div::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/0016/01/4e/25786.svg) no-repeat center;
+  width: 95px;
+  height: 97px;
+  display: block;
+  position: absolute;
+  opacity: .3;
+  z-index: 2;
+}
+
+.pp_achieve > div img {
+  z-index: 1;
+}
+
+.pp_achieve > div::after {
+  content: "";
+  background: url(https://forumstatic.ru/files/0016/01/4e/25786.svg) no-repeat center;
+  width: 95px;
+  height: 97px;
+  display: block;
+  position: absolute;
+}
+
 
 /* ________________________________ */
 
