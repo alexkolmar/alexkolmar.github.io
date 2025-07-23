@@ -1,4 +1,50 @@
- /* Личная страница
+/* Мини-профиль с информацией */
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, .8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.reveal-modal {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  position: absolute;
+  z-index: 101;
+}
+
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: 22px;
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid var(--gray-250);
+  border-radius: 10px;
+  padding: 5px;
+  width: 26px;
+  height: 26px;
+  color: var(--gray-800);
+  font-weight: normal;
+  top: 0;
+  transform: translateX(calc(100% + 5px));
+  box-sizing: border-box;
+  background: var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+}
+
+/* Личная страница
 ----------------------------------------------------------------------- */
 
  .pp {
@@ -8,6 +54,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   padding: 30px;
+  border-radius: 10px;
  }
 
  .pp * {
@@ -388,6 +435,23 @@
   height: 140px;
   box-shadow: inset 1px 1px 3px 0 rgba(255, 255, 255, 0.6), inset -1px -1px 2px 0 #000;
   background: #222;
+  flex-shrink: 0;
+}
+
+.pp_events .pp_card.card_empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-300);
+  box-shadow: none;
+  background: var(--gray-250);
+}
+
+.pp_events .card_empty .card_text {
+  position: relative;
+  width: auto;
+  height: auto;
+  white-space: normal;
 }
 
 .pp_events .pp_card img {
@@ -398,7 +462,7 @@
   object-position: top center;
 }
 
-.pp_events .pp_card::before {
+.pp_events .pp_card:not(.card_empty)::before {
   content: "";
   background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 0.1) 15%, rgba(34, 34, 34, 0.7) 69.69%, rgba(34, 34, 34, 0.91) 85%, #222 100%);
   height: 56px;
@@ -408,7 +472,7 @@
   pointer-events: none;
 }
 
-.pp_events .pp_card::after {
+.pp_events .pp_card:not(.card_empty)::after {
   content: "";
   backdrop-filter: blur(1px);
   height: 50px;
@@ -437,12 +501,16 @@
   color: var(--gray-200);
 }
 
-.card_text p {
+.card_text p, .pp_achieve p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 9px;
   text-align: center;
   color: var(--gray-550);
+}
+
+.card_empty .card_text p, .pp_achieve p {
+  color: #7d7d7d;
 }
 
 .achieves_inner .pp_scroll {
@@ -471,7 +539,16 @@
   justify-content: flex-start;
 }
 
-.pp_achieve::before {
+.pp_achieve.achieve_empty {
+  border: 1px solid var(--gray-300);
+  background: var(--gray-250);
+  padding: 0px 10px;
+  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp_achieve:not(.achieve_empty)::before {
   content: "";
   background: url(https://forumstatic.ru/files/0016/01/4e/84953.png) no-repeat top center;
   position: absolute;
@@ -482,7 +559,7 @@
   mix-blend-mode: overlay;
 }
 
-.pp_achieve span:before {
+.pp_achieve:not(.achieve_empty) span:before {
   content: "";
   background: url(https://forumstatic.ru/files/0016/01/4e/39168.png) no-repeat top center;
   position: absolute;
@@ -547,8 +624,71 @@
   position: absolute;
 }
 
+/* guestbook
+---------------------------------- */
 
-/* ________________________________ */
+.gb {
+  display: block;
+  margin: 0 auto;
+  background: url(https://forumstatic.ru/files/0016/01/4e/27450.png) no-repeat top center;
+  width: 935px;
+  height: 446px;
+  box-sizing: border-box;
+  padding: 156px 69px 50px;
+}
+
+.gb_inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.gb_left {
+  width: 180px;
+}
+
+.gb_left span {
+  margin: 5px 0;
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.gb_left p {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--gray-550);
+}
+
+.gb_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.gb_links a {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+/* ------------------------------------- */
+
 
 #form-buttons {
   display: flex;
