@@ -629,7 +629,7 @@
 
 .gb {
   display: block;
-  margin: 0 auto;
+  margin: -15px 0 0 -10px;
   background: url(https://forumstatic.ru/files/0016/01/4e/27450.png) no-repeat top center;
   width: 935px;
   height: 446px;
@@ -661,12 +661,15 @@
   color: var(--gray-800);
 }
 
-.gb_left p {
+.post-content .gb_left p {
   margin-bottom: 10px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 9px;
   color: var(--gray-550);
+  line-height: unset;
+  text-align: left;
+  padding: 0;
 }
 
 .gb_links {
@@ -816,6 +819,58 @@
   padding: 1px 7px 2px;
   background: var(--gray-200);
   box-sizing: border-box;
+}
+
+/* news
+---------------------------------- */
+
+.news {
+  margin: 0 auto;
+  padding: 56px 20px 20px;
+  box-sizing: border-box;
+  width: 762px;
+  height: 540px;
+  background: url(https://forumstatic.ru/files/0016/01/4e/23029.png) no-repeat top center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.news > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.news_inner {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.n_left {
+ width: 397px; 
+}
+
+.n_right {
+  flex-grow: 1;
+}
+
+.news_inner > div > div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.news_inner span {
+  position: absolute;
+  border-radius: 3px;
+  padding: 1px 5px;
+  background: var(--gray-800);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
 }
 
 /* ------------------------------------- */
@@ -1037,12 +1092,12 @@ Deff
   display: inline-block !important;
   text-align: center;
   font: normal normal 400 11px/normal var(--font-family) !important;
-  border: 1px solid var(--body-bg);
+  border: 1px solid var(--gray-300);
 }
 
 .punbb #pun-navlinks #form-login input[type=submit]:hover {
   background: var(--meat);
-  color: var(--pun-bg);
+  color: var(--gray-200);
 }
 
  .punbb #pun-navlinks #form-login input[type="submit"] {
@@ -1062,8 +1117,8 @@ Deff
   top: 15px;
   z-index: 100000 !important;
   padding: 7px 12px;
-  background: var(--sec-bg);
-  border: 1px solid var(--body-bg);
+  background: var(--gray-250);
+  border: 1px solid var(--gray-300);
   border-radius: 0 0 6px 6px;
   text-align: center;
 }
@@ -1119,8 +1174,8 @@ Deff
   width: 220px;
   right: 100%;
   padding: 12px 19px 12px 17px;
-  background: var(--sec-bg);
-  border: 1px solid var(--body-bg);
+  background: var(--gray-250);
+  border: 1px solid var(--gray-300);
   border-radius: 0 0 0px 6px;
   text-align: center;
 }

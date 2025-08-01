@@ -62,9 +62,6 @@
 ------------------------------------------*/
 
 :root {
-  --body-bg: darkseagreen;
-  --pun-bg: ivory;
-  --sec-bg: cornsilk;
   --white: #fff;
   --gray-200: #fbfbfb;
   --gray-250: #f1f1f1;
@@ -122,7 +119,7 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scrollbar-width: thin;
-  scrollbar-color: var(--meat) var(--sec-bg);
+  scrollbar-color: var(--gray-800) var(--gray-400);
 }
 
 /* прокрутка хром etc */
@@ -133,7 +130,7 @@
 }
 
 *::-webkit-scrollbar-track {
-  background-color: var(--sec-bg);
+  background-color: var(--gray-250);
 }
 
 *::-webkit-scrollbar-thumb {
@@ -148,7 +145,7 @@
 
 ::selection {
   background: var(--salmon);
-  color: var(--pun-bg);
+  color: var(--gray-200);
 }
 
 :focus {
@@ -223,7 +220,7 @@ em {
 .inner.popup_graffiti,
 .pun-modal .modal-inner,
 .punbb-admin #pun-admin-award-form .inner {
-  background: var(--sec-bg);
+  background: var(--gray-250);
 }
 
 /* Формы
@@ -446,7 +443,7 @@ textarea,
 /* фон */
 
 html {
-  background: var(--body-bg) url(https://forumstatic.ru/files/0016/01/4e/88546.jpg) repeat top center;
+  background: var(--gray-300) url(https://forumstatic.ru/files/0016/01/4e/88546.jpg) repeat top center;
 }
 
 /* тело */
@@ -454,7 +451,7 @@ html {
 #pun {
   margin: 86px auto 30px;
   width: 1001px;
-  background: var(--pun-bg) url(https://forumstatic.ru/files/0016/01/4e/31026.jpg) repeat top center;
+  background: var(--gray-200) url(https://forumstatic.ru/files/0016/01/4e/31026.jpg) repeat top center;
   border-radius: 4px;
 }
 
@@ -937,13 +934,24 @@ tr.iclosed div.icon {
   border-radius: 10px;
   padding: 35px;
   width: 940px;
-  background: var(--gray-200);
+  background: url(https://forumstatic.ru/files/0016/01/4e/98373.svg) repeat-y top right 320px var(--gray-200);
   box-sizing: border-box;
   margin: 0 auto;
 }
 
+#pun-index .category tr {
+  display: flex;
+  width: 862px;
+  gap: 100px;
+}
+
+#pun-index .category td {
+  padding: 0;
+}
+
 #pun-index .category .tcl {
-  padding-left: 10px;
+  padding-left: 0;
+  flex-grow: 1;
 }
 
 #pun-index .category .intd {
@@ -982,7 +990,7 @@ tr.iclosed div.icon {
 }
 
 #pun-index .tcl .forumlinks {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 #pun-index .tcl .forumlinks a {
@@ -1064,10 +1072,11 @@ tr.iclosed div.icon {
   display: none;
 }
 
-#pun-index .tcr {
+#pun-index .category .tcr {
   font-size: 9px;
   color: var(--gray-800);
   text-transform: lowercase;
+  width: 250px;
 }
 
 #pun-index .tcr .lastpost-link {
@@ -1158,7 +1167,7 @@ tr.iclosed div.icon {
   display: flex;
   justify-content: space-between;
   gap: 0 70px;
-  background: url(https://forumstatic.ru/files/0016/01/4e/27519.png) no-repeat center right 210px;
+  background: url(https://forumstatic.ru/files/0016/01/4e/98373.svg) repeat-y top right 265px, url(https://forumstatic.ru/files/0016/01/4e/27519.png) no-repeat center right 162px;
   min-height: 200px;
   box-sizing: border-box;
   font-weight: 400;
@@ -1175,14 +1184,11 @@ tr.iclosed div.icon {
   gap: 10px;
   align-items: flex-start;
   justify-content: center;
-  width: 170px;
+  width: 130px;
 }
 
-#pun-stats li.item1,
-#pun-stats li.item2,
-#pun-stats li.item3,
-#pun-stats li.item4 {
-
+#pun-stats .stats_wrap2 {
+  flex-grow: 1;
 }
 
 /* активны, посетили за сутки */
@@ -1346,6 +1352,10 @@ li#onlinelist {
   gap: 5px;
   align-items: center;
   justify-content: flex-start;
+}
+
+.twa_inner a:hover {
+  background: var(--gray-250);
 }
 
 .twa_inner a img {
@@ -1774,7 +1784,7 @@ button.mirror_button {
   align-items: flex-start;
   border-bottom: 1px dashed var(--gray-500);
   box-sizing: border-box;
-  scrollbar-color: var(--gray-400) transparent;
+  scrollbar-color: var(--gray-800) transparent;
 }
 
 .np {
@@ -1934,7 +1944,7 @@ font-family: var(--font-family);
 .post h3 {}
 
 .post h3 span {
-  padding: 15px 20px 5px;
+  padding: 15px 20px;
   display: block;
   font-weight: 400;
   font-size: 9px;
@@ -2200,6 +2210,10 @@ font-family: var(--font-family);
   width: calc(100% - var(--pwidth) - 20px);
 }
 
+.hideprofile .post-body {
+  width: 100%;
+}
+
 #togglePreview {
   display: block;
   border-bottom: 1px dashed var(--gray-400);
@@ -2208,6 +2222,16 @@ font-family: var(--font-family);
 
 .post-box {
   padding: 0 20px 10px 40px;
+}
+
+.hideprofile .post-body .post-box {
+  padding: 0 10px 10px;
+}
+
+.hideprofile .post-body .post-box p:first-of-type {
+  height: 0;
+  padding: 0;
+  margin-top: -10px;
 }
 
 #post-preview .post-box {
