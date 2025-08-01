@@ -1911,6 +1911,26 @@ font-family: var(--font-family);
   opacity: 1;
 }
 
+.copyright {
+  border-radius: 10px 10px 0 0;
+  padding: 10px 15px;
+  width: fit-content;
+  height: 31px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.15), 0 -1px 0 0 var(--white);
+  background: var(--gray-250);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  text-align: center;
+  color: var(--gray-800);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  z-index: -1;
+}
+
 
 /* Топик
 ------------------------------------------*/
@@ -1979,7 +1999,7 @@ font-family: var(--font-family);
 
 .post-author {
   position: relative;
-  margin: 0 0 30px 20px;
+  margin: 6px 0 30px 20px;
   width: var(--pwidth);
   text-align: center;
   box-sizing: border-box;
@@ -2129,8 +2149,12 @@ font-family: var(--font-family);
   color: var(--gray-800);
 }
 
-.pa-fld2 .fld-name:before {
-  content: "\e22b";
+.pa-fld2 .fld-name::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/0016/01/4e/70999.svg) no-repeat top center;
+  width: 12px;
+  height: 12px;
+  display: block;
 }
 
 .plank {
@@ -2238,6 +2262,10 @@ font-family: var(--font-family);
   padding: 0 0 10px;
 }
 
+.punbb .reactions-root {
+  padding: 10px 40px;
+}
+
 .post-links {
   width: 100%;
   border-top: 1px dashed var(--gray-400);
@@ -2315,6 +2343,10 @@ font-family: var(--font-family);
 
 /* Контент поста - цитата, спойлер, таблицы и т.п. */
 
+.punbb .post-content {
+  font-size: 11px;
+}
+
 .punbb .post td {
   border: 0px transparent !important;
 }
@@ -2339,7 +2371,6 @@ pre {
 .post-content p {
   margin: 0;
   padding: 0 0 12px 0;
-  font-size: 11px;
   line-height: 127%;
   color: var(--gray-800);
   text-align: justify;
