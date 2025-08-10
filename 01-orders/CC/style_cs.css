@@ -967,7 +967,7 @@ select.pp_twins {
   left: 32px;
 }
 
-.n_bubble1 p {
+.post-content .n_bubble1 p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -986,7 +986,7 @@ select.pp_twins {
   z-index: 1;
 }
 
-.n_bubble2 p {
+.post-content .n_bubble2 p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -1026,6 +1026,7 @@ select.pp_twins {
 }
 
 .wr_inner a p {
+  padding: 0;
   background: var(--gray-800);
   line-height: 21px;
   display: block;
@@ -1091,6 +1092,93 @@ select.pp_twins {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+
+
+/* Магазин
+------------------------------------- */
+
+.cc_shop {
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/0016/01/4e/46591.png) no-repeat top center var(--gray-200);
+  border-radius: 10px;
+  padding: 100px 30px 30px;
+  width: 860px;
+  height: 1045px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.shop_buy, .shop_individual {
+  width: 230px;
+  flex-shrink: 0;
+}
+
+.shop_descr {
+  height: 130px;
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed var(--gray-400);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.shop_descr h5 {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--gray-800);
+  text-align: left;
+}
+
+.shop_descr p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  padding-bottom: 5px;
+}
+
+.shop_descr ul {
+  padding-left: 15px;
+}
+
+.shop_descr ul li {
+  list-style: disc;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  text-transform: lowercase;
+}
+
+.sbuy_links {
+  margin-top: 5px;
+}
+
+.sbuy_links a {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.sbuy_links a:hover {
+  background: var(--meat);
+  color: var(--gray-200);
+}
+
+.shop_conditions {
+  flex-grow: 1;
 }
 
 /* ------------------------------------- */
@@ -1576,7 +1664,7 @@ div .post-rating p::before, div .post-vote p a::before {
   content: '\e87d';
   font-family: var(--msr);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 100%;
   color: var(--gray-300);
   transition: all .2s linear 0s;
