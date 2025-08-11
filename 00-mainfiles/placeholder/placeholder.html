@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8" />
 <title>Placeholder</title>
@@ -20,7 +20,7 @@
         txt = txt.replace(/\.(png|jpg|jpeg|svg)$/i, '');
     }
 
-    // Генерация SVG в текстовом виде (для svg)
+    // Генерация SVG как строка
     function generateSVG() {
         return `
 <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
@@ -36,7 +36,7 @@
         return;
     }
 
-    // Для PNG/JPG используем canvas
+    // Для PNG/JPG создаём canvas и отдаём картинку
     const canvas = document.createElement('canvas');
     canvas.width = w;
     canvas.height = h;
