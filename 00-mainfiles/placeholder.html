@@ -34,7 +34,7 @@
 
 <div class="output" id="output" style="display:none;">
     <p><strong>Preview:</strong></p>
-    <img id="preview" src="" alt="placeholder preview" style="max-width:100%; border:1px solid #ccc;">
+    <img id="preview" alt="placeholder preview" style="max-width:100%; border:1px solid #ccc;">
     
     <p><strong>Direct Link:</strong></p>
     <code id="direct"></code>
@@ -51,11 +51,26 @@ function generate() {
     const h = document.getElementById('height').value || 300;
     const bg = document.getElementById('bg').value || 'cccccc';
     const fg = document.getElementById('fg').value || '333333';
-    const txt = document.getElementById('txt').value.trim();
+    const txt = document.getElementById('txt').value.trim() || `${w}×${h}`;
     
-    const url = `${baseURL}?w=${w}&h=${h}&bg=${bg}&fg=${fg}${txt ? `&txt=${encodeURIComponent(txt)}` : ''}`;
-    
-    document.getElementById('preview').src = url;
+    const url = `${baseURL}?w=${w}&h=${h}&bg=${bg}&fg=${fg}&txt=${encodeURIComponent(txt)}`;
+
+    // Превью рисуем локально
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#' + bg;
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.fillStyle = '#' + fg;
+    ctx.font = `${Math.floor(w/10)}px Arial`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(txt, w / 2, h / 2);
+
+    document.getElementById('preview').src = canvas.toDataURL("image/png");
     document.getElementById('direct').textContent = url;
     document.getElementById('htmlcode').textContent = `<img src="${url}" alt="Placeholder">`;
     document.getElementById('output').style.display = 'block';
