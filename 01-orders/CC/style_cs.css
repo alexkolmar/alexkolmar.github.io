@@ -1141,9 +1141,236 @@ div.n_bp > a {
   padding: 0 !important
 }
 
+/* Магазин
+------------------------------------- */
+
+.cc_shop {
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/0016/01/4e/46591.png) no-repeat top center var(--gray-200);
+  border-radius: 10px;
+  padding: 100px 30px 30px;
+  width: 860px;
+  height: 1045px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.shop_buy, .shop_individual {
+  width: 230px;
+  flex-shrink: 0;
+}
+
+.shop_descr {
+  height: 130px;
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed var(--gray-400);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.shop_descr h5 {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--gray-800);
+  text-align: left;
+}
+
+.shop_descr p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  padding-bottom: 5px;
+}
+
+.shop_descr ul {
+  padding-left: 15px;
+}
+
+.shop_descr ul li {
+  list-style: disc;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  text-transform: lowercase;
+}
+
+.sbuy_links {
+  margin-top: 5px;
+}
+
+.sbuy_links a {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.sbuy_links a:hover {
+  background: var(--meat);
+  color: var(--gray-200);
+}
+
+.shop_conditions {
+  flex-grow: 1;
+}
+
+.shop_tabs_wrap {
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.shop_tabs {
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px 15px 20px 20px;
+  width: 798px;
+  height: 701px;
+  box-sizing: border-box;
+}
+
+.shop_tabs_inner {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 100px;
+  width: 758px;
+  height: 20px;
+  background: var(--gray-250);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sh_tab {
+  width: calc(100% / 3);
+}
+
+.sh_tab, .sh_tab-title {
+  display: inline-block;
+}
+
+.sh_tab input[type="radio"] {
+  display: none;
+}
+
+.sh_tab-title {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 8px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--gray-800);
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sh_tab-content {
+  position: absolute;
+  padding: 15px 15px 15px 20px;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  border: 1px solid var(--violet);
+  display: none;
+  box-sizing: border-box;
+  background: var(--white);
+  height: 660px;
+}
+
+.shtc_inner {
+  box-sizing: border-box;
+  width: 100%;
+  height: 630px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.sh_tab :checked + .sh_tab-title {
+  position: relative;
+  background: var(--gray-800);
+  border: 1px solid var(--gray-800);
+  border-radius: 100px;
+  color: var(--gray-200);
+  z-index: 1;
+}
+
+.sh_tab :checked ~ .sh_tab-content {
+  display: block;
+}
+
+.cc_shop .infolink {
+  border-radius: 10px;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09), 0 3px 2px 0 rgba(0, 0, 0, 0.05), 0 5px 2px 0 rgba(0, 0, 0, 0.01), 0 7px 2px 0 rgba(0, 0, 0, 0);
+  background: var(--gray-250);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.cc_shop .infolink img {
+  max-width: 22px;
+  max-height: 22px;
+}
+
+.shop_cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart_button {
+  background: var(--dusty-rose);
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 8px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--gray-200);
+  cursor: pointer;
+  transition: all .2s linear 0s;
+}
+
+.cart_button:hover {
+  background: var(--meat);
+}
+
+.cart_info {
+  display: flex;
+  gap: 5px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  text-transform: lowercase;
+}
 
 /* ------------------------------------- */
-
 
 #form-buttons {
   display: flex;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Placeholder Generator</title>
+<style>
+    body { margin: 0; background: #222; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+function getParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        w: parseInt(params.get('w')) || 400,
+        h: parseInt(params.get('h')) || 300,
+        bg: '#' + (params.get('bg') || 'cccccc'),
+        fg: '#' + (params.get('fg') || '333333'),
+        txt: params.get('txt') || ''
+    };
+}
+
+function generatePlaceholder({w, h, bg, fg, txt}) {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = w;
+    canvas.height = h;
+
+    // фон
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+
+    // текст
+    ctx.fillStyle = fg;
+    ctx.font = `${Math.floor(w/10)}px Arial`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(txt || `${w}×${h}`, w / 2, h / 2);
+
+    // вывод в <body> как <img>
+    const img = new Image();
+    img.src = canvas.toDataURL("image/png");
+    document.body.innerHTML = '';
+    document.body.appendChild(img);
+}
+
+generatePlaceholder(getParams());
+</script>
+</body>
+</html>
