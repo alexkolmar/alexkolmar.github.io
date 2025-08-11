@@ -919,8 +919,11 @@ select.pp_twins {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 9px;
+  line-height: 12px;
   color: var(--gray-200);
   top: -5px;
+  height: 15px;
+  box-sizing: border-box;
 }
 
 .n_text {
@@ -928,7 +931,20 @@ select.pp_twins {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 11px;
-  line-height: 127%;
+  line-height: 14px;
+  color: var(--gray-800);
+}
+
+.n_textblock {
+  height: 220px;
+  overflow: auto;
+}
+
+.post-content .n_textblock p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
   color: var(--gray-800);
 }
 
@@ -958,13 +974,14 @@ select.pp_twins {
 }
 
 .n_bubble1 {
-  padding: 4px 10px 7px 17px;
+  padding: 4px 10px 10px;
   box-sizing: border-box;
-  background: url(https://forumstatic.ru/files/0016/01/4e/12347.svg) no-repeat top center;
   width: 210px;
-  height: 66px;
   position: absolute;
   left: 32px;
+  box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+  background: var(--gray-800);
+  border-radius: 10px;
 }
 
 .post-content .n_bubble1 p {
@@ -972,14 +989,17 @@ select.pp_twins {
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-200);
+  padding: 0;
+  line-height: 
 }
 
 .n_bubble2 {
-  padding: 4px 17px 7px 10px;
+  padding: 4px 10px 10px;
   box-sizing: border-box;
-  background: url(https://forumstatic.ru/files/0016/01/4e/19003.svg) no-repeat top center;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09), 0 3px 2px 0 rgba(0, 0, 0, 0.05), 0 5px 2px 0 rgba(0, 0, 0, 0.01), 0 7px 2px 0 rgba(0, 0, 0, 0);
+  background: var(--gray-250);
+  border-radius: 10px;
   width: 210px;
-  height: 58px;
   position: absolute;
   top: 54px;
   right: 33px;
@@ -991,6 +1011,7 @@ select.pp_twins {
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-800);
+  padding: 0;
 }
 
 .n_writers {
@@ -1069,7 +1090,32 @@ select.pp_twins {
 }
 
 .news_inner > div div.n_bp {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  height: 114px;
+}
+
+.post-content .n_bp p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--gray-800);
+}
+
+div.n_bp > a {
+  position: absolute;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  border-radius: 3px;
+  padding: 0px 5px 1px 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  display: block;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 0;
 }
 
 .bp_inner a {
@@ -1092,94 +1138,9 @@ select.pp_twins {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+  padding: 0 !important
 }
 
-
-/* Магазин
-------------------------------------- */
-
-.cc_shop {
-  box-shadow: 0 0 0 1px var(--gray-300);
-  background: url(https://forumstatic.ru/files/0016/01/4e/46591.png) no-repeat top center var(--gray-200);
-  border-radius: 10px;
-  padding: 100px 30px 30px;
-  width: 860px;
-  height: 1045px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-.shop_buy, .shop_individual {
-  width: 230px;
-  flex-shrink: 0;
-}
-
-.shop_descr {
-  height: 130px;
-  width: 100%;
-  padding-bottom: 25px;
-  border-bottom: 1px dashed var(--gray-400);
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.shop_descr h5 {
-  margin-bottom: 10px;
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: lowercase;
-  text-align: center;
-  color: var(--gray-800);
-  text-align: left;
-}
-
-.shop_descr p {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 10px;
-  color: var(--gray-800);
-  padding-bottom: 5px;
-}
-
-.shop_descr ul {
-  padding-left: 15px;
-}
-
-.shop_descr ul li {
-  list-style: disc;
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 10px;
-  color: var(--gray-800);
-  text-transform: lowercase;
-}
-
-.sbuy_links {
-  margin-top: 5px;
-}
-
-.sbuy_links a {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 1px 8px 3px 8px;
-  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
-  background: var(--dusty-rose);
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 10px;
-  color: var(--gray-200);
-}
-
-.sbuy_links a:hover {
-  background: var(--meat);
-  color: var(--gray-200);
-}
-
-.shop_conditions {
-  flex-grow: 1;
-}
 
 /* ------------------------------------- */
 
@@ -1664,7 +1625,7 @@ div .post-rating p::before, div .post-vote p a::before {
   content: '\e87d';
   font-family: var(--msr);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   color: var(--gray-300);
   transition: all .2s linear 0s;
