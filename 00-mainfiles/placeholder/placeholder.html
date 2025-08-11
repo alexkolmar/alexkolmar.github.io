@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Placeholder</title>
+<script>
+(function(){
+    const params = new URLSearchParams(window.location.search);
+    const w = parseInt(params.get('w')) || 400;
+    const h = parseInt(params.get('h')) || 300;
+    const bg = '#' + (params.get('bg') || 'cccccc');
+    const fg = '#' + (params.get('fg') || '333333');
+    let txt = params.get('txt') || `${w}×${h}`;
+
+    // Определяем формат из расширения в txt
+    let format = 'png';
+    const match = txt.match(/\.(png|jpg|jpeg|svg)$/i);
+    if (match) {
+        format = match[1].toLowerCase();
+        txt = txt.replace(/\.(png|jpg|jpeg|svg)$/i, '');
+    }
+
+    // Генерация SVG в текстовом виде (для svg)
+    function generateSVG() {
+        return `
+<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
+  <rect width="100%" height="100%" fill="${bg}"/>
+  <text x="50%" y="50%" font-size="${Math.floor(w/10)}" fill="${fg}" dominant-baseline="middle" text-anchor="middle" font-family="Arial">${txt}</text>
+</svg>`;
+    }
+
+    if (format === 'svg') {
+        const svgContent = generateSVG();
+        const svg64 = btoa(unescape(encodeURIComponent(svgContent)));
+        location.replace('data:image/svg+xml;base64,' + svg64);
+        return;
+    }
+
+    // Для PNG/JPG используем canvas
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.fillStyle = fg;
+    ctx.font = `${Math.floor(w/10)}px Arial`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(txt, w / 2, h / 2);
+
+    const mime = (format === 'jpg' || format === 'jpeg') ? 'image/jpeg' : 'image/png';
+    const dataURL = canvas.toDataURL(mime);
+    location.replace(dataURL);
+})();
+</script>
+</head>
+<body></body>
+</html>

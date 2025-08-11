@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>Генератор картинок-заглушек</title>
 <style>
     body { font-family: sans-serif; padding: 20px; max-width: 500px; margin: auto; }
-    input { margin: 5px 0; padding: 5px; width: 100%; box-sizing: border-box; }
+    input, select { margin: 5px 0; padding: 5px; width: 100%; box-sizing: border-box; }
     label { font-weight: bold; display: block; margin-top: 10px; }
     button { margin-top: 15px; padding: 8px 12px; cursor: pointer; }
     .output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9; }
@@ -16,63 +16,61 @@
 <h1>Генератор картинок-заглушек</h1>
 
 <label>Ширина (px)</label>
-<input type="number" id="width" value="400">
+<input type="number" id="width" value="400" />
 
 <label>Высота (px)</label>
-<input type="number" id="height" value="300">
+<input type="number" id="height" value="300" />
 
 <label>Цвет фона (hex без #)</label>
-<input type="text" id="bg" value="cccccc">
+<input type="text" id="bg" value="cccccc" />
 
 <label>Цвет текста (hex без #)</label>
-<input type="text" id="fg" value="333333">
+<input type="text" id="fg" value="333333" />
 
-<label>Текст (опционално)</label>
-<input type="text" id="txt" placeholder="Leave empty to use size">
+<label>Текст (опционально)</label>
+<input type="text" id="txt" placeholder="Оставьте пустым, чтобы использовать размеры" />
+
+<label>Формат</label>
+<select id="format">
+    <option value="png">PNG</option>
+    <option value="jpg">JPG</option>
+    <option value="svg">SVG</option>
+</select>
 
 <button onclick="generate()">Сгенерировать ссылку</button>
 
 <div class="output" id="output" style="display:none;">
     <p><strong>Предпросмотр:</strong></p>
-    <img id="preview" alt="placeholder preview" style="max-width:100%; border:1px solid #ccc;">
+    <img id="preview" alt="placeholder preview" style="max-width:100%; border:1px solid #ccc;" />
     
     <p><strong>Прямая ссылка:</strong></p>
     <code id="direct"></code>
     
-    <p><strong>html код:</strong></p>
+    <p><strong>HTML код:</strong></p>
     <code id="htmlcode"></code>
 </div>
 
 <script>
-const baseURL = "https://alexkolmar.github.io/00-mainfiles/placeholder.html";
+const baseURL = "https://alexkolmar.github.io/00-mainfiles/placeholder/generate.html";
 
 function generate() {
     const w = parseInt(document.getElementById('width').value) || 400;
     const h = parseInt(document.getElementById('height').value) || 300;
     const bg = document.getElementById('bg').value.replace('#', '') || 'cccccc';
     const fg = document.getElementById('fg').value.replace('#', '') || '333333';
-    const txt = document.getElementById('txt').value.trim() || `${w}×${h}`;
-    
-    const url = `${baseURL}?w=${w}&h=${h}&bg=${bg}&fg=${fg}&txt=${encodeURIComponent(txt)}`;
+    let txt = document.getElementById('txt').value.trim();
+    const format = document.getElementById('format').value;
 
-    // 1️⃣ Локальное превью через canvas
-    const canvas = document.createElement('canvas');
-    canvas.width = w;
-    canvas.height = h;
-    const ctx = canvas.getContext('2d');
+    if (!txt) txt = `${w}×${h}`;
 
-    ctx.fillStyle = '#' + bg;
-    ctx.fillRect(0, 0, w, h);
+    // Добавляем расширение к тексту
+    const txtWithExt = `${txt}.${format}`;
 
-    ctx.fillStyle = '#' + fg;
-    ctx.font = `${Math.floor(w/10)}px Arial`;
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(txt, w / 2, h / 2);
+    const url = `${baseURL}?w=${w}&h=${h}&bg=${bg}&fg=${fg}&txt=${encodeURIComponent(txtWithExt)}`;
 
-    document.getElementById('preview').src = canvas.toDataURL("image/png");
+    // Для превью — просто грузим ссылку (реальная картинка из placeholder.html)
+    document.getElementById('preview').src = url + "&_t=" + Date.now();
 
-    // 2️⃣ Вывод ссылки и HTML-кода
     document.getElementById('direct').textContent = url;
     document.getElementById('htmlcode').textContent = `<img src="${url}" alt="Placeholder">`;
     document.getElementById('output').style.display = 'block';
