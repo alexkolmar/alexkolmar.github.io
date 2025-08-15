@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конвертер символов</title>
+  <script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -52,42 +53,42 @@
   <button onclick="convertToUnicode()">→ Unicode (CSS content)</button>
   <div class="output" id="unicodeOutput"></div>
 
+  <!-- Ваш оригинальный скрипт для HTML-сущностей -->
   <script>
     function convertToHtml() {
       const input = document.getElementById("inputText").value;
-      let output = "";
+      let output = '';
 
-      const htmlEntities = {
-        '—': '&mdash;',
-        '–': '&ndash;',
-        '"': '&quot;',
-        "'": '&apos;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '&': '&amp;',
-        ' ': '&nbsp;',
-        '©': '&copy;',
-        '®': '&reg;',
-        '€': '&euro;',
-        '♥': '&hearts;'
-      };
-
-      for (let i = 0; i < input.length; i++) {
-        const char = input[i];
-
-        if (htmlEntities[char]) {
-          output += htmlEntities[char];
-        }
-        // Преобразуем только НЕ-русские символы с кодом > 127
-        else if (char.charCodeAt(0) > 127 && !/[а-яА-ЯёЁ]/.test(char)) {
-          output += `&#${char.charCodeAt(0)};`;
-        }
-        else {
+      for (const char of input) {
+        if (/[а-яА-ЯёЁ]/.test(char)) {
           output += char;
+        } else {
+          output += he.encode(char, { useNamedReferences: true });
         }
       }
 
       document.getElementById("htmlOutput").textContent = output;
+    }
+  </script>
+
+  <!-- НОВЫЙ СКРИПТ ДЛЯ 16-РИЧНОЙ КОНВЕРТАЦИИ -->
+  <script>
+    function convertToUnicode() {
+      const input = document.getElementById("inputText").value;
+      let output = '';
+
+      for (const char of input) {
+        if (/[а-яА-ЯёЁa-zA-Z0-9\s]/.test(char)) {
+          // Оставляем русские/английские буквы, цифры и пробелы как есть
+          output += char;
+        } else {
+          // Конвертируем в 16-ричный формат (например, "—" → "\2014")
+          const hexCode = char.charCodeAt(0).toString(16).toUpperCase();
+          output += '\\' + hexCode + ' ';
+        }
+      }
+
+      document.getElementById("unicodeOutput").textContent = output.trim();
     }
   </script>
 </body>
