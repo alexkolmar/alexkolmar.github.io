@@ -2155,9 +2155,21 @@ font-family: var(--font-family);
   display: flex;
   height: 40px;
   border-top: 1px dashed;
-/*  box-sizing: border-box; */
   align-items: center;
   justify-content: flex-end;
+  position: relative;
+}
+
+.plank.glass::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  height: 20px;
+  width: 220px;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  border-radius: 30% 70% 50% 50% / 0% 0% 100% 100%;
 }
 
 .plank p {

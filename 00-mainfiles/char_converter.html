@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конвертер символов</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    textarea,
+    input,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .output {
+      background: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Конвертер символов</h1>
+
+  <label for="inputText">Введите текст:</label>
+  <textarea id="inputText" rows="4" placeholder="Например: —"></textarea>
+
+  <button onclick="convertToHtml()">→ HTML-сущности</button>
+  <div class="output" id="htmlOutput"></div>
+
+  <button onclick="convertToUnicode()">→ Unicode (CSS content)</button>
+  <div class="output" id="unicodeOutput"></div>
+
+  <script>
+    function convertToHtml() {
+      const input = document.getElementById("inputText").value;
+      let output = "";
+
+      const htmlEntities = {
+        '—': '&mdash;',
+        '–': '&ndash;',
+        '"': '&quot;',
+        "'": '&apos;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '&': '&amp;',
+        ' ': '&nbsp;',
+        '©': '&copy;',
+        '®': '&reg;',
+        '€': '&euro;',
+        '♥': '&hearts;'
+      };
+
+      for (let i = 0; i < input.length; i++) {
+        const char = input[i];
+
+        if (htmlEntities[char]) {
+          output += htmlEntities[char];
+        }
+        // Преобразуем только НЕ-русские символы с кодом > 127
+        else if (char.charCodeAt(0) > 127 && !/[а-яА-ЯёЁ]/.test(char)) {
+          output += `&#${char.charCodeAt(0)};`;
+        }
+        else {
+          output += char;
+        }
+      }
+
+      document.getElementById("htmlOutput").textContent = output;
+    }
+  </script>
+</body>
+
+</html>
