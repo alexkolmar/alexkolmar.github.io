@@ -61,8 +61,6 @@
   transform: scaleY(1);
 }
 
-
-
 .custom-select-wrapper {
   position: relative;
   display: inline-block;
@@ -1563,6 +1561,109 @@ div.n_bp > a {
   font-size: 10px;
   color: var(--gray-800);
   text-transform: lowercase;
+}
+
+/* Список внешностей
+------------------------------------- */
+
+.cc_faces {
+  margin: 0 auto;
+  padding: 56px 35px 35px;
+  width: 762px;
+  height: 1044px;
+  box-sizing: border-box;
+  background: url(https://forumstatic.ru/files/001c/76/27/55619.png);
+}
+
+.cc_faces img {
+  display: block;
+  margin: 0 auto;
+}
+
+.faces_info {
+  margin: 15px 0 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--gray-400);
+}
+
+.faces_info p {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 10px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+  padding-bottom: 5px !important;
+}
+
+.faces_list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.faces_side {
+  position: relative;
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+  padding: 25px 15px 20px 20px;
+  width: 335px;
+  height: 584px;
+  background: var(--gray-200);
+  box-sizing: border-box;
+}
+
+.faces_side > span {
+  border-radius: 3px;
+  padding: 1px 5px 3px;
+  background: var(--gray-800);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  display: block;
+  width: fit-content;
+  position: absolute;
+  top: -6px;
+}
+
+.fs_inner {
+  height: 539px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.fs_inner > span {
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 2px 0 rgba(180, 180, 180, 0.25), 0 0 2px 0 rgba(162, 162, 162, 0.25);
+  background: var(--gray-200);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+  display: block;
+  width: fit-content;
+}
+
+.fs_inner > span:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.fs_inner p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  display: flex;
+  gap: 10px;
+}
+
+.fs_inner p i {
+  font-style: normal;
 }
 
 /* ------------------------------------- */
