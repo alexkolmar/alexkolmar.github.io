@@ -1666,6 +1666,1075 @@ div.n_bp > a {
   font-style: normal;
 }
 
+/* faq
+------------------------------------- */
+
+.cc_faq {
+  margin: 0 auto;
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+  background: url(https://forumstatic.ru/files/001c/76/27/74435.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/96324.svg) no-repeat left top 40%, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat right bottom, url(https://forumstatic.ru/files/001c/76/27/61171.png) repeat top left #f5f5f5;
+  width: 882px;
+  min-height: 882px;
+  box-sizing: border-box;
+  padding: 30px 20px 20px;
+}
+
+.faq_header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #cecece;
+}
+
+.faq_header h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.faq_header p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.faq_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.faq_nav {
+  border: 1px solid var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.faq_nav details:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.faq_nav summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+  color: var(--gray-800);
+  cursor: pointer;
+}
+
+.faq_nav summary:after {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/76/27/56395.svg);
+  display: flex;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  transition: all .2s linear 0s;
+}
+
+.faq_nav details[open] summary:after {
+  transform: rotate(180deg)
+}
+
+.faq_nav details ul {
+  margin: 10px 0 0;
+}
+
+.faq_nav details li {
+  line-height: 12px;
+  margin-bottom: 5px;
+}
+
+.faq_nav details a {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+}
+
+
+.faq_content {
+  border: 1px solid var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 30px 0px;
+  width: 620px;
+  box-sizing: border-box;
+}
+
+.content_scroll {
+  max-height: 800px;
+  overflow: auto;
+}
+
+.faq_content section {
+  padding: 0 20px;
+  position: relative;
+}
+
+.faq_content section:not(:first-of-type) {
+  border-top: 1px dashed #cecece;
+  padding-top: 20px;
+}
+
+.faq_content section:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.faq_content h5 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+  color: var(--gray-800);
+}
+
+.faq_content p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: left;
+}
+
+.faq_content p:not(:last-of-type) {
+  padding-bottom: 10px;
+}
+
+.faq_content h4 {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  top: -7px;
+}
+
+.faq_a:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+/* Анкета
+------------------------------------- */
+
+.cc_quenta::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/76/27/84332.png) no-repeat top center;
+  display: block;
+  width: 50px;
+  height: 106px;
+  position: absolute;
+  right: 4px;
+  top: -33px;
+}
+
+.cc_quenta {
+  position: relative;
+  margin: 40px auto 0;
+  border: 1px solid var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/61171.png) repeat top left var(--gray-200);
+  border-radius: 10px;
+  padding: 20px 0;
+  width: 642px;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+.cc_quenta p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.cc_quenta p:not(:last-of-type) {
+  padding: 0 0 5px;
+}
+
+.cc_quenta section:not(:last-of-type) {
+  position: relative;
+  padding: 25px 20px;
+  border-bottom: 1px dashed var(--gray-400);
+}
+
+.cc_quenta section:last-of-type {
+  padding: 25px 20px 0;
+}
+
+.cc_quenta section:first-of-type {
+  padding: 0 20px 25px;
+}
+
+.q_info {
+  display: flex;
+  gap: 20px;
+}
+
+.q_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.q_pic {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.q_pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.q_pictext {
+  position: absolute;
+  padding: 0 15px;
+}
+
+.q_pictext h5 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--gray-800);
+}
+
+.q_pictext small {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+  line-height: 10px;
+}
+
+.q_name {
+  margin-bottom: 20px;
+}
+
+.q_name h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.q_right ul li {
+  margin-bottom: 5px;
+}
+
+.cc_quenta span {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  left: 10px;
+  top: -7px;
+}
+
+.cc_quenta details {
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.cc_quenta details summary, .city_inside summary {
+  display: inline-flex;
+  gap: 5px;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  width: fit-content;
+  background: var(--gray-800);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  text-align: justify;
+  color: var(--gray-200);
+  text-transform: lowercase;
+  line-height: 13px;
+  left: 20px;
+  position: absolute;
+  transform: translatey(-50%);
+  top: 0;
+  cursor: pointer;
+}
+
+.cc_quenta details summary:before, .city_inside summary:before {
+  content: "\e313";
+  font-family: var(--msr);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cc_quenta details[open] summary:before, .city_inside details[open] summary:before {
+  content: "\e316";
+}
+
+/* О городе
+---------------------------------------- */
+
+.cc_city {
+  margin: 0 auto;
+  background: url(https://forumstatic.ru/files/001c/76/27/66414.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/61171.png) repeat top left var(--gray-200);
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 30px;
+  width: 860px;
+  box-sizing: border-box;
+}
+
+.city_info {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.city_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.city_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.city_locs {
+  border-top: 1px dashed #cecece;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px 0;
+}
+
+.cityloc {
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  width: 395px;
+  height: 190px;
+  display: flex;
+  box-sizing: border-box;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.loctext {
+  padding: 20px 0 30px 20px;
+  flex-grow: 1;
+}
+
+.loctext h5 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--gray-800);
+  text-align: left;
+}
+
+.loctext p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.locpic {
+  height: 190px;
+  width: 190px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.locpic:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 190px;
+  width: 1px;
+  border-left: 1px dashed var(--gray-250);
+}
+
+.locpic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0 10px 10px 0;
+}
+
+.city_inside {
+  border-top: 1px dashed #cecece;
+  padding-top: 20px;
+}
+
+.city_inside p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.city_inside details {
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 3px;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 17px;
+}
+
+.city_inside details img {
+  margin-top: 10px;
+  display: block;
+  width: 760px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.city_descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+
+.city_descr > div {
+  position: relative;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px 20px 10px;
+}
+
+.city_descr > div > h5 {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  top: -7px;
+}
+
+.city_wiki {
+  flex-grow: 1;
+}
+
+.city_descr .city_resume {
+  width: 230px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.city_wiki section:not(:last-of-type) {
+  margin-bottom: 10px;
+  border-bottom: 1px dashed var(--gray-400);
+}
+
+.city_wiki p {
+  padding: 0 0 10px;
+}
+
+.city_wiki span {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: #383838;
+}
+
+.city_wiki ul, .city_wiki li {
+  list-style: disc;
+}
+
+.city_wiki ul {
+  margin-left: 20px;
+}
+
+.city_resume section:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.city_resume span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 12px;
+  color: var(--gray-800);
+}
+
+.city_resume p {
+  padding-bottom: 5px;
+}
+
+.city_resume small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--gray-550);
+  display: block;
+}
+
+/* Сюжет
+---------------------------------------- */
+
+.cc_plot {
+  margin: 10px auto 0;
+  box-sizing: border-box;
+  background: url(https://forumstatic.ru/files/001c/76/27/28064.svg) no-repeat top left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 30px;
+  width: 860px;
+  min-height: 400px;
+}
+
+.cc_plot p, .punbb .cc_plot p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.plot_info {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #cecece;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.plot_infotext {
+  width: 340px;
+  flex-shrink: 0;
+}
+
+.plot_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.plot_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.plot_links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.plot_links a {
+  display: block;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.plot_links a:hover {
+  color: var(--gray-200);
+  background: var(--meat);
+}
+
+.plot_descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+
+.plot_descr > div {
+  position: relative;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px 20px 10px;
+}
+
+.plot_descr > div > h5 {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  top: -7px;
+}
+
+.plot_main {
+  flex-grow: 1;
+}
+
+.plot_details {
+  width: 230px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.plot_details section:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.plot_details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 12px;
+  color: var(--gray-800);
+}
+
+.punbb .plot_details p, .plot_details p {
+  padding-bottom: 0;
+}
+
+/* Сюжетная арка
+---------------------------------------- */
+
+.cc_plot_arc {
+  margin: 20px auto;
+  background: #f5f5f5;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.arc_descr {
+  flex-grow: 1;
+}
+
+.arc_head {
+  display: block;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #cecece;
+  color: #383838;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+}
+
+.arc_head small {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.arc_head .namedate {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.arc_head h4 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.arc_head span {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.arc_text {
+  margin-bottom: 10px;
+}
+
+.arc_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.arc_links a {
+  display: inline-flex;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.arc_links a:hover {
+  background: var(--meat);
+  color: var(--gray-200);
+}
+
+.arc_text p, .punbb .arc_text p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  text-align: justify;
+  color: var(--gray-800);
+  padding-bottom: 10px;
+}
+
+.arc_img {
+  width: 200px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.arc_img::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/76/27/65660.png) no-repeat top center;
+  width: 160px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: -39px;
+  left: 15px;
+}
+
+.arc_img::after {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/76/27/91050.png) no-repeat top center;
+  width: 178px;
+  height: 87px;
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  right: -5px;
+}
+
+.arc_img img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* Расы и бестиарий
+------------------------------------- */
+
+.cc_races {
+  margin: 5px auto 0;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/87724.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/83913.svg) no-repeat top 40% left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
+  border-radius: 10px;
+  width: 860px;
+  min-height: 500px;
+}
+
+.races_info {
+  width: 340px;
+  padding-bottom: 20px;
+}
+
+.races_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.races_info p, .punbb .races_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: left;
+  padding: 0;
+}
+
+.races_content {
+  border-top: 1px dashed #cecece;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.races_content section {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.races_content .sec_inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.race_text {
+  width: 580px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.races_content section h5 {
+  margin-bottom: 15px;
+  padding: 3px 10px 5px;
+  width: fit-content;
+  border-radius: 100px;
+  background: var(--carbonade);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.races_content section hr {
+  border-top: 1px dashed #cecece;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 15px;
+}
+
+.races_content section p, .punbb .races_content section p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.races_content section p:not(:last-of-type), .punbb .races_content section p:not(:last-of-type) {
+  padding-bottom: 15px;
+}
+
+.races_content section h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+  color: var(--gray-800);
+  margin-bottom: 5px;
+}
+
+.race_img {
+  flex-grow: 1;
+}
+
+.race_img img {
+  width: 100%;
+  height: auto;
+}
+
+.races_block:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.races_title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.races_title span {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.races_title small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  text-align: right;
+  color: var(--gray-550);
+}
+
+.races_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.races_grid > div {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 5px;
+  padding: 15px;
+  width: 377px;
+  background: var(--gray-250);
+  box-sizing: border-box;
+}
+
+.cc_bestiary {
+  background: url(https://forumstatic.ru/files/001c/76/27/93605.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/83913.svg) no-repeat top 40% left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
+}
+
+.cc_bestiary .races_info p {
+  font-size: 10px;
+}
+
+.cc_bestiary .races_info small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  color: var(--gray-550);
+}
+
+.race_quote {
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  width: fit-content;
+  background: var(--gray-250);
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--gray-550);
+}
+
+.cc_races details {
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.cc_races details[open] {
+  padding: 15px 15px 10px;
+}
+
+.cc_races summary {
+  display: inline-flex;
+  gap: 5px;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  width: fit-content;
+  background: var(--gray-800);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  text-align: justify;
+  color: var(--gray-200);
+  text-transform: lowercase;
+  line-height: 13px;
+  left: 20px;
+  position: absolute;
+  transform: translatey(-50%);
+  top: 0;
+  cursor: pointer;
+}
+
+.cc_races details summary::before {
+  content: "\e313";
+  font-family: var(--msr);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cc_races details[open] summary::before {
+  content: "\e316";
+}
+
 /* ------------------------------------- */
 
 #form-buttons {
