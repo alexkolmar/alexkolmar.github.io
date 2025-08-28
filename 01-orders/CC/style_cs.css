@@ -2735,6 +2735,617 @@ div.n_bp > a {
   content: "\e316";
 }
 
+
+/* О магии
+---------------------------------------- */
+
+.cc_magic {
+  margin: 0 auto;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/94373.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/43839.svg) no-repeat top 84px left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  width: 860px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.cc_magic hr {
+  height: 1px;
+  border-bottom: 1px dashed #cecece;
+  margin-bottom: 20px;
+}
+
+.magic_info h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+  margin-bottom: 20px;
+}
+
+.magic_info article {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.magic_info article p, .punbb .magic_info article p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  padding-bottom: 10px;
+}
+
+.magic_info article a {
+  display: block;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 1px 8px 3px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.magic_content {
+  margin-top: 20px;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.magic_content section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.magic_content section:not(:last-of-type) {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--gray-400);
+  margin-bottom: 20px;
+}
+
+.magic_content h5 {
+  margin-bottom: 10px;
+  background: var(--carbonade);
+  border-radius: 100px;
+  padding: 3px 10px 5px;
+  width: fit-content;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.magic_content p, .punbb .magic_content p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.magic_content p:not(:last-of-type), .punbb .magic_content p:not(:last-of-type) {
+  padding-bottom: 10px;
+}
+
+.m_text {
+  box-sizing: border-box;
+  width: 420px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.m_pic {
+  flex-shrink: 0;
+}
+
+.m_exa {
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 10px;
+  width: 220px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.m_exa span {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+  color: var(--gray-800);
+}
+
+/* Объединения
+---------------------------------------- */
+
+.cc_unions {
+  margin: 10px auto 0;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/70765.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/43839.svg) no-repeat top 50% left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  width: 860px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.unions_info {
+  width: 340px;
+}
+
+.unions_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.unions_info p, .punbb .unions_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  padding: 0;
+  text-align: left;
+}
+
+.cc_unions > hr {
+  margin: 20px 0;
+  border-bottom: 1px dashed #cecece;
+  width: 100%;
+  height: 1px;
+}
+
+.unions_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.unions_inner section {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.unions_inner section > div {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.unions_inner small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-550);
+}
+
+.unions_inner h5 {
+  margin-bottom: 10px;
+  background: var(--carbonade);
+  border-radius: 100px;
+  padding: 3px 10px 5px;
+  width: fit-content;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.unions_inner section > div > h5 {
+  margin-bottom: 0;
+}
+
+.unions_inner p, .punbb .unions_inner p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  padding: 0;
+  text-align: left;
+}
+
+.unions_inner hr {
+  margin: 15px 0;
+  border-bottom: 1px dashed #cecece;
+  width: 100%;
+  height: 1px;
+}
+
+.unions_inner article {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.unions_inner span {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--gray-800);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.unions_inner article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.unions_inner article ul:first-of-type {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.unions_inner article ul:last-of-type {
+  flex-grow: 1;
+}
+
+/* Квесты
+------------------------------------- */
+
+.cc_quests {
+  margin: 10px auto 0;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/28064.svg) no-repeat top left, url(https://forumstatic.ru/files/001c/76/27/21986.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  width: 860px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.quests_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.quests_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.cc_quests > hr, .punbb .cc_quests > hr {
+  margin: 20px 0;
+  border-bottom: 1px dashed #cecece;
+  width: 100%;
+  height: 1px;
+  opacity: 1;
+}
+
+.quests_content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.quests_content hr, .punbb .quests_content hr {
+  margin: 15px 0;
+  border-bottom: 1px dashed #cecece;
+  width: 100%;
+  height: 1px;
+  opacity: 1;
+}
+
+.q_rules, .q_arc {
+  position: relative;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.q_rules {
+  flex-grow: 1;
+}
+
+.q_rules p, .punbb .q_rules p, .q_rules li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: left;
+  padding: 0;
+}
+
+.q_rules p b, .punbb .q_rules p b {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+}
+
+.q_rules li {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.q_arcs {
+  flex-shrink: 0;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.q_arc {
+  width: 100%;
+}
+
+.q_rules h5, .q_arc h5 {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  top: -7px;
+}
+
+.q_arc span {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--gray-800);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.q_arc a {
+  display: block;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 1px 8px 3px 8px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.q_arc a:hover {
+  color: var(--gray-200);
+  background: var(--meat);
+}
+
+.q_arc a:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.cc_quest {
+  margin: 10px auto 0;
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/85336.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  border-radius: 10px;
+  padding: 100px 30px 30px;
+  width: 760px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.quest_info {
+  display: flex;
+  gap: 20px;
+}
+
+.quest_info span {
+  margin-bottom: 10px;
+  display: block;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  text-align: left;
+  color: #383838;
+}
+
+.quest_info > div:first-of-type {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.quest_info > div:last-of-type {
+  flex-grow: 1;
+}
+
+.cc_quest p, .punbb .cc_quest p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: left;
+  padding: 0;
+}
+
+.quest_info p b, .punbb .quest_info p b {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+}
+
+.cc_quest > hr, .punbb .cc_quest > hr {
+  margin: 20px 0;
+  border-bottom: 1px dashed #cecece;
+  width: 100%;
+  height: 1px;
+  opacity: 1;
+}
+
+.quest_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quest_content > section {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.quest_content section span {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+  color: var(--gray-800);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.q_main {
+  flex-grow: 1;
+}
+
+.q_main > small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--gray-550);
+}
+
+.q_main h5 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.q_main hr, .punbb .q_main hr {
+  border-bottom: 1px dashed var(--gray-400);
+  margin: 15px 0;
+  opacity: 1;
+  width: 100%;
+  height: 1px;
+}
+
+.q_awards {
+  margin-top: 15px;
+}
+
+.quest_content section .q_awards span {
+  margin-bottom: 10px;
+}
+
+.q_award {
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: fit-content;
+  background: var(--gray-250);
+  display: flex;
+  flex-direction: column;
+}
+
+.q_award b {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.q_award small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-550);
+}
+
+.q_details {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 20px;
+  width: 230px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.q_details section:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.q_details > div {
+  margin: 10px 0;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 100%;
+  background: var(--gray-250);
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  color: var(--gray-600);
+}
+
+/* Артефакты
+---------------------------------------- */
+
+.cc_artifacts {
+  margin: 10px auto 0;
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/12285.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  border-radius: 10px;
+  padding: 100px 30px 30px;
+  width: 760px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+
+
 /* ------------------------------------- */
 
 #form-buttons {
