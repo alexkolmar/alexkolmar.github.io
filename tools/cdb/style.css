@@ -1,0 +1,119 @@
+/* Все стили остаются без изменений */
+:root {
+ --primary-color: #6f42c1;
+ --secondary-color: #20c997;
+}
+
+body {
+ background-color: #f8f9fa;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ padding-bottom: 50px;
+}
+
+.card {
+ transition: transform 0.3s;
+ height: 100%;
+ border: none;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.celebrity-img {
+ width: 100%;
+ height: 250px;
+ object-fit: cover;
+ object-position: center top;
+ border-bottom: 3px solid var(--primary-color);
+}
+
+.filter-section,
+.add-form {
+ background-color: white;
+ border-radius: 12px;
+ padding: 25px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ margin-bottom: 25px;
+ border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-purple {
+ background-color: var(--primary-color);
+ color: white;
+ border: none;
+}
+
+.btn-purple:hover {
+ background-color: #5a32a3;
+ color: white;
+}
+
+.badge {
+ margin: 2px;
+}
+
+.photo-preview {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ border-radius: 8px;
+ display: none;
+ margin-top: 10px;
+}
+
+.feature-icon {
+ color: var(--primary-color);
+ margin-right: 8px;
+}
+
+.optional-field {
+ opacity: 0.8;
+}
+
+.country-search-container {
+ position: relative;
+}
+
+.country-dropdown {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: white;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ max-height: 200px;
+ overflow-y: auto;
+ z-index: 1000;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-item {
+ padding: 8px 12px;
+ cursor: pointer;
+ border-bottom: 1px solid #eee;
+}
+
+.country-item:hover {
+ background-color: #f8f9fa;
+}
+
+.selected-countries {
+ margin-top: 10px;
+ min-height: 40px;
+}
+
+.filter-row {
+ margin-bottom: 15px;
+}
+
+.eye-color-badge {
+ margin: 2px;
+ border: 1px solid #dee2e6;
+}
