@@ -3896,6 +3896,104 @@ div.n_bp > a {
   color: var(--gray-200);
 }
 
+
+/* Шаблон принятия анкеты
+---------------------------------------- */
+
+.cc_accept {
+  margin: 10px auto 0;
+  background: url(https://forumstatic.ru/files/001c/76/27/62853.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/55340.jpg) repeat;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 90px 30px 20px;
+  width: 480px;
+  min-height: 500px;
+  /* height: 628px; */
+}
+
+.accept_info {
+  width: 400px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  border-bottom: 1px dashed var(--gray-400);
+}
+
+.accept_info h4 {
+  margin-bottom: 10px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--gray-200);
+}
+
+.accept_info p, .punbb .accept_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--gray-200);
+  padding: 0;
+  text-align: left;
+}
+
+.accept_links {
+  margin: 10px auto 0;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.accept_links a {
+  display: flex;
+  border-radius: 5px;
+  padding: 1px 8px 3px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  background: var(--dusty-rose);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+}
+
+.accept_links a:hover {
+  background: var(--meat);
+  color: var(--gray-200);
+}
+
+.cc_accept > img {
+  margin: -5px auto 13px;
+  display: block;
+}
+
+.cc_greet {
+  left: -50px;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 7px 10px;
+  background: var(--dusty-rose);
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-200);
+}
+
+.cc_greet::before {
+  content: '';
+  background: url(https://forumstatic.ru/files/001c/76/27/64719.svg) no-repeat top center;
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  bottom: 0;
+  left: -5px;
+}
+
 /* ------------------------------------- */
 
 #form-buttons {
