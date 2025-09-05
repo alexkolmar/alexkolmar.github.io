@@ -9,6 +9,9 @@
 /* SF Pro Display */
 @import url('https://alexkolmar.github.io/fonts/SF/stylesheet.css');
 
+/* Paper */
+@import url('https://alexkolmar.github.io/fonts/Paper/stylesheet.css');
+
 /****************************************
 Чистый стиль by Alex Kolmar (бродяга)
 ****************************************/
@@ -70,7 +73,7 @@
   --gray-500: #a5a5a5;
   --gray-550: #818181;
   --gray-600: #565656;
-  --gray-800: #2f2f2f;
+  --gray-800: #181818;
   --meat: #b96466;
   --dusty-rose: #cc7f82;
   --salmon: #e18587;
@@ -221,7 +224,7 @@ em {
 .inner.popup_graffiti,
 .pun-modal .modal-inner,
 .punbb-admin #pun-admin-award-form .inner {
-  background: var(--gray-250);
+  background: var(--gray-300);
 }
 
 /* Формы
@@ -267,19 +270,24 @@ select {
   background: var(--gray-250);
   border: none;
   padding: 4px 10px 5px 10px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
 }
 
 input[type="text"],
 input[type="password"],
 select {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 9px;
-  color: var(--gray-800);
+  box-sizing: border-box;
 }
 
 select {
   text-transform: lowercase;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--gray-250) url(https://forumstatic.ru/files/001c/76/27/87460.svg) no-repeat right 5px center;
 }
 
 textarea {
@@ -380,7 +388,7 @@ fieldset fieldset {
   padding: 0 0 8px 0
 }
 
-.punbb:not(#pun-messages, #pun-viewtopic) .fs-box {
+.punbb:not(#pun-messages, #pun-viewtopic, #pun-post) .fs-box {
   border: 1px solid var(--gray-300);
   border-radius: 10px;
   padding: 20px 15px 5px;
@@ -445,8 +453,9 @@ html {
 #pun {
   margin: 86px auto 30px;
   width: 1001px;
-  background: var(--gray-200) url(https://forumstatic.ru/files/0016/01/4e/31026.jpg) repeat top center;
+  background: var(--gray-400) url(https://forumstatic.ru/files/0016/01/4e/31026.jpg) repeat top center;
   border-radius: 4px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 0 rgba(255, 255, 255, 0.65);
 }
 
 /* внутреннее тело */
@@ -469,16 +478,16 @@ html {
   background: var(--gray-200);
   transform: rotate(-10deg);
   padding: 2px 5px;
-  width: 58px;
+  width: 65px;
   font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 7px;
-  line-height: 86%;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
   color: var(--gray-800);
   display: block;
   box-sizing: border-box;
   position: absolute;
-  top: -25px;
+  top: -30px;
   left: -25px;
 }
 
@@ -518,7 +527,7 @@ html {
 
 #pun-navlinks li a {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 11px;
   text-align: center;
   text-transform: lowercase;
@@ -787,7 +796,7 @@ tr.iclosed div.icon {
 
 .linksb {
   position: relative;
-  padding: var(--pad1);
+  padding: var(--pad2);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -847,7 +856,7 @@ tr.iclosed div.icon {
 }
 
 #pun-viewtopic #pun-main .modmenu .container {
-  padding: var(--pad1);
+  padding: var(--pad2);
 }
 
 #pun-modviewforum #pun-main .modmenu .container strong {
@@ -898,7 +907,7 @@ tr.iclosed div.icon {
 
 #pun-index .category-1 h2 {
   background: url(https://forumstatic.ru/files/0016/01/4e/31001.png) no-repeat bottom center/cover;
-  margin: 0 auto -25px;
+  margin: 7px auto -25px;
 }
 #pun-index .category-2 h2 {
   background: url(https://forumstatic.ru/files/0016/01/4e/59812.png) no-repeat bottom -1px center/cover;
@@ -939,6 +948,10 @@ tr.iclosed div.icon {
   gap: 100px;
 }
 
+#pun-index .category tr:not(:last-of-type) {
+  margin-bottom: 35px;
+}
+
 #pun-index .category td {
   padding: 0;
 }
@@ -946,6 +959,56 @@ tr.iclosed div.icon {
 #pun-index .category .tcl {
   padding-left: 0;
   flex-grow: 1;
+  position: relative;
+}
+
+#pun-index .category .inew .tcl {
+  min-height: 70px;
+}
+
+#pun-index .subforums {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0;
+  line-height: 14px;
+  color: var(--gray-500);
+  margin: 2px 0 6px -7px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+#pun-index .subforums a {
+  font-size: 11px;
+}
+
+#pun-index .subforums em:not(:first-of-type):before {
+  content: "/";
+  font-size: 11px;
+}
+
+#pun-index .subforums em:first-of-type {
+  background: url(https://forumstatic.ru/files/001c/76/27/10022.svg) no-repeat top center;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+
+#pun-index .Add {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  margin-left: auto;
+  gap: 5px;
+  width: 54px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--gray-550);
 }
 
 #pun-index .category .intd {
@@ -1037,6 +1100,7 @@ tr.iclosed div.icon {
   background: url(https://forumstatic.ru/files/0016/01/4e/77481.png) no-repeat top center;
   width: 53px;
   height: 52px;
+  flex-shrink: 0;
 }
 
 #pun-index .tclcon h3[data-new-topics]::after, .punbb .subforums span[data-new-topics]::before {
@@ -1320,12 +1384,12 @@ li#onlinelist {
   width: fit-content;
   margin-bottom: 7px;
   border-radius: 3px;
-  padding: 0px 5px 1px 5px;
+  padding: 0px 5px 2px 5px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
   background: var(--dusty-rose);
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.03em;
   color: var(--gray-200);
 }
@@ -1363,7 +1427,7 @@ li#onlinelist {
 .twa_inner a p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gray-800);
 }
 
@@ -1398,20 +1462,23 @@ li#onlinelist {
 
 .hu2 {
   position: absolute;
-  padding: 2px 5px;
-  width: 102px;
-  height: 22px;
+  padding: 2px 3px;
   box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.25);
   background: var(--gray-200);
   transform: rotate(-5deg);
   font-family: var(--font6);
-  font-weight: 600;
-  font-size: 7px;
-  line-height: 86%;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
   color: var(--gray-800);
-  left: 16px;
-  bottom: -5px;
+  left: -19px;
+  bottom: -10px;
   box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  max-width: 140px;
 }
 
 .tab_ams {
@@ -1441,8 +1508,9 @@ li#onlinelist {
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
   background: var(--gray-800);
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 9px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
   color: var(--gray-200);
   gap: 3px;
 }
@@ -1455,30 +1523,33 @@ li#onlinelist {
 
 .hu3 {
   position: absolute;
-  padding: 2px 5px;
-  width: 80px;
-  height: 22px;
+  padding: 2px 3px;
   box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.25);
   background: var(--gray-200);
   transform: rotate(5deg);
   font-family: var(--font6);
-  font-weight: 600;
-  font-size: 7px;
-  line-height: 86%;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
   color: var(--gray-800);
-  left: 192px;
+  left: 128px;
   box-sizing: border-box;
-  top: -3px;
+  top: -10px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  max-width: 125px;
+  overflow: hidden;
 }
 
 button.mirror_button {
   border-radius: 3px;
-  padding: 0px 5px 1px 5px;
+  padding: 0px 5px 2px 5px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
   background: var(--dusty-rose);
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.03em;
   color: var(--gray-200);
   position: absolute;
@@ -1508,7 +1579,7 @@ button.mirror_button {
 }
 
 .mir_frame {
-  background: url('https://forumstatic.ru/files/0016/01/4e/30377.png') no-repeat center/contain;
+  background: url('https://i.postimg.cc/vBksFBvd/image.png') no-repeat center/contain;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -1638,7 +1709,7 @@ button.mirror_button {
   background: var(--gray-200);
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gray-800);
   box-sizing: border-box;
 }
@@ -1661,7 +1732,7 @@ button.mirror_button {
   background: var(--dusty-rose);
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.03em;
   color: var(--gray-200);
   transform: translateY(-50%);
@@ -1693,7 +1764,7 @@ button.mirror_button {
 .tf_inner > div {
   display: flex;
   gap: 3px;
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .tf_inner a {
@@ -1712,6 +1783,9 @@ button.mirror_button {
   font-family: var(--font-family);
   font-weight: 400;
   color: var(--gray-200);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tab_quote::before {
@@ -1732,7 +1806,7 @@ button.mirror_button {
   bottom: 22px;
   border-radius: 10px;
   width: 190px;
-  height: 58px;
+  max-height: 65px;
   background: var(--gray-200);
   padding: 3px 10px 7px;
   box-sizing: border-box;
@@ -1741,7 +1815,7 @@ button.mirror_button {
 .tab_quote a {
   font-family: var(--second-family);
   font-weight: 700;
-  font-size: 8px;
+  font-size: 9px;
   color: var(--dusty-rose);
 }
 
@@ -1753,7 +1827,7 @@ button.mirror_button {
   -webkit-box-orient: vertical;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gray-800);
 }
 
@@ -1774,7 +1848,7 @@ button.mirror_button {
   white-space: nowrap;
   overflow: auto;
   padding-top: 5px;
-  height: 50px;
+  height: 55px;
   align-items: flex-start;
   border-bottom: 1px dashed var(--gray-500);
   box-sizing: border-box;
@@ -1789,9 +1863,10 @@ button.mirror_button {
     border-radius: 5px;
     padding: 7px 7px 7px 10px;
     width: 180px;
-    height: 34px;
+    height: 38px;
     background: var(--gray-200);
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .np:hover {
@@ -1816,8 +1891,8 @@ button.mirror_button {
 
 .np h6 {
 font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 9px;
+  font-weight: 400;
+  font-size: 11px;
   color: var(--gray-800);
   max-width: 115px;
   white-space: nowrap;
@@ -1829,7 +1904,7 @@ font-family: var(--font-family);
 .np p {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 8px;
+    font-size: 9px;
     color: var(--gray-550);
     max-width: 161px;
     white-space: nowrap;
@@ -1850,7 +1925,7 @@ font-family: var(--font-family);
 
 .banners {
   border-radius: 4px;
-  width: 590px;
+  width: 587px;
   height: 100px;
   box-sizing: border-box;
   position: absolute;
@@ -1880,18 +1955,26 @@ font-family: var(--font-family);
   right: -100px;
 }
 
+#html-footer .banners .container::-webkit-scrollbar {
+  display: none;
+}
+
 #html-footer .banners .container {
   border-radius: 4px;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 0 rgba(255, 255, 255, 0.65);
   background: var(--gray-400);
   padding: 10px;
-  width: 590px;
+  width: 587px;
   height: 100px;
-  overflow: auto;
   box-sizing: border-box;
   z-index: 1;
   position: relative;
-  scrollbar-gutter: stable;
+  margin: 0 auto;
+  gap: 5px;
+  scrollbar-width: none;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .banners a {
@@ -2032,19 +2115,33 @@ font-family: var(--font-family);
   color: var(--salmon);
 }
 
+.pa-title::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/76/27/97560.svg) no-repeat top center;
+  position: absolute;
+  left: -5px;
+  bottom: -1px;
+  width: 12px;
+  height: 15px;
+}
+
 .pa-title {
-  background: url(https://forumstatic.ru/files/0016/01/4e/74558.svg) no-repeat top center;
-  height: 44px;
-  width: 230px;
-  margin-left: -15px;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  margin-left: -5px;
   box-sizing: border-box;
-  padding: 5px 10px 11px 16px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-size: 9px;
   color: var(--gray-800);
   text-align: left;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09), 0 3px 2px 0 rgba(0, 0, 0, 0.05), 0 5px 2px 0 rgba(0, 0, 0, 0.01), 0 7px 2px 0 rgba(0, 0, 0, 0);
+  background: var(--gray-250);
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .pa-avatar {
@@ -2173,7 +2270,7 @@ font-family: var(--font-family);
   border-radius: 30% 70% 50% 50% / 0% 0% 100% 100%;
 }
 
-.plank p {
+.punbb .plank p {
   background: var(--gray-200);
   z-index: 1;
   position: relative;
@@ -2305,19 +2402,21 @@ font-family: var(--font-family);
 }
 
 .post-links li.pl-email a,
-.post-links li.pl-website a {
+.post-links li.pl-website a,
+.post-links li.editpole a {
   color: var(--gray-550);
 }
 
 .post-links li.pl-email,
-.post-links li.pl-website {
+.post-links li.pl-website,
+.post-links li.editpole {
   float: left;
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-550);
 }
 
-.pl-email::before, .pl-website::before {
+.pl-email::before, .pl-website::before, li.editpole::before {
   content: "";
   font-weight: 500;
   font-family: var(--msr);
@@ -2341,12 +2440,23 @@ font-family: var(--font-family);
   content: "\f728";
 }
 
+li.editpole:before {
+  content: "\f88c";
+}
+
 .clearer {
   clear: both;
   height: 0;
   font-size: 0;
 }
 
+li.editpole {
+    display: none;
+}
+
+.isadmin li.editpole {
+    display: inline-flex;
+}
 
 /* Контент поста - цитата, спойлер, таблицы и т.п. */
 
@@ -2359,7 +2469,10 @@ font-family: var(--font-family);
 }
 
 pre {
-  font: 12px/140% monaco, "bitstream vera sans mono", "courier new", courier, monospace;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--gray-800);
 }
 
 .post-content em {
@@ -2378,7 +2491,7 @@ pre {
 .post-content p {
   margin: 0;
   padding: 0 0 12px 0;
-  line-height: 127%;
+  line-height: 142%;
   color: var(--gray-800);
   text-align: justify;
 }
@@ -2405,7 +2518,7 @@ pre {
   display: inline-flex;
   font-style: normal;
   border-radius: 3px;
-  padding: 1px 5px;
+  padding: 1px 5px 2px;
   width: fit-content;
   background: var(--gray-800);
   font-family: var(--font-family);
@@ -2532,7 +2645,7 @@ pre {
 
 #post-form label {
   font-family: var(--third-family);
-  font-weight: 700;
+  font-weight: 400;
   text-transform: lowercase;
   color: var(--gray-800);
 }
@@ -2590,7 +2703,7 @@ pre {
 
 #profilenav h2 {
   border-radius: 3px;
-  padding: 1px 5px;
+  padding: 1px 5px 1px;
   background: var(--gray-800);
   font-family: var(--font-family);
   font-weight: 700;
@@ -2964,13 +3077,14 @@ img.avatardemo {
 .go-up,
 .go-down {
   cursor: pointer;
-  opacity: .5;
   z-index: 9999;
   display: none;
   position: fixed;
   margin-left: 1000px !important;
   box-sizing: border-box;
   transition: all .3s linear 0s;
+  width: 85px;
+  text-align: center;
 }
 
 .go-up {
@@ -2978,7 +3092,7 @@ img.avatardemo {
 }
 
 .go-down {
-  top: 320px;
+  top: 340px;
 }
 
 .go-down:hover,

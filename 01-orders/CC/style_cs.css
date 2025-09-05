@@ -1,123 +1,90 @@
+/* Кастомный выпадающий список (select)
+--------------------------------------------------------- */
+
 .custom-select-wrapper {
   position: relative;
   display: inline-block;
-  width: 200px;
-  font-family: Arial, sans-serif;
 }
 
 .custom-select {
-  padding: 10px 15px;
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background: var(--gray-250);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
+  padding: 4px 10px 5px;
+  width: 138px;
+  transition: all .2s linear 0s;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: lowercase;
+  color: var(--gray-800);
 }
 
 .custom-select:hover {
-  background: #e9e9e9;
+  background: var(--gray-300);
 }
 
 .custom-select-options {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 0;
   right: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, transform 0.3s ease-out;
   transform-origin: top;
   transform: scaleY(0);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1), 2px 3px 4px 0 rgba(0, 0, 0, 0.09), 5px 7px 5px 0 rgba(0, 0, 0, 0.05), 9px 12px 6px 0 rgba(0, 0, 0, 0.01), 13px 19px 6px 0 rgba(0, 0, 0, 0);
+  background: var(--gray-800);
+  border-radius: 10px;
+  padding: 5px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-200);
+  text-align: left;
 }
 
 .custom-select-option {
-  padding: 10px 15px;
+  padding: 5px 10px;
   cursor: pointer;
+  transition: all .2s linear 0s;
+  text-transform: initial;
 }
 
 .custom-select-option:hover {
-  background: #f0f0f0;
+  background: var(--gray-600);
+  border-radius: 5px;
 }
 
 .custom-select-arrow {
-  margin-left: 10px;
+  margin: 0 0 0 10px;
+  height: 12px;
+  line-height: 12px;
   transition: transform 0.2s;
 }
 
-.custom-select.open .custom-select-arrow {
+.custom-select-wrapper.open .custom-select-arrow {
   transform: rotate(180deg);
+  margin: 0 0 -2px 10px;
 }
 
-.custom-select.open .custom-select-options {
+.custom-select-wrapper.open .custom-select-arrow svg path {
+  fill: var(--gray-200);
+}
+
+.custom-select-wrapper.open .custom-select {
+  background: var(--gray-800);
+  color: var(--gray-200);
+}
+
+.custom-select-wrapper.open .custom-select-options {
   max-height: 500px;
-  /* Максимальная высота (можно ajust под контент) */
   transform: scaleY(1);
-}
-
-.custom-select-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  font-family: Arial, sans-serif;
-}
-
-.custom-select {
-  padding: 10px 15px;
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.custom-select:hover {
-  background: #e9e9e9;
-}
-
-.custom-select-options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.custom-select-option {
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.custom-select-option:hover {
-  background: #f0f0f0;
-}
-
-.custom-select-arrow {
-  margin-left: 10px;
-  transition: transform 0.2s;
-}
-
-.custom-select.open .custom-select-arrow {
-  transform: rotate(180deg);
-}
-
-.custom-select.open .custom-select-options {
-  display: block;
 }
 
 
@@ -144,7 +111,9 @@ strong.fnt {
   cursor: pointer;
 }
 
-/* Мини-профиль с информацией */
+/* Мини-профиль с информацией (aka Личная страница)
+--------------------------------------------------------------------- */
+
 .reveal-modal-bg {
   position: fixed;
   height: 100%;
@@ -167,7 +136,7 @@ strong.fnt {
   z-index: 101;
 }
 
-.reveal-modal .close-reveal-modal {
+.reveal-modal .close-reveal-modal, .reveal-modal .edit-reveal-modal {
   font-size: 22px;
   line-height: 22px;
   position: absolute;
@@ -188,6 +157,15 @@ strong.fnt {
   align-items: center;
   justify-content: center;
   right: 0;
+}
+
+.isadmin .reveal-modal .edit-reveal-modal {
+    display: flex;
+}
+
+.reveal-modal .edit-reveal-modal {
+    top: 33px;
+    display: none;
 }
 
 /* Личная страница
@@ -1264,6 +1242,7 @@ div.n_bp > a {
   padding: 0 !important
 }
 
+
 /* Магазин
 ------------------------------------- */
 
@@ -1272,8 +1251,8 @@ div.n_bp > a {
   background: url(https://forumstatic.ru/files/0016/01/4e/46591.png) no-repeat top center var(--gray-200);
   border-radius: 10px;
   padding: 100px 30px 30px;
-  width: 860px;
-  height: 1045px;
+  width: 862px;
+  height: 1047px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -1304,7 +1283,7 @@ div.n_bp > a {
   text-align: left;
 }
 
-.shop_descr p {
+.punbb .shop_descr p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -1438,7 +1417,7 @@ div.n_bp > a {
   scrollbar-gutter: stable;
 }
 
-.shtc_inner > p {
+.punbb .shtc_inner > p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -1464,7 +1443,7 @@ div.n_bp > a {
   color: var(--gray-800);
   display: block;
   width: fit-content;
-  margin-bottom: 10px;
+  margin: 0 0 10px 1px;
 }
 
 .tab_block_content {
@@ -1555,6 +1534,7 @@ div.n_bp > a {
 
 .cart_info {
   display: flex;
+  align-items: center;
   gap: 5px;
   font-family: var(--font-family);
   font-weight: 400;
@@ -1563,6 +1543,11 @@ div.n_bp > a {
   text-transform: lowercase;
 }
 
+.punbb .cart_info p {
+  padding: 0
+}
+
+
 /* Список внешностей
 ------------------------------------- */
 
@@ -1570,9 +1555,9 @@ div.n_bp > a {
   margin: 0 auto;
   padding: 56px 35px 35px;
   width: 762px;
-  height: 1044px;
+  height: 807px;
   box-sizing: border-box;
-  background: url(https://forumstatic.ru/files/001c/76/27/55619.png);
+  background: url(https://forumstatic.ru/files/001c/76/27/45590.png);
 }
 
 .cc_faces img {
@@ -1666,6 +1651,7 @@ div.n_bp > a {
   font-style: normal;
 }
 
+
 /* faq
 ------------------------------------- */
 
@@ -1699,6 +1685,7 @@ div.n_bp > a {
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-800);
+  padding-bottom: 0 !important;
 }
 
 .faq_inner {
@@ -1790,6 +1777,11 @@ div.n_bp > a {
   margin-bottom: 30px;
 }
 
+.faq_a {
+  position: relative;
+  scroll-margin-top: 55px;
+}
+
 .faq_content h5 {
   margin-bottom: 5px;
   font-family: var(--font-family);
@@ -1799,13 +1791,14 @@ div.n_bp > a {
   color: var(--gray-800);
 }
 
-.faq_content p {
+.punbb .faq_content p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   line-height: 142%;
   color: var(--gray-800);
   text-align: left;
+  padding-bottom: 0;
 }
 
 .faq_content p:not(:last-of-type) {
@@ -1830,6 +1823,7 @@ div.n_bp > a {
   margin-bottom: 15px;
 }
 
+
 /* Анкета
 ------------------------------------- */
 
@@ -1846,25 +1840,26 @@ div.n_bp > a {
 
 .cc_quenta {
   position: relative;
-  margin: 40px auto 0;
+  margin: 35px auto 0;
   border: 1px solid var(--gray-300);
   background: url(https://forumstatic.ru/files/001c/76/27/61171.png) repeat top left var(--gray-200);
   border-radius: 10px;
   padding: 20px 0;
-  width: 642px;
+  width: 640px;
   min-height: 400px;
   box-sizing: border-box;
 }
 
-.cc_quenta p {
+.punbb .cc_quenta p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   line-height: 142%;
   color: var(--gray-800);
+  padding: 0;
 }
 
-.cc_quenta p:not(:last-of-type) {
+.punbb .cc_quenta p:not(:last-of-type) {
   padding: 0 0 5px;
 }
 
@@ -1968,14 +1963,18 @@ div.n_bp > a {
   top: -7px;
 }
 
-.cc_quenta details {
+.cc_quenta details, .cc_wanted details {
   border: 1px solid var(--gray-300);
   border-radius: 3px;
   padding: 10px 15px;
   position: relative;
 }
 
-.cc_quenta details summary, .city_inside summary {
+.cc_quenta details[open], .cc_wanted details[open] {
+  padding: 15px 15px 10px;
+}
+
+.cc_quenta details summary, .city_inside summary, .cc_wanted details summary {
   display: inline-flex;
   gap: 5px;
   font-style: normal;
@@ -1997,14 +1996,14 @@ div.n_bp > a {
   cursor: pointer;
 }
 
-.cc_quenta details summary:before, .city_inside summary:before {
+.cc_quenta details summary:before, .city_inside summary:before, .cc_wanted details summary:before {
   content: "\e313";
   font-family: var(--msr);
   font-size: 12px;
   font-weight: 500;
 }
 
-.cc_quenta details[open] summary:before, .city_inside details[open] summary:before {
+.cc_quenta details[open] summary:before, .city_inside details[open] summary:before, .cc_wanted details[open] summary:before {
   content: "\e316";
 }
 
@@ -2034,11 +2033,12 @@ div.n_bp > a {
   color: var(--gray-800);
 }
 
-.city_info p {
+.punbb .city_info p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-800);
+  padding: 0;
 }
 
 .city_locs {
@@ -2080,12 +2080,14 @@ div.n_bp > a {
   text-align: left;
 }
 
-.loctext p {
+.punbb .loctext p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   line-height: 142%;
   color: var(--gray-800);
+  padding: 0;
+  text-align: left;
 }
 
 .locpic {
@@ -2118,21 +2120,26 @@ div.n_bp > a {
   padding-top: 20px;
 }
 
-.city_inside p {
+.punbb .city_inside p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   line-height: 142%;
   color: var(--gray-800);
+  text-align: left;
 }
 
 .city_inside details {
   box-shadow: 0 0 0 1px var(--gray-300);
   background: var(--gray-200);
   border-radius: 3px;
-  padding: 20px;
+  padding: 10px 15px;
   position: relative;
   margin-bottom: 17px;
+}
+
+.city_inside details[open] {
+  padding: 20px;
 }
 
 .city_inside details img {
@@ -2227,7 +2234,7 @@ div.n_bp > a {
   color: var(--gray-800);
 }
 
-.city_resume p {
+.punbb .city_resume p {
   padding-bottom: 5px;
 }
 
@@ -2274,6 +2281,11 @@ div.n_bp > a {
 .plot_infotext {
   width: 340px;
   flex-shrink: 0;
+}
+
+.punbb .plot_infotext p {
+  font-size: 10px;
+  padding: 0;
 }
 
 .plot_info h4 {
@@ -2351,7 +2363,7 @@ div.n_bp > a {
   flex-grow: 1;
 }
 
-.plot_details {
+.cc_plot .plot_details {
   width: 230px;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -2588,6 +2600,7 @@ div.n_bp > a {
   width: 100%;
   height: 1px;
   margin-bottom: 15px;
+  opacity: 1 !important;
 }
 
 .races_content section p, .punbb .races_content section p {
@@ -2662,11 +2675,15 @@ div.n_bp > a {
   box-sizing: border-box;
 }
 
+.punbb .races_block p {
+  padding: 0;
+}
+
 .cc_bestiary {
   background: url(https://forumstatic.ru/files/001c/76/27/93605.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/83913.svg) no-repeat top 40% left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
 }
 
-.cc_bestiary .races_info p {
+.punbb .cc_bestiary .races_info p, .cc_bestiary .races_info p {
   font-size: 10px;
 }
 
@@ -2754,6 +2771,7 @@ div.n_bp > a {
   height: 1px;
   border-bottom: 1px dashed #cecece;
   margin-bottom: 20px;
+  opacity: 1 !important;
 }
 
 .magic_info h4 {
@@ -2831,6 +2849,7 @@ div.n_bp > a {
   font-size: 12px;
   line-height: 142%;
   color: var(--gray-800);
+  text-align: left;
 }
 
 .magic_content p:not(:last-of-type), .punbb .magic_content p:not(:last-of-type) {
@@ -2868,6 +2887,7 @@ div.n_bp > a {
   color: var(--gray-800);
 }
 
+
 /* Объединения
 ---------------------------------------- */
 
@@ -2903,11 +2923,12 @@ div.n_bp > a {
   text-align: left;
 }
 
-.cc_unions > hr {
+.cc_unions > hr, .punbb .cc_unions > hr {
   margin: 20px 0;
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
+  opacity: 1 !important;
 }
 
 .unions_inner {
@@ -2966,11 +2987,12 @@ div.n_bp > a {
   text-align: left;
 }
 
-.unions_inner hr {
+.unions_inner hr, .punbb .unions_inner hr {
   margin: 15px 0;
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
+  opacity: 1 !important;
 }
 
 .unions_inner article {
@@ -3007,6 +3029,7 @@ div.n_bp > a {
   flex-grow: 1;
 }
 
+
 /* Квесты
 ------------------------------------- */
 
@@ -3029,11 +3052,12 @@ div.n_bp > a {
   color: var(--gray-800);
 }
 
-.quests_info p {
+.quests_info p, .punbb .quests_info p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-800);
+  padding: 0;
 }
 
 .cc_quests > hr, .punbb .cc_quests > hr {
@@ -3041,7 +3065,7 @@ div.n_bp > a {
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .quests_content {
@@ -3056,7 +3080,7 @@ div.n_bp > a {
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .q_rules, .q_arc {
@@ -3154,6 +3178,7 @@ div.n_bp > a {
   margin-bottom: 5px;
 }
 
+
 .cc_quest {
   margin: 10px auto 0;
   box-shadow: 0 0 0 1px var(--gray-300);
@@ -3211,7 +3236,7 @@ div.n_bp > a {
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .quest_content {
@@ -3329,6 +3354,7 @@ div.n_bp > a {
   text-align: center;
   color: var(--gray-600);
 }
+
 
 /* Артефакты
 ---------------------------------------- */
@@ -3523,7 +3549,7 @@ div.n_bp > a {
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .arts_list li small {
@@ -3558,7 +3584,8 @@ div.n_bp > a {
   color: var(--gray-800);
 }
 
-.actions_info p {
+.actions_info p, .punbb .actions_info p {
+  padding: 0;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -3570,14 +3597,15 @@ div.n_bp > a {
   border-bottom: 1px dashed #cecece;
   width: 100%;
   height: 1px;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .actions_descr {
   margin-bottom: 20px;
 }
 
-.actions_descr p {
+.actions_descr p, .punbb .actions_descr p {
+  padding: 0;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -3688,6 +3716,7 @@ div.n_bp > a {
   left: 10px;
   top: -7px;
 }
+
 
 /* Список персов
 ---------------------------------------- */
@@ -3813,6 +3842,7 @@ div.n_bp > a {
   font-weight: 400;
   font-size: 10px;
   color: var(--gray-800);
+  text-align: left;
 }
 
 .chico {
@@ -3994,6 +4024,7 @@ div.n_bp > a {
   left: -5px;
 }
 
+
 /* Лотерея
 ---------------------------------------- */
 
@@ -4030,7 +4061,7 @@ div.n_bp > a {
   margin-bottom: 5px;
 }
 
-.lot_info p {
+.lot_info p, .punbb .lot_info p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 10px;
@@ -4051,7 +4082,730 @@ div.n_bp > a {
   color: var(--gray-200);
 }
 
+.lot_details {
+  margin-bottom: 20px;
+  padding: 0 20px 20px;
+  border-bottom: 1px dashed var(--gray-400);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lot_details > div {
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.award_img {
+  display: block;
+  margin: 10px auto 0;
+}
+
+.lot_details > div > h5 {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  top: -7px;
+}
+
+.lot_rules p, .punbb .lot_rules p {
+  text-align: left;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.lot_awards p, .punbb .lot_awards p {
+  padding: 0;
+  text-align: left;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.lots_list {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lots_list > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  background: url(https://forumstatic.ru/files/001c/76/27/17870.png) no-repeat center;
+  font-family: var(--font4);
+  font-weight: 400;
+  font-size: 38px;
+  text-transform: lowercase;
+  color: #f3f3f3;
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Правила форума
+---------------------------------------- */
+
+.cc_rules {
+  margin: 10px auto 0;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/85740.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/43839.svg) no-repeat top 20% left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  border-radius: 10px;
+  padding: 30px;
+  width: 860px;
+  box-sizing: border-box;
+  min-height: 500px;
+}
+
+.cc_rules > hr {
+  border-bottom: 1px dashed #cecece;
+  opacity: 1 !important;
+  margin: 20px 0 !important;
+  width: 100%;
+  height: 1px;
+}
+
+.rules_info {
+  width: 340px;
+}
+
+.rules_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.rules_info p, .punbb .rules_info p {
+  text-align: left;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.rules_content {
+  margin: 0 auto;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+}
+
+.rules_content hr {
+  border-bottom: 1px dashed #cecece;
+  opacity: 1 !important;
+  margin: 10px 0 !important;
+  width: 100%;
+  height: 1px;
+}
+
+.rules_content p, .punbb .rules_content p {
+  padding: 0;
+  text-align: left;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.rules_content p b, .punbb .rules_content p b {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+}
+
+.rules_content h5 {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: #383838;
+}
+
+/* Ачивки
+---------------------------------------- */
+
+.cc_achieves {
+  margin: 10px auto 0;
+  background: url(https://forumstatic.ru/files/001c/76/27/31913.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/16542.svg) no-repeat top left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat #f5f5f5;;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 100px 30px 30px;
+  width: 860px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.achieves_info {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 34px;
+  border-bottom: 1px dashed #cecece;
+  margin-bottom: 25px;
+}
+
+.achieves_info h5 {
+  margin-bottom: 10px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  color: #383838;
+}
+
+.achieves_info > div {
+  flex-grow: 1;
+}
+
+.achieves_info p, .punbb .achieves_info p, .achieves_info ul li  {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  padding: 0;
+  text-align: left;
+} 
+
+.achieves_info ul {
+  margin-left: 10px;
+}
+
+.achieves_info ul, .achieves_info ul li  {
+  list-style: disc;
+}
+
+.achieves_content {
+  margin: 0 auto;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 20px;
+  width: 695px;
+  height: 746px;
+  box-sizing: border-box;
+}
+
+.achieve_tabs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-250);
+  border-radius: 100px;
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.achieve_tab, .achieve_tab-title {
+  display: inline-block;
+}
+
+.achieve_tab input[type="radio"] {
+  display: none;
+}
+
+.achieve_tab-title {
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 5px 10px;
+  width: 317px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 8px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--gray-800);
+}
+
+.achieve_tab-content {
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+  width: 100%;
+  height: 665px;
+  display: none;
+  box-sizing: border-box;
+}
+
+.achieve_tab :checked + .achieve_tab-title {
+  position: relative;
+  background: var(--gray-800);
+  color: var(--gray-200);
+  z-index: 1;
+}
+
+.achieve_tab :checked ~ .achieve_tab-content {
+  display: block;
+}
+
+.achieves_scroll {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100% + 10px);
+  scrollbar-gutter: stable;
+  height: 665px;
+  overflow: auto;
+  gap: 10px;
+}
+
+/* Шаблоны эпизодов
+---------------------------------------- */
+
+.cc_ep {
+  margin: 10px auto 0;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  border-radius: 10px;
+  padding: 20px 0 15px;
+  box-sizing: border-box;
+  width: 600px;
+}
+
+.cc_ep h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.cc_ep span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ep_descr {
+  padding: 20px 20px 0;
+}
+
+.ep_descr p, .punbb .ep_descr p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: center;
+  padding: 0;
+}
+
+.ep_top1 {
+  padding: 0 20px 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--gray-400);
+}
+
+.ep_info1, .ep_pl {
+  flex-shrink: 0;
+}
+
+.ep_info1 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ep_pl {
+  display: flex;
+  flex-wrap: 5px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ep_pl a {
+  display: inline-flex;
+  border: 1px solid var(--gray-400);
+  border-radius: 10px;
+  width: 62px;
+  height: 62px;
+  box-sizing: border-box;
+}
+
+.ep_pl a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(1);
+  transition: all .3s linear 0s;
+}
+
+.ep_pl a:hover img {
+  filter: none;
+}
+
+.ep_top2 {
+  padding: 0 20px 16px;
+  border-bottom: 1px dashed var(--gray-400);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ep_top2 .ep_img {
+  border: 1px solid var(--gray-400);
+  border-radius: 10px;
+  width: 560px;
+  height: 180px;
+  box-sizing: border-box;
+}
+
+.ep_top2 .ep_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ep_info2 h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.ep_info2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Нужные
+---------------------------------------- */
+
+.cc_wanted {
+  position: relative;
+  margin: 25px auto 0;
+  background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 20px 0px;
+  width: 600px;
+  box-sizing: border-box;
+}
+
+.cc_wanted::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/76/27/69523.png) no-repeat top center;
+  width: 73px;
+  height: 119px;
+  display: block;
+  position: absolute;
+  top: -27px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.wanted_top {
+  padding: 0 20px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.wt_left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wt_left > div {
+  display: flex;
+  gap: 5px;
+}
+
+.wt_left img {
+  border: 1px solid var(--gray-400);
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wt_left small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--gray-800);
+}
+
+.wt_right {
+  flex-grow: 1;
+}
+
+.wt_right h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.wt_right small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+}
+
+.wt_right ul {
+  margin-top: 10px;
+}
+
+.cc_wanted li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.wt_content section {
+  position: relative;
+  border-top: 1px dashed var(--gray-400);
+  padding: 25px 20px;
+}
+
+.wt_content section:last-of-type {
+  padding-bottom: 0;
+}
+
+.wt_content section span {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  left: 10px;
+  top: -7px;
+}
+
+.wt_content section p, .punbb .wt_content section p {
+  padding: 0 0 10px 0;
+  text-align: left;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.wt_content section p:last-of-type, .punbb .wt_content section p:last-of-type {
+  padding: 0;
+}
+
+.wt_content details {
+  background: var(--gray-200);
+}
+
+/* html-конструктор
+------------------------------------- */
+
+.cc_html {
+  margin: 10px auto 0;
+  background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  box-shadow: 0 0 0 1px var(--gray-300);
+  width: 600px;
+  border-radius: 10px;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.html_title {
+  border-radius: 10px 10px 0 0;
+  height: 70px;
+  background: var(--gray-800);
+  position: relative;
+}
+
+.html_title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px dashed var(--gray-250);
+}
+
+.html_title img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  box-sizing: border-box;
+}
+
+.html_main {
+  padding: 20px 0;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.html_info {
+  padding: 0 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.html_badge {
+  margin: 2px 0;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 2px 5px 3px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  text-align: justify;
+  color: var(--gray-200);
+}
+
+.html_info h4 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-800);
+}
+
+.html_text {
+  flex-grow: 1;
+  max-width: 360px;
+}
+
+.html_info p, .punbb .html_info p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--gray-800);
+  text-align: left;
+  padding: 0;
+}
+
+.html_main section {
+  position: relative;
+  border-top: 1px dashed var(--gray-400);
+  padding: 25px 20px;
+}
+
+.html_main section:last-of-type {
+  padding-bottom: 0;
+}
+
+.html_main span {
+  position: absolute;
+  width: fit-content;
+  background: var(--gray-800);
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--gray-200);
+  line-height: 11px;
+  top: -7px;
+}
+
+.html_main section span {
+  left: 10px;
+}
+
+.html_main section p, .punbb .html_main section p {
+  text-align: left;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+.html_block {
+  position: relative;
+  margin: 10px auto 0;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+  padding: 20px;
+  width: 560px;
+  box-sizing: border-box;
+}
+
+.html_block p, .punbb .html_block p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 9px;
+  text-transform: lowercase;
+  color: var(--gray-800);
+}
+
+.cc_html hr, .punbb .cc_html hr {
+  margin: 0 !important;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed var(--gray-400);
+  opacity: 1 !important;
+}
+
 /* ------------------------------------- */
+
 
 #form-buttons {
   display: flex;
@@ -4081,6 +4835,32 @@ div.n_bp > a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: justify;
+}
+
+ /* Фикс для клавиатуры
+----------------------------------------------------------------------- */
+
+.punbb #keyboard-span {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 460px;
+}
+
+.punbb #keyboard-span input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 5px;
+  font-family: var(--font-family);
+  color: var(--gray-800);
+  font-size: 14px;
+  line-height: 14px;
+  height: auto;
+  width: auto;
+  flex-grow: 1;
 }
 
 
@@ -4525,20 +5305,23 @@ div .post-rating p > a {
   line-height: 127%;
   color: var(--gray-800);
 }
+
 div.post-vote p > a {
     font-size: 0 !important;
 }
+
 div .post-rating p::before, div .post-vote p a::before {
   margin-right: 5px;
-  content: '\e87d';
-  font-family: var(--msr);
-  font-weight: 500;
-  font-size: 12px;
+  content: '\f004';
+  font-family: var(--fa);
+  font-weight: 700;
+  font-size: 14px;
   line-height: 100%;
   color: var(--gray-300);
   transition: all .2s linear 0s;
   cursor: pointer;
 }
+
 div .post-vote p a::before {
   content: '';
   background: url(https://forumstatic.ru/files/0016/01/4e/34044.svg) no-repeat center/20px;
@@ -4546,20 +5329,24 @@ div .post-vote p a::before {
   height: 24px;
   display: block;
 }
+
 div .post-rating p:hover:before,
 div .post-vote p:hover a:before {
    color: var(--salmon);
 }
+
 div .post-rating p:hover > a,
 div .mylike .post-rating p > a {
-
 }
+
 div .mylike .post-rating p::before {
   color: var(--salmon);
 }
+
 .post[data-group-id="3"] .post-rating {
     display: none;
 }
+
 .isguest .post .post-rating {
     pointer-events: none;
 }
