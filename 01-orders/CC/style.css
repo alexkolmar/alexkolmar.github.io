@@ -7,7 +7,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 /* SF Pro Display */
-@import url('https://alexkolmar.github.io/fonts/SF/stylesheet.css');
+/*@import url('https://alexkolmar.github.io/fonts/SF/stylesheet.css');*/
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.eot');
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Bold.svg#SFProDisplay-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/SF/SFProDisplay-Regular.svg#SFProDisplay-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Heavy'), local('SFProDisplay-Heavy'),
+        url('https://forumstatic.ru/files/001c/76/27/13585.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* Paper */
 @import url('https://alexkolmar.github.io/fonts/Paper/stylesheet.css');
@@ -81,7 +118,7 @@
   --carbonade: #f6d8d9;
   --pwidth: 220px;
   --pad1: 10px 30px;
-  --pad2: 5px 30px;
+  --pad2: 5px 31px;
   --pad3: 5px 10px;
   --msr: 'Material Symbols Rounded';
   --fa: "Font Awesome 6 Pro", "Font Awesome 6 Brands";
@@ -148,8 +185,8 @@
 /* выделение текста */
 
 ::selection {
-  background: var(--salmon);
-  color: var(--gray-200);
+  background: var(--carbonade);
+  color: var(--gray-800);
 }
 
 :focus {
@@ -937,9 +974,20 @@ tr.iclosed div.icon {
   border-radius: 10px;
   padding: 35px;
   width: 940px;
-  background: url(https://forumstatic.ru/files/0016/01/4e/98373.svg) repeat-y top right 320px var(--gray-200);
+  /*background: url(https://forumstatic.ru/files/0016/01/4e/98373.svg) repeat-y top right 320px var(--gray-200);*/
+background: var(--gray-200);
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0 auto; position: relative;
+}
+
+#pun-index .category .container::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 320px;
+    top: 0;
+    border-left: 1px dashed var(--gray-400); 
 }
 
 #pun-index .category tr {
@@ -997,18 +1045,22 @@ tr.iclosed div.icon {
 
 #pun-index .Add {
   position: absolute;
-  bottom: 0;
+  top: 25px;
   right: 0;
   display: flex;
   margin-left: auto;
   gap: 5px;
-  width: 54px;
+  width: 68px;
   align-items: center;
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 9px;
   color: var(--gray-550);
+}
+
+#pun-index .inew .Add {
+    top: 60px;
 }
 
 #pun-index .category .intd {
@@ -1021,7 +1073,7 @@ tr.iclosed div.icon {
   flex-grow: 1;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   text-align: justify;
   color: var(--gray-800);
 }
@@ -1040,6 +1092,7 @@ tr.iclosed div.icon {
 
 #pun-index .category .tcl h3 a {
   color: var(--gray-800);
+  font-weight: 800;
 }
 
 #pun-index .category .tcl h3 a:hover {
@@ -1053,13 +1106,13 @@ tr.iclosed div.icon {
 #pun-index .tcl .forumlinks a {
   border: 1px solid var(--gray-300);
   border-radius: 5px;
-  padding: 1px 5px 2px 5px;
+  padding: 2px 6px;
   display: inline-block;
   box-sizing: border-box;
   line-height: 9px;
   font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 9px;
+  font-weight: 500;
+  font-size: 10px;
   text-transform: lowercase;
   color: var(--gray-800);
 }
@@ -1073,7 +1126,7 @@ tr.iclosed div.icon {
   text-align: center;
   font-family: var(--font6);
   font-weight: 600;
-  font-size: 7px;
+  font-size: 10px;
   line-height: 86%;
   color: var(--gray-800);
   white-space: nowrap;
@@ -1083,8 +1136,8 @@ tr.iclosed div.icon {
   position: relative;
   margin: 0;
   padding: 2px 5px;
-  width: 54px;
-  height: 10px;
+  width: 68px;
+  height: 16px;
   box-sizing: border-box;
   box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.25);
   background: var(--gray-200);
@@ -1131,13 +1184,14 @@ tr.iclosed div.icon {
 }
 
 #pun-index .category .tcr {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gray-800);
   text-transform: lowercase;
   width: 250px;
 }
 
 #pun-index .tcr .lastpost-link {
+  font-size: 11px;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-skip-ink: none;
@@ -1171,14 +1225,15 @@ tr.iclosed div.icon {
 
 #pun-stats::before {
   content: "";
-  background: url(https://forumstatic.ru/files/0016/01/4e/12517.png) no-repeat left top;
-  width: 44px;
-  height: 42px;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 41px;
-  left: -24px;
+    background: url(https://forumstatic.ru/files/001c/76/27/84851.png) no-repeat left top;
+    width: 44px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 41px;
+    left: -24px;
+    background-size: 44px 42px;
 }
 
 #pun-stats {
@@ -1194,34 +1249,55 @@ tr.iclosed div.icon {
 
 #pun-stats::after {
   content: "";
-  background: url(https://forumstatic.ru/files/0016/01/4e/28658.png) no-repeat left top;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  width: 58px;
-  height: 56px;
-  top: -7px;
-  right: -7px;
+    background: url(https://forumstatic.ru/files/001c/76/27/54187.png) no-repeat left top;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 58px;
+    height: 56px;
+    top: -7px;
+    right: -7px;
+    background-size: 58px 56px;
 }
 
 /* заголовок статистики */
 
 #pun-stats h2 {
   position: absolute;
-  top: -17px;
+  top: -9px;
   left: -10px;
   padding: 0;
-  background: url(https://forumstatic.ru/files/0016/01/4e/20763.svg) no-repeat top center;
+transform: rotate(-5deg);
+  /*background: url(https://forumstatic.ru/files/0016/01/4e/20763.svg) no-repeat top center;
   width: 226px;
-  height: 40px;
+  height: 40px;*/
 }
 
 #pun-stats h2 span {
-  font-size: 0;
+  /*font-size: 0;*/
+position: relative;
+    z-index: 2;
+    font-size: 20px;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+
+#pun-stats h2::before {
+  content: "вот они слева направо";
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-stroke: 6px #fbfbfb;
+    color: #00000000;
+    z-index: 0;
+    filter: drop-shadow(1px 1px 1px rgb(89, 89, 89, 0.25));
+    font-size: 20px;
+    font-family: var(--font-family);
+    font-weight: 800;
 }
 
 #pun-stats .container {
-  padding: 35px;
+  /*padding: 35px;
   display: flex;
   justify-content: space-between;
   gap: 0 70px;
@@ -1230,8 +1306,29 @@ tr.iclosed div.icon {
   box-sizing: border-box;
   font-weight: 400;
   font-size: 9px;
-  color: var(--gray-800);
+  color: var(--gray-800);*/
+padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 70px;
+    background: url(https://forumstatic.ru/files/001c/76/27/80892.png) no-repeat center right 162px;
+    min-height: 200px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 9px;
+    color: var(--gray-800);
+    background-size: 110px 158px;
+    position: relative;
 }
+
+#pun-stats .container::before {
+content: "";
+    width: 1px;
+    height: 200px;
+    position: absolute;
+    right: 262px;
+    top: 0;
+    border-left: 1px dashed var(--gray-400);}
 
 /* всего тем, всего сообщений, зарегистрированных, последний зарегистрировавшийся */
 
@@ -1258,7 +1355,7 @@ li#onlinelist {
 
 #pun-stats #onlinelist div > a, .stats_wrap span {
   font-weight: 700;
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gray-800);
 }
 
@@ -1268,7 +1365,7 @@ li#onlinelist {
 
 #pun-stats #onlinelist div, #pun-stats #onlinelist div strong {
   font-weight: 400;
-  font-size: 8px;
+  font-size: 9px;
   color: var(--gray-550);
 }
 
@@ -1278,7 +1375,7 @@ li#onlinelist {
 }
 
 #pun-stats #onlinelist div > span a {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--gray-800);
 }
 
@@ -1327,18 +1424,18 @@ li#onlinelist {
 .hu1 {
   position: absolute;
   padding: 2px 5px;
-  width: 81px;
-  height: 22px;
+  width: 90px;
+  height: 25px;
   box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.35);
   background: var(--gray-200);
   transform: rotate(-10deg);
   font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 7px;
   line-height: 86%;
   color: var(--gray-800);
   top: 90px;
   left: 78px;
+  font-weight: 400;
+  font-size: 9px;
 }
 
 .tab_writers {
@@ -1759,6 +1856,7 @@ button.mirror_button {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-right: 10px;
 }
 
 .tf_inner > div {
@@ -1867,6 +1965,7 @@ button.mirror_button {
     background: var(--gray-200);
     box-sizing: border-box;
     flex-shrink: 0;
+    z-index: 2;
 }
 
 .np:hover {
@@ -1935,24 +2034,26 @@ font-family: var(--font-family);
 
 .banners::before {
   content: "";
-  display: block;
-  position: absolute;
-  background: url(https://forumstatic.ru/files/0016/01/4e/60742.png) no-repeat top center;
-  width: 126px;
-  height: 162px;
-  left: -70px;
-  top: 15px;
+    display: block;
+    position: absolute;
+    background: url(https://forumstatic.ru/files/001c/76/27/46212.png) no-repeat top center;
+    width: 212px;
+    height: 208px;
+    left: -123px;
+    top: -17px;
+    background-size: 212px 208px;
 }
 
 .banners::after {
   content: "";
-  display: block;
-  position: absolute;
-  background: url(https://forumstatic.ru/files/0016/01/4e/62724.png) no-repeat top center;
-  width: 108px;
-  height: 80px;
-  top: 10px;
-  right: -100px;
+    display: block;
+    position: absolute;
+    background: url(https://forumstatic.ru/files/001c/76/27/92205.png) no-repeat top center;
+    width: 135px;
+    height: 135px;
+    top: -14px;
+    right: -102px;
+    background-size: 135px 135px;
 }
 
 #html-footer .banners .container::-webkit-scrollbar {
@@ -2105,7 +2206,7 @@ font-family: var(--font-family);
   padding: 0 5px;
   transform: translateY(-8px);
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   color: var(--salmon);
   text-transform: lowercase;
@@ -2134,7 +2235,7 @@ font-family: var(--font-family);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 9px;
+  font-size: 11px;
   color: var(--gray-800);
   text-align: left;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09), 0 3px 2px 0 rgba(0, 0, 0, 0.05), 0 5px 2px 0 rgba(0, 0, 0, 0.01), 0 7px 2px 0 rgba(0, 0, 0, 0);
@@ -2185,7 +2286,7 @@ font-family: var(--font-family);
 
 .lz .name {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 11px;
   text-align: justify;
   text-transform: lowercase;
   display: block;
@@ -2194,7 +2295,7 @@ font-family: var(--font-family);
 }
 
 .lz p {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gray-800);
   text-align: left;
   padding: 8px 0;
@@ -2227,36 +2328,36 @@ font-family: var(--font-family);
 .pa-respect .fld-name a:before, .gid3 .pa-respect .fld-name:before,
 .pa-fld2 .fld-name:before {
   content: "";
-  font-size: 12px;
-  font-weight: 500;
-  font-family: var(--msr);
-}
-
-.pa-posts .fld-name:before {
-  content: "\e625";
-}
-
-.pa-respect .fld-name a:before, .gid3 .pa-respect .fld-name:before {
-  content: "\e87d";
-  color: var(--gray-800);
-}
-
-.pa-fld2 .fld-name::before {
-  content: "";
-  background: url(https://forumstatic.ru/files/0016/01/4e/70999.svg) no-repeat top center;
   width: 12px;
   height: 12px;
   display: block;
 }
 
+.pa-posts .fld-name:before {
+  background: url(https://forumstatic.ru/files/001c/76/27/68621.svg) no-repeat top center;
+}
+
+.pa-respect .fld-name a:before, .gid3 .pa-respect .fld-name:before {
+  background: url(https://forumstatic.ru/files/001c/76/27/84754.svg) no-repeat top center;
+}
+
+.pa-respect .fld-name a:hover:before, .gid3 .pa-respect .fld-name:hover:before {
+  background: url(https://forumstatic.ru/files/001c/76/27/84754.svg) no-repeat top center;
+}
+
+.pa-fld2 .fld-name::before {
+  background: url(https://forumstatic.ru/files/0016/01/4e/70999.svg) no-repeat top center;
+}
+
 .plank {
   display: flex;
   height: 40px;
-  border-top: 1px dashed;
   align-items: center;
   justify-content: flex-end;
   position: relative;
 }
+
+.plank img {max-width: 220px;}
 
 .plank.glass::before {
   content: "";
@@ -2268,6 +2369,18 @@ font-family: var(--font-family);
   top: 0;
   z-index: 1;
   border-radius: 30% 70% 50% 50% / 0% 0% 100% 100%;
+border-top: 1px #fbfbfb dashed;
+}
+
+.plank::after {
+  content: "";
+  height: 1px;
+  width: 220px;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px dashed var(--gray-200);
 }
 
 .punbb .plank p {
@@ -2385,16 +2498,13 @@ font-family: var(--font-family);
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 10px;
 }
 
 .post-links li:not(:first-of-type) {
   padding-left: 10px;
-}
-
-.post-links li {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 9px;
 }
 
 .post-links li a {
@@ -2491,9 +2601,12 @@ pre {
 .post-content p {
   margin: 0;
   padding: 0 0 12px 0;
-  line-height: 142%;
+  line-height: 17px;
   color: var(--gray-800);
   text-align: justify;
+  font-size: 12px;
+  font-family: var(--font-family);
+  font-weight: 500;
 }
 
 .post-content img {
@@ -2601,12 +2714,14 @@ pre {
 
 .quote-box:not(.spoiler-box) blockquote, .code-box .blockcode {
   border: 1px solid var(--gray-300);
+  background: var(--gray-250);
   border-radius: 3px;
   padding: 20px 15px 5px;
 }
 
 .quote-box.spoiler-box {
   border: 1px solid var(--gray-300);
+  background: var(--gray-250);
   border-radius: 3px;
   padding: 10px 15px;
 }
@@ -2678,6 +2793,15 @@ pre {
   top: 0 !important;
   max-height: 300px;
   overflow: auto;
+}
+
+#post-form input.submit {
+  background: var(--dusty-rose);
+  color: var(--gray-200);
+}
+
+#post-form input.submit:hover {
+  background: var(--meat);
 }
 
 

@@ -963,20 +963,52 @@ select.pp_twins {
 ---------------------------------- */
 
 .news {
+  position: relative;
   margin: 0 auto;
   padding: 56px 20px 20px;
   box-sizing: border-box;
   width: 762px;
   height: 540px;
-  background: url(https://forumstatic.ru/files/0016/01/4e/23029.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/001c/76/27/75300.svg) no-repeat top -90px left, url(https://forumstatic.ru/files/001c/76/27/50136.svg) no-repeat bottom -114px right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
   display: flex;
   flex-direction: column;
   gap: 25px;
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
 }
 
-.news > img {
+.news .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 70px;
+  width: 100%;
+}
+
+/*.news > img {
   display: block;
   margin: 0 auto;
+}*/
+
+.news_header {    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    font-family: var(--font-family);
+    font-weight: 800; width: 100%;
+    display: flex;
+    justify-content: center; color: #CC7F82}
+
+.news_header::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    -webkit-text-stroke: 6px #fbfbfb;
+    color: #00000000;
+    z-index: -1;
+    filter: drop-shadow(1px 1px 1px rgb(89, 89, 89, 0.25));
+    font-size: 24px;
+    font-family: var(--font-family);
+    font-weight: 800;
 }
 
 .news_inner {
@@ -1091,7 +1123,7 @@ select.pp_twins {
   font-size: 10px;
   color: var(--gray-200);
   padding: 0;
-  line-height: 
+  line-height: 13px;
 }
 
 .n_bubble2 {
@@ -1113,6 +1145,7 @@ select.pp_twins {
   font-size: 10px;
   color: var(--gray-800);
   padding: 0;
+  line-height: 13px;
 }
 
 .n_writers {
@@ -1247,14 +1280,21 @@ div.n_bp > a {
 ------------------------------------- */
 
 .cc_shop {
+  position: relative;
   box-shadow: 0 0 0 1px var(--gray-300);
-  background: url(https://forumstatic.ru/files/0016/01/4e/46591.png) no-repeat top center var(--gray-200);
+  background: url(https://forumstatic.ru/files/001c/76/27/75300.svg) no-repeat top -156px left -60px, url(https://forumstatic.ru/files/001c/76/27/50136.svg) no-repeat bottom -110px right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
   border-radius: 10px;
   padding: 100px 30px 30px;
-  width: 862px;
+  width: 860px;
   height: 1047px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 10px auto 1px;
+}
+
+.cc_shop .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .shop_buy, .shop_individual {
@@ -1289,6 +1329,7 @@ div.n_bp > a {
   font-size: 10px;
   color: var(--gray-800);
   padding-bottom: 5px;
+  line-height: 127%;
 }
 
 .shop_descr ul {
@@ -1552,17 +1593,29 @@ div.n_bp > a {
 ------------------------------------- */
 
 .cc_faces {
-  margin: 0 auto;
+  position: relative;
+  margin: 10px auto 1px;
   padding: 56px 35px 35px;
-  width: 762px;
+  width: 760px;
   height: 807px;
   box-sizing: border-box;
-  background: url(https://forumstatic.ru/files/001c/76/27/45590.png);
+  background: url(https://forumstatic.ru/files/001c/76/27/75300.svg) no-repeat top 62px left -30px, url(https://forumstatic.ru/files/001c/76/27/50136.svg) no-repeat bottom -110px right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  box-shadow: 0 0 0 1px var(--gray-300);
+  border-radius: 10px;
+}
+
+
+.cc_faces .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .cc_faces img {
+  position: relative;
   display: block;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .faces_info {
@@ -1829,7 +1882,7 @@ div.n_bp > a {
 
 .cc_quenta::before {
   content: "";
-  background: url(https://forumstatic.ru/files/001c/76/27/84332.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/001c/76/27/11957.png) no-repeat top center/cover;
   display: block;
   width: 50px;
   height: 106px;
@@ -2065,8 +2118,16 @@ div.n_bp > a {
 }
 
 .loctext {
-  padding: 20px 0 30px 20px;
+  padding: 20px 0 20px 20px;
   flex-grow: 1;
+  height: 190px;
+  box-sizing: border-box;
+}
+
+.locscroll {
+  padding-right: 10px;
+  max-height: 150px;
+  overflow: auto;
 }
 
 .loctext h5 {
@@ -2372,6 +2433,10 @@ div.n_bp > a {
 
 .plot_details section:not(:last-of-type) {
   margin-bottom: 15px;
+}
+
+.award_img {
+  width: 100%;
 }
 
 .plot_details span {
@@ -3034,7 +3099,7 @@ div.n_bp > a {
 ------------------------------------- */
 
 .cc_quests {
-  margin: 10px auto 0;
+  margin: 10px auto 1px;
   box-shadow: inset 0 0 0 1px var(--gray-300);
   background: url(https://forumstatic.ru/files/001c/76/27/28064.svg) no-repeat top left, url(https://forumstatic.ru/files/001c/76/27/21986.svg) no-repeat top right, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right #f5f5f5;
   border-radius: 10px;
@@ -3180,14 +3245,21 @@ div.n_bp > a {
 
 
 .cc_quest {
-  margin: 10px auto 0;
+  position: relative;
+  margin: 10px auto 1px;
   box-shadow: 0 0 0 1px var(--gray-300);
-  background: url(https://forumstatic.ru/files/001c/76/27/85336.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
   border-radius: 10px;
   padding: 100px 30px 30px;
   width: 760px;
   min-height: 500px;
   box-sizing: border-box;
+}
+
+.cc_quest .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .quest_info {
@@ -3360,14 +3432,21 @@ div.n_bp > a {
 ---------------------------------------- */
 
 .cc_artifacts {
-  margin: 10px auto 0;
+  position: relative;
+  margin: 10px auto 1px;
   box-shadow: 0 0 0 1px var(--gray-300);
-  background: url(https://forumstatic.ru/files/001c/76/27/12285.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
   border-radius: 10px;
   padding: 100px 30px 30px;
   width: 760px;
   min-height: 500px;
   box-sizing: border-box;
+}
+
+.cc_artifacts .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .arts_info {
@@ -3723,8 +3802,8 @@ div.n_bp > a {
 
 .cc_charlist {
   position: relative;
-  margin: 10px auto 0;
-  box-shadow: inset 0 0 0 1px var(--gray-300);
+  margin: 10px auto 1px;
+  box-shadow: 0 0 0 1px var(--gray-300);
   border-radius: 10px;
   padding: 100px 30px 30px;
   width: 860px;
@@ -3733,12 +3812,19 @@ div.n_bp > a {
   box-sizing: border-box;
 }
 
+.cc_charlist .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .cc_charlist > img {
   display: block;
   position: absolute;
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
 .char_content {
@@ -4030,9 +4116,9 @@ div.n_bp > a {
 
 .cc_lottery {
   margin: 10px auto 0;
-  padding: 90px 0 20px;
-  box-shadow: inset 0 0 0 1px var(--gray-300);
-  background: url(https://forumstatic.ru/files/001c/76/27/22414.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
+  padding: 0 0 20px;
+  box-shadow: 0 0 0 1px var(--gray-300);
+  background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
   border-radius: 10px;
   width: 600px;
   min-height: 500px;
@@ -4041,7 +4127,7 @@ div.n_bp > a {
 
 .lot_info {
   margin-bottom: 20px;
-  padding: 0 20px 20px;
+  padding: 20px;
   border-bottom: 1px dashed var(--gray-400);
   display: flex;
   align-items: flex-start;
@@ -4252,14 +4338,21 @@ div.n_bp > a {
 ---------------------------------------- */
 
 .cc_achieves {
-  margin: 10px auto 0;
-  background: url(https://forumstatic.ru/files/001c/76/27/31913.png) no-repeat top center, url(https://forumstatic.ru/files/001c/76/27/16542.svg) no-repeat top left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat #f5f5f5;;
-  box-shadow: inset 0 0 0 1px var(--gray-300);
+  position: relative;
+  margin: 10px auto 1px;
+  background: url(https://forumstatic.ru/files/001c/76/27/16542.svg) no-repeat top left, url(https://forumstatic.ru/files/001c/76/27/21682.svg) no-repeat bottom right, url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat #f5f5f5;
+  box-shadow: 0 0 0 1px var(--gray-300);
   border-radius: 10px;
   padding: 100px 30px 30px;
   width: 860px;
   min-height: 500px;
   box-sizing: border-box;
+}
+
+.cc_achieves .html_title {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .achieves_info {
@@ -4531,7 +4624,7 @@ div.n_bp > a {
 
 .cc_wanted::before {
   content: "";
-  background: url(https://forumstatic.ru/files/001c/76/27/69523.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/001c/76/27/54490.png) no-repeat top center/cover;
   width: 73px;
   height: 119px;
   display: block;
@@ -4651,11 +4744,12 @@ div.n_bp > a {
   background: var(--gray-200);
 }
 
+
 /* html-конструктор
 ------------------------------------- */
 
 .cc_html {
-  margin: 10px auto 0;
+  margin: 10px auto 1px;
   background: url(https://forumstatic.ru/files/001c/76/27/22010.jpg) repeat var(--gray-200);
   box-shadow: 0 0 0 1px var(--gray-300);
   width: 600px;
@@ -4679,6 +4773,7 @@ div.n_bp > a {
   height: 1px;
   width: 100%;
   border-bottom: 1px dashed var(--gray-250);
+  z-index: 2;
 }
 
 .html_title img {
@@ -4740,6 +4835,10 @@ div.n_bp > a {
   padding: 0;
 }
 
+.cc_html p img {
+  vertical-align: middle;
+}
+
 .html_main section {
   position: relative;
   border-top: 1px dashed var(--gray-400);
@@ -4791,9 +4890,12 @@ div.n_bp > a {
 .html_block p, .punbb .html_block p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 9px;
+  font-size: 12px;
+  line-height: 142%;
   text-transform: lowercase;
   color: var(--gray-800);
+  padding: 0;
+  text-align: left;
 }
 
 .cc_html hr, .punbb .cc_html hr {
@@ -4803,6 +4905,56 @@ div.n_bp > a {
   border-bottom: 1px dashed var(--gray-400);
   opacity: 1 !important;
 }
+
+.cc_html details {
+  border: 1px solid var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 3px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.cc_html details:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.cc_html details[open] {
+  padding: 15px 15px 10px;
+}
+
+.cc_html details summary {
+  display: inline-flex;
+  gap: 5px;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 1px 5px 2px;
+  width: fit-content;
+  background: var(--gray-800);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  text-align: justify;
+  color: var(--gray-200);
+  text-transform: lowercase;
+  line-height: 13px;
+  left: 20px;
+  position: absolute;
+  transform: translatey(-50%);
+  top: 0;
+  cursor: pointer;
+}
+
+.cc_html details summary:before {
+  content: "\e313";
+  font-family: var(--msr);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cc_html details[open] summary:before {
+  content: "\e316";
+}
+
 
 /* Магические законы
 ---------------------------------------- */
@@ -4815,7 +4967,6 @@ div.n_bp > a {
   padding: 30px;
   width: 860px;
   box-sizing: border-box;
-  min-height: 700px;
 }
 
 .mrules_info {
@@ -4864,6 +5015,7 @@ div.n_bp > a {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 8px;
+  font-style: normal;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--gray-200);
@@ -4892,8 +5044,8 @@ div.n_bp > a {
 ---------------------------------------- */
 
 .cc_instm {
-  margin: 10px auto 0;
-  box-shadow: inset 0 0 0 1px var(--gray-250);
+  margin: 10px auto 1px;
+  box-shadow: 0 0 0 1px var(--gray-250);
   background: var(--white);
   border-radius: 20px 20px 10px 10px;
   padding: 20px 0px 10px;
@@ -4991,6 +5143,8 @@ div.n_bp > a {
   font-size: 13px;
   line-height: 123%;
   color: var(--gray-800);
+  padding: 0;
+  text-align: left;
 }
 
 .inst2 a {
@@ -5057,8 +5211,315 @@ div.n_bp > a {
   border-radius: 0 0 10px 0;
 }
 
+.cc_instp {
+  margin: 10px auto 1px;
+  background: var(--white);
+  box-shadow: 0 0 0 1px var(--gray-250);
+  border-radius: 15px;
+  padding: 15px 0px;
+  width: 390px;
+}
+
+.inst5 {
+  padding: 0 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.instf {
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  object-position: center;
+  background: var(--gray-600);
+  flex-shrink: 0;
+}
+
+.inst5 span {
+  display: block;
+  flex-grow: 1;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gray-800);
+}
+
+.inst6 img {
+  width: 100%;
+  height: 390px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  background: var(--gray-600);
+}
+
+.inst7 {
+  padding: 10px 15px;
+  border-bottom: 1px dashed var(--gray-300);
+}
+
+.inst7 p, .punbb .inst7 p {
+  text-align: left;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--gray-800);
+}
+
+.inst8 {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 0;
+  gap: 10px;
+}
+
+.inst8 > div, .inst11 > div {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.inst8 span, .inst11 span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 160%;
+  color: var(--gray-800);
+}
+
+.inst8 .comm8 {
+  flex-grow: 1;
+}
+
+.cc_instc {
+  margin: 10px auto 1px;
+  box-shadow: 0 0 0 1px var(--gray-250);
+  background: var(--white);
+  border-radius: 15px;
+  padding: 15px 0px;
+  width: 390px;
+  box-sizing: border-box;
+}
+
+.inst9 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 15px 10px;
+  border-bottom: 1px dashed var(--gray-300);
+}
+
+.img9 {
+  flex-shrink: 0;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  background: var(--gray-550);
+}
+
+.names9 {
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.names9 span {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gray-800);
+}
+
+.names9 small {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: lowercase;
+  color: var(--gray-500);
+}
+
+.inst10 {
+  margin: 10px 0;
+  padding: 5px 15px;
+}
+
+.inst10 p, .punbb .inst10 p {
+  text-align: left;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray-800);
+}
+
+.inst11 {
+  border-top: 1px dashed var(--gray-300);
+  padding: 10px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+
+/* Ивент
+--------------------------------------- */
+
+.cc_event .html_block {
+  background: var(--gray-200);
+}
+
+.cc_event section {
+  border-top: none;
+  border-bottom: 1px dashed var(--gray-400);
+  padding: 10px 20px 20px !important;
+}
+
+.cc_event .html_block hr {
+  margin: 20px 0 !important
+}
+
+.ev_header {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.ev_header h5 {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  text-align: center;
+  color: var(--gray-800);
+}
+
+.ev_date {
+  width: fit-content;
+  border-radius: 1000px;
+  padding: 5px 15px;
+  background: var(--gray-250);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--gray-800);
+}
+
+.ev_awards, .pz_awards {
+  display: block;
+  margin: 0 auto;
+}
+
+.ev_content {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ev_content > div {
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: var(--gray-800);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: lowercase;
+  color: var(--gray-200);
+}
+
+/* Паззлы
+---------------------------------------- */
+
+.cc_puzzle .html_block {
+  background: var(--gray-200);
+}
+
+.cc_puzzle .html_block ul {
+  margin-left: 15px;
+}
+
+.cc_puzzle .html_block ul, .cc_puzzle .html_block li {
+  list-style: disc;
+}
+
+.cc_puzzle .html_block p, .punbb .cc_puzzle .html_block p, .cc_puzzle .html_block li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+}
+
+/* Апдейт
+---------------------------------------- */
+
+.cc_update {
+  margin: 10px auto 0;
+  box-shadow: inset 0 0 0 1px var(--gray-300);
+  background: var(--gray-200);
+  border-radius: 10px;
+  padding: 0 20px 20px;
+  width: 560px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cc_update h5 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--dusty-rose);
+  top: -9px;
+  position: relative;
+  margin-bottom: -4px;
+}
+
+.cc_update p, .punbb .cc_update p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 142%;
+  color: var(--gray-800);
+  text-align: left;
+  padding: 0;
+}
+
+
+
 /* ------------------------------------- */
 
+#Bubble {
+  border-radius: 5px;
+  padding: 3px 5px 4px 17px;
+  width: fit-content;
+  background: url(https://forumstatic.ru/files/001c/76/27/25760.svg) no-repeat left 3px center var(--dusty-rose);
+}
+
+#Bubble a {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 9px;
+  text-align: justify;
+  color: var(--gray-200);
+  display: block;
+}
 
 #form-buttons {
   display: flex;
@@ -5157,10 +5618,19 @@ div.n_bp > a {
     justify-content: center;
     pointer-events: none;
     z-index: 1;
+    transition: all .2s linear 0s;
 }
 
-#form-buttons td:hover::before {
-    color: red; /* цвет при наведении */
+#form-buttons td:hover:before {
+  background: var(--gray-250);
+  border-radius: 3px;
+}
+
+
+#form-buttons td:active:before {
+  color: var(--gray-200);
+  background: var(--blush);
+  border-radius: 3px;
 }
 
 
@@ -5555,7 +6025,7 @@ div .post-rating p > a {
   font-family: var(--font-family);
   font-size: 14px !important;
   font-weight: 400;
-  line-height: 127%;
+  line-height: 17px;
   color: var(--gray-800);
 }
 
@@ -5565,7 +6035,7 @@ div.post-vote p > a {
 
 div .post-rating p::before, div .post-vote p a::before {
   margin-right: 5px;
-  content: '\f004';
+  content: '';
   font-family: var(--fa);
   font-weight: 700;
   font-size: 14px;
@@ -5573,6 +6043,9 @@ div .post-rating p::before, div .post-vote p a::before {
   color: var(--gray-300);
   transition: all .2s linear 0s;
   cursor: pointer;
+  background: url(https://forumstatic.ru/files/001c/76/27/54254.svg) no-repeat center;
+  width: 14px;
+  height: 15px;
 }
 
 div .post-vote p a::before {
@@ -5594,6 +6067,7 @@ div .mylike .post-rating p > a {
 
 div .mylike .post-rating p::before {
   color: var(--salmon);
+  background: url(https://forumstatic.ru/files/001c/76/27/85089.svg) no-repeat center;
 }
 
 .post[data-group-id="3"] .post-rating {
