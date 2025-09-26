@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'ChinaCyr';
+    src: url('https://alexkolmar.github.io/fonts/ChinaCyr/ChinaCyr.eot');
+    src: local('ChinaCyr'),
+        url('https://alexkolmar.github.io/fonts/ChinaCyr/ChinaCyr.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/ChinaCyr/ChinaCyr.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/ChinaCyr/ChinaCyr.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/ChinaCyr/ChinaCyr.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/ChinaCyr/ChinaCyr.svg#ChinaCyr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
