@@ -1,0 +1,16 @@
+<!-- Отступы -->
+<style>#button-indent {background:url(http://s7.uploads.ru/t/mnkgq.png)no-repeat center 6px!important;}</style>
+<!--ТЕГ  абзаца - [indent=X,Y] --><script type="text/javascript">
+(function(){var c="[indent",h,e='<span style="display:inline-block;margin:YYem XXem;"></span>';
+$("#button-strike").after('<td id="button-indent" title="Отступы"><img src="/i/blank.gif"  onclick="smile(\''+c+']\')\"></td>');
+function a(b,d){if(!d){return e.replace("XX","0.5").replace("YY","0")} /*удвоенные Отступы слево и сверху по умолчанию*/
+else{return d.replace(/=(\d+(?:\.\d+)?)((?:,\d+(?:\.\d+)?)?)$/,function(f,i,g){h=e.replace("XX",i);v=g.substr(1);return h.replace("YY",(v?v:"0"));
+})}}$('.post-content p:contains("'+c+'")').each(function(){$(this).html($(this).html().replace(/\[indent([=\d\.,]*?)\]/gm,a))})}());
+</script>
+
+
+<script>
+$(".punbb:not(#pun-index) .tcr").each(function(){
+$(this).find('a:not(:first-child), .byuser').wrapAll("<div class='lastpost_wrap'>");
+});
+</script>

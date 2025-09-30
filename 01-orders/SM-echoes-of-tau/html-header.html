@@ -1,0 +1,31 @@
+<div class="tablica">
+  <img class="tab_glitch" src="https://forumstatic.ru/files/001c/8b/f1/65432.gif">
+  <div class="tab_descr">
+    <p>Портал в мёртвую систему Тау разорвал небо.</p>
+    <p>Призраки жаждут тел. Кристаллы воинов гаснут от разногласий.</p>
+    <p>Спасти город — или друг друга?</p>
+  </div>
+  <div class="tab_right">
+    <div class="tab_links">
+      <a href="">гостевая</a>
+      <a href="">роли</a>
+      <a href="">правила</a>
+      <a href="">f.a.q.</a>
+      <a href="">сюжет</a>
+    </div>
+    <div class="tab_news">
+      <p>●︎ хх.хх.2025 - Мы открыты!</p>
+      <p>●︎ 12.09.2025 - Форум Sailor Moon - Echo of Tau основан</p>
+    </div>
+  </div>
+</div>
+
+
+<!--Скрытие профиля в теме тегом-->
+<style type="text/css">.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+.hideprofile .post-body,.hideprofile .post-links,.hideprofile .post-links ul,.post.hideprofile h3>span{margin-left:0!important}</style>
+<script>
+    FORUM.set('editor.addition.tags.hideprofile',{name:'Скрыть минипрофиль',onclick:function(){insert('[hideprofile]');}});
+    $().pun_mainReady(function(){$('.post:contains("[hideprofile]")').addClass('hideprofile').html(function(){return $(this).html().replace(/\[hideprofile\]/gim,'')})});
+</script>
+<!-- Конец -->
