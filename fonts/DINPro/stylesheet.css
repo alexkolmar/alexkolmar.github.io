@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('https://alexkolmar.github.io/fonts/DINPro/DINPro.eot');
+    src: url('https://alexkolmar.github.io/fonts/DINPro/DINPro.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro.svg#DINPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('https://alexkolmar.github.io/fonts/DINPro/DINPro-Bold.eot');
+    src: url('https://alexkolmar.github.io/fonts/DINPro/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/DINPro/DINPro-Bold.svg#DINPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
