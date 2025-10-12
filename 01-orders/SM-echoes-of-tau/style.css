@@ -65,7 +65,7 @@
 :root {
   --body-bg: #000024;
   --pun-bg: #b9c0e4;
-  --sec-bg: cornsilk;
+  --sec-bg: #abb7d8;
   --link: #2c4990;
   --link-hover: #5a58b5;
   --pwidth: 212px;
@@ -978,14 +978,15 @@ li#onlinelist {
 /* Автор */
 
 .post-author {
+  margin-bottom: 10px;
   width: var(--pwidth);
   text-align: center;
   box-sizing: border-box;
-  height: 400px;
-  background: url(https://forumstatic.ru/files/001c/8b/f1/83979.png) no-repeat top center;
+  background: url(https://forumstatic.ru/files/001c/8b/f1/51832.png) no-repeat top center, url(https://forumstatic.ru/files/001c/8b/f1/44194.png) no-repeat bottom center;
   border-radius: 20px;
   color: white;
   font-family: Garamond, serif;
+  max-height: 500px;
 }
 
 .post-author a {
@@ -1034,7 +1035,10 @@ li#onlinelist {
   border-radius: 15px;
 }
 
-.lz {}
+.lz {
+  width: 180px;
+  margin: 10px auto;
+}
 
 .pa-positive,
 .pa-posts,
@@ -1048,6 +1052,8 @@ li#onlinelist {
 .pa-respect .fld-name {
   display: flex;
   font-size: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .pa-positive .fld-name a:before, .gid3 .pa-positive .fld-name:before,
