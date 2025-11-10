@@ -1,9 +1,9 @@
 class TagBuilder {
     constructor() {
         this.tags = {
-            trigger: 'ellenross',
-            gender: 'woman',
-            shotType: 'close-up portrait',
+            trigger: '',
+            gender: '',
+            shotType: '',
             angle: [],
             hairLength: [],
             hairStyle: [],
