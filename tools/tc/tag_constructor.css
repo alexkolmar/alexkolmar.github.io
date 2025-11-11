@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     background: white;
     border-radius: 15px;
@@ -27,8 +27,13 @@ h1 {
     font-size: 2.2em;
 }
 
+.tag-builder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 .section {
-    margin-bottom: 25px;
     padding: 15px;
     background: #f8f9fa;
     border-radius: 10px;
@@ -149,7 +154,13 @@ input[type="text"]:focus, select:focus {
 }
 
 /* Адаптивность */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+
+    .tag-builder {
+        display: flex;
+        flex-direction: column;
+    }
+
     .container {
         padding: 15px;
     }

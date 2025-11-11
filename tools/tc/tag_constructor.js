@@ -230,7 +230,9 @@ class TagBuilder {
   const finalTags = [];
 
   // Базовые теги
-  if (this.tags.trigger) finalTags.push(this.tags.trigger);
+  if (this.tags.trigger && this.tags.trigger.trim() !== '') {
+   finalTags.push(this.tags.trigger);
+  }
   if (this.tags.gender) finalTags.push(this.tags.gender);
   if (this.tags.shotType) finalTags.push(this.tags.shotType);
 
@@ -276,16 +278,9 @@ class TagBuilder {
   }
 
   // БОРОДА/УСЫ
-  const facialHairParts = [];
-  if (this.tags.facialHair.length > 0) {
-   facialHairParts.push(...this.tags.facialHair);
-  }
   const combinedFacialHair = this.getCombinedTags('facialHair');
   if (combinedFacialHair.length > 0) {
-   facialHairParts.push(...combinedFacialHair);
-  }
-  if (facialHairParts.length > 0) {
-   finalTags.push(facialHairParts.join(' '));
+   finalTags.push(combinedFacialHair.join(', '));
   }
 
   // НОВЫЙ БЛОК: МАКИЯЖ
