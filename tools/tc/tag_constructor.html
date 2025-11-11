@@ -16,7 +16,7 @@
    <!-- Триггерное слово -->
    <div class="section">
     <label>🔤 Триггерное слово:</label>
-    <input type="text" id="triggerWord" placeholder="Имя персонажа">
+    <input type="text" id="triggerWord" value="ellenross" placeholder="Имя персонажа">
     <select id="gender">
      <option value="person">person</option>
      <option value="woman">woman</option>
@@ -36,6 +36,23 @@
      <option value="custom">Свой вариант...</option>
     </select>
     <input type="text" id="customShot" style="display:none" placeholder="Введите свой вариант">
+   </div>
+
+   <!-- Возраст -->
+   <div class="section">
+    <label>👤 Возраст:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="age">teenager</button>
+     <button class="tag-btn" data-category="age">20s</button>
+     <button class="tag-btn" data-category="age">30s</button>
+     <button class="tag-btn" data-category="age">40s</button>
+     <button class="tag-btn" data-category="age">50s</button>
+     <button class="tag-btn" data-category="age">60+</button>
+     <button class="tag-btn" data-category="age">young</button>
+     <button class="tag-btn" data-category="age">middle aged</button>
+     <button class="tag-btn" data-category="age">elderly</button>
+    </div>
+    <input type="text" id="customAge" placeholder="Свой вариант возраста">
    </div>
 
    <!-- Ракурс съёмки -->
@@ -62,6 +79,9 @@
      <button class="tag-btn" data-category="hairStyle">straight</button>
      <button class="tag-btn" data-category="hairStyle">wavy</button>
      <button class="tag-btn" data-category="hairStyle">curly</button>
+     <button class="tag-btn" data-category="hairStyle">gelled</button>
+     <button class="tag-btn" data-category="hairStyle">messy</button>
+     <button class="tag-btn" data-category="hairStyle">tousled</button>
      <button class="tag-btn" data-category="hairStyle">no</button>
     </div>
    </div>
@@ -113,6 +133,43 @@
      <button class="tag-btn" data-category="eyesState">in glasses</button>
     </div>
     <input type="text" id="customEyesState" placeholder="Свое состояние глаз" onkeypress="addCustomEyesState(event)">
+   </div>
+
+   <!-- Борода и усы -->
+   <div class="section">
+    <label>🧔 Борода/усы:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="facialHair">beard</button>
+     <button class="tag-btn" data-category="facialHair">mustache</button>
+     <button class="tag-btn" data-category="facialHair">stubble</button>
+     <button class="tag-btn" data-category="facialHair">goatee</button>
+     <button class="tag-btn" data-category="facialHair">sideburns</button>
+     <button class="tag-btn" data-category="facialHair">clean shaven</button>
+    </div>
+    <input type="text" id="customFacialHair" placeholder="Свои варианты">
+   </div>
+
+   <!-- Макияж -->
+   <div class="section">
+    <label>💄 Макияж:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="makeup">makeup</button>
+     <button class="tag-btn" data-category="makeup">eyeliner</button>
+     <button class="tag-btn" data-category="makeup">lipstick</button>
+     <button class="tag-btn" data-category="makeup">mascara</button>
+     <button class="tag-btn" data-category="makeup">false lashes</button>
+     <button class="tag-btn" data-category="makeup">eyeshadow</button>
+     <button class="tag-btn" data-category="makeup">blush</button>
+     <button class="tag-btn" data-category="makeup">contour</button>
+    </div>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="makeupStyle">heavy makeup</button>
+     <button class="tag-btn" data-category="makeupStyle">stage makeup</button>
+     <button class="tag-btn" data-category="makeupStyle">smokey eyes</button>
+     <button class="tag-btn" data-category="makeupStyle">red lips</button>
+     <button class="tag-btn" data-category="makeupStyle">natural makeup</button>
+    </div>
+    <input type="text" id="customMakeup" placeholder="Свой макияж">
    </div>
 
    <!-- Эмоция -->
@@ -171,6 +228,21 @@
     <input type="text" id="customPose" placeholder="Своя поза" onkeypress="addCustomPose(event)">
    </div>
 
+   <!-- Телесные модификации -->
+   <div class="section">
+    <label>🔗 Телесные модификации:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="bodyMods">tattoo</button>
+     <button class="tag-btn" data-category="bodyMods">piercing</button>
+     <button class="tag-btn" data-category="bodyMods">scar</button>
+     <button class="tag-btn" data-category="bodyMods">bruise</button>
+     <button class="tag-btn" data-category="bodyMods">birthmark</button>
+     <button class="tag-btn" data-category="bodyMods">freckles</button>
+     <button class="tag-btn" data-category="bodyMods">mole</button>
+    </div>
+    <input type="text" id="customBodyMods" placeholder="Свои модификации">
+   </div>
+
    <!-- Одежда -->
    <div class="section">
     <label>👕 Одежда:</label>
@@ -200,7 +272,7 @@
    <div class="output-section">
     <h3>📝 Результат:</h3>
     <div class="output-box">
-     <div id="finalTags"></div>
+     <div id="finalTags">ellenross woman, close-up portrait</div>
      <div class="output-actions">
       <button onclick="copyToClipboard()" class="copy-btn">📋 Копировать</button>
       <button onclick="clearAll()" class="clear-btn">🗑️ Очистить</button>
