@@ -75,35 +75,299 @@ class CharacterSlider {
         // Данные прямо в коде, чтобы избежать CORS
         this.characters = [
             {
-                "name": "Элиан Ветродуй",
+                "name": "Андрей",
                 "description": "",
                 "images": {
-                    "before": "img/01 Andrei",
-                    "after": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&h=450&fit=crop"
+                    "before": "https://images2.imgbox.com/b4/08/XuJR05VP_o.jpg",
+                    "after": "https://images2.imgbox.com/be/7d/XrzJVDhb_o.png"
                 }
             },
             {
-                "name": "Серафина Огненная",
-                "description": "Пиромант, прошедший путь от ученицы до повелительницы пламени",
+                "name": "Эш Риверс",
+                "description": "",
                 "images": {
-                    "before": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=800&h=450&fit=crop",
-                    "after": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=450&fit=crop"
+                    "before": "https://images2.imgbox.com/d0/b0/JHuq6RcH_o.jpg",
+                    "after": "https://images2.imgbox.com/50/fd/WiAsN84e_o.png"
                 }
             },
             {
-                "name": "Морган Теневой",
-                "description": "Убийца, чьи навыки скрытности достигли совершенства за годы тренировок",
+                "name": "Беккет",
+                "description": "",
                 "images": {
-                    "before": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop",
-                    "after": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=450&fit=crop"
+                    "before": "https://images2.imgbox.com/1b/de/3TAah891_o.jpg",
+                    "after": "https://images2.imgbox.com/10/fe/Y6sOPPFe_o.png"
                 }
             },
             {
-                "name": "Люциан Скалолом",
-                "description": "Воин, чья броня и оружие прошли множество улучшений",
+                "name": "Таксист",
+                "description": "",
                 "images": {
-                    "before": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=450&fit=crop",
-                    "after": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=800&h=450&fit=crop"
+                    "before": "https://images2.imgbox.com/85/44/2KUM5NM9_o.jpg",
+                    "after": "https://images2.imgbox.com/a1/85/YfB6tVbh_o.png"
+                }
+            },
+            {
+                "name": "Дамзел",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/e1/e5/Sf3LbYRD_o.jpg",
+                    "after": "https://images2.imgbox.com/fd/70/l9iEITdX_o.png"
+                }
+            },
+            {
+                "name": "Гэри Голден",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/17/05/8FGAbYgS_o.jpg",
+                    "after": "https://images2.imgbox.com/fe/04/EogqsWy9_o.png"
+                }
+            },
+            {
+                "name": "Грюнфилд Бах",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/ef/c8/EdHvajdB_o.jpg",
+                    "after": "https://images2.imgbox.com/ae/1a/LhcHa8cs_o.png"
+                }
+            },
+            {
+                "name": "Хезер По",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/82/d2/nSvOyQp8_o.jpg",
+                    "after": "https://images2.imgbox.com/1f/4f/E87l2mDq_o.png"
+                }
+            },
+            {
+                "name": "Ималия",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/48/9d/5EB4QECl_o.jpg",
+                    "after": "https://images2.imgbox.com/b7/31/DvfNP85O_o.png"
+                }
+            },
+            {
+                "name": "Айзек Абрамс",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/28/ee/u6bWbqXI_o.jpg",
+                    "after": "https://images2.imgbox.com/a8/c6/pFv7Khe7_o.png"
+                }
+            },
+            {
+                "name": "Джезебел Лок",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/e9/0e/g8rTWf9R_o.jpg",
+                    "after": "https://images2.imgbox.com/05/58/zsdyoVZN_o.png"
+                }
+            },
+            {
+                "name": "Жанетт Воэрман",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/df/cf/4zaxA7cY_o.jpg",
+                    "after": "https://images2.imgbox.com/de/0a/15HbHb61_o.png"
+                }
+            },
+            {
+                "name": "Себастьян Лакруа",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/2f/9d/qGQZVNXA_o.jpg",
+                    "after": "https://images2.imgbox.com/d5/c9/ZE3xsPsU_o.png"
+                }
+            },
+            {
+                "name": "Максимилиан Штраус",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/dc/f3/WMwGs4Uc_o.jpg",
+                    "after": "https://images2.imgbox.com/28/1f/GuSQe0EL_o.png"
+                }
+            },
+            {
+                "name": "Меркурио",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/74/3e/NuSyj5jz_o.jpg",
+                    "after": "https://images2.imgbox.com/a0/97/iPOb2DTo_o.png"
+                }
+            },
+            {
+                "name": "Минг Жао",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/8c/b5/nwrzlOWy_o.jpg",
+                    "after": "https://images2.imgbox.com/36/5a/URfld2br_o.png"
+                }
+            },
+            {
+                "name": "Митник",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/8c/2a/uti4wX3z_o.jpg",
+                    "after": "https://images2.imgbox.com/c9/fe/5dsDJy2N_o.png"
+                }
+            },
+            {
+                "name": "Найнс Родригез",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/30/ef/jPeOyNYd_o.jpg",
+                    "after": "https://images2.imgbox.com/d9/b8/FfclHNzF_o.png"
+                }
+            },
+            {
+                "name": "Скелтер",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/5e/f8/esIqPSSQ_o.jpg",
+                    "after": "https://images2.imgbox.com/03/5c/wAEJKXvB_o.png"
+                }
+            },
+            {
+                "name": "Смеющийся Джек",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/1e/a5/e6b8Vsdv_o.jpg",
+                    "after": "https://images2.imgbox.com/41/8f/U5lwMBS3_o.png"
+                }
+            },
+            {
+                "name": "Виви",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/89/af/LYwjRDyA_o.jpg",
+                    "after": "https://images2.imgbox.com/45/22/ccTUItOw_o.png"
+                }
+            },
+            {
+                "name": "Бертрам Танг",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/37/0d/5nHxtouw_o.jpg",
+                    "after": "https://images2.imgbox.com/7a/7a/6BozZKYA_o.png"
+                }
+            },
+            {
+                "name": "Е",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/a5/86/J8rfj36p_o.jpg",
+                    "after": "https://images2.imgbox.com/03/1a/HzBDux9b_o.png"
+                }
+            },
+            {
+                "name": "Лили",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/04/f8/bYvx7QNl_o.jpg",
+                    "after": "https://images2.imgbox.com/69/13/HdHq4smJ_o.png"
+                }
+            },
+            {
+                "name": "Офицер Чанк",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/c4/8d/J0pnz3a1_o.jpg",
+                    "after": "https://images2.imgbox.com/3f/4c/rLmdLBmz_o.png"
+                }
+            },
+            {
+                "name": "Саманта",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/b4/45/uk2uPM81_o.jpg",
+                    "after": "https://images2.imgbox.com/e3/be/ENfmFvzj_o.png"
+                }
+            },
+            {
+                "name": "Шериф",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/30/65/eiXHE1I7_o.jpg",
+                    "after": "https://images2.imgbox.com/41/a6/jSLL7aiD_o.png"
+                }
+            },
+            {
+                "name": "Венера",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/fe/45/bx8uYXEg_o.jpg",
+                    "after": "https://images2.imgbox.com/c6/ff/WmYsphrz_o.png"
+                }
+            },
+            {
+                "name": "Зигена",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/b8/58/FHJ6Sg9n_o.jpg",
+                    "after": "https://images2.imgbox.com/e9/4f/hP2Neroi_o.png"
+                }
+            },
+            {
+                "name": "Барабус",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/64/7c/53E0HzK1_o.jpg",
+                    "after": "https://images2.imgbox.com/48/a4/u71yvhwZ_o.png"
+                }
+            },
+            {
+                "name": "Толстый Ларри",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/e4/eb/kymI7Zsj_o.jpg",
+                    "after": "https://images2.imgbox.com/a0/75/VZxuHFVx_o.png"
+                }
+            },
+            {
+                "name": "Брат Канкер",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/aa/af/02UrT5iP_o.jpg",
+                    "after": "https://images2.imgbox.com/62/a0/B4GBvFMd_o.png"
+                }
+            },
+            {
+                "name": "Мандарин",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/f2/e6/wIUnumqt_o.jpg",
+                    "after": "https://images2.imgbox.com/80/93/Psm9cc4r_o.png"
+                }
+            },
+            {
+                "name": "Надя Миллинер",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/aa/07/52oLpd2E_o.jpg",
+                    "after": "https://images2.imgbox.com/dd/75/lE4LYuMA_o.png"
+                }
+            },
+            {
+                "name": "Пиша",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/a7/9a/2krkoAHx_o.jpg",
+                    "after": "https://images2.imgbox.com/4e/d6/Ql4R6dDD_o.png"
+                }
+            },
+            {
+                "name": "Роза",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/d8/38/AVXJXDjW_o.jpg",
+                    "after": "https://images2.imgbox.com/a2/a8/Z0jcLoci_o.png"
+                }
+            },
+            {
+                "name": "Епископ Вик",
+                "description": "",
+                "images": {
+                    "before": "https://images2.imgbox.com/fc/20/dLsexUpu_o.jpg",
+                    "after": "https://images2.imgbox.com/eb/4e/KDM9YMeK_o.png"
                 }
             }
         ];
@@ -135,8 +399,8 @@ class CharacterSlider {
                         </div>
                     </div>
                     <div class="labels">
+                    <div class="label">✨ Новый стиль</div>
                         <div class="label">🎮 Оригинал</div>
-                        <div class="label">✨ Новый стиль</div>
                     </div>
                     <div class="hint">Перетащите кружок для сравнения</div>
                 </div>
