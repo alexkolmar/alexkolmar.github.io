@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Слайдер сравнения персонажей</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div class="container">
+  <div class="slider-container">
+   <div class="slider" id="slider">
+    <!-- Слайд 1 -->
+    <div class="slide">
+     <div class="character-info">
+      <div class="character-name">Андрей</div>
+      <!-- <div class="character-description">Сравнение оригинального дизайна с обновленной версией</div> -->
+     </div>
+     <div class="comparison-container" id="container1">
+      <img src="img/01 Andrei.jpg" class="image-before" alt="Оригинал">
+      <img src="img/ComfyUI_00288_.png" class="image-after" alt="Новый стиль">
+      <div class="slider-line"></div>
+      <div class="slider-visual">
+       <div class="slider-circle">
+        <div class="slider-arrows">
+         <span>◀</span>
+         <span>▶</span>
+        </div>
+       </div>
+      </div>
+      <div class="labels">
+       <div class="label">✨ Новый стиль</div>
+       <div class="label">🎮 Оригинал</div>
+      </div>
+      <div class="hint">Перетащите кружок для сравнения</div>
+     </div>
+    </div>
+
+    <!-- Слайд 2 -->
+    <div class="slide">
+     <div class="character-info">
+      <div class="character-name">Персонаж</div>
+     </div>
+     <div class="comparison-container" id="container2">
+      <img src="" class="image-before" alt="Оригинал">
+      <img src="" class="image-after" alt="Новый стиль">
+      <div class="slider-line"></div>
+      <div class="slider-visual">
+       <div class="slider-circle">
+        <div class="slider-arrows">
+         <span>◀</span>
+         <span>▶</span>
+        </div>
+       </div>
+      </div>
+      <div class="labels">
+       <div class="label">✨ Новый стиль</div>
+       <div class="label">🎮 Оригинал</div>
+      </div>
+      <div class="hint">Перетащите кружок для сравнения</div>
+     </div>
+    </div>
+
+    <!-- Слайд 3 -->
+    <div class="slide">
+     <div class="character-info">
+      <div class="character-name">Персонаж 3</div>
+      <div class="character-description">Трансформация внешности через годы развития</div>
+     </div>
+     <div class="comparison-container" id="container3">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop" class="image-before"
+       alt="Оригинал">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=450&fit=crop" class="image-after"
+       alt="Новый стиль">
+      <div class="slider-line"></div>
+      <div class="slider-visual">
+       <div class="slider-circle">
+        <div class="slider-arrows">
+         <span>◀</span>
+         <span>▶</span>
+        </div>
+       </div>
+      </div>
+      <div class="labels">
+       <div class="label">🎮 Оригинал</div>
+       <div class="label">✨ Новый стиль</div>
+      </div>
+      <div class="hint">Перетащите кружок для сравнения</div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Навигация -->
+   <div class="slider-nav">
+    <button class="nav-btn prev-btn">❮</button>
+    <button class="nav-btn next-btn">❯</button>
+   </div>
+
+   <!-- Индикаторы -->
+   <div class="slider-indicators" id="indicators">
+    <div class="indicator active" data-slide="0"></div>
+    <div class="indicator" data-slide="1"></div>
+    <div class="indicator" data-slide="2"></div>
+   </div>
+  </div>
+ </div>
+
+ <script>
+  class ComparisonSlider {
+   constructor(containerId) {
+    this.container = document.getElementById(containerId);
+    this.afterImage = this.container.querySelector('.image-after');
+    this.sliderLine = this.container.querySelector('.slider-line');
+    this.sliderVisual = this.container.querySelector('.slider-visual');
+    this.isDragging = false;
+
+    this.init();
+   }
+
+   init() {
+    this.sliderVisual.addEventListener('mousedown', (e) => {
+     this.isDragging = true;
+     e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+     if (!this.isDragging) return;
+     this.updateSlider(e.clientX);
+    });
+
+    document.addEventListener('mouseup', () => {
+     this.isDragging = false;
+    });
+
+    // Touch events
+    this.sliderVisual.addEventListener('touchstart', (e) => {
+     this.isDragging = true;
+     e.preventDefault();
+    });
+
+    document.addEventListener('touchmove', (e) => {
+     if (!this.isDragging) return;
+     const touch = e.touches[0];
+     this.updateSlider(touch.clientX);
+    });
+
+    document.addEventListener('touchend', () => {
+     this.isDragging = false;
+    });
+
+    this.updateSliderPosition(50);
+   }
+
+   getValueFromPosition(clientX) {
+    const rect = this.container.getBoundingClientRect();
+    let x = clientX - rect.left;
+    x = Math.max(0, Math.min(x, rect.width));
+    return Math.round((x / rect.width) * 100);
+   }
+
+   updateSlider(clientX) {
+    const value = this.getValueFromPosition(clientX);
+    this.updateSliderPosition(value);
+   }
+
+   updateSliderPosition(value) {
+    const percent = value + '%';
+    this.afterImage.style.clipPath = `polygon(0 0, ${percent} 0, ${percent} 100%, 0 100%)`;
+    this.sliderLine.style.left = percent;
+    this.sliderVisual.style.left = percent;
+   }
+  }
+
+  class CharacterSlider {
+   constructor() {
+    this.slider = document.getElementById('slider');
+    this.indicators = document.getElementById('indicators');
+    this.prevBtn = document.querySelector('.prev-btn');
+    this.nextBtn = document.querySelector('.next-btn');
+    this.currentSlide = 0;
+    this.totalSlides = document.querySelectorAll('.slide').length;
+
+    this.comparisonSliders = [];
+    this.init();
+   }
+
+   init() {
+    // Инициализируем слайдеры сравнения для каждого слайда
+    for (let i = 0; i < this.totalSlides; i++) {
+     this.comparisonSliders.push(new ComparisonSlider(`container${i + 1}`));
+    }
+
+    // Навигация
+    this.prevBtn.addEventListener('click', () => this.prevSlide());
+    this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+    // Индикаторы
+    this.indicators.addEventListener('click', (e) => {
+     if (e.target.classList.contains('indicator')) {
+      const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+      this.goToSlide(slideIndex);
+     }
+    });
+
+    // Клавиатура
+    document.addEventListener('keydown', (e) => {
+     if (e.key === 'ArrowLeft') this.prevSlide();
+     if (e.key === 'ArrowRight') this.nextSlide();
+    });
+   }
+
+   goToSlide(slideIndex) {
+    this.currentSlide = slideIndex;
+    this.slider.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+    this.updateIndicators();
+   }
+
+   nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+    this.goToSlide(this.currentSlide);
+   }
+
+   prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.goToSlide(this.currentSlide);
+   }
+
+   updateIndicators() {
+    const indicators = this.indicators.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+     indicator.classList.toggle('active', index === this.currentSlide);
+    });
+   }
+  }
+
+  // Инициализация когда DOM загружен
+  document.addEventListener('DOMContentLoaded', () => {
+   new CharacterSlider();
+  });
+ </script>
+</body>
+
+</html>
