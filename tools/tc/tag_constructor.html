@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Конструктор тегов для LoRA на лицо</title>
+ <link rel="stylesheet" href="tag_constructor.css">
+</head>
+
+<body>
+ <div class="container">
+  <h1>🎨 Конструктор тегов для LoRA на лицо</h1>
+
+  <div class="tag-builder">
+   <!-- Триггерное слово -->
+   <div class="section">
+    <label>🔤 Триггерное слово:</label>
+    <input type="text" id="triggerWord" placeholder="Имя персонажа" required>
+    <select id="gender">
+     <option value="person">person</option>
+     <option value="woman">woman</option>
+     <option value="man">man</option>
+     <option value="custom">Свой вариант...</option>
+    </select>
+    <input type="text" id="customGender" style="display:none" placeholder="Введите свой вариант">
+   </div>
+
+   <!-- План -->
+   <div class="section">
+    <label>📷 План:</label>
+    <select id="shotType">
+     <option value="close-up portrait">Крупный (close-up)</option>
+     <option value="medium shot">Средний (medium)</option>
+     <option value="full body shot">Общий (full-body)</option>
+     <option value="custom">Свой вариант...</option>
+    </select>
+    <input type="text" id="customShot" style="display:none" placeholder="Введите свой вариант">
+   </div>
+
+   <!-- Возраст -->
+   <div class="section">
+    <label>👤 Возраст:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="age">teenager</button>
+     <button class="tag-btn" data-category="age">20s</button>
+     <button class="tag-btn" data-category="age">30s</button>
+     <button class="tag-btn" data-category="age">40s</button>
+     <button class="tag-btn" data-category="age">50s</button>
+     <button class="tag-btn" data-category="age">60+</button>
+     <button class="tag-btn" data-category="age">young</button>
+     <button class="tag-btn" data-category="age">middle aged</button>
+     <button class="tag-btn" data-category="age">elderly</button>
+    </div>
+    <input type="text" id="customAge" placeholder="Свой вариант возраста">
+   </div>
+
+   <!-- Ракурс съёмки -->
+   <div class="section">
+    <label>📐 Ракурс:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="angle">low angle</button>
+     <button class="tag-btn" data-category="angle">high angle</button>
+     <button class="tag-btn" data-category="angle">eye level</button>
+     <button class="tag-btn" data-category="angle">chin raised</button>
+     <button class="tag-btn" data-category="angle">head lowered</button>
+     <button class="tag-btn" data-category="angle">dutch angle</button>
+    </div>
+    <input type="text" id="customAngle" placeholder="Свой ракурс" onkeypress="addCustomAngle(event)">
+   </div>
+
+   <!-- Длина и тип волос -->
+   <div class="section">
+    <label>🦱 Длина и тип волос:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="hairLength">short</button>
+     <button class="tag-btn" data-category="hairLength">medium</button>
+     <button class="tag-btn" data-category="hairLength">long</button>
+     <button class="tag-btn" data-category="hairStyle">straight</button>
+     <button class="tag-btn" data-category="hairStyle">wavy</button>
+     <button class="tag-btn" data-category="hairStyle">curly</button>
+     <button class="tag-btn" data-category="hairStyle">gelled</button>
+     <button class="tag-btn" data-category="hairStyle">messy</button>
+     <button class="tag-btn" data-category="hairStyle">tousled</button>
+     <button class="tag-btn" data-category="hairStyle">no</button>
+    </div>
+   </div>
+
+   <!-- Цвет волос -->
+   <div class="section">
+    <label>🎨 Цвет волос:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="hairColor">white</button>
+     <button class="tag-btn" data-category="hairColor">light</button>
+     <button class="tag-btn" data-category="hairColor">blonde</button>
+     <button class="tag-btn" data-category="hairColor">brown</button>
+     <button class="tag-btn" data-category="hairColor">black</button>
+     <button class="tag-btn" data-category="hairColor">gray</button>
+     <button class="tag-btn" data-category="hairColor">red</button>
+     <button class="tag-btn" data-category="hairColor">brunette</button>
+    </div>
+    <input type="text" id="customHairColor" placeholder="Свой цвет волос" onkeypress="addCustomHairColor(event)">
+   </div>
+
+   <!-- Кастомное поле для причёски -->
+   <div class="section">
+    <label>💇 Причёска:</label>
+    <input type="text" id="hairCut" placeholder="Причёска">
+   </div>
+
+   <!-- Глаза -->
+   <div class="section">
+    <label>👁️ Цвет глаз:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="eyes">light</button>
+     <button class="tag-btn" data-category="eyes">blue</button>
+     <button class="tag-btn" data-category="eyes">green</button>
+     <button class="tag-btn" data-category="eyes">brown</button>
+     <button class="tag-btn" data-category="eyes">hazel</button>
+    </div>
+    <input type="text" id="customEyes" placeholder="Свой цвет глаз" onkeypress="addCustomEyes(event)">
+   </div>
+
+   <!-- Состояние глаз -->
+   <div class="section">
+    <label>🕶️ Состояние глаз:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="eyesState">eyes closed</button>
+     <button class="tag-btn" data-category="eyesState">blinking</button>
+     <button class="tag-btn" data-category="eyesState">squinting</button>
+     <button class="tag-btn" data-category="eyesState">wide-eyed</button>
+     <button class="tag-btn" data-category="eyesState">sleepy eyes</button>
+     <button class="tag-btn" data-category="eyesState">in glasses</button>
+    </div>
+    <input type="text" id="customEyesState" placeholder="Свое состояние глаз" onkeypress="addCustomEyesState(event)">
+   </div>
+
+   <!-- Борода и усы -->
+   <div class="section">
+    <label>🧔 Борода/усы:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="facialHair">beard</button>
+     <button class="tag-btn" data-category="facialHair">mustache</button>
+     <button class="tag-btn" data-category="facialHair">stubble</button>
+     <button class="tag-btn" data-category="facialHair">goatee</button>
+     <button class="tag-btn" data-category="facialHair">sideburns</button>
+     <button class="tag-btn" data-category="facialHair">clean shaven</button>
+    </div>
+    <input type="text" id="customFacialHair" placeholder="Свои варианты">
+   </div>
+
+   <!-- Макияж -->
+   <div class="section">
+    <label>💄 Макияж:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="makeup">makeup</button>
+     <button class="tag-btn" data-category="makeup">eyeliner</button>
+     <button class="tag-btn" data-category="makeup">lipstick</button>
+     <button class="tag-btn" data-category="makeup">mascara</button>
+     <button class="tag-btn" data-category="makeup">false lashes</button>
+     <button class="tag-btn" data-category="makeup">eyeshadow</button>
+     <button class="tag-btn" data-category="makeup">blush</button>
+     <button class="tag-btn" data-category="makeup">contour</button>
+    </div>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="makeupStyle">heavy makeup</button>
+     <button class="tag-btn" data-category="makeupStyle">stage makeup</button>
+     <button class="tag-btn" data-category="makeupStyle">smokey eyes</button>
+     <button class="tag-btn" data-category="makeupStyle">red lips</button>
+     <button class="tag-btn" data-category="makeupStyle">natural makeup</button>
+    </div>
+    <input type="text" id="customMakeup" placeholder="Свой макияж">
+   </div>
+
+   <!-- Эмоция -->
+   <div class="section">
+    <label>😊 Эмоция:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="emotion">smiling</button>
+     <button class="tag-btn" data-category="emotion">serious expression</button>
+     <button class="tag-btn" data-category="emotion">happy expression</button>
+     <button class="tag-btn" data-category="emotion">neutral expression</button>
+     <button class="tag-btn" data-category="emotion">laughing</button>
+     <button class="tag-btn" data-category="emotion">crying</button>
+     <button class="tag-btn" data-category="emotion">surprised expression</button>
+     <button class="tag-btn" data-category="emotion">angry expression</button>
+     <button class="tag-btn" data-category="emotion">shocked expression</button>
+    </div>
+    <input type="text" id="customEmotion" placeholder="Своя эмоция" onkeypress="addCustomEmotion(event)">
+   </div>
+
+   <!-- Направление взгляда -->
+   <div class="section">
+    <label>👀 Направление взгляда:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="gaze">looking at viewer</button>
+     <button class="tag-btn" data-category="gaze">looking to the side</button>
+     <button class="tag-btn" data-category="gaze">looking up</button>
+     <button class="tag-btn" data-category="gaze">looking down</button>
+     <button class="tag-btn" data-category="gaze">looking away</button>
+    </div>
+    <input type="text" id="customGaze" placeholder="Свое направление взгляда" onkeypress="addCustomGaze(event)">
+   </div>
+
+   <!-- Поворот головы -->
+   <div class="section">
+    <label>🔄 Поворот головы:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="headTurn">facing viewer</button>
+     <button class="tag-btn" data-category="headTurn">head turned slightly</button>
+     <button class="tag-btn" data-category="headTurn">head tilted</button>
+     <button class="tag-btn" data-category="headTurn">profile view</button>
+     <button class="tag-btn" data-category="headTurn">three-quarter view</button>
+    </div>
+    <input type="text" id="customHeadTurn" placeholder="Свой поворот головы" onkeypress="addCustomHeadTurn(event)">
+   </div>
+
+   <!-- Поза -->
+   <div class="section">
+    <label>🧍 Поза:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="pose">standing</button>
+     <button class="tag-btn" data-category="pose">sitting</button>
+     <button class="tag-btn" data-category="pose">hands on hips</button>
+     <button class="tag-btn" data-category="pose">arms crossed</button>
+     <button class="tag-btn" data-category="pose">hand on cheek</button>
+    </div>
+    <input type="text" id="customPose" placeholder="Своя поза" onkeypress="addCustomPose(event)">
+   </div>
+
+   <!-- Телесные модификации -->
+   <div class="section">
+    <label>🔗 Телесные модификации:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="bodyMods">tattoo</button>
+     <button class="tag-btn" data-category="bodyMods">piercing</button>
+     <button class="tag-btn" data-category="bodyMods">scar</button>
+     <button class="tag-btn" data-category="bodyMods">bruise</button>
+     <button class="tag-btn" data-category="bodyMods">birthmark</button>
+     <button class="tag-btn" data-category="bodyMods">freckles</button>
+     <button class="tag-btn" data-category="bodyMods">acne</button>
+     <button class="tag-btn" data-category="bodyMods">mole</button>
+    </div>
+    <input type="text" id="customBodyMods" placeholder="Свои модификации">
+   </div>
+
+   <!-- Одежда -->
+   <div class="section">
+    <label>👕 Одежда:</label>
+    <input type="text" id="clothing" placeholder="Например: black dress, jeans and t-shirt">
+   </div>
+
+   <!-- Фон -->
+   <div class="section">
+    <label>🏞️ Фон:</label>
+    <input type="text" id="background" placeholder="Например: studio, outdoor, city street">
+   </div>
+
+   <!-- Освещение -->
+   <div class="section">
+    <label>💡 Освещение:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="lighting">studio lighting</button>
+     <button class="tag-btn" data-category="lighting">natural light</button>
+     <button class="tag-btn" data-category="lighting">candle light</button>
+     <button class="tag-btn" data-category="lighting">outdoor</button>
+     <button class="tag-btn" data-category="lighting">indoor</button>
+    </div>
+    <input type="text" id="customLighting" placeholder="Свое освещение" onkeypress="addCustomLighting(event)">
+   </div>
+
+   <!-- Вывод результата -->
+   <div class="output-section">
+    <h3>📝 Результат:</h3>
+    <div class="output-box">
+     <div id="finalTags">person, close-up portrait</div>
+     <div class="output-actions">
+      <button onclick="copyToClipboard()" class="copy-btn">📋 Копировать</button>
+      <button onclick="clearAll()" class="clear-btn">🗑️ Очистить</button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <script src="tag_constructor.js"></script>
+</body>
+
+</html>

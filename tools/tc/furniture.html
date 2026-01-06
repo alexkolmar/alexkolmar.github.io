@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Конструктор тегов для LoRA на мебель</title>
+ <link rel="stylesheet" href="tag_constructor.css">
+</head>
+
+<body>
+ <div class="container">
+  <h1>🪑 Конструктор тегов для LoRA на мебель</h1>
+  <div class="tag-builder">
+   <!-- Триггерное слово -->
+   <div class="section">
+    <label>🔤 Триггерное слово:</label>
+    <input type="text" id="triggerWord" placeholder="Имя модели/стиля">
+   </div>
+   <!-- Тип мебели -->
+   <div class="section">
+    <label>🛋️ Тип мебели:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="furnitureType">chair</button>
+     <button class="tag-btn" data-category="furnitureType">table</button>
+     <button class="tag-btn" data-category="furnitureType">sofa</button>
+     <button class="tag-btn" data-category="furnitureType">bed</button>
+     <button class="tag-btn" data-category="furnitureType">cabinet</button>
+     <button class="tag-btn" data-category="furnitureType">shelf</button>
+     <button class="tag-btn" data-category="furnitureType">desk</button>
+     <button class="tag-btn" data-category="furnitureType">wardrobe</button>
+    </div>
+    <input type="text" id="customFurniture" placeholder="Свой тип мебели">
+   </div>
+
+   <!-- Материалы -->
+   <div class="section">
+    <label>📦 Материалы:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="material">wood</button>
+     <button class="tag-btn" data-category="material">metal</button>
+     <button class="tag-btn" data-category="material">glass</button>
+     <button class="tag-btn" data-category="material">leather</button>
+     <button class="tag-btn" data-category="material">fabric</button>
+     <button class="tag-btn" data-category="material">plastic</button>
+     <button class="tag-btn" data-category="material">marble</button>
+     <button class="tag-btn" data-category="material">stone</button>
+    </div>
+    <input type="text" id="customMaterial" placeholder="Свой материал">
+   </div>
+
+   <!-- Стиль -->
+   <div class="section">
+    <label>🎨 Стиль:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="style">modern</button>
+     <button class="tag-btn" data-category="style">vintage</button>
+     <button class="tag-btn" data-category="style">minimalist</button>
+     <button class="tag-btn" data-category="style">industrial</button>
+     <button class="tag-btn" data-category="style">rustic</button>
+     <button class="tag-btn" data-category="style">classic</button>
+     <button class="tag-btn" data-category="style">contemporary</button>
+     <button class="tag-btn" data-category="style">traditional</button>
+    </div>
+   </div>
+
+   <!-- Ракурс -->
+   <div class="section">
+    <label>📐 Ракурс:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="viewpoint">front view</button>
+     <button class="tag-btn" data-category="viewpoint">side view</button>
+     <button class="tag-btn" data-category="viewpoint">corner view</button>
+     <button class="tag-btn" data-category="viewpoint">three-quarters view</button>
+     <button class="tag-btn" data-category="viewpoint">overhead view</button>
+     <button class="tag-btn" data-category="viewpoint">close-up</button>
+     <button class="tag-btn" data-category="viewpoint">detail shot</button>
+    </div>
+   </div>
+
+   <!-- 5. Цвет -->
+   <div class="section">
+    <label>🎨 Цвет:</label>
+    <div class="tag-options">
+     <!-- Базовые -->
+     <button class="tag-btn" data-category="color">white</button>
+     <button class="tag-btn" data-category="color">black</button>
+     <button class="tag-btn" data-category="color">gray</button>
+     <button class="tag-btn" data-category="color">beige</button>
+     <!-- Дерево -->
+     <button class="tag-btn" data-category="color">natural wood</button>
+     <button class="tag-btn" data-category="color">light wood</button>
+     <button class="tag-btn" data-category="color">oak</button>
+     <button class="tag-btn" data-category="color">walnut</button>
+     <button class="tag-btn" data-category="color">dark wood</button>
+     <button class="tag-btn" data-category="color">cherry</button>
+    </div>
+    <input type="text" id="customColor" placeholder="Свой цвет">
+   </div>
+
+   <!-- 6. Эпоха -->
+   <div class="section">
+    <label>⏳ Эпоха:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="era">modern</button>
+     <button class="tag-btn" data-category="era">mid-century</button>
+     <button class="tag-btn" data-category="era">vintage</button>
+     <button class="tag-btn" data-category="era">antique</button>
+     <button class="tag-btn" data-category="era">19th century</button>
+     <button class="tag-btn" data-category="era">contemporary</button>
+    </div>
+   </div>
+
+   <!-- 7. Конструкция -->
+   <div class="section">
+    <label>🏗️ Конструкция:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="construction">four-poster</button>
+     <button class="tag-btn" data-category="construction">with drawers</button>
+     <button class="tag-btn" data-category="construction">with shelves</button>
+     <button class="tag-btn" data-category="construction">upholstered</button>
+     <button class="tag-btn" data-category="construction">modular</button>
+     <button class="tag-btn" data-category="construction">foldable</button>
+     <button class="tag-btn" data-category="construction">adjustable</button>
+    </div>
+   </div>
+
+   <!-- 8. Особенности -->
+   <div class="section">
+    <label>✨ Особенности:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="features">with curtains</button>
+     <button class="tag-btn" data-category="features">with cushions</button>
+     <button class="tag-btn" data-category="features">with armrests</button>
+     <button class="tag-btn" data-category="features">with backrest</button>
+     <button class="tag-btn" data-category="features">with canopy</button>
+     <button class="tag-btn" data-category="features">with legs</button>
+     <button class="tag-btn" data-category="features">wheeled</button>
+    </div>
+    <input type="text" id="customFeatures" placeholder="Свои особенности">
+   </div>
+
+   <!-- 9. Композиция -->
+   <div class="section">
+    <label>📷 Композиция:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="composition">product shot</button>
+     <button class="tag-btn" data-category="composition">in interior</button>
+     <button class="tag-btn" data-category="composition">isolated</button>
+     <button class="tag-btn" data-category="composition">lifestyle</button>
+     <button class="tag-btn" data-category="composition">commercial</button>
+     <button class="tag-btn" data-category="composition">studio shot</button>
+    </div>
+   </div>
+
+   <!-- 10. Освещение -->
+   <div class="section">
+    <label>💡 Освещение:</label>
+    <div class="tag-options">
+     <button class="tag-btn" data-category="lighting">natural light</button>
+     <button class="tag-btn" data-category="lighting">studio lighting</button>
+     <button class="tag-btn" data-category="lighting">soft light</button>
+     <button class="tag-btn" data-category="lighting">dramatic lighting</button>
+     <button class="tag-btn" data-category="lighting">window light</button>
+     <button class="tag-btn" data-category="lighting">overhead light</button>
+    </div>
+   </div>
+
+   <!-- 11. Фон -->
+   <div class="section">
+    <label>🖼️ Фон:</label>
+    <input type="text" id="customBackground" placeholder="белый фон, комната, природа...">
+   </div>
+
+  </div>
+  <div class="output-section">
+   <h3>Финальные теги:</h3>
+   <div id="finalTags" class="final-tags"></div>
+   <button class="copy-btn" onclick="copyToClipboard()">📋 Копировать теги</button>
+   <button class="clear-btn" onclick="clearAll()">🗑️ Очистить всё</button>
+  </div>
+ </div>
+
+ <script src="furniture_tag_constructor.js"></script>
+</body>
+
+</html>
