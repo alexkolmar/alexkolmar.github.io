@@ -2129,9 +2129,9 @@
   content: "\f309";
 }
 
-  body .hvStickerPackModal.active {
+ /*  body .hvStickerPackModal.active {
     width: calc(100% - 20px) !important;
-  }
+  }*/
 
   /* Рейтинг постописцев
   -------------------------------------------------------------*/
@@ -2298,8 +2298,55 @@
     -moz-appearance: auto;
     box-sizing: border-box;
   }
-  
+
+
+  /* Поиск постов */
+
+  .punbb #my-form {
+    margin-bottom: 15px;
   }
+
+  /* Автоподсчёт стоимости постов */
+
+  .punbb #picture-search {
+    margin-left: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .punbb .report_design  {
+    padding-bottom: 30px;
+  }
+
+  .punbb #remembered-post-amounts {
+    padding-left: 0;
+  }
+
+  .punbb #remembered-post-amounts #ul-2,
+  .punbb #remembered-post-amounts #ul-2 > dd {
+    position: relative;
+    left: unset;
+    right: unset;
+    bottom: unset;
+  }
+
+  .punbb #remembered-post-amounts #ul-2 {
+    margin: 0 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .punbb #remembered-post-amounts #ul-2 > dd {
+    flex-shrink: 0;
+  }
+  
+}
 
 
 @media screen and (max-width: 388px) {

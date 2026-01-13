@@ -1454,17 +1454,18 @@ li#onlinelist {
 }
 
 .plank {
-  padding: 0 10px !important;
+  padding: 0 5px !important;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 5px;
   background: var(--dark);
   border: 1px solid #090808;
   box-shadow: inset 0 0 10px 3px #1c1b18;
   border-radius: 10px;
   box-sizing: border-box;
+  width: 210px;
   color: var(--ltx);
   font-family: var(--mul);
   font-size: 10px;
@@ -1852,27 +1853,31 @@ s:hover, del:hover {
   border-radius: 10px;
   background: var(--bd1);
   line-height: 30px;
-  padding: 0 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
   width: calc(100% - 20px);
   left: 30px;
   font-size: 13px;
+  line-height: 150%;
   font-family: "Verdana";
   color: var(--tx);
   font-weight: bold;
 }
 
 .punbb .post-content .spoiler-box > div::before {
-  content: "\2b";
-  font-family: var(--fa);
-  position: absolute;
-  left: -40px;
-  background: var(--bd1);
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
+    content: "\2b";
+    font-family: var(--fa);
+    position: absolute;
+    left: -40px;
+    background: var(--bd1);
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    line-height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .punbb .post-content .spoiler-box > div.visible::before {
@@ -5156,8 +5161,6 @@ html .hvStickerPackModalContainer {
 
 html .hvStickerPackModal {
 	background: var(--fill4) !important;
-	bottom: -30px !important;
-	left: -50px !important;
 	border-radius: 10px !important;
 	border: 1px solid var(--border) !important;
   box-shadow: none !important;
@@ -5331,6 +5334,34 @@ html .hvStickerPackModalAddButton {
 }
 
 
+/* Автоподсчёт стоимости постов */
+
+.post .send-sumb2 {
+  color: var(--green2);
+}
+
+.punbb #picture-search {
+  width: 100px;
+  height: 100px;
+}
+
+.punbb #picture-search div {
+  background: url(https://forumstatic.ru/files/001b/6e/a7/52562.svg) no-repeat top center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.punbb .post .post-content.remember {
+  border: 4px solid var(--green);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.punbb #remembered-post-amounts #ul-2 {
+  border: 1px solid var(--bd1);
+}
+
+
 /* Смена стиля
 -------------------------------------------------------------*/
 
@@ -5426,4 +5457,45 @@ html .hvStickerPackModalAddButton {
 .night .mylike div.post-rating::before {
   font-weight: bold;
   color: var(--green2);
+}
+
+
+#pun:not(.gid1, .gid2) li.profile-item-awards, #pun:not(.gid1, .gid2) .profile-awards-container {
+ display: none;
+}
+
+.above_submit {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 20px;
+}
+
+#stikery {
+  order: -2;
+}
+
+.punbb #Last-weeks-report {
+  position: relative;
+  padding-left: 0px;
+  text-align: right;
+  order: -1;
+  margin-left: auto;
+}
+
+.punbb #Last-weeks-report #ul-5 {
+  right: 0;
+  top: 0;
+  position: relative;
+  padding: 5px 12px;
+  border-radius: 10px;
+}
+
+.punbb .report_last_week {
+  padding-bottom: 40px;
+}
+
+#my-form {
+  margin: 0 20px;
 }

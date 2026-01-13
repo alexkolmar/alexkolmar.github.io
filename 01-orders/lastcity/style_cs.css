@@ -70,7 +70,7 @@
   border-inline: 1px solid var(--border);
 }
 
-.night .main {
+.night .main:not(.reveal-modal) {
   border: 1px solid var(--border);
   border-top: none;
 }
@@ -123,8 +123,12 @@
 }
 
 .night #post-form .areafield, .night #post-form .formsubmit {
-  border: none;
+  border-color: var(--acc2);
 }
+
+/*.night #post-form .areafield {
+  padding: 0 20px 30px;
+}*/
 
 .night .quote-box cite, .night .code-box strong.legend {
   background: var(--acc2);
@@ -192,7 +196,7 @@ body::before {
 /* тело */
 
 #pun {
-  margin: 468px auto 130px;
+  margin: 432px auto 130px;
   padding: 20px 0 0;
   box-sizing: border-box;
   width: 1060px;
@@ -223,7 +227,7 @@ body::before {
 
 #pun-navlinks {
   position: absolute;
-  top: 25px;
+  top: 15px;
   width: 1060px;
 }
 
@@ -260,6 +264,11 @@ body::before {
   letter-spacing: .5px;
 }
 
+#pun-navlinks > ul > li a:hover, #pun-ulinks li a:hover, .punbb .n_plank a:hover,
+#pun-about a:hover, #pun-crumbs2 a:hover {
+  color: var(--color6);
+}
+
 
 /* Пользовательские ссылки */
 
@@ -275,12 +284,24 @@ body::before {
   box-sizing: border-box;
 }
 
+#pun-ulinks.fixed {
+  position: fixed;
+  top: 28px;
+  transform: none;
+  z-index: 4;
+  width: 1060px;
+  margin: 0;
+  border-radius: 0 0 12px 12px;
+  border-top: none;
+  border-bottom: 1px solid var(--border);
+}
+
 #pun-ulinks .container {
   text-align: center;
 }
 
 #pun-ulinks li {
-  padding: 0 9px;
+  padding: 0 5px;
   display: inline;
 }
 
@@ -293,7 +314,6 @@ body::before {
   text-transform: lowercase;
   letter-spacing: .5px;
 }
-
 
 /* Статус */
 
@@ -378,12 +398,17 @@ body::before {
 
 .forum td, .forum th {
   box-sizing: border-box;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .forum {
   font-family: var(--font1);
+}
+
+.forum tr {
+  display: flex;
+  width: 960px;
 }
 
 .main .forum a {
@@ -660,17 +685,21 @@ tr.iclosed div.icon {
   text-transform: uppercase;
 }
 
-.for_descr {
+#pun-index .tcl h3 a:hover, #pun-index .tcl a:hover, #pun-index .tcr a:hover {
+  color: var(--color7);
+}
+
+.podf-text {
   margin-bottom: 10px;
 }
 
-.for_links {
+.podf-links {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 17px;
 }
 
-.for_links a {
+.podf-links a {
   display: inline-flex;
   border-radius: 5px;
   background: var(--acc2);
@@ -683,7 +712,7 @@ tr.iclosed div.icon {
   padding: 2px 10px 4px;
 }
 
-.for_links a:hover {
+.podf-links a:hover {
   color: var(--body-bg);
 }
 
@@ -697,7 +726,7 @@ tr.iclosed div.icon {
 }
 
 #pun-index .tcr a {
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #pun-index td .user-avatar {
@@ -712,7 +741,7 @@ tr.iclosed div.icon {
 }
 
 #pun-stats a:hover {
-  color: var(--link2);
+  color: var(--color6);
 }
 
 /* заголовок статистики */
@@ -758,7 +787,7 @@ li#onlinelist {
   background: url(https://forumstatic.ru/files/001c/89/0d/19231.png) no-repeat top center;
   height: 251px;
   position: absolute;
-  top: 125px;
+  top: 95px;
   width: 1060px;
 }
 
@@ -771,7 +800,7 @@ li#onlinelist {
 #html-header {
   z-index: 1;
   position: absolute;
-  top: 90px;
+  top: 60px;
   width: 1060px;
   height: 310px;
 }
@@ -820,7 +849,7 @@ li#onlinelist {
   letter-spacing: 10px;
   text-transform: uppercase;
   position: relative;
-  margin-left: 15px;
+  margin: 15px 0 0 15px;
   font-weight: 300;
 }
 
@@ -959,6 +988,7 @@ li#onlinelist {
 
 .post {
   margin-top: 10px;
+  scroll-margin-top: 70px;
 }
 
 .toppost,
@@ -1086,11 +1116,17 @@ li#onlinelist {
 .pp_name a {
   color: var(--link2);
   font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .pp_img {
   max-width: 33px;
   max-height: 33px;
+}
+
+.pp_ability {
+  width: 100%;
 }
 
 .pp_ability > div {
@@ -1176,11 +1212,15 @@ li#onlinelist {
   white-space: nowrap;
   background: var(--body-bg);
   text-transform: lowercase;
+  min-height: 22px;
+  min-width: 120px;
 }
 
 .pa-fld3 a {
   color: #848f8a;
 }
+
+.pa-fld3 .pp_img {display: none;}
 
 /* Тело поста */
 
@@ -1368,6 +1408,10 @@ blockquote, .blockcode {
 .punbb div.post-rating p a:after {
   content: "\2665"; /* ♥ */
   font-size: 16px;
+}
+
+.punbb div.post-rating p a:hover {
+  color: var(--acc2);
 }
 
 /* Форма ответа */
@@ -2039,9 +2083,11 @@ img.avatardemo {
 
 /* Скрытый профиль */
 
-.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important}
+.hideprofile .post-author,.hideprofile .pl-email,.hideprofile .pl-website{display:none!important;}
+
 .hideprofile .post-box {
     margin: 0;
+    padding: 10px 0 0 20px;
 }
 
 .hideprofile .post-body {
@@ -2092,19 +2138,19 @@ img.avatardemo {
 }
 
 .options-menu-popup {
-  width: 240px;
+  width: 280px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   background: var(--pun-bg);
-  padding: 5px 10px;
+  padding: 5px 10px 10px;
   border-radius: 5px;
   border: 1px solid var(--border2);
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
   transform: translateX(-50%);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .night .options-menu-popup {
@@ -2115,6 +2161,7 @@ img.avatardemo {
 .options-menu-popup button {
   background: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .night .options-menu-popup button {
@@ -2223,6 +2270,34 @@ img.avatardemo {
   }
 }
 
+/* Смена акков
+-------------------------------------------------------------*/
+
+#navprofiles {
+  position: relative;
+}
+
+.multiacc-profilemenu {
+  position: absolute;
+  background: var(--body-bg);
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  border-radius: 12px;
+  border: 1px solid var(--acc2);
+  padding: 10px;
+  top: 30px;
+}
+
+#pun-navlinks ul.multiacc-profilemenu li:first-of-type {
+  margin-bottom: 10px;
+}
+
+#pun-navlinks ul.multiacc-profilemenu li:not(:first-of-type) a {
+  text-transform: initial;
+}
+
 /* Кастомные теги
 -------------------------------------------------------------*/
 
@@ -2231,7 +2306,7 @@ img.avatardemo {
   --accent: var(--color2);
   --bg: var(--color5);
   --panel: var(--color4);
-  --border: var(--color9);
+/* --border: var(--color9); */
   --qtext: var(--color6);
   --muted: var(--color3);
   font: 15px/1.6 var(--ff-body);
@@ -2252,7 +2327,7 @@ img.avatardemo {
   border: 1px solid var(--border);
   border-radius: 0 0 8px 8px;
   font-size: 20px;
-  font-family: var(--ff-headings);
+  font-family: var(--font1);
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -2349,8 +2424,12 @@ img.avatardemo {
 }
 
 .q-section a {
-  color: var(--color2);
+  color: var(--acc2);
   font-weight: 700;
+}
+
+.q-section a:hover {
+  color: var(--color3);
 }
 
 .quenta .q-heading {
@@ -2672,6 +2751,10 @@ img.avatardemo {
   display: none;
 }
 
+.punbb .episode-body p {
+  padding: 0;
+}
+
 .episode-info > br,
 .episode-info > p {
   display: none;
@@ -2704,14 +2787,14 @@ img.avatardemo {
   margin-bottom: 10px;
   padding: 10px;
   line-height: 1;
-  font-family: var(--ff-decorative);
+  font-family: var(--font1);
 }
 
 .episode-info {
     justify-items: center;
     display: flex;
     align-items: center;
-    font-family: var(--ff-headings);
+    font-family: var(--font1);
     font-size: 16px;
     width: 100%;
 }
@@ -2765,7 +2848,7 @@ ul.episode-pictures {
 
 ul.episode-pictures img {
   object-fit: cover;
-  border: 1px solid var(--color1);
+  border: 1px solid var(--acc2);
   border-radius: 5px;
   transition: transform 0.3s, filter 0.3s;
 }
@@ -2789,7 +2872,7 @@ ul.episode-pictures img:hover {
     padding-bottom: 10px;
     font-size: 21px;
     text-transform: uppercase;
-    font-family: var(--ff-headings);
+    font-family: var(--font1);
 }
 
 .description-line::before,
@@ -2797,20 +2880,265 @@ ul.episode-pictures img:hover {
   content: '';
   flex-grow: 1;
   height: 1px;
-  background: var(--color1);
+  background: var(--acc2);
   margin: 0 8px;
 }
 
 .episode-description {
   padding: 15px;
   line-height: 1.4;
-  border: 1px solid var(--color1);
+  border: 1px solid var(--acc2);
   border-radius: 5px;
   color: var(--color1);
   white-space: pre-line;
   text-align: justify;
   word-break: break-word;
   animation: fadeIn 1.5s ease-out forwards;
+}
+
+  /* Анкета
+  -------------------------------------------------------------*/
+
+.pp-card-new {
+  margin: 10px auto;
+  background: var(--body-bg);
+  box-shadow: inset 0 0 0 1 var(--border);
+  width: 960px;
+  height: 600px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 30px 45px;
+  color: #bcc3c4;
+}
+
+.pp-card-new a {
+  color: var(--acc2);
+}
+
+.pp-card-new a:hover {
+  color: var(--color3);
+}
+
+.pp-char {
+  width: 260px;
+}
+
+.pp-card-new .pp-name {
+  font-family: var(--font1);
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--acc2);
+  width: fit-content;
+  margin: 0 0 20px;
+  text-align: left;
+  display: block;
+  padding: 0;
+  height: auto;
+  border-radius: 0;
+  background: none;
+}
+
+.pp-card-new .pp-portrait {
+  width: 220px;
+  background: var(--acc2);
+  border: 1px solid var(--acc2);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.pp-card-new .pp-portrait img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.pp-card-new .pp-image-name {
+  font-family: var(--font1);
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--body-bg);
+  text-transform: lowercase;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.tabs-css {
+  max-width: 600px;
+  position: relative;
+}
+
+/* Скрываем радиокнопки */
+.tabs-css > input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Заголовки вкладок - поддерживают перенос строк */
+.tabs-css-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.fc {
+  width: 170px;
+  color: var(--link2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--font1);
+}
+
+/* Стили для лейблов-вкладок */
+.tabs-css-label {
+  display: inline-flex;
+  background: var(--body-bg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  color: var(--acc2);
+  text-align: center;
+  position: relative;
+  user-select: none;
+  width: 170px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px var(--acc2);
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--font1);
+}
+
+.tabs-css-label span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.tabs-css-label:hover {
+  background: var(--acc2);
+  color: var(--body-bg);
+}
+
+/* ИСПРАВЛЕННЫЙ СЕЛЕКТОР для активной вкладки */
+/* Удаляем неправильные селекторы и оставляем только правильные */
+
+#tab-css-1:checked ~ .tabs-css-header label[for="tab-css-1"],
+#tab-css-2:checked ~ .tabs-css-header label[for="tab-css-2"],
+#tab-css-3:checked ~ .tabs-css-header label[for="tab-css-3"],
+#tab-css-4:checked ~ .tabs-css-header label[for="tab-css-4"],
+#tab-css-5:checked ~ .tabs-css-header label[for="tab-css-5"],
+#tab-css-6:checked ~ .tabs-css-header label[for="tab-css-6"] {
+  background: var(--acc2);
+  color: var(--body-bg);
+  z-index: 1;
+}
+
+/* Контент вкладок */
+.tabs-css-content {
+  max-height: 440px;
+  overflow: auto;
+}
+
+/* Скрываем все вкладки по умолчанию */
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 10px 20px 20px 10px;
+  text-align: justify;
+}
+
+/* Показываем активную вкладку */
+#tab-css-1:checked ~ .tabs-css-content #content-1,
+#tab-css-2:checked ~ .tabs-css-content #content-2,
+#tab-css-3:checked ~ .tabs-css-content #content-3,
+#tab-css-4:checked ~ .tabs-css-content #content-4,
+#tab-css-5:checked ~ .tabs-css-content #content-5,
+#tab-css-6:checked ~ .tabs-css-content #content-6 {
+  display: block;
+  opacity: 1;
+}
+
+.pp-card-new h3 {
+  margin-bottom: 10px;
+}
+
+.pp-card-new h3:not(:first-of-type) {
+  margin-top: 20px;
+  border-top: 1px solid var(--acc2);
+  padding-top: 10px;
+}
+
+.pp-info {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pp-info b {
+  text-transform: uppercase;
+}
+
+.pp-info span, .pp-info small {
+  display: block;
+}
+
+.post-content .pp-card-new p {
+  padding: 0;
+  line-height: initial;
+}
+
+.pp-info small {
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.info-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.info-top > div {
+  display: flex;
+  gap: 10px;
+}
+
+.info-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 220px;
+}
+
+.info-bottom b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post-content .pp-card-new .info-bottom p {
+  text-align: center;
 }
 
 @keyframes fadeIn {
