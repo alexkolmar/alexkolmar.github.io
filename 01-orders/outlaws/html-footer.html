@@ -1,0 +1,58 @@
+<!-- навигация при скролле -->
+<script type="text/javascript">
+function myFunction() {
+  if (window.pageYOffset >= 25) {
+    $("#pun-navlinks").addClass("fixed");
+  } else {
+    $("#pun-navlinks").removeClass("fixed");
+  }
+};
+window.onscroll = function() {myFunction()};
+if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+    myFunction()
+}
+</script>
+
+
+<!-- статистика -->
+<script>
+$("#pun-stats .container").each(function(){
+$(this).find('.item1, .item2, .item3, .item4').wrapAll("<div class='stats_wrap'>");
+});
+</script>
+
+
+<!-- Поля профиля -->
+<script>
+$(".post-author ul").each(function(){
+$(this).find('.pa-fld2, .pa-respect, .pa-posts, .pa-fld3').wrapAll("<div class='author_wrap'>");
+});
+</script>
+
+
+<!--написано символов-->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+<!--конец -->
+
+
+<script>
+$(document).ready(function() {
+    $('fieldset:not(#post-preview) legend').insertAfter('#form-buttons');
+});
+</script>
+
+<!-- баннеры -->
+<div class="banners">
+ <div class="container">
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+ </div>
+</div>
