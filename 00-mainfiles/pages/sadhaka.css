@@ -1,4 +1,12 @@
 /* Мини-профиль с информацией */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Основа личной страницы */
+
 .reveal-modal-bg {
   position: fixed;
   height: 100%;
@@ -12,50 +20,33 @@
 }
 
 .reveal-modal {
-  visibility: hidden;
+  /* строчку ниже раскомментировать */
+  /* visibility: hidden; */
   top: 100px;
   left: 50%;
-  margin-left: -300px;
-  width: 520px;
+  transform: translateX(-50%);
+  width: 800px;
   position: absolute;
   z-index: 101;
-  padding: 30px 40px 34px;
+  padding: 20px;
   border-radius: 5px;
+  background: gainsboro;
   box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 }
 
-.reveal-modal.small {
-  width: 200px;
-  margin-left: -140px;
-}
-
-.reveal-modal.medium {
-  width: 400px;
-  margin-left: -240px;
-}
-
-.reveal-modal.large {
-  width: 600px;
-  margin-left: -340px;
-}
-
-.reveal-modal.xlarge {
-  width: 800px;
-  margin-left: -440px;
-}
-
-.reveal-modal .close-reveal-modal {
+.close-reveal-modal {
   font-size: 22px;
   line-height: .5;
   position: absolute;
-  top: 8px;
-  right: 11px;
-  color: #aaa;
-  text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+  top: 10px;
+  right: 10px;
+  color: black;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
 }
+
+/* Если нужно меню по умолчанию */
 
 .menu span {
   cursor: pointer;
