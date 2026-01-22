@@ -1,0 +1,58 @@
+
+.tabs_container {
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+  height: 500px;
+  background: gainsboro;
+  font-family: sans-serif;
+}
+
+.tabs {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab, .tab-title {
+  display: inline-block;
+}
+
+.tab input[type="radio"] {
+  display: none;
+}
+
+.tab-title {
+  background: gray;
+  color: snow;
+  padding: 5px 10px;
+  cursor: pointer;
+  line-height: 18px;
+  box-sizing: border-box;
+}
+
+.tab-content {
+  position: absolute;
+  margin-top: 20px;
+  padding: 10px;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  display: none;
+  box-sizing: border-box;
+  background: snow;
+}
+
+.tab :checked + .tab-title {
+  position: relative;
+  background: snow;
+  color: black;
+  z-index: 1;
+}
+
+.tab :checked ~ .tab-content {
+  display: block;
+}

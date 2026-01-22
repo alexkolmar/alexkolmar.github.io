@@ -1,0 +1,67 @@
+:root {
+    --tab-title: 100px;
+    --tab-pad: 20px;
+}
+
+
+.tabs_container {
+  margin: 0 auto;
+  padding: var(--tab-pad);
+  width: fit-content;
+  height: 450px;
+  background: gainsboro;
+  font-family: sans-serif;
+}
+
+.tabs {
+  position: relative;
+  width: 720px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab, .tab-title {
+  display: inline-block;
+}
+
+.tab input[type="radio"] {
+  display: none;
+}
+
+.tab-title {
+  background: gray;
+  color: snow;
+  padding: 5px 10px;
+  cursor: pointer;
+  line-height: 18px;
+  box-sizing: border-box;
+  width: var(--tab-title);
+  text-align: center;
+}
+
+.tab-content {
+  position: absolute;
+  padding: 10px;
+  left: 120px;
+  top: 0;
+  width: calc(100% - var(--tab-title) - var(--tab-pad));
+  height: 450px;
+  display: none;
+  box-sizing: border-box;
+  background: snow;
+}
+
+.tab :checked + .tab-title {
+  position: relative;
+  background: snow;
+  color: black;
+  z-index: 1;
+}
+
+.tab :checked ~ .tab-content {
+  display: block;
+}

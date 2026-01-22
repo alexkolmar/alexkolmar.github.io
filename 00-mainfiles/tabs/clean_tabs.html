@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вкладки на CSS</title>
+    <link rel="stylesheet" href="switcher.css">
+    <link id="theme-style" rel="stylesheet" href="clean_tabs.css">
+</head>
+
+<body>
+
+    <div class="theme-switcher">
+        <button class="theme-btn" data-theme="horisontal">Горизонтальные вкладки</button>
+        <button class="theme-btn" data-theme="vertical">Вертикальные вкладки</button>
+    </div>
+
+    <div class="tabs_container">
+        <div class="tabs">
+            <div class="tab">
+                <input type="radio" id="tab1" name="tab-group" checked>
+                <label for="tab1" class="tab-title">Вкладка 1</label>
+                <section class="tab-content">Один</section>
+            </div>
+            <div class="tab">
+                <input type="radio" id="tab2" name="tab-group">
+                <label for="tab2" class="tab-title">Вкладка 2</label>
+                <section class="tab-content">Два</section>
+            </div>
+            <div class="tab">
+                <input type="radio" id="tab3" name="tab-group">
+                <label for="tab3" class="tab-title">Вкладка 3</label>
+                <section class="tab-content">Три</section>
+            </div>
+        </div>
+    </div>
+
+<script src="tabs_switcher.js"></script>
+
+</body>
+
+</html>
