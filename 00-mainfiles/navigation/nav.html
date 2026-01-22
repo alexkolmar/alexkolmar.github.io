@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Скрипт навигации от Вещего Духа</title>
+ <link rel="stylesheet" href="nav.css">
+ <!-- подключаем jQuery, на форумах уже подключено -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+ <div class="spirit_nav-wrap">
+  <div class="nav_button">Навигация</div>
+  <div class="nav_block">
+   <div class="link">
+    <a href="ссылка">правила</a>
+    <a href="ссылка">фак</a>
+    <a href="ссылка">роли</a>
+    <a href="ссылка">акции</a>
+    <a href="ссылка">мир</a>
+    <a href="ссылка">связь</a>
+   </div>
+  </div>
+ </div>
+
+ <!-- скрипт навигации от духа -->
+ <script type="text/javascript">
+  $('.nav_button').click(function () {
+   $('.nav_button').not(this).removeClass('i_active');
+   $(this).toggleClass('i_active');
+  });
+  $('.nav_button').each(function () {
+   $(this).on('click', function () {
+    $('.nav_button').not($(this)).next().slideUp();
+    $(this).next().slideToggle();
+   });
+  });
+ </script>
+
+</body>
+
+</html>

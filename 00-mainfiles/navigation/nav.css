@@ -1,0 +1,55 @@
+.spirit_nav-wrap {
+  position: relative;
+  margin: auto;
+  width: 300px;
+  z-index: 9;
+}
+
+.nav_button {
+  background: #212121;
+  border-radius: 10px;
+  font: 600 10px sans-serif;
+  text-align: center;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .4s linear 0s;
+  color: #fefefe
+}
+
+.nav_button.i_active {
+  background: #323232;
+}
+
+.nav_block {
+  display: none;
+  background: #212121;
+  position: absolute;
+  top: calc(100% + 5px);
+  border-radius: 10px;
+  font: 400 10px sans-serif;
+  width: 100%;
+}
+
+.nav_block .link {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  gap: 5px;
+}
+
+.nav_block .link a {
+  color: #fefefe !important;
+  background: #323232;
+  border-radius: 8px;
+  padding: 5px 10px;
+  transition: all .4s linear 0s;
+  text-decoration: none;
+}
+
+.nav_block .link a:hover {
+  background: #fefefe;
+  color: #323232 !important;
+}
