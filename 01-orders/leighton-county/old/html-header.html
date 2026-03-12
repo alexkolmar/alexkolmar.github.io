@@ -1,0 +1,482 @@
+<!-- Cчётчик Игровых постов -->
+<script type="text/javascript">
+ /*delete localStorage.alertsAMS_onCountCode;*/
+ /***************************
+         Настройки!
+ ***************************/
+ FORUM._NUMpa_fld = 2;		// Номер.Доп.поля,
+ FORUM._color_fld = "inherit";	// Цвет шрифта,
+ FORUM.includeFirstPost = 0;	// 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
+ FORUM.AddOrSlash = 0;		//0 - Поле отдельно, 1 - через слешь c общ. числом сообщений,
+ FORUM.Number_winners = [7, [21]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
+ FORUM.Subscription_Code = "f87f9524f52b3f15cd458b2bf2a95a906ca5a960";	//Код подписки!!;
+ /**** НАСТРОЙКА Игровых локаций ****/
+ function ad_() {/*!~!FORUM.ForArrAy = {
+//Форум  //Темы (включаемые, или исключаемые)
+
+f11	:-[0],  //Lake City
+f12	:-[0]	//False Street //Последний элемент без запятой!
+}
+!~!*/} ad_ = ad_.toString().split('!~!')[1];//alert(ad_);
+</script>
+<script type="text/javascript" src="//forumstatic.ru/files/0013/44/56/77707.js"></script>
+<style>
+ .Form-Table {}
+
+ .punbb .table_GamePosts tbody th {
+  text-align: center;
+  color: #fff
+ }
+
+ #pre_placement>a {
+  top: 3px;
+  right: 2px;
+  border: 0 none;
+  z-index: 100
+ }
+
+ .punbb .GamePst {
+  padding: 0 !important;
+ }
+
+ .punbb #profile-right li#pa-fld2 strong.GamePst2 {}
+</style>
+<!--//END Cчётчик Игровых постов © Deff-->
+
+
+<link rel="stylesheet" type="text/css" id="mobile-style" href="https://forumstatic.ru/files/001c/9f/00/54785.css?v=8" />
+
+<script>
+ const mobileStyleDisabled = localStorage.getItem('mobileStyleDisabled');
+
+ if (mobileStyleDisabled === 'true') {
+  document.getElementById('mobile-style-toggler').textContent = 'Включить мобильный стиль';
+  document.getElementById('mobile-style-toggler').classList.remove('mobile-on');
+  document.getElementById('mobile-style-toggler').classList.add('mobile-off');
+ }
+
+ document.getElementById('mobile-style-toggler').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const mobileStyle = document.getElementById('mobile-style');
+  const viewport = document.querySelector('meta[name=viewport]');
+  const isMobileStyleEnabled = this.classList.contains('mobile-on');
+
+  if (isMobileStyleEnabled) {
+   if (mobileStyle) {
+    mobileStyle.remove();
+   }
+   if (viewport) {
+    viewport.content = "maximum-scale=" + (window.screen.width / 1030);
+   }
+   this.textContent = 'Включить мобильный стиль';
+   this.classList.remove('mobile-on');
+   this.classList.add('mobile-off');
+   localStorage.setItem('mobileStyleDisabled', 'true');
+  } else {
+   localStorage.setItem('mobileStyleDisabled', 'false');
+   location.reload();
+  }
+ });
+</script>
+
+<!-- Мгновенные уведомления © Alex_63, Deff 2024 -->
+<link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/notifications.css" />
+<style>
+ .punbb #pun-main .pun-modal.unread-notifications .section h2 {
+  text-align: center !important
+ }
+</style>
+<script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/notifications.js"></script>
+<!--+ Мгновенные уведомления: упоминания © Alex_63, 2020 -->
+<script>notifications.load('mentions');</script>
+<!--+ Мгновенные уведомления: подписки на форум/тему © Alex_63, 2019 -->
+<script>notifications.load('subscriptions');</script>
+<!--+ Мгновенные уведомления: новые посты из важных тем © Alex_63, 2019 -->
+<script type="text/javascript">
+ notifications.load('common', {});
+ notifications.load('important', { topics: [50] }); // ID важных тем (через запятую)
+</script>
+
+<!-- Мессенджер © Alex_63, 2024 -->
+<link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/messenger.css" />
+<script type="text/javascript" src="//forumstatic.ru/f/ru/bestbb/messenger.js"></script>
+
+<!-- Комментарии к оценкам за сообщения © Alex_63, 2024 -->
+<link rel="stylesheet" type="text/css" href="//forumstatic.ru/f/ru/bestbb/reputation.css" />
+<script type="text/javascript" src="https://forumstatic.ru/f/ru/bestbb/reputation.js"></script>
+
+<div class="forum_raiting">18+</div>
+<div id="header_wrapper">
+ <div class="header_section hs-top">
+  <div class="hs-music">
+   <div class="for-music-container" onclick="toggleAudio()">
+    <audio controls controlslist="nodownload" id="header_track">
+     <!-- ссылка на трек -->
+     <source src="https://forumstatic.ru/files/001c/9a/90/78086.mp3" type="audio/mpeg">
+     Your browser does not support the audio tag.
+    </audio>
+    <div class="tab-play-button"></div>
+    <!-- название и автор композиции -->
+    <div class="tab-track-name">Sound of Seattle</div>
+   </div>
+  </div>
+  <div class="hs-rpg"></div>
+  <div class="hs-info">
+   <span>real-life, seattle, 2026</span><span>//</span><span>администрация: <a
+     href="https://lcf.rusff.me/profile.php?id=2">Jack</a> & <a
+     href="https://lcf.rusff.me/profile.php?id=5">Dante</a></span>
+  </div>
+ </div>
+ <div class="header_logo">
+  <img src="/i/blank.gif" class="logo_left">
+  <img src="/i/blank.gif" class="logo_right">
+ </div>
+ <div class="header_section hs-bottom">
+  <ul class="hs-points">
+   <li><span>закон</span>04</li>
+   <li><span>нейтрал</span>00</li>
+   <li><span>мафия</span>01</li>
+  </ul>
+  <div class="persons">
+   <span>постописцы недели</span>
+   <a href="https://lcf.rusff.me/profile.php?id=4" title="Natalie Keener"><img
+     src="https://i.pinimg.com/736x/ca/4b/20/ca4b20f65d21516b21c65a200159c2f7.jpg"></a>
+   <a href="https://lcf.rusff.me/profile.php?id=7" title="Steve Larsen"><img
+     src="https://i.pinimg.com/736x/b4/d3/4c/b4d34ca2224298162aa53b3dab3b8813.jpg"></a>
+   <a href="https://lcf.rusff.me/profile.php?id=5" title="Dante St.Angelo"><img
+     src="https://i.pinimg.com/1200x/b1/8d/92/b18d92bcda0b408791d214c5c2bb102a.jpg"></a>
+   <a href="https://lcf.rusff.me/profile.php?id=9" title="Francesca Damiano"><img
+     src="https://i.pinimg.com/736x/23/86/f7/2386f73fb595c4a4f0daf654d946f874.jpg"></a>
+  </div>
+  <div class="best-post">
+   <span>лучший пост <a href="https://lcf.rusff.me/profile.php?id=7">Steve Larsen</a></span>
+   <p>В лицо бил ветер – густой, пахнущий придорожной пылью, полынью, морозцем, бензином, и еще черт знает чем. Мили
+    послушно таяли под колесом старенькой – да что там, древней как мир! – Импалы. <a
+     href="https://lcf.rusff.me/viewtopic.php?id=37#p110">[читать дальше]</a></p>
+  </div>
+ </div>
+</div>
+
+<script>
+ pauseAudio = (event) => {
+  let audio = document.querySelector('#personal_track');
+  audio.pause();
+ }
+
+ var isPlaying;
+
+ toggleAudio = (event) => {
+  let audio = document.querySelector('#header_track');
+
+  var container = document.querySelector('.for-music-container');
+  var playButton = document.querySelector('.tab-play-button');
+
+  if (isPlaying) {
+   audio.pause()
+   isPlaying = false
+   playButton.classList.remove('playing')
+  } else {
+   audio.play()
+   isPlaying = true
+   playButton.classList.add('playing')
+  }
+
+ }
+</script>
+
+<div class="settings_wrap">
+ <div class="slide_button">Настройки дизайна</div>
+ <div class="slide_block">
+  <div class="settings_container">
+   <ul id="stylelist"></ul>
+   <a id="mobile-style-toggler" class="mobile-on" href="#">Отключить мобильный стиль</a>
+  </div>
+ </div>
+</div>
+
+<!-- Смена стиля, (с) ForumD.ru, satsana-->
+<script type="text/javascript">
+ var styleList = [{
+  class: 'light',
+  name: 'Светлый стиль'
+ }, {
+  class: 'dark',
+  name: 'Темный стиль'
+ }];
+
+ function getCookie(a) { return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0 } function setStyle(a) { $("body").attr("class", a); $("#stylelist li").removeClass("active"); $('#stylelist li[data="' + a + '"]').addClass("active"); selStyle = a; document.cookie = "selStyle=" + a + "; max-age=2592000" } var selStyle = getCookie("selStyle"); selStyle && setStyle(selStyle);
+ $(document).pun_mainReady(function () { $("#stylelist").length || $("body").prepend('<ul id="stylelist"></ul>'); for (i = 0; i < styleList.length; i++)$("#stylelist").append('<li data="' + styleList[i]["class"] + '"' + (selStyle == styleList[i]["class"] ? ' class="active"' : "") + '><a href="/" onclick="setStyle($(this.parentNode).attr(\'data\'));return false">' + styleList[i].name + "</a></li>") });
+</script> <!-- Смена стиля - END -->
+
+<!-- START Блоклист (строго в html-низ) -->
+<script type="text/javascript" src="https://forumstatic.ru/files/000b/09/4f/57773.js"></script>
+<!-- END Блоклист -->
+
+<!-------------------------- ВОССТАНОВЛЕНИЕ ПОСЛЕДНЕГО ПОСТА ПРИ УТЕРЕ © Человек-Шаман ------>
+<script>
+ $(document).ready(function () {
+  $('#addition-area').append(function () {
+   return $('<div>Восстановить последний пост</div>').click(restoreLastPost);
+  });
+  function restoreLastPost() {
+   $('#main-reply').val(localStorage.ReservePost);
+  };
+ });
+</script>
+
+<!--------------------------------------------------------- ПОДНЯТИЕ РЕПУТАЦИИ В ЗАКРЫТЫХ ТЕМАХ ------>
+<script type="text/javascript">
+ if ($('pun-viewtopic').length) function changeVisibility(b) { $('#' + b).toggle(); return };
+</script>
+
+<!--------------------------------------------------- ВЫРАВНИВАНИЕ ПО ШИРИНЕ ----------------------------->
+<script type="text/javascript">
+ $(document).ready(function () {
+  $("#post #button-center").after('<td id=button-justify align=center valign=center><img onclick="bbcode(\'[align=justify]\',\'[/align]\')" src="/i/blank.gif"/></td>');
+ }); 
+</script>
+
+
+<!--кнопки вверх вниз-->
+<div class="arrow_wrap">
+ <div class="go-up" id='ToTop'><span><em></em></div>
+ <div class="go-down" id='OnBottom'><span><em></em></span></div>
+</div>
+
+<!---------------------------- Пиар-вход, хтмл верх ---------------------------->
+<script src="https://forumstatic.ru/files/0015/c4/3f/26781.js"></script>
+<script type="text/javascript">
+ PR.nick = 'PR'; //Ник PR-аккаунта
+ PR.pass = '1111'; //Пароль PR-аккаунта
+ PR.btn_text = 'PR-вход'; //Надпись на кнопке PR-входа(или ссылка на картинку);
+ PR.set();</script>
+
+
+<!---------------------------- Быстрая смена аккаунта  ---------------------------->
+<script type="text/javascript">
+ New_EXiT = '//forumstatic.ru/files/001c/9a/90/79559.png'; //Дополнительная Иконка выход;
+</script>
+<script data="36b224" src="//forumstatic.ru/files/0014/cc/0a/93129.js"></script>
+
+
+<!--Всплывающие Подсказки при наведении-->
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26671.js"></script>
+<!--//End//-Всплывающие Подсказки при наведении-->
+
+<script>
+ FORUM.set('editor.addition.tags.hideprofile', { name: 'Скрыть минипрофиль', onclick: function () { insert('[hideprofile]'); } });
+ $().pun_mainReady(function () { $('.post:contains("[hideprofile]")').addClass('hideprofile').html(function () { return $(this).html().replace(/\[hideprofile\]/gim, '') }) });
+</script>
+
+<!------------------------------------------ ОТКЛЮЧЕНИЕ ФУНКЦИЙ И КНОПОК ------------------------------->
+<!--Отключить кнопку "Жалоба" -->
+<script type="text/javascript">
+ RusffCore.sets.show_reportBtn = 0;
+</script>
+<!--Отключить функцию "Поделиться" -->
+<script type="text/javascript">
+ RusffCore.sets.share = false;
+</script>
+<!--Отключить функцию "Вложения" -->
+<script type="text/javascript">
+ RusffCore.sets.files.button = false;
+</script>
+<!--Отключить функцию "Это интересно" -->
+<script type="text/javascript">
+ rusffLive.enable = false;
+</script>
+<!--Отключить функцию "Реакция" -->
+<script>
+ ReactionsPlugin.setConfig({
+  disable: true
+ });
+</script>
+<!--Список просматривающих тему -->
+<script>
+ RusffCore.sets.realtimeTopicReaders = false
+</script>
+
+
+<!-- Быстрое редактирование постов © Alex_63 // V.3 -->
+<script src="https://forumstatic.ru/files/0015/c4/3f/97896.js"></script>
+
+<!--// Быстроплюсы v.2 РЕНО by Deff //-->
+<script type="text/javascript" src="https://forumstatic.ru/files/0012/d8/04/58219.js" addComment="1"></script>
+
+
+<script type="text/javascript">
+ /****************************************************************
+ * 	Сворачивание длинных цитат в постах
+ * 	Alex_63 03.12.2016г. / 08.04.2024г. 13:51:00
+ * 	v1.0.1
+ ****************************************************************/
+
+ if ($('#pun-viewtopic').length) $(document).on('pun_main_ready pun_post pun_edit', function () {
+
+  var bgcolor = $('.quote-box:first blockquote').css('background-color');
+  if (bgcolor == 'transparent' || bgcolor == 'rgba(0, 0, 0, 0)') bgcolor = $('.quote-box:first').css('background-color');
+  var st = 'background:', st1 = 'linear-gradient(to bottom,transparent 0%,' + bgcolor + ' 70%,' + bgcolor + ' 100%);';
+  var gradient = '<style>.quote-box .quote-after.q-resize-1{' + st + st1 + st + '-moz-' + st1 + st + '-webkit-' + st1 + st + '-o-' + st1 + st + '-khtml-' + st1 + st + '-ms-' + st1 + '}</style>';
+  $(gradient).appendTo('head');
+
+  $('.topic .post-content .quote-box:not(.toggle)').each(function () {
+   var a = $(this), s = a.parents('.quote-box');  //alert(a.html());
+   if (a.hasClass('spoiler-box') || (s.length && s.children('cite').length)) return;
+   if (!$(this).children('cite').length) return;
+   var def_height = $(this).children('blockquote').height() + 40;
+   if (def_height / parseInt($(this).css('font-size')) >= 12) {
+    $(this).addClass('toggle');
+    $(this).children('blockquote').attr('data-height', def_height).css('height', '6em')
+     .append('<span class="quote-after q-resize-1" title="Развернуть"></span>');
+   }
+
+  });
+
+ })
+  .on('click', '.quote-box .quote-after', function () {
+   if ($(this).hasClass('q-resize-1')) {
+    var quote = $(this).parent('blockquote').css('height', '100%');
+    var def = quote.height() + 40; quote.attr('data-height', def + 'px');
+    quote.css('height', '6em').animate({ height: def }, 400);
+    $(this).removeClass('q-resize-1').addClass('q-resize-2').attr('title', 'Свернуть');
+   } else if ($(this).hasClass('q-resize-2')) {
+    var quote = $(this).parent('blockquote');
+    quote.animate({ height: '6em' }, 400);
+    $(this).removeClass('q-resize-2').addClass('q-resize-1').attr('title', 'Развернуть');
+   }
+  });
+</script>
+
+<!-- Скрываем профиль от гостей -->
+<style id="HideProfile">
+ .gid3 #pun-profile .main {
+  display: none
+ }
+</style>
+<script type="text/javascript">
+ if (self == top && GroupID == 3 && $('#pun-profile').length) $().pun_mainReady(function () {
+  var s = 'Информация', s1 = $('#pun-title h1>span').text(); document.title = s1;
+  var L = ' »&nbsp;<a href="/">' + s1 + '</a> »&nbsp;' + s; $('.crumbs').html(L);
+  $().pun_aboutReady(function () { $('#pun-crumbs2>.crumbs').html(L); });
+  $('#pun-main').html('<h1><span>' + s + '</span></h1><div class=info>\
+    <div class=container>Вы не имеете прав для доступа к этой странице.\
+    </div></div>'); $('style#HideProfile').remove();
+ });
+</script>
+
+<!-- Хэштеги © Alex_63-->
+<script type="text/javascript">
+ $().pun_mainReady(function () {
+  $('.punbb:not([data-topic-id="5"]) .post-content:contains("#")').find("p").map(function () {
+   var a = '#', b = '_&HASH&_'; $(this).find('a').attr('href', function () { return this.href.replace(a, b) });
+   var lnkTAG = '<a href="/search.php?action=search&keywords=%23$1&sort_dir=DESC" title="$1">#$1</a>';
+   var cnt = $(this).html().replace(/#([^\s"'<>\(\);,]+)/ig, lnkTAG); $(this).html(cnt);
+   $(this).find('a').attr('href', function () { return this.href.replace(b, a) });
+  });
+ });
+</script>
+
+<!-- Выделение кода в блоке "Код" // © Alex_63, версия 2017г. -->
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+<script type="text/javascript">select_text.linkText = 'Выделить код' //текст ссылки</script>
+
+<!-- Скрытие IP и провайдера от модераторов © Alex_63 -->
+<style id="NoDsp">
+ .gid2 #pun-online tcl:first-child {
+  visibility: hidden
+ }
+</style>
+<script
+ type="text/javascript">if ($('#pun-online').length && GroupID == 2) { $(function () { $('.main .tcl:first-child a[href*="profile.php"]').each(function () { var OnUserN = $(this).clone(); $(this).parents('.tcl').html(OnUserN); }); $('style#NoDsp').remove(); }); }</script>
+<!-- конец -->
+
+<!-- Скрытие профиля в теме тегом © Alex_63, Deff -->
+<style type="text/css">
+ .hideprofile .post-author,
+ .hideprofile .pl-email,
+ .hideprofile .pl-website,
+ .hideprofile .toBlock {
+  display: none !important
+ }
+
+ .hideprofile .post-body,
+ .hideprofile .post-links,
+ .hideprofile .post-links ul,
+ .post.hideprofile h3>span {
+  margin-left: 0 !important
+ }
+</style>
+<script>
+ if (GroupID != 3 && (GroupID < 3 || [2, 3, 5].indexOf(UserID) != -1)) FORUM.set('editor.addition.tags.hideprofile', { name: 'Скрыть минипрофиль', onclick: function () { insert('[hideprofile]'); } });
+ $().pun_mainReady(function () { $('.post:contains("[hideprofile]")').addClass('hideprofile').html(function () { return $(this).html().replace(/\[hideprofile\]/gim, '') }) });
+</script>
+
+<!--Скрытие профиля в теме тегом-->
+<style type="text/css">
+ .hideprofile .post-author,
+ .hideprofile .pl-email,
+ .hideprofile .pl-website,
+ .hideprofile .post-sig {
+  display: none !important
+ }
+
+ .hideprofile .post-body,
+ .hideprofile .post-links,
+ .hideprofile .post-links ul,
+ .post.hideprofile h3>span {
+  margin-left: 0 !important
+ }
+</style>
+
+<!-- личная страница -->
+<script src="https://forumstatic.ru/files/001c/9f/00/67706.js?v=27" type="text/javascript"></script>
+
+
+
+<!--//Цитирование в закрытых темах//-->
+<style>
+ .my-post-form {
+  position: relative;
+ }
+
+ .my-post-form #Tooltip-1 {
+  display: inline-block;
+  position: absolute;
+  color: red;
+  margin-top: -18px;
+ }
+
+ .my-post-form:before {
+  content: 'Форма вставки цитирования из закрытых тем';
+  color: #6f6c6c;
+  display: block;
+  text-align: center;
+  font-family: Arial;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+ }
+
+ .punbb #post #insertToQuoting_closed_topics {
+  display: inline-block;
+  color: #1d67bb;
+  font-weight: bold;
+  margin-bottom: 22px;
+ }
+
+ #insertToQuoting_closed_topics>img {
+  display: inline-block;
+  margin: 10px 3px -10px;
+ }
+</style><!--//Цитирование в закрытых темах//-->
+<script>
+ /*Настройки*/
+ Quoting_closed_topics = {
+  Tooltip: 'Запомнено', /*Текст всплывающей подсказки при клике на цитату*/
+  text: 'Вставить запомненное из закрытых тем', /*Текст кнопки вставки запомненного цитирования в активную тему*/
+  key: '4Yag46GbeOCrps6CICA'  /*Код доступа*/
+ }
+</script>
+<script type="text/javascript" src="//forumstatic.ru/files/0013/44/56/69800.js?"></script>
+<!--END//Цитирование в закрытых темах//-->

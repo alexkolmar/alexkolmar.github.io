@@ -1,0 +1,22 @@
+<INPUT style="TEXT-ALIGN: center; WIDTH: 80px" id=num class=codeButtons title="Счётчик символов" readOnly type=text>
+<SCRIPT type=text/javascript>
+document.getElementById("main-reply").addEventListener('focus', nc, false);
+document.getElementById("main-reply").addEventListener('keydown', nc, false);
+document.getElementById("main-reply").addEventListener('keyup', nc, false);
+document.getElementById("main-reply").addEventListener('keypress', nc, false);
+document.getElementById("main-reply").addEventListener('change', nc, false);
+function nc(){document.getElementById('num').value = document.getElementById('main-reply').value.length}   
+</SCRIPT>
+
+<script src="https://forumstatic.ru/files/0017/95/29/40399.js"></script>
+<script>
+ $(document).ready(function () {
+  hvStickerPack.init("https://forumstatic.ru/files/0012/14/e8/79175.txt");
+ });
+</script>
+<style>
+ #button-sticker {
+  background-image: url(https://forumstatic.ru/files/0012/14/e8/93336.png) !important;
+  width: 15px;
+ }
+</style>
