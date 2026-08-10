@@ -1,32 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
-</head>
-
-<body>
-
- <script>
-  $(".post-author").each(function () {
-   $(this).find('.pa-fld5, .pa-author, .pa-avatar, .pa-title, .pa-fld3').wrapAll("<div class='author-top'>");
-   $(this).find('.pa-fld2, .pa-fld1, .pa-online, .pa-last-visit, .pa-posts, .pa-fld4, .pa-respect').wrapAll("<div class='author-bottom'>");
-  });
- </script>
-
-<div class="lz">
- <div class="lz_links">
-  <a href="" class="name">jaden lowe</a>
-  <a id="sadhaka" class="modal-link pp" href="#" data-reveal-id="character">
-   <img src="https://forumstatic.ru/files/0012/0b/b4/81358.svg" alt="">
-  </a>
- </div>
- <p>и тот кто любил, но любить перестал, видимо, себя обратив в клинок, и себя же назвав праведным, пойдет, смерть неся
-  тем, кто остался невидимым, кто будет забыт и проглочен в порыве жадности.</p>
-</div>
-
-</body>
-
-</html>
+<li id="navlogout">
+ <a href="https://keenperseption.rolka.me/login.php?action=out&amp;id=2" onclick="return false" class="NextShow">
+  <span>Выход</span>
+ </a>
+ <span class="odd" style="display:inline-block;position:relative;">
+  <form id="form-login" method="post" action="/login.php?action=in" onsubmit="return mу_process_form(this)">
+   <div id="List-UserNames">
+    <ul>
+     <li><b>Damian Wayne</b><span title="Удалить" class="close">х</span></li>
+     <li><b>batboy</b><span title="Удалить" class="close">х</span></li>
+    </ul>
+    <span>
+     <span class="a1-copy"
+      original-title="Cкопировать данные аккаунтов на иное устройство или браузер"><b>↑</b>-copy</span>
+     <span class="a1-paste" original-title="Для вставки скопированного с иного устройства... !!!Нажать после вставки!">paste-<b>↓</b></span>
+     <input type="text" id="Paste-And-Copy" style="margin-top:1px; width:212px;">
+    </span>
+   </div>
+   <span>Введите ваше имя и пароль ниже</span>
+   <div>
+    <input type="hidden" name="form_sent" value="1">
+    <input type="hidden" name="redirect_url" value="">
+    <p class="inputfield required"></p>
+    <span>Имя</span>
+    <br>
+    <input type="text" id="fld1" name="req_username" size="17" maxlength="25">
+    <p class="inputfield required"></p>
+    <span>Пароль<br>
+     <input type="password" id="fld2" name="req_password" size="17" maxlength="16">
+     <p class="inputfield"></p>
+    </span>
+   </div>
+   <input type="submit" class="button" name="login" value="Войти">
+   <p><a class="Rega" href="/register.php">Еще не зарегистрированы?</a>
+    <br>
+    <a class="Forgot" href="/login.php?action=forget">Забыли пароль?</a>
+   </p>
+  </form>
+ </span>
+ <a id="New-exit" title="Выход" style="float:right;" href="/login.php?action=out&amp;id=2">
+  <img src="ссылка на картинку">
+ </a>
+</li>
