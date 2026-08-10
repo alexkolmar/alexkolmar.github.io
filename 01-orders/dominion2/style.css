@@ -1007,7 +1007,7 @@ app-character-profile {
   padding: 10px 0 0;
 }
 
-.post-author ul {
+.post-author ul, .message-author {
   background: var(--sec-bg) url(https://forumstatic.ru/files/0016/01/4e/81954.jpg) no-repeat top center;
   border: 1px solid var(--border);
   border-radius: 3px;
@@ -1808,6 +1808,80 @@ app-long-text-field-display {
   margin-top: 50px;
 }
 
+/* ЛС
+------------------------------------------*/
+
+.pm-container {
+  display: flex;
+  gap: 20px;
+}
+
+.pm-contact {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 3px;
+}
+
+.pm-contact.active {
+  background: var(--sec-bg)
+}
+
+.punbb .history-scroll {
+  overflow: auto;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.punbb .message .container {
+  display: flex;
+  padding: 0;
+  gap: 10px;
+}
+
+.punbb .message-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  width: 140px;
+}
+
+.punbb .message-avatar {
+  max-width: 100px;
+}
+
+.message-username {
+  background-image: linear-gradient( 90deg, rgb(155,80,71) 0%, rgb(59,54,54) 100%);
+  border-radius: 3px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3px 10px;
+  height: 24px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: var(--font1);
+  font-size: 17px;
+  color: var(--pun-bg);
+  line-height: 18px;
+  cursor: pointer;
+  transition: all .3s linear 0s;
+  text-align: center;
+}
+
+.message-body {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.message-metadata {
+  font-weight: 500;
+}
+
 /* Нужные
 ------------------------------------------*/
 
@@ -2391,3 +2465,4 @@ div .mylike .post-rating p:before {
   padding: 0;
   margin-bottom: 10px;
 }
+
