@@ -1,0 +1,53 @@
+<!---Аватар у приветствия--->
+<script>$('#pun-status').prepend('<span class="status_userava"><img src="'+(window.UserAvatar?UserAvatar:'/i/default_avatar.jpg')+'"/></span>')</script>
+<!---конец---->
+
+<!-- скрипт навигации от духа --> 
+<script type="text/javascript">
+$('.nav_button').click(function() {  
+    $('.nav_button').not(this).removeClass('i_active');
+    $(this).toggleClass('i_active');
+});
+$('.nav_button').each(function() {
+    $(this).on('click', function() { $('.nav_button').not($(this)).next().fadeIn();
+      $(this).next().fadeToggle(); 
+    });
+  });
+</script>
+
+<script type="text/javascript">
+$('.lz-button').on('click', function() {
+    const $btn = $(this);
+    const $li = $btn.closest('.pa-fld1');          // внутренний li с кнопкой
+    const $author = $btn.closest('.post-author'); // родительский блок автора
+    const $block = $li.find('.lz');     // сам скрываемый блок
+
+    // Переключаем класс active у обоих контейнеров
+    $li.toggleClass('active');
+    $author.toggleClass('active');
+
+    // Показываем/скрываем блок
+    $block.fadeToggle(300);
+
+});
+</script>
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх">▲</div>
+<div class="go-down" id='OnBottom' title="вниз">▼</div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
+</script>
