@@ -13,6 +13,7 @@
   --second-family: "Literata", sans-serif;
   --third-family: "IBM Plex Sans", sans-serif;
   --pad1: 50px 100px;
+  --pad2: 20px 100px;
 }
 
 * {
@@ -86,7 +87,7 @@ section.alt {
   justify-content: flex-end;
   width: 100%;
   gap: 20px 40px;
-  padding: 20px 100px;
+  padding: var(--pad2);
   line-height: 30px;
   background: var(--mint);
   box-shadow: 0 2px 2px 0px rgba(110, 130, 121, .7);
