@@ -23,8 +23,7 @@
 }
 
 body {
-  /* background: var(--main); */
-  background: url(img/hero.jpg) no-repeat fixed center/cover;
+  background: var(--main);
   font-family: var(--font-family);
 }
 
@@ -136,8 +135,7 @@ section.alt {
   position: relative;
   top: 50px;
   margin-bottom: 50px;
-  /* background: url(img/hero.jpg) no-repeat fixed center left/cover; */
-  background: transparent;
+  background: url(img/hero.jpg) no-repeat fixed center left/cover;
   width: 100%;
   height: 100vh;
   min-height: 700px;

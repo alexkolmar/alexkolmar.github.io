@@ -8,7 +8,7 @@
  <title>Alex Kolmar's art gallery</title>
  <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="mobile.css">
- <!-- Подключаем jQuery -->
+ <link href="wow-animation/animate.min.css" rel="stylesheet" type="text/css">
  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -33,7 +33,7 @@
        <a href="#portfolio" class="header_link">Мои работы</a>
       </li>
       <li>
-       <a href="#my_skills" class="header_link">Мои навыки</a>
+       <a href="#gamedev" class="header_link">Геймдев</a>
       </li>
       <li>
        <a href="#service" class="header_link">Услуги и цены</a>
@@ -72,23 +72,23 @@
   </div>
  </section>
 
- <section id="about_me">
+ <section id="about_me" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
   <h1>Обо мне</h1>
-  <p>Рисую и занимаюсь творчеством сколько себя помню. В 2011 году впервые стал администрировать форум, тогда и возникла
-   необходимость разобраться в вёрстке и дизайне сайтов. Уже в конце года я, несмотря на весьма поверхностные знания
-   веб-дизайна с помощью более опытных верстальщиков смог создать свой первый дизайн для ролевого форума. За последующие
-   несколько лет улучшил свои навыки вёрстки, научился работать в фотошопе и других графических редакторах: создавать
-   анимацию, коллажи и несложные иллюстрации. Для меня очень важно качество выполненной работы, продуманность деталей и
-   при этом отсутствие излишеств, мешающих восприятию.</p>
+  <p>Я веб-дизайнер и HTML/CSS-верстальщик с более чем 15-летним практическим опытом работы с сайтами.</p>
+  <p>В веб я пришла самостоятельно и много лет занималась созданием, оформлением и администрированием сайтов и форумов. За это время работала с HTML и CSS, шаблонами и интерфейсами, а в последние годы активно развиваю направление веб-дизайна и проектирования интерфейсов в Figma.</p>
+  <p>Могу взять небольшой проект целиком: помочь продумать структуру страницы, разработать дизайн в Figma, подготовить адаптивную версию и самостоятельно сверстать готовый макет на HTML/CSS.</p>
+  <p>Мне особенно интересны небольшие проекты: сайты-портфолио, личные сайты, лендинги, сайты специалистов и творческих проектов, а также обновление и визуальная актуализация существующих сайтов. Отдельное направление моей работы — дизайн и оформление форумов на MyBB.</p>
+  <p>В работе ценю понятные задачи, аккуратность и возможность действительно разобраться в том, что нужно заказчику, а не просто собрать очередной шаблон. Если задача выходит за рамки моих компетенций, предпочитаю сказать об этом заранее, а не обещать то, чего не смогу качественно сделать.</p>
+  <p>Также могу обучать начинающих работе в Figma и основам HTML/CSS — на практике, с разбором конкретных задач и макетов.</p>
   <h2>Мои навыки:</h2>
   <ul>
    <li>Работаю в Photoshop, Illustrator, Corel, Inkscape. Ретуширую, делаю коллажи, аватары и другую графику, разбираюсь
-    в анимации, в основном режу её сам или создаю с нуля, создаю несложные иллюстрации, умею работать с векторной
+    в анимации, в основном режу её сама или создаю с нуля, создаю несложные иллюстрации, умею работать с векторной
     графикой. В планах изучить After Effects и InDesign.</li>
    <li>Верстаю веб-страницы, довольно уверенно владею html и css, изучаю javascript. Умею делать адаптивную вёрстку
     сайтов. Работаю в программах Sublime Text, Dreamweaver, Figma.</li>
-   <li>Рисую, пишу маслом на холсте. Хожу в художественную школу.</li>
-   <li>Умею создавать и монтировать видео в Sony Vegas и не только.</li>
+   <li>Рисую, пишу маслом на холсте. Ходила в художественную школу.</li>
+   <li>Умею создавать и монтировать видео в Sony Vegas, kdenlive и не только.</li>
    <li>Имею представления о трёхмерной графике (3ds max), правда, на довольно поверхностном уровне, в ближайшем будущем
     планирую заняться изучением данной темы.</li>
    <li>Знаю основы раскрутки в сети и принципы создания таргетированной рекламы.</li>
@@ -96,7 +96,7 @@
   <p>Ниже можно ознакомиться с моими работами.</p>
  </section>
 
- <section id="portfolio" class="alt">
+ <section id="portfolio" class="alt wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
   <h1>Мои работы</h1>
   <div class="tabs-container">
    <ul class="tabs-nav">
@@ -134,20 +134,22 @@
   </div>
  </section>
 
- <section id="my_skills"></section>
+ <section id="gamedev" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"></section>
 
- <section id="service" class="alt">
+ <section id="service" class="alt wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 
  </section>
 
- <section id="useful"></section>
+ <section id="useful" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"></section>
 
- <section id="feedback" class="alt"></section>
+ <section id="feedback" class="alt wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"></section>
 
  <script src="scripts/menu.js"></script>
  <script src="scripts/anchor.js"></script>
  <script src="scripts/tabs.js"></script>
  <script src="scripts/tipsy.js"></script>
+ <script src="wow-animation/wow.min.js"></script>
+ <script>new WOW().init();</script>
 
 </body>
 
