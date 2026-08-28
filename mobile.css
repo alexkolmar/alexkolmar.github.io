@@ -98,6 +98,7 @@
 
    .header_link {
     text-transform: uppercase;
+    color: var(--light);
    }
 
   .hero_container {
@@ -123,7 +124,7 @@
 
   :root {
     --pad1: 20px 30px;
-    --pad2 10px 30px;
+    --pad2: 10px 30px;
   }
 
   h1 {
