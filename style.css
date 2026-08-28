@@ -85,7 +85,9 @@ section.alt {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
+  min-height: 50px;
   gap: 20px 40px;
   padding: var(--pad2);
   line-height: 30px;
