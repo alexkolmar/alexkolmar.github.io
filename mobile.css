@@ -96,11 +96,6 @@
     margin: 20px 0 0 20px;
    }
 
-   .header_link {
-    text-transform: uppercase;
-    color: var(--light);
-   }
-
   .hero_container {
     width: 100%;
   }

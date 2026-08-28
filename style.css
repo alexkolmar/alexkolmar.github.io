@@ -134,6 +134,11 @@ section.alt {
   padding: 0;
 }
 
+.header_link {
+  text-transform: uppercase;
+  color: var(--light);
+}
+
 #hero {
   position: relative;
   top: 50px;
