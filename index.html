@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" type="image/x-icon" href="https://alexkolmar.github.io/images/favicon.ico">
+ <title>Alex Kolmar's art gallery</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="mobile.css">
+ <!-- Подключаем jQuery -->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+
+ <header class="header">
+  <div class="container">
+   <div class="header_body">
+    <div class="header_burger">
+     <span></span>
+    </div>
+    <nav class="header_menu">
+     <ul class="header_list">
+      <li>
+       <a href="#hero" class="header_link">Главная</a>
+      </li>
+      <li>
+       <a href="#about_me" class="header_link">Обо мне</a>
+      </li>
+      <li>
+       <a href="#portfolio" class="header_link">Мои работы</a>
+      </li>
+      <li>
+       <a href="#my_skills" class="header_link">Мои навыки</a>
+      </li>
+      <li>
+       <a href="#service" class="header_link">Услуги и цены</a>
+      </li>
+      <li>
+       <a href="#useful" class="header_link">Полезное</a>
+      </li>
+      <li>
+       <a href="#feedback" class="header_link">Обратная связь</a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </div>
+ </header>
+
+ <section id="hero">
+  <div class="hero_container">
+   <h1 class="hero_hello">
+    Hello! My name is Alex Kolmar
+   </h1>
+   <div class="hero_text">
+    <p>Добро пожаловать на мой сайт! Я веб-дизайнер, разработчик компьютерных игр и художник. Каждый день стараюсь
+     сделать этот мир
+     немного прекраснее, а также готов помочь другим в этом нелёгком деле.</p>
+    <p>Подписывайтесь на мои каналы в соцсетях и мессенджерах:</p>
+   </div>
+   <div class="hero_links">
+    <a id="vk" href="https://vk.com/darth_stalker" target="_blank" title="Вконтакте"><span>Вконтакте</span><i
+      class="fab fa-vk"></i></a>
+    <a id="tg" href="https://t.me/byAlexKolmar" target="_blank" title="Телеграм"><span>Телеграм</span><i
+      class="fab fa-telegram-plane"></i></a>
+    <a id="youtube" href="http://www.youtube.com/@alexkolmar" target="_blank" title="YouTube"><span>YouTube</span><i
+      class="fa-brands fa-youtube"></i></a>
+   </div>
+  </div>
+ </section>
+
+ <section id="about_me">
+  <h1>Обо мне</h1>
+  <p>Рисую и занимаюсь творчеством сколько себя помню. В 2011 году впервые стал администрировать форум, тогда и возникла
+   необходимость разобраться в вёрстке и дизайне сайтов. Уже в конце года я, несмотря на весьма поверхностные знания
+   веб-дизайна с помощью более опытных верстальщиков смог создать свой первый дизайн для ролевого форума. За последующие
+   несколько лет улучшил свои навыки вёрстки, научился работать в фотошопе и других графических редакторах: создавать
+   анимацию, коллажи и несложные иллюстрации. Для меня очень важно качество выполненной работы, продуманность деталей и
+   при этом отсутствие излишеств, мешающих восприятию.</p>
+  <h2>Мои навыки:</h2>
+  <ul>
+   <li>Работаю в Photoshop, Illustrator, Corel, Inkscape. Ретуширую, делаю коллажи, аватары и другую графику, разбираюсь
+    в анимации, в основном режу её сам или создаю с нуля, создаю несложные иллюстрации, умею работать с векторной
+    графикой. В планах изучить After Effects и InDesign.</li>
+   <li>Верстаю веб-страницы, довольно уверенно владею html и css, изучаю javascript. Умею делать адаптивную вёрстку
+    сайтов. Работаю в программах Sublime Text, Dreamweaver, Figma.</li>
+   <li>Рисую, пишу маслом на холсте. Хожу в художественную школу.</li>
+   <li>Умею создавать и монтировать видео в Sony Vegas и не только.</li>
+   <li>Имею представления о трёхмерной графике (3ds max), правда, на довольно поверхностном уровне, в ближайшем будущем
+    планирую заняться изучением данной темы.</li>
+   <li>Знаю основы раскрутки в сети и принципы создания таргетированной рекламы.</li>
+  </ul>
+  <p>Ниже можно ознакомиться с моими работами.</p>
+ </section>
+
+ <section id="portfolio" class="alt">
+  <h1>Мои работы</h1>
+  <div class="tabs-container">
+   <ul class="tabs-nav">
+    <li class="tab-label active" data-tab="tab1">Веб-дизайн</li>
+    <li class="tab-label" data-tab="tab3">Вёрстка</li>
+    <li class="tab-label" data-tab="tab2">Графика</li>
+    <li class="tab-label" data-tab="tab4">Живопись</li>
+   </ul>
+   <div class="tabs-content">
+    <div class="tab-pane active" id="tab1">
+     <div class="tab_inner">
+      <h3>Содержимое вкладки 1</h3>
+      <p>Тут текст первой вкладки. Можно вставлять что угодно.</p>
+     </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+     <div class="tab_inner">
+      <h3>Содержимое вкладки 2</h3>
+      <p>А это вторая вкладка. Тут другой контент.</p>
+     </div>
+    </div>
+    <div class="tab-pane" id="tab3">
+     <div class="tab_inner">
+      <h3>Содержимое вкладки 3</h3>
+      <p>И третья вкладка. Сколько угодно можно добавлять.</p>
+     </div>
+    </div>
+    <div class="tab-pane" id="tab4">
+     <div class="tab_inner">
+      <h3>Содержимое вкладки 4</h3>
+      <p>4</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="my_skills"></section>
+
+ <section id="service" class="alt">
+
+ </section>
+
+ <section id="useful"></section>
+
+ <section id="feedback" class="alt"></section>
+
+ <script src="scripts/menu.js"></script>
+ <script src="scripts/anchor.js"></script>
+ <script src="scripts/tabs.js"></script>
+ <script src="scripts/tipsy.js"></script>
+
+</body>
+
+</html>
