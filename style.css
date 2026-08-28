@@ -8,7 +8,7 @@
   --second: #bcb09f;
   --light: #fff;
   --dark: #243763;
-  --mint: #B6D6C7;
+  --mint: #8CAB9C;
   --font-family: "Golos Text", sans-serif;
   --second-family: "Literata", sans-serif;
   --third-family: "IBM Plex Sans", sans-serif;
@@ -26,12 +26,12 @@
 body {
   background: var(--main);
   font-family: var(--font-family);
+  font-size: 20px;
 }
 
 a {
   color: var(--dark);
   text-decoration: none;
-  font-size: 20px;
 }
 
 h1 {
@@ -103,7 +103,7 @@ section.alt {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #B6D6C7;
+  background: var(--mint);
   box-shadow: 0 2px 2px 0px rgba(110, 130, 121, .7);
   z-index: 2;
 }
@@ -135,7 +135,6 @@ section.alt {
 }
 
 .header_link {
-  text-transform: uppercase;
   color: var(--light);
 }
 
@@ -276,4 +275,19 @@ section.alt {
 
 .tabs-content .tab-pane.active {
   display: block;
+}
+
+.footer {
+  color: var(--light);
+  background: var(--mint);
+  box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
+  padding: var(--pad2);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--light);
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+  text-decoration: underline dotted 2px;
 }
