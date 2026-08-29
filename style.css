@@ -377,6 +377,12 @@ section.alt {
   align-items: flex-start;
 }
 
+.videos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .feedback_inner {
   display: flex;
   flex-wrap: wrap;
