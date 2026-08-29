@@ -5,7 +5,8 @@
 
 :root {
   --main: #FCF9E0;
-  --second: #bcb09f;
+  --second: #947E5E;
+  --brown: #53442F;
   --light: #fff;
   --dark: #243763;
   --mint: #8CAB9C;
@@ -66,6 +67,10 @@ ul {
   list-style: inside circle;
 }
 
+ol {
+  list-style: inside decimal;
+}
+
 p,
 li {
   font-family: var(--font-family);
@@ -74,7 +79,33 @@ li {
   padding-bottom: 10px;
 }
 
+details {
+  background: var(--main);
+  padding: 30px 50px;
+  border-radius: 10px;
+  color: #000;
+}
+
+details summary {
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  transition: all .3s linear 0s;
+  color: var(--dark)
+}
+
+details[open] summary, summary:hover {
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+  text-decoration: underline dotted 2px;
+}
+
+details[open] summary {
+  padding-bottom: 30px;
+}
+
 section {
+  position: relative;
   background: var(--main);
   scroll-padding-top: 70px;
   padding: var(--pad1);
@@ -84,6 +115,7 @@ section {
 
 section.alt {
   background: var(--second);
+  color: var(--light)
 }
 
 /* меню */
@@ -262,6 +294,7 @@ section.alt {
 
 .tabs-container {
   margin: 20px auto;
+  color: #000;
 }
 
 /* ---- Лейблы вкладок (меню) ---- */
@@ -344,15 +377,39 @@ section.alt {
   align-items: flex-start;
 }
 
+.feedback_inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.feedback_inner > div {
+  width: 45%;
+}
+
+.feedback_inner ul {
+  list-style: none;
+}
+
+.feedback_inner h1 {
+  text-align: left;
+}
+
+.feedback_inner a {
+  color: var(--main);
+}
+
 .footer {
   color: var(--light);
-  background: var(--mint);
-  box-shadow: 0 -2px 2px 0px rgba(110, 130, 121, .7);
+  background: var(--brown);
+  box-shadow: 0 -2px 2px 0px rgba(50, 35, 12, 0.7);
   padding: var(--pad2);
   text-align: center;
 }
 
-.footer a {
+.footer a, .feedback_inner a:hover {
   color: var(--light);
   text-underline-offset: 4px;
   text-decoration-skip-ink: none;
