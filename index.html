@@ -8,6 +8,7 @@
  <title>Alex Kolmar's art gallery</title>
  <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="mobile.css">
+ <link rel="stylesheet" href="gallery.css">
  <link href="wow-animation/animate.min.css" rel="stylesheet" type="text/css">
  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -75,11 +76,19 @@
  <section id="about_me" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
   <h1>Обо мне</h1>
   <p>Я веб-дизайнер и HTML/CSS-верстальщик с более чем 15-летним практическим опытом работы с сайтами.</p>
-  <p>В веб я пришла самостоятельно и много лет занималась созданием, оформлением и администрированием сайтов и форумов. За это время работала с HTML и CSS, шаблонами и интерфейсами, а в последние годы активно развиваю направление веб-дизайна и проектирования интерфейсов в Figma.</p>
-  <p>Могу взять небольшой проект целиком: помочь продумать структуру страницы, разработать дизайн в Figma, подготовить адаптивную версию и самостоятельно сверстать готовый макет на HTML/CSS.</p>
-  <p>Мне особенно интересны небольшие проекты: сайты-портфолио, личные сайты, лендинги, сайты специалистов и творческих проектов, а также обновление и визуальная актуализация существующих сайтов. Отдельное направление моей работы — дизайн и оформление форумов на MyBB.</p>
-  <p>В работе ценю понятные задачи, аккуратность и возможность действительно разобраться в том, что нужно заказчику, а не просто собрать очередной шаблон. Если задача выходит за рамки моих компетенций, предпочитаю сказать об этом заранее, а не обещать то, чего не смогу качественно сделать.</p>
-  <p>Также могу обучать начинающих работе в Figma и основам HTML/CSS — на практике, с разбором конкретных задач и макетов.</p>
+  <p>В веб я пришла самостоятельно и много лет занималась созданием, оформлением и администрированием сайтов и форумов.
+   За это время работала с HTML и CSS, шаблонами и интерфейсами, а в последние годы активно развиваю направление
+   веб-дизайна и проектирования интерфейсов в Figma.</p>
+  <p>Могу взять небольшой проект целиком: помочь продумать структуру страницы, разработать дизайн в Figma, подготовить
+   адаптивную версию и самостоятельно сверстать готовый макет на HTML/CSS.</p>
+  <p>Мне особенно интересны небольшие проекты: сайты-портфолио, личные сайты, лендинги, сайты специалистов и творческих
+   проектов, а также обновление и визуальная актуализация существующих сайтов. Отдельное направление моей работы —
+   дизайн и оформление форумов на MyBB.</p>
+  <p>В работе ценю понятные задачи, аккуратность и возможность действительно разобраться в том, что нужно заказчику, а
+   не просто собрать очередной шаблон. Если задача выходит за рамки моих компетенций, предпочитаю сказать об этом
+   заранее, а не обещать то, чего не смогу качественно сделать.</p>
+  <p>Также могу обучать начинающих работе в Figma и основам HTML/CSS — на практике, с разбором конкретных задач и
+   макетов.</p>
   <h2>Мои навыки:</h2>
   <ul>
    <li>Работаю в Photoshop, Illustrator, Corel, Inkscape. Ретуширую, делаю коллажи, аватары и другую графику, разбираюсь
@@ -101,30 +110,95 @@
   <div class="tabs-container">
    <ul class="tabs-nav">
     <li class="tab-label active" data-tab="tab1">Веб-дизайн</li>
-    <li class="tab-label" data-tab="tab3">Вёрстка</li>
-    <li class="tab-label" data-tab="tab2">Графика</li>
-    <li class="tab-label" data-tab="tab4">Живопись</li>
+    <li class="tab-label" data-tab="tab2">Вёрстка</li>
+    <li class="tab-label" data-tab="tab3">Адаптив</li>
+    <li class="tab-label" data-tab="tab4">Графика</li>
+    <li class="tab-label" data-tab="tab5">Арт</li>
    </ul>
    <div class="tabs-content">
     <div class="tab-pane active" id="tab1">
      <div class="tab_inner">
-      <h3>Содержимое вкладки 1</h3>
-      <p>Тут текст первой вкладки. Можно вставлять что угодно.</p>
+      <center><p>Дизайны, созданные и свёрстанные мной. Нажмите, чтобы увеличить картинку.</p></center>
+      <br>
+      <div class="gallery">
+       <img src="https://i.imgur.com/3CKSqpN.jpg" class="gallery-image">
+       <img src="https://i.imgur.com/m40cbiH.jpg" class="gallery-image">
+       <img src="https://i.imgur.com/fj2JIob.png" class="gallery-image">
+       <img src="https://i.imgur.com/RNN1OXA.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/K8MwOgm.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/8x7DgTS.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/yRwqCRa.jpeg" class="gallery-image">
+       <img src="https://upforme.ru/uploads/001b/ff/2a/44/179771.jpg" class="gallery-image">
+       <img src="img/ManUNkind-2.jpg" class="gallery-image">
+       <img src="img/dc_manunkind_v3.png" class="gallery-image">
+       <img src="img/tes.png" class="gallery-image">
+      </div>
      </div>
     </div>
     <div class="tab-pane" id="tab2">
      <div class="tab_inner">
-      <h3>Содержимое вкладки 2</h3>
-      <p>А это вторая вкладка. Тут другой контент.</p>
+      <center><p>Вёрстка десктопных версий дизайнов, созданных другими дизайнерами. Нажмите, чтобы увеличить картинку.</p></center>
+      <br>
+      <div class="gallery">
+       <img src="img/Boston.jpg" class="gallery-image">
+       <img src="https://i.imgur.com/uYWoyze.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/gdOAjyp.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/w2nV0fo.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/Z1F51ri.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/dXXQkav.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/inNYsZ2.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/oGEis9g.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/wZVbXfu.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/Z50FzkL.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/WhmuJ8i.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/13UMV66.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/IMCm8mZ.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/epGiznc.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/GWuJ4RF.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/Jic13CY.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/z0fRTPQ.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/tZII6Tr.png" class="gallery-image">
+       <img src="https://i.imgur.com/rRLiR83.png" class="gallery-image">
+       <img src="https://i.imgur.com/eGcNZTm.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/o2LdZvP.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/vTGNrK1.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/fAArpaY.png" class="gallery-image">
+       <img src="https://i.imgur.com/u7pXKBi.png" class="gallery-image">
+       <img src="https://i.imgur.com/QSMhlvv.png" class="gallery-image">
+       <img src="https://i.imgur.com/hwynQFa.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/eXR8TlH.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/npwtInu.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/WqBYfPo.jpeg" class="gallery-image">
+       <img src="https://i.imgur.com/EsjdUZW.gif" class="gallery-image">
+       <img src="https://i.imgur.com/vbSrMiZ.jpeg" class="gallery-image">
+      </div>
      </div>
     </div>
     <div class="tab-pane" id="tab3">
      <div class="tab_inner">
-      <h3>Содержимое вкладки 3</h3>
-      <p>И третья вкладка. Сколько угодно можно добавлять.</p>
+      <center><p>Вёрстка мобильных версий дизайнов. Сами мобильные версии разрабатывались в основном мной на основе десктопных дизайнов. Нажмите, чтобы увеличить картинку.</p></center>
+      <br>
+      <div class="gallery">
+       <img src="https://i.imgur.com/7vE88bS.png" class="gallery-image adaptive">
+       <img src="https://upforme.ru/uploads/0007/e3/f7/7130/249416.png" class="gallery-image adaptive">
+       <img src="https://i.imgur.com/RAnROK4.jpg" class="gallery-image adaptive">
+       <img src="img/azzt-mobile.jpg" class="gallery-image adaptive">
+       <img src="img/Haftraum-mobile.jpg" class="gallery-image adaptive">
+       <img src="img/lucifer.jpg" class="gallery-image adaptive">
+       <img src="img/Ventanna.jpg" class="gallery-image adaptive">
+       <img src="img/naruto.jpg" class="gallery-image adaptive">
+       <img src="img/ManUNkind-2-viewforum.png" class="gallery-image adaptive">
+       <img src="img/dc_manunkind_v3_mobile.png" class="gallery-image adaptive">
+      </div>
      </div>
     </div>
     <div class="tab-pane" id="tab4">
+     <div class="tab_inner">
+      <h3>Содержимое вкладки 4</h3>
+      <p>4</p>
+     </div>
+    </div>
+    <div class="tab-pane" id="tab5">
      <div class="tab_inner">
       <h3>Содержимое вкладки 4</h3>
       <p>4</p>
@@ -150,16 +224,28 @@
   <h1>Обратная связь</h1>
  </section>
 
+ <!-- Модальное окно -->
+ <div class="modal" id="image-modal">
+  <div class="modal-frame">
+   <div class="modal-scroll">
+    <img src="https://i.imgur.com/7vE88bS.png" alt="" id="modal-image">
+   </div>
+  </div>
+ </div>
+
  <script src="scripts/menu.js"></script>
  <script src="scripts/anchor.js"></script>
  <script src="scripts/tabs.js"></script>
  <script src="scripts/tipsy.js"></script>
+ <script src="scripts/gallery.js"></script>
  <script src="wow-animation/wow.min.js"></script>
  <script>new WOW().init();</script>
 
 </body>
 <footer class="footer">
-Copyright &copy; Design by <a href="https://t.me/byalexkolmar" target="_blank">Alex Kolmar</a>, 2020<script>new Date().getFullYear()>2020&&document.write("-"+new Date().getFullYear());</script>. All rights reserved.
+ Copyright &copy; Design by <a href="https://t.me/byalexkolmar" target="_blank">Alex Kolmar</a>, 2020
+ <script>new Date().getFullYear() > 2020 && document.write("-" + new Date().getFullYear());</script>. All rights
+ reserved.
 </footer>
 
 </html>

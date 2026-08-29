@@ -29,6 +29,10 @@ body {
   font-size: 20px;
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 a {
   color: var(--dark);
   text-decoration: none;
