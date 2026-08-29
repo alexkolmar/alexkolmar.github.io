@@ -79,11 +79,18 @@ li {
   padding-bottom: 10px;
 }
 
+img {
+  max-width: 100%;
+}
+
 details {
   background: var(--main);
-  padding: 30px 50px;
+  padding: 20px 40px;
   border-radius: 10px;
   color: #000;
+  border: 1px solid var(--mint);
+  box-shadow: 0 2px 2px 0px rgba(110, 130, 121, .7);
+  margin-bottom: 20px;
 }
 
 details summary {
@@ -94,13 +101,13 @@ details summary {
   color: var(--dark)
 }
 
-details[open] summary, summary:hover {
+details[open] > summary, summary:hover {
   text-underline-offset: 4px;
   text-decoration-skip-ink: none;
   text-decoration: underline dotted 2px;
 }
 
-details[open] summary {
+details[open] > summary {
   padding-bottom: 30px;
 }
 
@@ -301,10 +308,16 @@ section.alt {
   flex-wrap: wrap;
 }
 
+.content_img {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .feedback_inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px 50px;
   align-items: flex-start;
   justify-content: space-between;
 }

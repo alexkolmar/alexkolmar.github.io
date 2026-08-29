@@ -43,6 +43,10 @@ html, body {
     padding: 0;
 }
 
+p, li, summary {
+  font-size: 16px;
+}
+
   :root {
     --pad1: 20px 30px;
     --pad2: 10px 30px;
@@ -52,12 +56,27 @@ html, body {
     font-size: 40px;
   }
 
+  details {
+    padding: 10px 20px;
+  }
+
+  details[open] > summary {
+  padding-bottom: 10px;
+}
+
+  table, thead, tbody, tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
   #hero {
     align-items: flex-start;
   }
 
   .tabs-nav {
     margin-bottom: 5px;
+    border: none;
   }
 
   .tabs-nav .tab-label,
@@ -65,6 +84,14 @@ html, body {
     flex-grow: 1;
     margin: 0;
     border-radius: 0;
+  }
+
+  .videos div, .videos iframe {
+    width: 100%;
+  }
+
+  .feedback_inner > div {
+    width: 100%;
   }
 
 }
