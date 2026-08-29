@@ -131,15 +131,26 @@ section.alt {
 
 #hero {
   position: relative;
+  overflow: hidden;
   top: 50px;
   margin-bottom: 50px;
-  background: url(img/hero.jpg) no-repeat fixed center left/cover;
+  /* background: url(img/hero.jpg) no-repeat fixed center left/cover; */
   width: 100%;
   height: 100vh;
   min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+#hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .hero_container {
@@ -149,6 +160,8 @@ section.alt {
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero_hello {
@@ -192,7 +205,7 @@ section.alt {
   gap: 10px;
   color: #fff;
   transition: .2s;
-  box-shadow: 0 4px rgb(71, 45, 110), 0 3px 5px rgba(0, 0, 0, .4), inset 0 1px rgba(255, 255, 255, .3), inset 0 0 3px rgba(255, 255, 255, .5);
+  box-shadow: 0 4px rgb(61, 55, 70), 0 3px 5px rgba(0, 0, 0, .4), inset 0 1px rgba(255, 255, 255, .3), inset 0 0 3px rgba(255, 255, 255, .5);
 }
 
 #vk {
