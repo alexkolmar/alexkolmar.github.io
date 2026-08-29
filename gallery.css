@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .gallery-image {
@@ -17,6 +18,18 @@
 
 .gallery-image.adaptive {
   height: 500px;
+}
+
+.gallery-image.epic {
+  height: 280px;
+}
+
+.gallery-image.unset {
+  height: 100%;
+}
+
+.gallery-image.round {
+  border-radius: 50%;
 }
 
 .gallery-image:hover {
