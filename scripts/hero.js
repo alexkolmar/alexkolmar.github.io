@@ -21,5 +21,5 @@ $(document).ready(function() {
             $(this).attr('src', backgrounds[currentIndex]);
             $(this).fadeIn(500);
         });
-    }, 5000);
+    }, 15000);
 });
