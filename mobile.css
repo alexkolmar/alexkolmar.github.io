@@ -13,39 +13,27 @@
     overflow: hidden;
   }
 
-  .hero_container {
-    width: 100%;
-  }
-
-  .hero_links {
-    flex-wrap: wrap;
-  }
-
-  .hero_links a {
-    width: 50px;
-  }
-
-  .hero_links a span {
-    display: none;
-  }
-
 }
 
 
 @media screen and (max-width: 540px) {
 
   /* ===== Глобальный сброс для мобилок ===== */
-html, body {
-    overflow-x: hidden; /* ← убираем горизонтальный скролл */
+  html,
+  body {
+    overflow-x: hidden;
+    /* ← убираем горизонтальный скролл */
     width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0;
-}
+  }
 
-p, li, summary {
-  font-size: 16px;
-}
+  p,
+  li,
+  summary {
+    font-size: 16px;
+  }
 
   :root {
     --pad1: 20px 30px;
@@ -60,11 +48,14 @@ p, li, summary {
     padding: 10px 20px;
   }
 
-  details[open] > summary {
-  padding-bottom: 10px;
-}
+  details[open]>summary {
+    padding-bottom: 10px;
+  }
 
-  table, thead, tbody, tr {
+  table,
+  thead,
+  tbody,
+  tr {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -86,11 +77,12 @@ p, li, summary {
     border-radius: 0;
   }
 
-  .videos div, .videos iframe {
+  .videos div,
+  .videos iframe {
     width: 100%;
   }
 
-  .feedback_inner > div {
+  .feedback_inner>div {
     width: 100%;
   }
 

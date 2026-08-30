@@ -12,6 +12,7 @@
  <link rel="stylesheet" href="menu.css">
  <link href="wow-animation/animate.min.css" rel="stylesheet" type="text/css">
  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ <script defer src="scripts/i18n.js"></script>
 </head>
 
 <body>
@@ -29,25 +30,38 @@
     <nav class="header_menu">
      <ul class="header_list">
       <li>
-       <a href="#hero" class="header_link">Главная</a>
+       <a href="#hero" class="header_link" data-i18n="link1">Главная</a>
       </li>
       <li>
-       <a href="#about_me" class="header_link">Обо мне</a>
+       <a href="#about_me" class="header_link" data-i18n="link2">Обо мне</a>
       </li>
       <li>
-       <a href="#portfolio" class="header_link">Мои работы</a>
+       <a href="#portfolio" class="header_link" data-i18n="link3">Мои работы</a>
       </li>
       <li>
-       <a href="#gamedev" class="header_link">Геймдев</a>
+       <a href="#gamedev" class="header_link" data-i18n="link4">Геймдев</a>
       </li>
       <li>
-       <a href="#service" class="header_link">Услуги и цены</a>
+       <a href="#service" class="header_link" data-i18n="link5">Услуги и цены</a>
       </li>
       <li>
-       <a href="#useful" class="header_link">Полезное</a>
+       <a href="#useful" class="header_link" data-i18n="link6">Полезное</a>
       </li>
       <li>
-       <a href="#feedback" class="header_link">Обратная связь</a>
+       <a href="#feedback" class="header_link" data-i18n="link7">Обратная связь</a>
+      </li>
+      <li class="language-dropdown">
+       <button class="lang-btn" onclick="toggleDropdown()">
+        <span id="current-lang-flag">🇷🇺</span>
+        <span id="current-lang-name">Русский</span>
+        <span class="lang-arrow">▾</span>
+       </button>
+       <ul class="lang-menu" id="lang-menu">
+        <li><button onclick="setLanguage('ru')" class="lang-option">🇷🇺 Русский</button></li>
+        <li><button onclick="setLanguage('en')" class="lang-option">🇬🇧 English</button></li>
+        <!-- Если добавишь другие языки: -->
+        <!-- <li><button onclick="setLanguage('de')" class="lang-option">🇩🇪 Deutsch</button></li> -->
+       </ul>
       </li>
      </ul>
     </nav>
@@ -62,15 +76,15 @@
     Hello! My name is Alex Kolmar
    </h1>
    <div class="hero_text">
-    <p>Добро пожаловать на мой сайт! Я веб-дизайнер, разработчик компьютерных игр и художник. Каждый день стараюсь
-     сделать этот мир
-     немного прекраснее, а также готова помочь другим в этом нелёгком деле.</p>
-    <p>Подписывайтесь на мои каналы в соцсетях и мессенджерах:</p>
+    <p data-i18n="ht1">Добро пожаловать на мой сайт! Я веб-дизайнер, разработчик компьютерных игр и художник. Каждый
+     день стараюсь
+     сделать этот мир немного прекраснее, а также готова помочь другим в этом нелёгком деле.</p>
+    <p data-i18n="ht2">Подписывайтесь на мои каналы в соцсетях и мессенджерах:</p>
    </div>
    <div class="hero_links">
-    <a id="vk" href="https://vk.com/darth_stalker" target="_blank" title="Вконтакте"><span>Вконтакте</span><i
+    <a id="vk" href="https://vk.com/darth_stalker" target="_blank" title="Вконтакте"><span>Vkontakte</span><i
       class="fab fa-vk"></i></a>
-    <a id="tg" href="https://t.me/byAlexKolmar" target="_blank" title="Телеграм"><span>Телеграм</span><i
+    <a id="tg" href="https://t.me/byAlexKolmar" target="_blank" title="Телеграм"><span>Telegram</span><i
       class="fab fa-telegram-plane"></i></a>
     <a id="youtube" href="http://www.youtube.com/@alexkolmar" target="_blank" title="YouTube"><span>YouTube</span><i
       class="fa-brands fa-youtube"></i></a>
@@ -79,46 +93,54 @@
  </section>
 
  <section id="about_me" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-  <h1>Обо мне</h1>
-  <p>Я веб-дизайнер и HTML/CSS-верстальщик с более чем 15-летним практическим опытом работы с сайтами.</p>
-  <p>В веб я пришла самостоятельно и много лет занималась созданием, оформлением и администрированием сайтов и форумов.
+  <h1 data-i18n="link2">Обо мне</h1>
+  <p data-i18n="am1">Я веб-дизайнер и HTML/CSS-верстальщик с более чем 15-летним практическим опытом работы с сайтами.
+  </p>
+  <p data-i18n="am2">В веб я пришла самостоятельно и много лет занималась созданием, оформлением и администрированием
+   сайтов и форумов.
    За это время работала с HTML и CSS, шаблонами и интерфейсами, а в последние годы активно развиваю направление
    веб-дизайна и проектирования интерфейсов в Figma.</p>
-  <p>Могу взять небольшой проект целиком: помочь продумать структуру страницы, разработать дизайн в Figma, подготовить
+  <p data-i18n="am3">Могу взять небольшой проект целиком: помочь продумать структуру страницы, разработать дизайн в
+   Figma, подготовить
    адаптивную версию и самостоятельно сверстать готовый макет на HTML/CSS.</p>
   <p>Мне особенно интересны небольшие проекты: сайты-портфолио, личные сайты, лендинги, сайты специалистов и творческих
    проектов, а также обновление и визуальная актуализация существующих сайтов. Отдельное направление моей работы —
    дизайн и оформление форумов на MyBB.</p>
-  <p>В работе ценю понятные задачи, аккуратность и возможность действительно разобраться в том, что нужно заказчику, а
+  <p data-i18n="am4">В работе ценю понятные задачи, аккуратность и возможность действительно разобраться в том, что
+   нужно заказчику, а
    не просто собрать очередной шаблон. Если задача выходит за рамки моих компетенций, предпочитаю сказать об этом
    заранее, а не обещать то, чего не смогу качественно сделать.</p>
-  <p>Также могу обучать начинающих работе в Figma и основам HTML/CSS — на практике, с разбором конкретных задач и
+  <p data-i18n="am5">Также могу обучать начинающих работе в Figma и основам HTML/CSS — на практике, с разбором
+   конкретных задач и
    макетов.</p>
-  <h2>Мои навыки:</h2>
+  <h2 data-i18n="myskills">Мои навыки:</h2>
   <ul>
-   <li>Работаю в Photoshop, Illustrator, Corel, Inkscape. Ретуширую, делаю коллажи, аватары и другую графику, разбираюсь
+   <li data-i18n="ms1">Работаю в Photoshop, Illustrator, Corel, Inkscape. Ретуширую, делаю коллажи, аватары и другую
+    графику, разбираюсь
     в анимации, в основном режу её сама или создаю с нуля, создаю несложные иллюстрации, умею работать с векторной
     графикой. В планах изучить After Effects и InDesign.</li>
-   <li>Верстаю веб-страницы, довольно уверенно владею html и css, изучаю javascript. Умею делать адаптивную вёрстку
+   <li data-i18n="ms2">Верстаю веб-страницы, довольно уверенно владею html и css, изучаю javascript. Умею делать
+    адаптивную вёрстку
     сайтов. Работаю в программах Sublime Text, Dreamweaver, Figma.</li>
-   <li>Рисую, пишу маслом на холсте. Ходила в художественную школу.</li>
-   <li>Умею создавать и монтировать видео в Sony Vegas, kdenlive и не только.</li>
-   <li>Имею представления о трёхмерной графике (3ds max), правда, на довольно поверхностном уровне, в ближайшем будущем
+   <li data-i18n="ms3">Рисую, пишу маслом на холсте. Ходила в художественную школу.</li>
+   <li data-i18n="ms4">Умею создавать и монтировать видео в Sony Vegas, kdenlive и не только.</li>
+   <li data-i18n="ms5">Имею представления о трёхмерной графике (3ds max), правда, на довольно поверхностном уровне, в
+    ближайшем будущем
     планирую заняться изучением данной темы.</li>
-   <li>Знаю основы раскрутки в сети и принципы создания таргетированной рекламы.</li>
+   <li data-i18n="ms6">Знаю основы раскрутки в сети и принципы создания таргетированной рекламы.</li>
   </ul>
-  <p>Ниже можно ознакомиться с моими работами.</p>
+  <p data-i18n="am6">Ниже можно ознакомиться с моими работами.</p>
  </section>
 
  <section id="portfolio" class="alt wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-  <h1>Мои работы</h1>
+  <h1 data-i18n="link3">Мои работы</h1>
   <div class="tabs-container">
    <ul class="tabs-nav">
-    <li class="tab-label active" data-tab="tab1">Веб-дизайн</li>
-    <li class="tab-label" data-tab="tab2">Вёрстка</li>
-    <li class="tab-label" data-tab="tab3">Адаптив и элементы</li>
-    <li class="tab-label" data-tab="tab4">Графика</li>
-    <li class="tab-label" data-tab="tab5">Арт</li>
+    <li class="tab-label active" data-tab="tab1" data-i18n="tab1">Веб-дизайн</li>
+    <li class="tab-label" data-tab="tab2" data-i18n="tab2">Вёрстка</li>
+    <li class="tab-label" data-tab="tab3" data-i18n="tab3">Адаптив и элементы</li>
+    <li class="tab-label" data-tab="tab4" data-i18n="tab4">Графика</li>
+    <li class="tab-label" data-tab="tab5" data-i18n="tab5">Арт</li>
    </ul>
    <div class="tabs-content">
     <div class="tab-pane active" id="tab1">
@@ -332,7 +354,7 @@
  </section>
 
  <section id="gamedev" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-  <h1>Геймдев</h1>
+  <h1 data-i18n="link4">Геймдев</h1>
   <p>Помимо вёрстки и веб-дизайна, я занимаюсь разработкой собственной компьютерной игры в жанре "Визуальная новелла"
    под названием "Eternal Veil".</p>
   <div class="content_img"><img src="https://upforme.ru/uploads/001b/ff/2a/44/475196.jpg" alt=""></div>
@@ -382,7 +404,7 @@
  </section>
 
  <section id="service" class="alt wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-  <h1>Услуги и цены</h1>
+  <h1 data-i18n="link5">Услуги и цены</h1>
   <details>
    <summary>Правила и информация</summary>
    <ol>
@@ -415,7 +437,8 @@
     <li>Если вы по каким-то причинам решите отменить ваш заказ — всё решаемо. Если вы не делали предоплату и я не успела
      начать работу, то не вижу проблем. Поэтому отказываться желательно на начальном этапе. Просто прежде, чем делать
      заказ, подумайте — вы точно этого хотите? Если не уверены, то, по крайней мере, не делайте предоплату заказа.</li>
-    <li>Постоянным клиентам возможны скидки :з Также возможны скидки и новым клиентам, но размер и условия будут обсуждаться индивидуально.</li>
+    <li>Постоянным клиентам возможны скидки :з Также возможны скидки и новым клиентам, но размер и условия будут
+     обсуждаться индивидуально.</li>
    </ol>
   </details>
   <h3>Цены</h3>
@@ -438,7 +461,8 @@
   </ul>
   <h3>Обучение</h3>
   <p>Помимо создания сайтов я также обучаю вёрстке и администрированию сайтов. Обучение я провожу дистанционно,
-   посредством Telegram, Discord, либо Яндекс Телемост. Стоимость занятия - 800 рублей в час, обычно урок длится полтора часа.</p>
+   посредством Telegram, Discord, либо Яндекс Телемост. Стоимость занятия - 800 рублей в час, обычно урок длится полтора
+   часа.</p>
   <p>Что мы можем изучать на уроках:</p>
   <ul>
    <li>Разбор инструментария, необходимого для вёрстки: программы, средства в браузере, справочники, полезные сервисы.
@@ -456,7 +480,7 @@
  </section>
 
  <section id="useful" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-  <h1>Полезное</h1>
+  <h1 data-i18n="link6">Полезное</h1>
   <p>Здесь хочу поделиться с вами своими наработками, которые могут пригодиться для оформления сайтов.</p>
   <br>
   <details>
@@ -566,18 +590,20 @@
      </div>
     </details>
     <p><b>📺 Как работает</b>
-     <br>Выделили HTML → правый клик → "Конвертировать HTML в BB" → получили готовый BB-код.</p>
+     <br>Выделили HTML → правый клик → "Конвертировать HTML в BB" → получили готовый BB-код.
+    </p>
     <p><b>🔗 Где взять</b>
      <br>В официальном магазине расширений VS Code:
      <a href="https://marketplace.visualstudio.com/items?itemName=AlexKolmar.html-to-bb-converter" rel="nofollow ugc"
       target="_blank">HTML to BB Converter</a> или прямо в самой программе VS Code в разделе расширений введите "HTML to
-     BB Converter".</p>
-     <details>
-      <summary>Поиск в VS Code</summary>
-      <div class="content_img">
-       <img src="https://upforme.ru/uploads/0018/1e/e2/2/215959.gif" alt="">
-      </div>
-     </details>
+     BB Converter".
+    </p>
+    <details>
+     <summary>Поиск в VS Code</summary>
+     <div class="content_img">
+      <img src="https://upforme.ru/uploads/0018/1e/e2/2/215959.gif" alt="">
+     </div>
+    </details>
     <p>Исходники и issue на GitHub: <a href="https://github.com/alexkolmar/html-to-bb-converter" rel="nofollow ugc"
       target="_blank">ссылка</a></p>
     <p><b>💬 Важно</b><br>Расширение opensource, бесплатное. Если найдёте
@@ -589,7 +615,7 @@
  <section id="feedback" class="alt wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
   <div class="feedback_inner">
    <div class="fback_left">
-    <h1>Контакты</h1>
+    <h1 data-i18n="contacts">Контакты</h1>
     <ul>
      <li><i class="fa-brands fa-vk"></i> <a href="https://vk.ru/byalexkolmar">Desigh by Alex Kolmar</a></li>
      <li><i class="fa-brands fa-youtube"></i> <a href="http://www.youtube.com/@alexkolmar">Alex Kolmar</a></li>
@@ -609,18 +635,18 @@
  </section>
 
  <!-- Модальное окно -->
-<div class="modal" id="image-modal">
-    <div class="modal-frame">
-        <div class="modal-scroll">
-            <img src="" alt="" id="modal-image">
-        </div>
-        <!-- Кнопки навигации -->
-        <button class="modal-nav modal-prev" id="modalPrev">‹</button>
-        <button class="modal-nav modal-next" id="modalNext">›</button>
-        <!-- Кнопка закрытия -->
-        <button class="modal-close" id="modalClose">✕</button>
-    </div>
-</div>
+ <div class="modal" id="image-modal">
+  <div class="modal-frame">
+   <div class="modal-scroll">
+    <img src="" alt="" id="modal-image">
+   </div>
+   <!-- Кнопки навигации -->
+   <button class="modal-nav modal-prev" id="modalPrev">‹</button>
+   <button class="modal-nav modal-next" id="modalNext">›</button>
+   <!-- Кнопка закрытия -->
+   <button class="modal-close" id="modalClose">✕</button>
+  </div>
+ </div>
 
  <script src="scripts/menu.js"></script>
  <script src="scripts/hero.js"></script>
