@@ -609,13 +609,18 @@
  </section>
 
  <!-- Модальное окно -->
- <div class="modal" id="image-modal">
-  <div class="modal-frame">
-   <div class="modal-scroll">
-    <img src="" alt="" id="modal-image">
-   </div>
-  </div>
- </div>
+<div class="modal" id="image-modal">
+    <div class="modal-frame">
+        <div class="modal-scroll">
+            <img src="" alt="" id="modal-image">
+        </div>
+        <!-- Кнопки навигации -->
+        <button class="modal-nav modal-prev" id="modalPrev">‹</button>
+        <button class="modal-nav modal-next" id="modalNext">›</button>
+        <!-- Кнопка закрытия -->
+        <button class="modal-close" id="modalClose">✕</button>
+    </div>
+</div>
 
  <script src="scripts/menu.js"></script>
  <script src="scripts/hero.js"></script>
