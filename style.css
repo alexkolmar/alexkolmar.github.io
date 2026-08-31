@@ -79,6 +79,16 @@ li {
   padding-bottom: 10px;
 }
 
+s, del {
+  text-decoration: none;
+  filter: blur(3px);
+  transition: all .3s linear 0s;
+}
+
+s:hover, del:hover {
+  filter: none;
+}
+
 img {
   max-width: 100%;
 }

@@ -4,7 +4,7 @@
 
 let currentLanguage = localStorage.getItem('language') || 'ru';
 let translations = {};
-let originalTexts = {}; // ← храним оригинальный русский текст
+let originalTexts = {};
 
 // Сохраняем оригинальные русские тексты
 function saveOriginalTexts() {
@@ -17,11 +17,11 @@ function saveOriginalTexts() {
 // Загрузка английского JSON
 async function loadLanguage(lang) {
     if (lang === 'ru') {
-        // Возвращаем русский из HTML
         applyRussian();
         document.documentElement.lang = 'ru';
         localStorage.setItem('language', 'ru');
         currentLanguage = 'ru';
+        updateLanguageDisplay('ru');
         return;
     }
     
@@ -32,17 +32,22 @@ async function loadLanguage(lang) {
         document.documentElement.lang = lang;
         localStorage.setItem('language', lang);
         currentLanguage = lang;
+        updateLanguageDisplay(lang);
     } catch (error) {
         console.error('Ошибка загрузки языка:', error);
     }
 }
 
-// Применяем английский перевод
+// ===== ЕДИНСТВЕННАЯ applyTranslations (с innerHTML) =====
 function applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[key]) {
-            element.textContent = translations[key];
+            // Разрешаем только безопасные теги
+            const text = translations[key];
+            // Простая санитизация (удаляем опасные теги)
+            const sanitized = text.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+            element.innerHTML = sanitized; // ✅ innerHTML — теги работают
         }
     });
 }
@@ -57,84 +62,62 @@ function applyRussian() {
     });
 }
 
-// Переключение языка
-function setLanguage(lang) {
-    if (lang !== currentLanguage) {
-        loadLanguage(lang);
-    }
-}
-
-// ===== ИНИЦИАЛИЗАЦИЯ =====
-document.addEventListener('DOMContentLoaded', () => {
-    // Сохраняем русские тексты
-    saveOriginalTexts();
-    
-    // Если был выбран английский — подгружаем
-    if (currentLanguage === 'en') {
-        loadLanguage('en');
-    }
-    // Иначе остаётся русский
-});
-
-
-// ===== Переключатель языков (dropdown) =====
+// ===== Переключатель языков =====
 
 function toggleDropdown() {
     const menu = document.getElementById('lang-menu');
     const btn = document.querySelector('.lang-btn');
-    menu.classList.toggle('open');
-    btn.classList.toggle('active');
+    if (menu) menu.classList.toggle('open');
+    if (btn) btn.classList.toggle('active');
 }
 
 // Закрыть dropdown при клике вне него
 document.addEventListener('click', function(event) {
     const dropdown = document.querySelector('.language-dropdown');
-    if (!dropdown.contains(event.target)) {
+    if (dropdown && !dropdown.contains(event.target)) {
         const menu = document.getElementById('lang-menu');
         const btn = document.querySelector('.lang-btn');
-        menu.classList.remove('open');
-        btn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (btn) btn.classList.remove('active');
     }
 });
 
-// Обновление названия текущего языка (вызывать после смены языка)
+// Обновление названия текущего языка
 function updateLanguageDisplay(lang) {
     const flagMap = {
         'ru': '🇷🇺',
         'en': '🇬🇧'
-        // 'de': '🇩🇪'
     };
-    
     const nameMap = {
         'ru': 'Русский',
         'en': 'English'
-        // 'de': 'Deutsch'
     };
     
-    document.getElementById('current-lang-flag').textContent = flagMap[lang] || '🌐';
-    document.getElementById('current-lang-name').textContent = nameMap[lang] || lang;
+    const flagEl = document.getElementById('current-lang-flag');
+    const nameEl = document.getElementById('current-lang-name');
+    if (flagEl) flagEl.textContent = flagMap[lang] || '🌐';
+    if (nameEl) nameEl.textContent = nameMap[lang] || lang;
 }
 
-// ===== ДОПОЛНЯЕМ setLanguage =====
-// В твоей существующей функции setLanguage добавь вызов updateLanguageDisplay
-
-// Пример:
+// ===== Глобальная функция переключения =====
 window.setLanguage = function(lang) {
-    console.log('Переключение на:', lang);
     if (lang !== currentLanguage) {
         loadLanguage(lang);
-        updateLanguageDisplay(lang); // ← добавляем эту строку
         
         // Закрываем dropdown после выбора
         const menu = document.getElementById('lang-menu');
         const btn = document.querySelector('.lang-btn');
-        menu.classList.remove('open');
-        btn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (btn) btn.classList.remove('active');
     }
 };
 
-// При инициализации обновляем отображение
+// ===== ИНИЦИАЛИЗАЦИЯ =====
 document.addEventListener('DOMContentLoaded', () => {
-    // ... твой существующий код ...
+    saveOriginalTexts();
     updateLanguageDisplay(currentLanguage);
+    
+    if (currentLanguage === 'en') {
+        loadLanguage('en');
+    }
 });
