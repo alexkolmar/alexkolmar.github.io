@@ -1,5 +1,5 @@
-/* Иконический шрифт */
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+/* Font Awesome */
+@import url("https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css");
 
 /*****************************
 ---------- МОБИЛЬНЫЙ СТИЛЬ ----------
@@ -14,6 +14,19 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  html {
+    scrollbar-width: none; /* Firefox */
+    overflow-x: hidden !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+    width: 100% !important;
+     margin: 0 !important;
+     padding: 0 !important;
   }
 
   #pun {
@@ -140,59 +153,23 @@
     position: relative;
   }
 
-  #pun-navlinks li a:after,
-  #pun-ulinks:after {
+    #pun-navlinks li a::after {
     content: "";
-    font: normal 36px/40px 'Material Icons Outlined';
+    font: 700 14px/20px var(--fa);
   }
-
-  #pun-navlinks li#navindex a:after {
-    content: "\e88a";
-  }
-
-  #pun-navlinks li#navuserlist a:after {
-    content: "\f233";
-  }
-
-  #pun-navlinks li#navsearch a:after {
-    content: "\e8b6";
-  }
-
-  #pun-navlinks li#navprofile a:after {
-    content: "\e853";
-  }
-
-  #pun-navlinks li#navpm a:after {
-    content: "\e0be";
-  }
-
-  #pun-navlinks li#navadmin a:after {
-    content: "\e8b8";
-  }
-
-  #pun-navlinks li#navlogout a:after {
-    content: "\e9ba";
-  }
-
-  #pun-navlinks li#navlogin a:after {
-    content: "\ea77";
-  }
-
-  #pun-navlinks li#navregister a:after {
-    content: "\e7fe";
-  }
-
-  #pun-navlinks li#navpr a:after {
-    content: "\ef49";
-  }
-
-  #pun-navlinks li#navawards a:after {
-    content: "\ea23";
-  }
-
-  #pun-navlinks li#navrules a:after {
-    content: "\e85f";
-  }
+  
+  #pun-navlinks li#navindex a:after {content: "\f015";}
+  #pun-navlinks li#navuserlist a:after {content: "\f0c0";}
+  #pun-navlinks li#navsearch a:after {content: "\f002";}
+  #pun-navlinks li#navprofile a:after {content: "\f2bb";}
+  #pun-navlinks li#navpm a:after {content: "\f0e0";}
+  #pun-navlinks li#navadmin a:after {content: "\f085";}
+  #pun-navlinks li#navlogout a:after {content: "\f08b";}
+  #pun-navlinks li#navlogin a:after {content: "\f090";}
+  #pun-navlinks li#navregister a:after {content: "\f067";}
+  #pun-navlinks li#navpr_1 a:after {content: "\f0f3";}
+  #pun-navlinks li#navawards a:after {content: "\f091";}
+  #pun-navlinks li#navrules a:after {content: "\f03a";}
 
   #pun-navlinks li#navpm a span[data-last-unread]:after {
     content: "";
@@ -236,7 +213,8 @@
   }
 
   #pun-ulinks:after {
-    content: "\e5d2";
+    content: "\f0c9";
+    font: normal 20px/20px var(--fa);
     position: relative;
     display: block;
     width: 100%;
@@ -767,37 +745,19 @@
 
   .punbb .post-links li a::before {
     content: "";
-    font-size: 24px;
-    font-family: 'Material Icons Outlined';
+    font-size: 18px;
+    font-family: var(--fa);
   }
-
-  .punbb .post-links li.profile a:before {
-    content: "\ea67";
-  }
-
-  .punbb .post-links li.pm a:before {
-    content: "\e0be";
-  }
-
-  .punbb .post-links li.email a:before {
-    content: "\e0e6";
-  }
-
-  .punbb .post-links li.pl-delete a:before {
-    content: "\e92e";
-  }
-
-  .punbb .post-links li.pl-edit a:before {
-    content: "\e3c9";
-  }
-
-  .punbb .post-links li.pl-quote a:before {
-    content: "\e244";
-  }
-
-  .punbb .post-links li.pl-reports a:before {
-    content: "\e8b2";
-  }
+  
+  .punbb .post-links li.profile a:before {content: "\f2bb";}
+  .punbb .post-links li.pm a:before {content: "\f0e0";}
+  .punbb .post-links li.email a:before {content: "\40";}
+  .punbb .post-links li.website a:before {content: "\e60e";}
+  .punbb .post-links li.pl-delete a:before {content: "\f2ed";}
+  .punbb .post-links li.pl-edit a:before {content: "\f044";}
+  .punbb .post-links li.pl-quote a:before {content: "\e14c";}
+  .punbb .post-links li.pl-BBquote a:before {content: "\e147";}
+  .punbb .post-links li.pl-reports a:before {content: "\f071";}
 
 
   /* Форма ответа */
