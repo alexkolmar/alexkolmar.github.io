@@ -1,0 +1,64 @@
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх"><i class="fa-sharp fa-regular fa-triangle"></i></div>
+<div class="go-down" id='OnBottom' title="вниз"><i class="fa-sharp fa-regular fa-triangle"></i></div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
+</script>
+
+  <! -- стиль для липкой навигации --> 
+  <script type="text/javascript">
+  function myFunction() {
+    if (window.innerWidth < 540) {
+      if (window.pageYOffset >= 38) {
+        $("#pun-navlinks, #pun-ulinks").addClass("fixed");
+      } else {
+        $("#pun-navlinks, #pun-ulinks").removeClass("fixed");
+      }
+    } else {
+      if (window.pageYOffset >= 390) {
+        $("#pun-navlinks, #pun-ulinks, #chfont").addClass("fixed");
+      } else {
+        $("#pun-navlinks, #pun-ulinks, #chfont").removeClass("fixed");
+      }
+    }
+  };
+  window.onscroll = function() {myFunction()};
+  if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+    myFunction();
+  }
+  </script>
+
+
+<script>
+$('.pa-last-visit').wrap('<div class="pa-offline">');
+</script>
+
+
+<!-- баннеры -->
+<div class="banners">
+ <div class="container">
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+ </div>
+</div>

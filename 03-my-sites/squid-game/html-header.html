@@ -1,0 +1,98 @@
+<!---------- Быстрая смена аккаунта для https://keenperseption.rolka.me/ ---------->
+<script type="text/javascript">
+ New_EXiT = ''; //Дополнительная Иконка выход;
+</script>
+<script data="ваш_ключ" src="//forumstatic.ru/files/0014/cc/0a/93129.js"></script>
+
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+    const playerNumber = UserID; // должно быть 2
+
+    // Приветствие
+    $('#pun-status .item1 strong').html('Игрок № ' + playerNumber);
+
+    // Заменяем все ссылки на профиль
+    $('a[href*="profile.php?id="]').each(function() {
+        const $this = $(this);
+        const href = $this.attr('href');
+        const match = href.match(/id=(\d+)/);
+        if (match && $this.text().trim().length > 0 && !$this.find('img, span, .avatar-image').length) {
+            $this.html('Игрок № ' + match[1]);
+        }
+    });
+});
+</script> -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    const playerNumber = String(UserID).replace(/\D/g, '');
+    if (playerNumber) {
+        $('#pun-status .item1 strong').html('Игрок № ' + playerNumber);
+    }
+});
+</script>
+
+<div class="tablica">
+  <div class="activists">
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+  </div>
+  <a href="" class="bestep">
+    <img src="https://forumstatic.ru/files/0016/01/4e/30569.jpg">
+  </a>
+  <div class="activists">
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+    <a href=""><img src="https://forumstatic.ru/files/0016/01/4e/54039.jpg"></a>
+  </div>
+</div>
+
+
+<!-- Смена стиля v1.0 © max, the murderer! -->
+<ul id="theme_switcher"></ul>
+<script type="text/javascript">
+// Задаём темы
+var array = [
+    { class: 'light',
+      title: 'Светлая тема' },
+      
+    { class: 'dark',
+      title: 'Тёмная тема' } // Последняя тема без запятой
+];
+
+// Задаём радио
+var switchers = '';
+$.each(array, function(index, value) {
+    switchers += '<li title="'+value.title+'"><span class="radio"><input type="radio" name="switcher" id="'+value.class+'" value="'+value.class+'"><label for="'+value.class+'">'+value.title+'</label></span></li>';
+});
+$('#theme_switcher').append(switchers);
+
+// Отслеживаем нажатие на радио
+$('#theme_switcher input').on('click', function () {
+    // Получаем значение нажатого радио
+    var selectedTheme = $(this).val();
+    // Очищаем html от предыдущих тем и устанавливаем новую в моменте
+    $('html').removeClass().addClass(selectedTheme);
+    // Запоминаем
+    localStorage.setItem('selectedTheme', selectedTheme);
+});
+// Проверяем выбирались ли ранее темы
+if (localStorage.getItem('selectedTheme') !== null) {
+    // Получаем выбранную тему
+    var currentTheme = localStorage.getItem('selectedTheme');
+    // Устанавливаем выбранную тему
+    $('html').addClass(currentTheme);
+    // Включаем радио выбранной темы
+    $('#theme_switcher input[value="' + currentTheme + '"').prop('checked', true);
+} 
+// Если не выбирались
+else {
+    // Добавляем дефолтную тему
+    $('html').addClass('light');
+    // Включаем радио дефолтной темы
+    $('#theme_switcher input[value="light"]').prop('checked', true);
+};
+</script>
