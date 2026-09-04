@@ -91,6 +91,7 @@
   --font-family: "Montserrat", sans-serif;
   --second-family: "Inter", sans-serif;
   --third-family: "Tektur", sans-serif;
+  --marble: url(https://forumstatic.ru/files/0016/01/4e/10123.jpg) repeat top left var(--pun-bg); 
 }
 
 /* Средняя тема */
@@ -103,6 +104,7 @@
   --text: #cfcfcf;
   --ltext: var(--text);
   --textarea: #3d3f43;
+  --marble: url(https://forumstatic.ru/files/0016/01/4e/34099.jpg) repeat top left var(--pun-bg); 
 }
 
 /* Global

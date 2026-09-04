@@ -2,27 +2,10 @@
 <script type="text/javascript">
  New_EXiT = ''; //Дополнительная Иконка выход;
 </script>
-<script data="ваш_ключ" src="//forumstatic.ru/files/0014/cc/0a/93129.js"></script>
+<script data="2977b0" src="//forumstatic.ru/files/0014/cc/0a/93129.js"></script>
 
-<!-- <script type="text/javascript">
-$(document).ready(function() {
-    const playerNumber = UserID; // должно быть 2
 
-    // Приветствие
-    $('#pun-status .item1 strong').html('Игрок № ' + playerNumber);
-
-    // Заменяем все ссылки на профиль
-    $('a[href*="profile.php?id="]').each(function() {
-        const $this = $(this);
-        const href = $this.attr('href');
-        const match = href.match(/id=(\d+)/);
-        if (match && $this.text().trim().length > 0 && !$this.find('img, span, .avatar-image').length) {
-            $this.html('Игрок № ' + match[1]);
-        }
-    });
-});
-</script> -->
-
+<!---------- Приветствие ---------->
 <script type="text/javascript">
 $(document).ready(function() {
     const playerNumber = String(UserID).replace(/\D/g, '');
