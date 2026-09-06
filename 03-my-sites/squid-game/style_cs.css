@@ -72,7 +72,7 @@ body::before {
   min-width: 100vw;
   min-height: 100vh;
   z-index: -10;
-  background: var(--body-bg) url(https://forumstatic.ru/files/0016/01/4e/44894.jpg) no-repeat top center/cover;
+  background: var(--body-bg) url(https://forumstatic.ru/files/0016/01/4e/51551.jpg) no-repeat top center/cover;
 }
 
 /* тело */
@@ -133,7 +133,7 @@ body::before {
   letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
-  color: var(--link2);
+  color: var(--link);
 }
 
 #pun-navlinks li a::before, .pa-author a::before, .category .intd h3 a::before {
@@ -184,7 +184,7 @@ body::before {
   font-weight: 400;
   font-size: 12px;
   text-align: center;
-  color: var(--link2);
+  color: var(--link);
 }
 
 /* Статус */
@@ -287,7 +287,7 @@ div.icon {
 }
 
 tr.inew div.icon {
-  border: 3px solid var(--link2);
+  border: 3px solid var(--link);
   border-radius: 50%;
 }
 
@@ -480,7 +480,7 @@ tr.iclosed div.icon {
   gap: 10px 20px;
   background: var(--acc-dark);
   color: var(--ltext);
-  outline: 1px solid var(--link2);
+  outline: 1px solid var(--link);
   outline-offset: -3px;
 }
 
@@ -1223,7 +1223,7 @@ img.avatardemo {
     font-size: 14px; /* размер иконки */
     font-weight: 400; /* стиль иконки */
     position: absolute;
-    color: var(--link2);
+    color: var(--link);
     top: 0;
     left: 0;
     width: 100%;
@@ -1386,7 +1386,7 @@ div .post-rating p > a {
   align-items: center;
   justify-content: center;
   font: 700 10px/100% var(--second-family) !important;
-  color: var(--ltext);
+  color: var(--link);
 }
 
 div.post-vote p > a {
@@ -1399,10 +1399,10 @@ div .post-rating p::before, div .post-vote p a::before {
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
-  color: var(--link);
   transition: all .2s linear 0s;
-  text-stroke: 1px var(--link2);
+  text-stroke: 1px var(--link);
   -webkit-text-stroke: 1px var(--link);
+  color: transparent;
 }
 
 div .post-vote p a:before {
@@ -1462,6 +1462,7 @@ div .mylike .post-rating p:before {
     padding: 0;
     background: none;
     border: none;
+    color: var(--acc-green);
 }
 
 #theme_switcher li input::before {
