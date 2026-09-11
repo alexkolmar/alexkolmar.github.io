@@ -464,7 +464,7 @@
 .punbb .main .tcr {position: relative;}
 
 .punbb .tcr .user-avatar {
-  margin: 0 10px 0 0;
+  margin: 10px 10px 0 0;
   position: absolute;
   right: 0;
   top: 0;

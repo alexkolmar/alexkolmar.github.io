@@ -478,7 +478,7 @@ body::before {
 /* внутреннее тело */
 
 .punbb {
-  font: 12px Arial, Verdana;
+  font: 14px/140% var(--font-family);
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -541,7 +541,7 @@ body::before {
   font-size: 16px;
 }
 
-/* #pun-navlinks li a:before {
+#pun-navlinks li a:before {
     content: "";
     position: absolute;
     inset: 3px -3px -3px 3px;
@@ -555,7 +555,7 @@ body::before {
 }
 
 #pun-navlinks li a:hover::before {
-    transform: translate(4px, 4px); */
+    transform: translate(4px, 4px); 
 }
 
 /* Пользовательские ссылки */
@@ -823,11 +823,11 @@ tr.iclosed div.icon {
   opacity: .7;
 }
 
-#fnavig {
+#fnavig, .fnavig {
   margin-top: 10px;
 }
 
-#fnavig summary {
+#fnavig summary, a.fnavig {
   background: var(--navlink);
   border: 1px solid #536B7B;
   color: var(--ltext);
@@ -835,6 +835,10 @@ tr.iclosed div.icon {
   display: block;
   text-align: center;
   padding: 2px 10px;
+}
+
+ a.fnavig {
+  width: fit-content;
 }
 
 #fnavig[open] summary {
@@ -887,6 +891,16 @@ details[open] ul {
   display: flex;
   gap: 5px 10px;
   margin-left: 46px;
+}
+
+.themes, .messages {
+  background: var(--sec-bg);
+  padding: 2px 10px;
+  color: var(--darkblue);
+}
+
+.dark .themes, .dark .messages {
+  color: var(--llink);
 }
 
 
@@ -1248,7 +1262,7 @@ li#onlinelist {
 .hotlinks a {
   display: block;
   background: var(--navlink);
-  color: var(--llink);
+  color: var(--ltext);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
@@ -1259,7 +1273,7 @@ li#onlinelist {
 
 .hotlinks a:hover {
   background: var(--darkblue);
-  color: var(--link-hover);
+  color: var(--llink);
 }
 
 .quests li {
@@ -1326,6 +1340,7 @@ li#onlinelist {
 
 .post {
   margin-top: 10px;
+  scroll-margin-top: 80px;
 }
 
 .toppost,
@@ -1487,6 +1502,7 @@ li#onlinelist {
 
 .status {
   font-size: 11px;
+  line-height: 14px;
 }
 
 .pa-posts,
@@ -1498,30 +1514,34 @@ li#onlinelist {
   color: var(--link);
 }
 
-.pa-posts .fld-name,
-.pa-respect .fld-name {
-  display: block;
+.pa-posts .fld-name, .pa-respect .fld-name, .pa-fld3 .fld-name, .pa-fld4 .fld-name {
   font-size: 0;
-}
-
-.pa-fld3 .fld-name,
-.pa-fld4 .fld-name {
-  font-size: 16px;
+  display: block;
 }
 
 .pa-posts .fld-name:before,
-.gid3 .pa-respect .fld-name:before, .pa-respect .fld-name a:before {
-  content: "";
+.gid3 .pa-respect .fld-name:before, .pa-respect .fld-name a:before,
+.pa-fld3 .fld-name:before,
+.pa-fld4 .fld-name:before {
+  content: '';
   font-family: var(--fa);
   font-size: 16px;
 }
 
 .pa-posts .fld-name:before {
-  content: "\f0e0";
+  content: '\f0e0';
 }
 
 .gid3 .pa-respect .fld-name:before, .pa-respect .fld-name a:before {
-  content: "\f004";
+  content: '\f004';
+}
+
+.pa-fld3 .fld-name:before {
+  content: '\f044';
+}
+
+.pa-fld4 .fld-name:before {
+  content: '\f81d';
 }
 
 .pa-online, .pa-offline {
@@ -3195,4 +3215,8 @@ width: 390px;
   top: -4px;
   background: var(--link);
   cursor: pointer;
+}
+
+.punbb span.GamePst, .punbb strong.GamePst2 {
+  padding: 0 !important;
 }
