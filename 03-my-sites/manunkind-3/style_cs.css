@@ -396,6 +396,15 @@ tr.iclosed div.icon {
   justify-content: space-between;
 }
 
+
+.punbb .linksb::after {
+  display: none !important;
+}
+
+.linksb .postlink.long {
+  text-align: right;
+}
+
 .linksb .pagelink {
   order: -1;
 }
@@ -704,6 +713,7 @@ li#onlinelist {
   width: 100%;
   height: 190px;
   backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   background: rgba(36, 58, 44, 0.5);
   box-sizing: border-box;
   border: 2px groove var(--dark-green);
@@ -793,6 +803,7 @@ li#onlinelist {
 
 .bestep span {
   position: relative;
+  width: 100%;
   margin: 0 50px;
   display: block;
   text-align: center;
@@ -1018,7 +1029,7 @@ padding: 0;
 }
 
 .banners a {
-  opacity: .5;
+  opacity: .8;
 }
 
 .banners a:hover {
@@ -1783,6 +1794,7 @@ h2.styl1 span strong {
 
 #pun-userlist .tcl {width: 40%}
 
+
 /* Собщения об ошибках */
 
 .info .container {padding: var(--mpad);}
@@ -1796,6 +1808,12 @@ h2.styl1 span strong {
 
 .info-box * {padding: 0 0 5px 0;}
 .info-box .legend {font-weight: bold;}
+
+.noedit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 /* Кнопки вверх-вниз
@@ -2805,4 +2823,9 @@ body .hvStickerPackModalTab.active {
 
 .achdescr {
   font-size: 10px;
+}
+
+
+#jGrowl .jGrowl-notification .jGrowl-close {
+  margin: -5px -5px 0 0;
 }
