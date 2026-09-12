@@ -129,10 +129,6 @@
     background: url(https://forumstatic.ru/files/0010/ed/c4/44943.jpg) no-repeat bottom center/cover;
   }
 
-  .tab_logo {
-    margin-top: 20px;
-  }
-
   .tablica_hover {
     width: 100%;
     height: 100%;
@@ -1556,7 +1552,7 @@ padding: 0;
   height: auto;
 }
 
-.reserve > div > div, {
+.reserve > div > div {
   height: auto;
   max-height: 130px;
 }
