@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Bold.eot');
+    src: url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Bold.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Bold.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Bold.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Bold.svg#Cinzel-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Regular.eot');
+    src: url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Regular.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Regular.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Regular.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Cinzel/Cinzel-Regular.svg#Cinzel-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
