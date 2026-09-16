@@ -1,0 +1,91 @@
+<!---------- Быстрая смена аккаунта для https://keenperseption.rolka.me/ ---------->
+<script type="text/javascript">
+ New_EXiT = 'https://forumstatic.ru/files/0016/01/4e/34290.svg'; //Дополнительная Иконка выход;
+</script>
+<script data="ваш_ключ" src="//forumstatic.ru/files/0014/cc/0a/93129.js"></script>
+
+
+<div class="settings-wrap">
+    <button class="settings-btn"><i class="fa-jelly fa-regular fa-sliders"></i> Настройки</button>
+    <div class="settings-popup">
+     <ul class="set_list">
+      <ul id="theme_switcher"></ul>
+      <span id="display_switch" onclick="FORUM.mobile_switch()">
+        <i class="fa-solid fa-mobile-screen-button" title="мобильный стиль включён"></i>
+        <i class="fa-solid fa-desktop" title="мобильный стиль выключен"></i>
+      </span>
+      </ul>
+      <button class="settings-close">Закрыть</button>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.settings-btn').on('click', function (e) {
+        e.stopPropagation();
+        $('.settings-popup').toggleClass('open');
+    });
+
+    $('.settings-close').on('click', function () {
+        $('.settings-popup').removeClass('open');
+    });
+
+    // Закрытие по клику вне
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.settings-wrap').length) {
+            $('.settings-popup').removeClass('open');
+        }
+    });
+});
+</script>
+
+
+<!-- Смена стиля v1.0 © max, the murderer! -->
+<script type="text/javascript">
+// Задаём темы
+var array = [
+    { class: 'light',
+      title: 'Светлая тема' },
+      
+    { class: 'medium',
+      title: 'Средняя тема' },
+      
+    { class: 'dark',
+      title: 'Тёмная тема' } // Последняя тема без запятой
+];
+
+// Задаём радио
+var switchers = '';
+$.each(array, function(index, value) {
+    switchers += '<li title="'+value.title+'"><span class="radio"><input type="radio" name="switcher" id="'+value.class+'" value="'+value.class+'"><label for="'+value.class+'">'+value.title+'</label></span></li>';
+});
+$('#theme_switcher').append(switchers);
+
+// Отслеживаем нажатие на радио
+$('#theme_switcher input').on('click', function () {
+    // Получаем значение нажатого радио
+    var selectedTheme = $(this).val();
+    // Очищаем html от предыдущих тем и устанавливаем новую в моменте
+    $('html').removeClass().addClass(selectedTheme);
+    // Запоминаем
+    localStorage.setItem('selectedTheme', selectedTheme);
+});
+// Проверяем выбирались ли ранее темы
+if (localStorage.getItem('selectedTheme') !== null) {
+    // Получаем выбранную тему
+    var currentTheme = localStorage.getItem('selectedTheme');
+    // Устанавливаем выбранную тему
+    $('html').addClass(currentTheme);
+    // Включаем радио выбранной темы
+    $('#theme_switcher input[value="' + currentTheme + '"').prop('checked', true);
+} 
+// Если не выбирались
+else {
+    // Добавляем дефолтную тему
+    $('html').addClass('light');
+    // Включаем радио дефолтной темы
+    $('#theme_switcher input[value="light"]').prop('checked', true);
+};
+</script>
+
+<!-- Переключение мобильного стиля -->
+  <script src="https://forumstatic.ru/files/001a/e7/a4/11742.js?v=2"></script>
