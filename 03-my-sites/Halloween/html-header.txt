@@ -1,0 +1,23 @@
+<div class="tablica">
+  <div class="tab_left">
+    <div class="activists">
+      <a href=""><img src=""></a>
+      <a href=""><img src=""></a>
+      <a href=""><img src=""></a>
+      <a href=""><img src=""></a>
+    </div>
+    <div class="activists">
+      <a href=""><img src=""></a>
+      <a href=""><img src=""></a>
+      <a href=""><img src=""></a>
+      <a href=""><img src=""></a>
+    </div>
+  </div>
+  <div class="tab_right">
+    <a href="">Гостевая</a>
+    <a href="">Правила</a>
+    <a href="">Внешности</a>
+    <a href="">F.A.Q</a>
+    <a href="">Нужные</a>
+  </div>
+</div>
