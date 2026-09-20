@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Trajan';
+    src: url('https://alexkolmar.github.io/trajan.Trajan.eot');
+    src: url('https://alexkolmar.github.io/trajan.Trajan.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/trajan.Trajan.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/trajan.Trajan.woff') format('woff'),
+        url('https://alexkolmar.github.io/trajan.Trajan.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/trajan.Trajan.svg#Trajan') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
