@@ -1,0 +1,91 @@
+/* ---------- Зона виджета ---------- */
+.spider-zone {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 50px;
+  height: 100vh;
+  pointer-events: none;   /* не блокирует форум */
+  z-index: 99999;
+  overflow: visible;
+}
+
+/* ---------- Нить ---------- */
+.spider-thread {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: var(--spider-y, 120px);   /* тянется до паучка */
+  background: #a6927c;
+  transition: height 0.18s cubic-bezier(.22,1.2,.36,1);
+}
+
+/* ---------- Паучок ---------- */
+.spider {
+  position: absolute;
+  top: var(--spider-y, 120px);
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -14px;          /* чтобы «прицепиться» к нити сверху */
+  pointer-events: auto;      /* ловит курсор */
+  cursor: url(https://forumstatic.ru/files/0010/ed/c4/32823.png), pointer;
+  transition: top 0.18s cubic-bezier(.22,1.2,.36,1);
+  transform-origin: 50% 0%;  /* точка подвеса — верх паучка */
+  animation: spiderSwing 3.2s ease-in-out infinite;
+  will-change: top, transform;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.25));
+}
+
+@keyframes spiderSwing {
+  0%   { transform: rotate(-4deg); }
+  50%  { transform: rotate(4deg); }
+  100% { transform: rotate(-4deg); }
+}
+
+/* ---------- Облако с репликой ---------- */
+.speech-bubble {
+  position: absolute;
+  top: var(--spider-y, 120px);
+  right: 60px;
+  max-width: 220px;
+  min-width: 120px;
+  padding: 8px 12px;
+  background: #fff;
+  color: #111;
+  font: 13px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  border-radius: 12px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(-6px) scale(0.95);
+  transition: opacity .18s ease, transform .18s ease, top .18s cubic-bezier(.22,1.2,.36,1);
+  pointer-events: none;
+  white-space: normal;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: -7px;
+  width: 0; height: 0;
+  border: 8px solid transparent;
+  border-left-color: #fff;
+  border-right: 0;
+}
+
+.speech-bubble.show {
+  opacity: 1;
+  transform: translateY(-6px) scale(1);
+}
+
+/* На мобилках можно спрятать, чтобы не мешал */
+@media (max-width: 540px) {
+  .spider-zone { display: none; }
+}
