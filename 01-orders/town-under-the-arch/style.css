@@ -3,7 +3,7 @@
 /* Font Awesome */
 @import url("https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Trajan */
 @import url('http://alexkolmar.github.io/fonts/trajan/stylesheet.css');
@@ -34,7 +34,7 @@
   --fa: "Font Awesome 6 Pro", "Font Awesome 6 Brands";
   --font1: "Montserrat", sans-serif;
   --font2: "Arsenal", sans-serif;
-  --font3: "Trajan", sans-serif;
+  --font3: "Trajan", "Cormorant SC", serif;
 }
 
 /*****************************
@@ -63,6 +63,7 @@
   }
 
   html, body {
+    min-width: unset;
     max-width: 100%;
     overflow-x: hidden !important;
     width: 100% !important;
@@ -210,12 +211,17 @@
   justify-content: center;
 }
 
+.activists_inner {
+  font-weight: bold;
+}
+
   /* Меню навигации
   -------------------------------------------------------------*/
 
 
   #pun-navlinks {
-    top: 0;
+    top: unset;
+    left: unset;
     width: 100%;
     box-sizing: border-box;
     z-index: 100;
@@ -275,6 +281,10 @@
     font-size: 12px;
   }
 
+  #pun-status a {
+    font-weight: bold;
+  }
+
   .punbb .container.crumbs {
     display: block;
   }
@@ -287,6 +297,14 @@
   #pun-about .container {
     justify-content: center;
   }
+
+#html-footer .container {
+  justify-content: center;
+}
+
+.partners {
+  width: 100%;
+}
 
 
   /* Главная форумная таблица
@@ -340,8 +358,13 @@
     display: -webkit-flex;
     flex-wrap: wrap;
     width: 100% !important;
-    padding: 5px 10px !important;
+    padding: 5px 0 !important;
   }
+
+  #pun-index .main .tcl,
+  #pun-index .main .tcr {
+    padding: 5px 10px !important;
+}
 
   .punbb .main .intd {
     display: flex;
@@ -362,10 +385,10 @@
   }
 
   #pun-index div.icon {
-    position: absolute;
-    right: 0;
-    margin: 0;
     top: 0;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
   }
 
   .punbb .main .tc2,
@@ -374,6 +397,7 @@
   #pun-searchtopics .main .tc3 {
     text-align: left;
     width: auto;
+    padding-left: 0;
   }
 
   .punbb .main .tc2:before,
@@ -396,7 +420,7 @@
 #pun-index td .user-avatar {
   top: unset;
   transform: unset;
-  right: 10px;
+  right: 15px;
 }
 
   #pun-index .main .tc2:before {
@@ -428,7 +452,7 @@
   }
 
   .punbb .tcr .user-avatar {
-    margin: 0 10px;
+    margin: 0 5px 0 10px;
     height: auto;
     position: absolute;
     right: 0;
@@ -452,14 +476,20 @@
   /* Статистика
   -------------------------------------------------------------*/
 
+  .punbb #pun-stats {
+    padding: var(--pad1);
+  }
+
   .punbb #pun-stats .container {
     justify-content: right;
+    padding: 10px 0;
   }
 
   .punbb #pun-stats .container li:not(#onlinelist) {
     width: 100%;
     text-align: right;
   }
+
 
   /* Темы и страницы
   -------------------------------------------------------------*/
@@ -471,7 +501,7 @@
 
   /* Верхние ссылки в топике и списках тем */
   .punbb .linkst {
-    padding: 5px 10px;
+    padding: var(--pad1);
   }
 
   /* Меню модератора */
@@ -632,6 +662,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    min-height: 95px;
   }
 
   /* Скрыть поля профиля */
@@ -663,17 +694,6 @@
     order: -2;
   }
 
-  .online .pa-author::after {
-    content: "";
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #bf0;
-    background: radial-gradient(circle at 3px 2px, #98ea36, #81b16f, #8ac176);
-    margin: 2px 0 2px 7px;
-  }
-
   .punbb .post-author .pa-avatar img {
     width: 100%;
     height: 100%;
@@ -692,6 +712,14 @@
     text-align: left;
   }
 
+  .punbb .post-author .pa-author {
+    font-size: 20px;
+  }
+
+  .punbb .post-author .pa-title {
+    font-size: 12px;
+  }
+
   /* Сообщения */
   .punbb .post-author .pa-posts {
     padding-right: 10px;
@@ -708,6 +736,7 @@
   .punbb .post-author .pa-fld2 {
     margin: 0;
     order: 1;
+    width: 100%;
   }
 
   /* Доп. поле 1 (лз) */
@@ -719,10 +748,12 @@
   .pa-online, .pa-offline {
     order: 2;
     display: block !important;
-    bottom: 10px;
+    top: 10px;
     right: 10px;
     left: unset;
     transform: unset;
+    margin: 5px 0 0;
+    font-size: 12px;
   }
 
   /* Тело поста */
@@ -1379,6 +1410,78 @@
     -webkit-appearance: none;
     -moz-appearance: auto;
   }
+
+
+.ship8 {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ship8 .shipp {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.punbb .chr2 {
+  margin: 0;
+  width: 100%;
+}
+
+.punbb .ch1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.punbb .ch2 {
+  padding: 0;
+  border: none;
+}
+
+.punbb .ch3 {
+  border-bottom: 1px solid var(--chbs);
+  padding-bottom: 10px;
+}
+
+.punbb #ship6 .sh1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.punbb #ship6 sh2 {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.punbb #ship6 sh3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.punbb .xiao__wraper {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.punbb .xiao__button {
+  position: relative !important;
+  bottom: unset !important;
+  margin: 0 0 10px auto;
+}
+
+  .punbb .xiao__tab {
+    right: 0;
+    top: 160px;
+    height: calc(100% - 180px);
+    width: calc(100% - 40px);
+    left: 20px;
+    padding: 10px 15px;
+  }
+
+.punbb .xiao__scrolling img {
+  max-width: 100%;
+}
 
 }
 

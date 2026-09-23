@@ -1,0 +1,362 @@
+<script>
+$('#pun-navlinks li a').each(function(){
+  $(this).attr('title',$(this).text());
+});
+</script>
+
+
+<!--Для хтмл -->
+<script type="text/javascript">
+function Transform_Code_Box_in_HTML(aX){
+var TemLnk=aX.replace(/^(.*viewtopic\.php\?id=\d*).*$/ig,"$1");
+var PstId=aX.replace(/^.*viewtopic\.php\?id=.*(#p\d+)$/ig,"$1");
+var L=document.URL.replace(TemLnk,'');
+if(L!=document.URL&&(L.slice(0,1)).search(/\d/ig)==-1 ){ 
+L=$("div.topic "+PstId);
+if(L.length==1){
+var Lhtm=L.find(".post-content .code-box:first .scrollbox pre").text();
+L.find(".post-content .code-box:first").replaceWith(Lhtm)
+}}}
+function Demo_HTML(Ts){var Ll=Ts.parents(".htmldemo").find(".code-box .scrollbox pre").text();
+Ts.parents(".htmldemo").after('<div class="demHtml">'+Ll+'</div>');Ts.replaceWith(DemoButt0);
+}
+$(document).ready(function() {
+$("#pun-viewtopic .post .code-box").each(function(){
+if($(this).text().indexOf('<!--HTML-->')!=-1){
+$(this).wrap('<div class="htmldemo"></div>')
+$(this).replaceWith($('.htmldemo').text().split('<!--HTML-->')[1]);
+}
+});
+});
+</script>
+
+
+<div class="needs-fut">
+<span class="tabtitle">— разыскиваются —</span>
+<div class="wanted_inner">
+<a href="https://jkisdead.rusff.me/viewtopic.php?id=35#p196498" title="LILIANE TRUCHON">
+<img src="https://upforme.ru/uploads/0017/2a/64/36/44042.jpg"></a>
+<a href="https://jkisdead.rusff.me/viewtopic.php?id=35#p138319" title="ALEXANDER WILSON">
+<img src="https://upforme.ru/uploads/0017/2a/64/36/820079.jpg"></a>
+<a href="https://jkisdead.rusff.me/viewtopic.php?id=35#p94513" title="ALEXIA WALSH">
+<img src="https://upforme.ru/uploads/0017/2a/64/36/348465.jpg"></a>
+<a href="https://jkisdead.rusff.me/viewtopic.php?id=35#p187532" title="IАN MACKENNA">
+<img src="https://upforme.ru/uploads/0017/2a/64/36/384230.jpg"></a>
+</div>
+</div>
+
+<div class="partners">
+<a href="https://musicalspace.rusff.me/" target="_blank"><img src="https://forumstatic.ru/files/001c/59/08/19174.jpg" title="Musicalspace: мультифандомный форум" alt="Musicalspace" border="0" width="88" height="31"></a>
+<a href="https://soullove.ru" target=_blank> <img src="https://forumstatic.ru/files/000e/5d/50/10990.gif" border="0" alt="soul love"></a>
+<a href="https://itisanewworld.rusff.me/"><img title="Mystery Book" src="https://i.imgur.com/8urfbim.png" border="0"/></a> 
+<a href="https://sept3rd.rusff.me/" title="September 3rd"><img src="https://forumstatic.ru/files/001b/e4/bf/71820.jpg" border="0"></a>
+<a href="http://symbiosis.rusff.me"><img src="https://forumstatic.ru/files/001a/ed/fd/46458.gif" title="symbiosis" border="0" width="88" height="31"></a>
+<a href="https://magia-frpg.ru/" target="_blank"><img src="https://upforme.ru/uploads/001a/fa/19/2/153026.gif" title="MAGIA" border="0" width="88" height="31"></a>
+<a href="https://sunnycross.ru/"><img src="https://forumstatic.ru/files/001c/73/be/65745.jpg"></a>
+<a href="https://arkhaim.su/" target="_blank" title="Аркхейм: авторский мир, фэнтези, рисованные внешности"><img src="https://forumstatic.ru/files/001b/8c/87/29818.png" width="88" height="31"/></a>
+<a href="https://labardon.rusff.me" target=_blank title="Labardon: disillusionment of unity"><img src="https://forumstatic.ru/files/001b/df/86/26188.gif?v=1" border="0"alt="labardon" width=88 height=31></a>
+<a href="https://verbaveritatis.rusff.me" title="Верба. Просто добавь магии."><img src="https://upforme.ru/uploads/001b/aa/c9/4/12634.gif"></a>
+<a href="https://theraven.rusff.me/" target="_blank"><img src="https://upforme.ru/uploads/001c/00/4d/5/220581.gif" title="THE RAVEN"></a>
+<a target="_blank" href="http://sexyfantasy.rolka.me/"><img title="Lustful Realm" src="https://i.imgur.com/3D5q4TL.gif"/></a>
+<a href="https://badger.rolevaya.ru/" target="_blank"> <img src="https://i.ibb.co/jHjqXH9/2.png" title="#барсук" border="0" alt="#барсук"></a>
+<a href="https://knowhere.rusff.me/" target="_blank"><img src="https://upforme.ru/uploads/001c/1e/c3/2/788017.gif" title="Knowhere: способности, закрытый город"></a>
+<a href="https://wolveslife.bbok.ru" target="_blank"><img src="https://forumstatic.ru/files/0001/bf/9c/79365.gif" title="Волки. Инстинкт зовет!"></a>
+</div>
+
+
+<!-- Перенос Колонок тем и сообщений под Описание Форума / Deff, Alex_63 -->
+<script type="text/javascript">
+(function(){
+   $.catch = function(a,f){$(function(){var t,i=0;function s(){i++;if(i>120)return;t=setTimeout(function(){if(!$(a).length){s();return};f()},100);}s();});}
+   function appendTopicS(){
+     $('.category td.tcl .tclcon h3,#f-subforums td.tcl .tclcon h3').each(function() {
+       var L = $(this).parents('tr:first');
+       var str = '<br><div class="Add"><div class="Tems_And_messages">Тем: <span class="right">'+L.find('td.tc2').text()+'</span></div>\
+       <div style="margin-left:12px;" class="Tems_And_messages">Сообщений: <span class="right">'+L.find('td.tc3').text()+'</span></div>\
+       </div>';
+
+       // Проверяем ширину экрана
+       if (window.innerWidth <= 540) {
+           // Мобильная версия — вставляем в .tclcon
+           $(this).closest('.tclcon').append(str);
+       } else {
+           // Десктоп — вставляем в h3 (как было)
+           $(this).append(str);
+       }
+     });
+   }
+   if($('#pun-index').length){appendTopicS ();}
+   if($('#pun-viewforum').length){
+     var summ=$('.main table[summary]').attr('summary').split(': ')[1].substr(0,1);
+     if(summ=='#'||summ==String.fromCharCode(173))$.catch('#f-subforums',function(){appendTopicS()});
+   }
+}());
+</script>
+<!-- конец -->
+
+<!-- HTML низ -Cпойлер cкрытия Инфы под N-кнопок в Профиле Топика -->
+    <script>
+    var a1 = 1	// 0 - спойлер-аккордеон, 1 - вертикальный спойлер; 3 - обычный спойлер
+    var a2 = 0	// 0 - Скрытие первой вкладки; 1 - Показ первой вкладки;
+    var a3 = 0 // Резкость Открытия: 0 - Плавно; 1 - Резко;
+
+    var LiArr=new Array(
+    //При наличии двух косых => // в начале пункта, - пункт не скрывается.
+
+    //"pa-author",     //Ник-Нейм
+    //"pa-avatar",     //Аватар
+    //"pa-title",      //статус
+    //"pa-reg",        //Зарегистрирован
+    //"pa-invites", //Приглашений
+    //"pa-posts",      //Кол-во сообщений:
+    //"pa-respect",    //Уважение:
+    //"pa-positive",   //Позитив
+    //"pa-sex",        //Пол
+    //"pa-age",        //Возраст
+    //"pa-icq",        //Аська
+    //"pa-ip",         //IP Юзера
+    //"pa-time-visit", //Провел на форуме:
+    //"pa-last-visit", //Последний визит:
+    //"pa-online",     //Пользователь online - Не засовываем в спойлеры
+
+   // "pa-from",       //Откуда
+    //"pa-fld1",       //Доп.Поле.1
+
+    // 3 кнопка- ссылка на Картинку
+    "https://forumstatic.ru/files/0012/0b/b4/43176.png",
+
+    //"pa-fld2",       //Доп.Поле.2
+    //"pa-fld3",       //Доп.Поле.3
+    //"pa-fld4",       //Доп.Поле.4
+    //"pa-fld5",       //Доп.Поле.5
+    "award",      //Награды(только для rusff и ork)
+    "gift",         //Подарки(только для rusff и ork)
+
+    //Конец Списка,
+    "_End"); SetProvilSpoil(a1,a2,a3);
+    </script>
+<!--Конец//=Cпойлер cкрытия Инфы под N-кнопок в Профиле Топик-->
+
+
+<!-- Замена двойных кавычек на елочки --> 
+<script type="text/javascript">
+(function(){function rep(str, p1,offset, s){
+  return '>'+p1.replace(/"([^ "][^"]+?)"/gm,'«$1»')+'<';}
+$('.post-content p').each(function(){
+  $(this).html(('</>'+$(this).html()+'</>').replace(/>([^<>]+)</gm, rep));
+});}());а
+</script>
+
+<!-- счётчик символов -->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});
+</script>
+<!-- конец -->
+
+<script type="text/javascript" src="https://forumstatic.ru/files/0015/c4/3f/31001.js"></script>
+
+
+<!-------------- Отключение всякого русфф -------------->
+<script type="text/javascript">
+RusffCore.sets.share = false;
+rusffLive.enable = false;
+RusffCore.sets.show_reportBtn = 0;
+</script>
+
+
+<!-- Исключение из "Цитировать" подписи и "отредактировано" -->
+<script type="text/javascript"> (function(){    var p =[];
+  $('.post').find('.pl-quote').click(function(){
+    p[0] = $(this).parents('.post').find('.lastedit');
+    p[1] = $(this).parents('.post').find('.post-sig');
+    p[2] = p[0].html();p[3] = p[1].html();
+    p[0].html('');p[1].html('');
+    setTimeout(function(){p[0].html(p[2]);p[1].html(p[3])},600);});
+}());
+</script>
+
+
+<!-- Удаляем лишние строки после цитаты и кода // v.3 © Alex_63 -->
+    <script type="text/javascript">
+    $('.post-content').each(function() {
+        var CNT = $(this).html();
+        CNT = CNT.replace(/<p><br><\/p>/img,'');
+        CNT = CNT.replace(/<p><br><br>(.*?)<\/p>/img,'<p>$1</p>');
+        CNT = CNT.replace(/<p><br>(.*?)<\/p>/img,'<p>$1</p>');
+        $(this).html(CNT);
+    });
+    </script>
+
+<!-- аватар для гостя и игрока -->
+<script type="text/javascript">
+var DefAvtr="https://forumstatic.ru/files/0017/2a/64/51124.jpg"; //Для Игрока
+var GuestAvtr="https://forumstatic.ru/files/0017/2a/64/22955.jpg";//Для Гостя
+$("li.pa-title").each(function(){
+var b = DefAvtr;if($(this).text()=='Гость')b = GuestAvtr;
+var s='<li class="pa-avatar item2"><img class="defavtr" src="'+b+'" alt="Аватар"/></li>';
+if (($(this).parents(".post-author").find("li.pa-avatar").length)==0){$(this).after(s);};});
+</script>
+
+
+<!--обтекание изображения 2.4.4-->
+<script language="javascript">
+$(function(){
+$('td#button-link').before('<td id="floatbut" style=\'background-image:url("https://s002.radikal.ru/i198/1009/43/f183caeae434.gif")\'></td>');
+$('#floatbut, .vibor').click(function(){
+$('div#float').toggle();});
+  });
+elm=document.getElementsByTagName("div")
+for(x in elm) if(elm[x].className=="post-content") 
+{
+post = elm[x].innerHTML;
+if(post.indexOf("[/float]") != -1) {
+floats = /\[float=(.*?)\]([^\[]*)\[\/float\]/gi
+elm[x].innerHTML = elm[x].innerHTML.replace(floats, "<span style='float: $1; margin: 15px; text-align: $1;'>$2</span>")
+}}
+</script>
+<div id="float" style="display:none;background: url(https://forumstatic.ru/files/001a/77/ff/94417.jpg);
+border: 1px solid #192c44;
+width: auto;
+padding: 8px;
+position: absolute;
+margin-top: -390px;
+margin-left: 550px;
+z-index: 20;">
+<div><strong>Направление обтекания</strong></div><br>
+<div align="center">
+<img class="vibor" src="https://forumstatic.ru/files/0017/2a/64/54600.png" title="left" onclick="bbcode('[float=left]', '[/float]')" />
+<img class="vibor" src="https://forumstatic.ru/files/0017/2a/64/74921.png" title="right" onclick="bbcode('[float=right]', '[/float]')" />
+</div></div>
+
+
+<!-- тег абзаца -->
+<style>#button-indent {background: url(https://s7.uploads.ru/t/mnkgq.png) no-repeat center 6px!important;}</style>
+<script type="text/javascript">(function()
+{var b = '[indent]'; 
+$("#button-strike").after('<td id="button-indent" title="отступы"><img src="/i/blank.gif"  onclick="insert(\''+b+'\')"></td>');
+var indent = '<span style="display: inline-block; margin: 1em 2.1em;"></span>'; 
+$('.post-content p:contains("'+b+'")').each(function(){ $(this).html( $(this).html().replace(/\[indent\]/gm,indent));});}());
+</script>
+
+ <!-- ник гостя -->
+<script>$(".post[data-group-id=3]").find(".pa-author").html(function(){return this.innerHTML.replace(/(<.+>)(.+)$/,'$1<a href="javascript:to(\'$2\')">$2</a>')});</script>
+
+<!-- НАЧАЛО. ссылка на новые сообщения -->
+<script type="text/javascript">
+$('#pun-ulinks ul').prepend('<li class="item1"><a href="/search.php?action=show_new">Новые сообщения</a></li>');
+</script>
+<!-- КОНЕЦ. ссылка на новые сообщения -->
+
+
+<!--Репутация поста v.2.2-->
+    <script type="text/javascript">
+    $('div.post').map(function()
+    {var PostID=$(this).find('div.post-content').attr('id').slice(1,-8);var tyt=$(this).find('.post-rating p');var tmp_abort,timer,ava,vote,kr=[];function cl(){$('.tipsy').fadeOut(200);setTimeout(function(){$('.tipsy').remove();},200);};function ton(){timer=setTimeout(function(){cl();},500)}$(tyt).on('mouseenter',function(){$(this).tipsy({fade:!0,gravity:'se',trigger:'manual',html:!0});var w='<table id="respect"><tr><td style="font-weight:bolder"> Oценили: </td></tr><tr>';var f='<table id="vse"  width="100%"><tr>';tmp_abort=setTimeout(function(){$.get('/api.php',{method:'post.getVotes',sort_dir:'desc',limit:100,post_id:PostID,fields:'user_id,username,avatar,value,datetime'},function(data){var x=data.response.votes;for(var i in x){var v=x[i];vote=v.value;if(vote==1){vote='https://petushki-city.ru/files/0002/10/47/26356.png';}else{vote='https://petushki-city.ru/files/0002/10/47/46689.png';};ava=v.avatar;if(ava==''){ava='https://forumstatic.ru/files/0000/14/1c/20038.jpg'};kr[i]='<td><figure><img class="vote" src="'+vote+'"><a class="prof" href="/profile.php?id='+v.user_id+'"><img class="person" src="'+ava+'" title="'+v.datetime+'"><figcaption><p>'+v.username+'</p></figcaption></a></figure></td>';}w+=kr.slice(0,5).join(' ');w+='</tr></table>';if(kr.length>=6){w+='<p id="showt" style="cursor:pointer;font-weight:bold;margin:5px;"> Показать всех </p>';}$(tyt).attr('original-title',w).tipsy('show');for(var k=0;k<kr.length;k++){f+=kr[k];if(k%5==4){f+='</tr><tr>';}}f+='</tr></table>';$('#showt').on('click',function(){cl();$.jGrowl(f,{sticky:!0,position:'center',header:kr.length+' оценили',theme:'rating_theme'});});},'json');},600);}).on('mouseleave',function(){clearTimeout(tmp_abort);ton();$('.tipsy').on('mouseover',function(){clearTimeout(timer);});$('.tipsy').on('mouseout',function(){ton();});});$('body').on('click',function(){$('.rating_theme .jGrowl-close').trigger('click');});
+    });
+    </script>
+
+<!--Запрет редактировать свой профиль определённой группе пользователей-->
+<script type="text/javascript">
+function disabled_profile(g_id) {
+ $('input').show();
+ if( GroupID == g_id )
+ {
+  $('input[type=submit]').attr('disabled', true);
+  var text = $('.formsubmit').html().replace(/После обновления профиля, вы будете перенаправлены назад на эту страницу./, "<span style='color: red;'>Администратор форума запретил Вам изменять профиль.</span>");
+  $('.formsubmit').html(text);
+ }
+}
+
+if (document.URL.indexOf("profile.php") != -1) disabled_profile("5");
+</script>
+
+
+<script> var tTim=20;function ContentTopicAlert(){if($("#main-reply").val()==""){tTim=2;TimeUwedomlenie=setTimeout("ContentTopicAlert()",tTim*1000)}else { alert("Внимание!!! \n Время Вашей сессии скорее всего закончилось: \n\n Cкопируйте на всякий случай данные из поля ответа,\nСделайте перезагрузку страницы, и вставьте Ваш контент в поле ответа по правой кнопке мыши!");}};if($("#main-reply").html()!=null ){
+TimeUwedomlenie=setTimeout("ContentTopicAlert()",tTim*60*1000);}</script>
+
+
+<!-- Запятая после ника -->
+<script type="text/javascript">
+function to(username)
+{insert('[b]' + username + '[/b]' + ', ');}
+</script>
+<!-- Конец -->
+
+
+<!-- Маска профиля пользователя в сообщении -->
+
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+hvScriptSet.addMask({
+guestAccess: ['Принятые анкеты НПС', 'Организационная', 'События с 2015 года', 'События до конца 2014 года', 'Альтернатива', 'Законченные эпизоды (до 2014)', 'Законченные эпизоды (с 2015 года)', 'Зона флуда', 'Творчество'],
+forumAccessExtended: {
+'Принятые анкеты НПС': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'], 
+'Организационная': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'События с 2015 года': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'События до конца 2014 года': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'Альтернатива': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'Законченные эпизоды (до 2014)': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'Законченные эпизоды (с 2015 года)': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'Законченные эпизоды альтернативы': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'Зона флуда': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+'Творчество': ['Администраторы', 'Модераторы', 'Пользователи', 'The Vampire`s Kiss', 'The Coven', 'The Coalition', 'Welcome to St. Louis'],
+ },
+changeList: {
+'pafld2': {
+title: 'Данные',
+description: '',
+tag: 'Data',
+class: 'pa-fld2',
+defaultCode: '<div class="Dataname"> <a href=ссылка на анкету><b><i>Имя на русском, </br> возраст y.o.</i></b></a></div>',
+type: 'html'
+}
+},
+userFields: ['pa-author', 'pa-title', 'pa-fld1', 'pa-avatar', 'pa-fld2', 'pa-fld3', 'pa-posts', 'pa-respect', 'pa-last-visit', 'pa-ip', 'pa-awards']
+});
+</script>
+
+<!-- Cкрытие формы ответа при числе постов в теме более заданной: -->
+<script type="text/javascript">
+(function(){
+var Num_Hide = 1000; //Число постов, после которого Cкрытие формы ответа.
+var a = $('.topic>h2>span.item2');
+if(a.length)a=parseInt(a.text().replace(/.*из (\d+)/,'$1'));
+if(a>=Num_Hide)$('.postlink a[href*="/post.php?tid"],#post').hide();
+}());
+</script>
+
+<!-- Поиск игровых постов по Нику в Указанных форумах -->
+<style>#my-form+div,#my-form {margin: var(--pad1);}</style>
+<script>FORUM.forumSarr_ = [25,24,29,10,2,4,3]; //Форумы поиска; </script>
+<script type="text/javascript" src="https://forumstatic.ru/files/0017/2a/64/73529.js"></script>
+
+<script>
+ReactionsPlugin.setConfig({
+  disable: true
+});
+</script>
+
+<script>
+$('.pa-last-visit').wrap('<div class="pa-offline">');
+</script>
+
+<script>
+$(".post-author").each(function(){
+$(this).find('.pa-posts, .pa-respect').wrapAll("<div class='pa-wrap'>");
+});
+</script>
+
+<!-- кнопка редактирования лз для админов / © hagalnaud&nothingale -->
+ <script type="text/javascript">
+var posts = $(".post");
+posts.each(function() {
+  var senderId = $(this).data("user-id");
+  var editLink = $("<a>").attr("href", "/profile.php?section=fields&id=" + senderId).attr("rel", "nofollow").text("ЛЗ");
+  var editLi = $("<li>").addClass("editpole").append(editLink);
+  $(this).find(".pl-email.pm").after(editLi);
+});</script>
+<style>li.editpole {display: none!important; float: left;}
+.isadmin li.editpole {display: inline-flex!important;}
+</style>
+
+<!-- Модерирование тем: опция "Закрыть и перенести" от 4eDo -->
+<script type="text/javascript" src="https://forumstatic.ru/files/001c/52/b6/34055.js"></script>

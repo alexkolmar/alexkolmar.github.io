@@ -372,6 +372,7 @@ textarea,
 /* фон */
 
 html {
+  min-width: 1320px;
   background: var(--th-bg) url(https://forumstatic.ru/files/0012/0b/b4/28471.jpg) no-repeat fixed top center/cover;
 }
 
@@ -874,6 +875,7 @@ tr.iclosed div.icon {
 
 #pun-stats h2 span {
   font-size: 0;
+  display: flex;
 }
 
 #pun-stats h2 span:before {
@@ -1053,7 +1055,7 @@ li#onlinelist {
 #html-footer .container {
 /*  padding: 0;*/
   display: flex;
- gap: 40px;
+ gap: 20px 40px;
 }
 
 .needs-fut {
@@ -1129,6 +1131,7 @@ li#onlinelist {
 
 .post h3 {
   padding: var(--pad2);
+  position: relative;
 }
 
 .post h3 span {
@@ -1210,6 +1213,10 @@ li#onlinelist {
 
 .pa-fld2 {
   margin: 5px 0 10px;
+}
+
+.pa-fld2 span, #pa-fld2 span {
+  font-family: var(--font2);
 }
 
 .pa-fld2 i, #pa-fld2 i {
@@ -1882,6 +1889,40 @@ div .mylike .post-rating p:before {
   position: relative;
   border: 1px solid var(--border);
   width: fit-content;
+}
+
+/* Регулировка размера текста */
+
+.FNTslider {
+  border-radius: 4px;
+  z-index: 1000;
+  background: rgb(24 31 41 / 60%);
+  width: 110px;
+  height: 5px;
+  position: absolute;
+  right: 20%;
+}
+
+.FNTslider .before {
+  height: 6px;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  background: #a6a9ae;
+  margin-top: -1px;
+}
+
+.FNTslider .thumb {
+  width: 8px;
+  height: 13px;
+  border-radius: 3px;
+  position: relative;
+  top: -4px;
+  background: #d2d0ca;
+  cursor: pointer;
+}
+
+html.punbb {
+  min-width: unset !important;
 }
 
 .style_mobile-on .fa-desktop, .style_mobile-off .fa-mobile-screen-button {
