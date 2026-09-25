@@ -1,0 +1,17 @@
+<div class="tablica">
+ <div class="tab_left">
+  <div class="tab_logo">
+   <div class="logo_big">Тени звёзд</div>
+   <div class="tab_about">Форумная научно-фантастическая ролевая игра</div>
+   <div class="tab_text">
+    О людях, ареннах и планете,<br>
+    на которой два чуждых народа<br>
+    ищут один и тот же ресурс.
+   </div>
+  </div>
+ </div>
+ <div class="tab_right">
+  Смотреть шире<br>
+  Понимать глубже
+ </div>
+</div>

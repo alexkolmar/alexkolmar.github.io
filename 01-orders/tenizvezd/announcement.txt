@@ -1,0 +1,25 @@
+<div class="tablica2">
+ <div class="tab_links">
+  <span>Быстрая навигация</span>
+  <div class="links_inner">
+   <a href=""><i class="fa-light fa-comment-lines"></i> Гостевая</a>
+   <a href=""><i class="fa-light fa-users"></i> Список персонажей</a>
+   <a href=""><i class="fa-light fa-masks-theater"></i> Список внешностей</a>
+   <a href=""><i class="fa-sharp fa-light fa-book-atlas"></i> Навигатор по матчасти</a>
+  </div>
+ </div>
+ <div class="tab_slogan">
+  «Миры не так далеко, как кажется.<br>
+  Они просто ждут тех, кто готов их увидеть»<br>
+  <img src="https://forumstatic.ru/files/001c/09/2b/41499.png" alt="">
+ </div>
+ <div class="tab_wanted">
+  <span>Нужны игрокам</span>
+  <div class="wanted_inner">
+   <a href=""><img src="https://forumstatic.ru/files/0011/c0/7c/22656.jpg" alt=""></a>
+   <a href=""><img src="https://forumstatic.ru/files/0011/c0/7c/63004.jpg" alt=""></a>
+   <a href=""><img src="https://forumstatic.ru/files/0011/c0/7c/47862.jpg" alt=""></a>
+   <a href=""><img src="https://forumstatic.ru/files/0011/c0/7c/28130.jpg" alt=""></a>
+  </div>
+ </div>
+</div>

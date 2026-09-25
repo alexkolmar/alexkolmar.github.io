@@ -1,0 +1,56 @@
+<!-- Аватар по умолчанию / Deff, Alex_63 -->
+<script type="text/javascript">
+var DefAvtr = 'https://forumstatic.ru/files/001c/09/2b/77155.png'; //Ссылка на аватар по умолчанию
+
+$('#pun-viewtopic,#pun-messages').find('.pa-title').each(function(){
+var L='<li class="pa-avatar item2"><img class="defavtr" src="'+DefAvtr+'" alt="Аватар"/></li>';
+if($(this).parent().find('.pa-avatar').html()==null)$(this).after(L);});
+$('#profile-left strong:contains("Нет аватара")').parent().html('<div><img src="'+DefAvtr+'"/></div>');
+</script>
+
+
+<script>
+$(".post-author").each(function(){
+$(this).find('.pa-posts, .pa-fld2, .pa-respect').wrapAll("<div class='pa-wrap'>");
+});
+</script>
+
+<script>
+$('.pa-last-visit').wrap('<div class="pa-offline">');
+</script>
+
+<!--Кнопки вверх вниз-->
+<div class="go-up" id='ToTop' title="вверх">▲</div>
+<div class="go-down" id='OnBottom' title="вниз">▼</div>
+<script type="text/javascript">
+ $(function () {
+  if ($(window).scrollTop() >= "250") $("#ToTop").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() <= "250") $("#ToTop").fadeOut("slow")
+   else $("#ToTop").fadeIn("slow")
+  });
+  if ($(window).scrollTop() <= $(document).height() - "999") $("#OnBottom").fadeIn("slow")
+  $(window).scroll(function () {
+   if ($(window).scrollTop() >= $(document).height() - "999") $("#OnBottom").fadeOut("slow")
+   else $("#OnBottom").fadeIn("slow")
+  });
+  $("#ToTop").click(function () { $("html,body").animate({ scrollTop: 0 }, "slow") })
+  $("#OnBottom").click(function () { $("html,body").animate({ scrollTop: $(document).height() }, "slow") })
+ });
+</script>
+
+<!-- баннеры -->
+<div class="banners">
+ <div class="container">
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+ </div>
+</div>
