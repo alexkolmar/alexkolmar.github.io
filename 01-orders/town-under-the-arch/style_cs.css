@@ -113,7 +113,7 @@
 a,
 .punbb #pun-admain a {
   text-decoration: none;
-  color: var(--link);
+  color: #33465e;
   transition: all .2s linear 0s;
 }
 
@@ -186,6 +186,7 @@ em {
 /* ОФОРМЛЕНИЕ КНОПОК */
 
 input.button,
+button.button,
 #pun-admain input.button,
 #sub4,
 input[type="button"],
@@ -474,6 +475,10 @@ html {
     -webkit-animation: blinkColor 2s linear infinite;
     background: var(--th-bg);
   }
+
+#pun-navlinks li#navawards {
+  display: none;
+}
 
   #pun-navlinks li#navpm span.num_msg {
     margin-top: 0;
@@ -867,6 +872,12 @@ tr.iclosed div.icon {
   box-sizing: border-box;
 }
 
+/*
+.punbb td .user-avatar.no-avatar .avatar-image {
+  background: url(https://forumstatic.ru/files/0017/2a/64/22955.jpg) no-repeat top center !important;
+}
+*/
+
 /* Статистика */
 
 #pun-stats {}
@@ -947,7 +958,7 @@ li#onlinelist {
 .links a {
   color: var(--accent-1);
   font-family: var(--font3);
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -984,14 +995,14 @@ li#onlinelist {
 
 .tab_content {
   width: 300px;
-  padding: 30px 0;
+  padding: 30px 0 30px 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 .helloinfo, .helloinfo a {
-  color: var(--ltext);
+  color: #bebebe;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .25px;
@@ -1003,8 +1014,13 @@ li#onlinelist {
   width: 37px;
   height: 37px;
   border: 1px solid var(--accent-1);
-  box-sizing: border-box;
   background: var(--accent-2);
+}
+
+.ams a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ams_inner {
@@ -1026,7 +1042,7 @@ li#onlinelist {
 }
 
 .hellobox {
-  color: var(--ltext);
+  color: #bebebe;
   font-size: 14px;
   text-align: justify;
 }
@@ -1142,6 +1158,7 @@ li#onlinelist {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  box-sizing: border-box;
 }
 
 /* номер поста */
@@ -1168,7 +1185,7 @@ li#onlinelist {
   padding: 3px 3px 3px 0;
   border-block: 1px solid var(--link);
   border-right: 1px solid var(--link);
-  color: var(--ltext);
+  color: #bebebe;
 }
 
 .post-author > ul {
@@ -1198,6 +1215,25 @@ li#onlinelist {
 
 .pa-avatar img {}
 
+.pa-fld1 {
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  padding: 5px !important;
+  width: 190px;
+  height: 250px;
+  background-color: rgb(19 21 20 / 50%);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  transform: translatex(-50%);
+  box-sizing: border-box;
+}
+
+.pa-fld1:hover {opacity: 1;}
+
+
 .lz {
   margin: 10px 0;
 }
@@ -1209,6 +1245,7 @@ li#onlinelist {
 
 .pa-fld2, #pa-fld2 {
   font-family: var(--font3);
+font-size: 18px;
 }
 
 .pa-fld2 {
@@ -1231,7 +1268,7 @@ li#onlinelist {
 .pa-posts,
 .pa-respect {
   display: inline-block;
-  margin: 0 10px 5px;
+  margin: 0 13px 5px;
 }
 
 .pa-respect {
@@ -1239,13 +1276,13 @@ li#onlinelist {
 }
 
 .pa-respect a {
-  color: var(--ltext);
+  color: #bebebe;
 }
 
 .pa-posts .fld-name,
 .pa-respect .fld-name {
   display: block;
-  color: var(--ltext);
+  color: #bebebe;
 }
 
 .pa-online, .pa-offline {
@@ -1315,7 +1352,7 @@ li#onlinelist {
 }
 
 .post-box {
-  padding: 0 0 10px 20px;
+  padding: 0px 10px 10px 20px;
 }
 
 .post-links {
@@ -1378,6 +1415,7 @@ pre {
   padding: 0 0 12px 0;
   line-height: 150%;
   text-align: justify;
+  overflow: hidden;
 }
 
 .post-content img {
@@ -1472,10 +1510,14 @@ pre {
   margin-left: calc(var(--mwidth) * -1);
 }
 
+.punbb #profile-left {
+  text-align: center;
+}
+
 #viewprofile h2,
 #profilenav h2 {
   padding: 0;
-  margin: 0;
+  margin: 0px 20px 0px 0px;
 }
 
 #profilenav li {
@@ -1562,6 +1604,30 @@ img.avatardemo {
   margin-top: 0;
 }
 
+/* _______________________________ кнопки над формой ответа ____ */
+
+#form-buttons tr {display: block; width: 100% ;text-align: center;}
+#form-buttons td img {position: absolute; z-index: 100; left: 0; top: 0;}
+#form-buttons td {
+background-image: none !important;
+display: inline-block;
+position: relative;
+width: 24px; 
+height: 24px;
+margin: 0 5px 3px;
+}
+#form-buttons td .material-icons {
+position: absolute;
+z-index: 1;
+left: 0;
+font-size: 20px;
+padding: 3px;
+color: rgb(21 28 38 / 95%);
+}
+#form-buttons td:hover {background-color: #515760;} 
+#form-buttons td:hover .material-icons {color: #112236;} 
+
+
 /* Кнопки вверх-вниз
 -------------------------------------------------------*/
 
@@ -1587,172 +1653,6 @@ img.avatardemo {
 
 .downme {
   top: 345px;
-}
-
-/* Form Buttons © max, the murderer!
------------------------------------------------------------------------ */
-
-/* General */
-
-#form-buttons table {
-    width: 100% !important;
-}
-
-#form-buttons table tr {
-    display: flex;
-    justify-content: space-between; /* выравнивание кнопок в ряду */
-    gap: 4px;
-    margin-bottom: 4px;
-}
-
-#form-buttons td {
-    position: relative;
-    background: none !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px; /* ширина кнопки */
-    height: 24px; /* высота кнопки */
-}
-
-#form-buttons td::before {
-    font-family: var(--fa);
-    font-size: 16px; /* размер иконки */
-    font-weight: 400; /* стиль иконки */
-    position: absolute;
-    color: var(--link);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    z-index: 1;
-}
-
-#form-buttons td:hover::before {
-    color: var(--link-hover); /* цвет при наведении */
-}
-
-
-/* Icons */
-
-#button-font::before {
-    content: '\f031';
-}
-
-#button-size::before {
-    content: '\f894';
-}
-
-#button-bold::before {
-    content: '\f032';
-}
-
-#button-italic::before {
-    content: '\f033';
-}
-
-#button-underline::before {
-    content: '\f0cd';
-}
-
-#button-strike::before {
-    content: '\f0cc';
-}
-
-#button-left::before {
-    content: '\f036';
-}
-
-#button-right::before {
-    content: '\f038';
-}
-
-#button-center::before {
-    content: '\f037';
-}
-
-#button-link::before {
-    content: '\f0c1';
-}
-
-#button-spoiler::before {
-    content: '\f518';
-}
-
-#button-image::before {
-    content: '\f302';
-}
-
-#button-video::before {
-    content: '\f144';
-}
-
-#button-hide::before {
-    content: '\f30d';
-}
-
-#button-quote::before {
-    content: '\f27a';
-}
-
-#button-code::before {
-    content: '\f121';
-}
-
-#button-color::before {
-    content: '\f53f';
-}
-
-#button-table::before {
-    content: '\f009';
-}
-
-#button-smile::before {
-    content: '\f118';
-}
-
-#button-keyboard::before {
-    content: '\f11c';
-}
-
-#button-addition::before {
-    content: '\f0d7';
-}
-
-#form-buttons td#button-files_rusff::before {
-    content: '\f07b';
-}
-
-#form-buttons td#button-graffiti_rusff::before {
-    content: '\f5bd';
-}
-
-#button-transL::before {
-    content: '\f891';
-}
-
-#button-indent::before {
-    content: '\f878';
-}
-
-#button-justify::before {
-    content: '\f039';
-}
-
-#floatbut::before {
-    content: '\f03c';
-}
-
-#form-buttons #button-image ~ #button-image::before {
-    content: '\f03e' !important;
-}
-
-#button-mask::before {
-    content: '\f630';
 }
 
 
@@ -1925,6 +1825,51 @@ html.punbb {
   min-width: unset !important;
 }
 
+#tooltip {
+  position: absolute;
+  background: #1a1a1a;
+  z-index: 999;
+  max-width: 180px;
+  border: none;
+  border-radius: 2px;
+  font-family: Philosopher; /* шрифт */
+  font-size: 9px; /* размер текста */
+  display: none;
+  color: #e8e8e8; /* цвет текста */
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
 .style_mobile-on .fa-desktop, .style_mobile-off .fa-mobile-screen-button {
   display: none;
+}
+
+.pa-avatar {
+    position: relative; /* чтобы оверлей позиционировался относительно аватарки */
+    overflow: visible;
+}
+
+.pa-fld1-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85); /* тёмный фон, чтобы читалось */
+    color: #fff;
+    padding: 10px;
+    border-radius: inherit;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    overflow-y: auto;
+    z-index: 10;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.pa-avatar:hover .pa-fld1-overlay {
+    opacity: 1;
+    visibility: visible;
 }

@@ -1,3 +1,28 @@
+<!-- Cчётчик Игровых постов !!!Должен Стоять в самом верху HTML верх!-->
+<script type="text/javascript">
+/***************************
+        Настройки!
+***************************/
+FORUM._NUMpa_fld = 5;		// Номер.Доп.поля,
+FORUM._color_fld = "#547296";	// Цвет шрифта,
+FORUM.includeFirstPost = 0;	// 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
+FORUM.AddOrSlash = 1;		// 0 - Поле отдельно, 1 - через слешь c общ. числом сообщений,
+FORUM.Number_winners = [7,[12,5]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
+FORUM.Subscription_Code = "3ddef7aadc622384876d2d45cadbe751e1f36ebb";	//Код подписки!!;
+function ad_ (){/*!~!FORUM.ForArrAy = {
+//Форум  //Темы (включаемые, или исключаемые)
+
+f2	:-[0],		 //События с 2015 года
+f4	:-[0],		 //События до конца 2014 года
+f3	:-[0]		 //Альтернатива //Последний элемент без запятой!
+}
+!~!*/}ad_ = ad_.toString().split('!~!')[1];//alert(ad_);
+</script>
+<script type="text/javascript" src="https://forumstatic.ru/files/0013/44/56/77707.js"></script>
+<style>.punbb .GamePst {padding-right:0!important;}</style>
+<!-- //END Cчётчик Игровых постов © Deff-->
+
+
 <div class="tablica">
  <div class="links">
   <a href="https://jkisdead.rusff.me/viewtopic.php?id=32">гостевая</a>
@@ -27,53 +52,28 @@ viewtopic.php?id=291">Средняя °C по месяцам</a>,<br>
   <div class="ams">
    <span class="tabtitle">— АМС —</span>
    <div class="ams_inner">
-    <a href=""><img src="" alt=""></a>
-    <a href=""><img src="" alt=""></a>
-    <a href=""><img src="" alt=""></a>
-    <a href=""><img src="" alt=""></a>
+    <a href="https://jkisdead.rusff.me/profile.php?id=6" title="АШЕР"> <img src="https://upforme.ru/uploads/0017/2a/64/36/651055.png" alt=""></a>
+    <a href="https://jkisdead.rusff.me/profile.php?id=36" title="АЛЬМА"><img src="https://upforme.ru/uploads/0017/2a/64/36/224062.png" alt=""></a>
+    <a href="https://jkisdead.rusff.me/profile.php?id=82" title="ЭСФИРА"><img src="https://upforme.ru/uploads/0017/2a/64/36/303986.png" alt=""></a>
+    <a href="https://jkisdead.rusff.me/profile.php?id=5" title="ДОМИНИК"><img src="https://upforme.ru/uploads/0017/2a/64/36/559393.png" alt=""></a>
    </div>
   </div>
 
   <div class="activists">
    <span class="tabtitle">— активисты —</span>
    <div class="activists_inner">
-    <a href="">Имя</a>—
-    <a href="">Имя</a>—
-    <a href="">Имя</a>—
-    <a href="">Имя</a>
+    <a href="https://jkisdead.rusff.me/profile.php?id=136" title="26 постов">Michael Shelter</a>—
+    <a href="https://jkisdead.rusff.me/profile.php?id=213" title="24 поста">Lukas Lind</a>—
+    <a href="https://jkisdead.rusff.me/profile.php?id=269" title="6 постов">Luther</a>—
+    <a href="https://jkisdead.rusff.me/profile.php?id=238" title="5 постов">Solange</a>
    </div>
   </div>
 
-  <div class="hellobox"><span>добро пожаловать!</span><br>
+  <div class="hellobox"><span>Добро пожаловать!</span><br>
    Дорогие гости, мы рады приветствовать вас на проекте Town under the Arch, по мотивам произведений Л. Гамильтон!
   </div>
  </div>
 </div>
-
-<!-- Cчётчик Игровых постов !!!Должен Стоять в самом верху HTML верх!
-<script type="text/javascript">
-/***************************
-        Настройки!
-***************************/
-FORUM._NUMpa_fld = 5;		// Номер.Доп.поля,
-FORUM._color_fld = "#cfaa5c";	// Цвет шрифта,
-FORUM.includeFirstPost = 0;	// 0 - не учитывать,1 - учитывать Первопост автора в игровых темах,
-FORUM.AddOrSlash = 1;		// 0 - Поле отдельно, 1 - через слешь c общ. числом сообщений,
-FORUM.Number_winners = [7,[12,5]];	// Начальное Число отображаемых юзеров в таблице и список форумов показа;
-FORUM.Subscription_Code = "3ddef7aadc622384876d2d45cadbe751e1f36ebb";	//Код подписки!!;
-function ad_ (){/*!~!FORUM.ForArrAy = {
-//Форум  //Темы (включаемые, или исключаемые)
-
-f2	:-[0],		 //События с 2015 года
-f4	:-[0],		 //События до конца 2014 года
-f3	:-[0]		 //Альтернатива //Последний элемент без запятой!
-}
-!~!*/}ad_ = ad_.toString().split('!~!')[1];//alert(ad_);
-</script>
-<script type="text/javascript" src="https://forumstatic.ru/files/0013/44/56/77707.js"></script>
-<style>.punbb .GamePst {padding-right:0!important;}</style>
-//END Cчётчик Игровых постов © Deff-->
-
 
 
 <!-- Просмотр полного профиля на странице /profile.php V.2 
@@ -173,7 +173,8 @@ $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).he
 FORUM.set('editor.addition.tags.hide_provil', {name:'скрытие Профиля',onclick:function(){smile('[im'+'g=hide-autor]https://is.gd/ekiTPp['+'/img]');}});
 $().pun_mainReady(function() {
 function addStyle() { /*==123==;
-<style type="text/css">#### .post-author,#### .post-sig,#### .pl-email,#### .pl-website{display:none !important}#### .post-body,#### .post-links,#### .post-links ul,#### h3>span{margin-left:0 !important}</style>
+<style type="text/css">#### .post-author,#### .post-sig,#### .pl-email,#### .pl-website{display:none !important}#### .post-body,#### .post-links,#### .post-links ul,#### h3>span{margin-left:0 !important;width:100%;}
+#### .post-body{padding-left:var(--pad4);}</style>
 ==123==;*/
 } addStyle = addStyle.toString().split('==123==;')[1];
 $('.post .post-content img[alt="hide-autor"]').each(function(){

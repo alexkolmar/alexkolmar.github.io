@@ -4,6 +4,26 @@ $('#pun-navlinks li a').each(function(){
 });
 </script>
 
+<script>
+$(document).ready(function () {
+    $('.post-author').each(function () {
+        var $author = $(this);
+        var $avatar = $author.find('.pa-avatar');
+        var $fld1 = $author.find('.pa-fld1');
+
+        if ($avatar.length && $fld1.length) {
+            // Создаём обёртку для оверлея
+            var $overlay = $('<div class="pa-fld1-overlay"></div>').html($fld1.html());
+
+            // Кладём внутрь .pa-avatar
+            $avatar.append($overlay);
+
+            // Удаляем оригинальный .pa-fld1 (если нужно)
+            $fld1.remove();
+        }
+    });
+});
+</script>
 
 <!--Для хтмл -->
 <script type="text/javascript">
@@ -188,12 +208,40 @@ RusffCore.sets.show_reportBtn = 0;
 
 <!-- аватар для гостя и игрока -->
 <script type="text/javascript">
-var DefAvtr="https://forumstatic.ru/files/0017/2a/64/51124.jpg"; //Для Игрока
-var GuestAvtr="https://forumstatic.ru/files/0017/2a/64/22955.jpg";//Для Гостя
+var DefAvtr="https://forumstatic.ru/files/0017/2a/64/89532.png"; //Для Игрока
+var GuestAvtr="https://forumstatic.ru/files/0017/2a/64/22008.png";//Для Гостя
 $("li.pa-title").each(function(){
 var b = DefAvtr;if($(this).text()=='Гость')b = GuestAvtr;
 var s='<li class="pa-avatar item2"><img class="defavtr" src="'+b+'" alt="Аватар"/></li>';
 if (($(this).parents(".post-author").find("li.pa-avatar").length)==0){$(this).after(s);};});
+</script>
+<script>
+$(document).ready(function () {
+    var DefAvtrInTable = 'https://forumstatic.ru/files/0017/2a/64/89532.png';   // для юзера без авы
+    var GuestAvtrInTable = 'https://forumstatic.ru/files/0017/2a/64/22008.png'; // для гостя
+
+    // Пробегаем по всем аватаркам в таблице форумов (последнее сообщение)
+    $('.tcr .user-avatar').each(function () {
+        var $ava = $(this);
+        var $link = $ava.find('a');
+        var $bg = $ava.find('.avatar-image');
+
+        // Проверяем: есть ли ссылка на профиль
+        var isGuest = !$link.attr('href') || $link.attr('href').indexOf('profile.php') === -1;
+
+        // Если это "no-avatar" или у ссылки нет href — ставим заглушку
+        if ($ava.hasClass('no-avatar') || isGuest) {
+            var img = isGuest ? GuestAvtrInTable : DefAvtrInTable;
+
+            if ($bg.length) {
+                $bg.css('background-image', 'url(' + img + ')');
+            } else {
+                // если .avatar-image нет — вставляем img
+                $link.html('<span class="avatar-image" style="background-image:url(' + img + ')"></span>');
+            }
+        }
+    });
+});
 </script>
 
 

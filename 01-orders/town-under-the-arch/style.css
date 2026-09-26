@@ -30,6 +30,7 @@
   --pad1: 10px 40px;
   --pad2: 5px 40px;
   --pad3: 5px 10px;
+  --pad4: 20px;
   --msr: "Material Symbols Rounded";
   --fa: "Font Awesome 6 Pro", "Font Awesome 6 Brands";
   --font1: "Montserrat", sans-serif;
@@ -47,6 +48,7 @@
 :root {
   --pad1: 10px 20px;
   --pad2: 5px 20px;
+  --pad4: 0;
 }
 
 
@@ -971,8 +973,10 @@
   /* Редактирование профиля и ЛС
   -------------------------------------------------------------*/
 
-  #profile>.container {
+  #profile > .container {
     padding: 5px 10px !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .punbb #profilenav {
@@ -983,7 +987,7 @@
 
   #viewprofile h2,
   #profilenav h2 {
-    margin: 0;
+    margin: 0px;
   }
 
   #profilenav ul {
