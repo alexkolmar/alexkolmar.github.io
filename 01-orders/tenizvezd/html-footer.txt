@@ -1,3 +1,13 @@
+<script type="text/javascript">
+$(document).ready(function () {
+    var $announcement = $('#pun-announcement');
+    if ($announcement.length) {
+        // Переносим в #pun наравне с .punbb
+        $announcement.appendTo('#pun');
+    }
+});
+</script>
+
 <!-- Аватар по умолчанию / Deff, Alex_63 -->
 <script type="text/javascript">
 var DefAvtr = 'https://forumstatic.ru/files/001c/09/2b/77155.png'; //Ссылка на аватар по умолчанию

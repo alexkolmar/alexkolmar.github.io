@@ -92,7 +92,7 @@
   --pad2: 5px 20px;
   --pad3: 5px 10px;
   --msr: "Material Symbols Rounded";
-  --fa: "Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  --fa: "Font Awesome 6 Sharp", "Font Awesome 6 Brands";
   --font1: "Manrope", sans-serif;
   --font2: "Prata", serif;
   --font3: "EB Garamond", serif;
@@ -453,9 +453,15 @@ body::before {
 
 #pun {
   margin: 402px auto 30px;
-  width: 1100px;
   background: var(--pun-bg);
   border-image: url(https://forumstatic.ru/files/001c/09/2b/75245.png) 27/20px stretch;
+  border-image: url(https://forumstatic.ru/files/001c/09/2b/90516.png) 40/30px repeat;
+  display: flex;
+  width: 1400px;
+}
+
+#pun:has(#pun-index) {
+  background: url(https://forumstatic.ru/files/001c/09/2b/66789.jpg) fixed top right/cover;
   border-image: url(https://forumstatic.ru/files/001c/09/2b/90516.png) 40/30px repeat;
 }
 
@@ -465,6 +471,8 @@ body::before {
   font: 14px var(--font3);
   color: var(--text);
   padding: 10px 0;
+  width: 1100px;
+  flex-shrink: 0;
 }
 
 /* настройки внутренних блоков */
@@ -478,7 +486,7 @@ body::before {
 #pun-navlinks {
   position: absolute;
   top: 366px;
-  width: 1100px;
+  width: 1400px;
 }
 
 #pun-navlinks .container {
@@ -492,7 +500,7 @@ body::before {
   justify-content: flex-start;
   box-sizing: border-box;
   gap: 30px;
-  width: 1060px;
+  width: 1360px;
   border: 1px solid var(--gold-dark);
 }
 
@@ -734,9 +742,7 @@ tr.iclosed div.icon {
 ------------------------------------------*/
 
 #pun-index {
-  background: url(https://forumstatic.ru/files/001c/09/2b/66789.jpg) fixed top right/cover;
-  border-image: url(https://forumstatic.ru/files/001c/09/2b/75245.png) 27/20px stretch;
-  border-image: url(https://forumstatic.ru/files/001c/09/2b/90516.png) 40/30px repeat;
+
 }
 
 /* скрыть "форум, тем, сообщений" */
@@ -766,6 +772,7 @@ tr.iclosed div.icon {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 10px;
   box-sizing: border-box;
   color: var(--text);
   background: url(https://forumstatic.ru/files/001c/09/2b/47278.png) no-repeat top center;
@@ -878,6 +885,12 @@ tr.iclosed div.icon {
 
 #pun-stats {}
 
+#pun-stats h2:before {
+  content: "\e473";
+  font-family: var(--fa);
+  font-weight: bold;
+}
+
 #pun-stats .statscon {
   padding: 0 20px;
 }
@@ -917,7 +930,7 @@ li#onlinelist {
   background: url(https://forumstatic.ru/files/001c/09/2b/11407.png) no-repeat bottom left 130px/760px auto;
   height: 366px;
   position: absolute;
-  width: 1100px;
+  width: 1400px;
   top: 0;
 }
 
@@ -931,9 +944,9 @@ li#onlinelist {
 
 #html-header {
   top: 0;
-  height: 296px;
+  height: 366px;
   position: absolute;
-  width: 1100px;
+  width: 1400px;
   z-index: 1;
 }
 
@@ -978,7 +991,7 @@ li#onlinelist {
 }
 
 .tab_right {
-  width: 300px;
+  width: 450px;
   display: flex;
   padding-top: 20px;
   text-transform: uppercase;
@@ -992,6 +1005,13 @@ li#onlinelist {
 
 #pun-announcement {}
 
+#pun-announcement .container {
+  padding: 30px 30px 30px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 /* скрываем слово "объявление" */
 
 #pun-announcement h2 {
@@ -1000,16 +1020,35 @@ li#onlinelist {
 
 .tablica2 {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  color: var(--text);
+  font-family: var(--font4);
+  position: sticky;
+  top: 0; /* Точка, в которой элемент прилипает к верху экрана */
+  z-index: 100; /* Чтобы блок был поверх остальных элементов */
 }
 
 .tablica2 > div {
+  position: relative;
   border-image: url(https://forumstatic.ru/files/001c/09/2b/75245.png) 27/20px stretch;
   background: var(--surface);
   padding: 15px 20px;
   flex-grow: 1;
   flex-shrink: 0;
+}
+
+
+.tablica2 > div::before {
+  content: "";
+  background: url(https://forumstatic.ru/files/001c/09/2b/36028.png) no-repeat center/cover;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tablica2 span {
@@ -1069,8 +1108,8 @@ li#onlinelist {
 }
 
 .tab_wanted a {
-  width: 40px;
-  height: 50px;
+  width: 46px;
+  height: 56px;
   display: block;
   clip-path: polygon( 4px 0%, calc(100% - 4px) 0%, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0% calc(100% - 4px), 0% 4px );
   position: relative;
@@ -1129,10 +1168,15 @@ li#onlinelist {
   position: absolute;
   background: var(--bg-dark);
   margin: 10px 20px 0;
-  width: 1060px;
+  width: 1360px;
   box-sizing: border-box;
   border: 1px solid var(--gold-dark);
   border-top: none;
+}
+
+.banners .container {
+  height: 35px;
+  overflow: auto;
 }
 
 .banners a {
@@ -1685,7 +1729,7 @@ img.avatardemo {
   z-index: 9999;
   display: none;
   position: fixed;
-  margin-left: 1099px !important;
+  margin-left: 1399px !important;
   box-sizing: border-box;
   transition: all .3s linear 0s;
   padding: 15px 5px;
