@@ -899,6 +899,8 @@
 
   #profile>.container {
     padding: 5px 10px !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .punbb #profilenav {
