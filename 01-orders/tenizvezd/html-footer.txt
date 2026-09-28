@@ -1,10 +1,25 @@
-<script type="text/javascript">
+<script>
 $(document).ready(function () {
     var $announcement = $('#pun-announcement');
-    if ($announcement.length) {
-        // Переносим в #pun наравне с .punbb
-        $announcement.appendTo('#pun');
+    if (!$announcement.length) return;
+
+    function moveAnnouncement() {
+        var $a = $('#pun-announcement');
+        if (!$a.length) return;
+
+        var isMobile = window.innerWidth <= 540;
+
+        if (isMobile) {
+            // Возвращаем внутрь .punbb перед #pun-status
+            $a.insertBefore('#pun-index #pun-status');
+        } else {
+            // Переносим в #pun
+            $a.appendTo('#pun');
+        }
     }
+
+    moveAnnouncement();
+    $(window).on('resize', moveAnnouncement);
 });
 </script>
 
@@ -33,6 +48,22 @@ $('.pa-last-visit').wrap('<div class="pa-offline">');
 $(document).ready(function () {
     $('.pa-avatar img').each(function () {
         $(this).wrap('<div class="avatar-frame"></div>');
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.post-content').each(function() {
+        var imgtag = /\[img class="(.*?)"\](.*?)\[\/img\]/g;
+        if ($(this).html().match(imgtag) != null) {
+            $(this).html(
+                $(this).html().replace(
+                    imgtag,
+                    "<img class='$1' src='$2' />"
+                )
+            );
+        }
     });
 });
 </script>
@@ -80,7 +111,7 @@ hvScriptSet.addMask({
 <!-- баннеры -->
 <div class="banners">
  <div class="container">
-  <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
+  <a href="https://mayak.f-rpg.me/"><img src="https://forumstatic.ru/files/001b/ff/2a/37354.png" title="Маяк. Сообщество ролевиков, дизайнеров и графистов" alt="Маяк. Сообщество ролевиков, дизайнеров и графистов"></a>
   <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
   <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
   <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
@@ -92,3 +123,20 @@ hvScriptSet.addMask({
   <a href=""><img src="https://dummyimage.com/88x31/8fbc8f/fff.png" alt=""></a>
  </div>
 </div>
+
+<!-- Выделение кода в блоке "Код" с копированием в буфер -->
+<script type="text/javascript"
+src="https://forumstatic.ru/files/0015/c4/3f/26102.js"></script>
+
+<script>
+eval(
+    select_text.toString().replace(
+        /\}$/,
+        'try{document.execCommand("copy")}catch(e){}}'
+    )
+)
+</script>
+
+<script type="text/javascript">
+select_text.linkText = 'Скопировать код'
+</script>
