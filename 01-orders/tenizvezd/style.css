@@ -245,7 +245,7 @@ em {
 
 /* ОФОРМЛЕНИЕ КНОПОК */
 
-input.button, #pun-admain input.button, #sub4, input[type="button"], input[type="submit"] {
+input.button, button.button, #pun-admain input.button, #sub4, input[type="button"], input[type="submit"] {
   padding: 5px 15px;
   cursor: pointer;
   transition: all .2s linear 0s;
@@ -258,6 +258,7 @@ input.button, #pun-admain input.button, #sub4, input[type="button"], input[type=
 }
 
 input.button:hover,
+button.button:hover,
 #pun-admain input.button:hover,
 #sub4:hover,
 input[type="button"]:hover,
@@ -1278,11 +1279,30 @@ li#onlinelist {
 }
 
 .pa-avatar {
-  background: url(https://forumstatic.ru/files/001c/09/2b/65250.png) no-repeat left 5px center, url(https://forumstatic.ru/files/001c/09/2b/69218.png) no-repeat right 5px center;
+  background: url(https://forumstatic.ru/files/001c/09/2b/65250.png) no-repeat left 5px center/auto 90%, url(https://forumstatic.ru/files/001c/09/2b/69218.png) no-repeat right 5px center/auto 90%;
+}
+
+.avatar-frame {
+  border: 1px solid var(--gold-dark);
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+  position: relative;
+}
+
+.avatar-frame::before {
+  content: "";
+  border-image: url(https://forumstatic.ru/files/001c/cb/a4/41183.png) 70/24px repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .pa-avatar img {
-  border: 1px solid var(--gold-dark);
+  display: block;
 }
 
 .lz, .pa-wrap, .in_low {
@@ -1332,7 +1352,7 @@ li#onlinelist {
 .pa-respect {
   position: relative;
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .pa-posts .fld-name,
@@ -1368,13 +1388,13 @@ li#onlinelist {
   background: url(https://forumstatic.ru/files/001c/09/2b/72710.png) no-repeat top center/cover;
 }
 
-.pa-posts::after, .pa-fld2::after, .pa-respect::after {
+/* .pa-posts::after, .pa-fld2::after, .pa-respect::after {
   content: "";
   display: block;
   font-family: var(--font3);
   text-transform: uppercase;
   font-size: 9px;
-}
+} 
 
 .pa-posts::after {
   content: "сообщения";
@@ -1386,7 +1406,7 @@ li#onlinelist {
 
 .pa-respect::after {
   content: "репутация";
-}
+}*/
 
 .in_low {
   display: flex;
@@ -1556,8 +1576,8 @@ pre {
 
 .quote-box,
 .code-box {
-  margin: 4px 10px 10px;
-  padding: 5px;
+  margin: 4px 0 10px;
+  padding: 10px 15px;
   border: 1px solid var(--link-hover);
   background: var(--sec-bg);
 }
@@ -1991,183 +2011,20 @@ div .mylike .post-rating p:before {
 }
 
 
-/* Theme switcher © max, the murderer! */
-
-#theme_switcher {
-  text-align: right;
-  padding: var(--pad1);
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  color: var(--accent-1);
-}
-
-#theme_switcher li {
-    display: inline-block;
-}
-
-#theme_switcher li label {
-    display: none;
-}
-
-#theme_switcher li input {
-    -webkit-appearance: none;
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-}
-
-#theme_switcher li input::before {
-  font: 400 16px/100% var(--fa);
-  margin-right: 4px;
-  cursor: pointer;
-  transition: all .3s linear 0s;
-}
-
-#theme_switcher li input#light::before {
-    content: '\f185';
-}
-
-#theme_switcher li input#medium::before {
-    content: '\f6c4';
-}
-
-#theme_switcher li input#dark::before {
-    content: '\f755';
-}
-
-#theme_switcher li input:hover::before,
-#theme_switcher li input[type="radio"]:checked {
-    color: var(--accent-2);
-}
-
-
-/************************* 
-Стиль для Быстрой смены аккаунтов 
-Deff 
-*************************/
-
-/*Cкрытие формы входа без клика*/
-#pun-navlinks a:not(.NextShow)+span.odd, #pun-navlinks a:not(.NextShow)+span.odd+a#New-exit {
-  display: none !important;
-}
-
-li#navlogout .odd, li#navlogin .odd {
-  position: absolute !important;
-  margin-top: 25px;
+.punbb #mask_dialog .inner {
   background: var(--sec-bg);
-  padding: 15px;
-  border: 1px solid var(--border);
-  z-index: 110;
 }
 
-#form-login {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  max-width: 200px;
+#mask_dialog .hv-control {
+  margin-top: 10px;
 }
 
-#pun:not(.gid3) #form-login > p {
-  display: none;
+.punbb .hv-topic-mask-icon path {
+  fill: var(--gold);
 }
 
-#pun-navlinks li#navlogout {
-  display: inline-flex;
-  align-items: flex-start;
-  z-index: 120;
-}
-
-#New-exit {
-  margin: auto;
-  display: inline-flex;
-  height: 15px;
-  width: auto;
-  position: relative;
-}
-
-#New-exit img {
-  position: absolute;
-  height: 15px;
-  margin-left: 10px;
-  mask-image: url(https://forumstatic.ru/files/0016/01/4e/34290.svg);
-  background: var(--link);
-  width: 15px;
-}
-
-#List-UserNames, #List-UserNames ul {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  gap: 5px;
-}
-
-#List-UserNames ul li {
-  position: relative;
-  padding: 0;
-  display: flex;
-  transition: all .2s linear 0s;
-  justify-content: space-between;
-  background: var(--pun-bg);
-  box-shadow: 0 2px var(--border);
-  border: 1px solid var(--border);
-}
-
-#List-UserNames ul li b, #List-UserNames ul li span {
-  cursor: pointer;
-  transition: all .2s linear 0s;
-  color: var(--text);
-}
-
-#List-UserNames ul li b {
-  padding: 5px 10px;
-  display: flex;
-  flex-grow: 1;
-  box-sizing: border-box;
-}
-
-#List-UserNames ul li span {
-  font-size: 1.6em;
-  position: absolute;
-  right: 0;
-  display: flex;
-  height: 100%;
-  width: 25px;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-#List-UserNames ul li b:hover, #List-UserNames ul li span:hover {
-  color: var(--link-hover);
-}
-
-#List-UserNames > span {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-#Paste-And-Copy {
-  width: 100% !important;
-  box-sizing: border-box;
-}
-
-#List-UserNames span.a1-copy, #List-UserNames span.a1-paste {
-  margin-bottom: 5px;
-  cursor: pointer;
-  transition: all .2s linear 0s;
-  padding: 5px 10px;
-  background: var(--pun-bg);
-  box-shadow: 0 2px var(--border);
-  border: 1px solid var(--border);
-  color: var(--text);
-}
-
-#List-UserNames ul li:hover, #List-UserNames span.a1-copy:hover, #List-UserNames span.a1-paste:hover {
-  transform: translateY(2px);
-  box-shadow: none;
+#plng {
+  border: 1px solid var(--gold-dark);
+  padding: 2px 5px;
+  margin-right: 10px;
 }

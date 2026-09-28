@@ -29,6 +29,34 @@ $(this).find('.pa-posts, .pa-fld2, .pa-respect').wrapAll("<div class='pa-wrap'>"
 $('.pa-last-visit').wrap('<div class="pa-offline">');
 </script>
 
+<script>
+$(document).ready(function () {
+    $('.pa-avatar img').each(function () {
+        $(this).wrap('<div class="avatar-frame"></div>');
+    });
+});
+</script>
+
+
+<script src="https://forumstatic.ru/files/0017/95/29/89289.js"></script>
+<script>
+hvScriptSet.addMask({
+    forumAccess: {
+      'Текущая хроника': ['Игроки'],
+      'Архивные моменты': ['Игроки'],
+      'Пространство Теней': ['Игроки],
+      'Закрытые проекты': ['Игроки']
+    },
+    userFields: ['pa-author','pa-avatar','pa-title','pa-fld1','pa-posts','pa-fld2','pa-respect','pa-fld3','pa-online']
+  });
+</script>
+
+
+<!--написано символов-->
+<script>var a,L,epl=$("#main-reply"),str='<small id="plng">Написано символов: <b>00</b> </small>';epl.parents("fieldset").find("legend").prepend(str);function epl3(){a=epl.val().length;if(a>9){L=''}else{L='0'};$("#plng b").text(L+a)};epl3();$(".pl-quote").click(function (){setTimeout('epl3()',100)});epl.bind('mouseout mousemove keydown keypress keyup',function(e){epl3()});</script>
+<!--конец -->
+
+
 <!--Кнопки вверх вниз-->
 <div class="go-up" id='ToTop' title="вверх">▲</div>
 <div class="go-down" id='OnBottom' title="вниз">▼</div>
