@@ -127,7 +127,7 @@ class CharacterSlider {
                 "description": "",
                 "images": {
                     "before": "img/before/07_Bach.jpg",
-                    "after": "img/after/06_Gary.png"
+                    "after": "img/after/07_Bach.png"
                 }
             },
             {
@@ -223,7 +223,7 @@ class CharacterSlider {
                 "description": "",
                 "images": {
                     "before": "img/before/19_Skelter.jpg",
-                    "after": "img/after/"
+                    "after": "img/after/19_Skelter.png"
                 }
             },
             {
