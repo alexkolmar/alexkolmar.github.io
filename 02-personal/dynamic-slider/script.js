@@ -78,8 +78,8 @@ class CharacterSlider {
                 "name": "Андрей",
                 "description": "",
                 "images": {
-                    "before": "https://images2.imgbox.com/b4/08/XuJR05VP_o.jpg",
-                    "after": "https://images2.imgbox.com/be/7d/XrzJVDhb_o.png"
+                    "before": "img/before/01_Andrei.jpg",
+                    "after": "img/after/01_Andrei.jpg"
                 }
             },
             {
