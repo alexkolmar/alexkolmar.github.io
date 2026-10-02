@@ -79,39 +79,39 @@ class CharacterSlider {
                 "description": "",
                 "images": {
                     "before": "img/before/01_Andrei.jpg",
-                    "after": "img/after/01_Andrei.jpg"
+                    "after": "img/after/01_Andrei.png"
                 }
             },
             {
                 "name": "Эш Риверс",
                 "description": "",
                 "images": {
-                    "before": "https://images2.imgbox.com/d0/b0/JHuq6RcH_o.jpg",
-                    "after": "https://images2.imgbox.com/50/fd/WiAsN84e_o.png"
+                    "before": "img/before/02_Ash.jpg",
+                    "after": "img/after/02_Ash.png"
                 }
             },
             {
                 "name": "Беккет",
                 "description": "",
                 "images": {
-                    "before": "https://images2.imgbox.com/1b/de/3TAah891_o.jpg",
-                    "after": "https://images2.imgbox.com/10/fe/Y6sOPPFe_o.png"
+                    "before": "img/before/03_Beckett.jpg",
+                    "after": "img/after/03_Beckett.png"
                 }
             },
             {
                 "name": "Таксист",
                 "description": "",
                 "images": {
-                    "before": "https://images2.imgbox.com/85/44/2KUM5NM9_o.jpg",
-                    "after": "https://images2.imgbox.com/a1/85/YfB6tVbh_o.png"
+                    "before": "img/before/04_Cab_Driver.jpg",
+                    "after": "img/after/04_Cab_Driver.png"
                 }
             },
             {
                 "name": "Дамзел",
                 "description": "",
                 "images": {
-                    "before": "https://images2.imgbox.com/e1/e5/Sf3LbYRD_o.jpg",
-                    "after": "https://images2.imgbox.com/fd/70/l9iEITdX_o.png"
+                    "before": "img/before/05_Damsel.jpg",
+                    "after": "img/after/05_Damsel.png"
                 }
             },
             {
