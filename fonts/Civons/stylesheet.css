@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Civons';
+    src: url('https://alexkolmar.github.io/fonts/Civons/Civons.eot');
+    src: url('https://alexkolmar.github.io/fonts/Civons/Civons.eot?#iefix') format('embedded-opentype'),
+        url('https://alexkolmar.github.io/fonts/Civons/Civons.woff2') format('woff2'),
+        url('https://alexkolmar.github.io/fonts/Civons/Civons.woff') format('woff'),
+        url('https://alexkolmar.github.io/fonts/Civons/Civons.ttf') format('truetype'),
+        url('https://alexkolmar.github.io/fonts/Civons/Civons.svg#Civons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
